@@ -3,12 +3,46 @@
     <id>http://qianqiu-cell.github.io</id>
     <title>Welcome to my tiny world</title>
     <link href="http://qianqiu-cell.github.io" />
-    <updated>2022-12-23T16:00:00.000Z</updated>
-    <category term="博客搭建" />
+    <updated>2023-01-01T16:00:00.000Z</updated>
     <category term="控制工程" />
-    <category term="硬件开发" />
     <category term="数学基础" />
+    <category term="硬件开发" />
+    <category term="博客搭建" />
+    <category term="office技巧" />
     <category term="最优化" />
+    <entry>
+        <id>http://qianqiu-cell.github.io/2023/01/02/blog/hexo_image/</id>
+        <title>Hexo图片显示异常问题</title>
+        <link rel="alternate" href="http://qianqiu-cell.github.io/2023/01/02/blog/hexo_image/"/>
+        <content type="html">&lt;p&gt;结合 shoka 文件官方文档以及评论，最终解决方法如下&lt;/p&gt;
+&lt;h1 id=&#34;一-下载shoka主题图片&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-下载shoka主题图片&#34;&gt;#&lt;/a&gt; 一、下载 shoka 主题图片&lt;/h1&gt;
+&lt;p&gt;主题图片：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9qZGp3engyMzMubGFuem91by5jb20vaVNhOHUwam5jZ2ph&#34;&gt;下载图片&lt;/span&gt;（主题图片来源于 &lt;code&gt;shoka&lt;/code&gt;  评论区）&lt;br&gt;
+shoka 主题图片同时备份至百度网盘及个人 U 盘&lt;/p&gt;
+&lt;h1 id=&#34;二-上传图片至postimage图床&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-上传图片至postimage图床&#34;&gt;#&lt;/a&gt; 二、上传图片至 PostImage 图床&lt;/h1&gt;
+&lt;p&gt;首先进入 [PostImage 官网]（&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wb3N0aW1hZ2VzLm9yZy8lRUYlQkMlODklRUYlQkMlOEMlRTglQkYlOUIlRTglQTElOEMlRTclQkQlOTElRTclQUIlOTklRTYlQjMlQTglRTUlODYlOEMlRUYlQkMlOEMlRTYlQjMlQTglRTUlODYlOEMlRTUlQUYlODYlRTclQTAlODElRTUlQjclQjIlRTUlQTQlODclRTQlQkIlQkQlRTglODclQjNVJUU3JTlCJTk4LSVFNSU4RCU5QSVFNSVBRSVBMndvcmQlRTglQUYlQjQlRTYlOTglOEUlRTQlQjglQUQ=&#34;&gt;https://postimages.org/），进行网站注册，注册密码已备份至 U 盘 - 博客 word 说明中&lt;/span&gt;&lt;br&gt;
+注册完成之后将 &lt;code&gt;shoka&lt;/code&gt;  图片一并上传至 &lt;code&gt;PostImage&lt;/code&gt;  中，并复制所有图片链接如下图所示（界面打开方式：&lt;em&gt;我的图片→默认分类→分享&lt;/em&gt;）&lt;br&gt;
+&lt;img data-src=&#34;/images/hexo_image/2.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;三-上传图片至shoka&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三-上传图片至shoka&#34;&gt;#&lt;/a&gt; 三、上传图片至 shoka&lt;/h1&gt;
+&lt;p&gt;参考如下 &lt;code&gt;shoka&lt;/code&gt;  官方说明&lt;br&gt;
+&lt;img data-src=&#34;/images/hexo_image/3.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+根据最后两行信息，在 &lt;code&gt;&amp;lt;root&amp;gt;/source/_data&lt;/code&gt;  目录中新建一个 &lt;code&gt;images.yml&lt;/code&gt;  文件，将第二步复制的图片链接复制到该文件中，即可完成图库的上传&lt;/p&gt;
+</content>
+        <category term="博客搭建" />
+        <updated>2023-01-01T16:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://qianqiu-cell.github.io/2023/01/02/office/office/</id>
+        <title>Office技巧</title>
+        <link rel="alternate" href="http://qianqiu-cell.github.io/2023/01/02/office/office/"/>
+        <content type="html">&lt;h1 id=&#34;一-使用excel将两列内容合并为一列&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-使用excel将两列内容合并为一列&#34;&gt;#&lt;/a&gt; 一、使用 Excel 将两列内容合并为一列&lt;/h1&gt;
+&lt;p&gt;在任意两个行数相等的列，在其后紧接着下一列第一行复制所选两列的内容，如下图所示&lt;br&gt;
+&lt;img data-src=&#34;/images/office/1.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+然后按组合键 &lt;code&gt;Ctrl+E&lt;/code&gt; ，在列中就自动合并了两列的内容，如下图所示&lt;br&gt;
+&lt;img data-src=&#34;/images/office/1.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</content>
+        <category term="office技巧" />
+        <updated>2023-01-01T16:00:00.000Z</updated>
+    </entry>
     <entry>
         <id>http://qianqiu-cell.github.io/2022/12/24/blog/hexo_change/</id>
         <title>Hexo文件迁移</title>

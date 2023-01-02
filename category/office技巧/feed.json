@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Welcome to my tiny world • All posts by \"office技巧\" category",
+    "description": "小樊&小小樊的学习笔记🌸",
+    "home_page_url": "http://qianqiu-cell.github.io",
+    "items": [
+        {
+            "id": "http://qianqiu-cell.github.io/2023/01/02/office/office/",
+            "url": "http://qianqiu-cell.github.io/2023/01/02/office/office/",
+            "title": "Office技巧",
+            "date_published": "2023-01-01T16:00:00.000Z",
+            "content_html": "<h1 id=\"一-使用excel将两列内容合并为一列\"><a class=\"markdownIt-Anchor\" href=\"#一-使用excel将两列内容合并为一列\">#</a> 一、使用 Excel 将两列内容合并为一列</h1>\n<p>在任意两个行数相等的列，在其后紧接着下一列第一行复制所选两列的内容，如下图所示<br>\n<img data-src=\"/images/office/1.1.png\" alt=\"\"><br>\n然后按组合键 <code>Ctrl+E</code> ，在列中就自动合并了两列的内容，如下图所示<br>\n<img data-src=\"/images/office/1.2.png\" alt=\"\"></p>\n",
+            "tags": [
+                "office技巧"
+            ]
+        }
+    ]
+}

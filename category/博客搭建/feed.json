@@ -5,6 +5,16 @@
     "home_page_url": "http://qianqiu-cell.github.io",
     "items": [
         {
+            "id": "http://qianqiu-cell.github.io/2023/01/02/blog/hexo_image/",
+            "url": "http://qianqiu-cell.github.io/2023/01/02/blog/hexo_image/",
+            "title": "Hexo图片显示异常问题",
+            "date_published": "2023-01-01T16:00:00.000Z",
+            "content_html": "<p>结合 shoka 文件官方文档以及评论，最终解决方法如下</p>\n<h1 id=\"一-下载shoka主题图片\"><a class=\"markdownIt-Anchor\" href=\"#一-下载shoka主题图片\">#</a> 一、下载 shoka 主题图片</h1>\n<p>主题图片：<span class=\"exturl\" data-url=\"aHR0cHM6Ly9qZGp3engyMzMubGFuem91by5jb20vaVNhOHUwam5jZ2ph\">下载图片</span>（主题图片来源于 <code>shoka</code>  评论区）<br>\nshoka 主题图片同时备份至百度网盘及个人 U 盘</p>\n<h1 id=\"二-上传图片至postimage图床\"><a class=\"markdownIt-Anchor\" href=\"#二-上传图片至postimage图床\">#</a> 二、上传图片至 PostImage 图床</h1>\n<p>首先进入 [PostImage 官网]（<span class=\"exturl\" data-url=\"aHR0cHM6Ly9wb3N0aW1hZ2VzLm9yZy8lRUYlQkMlODklRUYlQkMlOEMlRTglQkYlOUIlRTglQTElOEMlRTclQkQlOTElRTclQUIlOTklRTYlQjMlQTglRTUlODYlOEMlRUYlQkMlOEMlRTYlQjMlQTglRTUlODYlOEMlRTUlQUYlODYlRTclQTAlODElRTUlQjclQjIlRTUlQTQlODclRTQlQkIlQkQlRTglODclQjNVJUU3JTlCJTk4LSVFNSU4RCU5QSVFNSVBRSVBMndvcmQlRTglQUYlQjQlRTYlOTglOEUlRTQlQjglQUQ=\">https://postimages.org/），进行网站注册，注册密码已备份至 U 盘 - 博客 word 说明中</span><br>\n注册完成之后将 <code>shoka</code>  图片一并上传至 <code>PostImage</code>  中，并复制所有图片链接如下图所示（界面打开方式：<em>我的图片→默认分类→分享</em>）<br>\n<img data-src=\"/images/hexo_image/2.1.png\" alt=\"\"></p>\n<h1 id=\"三-上传图片至shoka\"><a class=\"markdownIt-Anchor\" href=\"#三-上传图片至shoka\">#</a> 三、上传图片至 shoka</h1>\n<p>参考如下 <code>shoka</code>  官方说明<br>\n<img data-src=\"/images/hexo_image/3.1.png\" alt=\"\"><br>\n根据最后两行信息，在 <code>&lt;root&gt;/source/_data</code>  目录中新建一个 <code>images.yml</code>  文件，将第二步复制的图片链接复制到该文件中，即可完成图库的上传</p>\n",
+            "tags": [
+                "博客搭建"
+            ]
+        },
+        {
             "id": "http://qianqiu-cell.github.io/2022/12/24/blog/hexo_change/",
             "url": "http://qianqiu-cell.github.io/2022/12/24/blog/hexo_change/",
             "title": "Hexo文件迁移",
