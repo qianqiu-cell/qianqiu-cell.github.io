@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://qianqiu-cell.github.io</id>
+    <title>Welcome to my tiny world • Posts by &#34;硬件开发&#34; tag</title>
+    <link href="http://qianqiu-cell.github.io" />
+    <updated>2022-11-15T16:00:00.000Z</updated>
+    <category term="博客搭建" />
+    <category term="控制工程" />
+    <category term="硬件开发" />
+    <category term="数学基础" />
+    <category term="最优化" />
+    <entry>
+        <id>http://qianqiu-cell.github.io/2022/11/16/hardware/stm32cubemx/</id>
+        <title>使用stm32cubemx新建工程</title>
+        <link rel="alternate" href="http://qianqiu-cell.github.io/2022/11/16/hardware/stm32cubemx/"/>
+        <content type="html">&lt;p&gt;参考视频：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMThYNHkxTTc2My8/cD0xNSZhbXA7dmRfc291cmNlPTlhZWNiM2JkMWM5Mzg2MjM5MzA0MzNmODYwZjRhNTU1&#34;&gt;https://www.bilibili.com/video/BV18X4y1M763/?p=15&amp;amp;vd_source=9aecb3bd1c938623930433f860f4a555&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;一-新建工程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-新建工程&#34;&gt;#&lt;/a&gt; 一、新建工程&lt;/h1&gt;
+&lt;p&gt;点击 &lt;code&gt;ACCESS TO MCU SELECTOR&lt;/code&gt; （如红框所示）&lt;br&gt;
+&lt;img data-src=&#34;/images/stm32cubemx/1.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+在搜索框内输入所需要的芯片型号，在右边搜索结果中双击自己的板子型号，这里我们使用的是 &lt;code&gt;stm32f103zet6&lt;/code&gt; &lt;br&gt;
+&lt;img data-src=&#34;/images/stm32cubemx/1.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;二-一些必要的工作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-一些必要的工作&#34;&gt;#&lt;/a&gt; 二、一些必要的工作&lt;/h1&gt;
+&lt;p&gt;选择 &lt;code&gt;system core&lt;/code&gt;  中的 &lt;code&gt;RCC&lt;/code&gt; ，将 &lt;code&gt;High Speed Clock(HSE)&lt;/code&gt;  定义为 &lt;code&gt;Crystal/Ceramic Resonator&lt;/code&gt; &lt;br&gt;
+&lt;img data-src=&#34;/images/stm32cubemx/2.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+ 选择 &lt;code&gt;system core&lt;/code&gt;  中的 &lt;code&gt;SYS&lt;/code&gt; ，将 &lt;code&gt;debug&lt;/code&gt;  定义为 &lt;code&gt;Serial Wire&lt;/code&gt; &lt;br&gt;
+&lt;img data-src=&#34;/images/stm32cubemx/2.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;三-定义io端口&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三-定义io端口&#34;&gt;#&lt;/a&gt; 三、定义 IO 端口&lt;/h1&gt;
+&lt;p&gt;定义 IO 端口，即定义自己使用哪一个引脚作为 IO 输入与输出。选择 &lt;code&gt;system core&lt;/code&gt;  中的 &lt;code&gt;GPIO&lt;/code&gt; &lt;br&gt;
+&lt;img data-src=&#34;/images/stm32cubemx/3.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+ 在右下方输入我们要定义的引脚，输入完成后对应引脚会闪烁，之后定位到我们所需要的引脚并进行设置，这里我们定义 &lt;code&gt;PB3&lt;/code&gt;  为输入端口&lt;br&gt;
+&lt;img data-src=&#34;/images/stm32cubemx/3.2.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+完成设置后会在左侧显示已经配置好的引脚信息&lt;br&gt;
+&lt;img data-src=&#34;/images/stm32cubemx/3.3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;四-配置usart1串口通讯&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#四-配置usart1串口通讯&#34;&gt;#&lt;/a&gt; 四、配置 usart1 串口通讯&lt;/h1&gt;
+&lt;p&gt;打开 &lt;code&gt;connectivity&lt;/code&gt;  下的 &lt;code&gt;usart1&lt;/code&gt;  界面，将 &lt;code&gt;mode&lt;/code&gt;  设置为 &lt;code&gt;asynchronous&lt;/code&gt; &lt;br&gt;
+&lt;img data-src=&#34;/images/stm32cubemx/4.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+ 打开 &lt;code&gt;NVIC Settings&lt;/code&gt; ，选择 &lt;code&gt;Enable&lt;/code&gt; &lt;br&gt;
+&lt;img data-src=&#34;/images/stm32cubemx/4.2.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+ 在下面的 &lt;code&gt;parameter settings&lt;/code&gt;  中会显示配置后串口通讯的一些信息&lt;br&gt;
+&lt;img data-src=&#34;/images/stm32cubemx/4.3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;五-配置时钟&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#五-配置时钟&#34;&gt;#&lt;/a&gt; 五、配置时钟&lt;/h1&gt;
+&lt;p&gt;打开 &lt;code&gt;clock configuration&lt;/code&gt; ，将时钟配置为 &lt;code&gt;72MHz&lt;/code&gt; ，如下图所示&lt;br&gt;
+&lt;img data-src=&#34;/images/stm32cubemx/5.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;六-生成程序前的一些配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#六-生成程序前的一些配置&#34;&gt;#&lt;/a&gt; 六、生成程序前的一些配置&lt;/h1&gt;
+&lt;p&gt;点击 &lt;code&gt;project manager&lt;/code&gt; ，并按照下列图片进行配置&lt;br&gt;
+&lt;img data-src=&#34;/images/stm32cubemx/6.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/stm32cubemx/6.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;七-生成代码&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#七-生成代码&#34;&gt;#&lt;/a&gt; 七、生成代码&lt;/h1&gt;
+&lt;p&gt;点击 &lt;code&gt;generate code&lt;/code&gt; ，进行代码的生成，如下图所示&lt;br&gt;
+&lt;img data-src=&#34;/images/stm32cubemx/7.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+完成代码生成后即可生成如下界面，三个选项分别是打开文件夹，打开工程（使用 &lt;code&gt;keil MDK&lt;/code&gt; ），关闭当前窗口&lt;br&gt;
+&lt;img data-src=&#34;/images/stm32cubemx/7.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</content>
+        <category term="硬件开发" />
+        <updated>2022-11-15T16:00:00.000Z</updated>
+    </entry>
+</feed>
