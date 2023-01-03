@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Welcome to my tiny world • All posts by \"windows系统\" category",
+    "description": "小樊&小小樊的学习笔记🌸",
+    "home_page_url": "http://qianqiu-cell.github.io",
+    "items": [
+        {
+            "id": "http://qianqiu-cell.github.io/2023/01/03/Windows/Realtek/",
+            "url": "http://qianqiu-cell.github.io/2023/01/03/Windows/Realtek/",
+            "title": "关于戴尔G3重装系统后的音频问题",
+            "date_published": "2023-01-02T16:00:00.000Z",
+            "content_html": "<p><span class=\"label warning\">💥问题描述💥</span>每一次使用戴尔 G3 恢复系统之后就会在音频位置出现<em>未插入扬声器或耳机</em>的问题<br>\n<img data-src=\"/images/Realtek/1.1.jpg\" alt=\"\"><br>\n  该问题的产生原因是系统没有 <code>Realtek</code>  音频驱动程序，正确的解决方法为进入<mark>戴尔官网</mark>，进行相应驱动程序的下载，安装步骤如下（❌❌❌千万不要下载驱动安装精灵❌❌❌）</p>\n<h1 id=\"一-进入戴尔官网进行声卡驱动下载\"><a class=\"markdownIt-Anchor\" href=\"#一-进入戴尔官网进行声卡驱动下载\">#</a> 一、进入戴尔官网进行声卡驱动下载</h1>\n<p>（1）直接在浏览器中搜索<mark>戴尔官网驱动下载</mark>，即可进入戴尔官网的驱动安装界面<br>\n<img data-src=\"/images/Realtek/1.2.png\" alt=\"\"><br>\n（2）进入戴尔官网后输入戴尔服务标签即可进入驱动下载界面<br>\n<img data-src=\"/images/Realtek/1.3.jpg\" alt=\"\"><br>\n  戴尔服务标签一般位于<mark>电脑下方</mark>（本机服务标签已保存至博客 word 版文件夹中）<br>\n<img data-src=\"/images/Realtek/1.4.jpg\" alt=\"\"><br>\n（3）进入如下驱动安装界面后下载<mark> Realtek 高保真声卡驱动程序</mark><br>\n<img data-src=\"/images/Realtek/1.5.jpg\" alt=\"\"></p>\n<h1 id=\"二-realtek声卡驱动安装\"><a class=\"markdownIt-Anchor\" href=\"#二-realtek声卡驱动安装\">#</a> 二、Realtek 声卡驱动安装</h1>\n<p>  下载完成声卡驱动安装程序后打开安装程序，一路下一步之后完成 <code>Realtek</code>  声卡驱动程序的安装，如下图所示<br>\n<img data-src=\"/images/Realtek/2.1.jpg\" alt=\"\"><br>\n  重新启动计算机后可以发现音频功能已经恢复正常<br>\n<img data-src=\"/images/Realtek/2.2.jpg\" alt=\"\"></p>\n",
+            "tags": [
+                "Windows系统"
+            ]
+        }
+    ]
+}

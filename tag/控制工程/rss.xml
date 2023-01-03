@@ -8,11 +8,12 @@
         <pubDate>Wed, 23 Nov 2022 00:00:00 +0800</pubDate>
         <lastBuildDate>Wed, 23 Nov 2022 00:00:00 +0800</lastBuildDate>
         <category>控制工程</category>
-        <category>数学基础</category>
-        <category>硬件开发</category>
         <category>博客搭建</category>
-        <category>office技巧</category>
+        <category>硬件开发</category>
+        <category>Windows系统</category>
+        <category>数学基础</category>
         <category>最优化</category>
+        <category>office技巧</category>
         <item>
             <guid isPermalink="true">http://qianqiu-cell.github.io/2022/11/23/control/spring_damping/</guid>
             <title>弹簧阻尼系统</title>
