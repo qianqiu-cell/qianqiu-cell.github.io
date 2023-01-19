@@ -8,12 +8,12 @@
         <pubDate>Fri, 23 Dec 2022 00:00:00 +0800</pubDate>
         <lastBuildDate>Fri, 23 Dec 2022 00:00:00 +0800</lastBuildDate>
         <category>Windows系统</category>
-        <category>控制工程</category>
-        <category>数学基础</category>
         <category>博客搭建</category>
-        <category>office技巧</category>
+        <category>控制工程</category>
         <category>硬件开发</category>
+        <category>office技巧</category>
         <category>最优化</category>
+        <category>数学基础</category>
         <item>
             <guid isPermalink="true">http://qianqiu-cell.github.io/2022/12/23/optimal/signal_objective_optimization/</guid>
             <title>单目标搜索算法汇总</title>
