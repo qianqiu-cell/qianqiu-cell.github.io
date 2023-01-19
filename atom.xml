@@ -4,13 +4,13 @@
     <title>Welcome to my tiny world</title>
     <link href="http://qianqiu-cell.github.io" />
     <updated>2023-01-02T16:00:00.000Z</updated>
-    <category term="控制工程" />
-    <category term="博客搭建" />
-    <category term="硬件开发" />
     <category term="Windows系统" />
+    <category term="控制工程" />
     <category term="数学基础" />
-    <category term="最优化" />
+    <category term="博客搭建" />
     <category term="office技巧" />
+    <category term="硬件开发" />
+    <category term="最优化" />
     <entry>
         <id>http://qianqiu-cell.github.io/2023/01/03/Windows/Realtek/</id>
         <title>关于戴尔G3重装系统后的音频问题</title>
@@ -45,7 +45,7 @@
 &lt;p&gt;主题图片：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9qZGp3engyMzMubGFuem91by5jb20vaVNhOHUwam5jZ2ph&#34;&gt;下载图片&lt;/span&gt;（主题图片来源于 &lt;code&gt;shoka&lt;/code&gt;  评论区）&lt;br&gt;
 shoka 主题图片同时备份至百度网盘及个人 U 盘&lt;/p&gt;
 &lt;h1 id=&#34;二-上传图片至postimage图床&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-上传图片至postimage图床&#34;&gt;#&lt;/a&gt; 二、上传图片至 PostImage 图床&lt;/h1&gt;
-&lt;p&gt;首先进入 [PostImage 官网]（&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wb3N0aW1hZ2VzLm9yZy8lRUYlQkMlODklRUYlQkMlOEMlRTglQkYlOUIlRTglQTElOEMlRTclQkQlOTElRTclQUIlOTklRTYlQjMlQTglRTUlODYlOEMlRUYlQkMlOEMlRTYlQjMlQTglRTUlODYlOEMlRTUlQUYlODYlRTclQTAlODElRTUlQjclQjIlRTUlQTQlODclRTQlQkIlQkQlRTglODclQjNVJUU3JTlCJTk4LSVFNSU4RCU5QSVFNSVBRSVBMndvcmQlRTglQUYlQjQlRTYlOTglOEUlRTQlQjglQUQ=&#34;&gt;https://postimages.org/），进行网站注册，注册密码已备份至 U 盘 - 博客 word 说明中&lt;/span&gt;&lt;br&gt;
+&lt;p&gt;首先进入&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wb3N0aW1hZ2VzLm9yZy8=&#34;&gt; PostImage 官网&lt;/span&gt;，进行网站注册，注册密码已备份至 U 盘 - 博客 word 说明中&lt;br&gt;
 注册完成之后将 &lt;code&gt;shoka&lt;/code&gt;  图片一并上传至 &lt;code&gt;PostImage&lt;/code&gt;  中，并复制所有图片链接如下图所示（界面打开方式：&lt;em&gt;我的图片→默认分类→分享&lt;/em&gt;）&lt;br&gt;
 &lt;img data-src=&#34;/images/hexo_image/2.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;三-上传图片至shoka&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三-上传图片至shoka&#34;&gt;#&lt;/a&gt; 三、上传图片至 shoka&lt;/h1&gt;
