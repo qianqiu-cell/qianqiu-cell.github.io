@@ -4,13 +4,13 @@
     <title>Welcome to my tiny world • Posts by &#34;硬件开发&#34; tag</title>
     <link href="http://qianqiu-cell.github.io" />
     <updated>2022-11-15T16:00:00.000Z</updated>
-    <category term="Windows系统" />
     <category term="博客搭建" />
     <category term="控制工程" />
+    <category term="Windows系统" />
+    <category term="数学基础" />
+    <category term="最优化" />
     <category term="硬件开发" />
     <category term="office技巧" />
-    <category term="最优化" />
-    <category term="数学基础" />
     <entry>
         <id>http://qianqiu-cell.github.io/2022/11/16/hardware/stm32cubemx/</id>
         <title>使用stm32cubemx新建工程</title>
