@@ -5,15 +5,31 @@
         <link>http://qianqiu-cell.github.io</link>
         <description>小樊&amp;小小樊的学习笔记🌸</description>
         <language>zh-CN</language>
-        <pubDate>Mon, 02 Jan 2023 00:00:00 +0800</pubDate>
-        <lastBuildDate>Mon, 02 Jan 2023 00:00:00 +0800</lastBuildDate>
+        <pubDate>Thu, 19 Jan 2023 00:00:00 +0800</pubDate>
+        <lastBuildDate>Thu, 19 Jan 2023 00:00:00 +0800</lastBuildDate>
+        <category>Windows系统</category>
         <category>博客搭建</category>
         <category>控制工程</category>
-        <category>Windows系统</category>
-        <category>数学基础</category>
-        <category>最优化</category>
         <category>硬件开发</category>
+        <category>latex技巧</category>
+        <category>论文编辑</category>
+        <category>数学基础</category>
         <category>office技巧</category>
+        <category>最优化</category>
+        <item>
+            <guid isPermalink="true">http://qianqiu-cell.github.io/2023/01/19/blog/hexo_remote/</guid>
+            <title>解决Connection closed by remote host</title>
+            <link>http://qianqiu-cell.github.io/2023/01/19/blog/hexo_remote/</link>
+            <category>博客搭建</category>
+            <pubDate>Thu, 19 Jan 2023 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;一-问题描述&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-问题描述&#34;&gt;#&lt;/a&gt; 一、问题描述&lt;/h1&gt;
+&lt;p&gt;在一次更新博客的内容并使用 &lt;code&gt;hexo d&lt;/code&gt;  成功上传之后，邮箱中收到如下内容&lt;br&gt;
+&lt;img data-src=&#34;/images/hexo_remote/1.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+一番搜索之后找到报错的根本原因为：前段时间使用了 &lt;code&gt;VPN&lt;/code&gt;  进行代理。运行 &lt;code&gt;ssh -T git@github.com&lt;/code&gt;  命令，结果显示 &lt;code&gt;ssh: Could not resolve hostname keygen&lt;/code&gt; 。&lt;/p&gt;
+&lt;h1 id=&#34;二-解决方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-解决方法&#34;&gt;#&lt;/a&gt; 二、解决方法&lt;/h1&gt;
+&lt;p&gt;设置取消代理即可成功上传，取消代理通过在命令行运行如下代码&lt;/p&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;git config --global https.proxy&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;git config --global --unset https.proxy&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://qianqiu-cell.github.io/2023/01/02/blog/hexo_image/</guid>
             <title>Hexo图片显示异常问题</title>

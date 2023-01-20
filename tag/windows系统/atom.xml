@@ -4,13 +4,15 @@
     <title>Welcome to my tiny world • Posts by &#34;windows系统&#34; tag</title>
     <link href="http://qianqiu-cell.github.io" />
     <updated>2023-01-02T16:00:00.000Z</updated>
+    <category term="Windows系统" />
     <category term="博客搭建" />
     <category term="控制工程" />
-    <category term="Windows系统" />
-    <category term="数学基础" />
-    <category term="最优化" />
     <category term="硬件开发" />
+    <category term="latex技巧" />
+    <category term="论文编辑" />
+    <category term="数学基础" />
     <category term="office技巧" />
+    <category term="最优化" />
     <entry>
         <id>http://qianqiu-cell.github.io/2023/01/03/Windows/Realtek/</id>
         <title>关于戴尔G3重装系统后的音频问题</title>

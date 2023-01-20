@@ -5,6 +5,16 @@
     "home_page_url": "http://qianqiu-cell.github.io",
     "items": [
         {
+            "id": "http://qianqiu-cell.github.io/2023/01/19/blog/hexo_remote/",
+            "url": "http://qianqiu-cell.github.io/2023/01/19/blog/hexo_remote/",
+            "title": "解决Connection closed by remote host",
+            "date_published": "2023-01-18T16:00:00.000Z",
+            "content_html": "<h1 id=\"一-问题描述\"><a class=\"markdownIt-Anchor\" href=\"#一-问题描述\">#</a> 一、问题描述</h1>\n<p>在一次更新博客的内容并使用 <code>hexo d</code>  成功上传之后，邮箱中收到如下内容<br>\n<img data-src=\"/images/hexo_remote/1.1.png\" alt=\"\"><br>\n一番搜索之后找到报错的根本原因为：前段时间使用了 <code>VPN</code>  进行代理。运行 <code>ssh -T git@github.com</code>  命令，结果显示 <code>ssh: Could not resolve hostname keygen</code> 。</p>\n<h1 id=\"二-解决方法\"><a class=\"markdownIt-Anchor\" href=\"#二-解决方法\">#</a> 二、解决方法</h1>\n<p>设置取消代理即可成功上传，取消代理通过在命令行运行如下代码</p>\n<figure class=\"highlight raw\"><figcaption data-lang=\"\"></figcaption><table><tr><td data-num=\"1\"></td><td><pre>git config --global https.proxy</pre></td></tr><tr><td data-num=\"2\"></td><td><pre>git config --global --unset https.proxy</pre></td></tr></table></figure>",
+            "tags": [
+                "博客搭建"
+            ]
+        },
+        {
             "id": "http://qianqiu-cell.github.io/2023/01/02/blog/hexo_image/",
             "url": "http://qianqiu-cell.github.io/2023/01/02/blog/hexo_image/",
             "title": "Hexo图片显示异常问题",

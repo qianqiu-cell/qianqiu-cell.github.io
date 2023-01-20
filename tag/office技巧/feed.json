@@ -9,8 +9,9 @@
             "url": "http://qianqiu-cell.github.io/2023/01/02/office/office/",
             "title": "Office技巧",
             "date_published": "2023-01-01T16:00:00.000Z",
-            "content_html": "<h1 id=\"一-使用excel将两列内容合并为一列\"><a class=\"markdownIt-Anchor\" href=\"#一-使用excel将两列内容合并为一列\">#</a> 一、使用 Excel 将两列内容合并为一列</h1>\n<p>在任意两个行数相等的列，在其后紧接着下一列第一行复制所选两列的内容，如下图所示<br>\n<img data-src=\"/images/office/1.1.png\" alt=\"\"><br>\n然后按组合键 <code>Ctrl+E</code> ，在列中就自动合并了两列的内容，如下图所示<br>\n<img data-src=\"/images/office/1.2.png\" alt=\"\"></p>\n",
+            "content_html": "<h1 id=\"一-使用excel将两列内容合并为一列\"><a class=\"markdownIt-Anchor\" href=\"#一-使用excel将两列内容合并为一列\">#</a> 一、使用 Excel 将两列内容合并为一列</h1>\n<p>在任意两个行数相等的列，在其后紧接着下一列第一行复制所选两列的内容，如下图所示<br>\n<img data-src=\"/images/office/1.1.png\" alt=\"\"><br>\n然后按组合键 <code>Ctrl+E</code> ，在列中就自动合并了两列的内容，如下图所示<br>\n<img data-src=\"/images/office/1.2.png\" alt=\"\"></p>\n<h1 id=\"二-刷新word中所有mathtype的公式编号\"><a class=\"markdownIt-Anchor\" href=\"#二-刷新word中所有mathtype的公式编号\">#</a> 二、刷新 word 中所有 mathtype 的公式编号</h1>\n<p>首先 <code>CTRL+A</code>  全选文档，接着按 <code>F9</code> ，进行公式编号的刷新</p>\n",
             "tags": [
+                "论文编辑",
                 "office技巧"
             ]
         }

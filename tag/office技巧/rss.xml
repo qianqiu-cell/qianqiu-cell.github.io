@@ -7,17 +7,20 @@
         <language>zh-CN</language>
         <pubDate>Mon, 02 Jan 2023 00:00:00 +0800</pubDate>
         <lastBuildDate>Mon, 02 Jan 2023 00:00:00 +0800</lastBuildDate>
+        <category>Windows系统</category>
         <category>博客搭建</category>
         <category>控制工程</category>
-        <category>Windows系统</category>
-        <category>数学基础</category>
-        <category>最优化</category>
         <category>硬件开发</category>
+        <category>latex技巧</category>
+        <category>论文编辑</category>
+        <category>数学基础</category>
         <category>office技巧</category>
+        <category>最优化</category>
         <item>
             <guid isPermalink="true">http://qianqiu-cell.github.io/2023/01/02/office/office/</guid>
             <title>Office技巧</title>
             <link>http://qianqiu-cell.github.io/2023/01/02/office/office/</link>
+            <category>论文编辑</category>
             <category>office技巧</category>
             <pubDate>Mon, 02 Jan 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;一-使用excel将两列内容合并为一列&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-使用excel将两列内容合并为一列&#34;&gt;#&lt;/a&gt; 一、使用 Excel 将两列内容合并为一列&lt;/h1&gt;
@@ -25,6 +28,8 @@
 &lt;img data-src=&#34;/images/office/1.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 然后按组合键 &lt;code&gt;Ctrl+E&lt;/code&gt; ，在列中就自动合并了两列的内容，如下图所示&lt;br&gt;
 &lt;img data-src=&#34;/images/office/1.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;二-刷新word中所有mathtype的公式编号&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-刷新word中所有mathtype的公式编号&#34;&gt;#&lt;/a&gt; 二、刷新 word 中所有 mathtype 的公式编号&lt;/h1&gt;
+&lt;p&gt;首先 &lt;code&gt;CTRL+A&lt;/code&gt;  全选文档，接着按 &lt;code&gt;F9&lt;/code&gt; ，进行公式编号的刷新&lt;/p&gt;
  ]]></description>
         </item>
     </channel>

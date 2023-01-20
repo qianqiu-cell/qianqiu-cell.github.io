@@ -3,14 +3,30 @@
     <id>http://qianqiu-cell.github.io</id>
     <title>Welcome to my tiny world • Posts by &#34;博客搭建&#34; category</title>
     <link href="http://qianqiu-cell.github.io" />
-    <updated>2023-01-01T16:00:00.000Z</updated>
+    <updated>2023-01-18T16:00:00.000Z</updated>
+    <category term="Windows系统" />
     <category term="博客搭建" />
     <category term="控制工程" />
-    <category term="Windows系统" />
-    <category term="数学基础" />
-    <category term="最优化" />
     <category term="硬件开发" />
+    <category term="latex技巧" />
+    <category term="论文编辑" />
+    <category term="数学基础" />
     <category term="office技巧" />
+    <category term="最优化" />
+    <entry>
+        <id>http://qianqiu-cell.github.io/2023/01/19/blog/hexo_remote/</id>
+        <title>解决Connection closed by remote host</title>
+        <link rel="alternate" href="http://qianqiu-cell.github.io/2023/01/19/blog/hexo_remote/"/>
+        <content type="html">&lt;h1 id=&#34;一-问题描述&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-问题描述&#34;&gt;#&lt;/a&gt; 一、问题描述&lt;/h1&gt;
+&lt;p&gt;在一次更新博客的内容并使用 &lt;code&gt;hexo d&lt;/code&gt;  成功上传之后，邮箱中收到如下内容&lt;br&gt;
+&lt;img data-src=&#34;/images/hexo_remote/1.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+一番搜索之后找到报错的根本原因为：前段时间使用了 &lt;code&gt;VPN&lt;/code&gt;  进行代理。运行 &lt;code&gt;ssh -T git@github.com&lt;/code&gt;  命令，结果显示 &lt;code&gt;ssh: Could not resolve hostname keygen&lt;/code&gt; 。&lt;/p&gt;
+&lt;h1 id=&#34;二-解决方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-解决方法&#34;&gt;#&lt;/a&gt; 二、解决方法&lt;/h1&gt;
+&lt;p&gt;设置取消代理即可成功上传，取消代理通过在命令行运行如下代码&lt;/p&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;git config --global https.proxy&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;git config --global --unset https.proxy&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+        <category term="博客搭建" />
+        <updated>2023-01-18T16:00:00.000Z</updated>
+    </entry>
     <entry>
         <id>http://qianqiu-cell.github.io/2023/01/02/blog/hexo_image/</id>
         <title>Hexo图片显示异常问题</title>
