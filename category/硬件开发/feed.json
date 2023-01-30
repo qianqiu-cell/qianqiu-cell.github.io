@@ -5,6 +5,16 @@
     "home_page_url": "http://qianqiu-cell.github.io",
     "items": [
         {
+            "id": "http://qianqiu-cell.github.io/2023/01/30/hardware/Quartus/",
+            "url": "http://qianqiu-cell.github.io/2023/01/30/hardware/Quartus/",
+            "title": "Quartus基础教程",
+            "date_published": "2023-01-29T16:00:00.000Z",
+            "content_html": "<h1 id=\"一-quartus及驱动安装\"><a class=\"markdownIt-Anchor\" href=\"#一-quartus及驱动安装\">#</a> 一、Quartus 及驱动安装</h1>\n<h2 id=\"11-quartus安装\"><a class=\"markdownIt-Anchor\" href=\"#11-quartus安装\">#</a> 1.1 Quartus 安装</h2>\n<p>根据百度网盘中的安装包及教程进行软件安装<br>\n<img data-src=\"/images/Quartus/1.1.png\" alt=\"\"></p>\n<h2 id=\"12-驱动安装\"><a class=\"markdownIt-Anchor\" href=\"#12-驱动安装\">#</a> 1.2 驱动安装</h2>\n<p><code>FPGA</code>  与计算机共有<mark>两条</mark>数据线进行连接，<ins>一条用于供电及通讯，另一条用于程序的烧录</ins>。将 FPGA 开发板正确连接至电脑后，可在设备管理器中看到如 <code>USB-SERIAL CH340</code>  及 <code>Altera USB-Blaster</code>  则证明 <code>FPGA</code>  与计算机连接成功。（⚠️若小图标处有感叹号，则证明缺少驱动，可根据安装教程进行驱动安装，本次安装的电脑为重装后的电脑，没有安装任何驱动即可正确识别）<br>\n<img data-src=\"/images/Quartus/1.2.png\" alt=\"\"></p>\n<h1 id=\"二-modelsim安装\"><a class=\"markdownIt-Anchor\" href=\"#二-modelsim安装\">#</a> 二、Modelsim 安装</h1>\n<p>安装 <code>Modelsim</code> ，安装包及教程见百度网盘<br>\n<img data-src=\"/images/Quartus/2.1.png\" alt=\"\"><br>\n安装完成 <code>Modelsim</code>  后，在 <code>Quartus</code>  中依次点击 <code>Tools→Options→General→EDA Tool Options</code>  选择 <code>Modelsim</code>  的安装路径里面的 <code>win64</code> <br>\n<img data-src=\"/images/Quartus/2.2.png\" alt=\"\"></p>\n<h1 id=\"三-编辑及仿真\"><a class=\"markdownIt-Anchor\" href=\"#三-编辑及仿真\">#</a> 三、编辑及仿真</h1>\n<p>进入 <code>Quartus</code>  软件，点击 <code>start compilation</code>  进行程序编译<br>\n<img data-src=\"/images/Quartus/3.1.png\" alt=\"\"><br>\n编译完成之后点击 <code>Tools→Run Simulation Tool→RTL Simulation</code>  进行仿真<br>\n<img data-src=\"/images/Quartus/3.2.png\" alt=\"\"><br>\n仿真完成后可显示如下界面（点击 <code>Zoom full</code>  可显示波形）<br>\n<img data-src=\"/images/Quartus/3.3.png\" alt=\"\"></p>\n<h1 id=\"四-程序下载至fpga\"><a class=\"markdownIt-Anchor\" href=\"#四-程序下载至fpga\">#</a> 四、程序下载至 FPGA</h1>\n<p>依次点击 <code>Tools→Programmer</code>  打开如下界面<br>\n<img data-src=\"/images/Quartus/4.1.png\" alt=\"\"><br>\n点击 <code>Start</code>  即可开始程序下载，若未识别到硬件，可点击 <code>Hardware Setup</code>  进行设置，如下图所示<br>\n<img data-src=\"/images/Quartus/4.2.png\" alt=\"\"></p>\n",
+            "tags": [
+                "硬件开发"
+            ]
+        },
+        {
             "id": "http://qianqiu-cell.github.io/2022/11/16/hardware/stm32cubemx/",
             "url": "http://qianqiu-cell.github.io/2022/11/16/hardware/stm32cubemx/",
             "title": "使用stm32cubemx新建工程",

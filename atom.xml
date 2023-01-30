@@ -3,16 +3,156 @@
     <id>http://qianqiu-cell.github.io</id>
     <title>Welcome to my tiny world</title>
     <link href="http://qianqiu-cell.github.io" />
-    <updated>2023-01-19T16:00:00.000Z</updated>
+    <updated>2023-01-29T16:00:00.000Z</updated>
     <category term="Windows系统" />
     <category term="博客搭建" />
-    <category term="硬件开发" />
-    <category term="控制工程" />
-    <category term="数学基础" />
+    <category term="其他" />
+    <category term="一些小目标" />
     <category term="latex技巧" />
     <category term="论文编辑" />
+    <category term="硬件开发" />
+    <category term="烹饪技巧" />
+    <category term="控制工程" />
+    <category term="数学基础" />
     <category term="office技巧" />
     <category term="最优化" />
+    <entry>
+        <id>http://qianqiu-cell.github.io/2023/01/30/hardware/Quartus/</id>
+        <title>Quartus基础教程</title>
+        <link rel="alternate" href="http://qianqiu-cell.github.io/2023/01/30/hardware/Quartus/"/>
+        <content type="html">&lt;h1 id=&#34;一-quartus及驱动安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-quartus及驱动安装&#34;&gt;#&lt;/a&gt; 一、Quartus 及驱动安装&lt;/h1&gt;
+&lt;h2 id=&#34;11-quartus安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#11-quartus安装&#34;&gt;#&lt;/a&gt; 1.1 Quartus 安装&lt;/h2&gt;
+&lt;p&gt;根据百度网盘中的安装包及教程进行软件安装&lt;br&gt;
+&lt;img data-src=&#34;/images/Quartus/1.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;12-驱动安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#12-驱动安装&#34;&gt;#&lt;/a&gt; 1.2 驱动安装&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;FPGA&lt;/code&gt;  与计算机共有&lt;mark&gt;两条&lt;/mark&gt;数据线进行连接，&lt;ins&gt;一条用于供电及通讯，另一条用于程序的烧录&lt;/ins&gt;。将 FPGA 开发板正确连接至电脑后，可在设备管理器中看到如 &lt;code&gt;USB-SERIAL CH340&lt;/code&gt;  及 &lt;code&gt;Altera USB-Blaster&lt;/code&gt;  则证明 &lt;code&gt;FPGA&lt;/code&gt;  与计算机连接成功。（⚠️若小图标处有感叹号，则证明缺少驱动，可根据安装教程进行驱动安装，本次安装的电脑为重装后的电脑，没有安装任何驱动即可正确识别）&lt;br&gt;
+&lt;img data-src=&#34;/images/Quartus/1.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;二-modelsim安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-modelsim安装&#34;&gt;#&lt;/a&gt; 二、Modelsim 安装&lt;/h1&gt;
+&lt;p&gt;安装 &lt;code&gt;Modelsim&lt;/code&gt; ，安装包及教程见百度网盘&lt;br&gt;
+&lt;img data-src=&#34;/images/Quartus/2.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+安装完成 &lt;code&gt;Modelsim&lt;/code&gt;  后，在 &lt;code&gt;Quartus&lt;/code&gt;  中依次点击 &lt;code&gt;Tools→Options→General→EDA Tool Options&lt;/code&gt;  选择 &lt;code&gt;Modelsim&lt;/code&gt;  的安装路径里面的 &lt;code&gt;win64&lt;/code&gt; &lt;br&gt;
+&lt;img data-src=&#34;/images/Quartus/2.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;三-编辑及仿真&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三-编辑及仿真&#34;&gt;#&lt;/a&gt; 三、编辑及仿真&lt;/h1&gt;
+&lt;p&gt;进入 &lt;code&gt;Quartus&lt;/code&gt;  软件，点击 &lt;code&gt;start compilation&lt;/code&gt;  进行程序编译&lt;br&gt;
+&lt;img data-src=&#34;/images/Quartus/3.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+编译完成之后点击 &lt;code&gt;Tools→Run Simulation Tool→RTL Simulation&lt;/code&gt;  进行仿真&lt;br&gt;
+&lt;img data-src=&#34;/images/Quartus/3.2.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+仿真完成后可显示如下界面（点击 &lt;code&gt;Zoom full&lt;/code&gt;  可显示波形）&lt;br&gt;
+&lt;img data-src=&#34;/images/Quartus/3.3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;四-程序下载至fpga&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#四-程序下载至fpga&#34;&gt;#&lt;/a&gt; 四、程序下载至 FPGA&lt;/h1&gt;
+&lt;p&gt;依次点击 &lt;code&gt;Tools→Programmer&lt;/code&gt;  打开如下界面&lt;br&gt;
+&lt;img data-src=&#34;/images/Quartus/4.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+点击 &lt;code&gt;Start&lt;/code&gt;  即可开始程序下载，若未识别到硬件，可点击 &lt;code&gt;Hardware Setup&lt;/code&gt;  进行设置，如下图所示&lt;br&gt;
+&lt;img data-src=&#34;/images/Quartus/4.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</content>
+        <category term="硬件开发" />
+        <updated>2023-01-29T16:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://qianqiu-cell.github.io/2023/01/23/food/salt/</id>
+        <title>盐的使用</title>
+        <link rel="alternate" href="http://qianqiu-cell.github.io/2023/01/23/food/salt/"/>
+        <content type="html">&lt;p&gt;  盐，号称&lt;mark&gt;百味之王&lt;/mark&gt;，后厨里有一句话叫做 “好厨子一把盐”。盐的量掌握好了，这道菜就能做的八九不离十。关于盐的使用主要需要注意&lt;mark&gt;放盐量&lt;/mark&gt;以及&lt;mark&gt;放盐的时间&lt;/mark&gt;。&lt;br&gt;
+&lt;img data-src=&#34;/images/salt/1.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;一-盐的使用量&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-盐的使用量&#34;&gt;#&lt;/a&gt; 一、盐的使用量&lt;/h1&gt;
+&lt;p&gt;  在做菜的过程中，对盐量的把控至关重要，&lt;ins&gt;盐量不足，对导致菜肴寡淡无味，盐量过多，则会毁掉这道菜肴&lt;/ins&gt;。&lt;em&gt;庄祖宜&lt;/em&gt;在《&lt;em&gt;其实大家都想做菜&lt;/em&gt;》中曾谈及专业厨师和家庭厨师的最大差别，其实就在于家庭厨师 “&lt;ins&gt;用的盐常常不够，并且没有边做边尝的习惯&lt;/ins&gt;”。因此，在做菜的时候可以&lt;mark&gt;分多次加盐及尝试味道&lt;/mark&gt;，从而确保盐量恰到好处。&lt;br&gt;
+  ⚠️⚠️⚠️但需要注意的是，过多的摄入盐或者是摄入量不足，都会影响身体内多个器官和系统的运行。&lt;ins&gt;世界卫生组织&lt;/ins&gt;（WHO）建议&lt;mark&gt;每人每日摄入 6g 以下食盐&lt;/mark&gt;可预防冠心病和高血压。&lt;ins&gt;我国&lt;/ins&gt;规定&lt;mark&gt;成人每日摄入 6g 食盐&lt;/mark&gt;即可满足机体对钠的需要。&lt;/p&gt;
+&lt;h1 id=&#34;二-盐的使用时间&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-盐的使用时间&#34;&gt;#&lt;/a&gt; 二、盐的使用时间&lt;/h1&gt;
+&lt;p&gt;  关于盐的使用时间存在较多争议，&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWo0NHkxTTdHTS8/c3BtX2lkX2Zyb209MzMzLjEwMDcudG9wX3JpZ2h0X2Jhcl93aW5kb3dfZGVmYXVsdF9jb2xsZWN0aW9uLmNvbnRlbnQuY2xpY2smYW1wO3ZkX3NvdXJjZT1lMDExNzJlYTI5MmMxYzYwNWIzNDYxMDFkNzAwNmM2MQ==&#34;&gt;有些人&lt;/span&gt;认为盐具有渗透作用，提早放盐会导致食材本身的水分被吸收，从而导致食材的老化和柴化，影响口感；同时又有&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC82NDk3NDA2OA==&#34;&gt;另一部分人&lt;/span&gt;认为可以在做菜的一开始就加上盐，一直到料理结束，期间不断少量多次的用盐调味，&lt;em&gt;Ruhlman&lt;/em&gt; 在《&lt;em&gt;厨艺的常识&lt;/em&gt;》中多次强调 “&lt;ins&gt;懂得用盐是厨房中最重要的知识，烹饪从头到尾都需要加盐&lt;/ins&gt;”。而对于网上&lt;mark&gt;比较中肯以及认可度较高&lt;/mark&gt;的使用方法为：&lt;br&gt;
+  &lt;strong&gt;除了一些水分含量高的食材（通常是蔬菜）不要太早加盐，其他时候都可以在一开始就加点盐，一直到烹饪结束。在整个烹饪过程都用自己的舌头亲自尝一尝味道，确保盐量恰到好处。&lt;/strong&gt;&lt;br&gt;
+  总之，烹饪也是一门学问，个人口味还是要&lt;mark&gt;靠实践出真知&lt;/mark&gt;，&lt;strong&gt;实践才是检验真理的唯一标准！！！&lt;/strong&gt;&lt;/p&gt;
+</content>
+        <category term="烹饪技巧" />
+        <updated>2023-01-22T16:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://qianqiu-cell.github.io/2023/01/22/else/wish_2023/</id>
+        <title>2023年的一些小目标</title>
+        <link rel="alternate" href="http://qianqiu-cell.github.io/2023/01/22/else/wish_2023/"/>
+        <content type="html">&lt;p&gt;&lt;strong&gt;2023 不能再碌碌无为了！！！everybody 动起来！！！&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;一-生活篇&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-生活篇&#34;&gt;#&lt;/a&gt; 一、生活篇&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;学会做饭：
+&lt;ul&gt;
+&lt;li&gt;从理论上学习做饭的原理，并使用 &lt;code&gt;latex&lt;/code&gt;  形成一篇理论文档&lt;/li&gt;
+&lt;li&gt;掌握 5 道可以拿得出手的荤菜（要获得&lt;strong&gt;小小樊同志&lt;/strong&gt;的认可）&lt;/li&gt;
+&lt;li&gt;学会用刀切菜&lt;/li&gt;
+&lt;li&gt;亲自下厨做一桌菜&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;身体健康：
+&lt;ul&gt;
+&lt;li&gt;年累计减重 5 公斤（目前 xx 公斤）&lt;/li&gt;
+&lt;li&gt;年累计跑步 200 公里（在校每周 6 公里，要有跑步记录）&lt;/li&gt;
+&lt;li&gt;年累计引体向上 1000 个（在校每周 30 个，要有 excel 表格记录）&lt;/li&gt;
+&lt;li&gt;年累计俯卧撑 1500 个（每周 30 个，要有 excel 表格记录）&lt;/li&gt;
+&lt;li&gt;慢慢调整作息至 12 点前睡觉&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;沈阳游玩
+&lt;ul&gt;
+&lt;li&gt;去一次沈阳故宫、大帅府、中街&lt;/li&gt;
+&lt;li&gt;该吃的都吃一边&lt;/li&gt;
+&lt;li&gt;该聚的都聚一边&lt;/li&gt;
+&lt;li&gt;跟着致远去旅游一次&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;终极目标
+&lt;ul&gt;
+&lt;li&gt;赚 3w 人民币&lt;/li&gt;
+&lt;li&gt;把房子装修成自己想要的风格&lt;/li&gt;
+&lt;li&gt;成功搬进新房&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;二-学习篇&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-学习篇&#34;&gt;#&lt;/a&gt; 二、学习篇&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;毕业设计
+&lt;ul&gt;
+&lt;li&gt;争取尽早并高质量的完成毕业设计的核心算法（3 月中旬）&lt;/li&gt;
+&lt;li&gt;做一个好看大气上档次的前端界面（基于 &lt;code&gt;pyqt5&lt;/code&gt; ）&lt;/li&gt;
+&lt;li&gt;参与一项比赛并获得满意的奖项&lt;/li&gt;
+&lt;li&gt;发表一篇符合自己水平的论文&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;研究生课程学习
+&lt;ul&gt;
+&lt;li&gt;跟本科要求一样（自己满意即可，无需刻意刷分）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;研究生科研竞赛
+&lt;ul&gt;
+&lt;li&gt;在研究生入学之前掌握人工智能相关基础知识&lt;/li&gt;
+&lt;li&gt;在研究生入学之前发表一篇人工智能相关论文&lt;/li&gt;
+&lt;li&gt;在研究生入学之后发表另一篇论文（方向由老师提供）&lt;/li&gt;
+&lt;li&gt;在研究生入学之前详细规划自己的三年研究生生活（包括科研规划，竞赛参与，工作方向）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;社交能力
+&lt;ul&gt;
+&lt;li&gt;研究生入学后参与竞选学生会及相关组织的成员、或班级委员&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;技能掌握
+&lt;ul&gt;
+&lt;li&gt;能够熟练的使用 &lt;code&gt;latex&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;阅读能力提升，看到英语论文不发怵&lt;/li&gt;
+&lt;li&gt;能够熟练的使用 &lt;code&gt;python&lt;/code&gt;  进行人工智能方向开发&lt;/li&gt;
+&lt;li&gt;闲暇时间学习 &lt;code&gt;C++&lt;/code&gt; ，对 &lt;code&gt;C++&lt;/code&gt;  有一个更好的掌握&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;三-其他&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三-其他&#34;&gt;#&lt;/a&gt; 三、其他&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;看更多&lt;strong&gt;视觉及剧情&lt;/strong&gt;上爆炸的动漫（包括日本经典动漫以及国产动漫，&lt;strong&gt;希望国产动漫可以越来越好！！！&lt;/strong&gt;）&lt;/li&gt;
+&lt;li&gt;在一定程度上&lt;strong&gt;减少对短视频的时间投入&lt;/strong&gt;（短视频的质量亦有参差，要减少无意义的投入）&lt;/li&gt;
+&lt;li&gt;在校期间&lt;strong&gt;减少对于各类游戏的时间投入&lt;/strong&gt;（真的很有助于学习质量的提升）&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="其他" />
+        <category term="一些小目标" />
+        <updated>2023-01-21T16:00:00.000Z</updated>
+    </entry>
     <entry>
         <id>http://qianqiu-cell.github.io/2023/01/20/latex/latex/</id>
         <title>Vscode+TexLive+Latex workshop安装</title>
