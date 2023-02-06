@@ -4,18 +4,20 @@
     <title>Welcome to my tiny world • Posts by &#34;数学基础&#34; category</title>
     <link href="http://qianqiu-cell.github.io" />
     <updated>2022-11-27T16:00:00.000Z</updated>
-    <category term="Windows系统" />
     <category term="博客搭建" />
     <category term="其他" />
     <category term="一些小目标" />
-    <category term="latex技巧" />
-    <category term="论文编辑" />
-    <category term="硬件开发" />
+    <category term="Windows系统" />
     <category term="烹饪技巧" />
+    <category term="python" />
+    <category term="编程技巧" />
     <category term="控制工程" />
     <category term="数学基础" />
-    <category term="office技巧" />
+    <category term="硬件开发" />
     <category term="最优化" />
+    <category term="office技巧" />
+    <category term="论文编辑" />
+    <category term="latex技巧" />
     <entry>
         <id>http://qianqiu-cell.github.io/2022/11/28/math/covariance/</id>
         <title>数学期望、方差和协方差</title>

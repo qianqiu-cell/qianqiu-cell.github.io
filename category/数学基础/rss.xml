@@ -7,18 +7,20 @@
         <language>zh-CN</language>
         <pubDate>Mon, 28 Nov 2022 00:00:00 +0800</pubDate>
         <lastBuildDate>Mon, 28 Nov 2022 00:00:00 +0800</lastBuildDate>
-        <category>Windows系统</category>
         <category>博客搭建</category>
         <category>其他</category>
         <category>一些小目标</category>
-        <category>latex技巧</category>
-        <category>论文编辑</category>
-        <category>硬件开发</category>
+        <category>Windows系统</category>
         <category>烹饪技巧</category>
+        <category>python</category>
+        <category>编程技巧</category>
         <category>控制工程</category>
         <category>数学基础</category>
-        <category>office技巧</category>
+        <category>硬件开发</category>
         <category>最优化</category>
+        <category>office技巧</category>
+        <category>论文编辑</category>
+        <category>latex技巧</category>
         <item>
             <guid isPermalink="true">http://qianqiu-cell.github.io/2022/11/28/math/covariance/</guid>
             <title>数学期望、方差和协方差</title>

@@ -5,20 +5,34 @@
         <link>http://qianqiu-cell.github.io</link>
         <description>小樊&amp;小小樊的学习笔记🌸</description>
         <language>zh-CN</language>
-        <pubDate>Mon, 30 Jan 2023 00:00:00 +0800</pubDate>
-        <lastBuildDate>Mon, 30 Jan 2023 00:00:00 +0800</lastBuildDate>
-        <category>Windows系统</category>
+        <pubDate>Mon, 06 Feb 2023 00:00:00 +0800</pubDate>
+        <lastBuildDate>Mon, 06 Feb 2023 00:00:00 +0800</lastBuildDate>
         <category>博客搭建</category>
         <category>其他</category>
         <category>一些小目标</category>
-        <category>latex技巧</category>
-        <category>论文编辑</category>
-        <category>硬件开发</category>
+        <category>Windows系统</category>
         <category>烹饪技巧</category>
+        <category>python</category>
+        <category>编程技巧</category>
         <category>控制工程</category>
         <category>数学基础</category>
-        <category>office技巧</category>
+        <category>硬件开发</category>
         <category>最优化</category>
+        <category>office技巧</category>
+        <category>论文编辑</category>
+        <category>latex技巧</category>
+        <item>
+            <guid isPermalink="true">http://qianqiu-cell.github.io/2023/02/06/code/python/</guid>
+            <title>Python技巧</title>
+            <link>http://qianqiu-cell.github.io/2023/02/06/code/python/</link>
+            <category>python</category>
+            <category>编程技巧</category>
+            <pubDate>Mon, 06 Feb 2023 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;一-基础操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-基础操作&#34;&gt;#&lt;/a&gt; 一、基础操作&lt;/h1&gt;
+&lt;details class=&#34;success&#34;&gt;&lt;summary&gt;生成n个随机数，其和为固定值&lt;/summary&gt;&lt;div&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;func&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;amount&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; num&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    list1 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; i &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; num &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        a &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; random&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;randint&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; amount&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;token comment&#34;&gt;# 生成 n-1 个随机节点&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        list1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;append&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;a&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    list1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;sort&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;token comment&#34;&gt;# 节点排序&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    list1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;append&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;amount&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;token comment&#34;&gt;# 设置第 n 个节点为 amount，即总金额&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    list2 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; i &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token builtin&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;list1&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            b &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; list1&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;token comment&#34;&gt;# 第一段长度为第 1 个节点 - 0&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            b &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; list1&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; list1&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;token comment&#34;&gt;# 其余段为第 n 个节点 - 第 n-1 个节点&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        list2&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;append&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;b&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; list2&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/details&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://qianqiu-cell.github.io/2023/01/30/hardware/Quartus/</guid>
             <title>Quartus基础教程</title>
@@ -160,8 +174,8 @@
             <guid isPermalink="true">http://qianqiu-cell.github.io/2023/01/20/latex/latex/</guid>
             <title>Vscode+TexLive+Latex workshop安装</title>
             <link>http://qianqiu-cell.github.io/2023/01/20/latex/latex/</link>
-            <category>latex技巧</category>
             <category>论文编辑</category>
+            <category>latex技巧</category>
             <pubDate>Fri, 20 Jan 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;一-tex-live与latex-workshop安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-tex-live与latex-workshop安装&#34;&gt;#&lt;/a&gt; 一、Tex Live 与 Latex workshop 安装&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;Tex Live&lt;/code&gt;  可以从&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cudHVnLm9yZy90ZXhsaXZlLw==&#34;&gt;官网&lt;/span&gt;进行安装， &lt;code&gt;Latex workshop&lt;/code&gt;  从 &lt;code&gt;Vscode&lt;/code&gt;  的插件商城安装&lt;br&gt;
@@ -245,8 +259,8 @@ shoka 主题图片同时备份至百度网盘及个人 U 盘&lt;/p&gt;
             <guid isPermalink="true">http://qianqiu-cell.github.io/2023/01/02/office/office/</guid>
             <title>Office技巧</title>
             <link>http://qianqiu-cell.github.io/2023/01/02/office/office/</link>
-            <category>论文编辑</category>
             <category>office技巧</category>
+            <category>论文编辑</category>
             <pubDate>Mon, 02 Jan 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;一-使用excel将两列内容合并为一列&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-使用excel将两列内容合并为一列&#34;&gt;#&lt;/a&gt; 一、使用 Excel 将两列内容合并为一列&lt;/h1&gt;
 &lt;p&gt;在任意两个行数相等的列，在其后紧接着下一列第一行复制所选两列的内容，如下图所示&lt;br&gt;

@@ -4,18 +4,20 @@
     <title>Welcome to my tiny world • Posts by &#34;office技巧&#34; tag</title>
     <link href="http://qianqiu-cell.github.io" />
     <updated>2023-01-01T16:00:00.000Z</updated>
-    <category term="Windows系统" />
     <category term="博客搭建" />
     <category term="其他" />
     <category term="一些小目标" />
-    <category term="latex技巧" />
-    <category term="论文编辑" />
-    <category term="硬件开发" />
+    <category term="Windows系统" />
     <category term="烹饪技巧" />
+    <category term="python" />
+    <category term="编程技巧" />
     <category term="控制工程" />
     <category term="数学基础" />
-    <category term="office技巧" />
+    <category term="硬件开发" />
     <category term="最优化" />
+    <category term="office技巧" />
+    <category term="论文编辑" />
+    <category term="latex技巧" />
     <entry>
         <id>http://qianqiu-cell.github.io/2023/01/02/office/office/</id>
         <title>Office技巧</title>
@@ -28,8 +30,8 @@
 &lt;h1 id=&#34;二-刷新word中所有mathtype的公式编号&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-刷新word中所有mathtype的公式编号&#34;&gt;#&lt;/a&gt; 二、刷新 word 中所有 mathtype 的公式编号&lt;/h1&gt;
 &lt;p&gt;首先 &lt;code&gt;CTRL+A&lt;/code&gt;  全选文档，接着按 &lt;code&gt;F9&lt;/code&gt; ，进行公式编号的刷新&lt;/p&gt;
 </content>
-        <category term="论文编辑" />
         <category term="office技巧" />
+        <category term="论文编辑" />
         <updated>2023-01-01T16:00:00.000Z</updated>
     </entry>
 </feed>

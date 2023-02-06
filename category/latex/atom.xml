@@ -4,18 +4,20 @@
     <title>Welcome to my tiny world • Posts by &#34;latex&#34; category</title>
     <link href="http://qianqiu-cell.github.io" />
     <updated>2023-01-19T16:00:00.000Z</updated>
-    <category term="Windows系统" />
     <category term="博客搭建" />
     <category term="其他" />
     <category term="一些小目标" />
-    <category term="latex技巧" />
-    <category term="论文编辑" />
-    <category term="硬件开发" />
+    <category term="Windows系统" />
     <category term="烹饪技巧" />
+    <category term="python" />
+    <category term="编程技巧" />
     <category term="控制工程" />
     <category term="数学基础" />
-    <category term="office技巧" />
+    <category term="硬件开发" />
     <category term="最优化" />
+    <category term="office技巧" />
+    <category term="论文编辑" />
+    <category term="latex技巧" />
     <entry>
         <id>http://qianqiu-cell.github.io/2023/01/20/latex/latex/</id>
         <title>Vscode+TexLive+Latex workshop安装</title>
@@ -38,8 +40,8 @@
 &lt;h2 id=&#34;42-编译方式的选择&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#42-编译方式的选择&#34;&gt;#&lt;/a&gt; 4.2 编译方式的选择&lt;/h2&gt;
 &lt;p&gt;通常编译排版时 = 英文文档 = 选择 &lt;code&gt;PDFLaTeX&lt;/code&gt; ，= 中文文档 = 选择 &lt;code&gt;XeLaTeX&lt;/code&gt; 。&lt;/p&gt;
 </content>
-        <category term="latex技巧" />
         <category term="论文编辑" />
+        <category term="latex技巧" />
         <updated>2023-01-19T16:00:00.000Z</updated>
     </entry>
 </feed>
