@@ -35,6 +35,16 @@
             ]
         },
         {
+            "id": "http://qianqiu-cell.github.io/2022/11/07/blog/hexo_style/",
+            "url": "http://qianqiu-cell.github.io/2022/11/07/blog/hexo_style/",
+            "title": "shoka格式",
+            "date_published": "2022-11-06T16:00:00.000Z",
+            "content_html": "<details><summary>默认默认 这里是一段文字</summary><div>\n<p>++ 下划线 ++</p>\n</div></details>\n<details class=\"primary\"><summary>紫色</summary><div>\n<div class=\"note info\">\n<p>参考信息</p>\n</div>\n<ul>\n<li>第一行</li>\n<li>第二行</li>\n</ul>\n</div></details>\n<details class=\"info\"><summary>蓝色</summary><div>\n<div class=\"tab\" data-id=\"id3\" data-title=\"卡片 1\">\n<p>这里是卡片 1 的内容</p>\n</div>\n<div class=\"tab\" data-id=\"id3\" data-title=\"卡片 2\">\n<p>这里是卡片 2 的内容</p>\n</div>\n</div></details>\n<details class=\"success\"><summary>绿色</summary><div>\n<div class=\"links\"><div class=\"item\" title=\"優萌初華\" style=\"--block-color:#e9546b;\"><span class=\"exturl image\" data-url=\"aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=\" data-background-image=\"/images/404.png\"></span>\n          <div class=\"info\">\n          <span class=\"exturl title\" data-url=\"aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=\">優萌初華</span>\n          <p class=\"desc\">https://shoka.lostyu.me</p>\n          </div></div></div>\n</div></details>\n<details class=\"warning\"><summary>黄色</summary><div>\n<p>!! 警告警告警告警告警告！！{.bulr}<br>\n<span class=\"label success\">label</span></p>\n</div></details>\n<details class=\"danger\"><summary>红色</summary><div>\n<p><span class=\"label danger\">danger</span></p>\n</div></details>\n",
+            "tags": [
+                "博客搭建"
+            ]
+        },
+        {
             "id": "http://qianqiu-cell.github.io/2022/11/06/blog/hexo/",
             "url": "http://qianqiu-cell.github.io/2022/11/06/blog/hexo/",
             "title": "Github+Hexo+shoka主题搭建个人博客",

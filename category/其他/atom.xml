@@ -4,20 +4,20 @@
     <title>Welcome to my tiny world • Posts by &#34;其他&#34; category</title>
     <link href="http://qianqiu-cell.github.io" />
     <updated>2023-01-21T16:00:00.000Z</updated>
-    <category term="博客搭建" />
-    <category term="其他" />
-    <category term="一些小目标" />
     <category term="Windows系统" />
-    <category term="烹饪技巧" />
+    <category term="博客搭建" />
     <category term="python" />
     <category term="编程技巧" />
     <category term="控制工程" />
-    <category term="数学基础" />
+    <category term="其他" />
+    <category term="一些小目标" />
+    <category term="烹饪技巧" />
     <category term="硬件开发" />
-    <category term="最优化" />
-    <category term="office技巧" />
-    <category term="论文编辑" />
     <category term="latex技巧" />
+    <category term="论文编辑" />
+    <category term="数学基础" />
+    <category term="office技巧" />
+    <category term="最优化" />
     <entry>
         <id>http://qianqiu-cell.github.io/2023/01/22/else/wish_2023/</id>
         <title>2023年的一些小目标</title>
@@ -31,11 +31,12 @@
 &lt;li&gt;掌握 5 道可以拿得出手的荤菜（要获得&lt;strong&gt;小小樊同志&lt;/strong&gt;的认可）&lt;/li&gt;
 &lt;li&gt;学会用刀切菜&lt;/li&gt;
 &lt;li&gt;亲自下厨做一桌菜&lt;/li&gt;
+&lt;li&gt;做一个点餐软件，每学会一道菜添加一个菜品（基于 &lt;code&gt;pyqt5&lt;/code&gt; ）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;身体健康：
 &lt;ul&gt;
-&lt;li&gt;年累计减重 5 公斤（目前 xx 公斤）&lt;/li&gt;
+&lt;li&gt;年累计减重 5 公斤（目前 139 斤）&lt;/li&gt;
 &lt;li&gt;年累计跑步 200 公里（在校每周 6 公里，要有跑步记录）&lt;/li&gt;
 &lt;li&gt;年累计引体向上 1000 个（在校每周 30 个，要有 excel 表格记录）&lt;/li&gt;
 &lt;li&gt;年累计俯卧撑 1500 个（每周 30 个，要有 excel 表格记录）&lt;/li&gt;
