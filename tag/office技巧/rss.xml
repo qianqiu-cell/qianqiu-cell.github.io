@@ -11,22 +11,22 @@
         <category>博客搭建</category>
         <category>python</category>
         <category>编程技巧</category>
+        <category>烹饪技巧</category>
+        <category>office技巧</category>
+        <category>论文编辑</category>
+        <category>硬件开发</category>
         <category>控制工程</category>
         <category>其他</category>
         <category>一些小目标</category>
-        <category>烹饪技巧</category>
-        <category>硬件开发</category>
-        <category>latex技巧</category>
-        <category>论文编辑</category>
         <category>数学基础</category>
-        <category>office技巧</category>
+        <category>latex技巧</category>
         <category>最优化</category>
         <item>
             <guid isPermalink="true">http://qianqiu-cell.github.io/2023/01/02/office/office/</guid>
             <title>Office技巧</title>
             <link>http://qianqiu-cell.github.io/2023/01/02/office/office/</link>
-            <category>论文编辑</category>
             <category>office技巧</category>
+            <category>论文编辑</category>
             <pubDate>Mon, 02 Jan 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;一-使用excel将两列内容合并为一列&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-使用excel将两列内容合并为一列&#34;&gt;#&lt;/a&gt; 一、使用 Excel 将两列内容合并为一列&lt;/h1&gt;
 &lt;p&gt;在任意两个行数相等的列，在其后紧接着下一列第一行复制所选两列的内容，如下图所示&lt;br&gt;

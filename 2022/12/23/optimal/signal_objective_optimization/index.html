@@ -76,7 +76,7 @@
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>2.8k</span>
+    <span>3k</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -117,12 +117,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://i.postimg.cc/mg84wQtV/6833939bly1gipesx5fdwj20zk0m81kx.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/T3JDRHh0/6833939bly1giclh5u05ej20zk0m87df.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/HjG6CPjH/6833939bly1giclwuom7cj20zk0m8dvn.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/PrC1h4kv/6833939bly1gipevo9j1jj20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/d1ThkqJ2/6833939bly1gipey0a334j20zk0m8qpt.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/BZm7vMPq/6833939bly1gicliierfjj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/Dz0TY8Gh/6833939bly1gipet8c1a2j20zk0m8kct.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/nhKpgyMF/6833939bly1gicmnywqgpj20zk0m8dwx.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/15YdvJyW/6833939bly1giclhnx9glj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/s2rWYCG5/6833939bly1gipevuctzzj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/HWXCKGrr/6833939bly1gipet4bz0yj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/d0sGhwKx/6833939bly1gicit4jrvuj20zk0m8785.jpg"></li>
         </ul>
       </div>
     </header>
@@ -188,7 +188,7 @@
 <p><span class="label danger">课本介绍</span>：<br>
   使用最佳改进策略，在每次迭代时彻底检查邻域。所识别的最佳邻居解是用于后续迭代的当前解。<br>
 <span class="label danger">自我理解</span>：<br>
-  最佳改进策略是一种搜索策略，并不代表一种具体的搜索方法。这种策略可以基于其它具体搜索方法（如最近邻、2opt 等），在每次迭代中先找到当前解的所有邻域解，以<mark>最优邻域解</mark>作为下一代的解，直到当前邻域中没有任何一个邻域解优于当前解，则搜索结束。<br>
+  最佳改进策略是一种搜索策略，并不代表一种具体的搜索方法。这种策略可以基于其它具体搜索方法（如 2opt 等），在每次迭代中先找到当前解的所有邻域解，以<mark>最优邻域解</mark>作为下一代的解，直到当前邻域中没有任何一个邻域解优于当前解，则搜索结束。<br>
 改进启发式搜索算法流程图如下图所示<br>
 <img data-src="/images/signal_objective_optimization/3.1.png" alt=""></p>
 <h1 id="四-3-opt"><a class="markdownIt-Anchor" href="#四-3-opt">#</a> 四、3-opt</h1>
@@ -230,7 +230,14 @@
 <h1 id="九-lin-kernighan算法lk"><a class="markdownIt-Anchor" href="#九-lin-kernighan算法lk">#</a> 九、Lin-Kernighan 算法 (LK)</h1>
 <p>  Lin-Kernighan 算法（又称<ins> λ-opt 算法</ins>）属于<mark>局部优化</mark>算法类中的一种，这是因为该算法通过交换边来局部改善现有旅行，被交换的边是通过随机选取的，交换过程持续下去，直到不能再获得更优的解为止。Lin-Kernighan 算法基于 λ- 最优性原理。<br>
   λ- 最优性原理：如果用任意 λ 条新边取代任意 λ 条现有边获得的新解都不及现有解的成本低，那么现有解满足 λ- 最优（或简记为 λ-opt）。<br>
-  λ 值被预先确定也有不好的一面，这样做将无法通过改变 λ，使算法的运行时间和求解质量获得较好的协调。Lin 和 Kernighan 通过引入了一种称作可变 λ-opt 的启发式算子解决了该问题。他们的算法再执行期间<mark>动态改变 λ 值</mark>。在每一次迭代中，算法都要根据先前运算历史决定是否给目前的 λ 值一个增量，进而通过该 λ 交换获得成本更小的旅行。</p>
+  λ 值被预先确定也有不好的一面，这样做将无法通过改变 λ，使算法的运行时间和求解质量获得较好的协调。Lin 和 Kernighan 通过引入了一种称作可变 λ-opt 的启发式算子解决了该问题。他们的算法再执行期间<mark>动态改变 λ 值</mark>。在每一次迭代中，算法都要根据先前运算历史决定是否给目前的 λ 值一个增量，进而通过该 λ 交换获得成本更小的旅行。<br>
+Lin-Kernighan 算法的原理为：<br>
+（1）对当前基进行邻域搜索<br>
+（2）在邻域中搜索到比最优解更优的解时立刻替代最优解，并以最优解作为基，返回（1）<br>
+（3）如果没有优于最优解的邻域解，那么尝试寻找邻域中第二指标优于最优解的邻域解（同时也是邻域中第二指标最优，需遍历完所有邻域），并以第二指标最优解作为基，返回（1）<br>
+（4）如果没有第二指标优于最优解的邻域解，则结束<br>
+ Lin-Kernighan 算法的流程图如下所示<br>
+<img data-src="/images/signal_objective_optimization/9.1.png" alt=""></p>
 
       <div class="tags">
           <a href="/tags/%E6%9C%80%E4%BC%98%E5%8C%96/" rel="tag"><i class="ic i-tag"></i> 最优化</a>
@@ -245,7 +252,7 @@
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2023-01-02 19:02:13" itemprop="dateModified" datetime="2023-01-02T19:02:13+08:00">2023-01-02</time>
+    <time title="修改时间：2023-02-14 01:43:18" itemprop="dateModified" datetime="2023-02-14T01:43:18+08:00">2023-02-14</time>
   </span>
   <span id="2022/12/23/optimal/signal_objective_optimization/" class="item leancloud_visitors" data-flag-title="单目标搜索算法汇总" title="阅读次数">
       <span class="icon">
@@ -268,7 +275,7 @@
     <div class="item left">
       
 
-  <a href="/2022/11/28/math/covariance/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;9QZh6v88&#x2F;6833939bly1giciukx8a7j20zk0m8aio.jpg" title="数学期望、方差和协方差">
+  <a href="/2022/11/28/math/covariance/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;ncL5K6fj&#x2F;6833939bly1giclhfehz7j20zk0m8u0x.jpg" title="数学期望、方差和协方差">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 数学基础</span>
   <h3>数学期望、方差和协方差</h3>
@@ -278,7 +285,7 @@
     <div class="item right">
       
 
-  <a href="/2022/12/24/blog/hexo_change/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;qvXqdhgC&#x2F;6833939bly1gipewr8iypj20zk0m8b29.jpg" title="Hexo文件迁移">
+  <a href="/2022/12/24/blog/hexo_change/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;HjG6CPjH&#x2F;6833939bly1giclwuom7cj20zk0m8dvn.jpg" title="Hexo文件迁移">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> 博客搭建</span>
   <h3>Hexo文件迁移</h3>
@@ -420,49 +427,10 @@
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
-</div>
-
-    <span><a href="/2022/12/23/optimal/signal_objective_optimization/" title="单目标搜索算法汇总">单目标搜索算法汇总</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
 </div>
 
     <span><a href="/2022/11/06/blog/hexo/" title="Github+Hexo+shoka主题搭建个人博客">Github+Hexo+shoka主题搭建个人博客</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2022/11/01/website_code/" title="一些奇奇怪怪的东西">一些奇奇怪怪的东西</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
-</div>
-
-    <span><a href="/2022/11/24/math/conv/" title="一般情况下的椭圆">一般情况下的椭圆</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/food/" title="分类于 烹饪技巧">烹饪技巧</a>
-</div>
-
-    <span><a href="/2023/01/23/food/salt/" title="盐的使用">盐的使用</a></span>
   </li>
 
       
@@ -479,10 +447,40 @@
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/control/" title="分类于 控制工程">控制工程</a>
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
 </div>
 
-    <span><a href="/2022/11/23/control/spring_damping/" title="弹簧阻尼系统">弹簧阻尼系统</a></span>
+    <span><a href="/2022/12/24/blog/hexo_change/" title="Hexo文件迁移">Hexo文件迁移</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/else/" title="分类于 其他">其他</a>
+</div>
+
+    <span><a href="/2023/01/22/else/wish_2023/" title="2023年的一些小目标">2023年的一些小目标</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+</div>
+
+    <span><a href="/2023/01/02/blog/hexo_image/" title="Hexo图片显示异常问题">Hexo图片显示异常问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
+</div>
+
+    <span><a href="/2022/12/23/optimal/signal_objective_optimization/" title="单目标搜索算法汇总">单目标搜索算法汇总</a></span>
   </li>
 
       
@@ -499,10 +497,19 @@
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/latex/" title="分类于 latex">latex</a>
+<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
 </div>
 
-    <span><a href="/2023/01/20/latex/latex/" title="Vscode+TexLive+Latex workshop安装">Vscode+TexLive+Latex workshop安装</a></span>
+    <span><a href="/2022/11/21/math/svd/" title="奇异值分解（SVD）">奇异值分解（SVD）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/11/01/website_code/" title="一些奇奇怪怪的东西">一些奇奇怪怪的东西</a></span>
   </li>
 
       
@@ -537,13 +544,13 @@
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">43k 字</span>
+    <span title="站点总字数">45k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">39 分钟</span>
+    <span title="站点阅读时长">41 分钟</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

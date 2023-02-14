@@ -11,15 +11,15 @@
         <category>博客搭建</category>
         <category>python</category>
         <category>编程技巧</category>
+        <category>烹饪技巧</category>
+        <category>office技巧</category>
+        <category>论文编辑</category>
+        <category>硬件开发</category>
         <category>控制工程</category>
         <category>其他</category>
         <category>一些小目标</category>
-        <category>烹饪技巧</category>
-        <category>硬件开发</category>
-        <category>latex技巧</category>
-        <category>论文编辑</category>
         <category>数学基础</category>
-        <category>office技巧</category>
+        <category>latex技巧</category>
         <category>最优化</category>
         <item>
             <guid isPermalink="true">http://qianqiu-cell.github.io/2022/12/23/optimal/signal_objective_optimization/</guid>
@@ -47,7 +47,7 @@
 &lt;p&gt;&lt;span class=&#34;label danger&#34;&gt;课本介绍&lt;/span&gt;：&lt;br&gt;
   使用最佳改进策略，在每次迭代时彻底检查邻域。所识别的最佳邻居解是用于后续迭代的当前解。&lt;br&gt;
 &lt;span class=&#34;label danger&#34;&gt;自我理解&lt;/span&gt;：&lt;br&gt;
-  最佳改进策略是一种搜索策略，并不代表一种具体的搜索方法。这种策略可以基于其它具体搜索方法（如最近邻、2opt 等），在每次迭代中先找到当前解的所有邻域解，以&lt;mark&gt;最优邻域解&lt;/mark&gt;作为下一代的解，直到当前邻域中没有任何一个邻域解优于当前解，则搜索结束。&lt;br&gt;
+  最佳改进策略是一种搜索策略，并不代表一种具体的搜索方法。这种策略可以基于其它具体搜索方法（如 2opt 等），在每次迭代中先找到当前解的所有邻域解，以&lt;mark&gt;最优邻域解&lt;/mark&gt;作为下一代的解，直到当前邻域中没有任何一个邻域解优于当前解，则搜索结束。&lt;br&gt;
 改进启发式搜索算法流程图如下图所示&lt;br&gt;
 &lt;img data-src=&#34;/images/signal_objective_optimization/3.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;四-3-opt&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#四-3-opt&#34;&gt;#&lt;/a&gt; 四、3-opt&lt;/h1&gt;
@@ -89,7 +89,14 @@
 &lt;h1 id=&#34;九-lin-kernighan算法lk&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#九-lin-kernighan算法lk&#34;&gt;#&lt;/a&gt; 九、Lin-Kernighan 算法 (LK)&lt;/h1&gt;
 &lt;p&gt;  Lin-Kernighan 算法（又称&lt;ins&gt; λ-opt 算法&lt;/ins&gt;）属于&lt;mark&gt;局部优化&lt;/mark&gt;算法类中的一种，这是因为该算法通过交换边来局部改善现有旅行，被交换的边是通过随机选取的，交换过程持续下去，直到不能再获得更优的解为止。Lin-Kernighan 算法基于 λ- 最优性原理。&lt;br&gt;
   λ- 最优性原理：如果用任意 λ 条新边取代任意 λ 条现有边获得的新解都不及现有解的成本低，那么现有解满足 λ- 最优（或简记为 λ-opt）。&lt;br&gt;
-  λ 值被预先确定也有不好的一面，这样做将无法通过改变 λ，使算法的运行时间和求解质量获得较好的协调。Lin 和 Kernighan 通过引入了一种称作可变 λ-opt 的启发式算子解决了该问题。他们的算法再执行期间&lt;mark&gt;动态改变 λ 值&lt;/mark&gt;。在每一次迭代中，算法都要根据先前运算历史决定是否给目前的 λ 值一个增量，进而通过该 λ 交换获得成本更小的旅行。&lt;/p&gt;
+  λ 值被预先确定也有不好的一面，这样做将无法通过改变 λ，使算法的运行时间和求解质量获得较好的协调。Lin 和 Kernighan 通过引入了一种称作可变 λ-opt 的启发式算子解决了该问题。他们的算法再执行期间&lt;mark&gt;动态改变 λ 值&lt;/mark&gt;。在每一次迭代中，算法都要根据先前运算历史决定是否给目前的 λ 值一个增量，进而通过该 λ 交换获得成本更小的旅行。&lt;br&gt;
+Lin-Kernighan 算法的原理为：&lt;br&gt;
+（1）对当前基进行邻域搜索&lt;br&gt;
+（2）在邻域中搜索到比最优解更优的解时立刻替代最优解，并以最优解作为基，返回（1）&lt;br&gt;
+（3）如果没有优于最优解的邻域解，那么尝试寻找邻域中第二指标优于最优解的邻域解（同时也是邻域中第二指标最优，需遍历完所有邻域），并以第二指标最优解作为基，返回（1）&lt;br&gt;
+（4）如果没有第二指标优于最优解的邻域解，则结束&lt;br&gt;
+ Lin-Kernighan 算法的流程图如下所示&lt;br&gt;
+&lt;img data-src=&#34;/images/signal_objective_optimization/9.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
  ]]></description>
         </item>
     </channel>

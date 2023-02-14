@@ -11,15 +11,15 @@
         <category>博客搭建</category>
         <category>python</category>
         <category>编程技巧</category>
+        <category>烹饪技巧</category>
+        <category>office技巧</category>
+        <category>论文编辑</category>
+        <category>硬件开发</category>
         <category>控制工程</category>
         <category>其他</category>
         <category>一些小目标</category>
-        <category>烹饪技巧</category>
-        <category>硬件开发</category>
-        <category>latex技巧</category>
-        <category>论文编辑</category>
         <category>数学基础</category>
-        <category>office技巧</category>
+        <category>latex技巧</category>
         <category>最优化</category>
         <item>
             <guid isPermalink="true">http://qianqiu-cell.github.io/2023/02/06/code/python/</guid>
@@ -28,9 +28,63 @@
             <category>python</category>
             <category>编程技巧</category>
             <pubDate>Mon, 06 Feb 2023 00:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;一-基础操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-基础操作&#34;&gt;#&lt;/a&gt; 一、基础操作&lt;/h1&gt;
+            <description><![CDATA[ &lt;h1 id=&#34;一-基础概念&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-基础概念&#34;&gt;#&lt;/a&gt; 一、基础概念&lt;/h1&gt;
+&lt;details class=&#34;info&#34;&gt;&lt;summary&gt;Python按位运算符 (Python Bitwise Operators)&lt;/summary&gt;&lt;div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Bitwise Operator&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Description&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Simple Example&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;amp;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Bitwise OR Operator&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;10 &amp;amp; 7 = 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;|&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Bitwise XOR Operator&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;10 | 7 = 15&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;^&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Bitwise AND Operator&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;10 ^ 7 = 13&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;~&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Bitwise Ones’ Compliment Operator&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;~10 = -11&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;lt;&amp;lt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Bitwise Left Shift operator&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;10&amp;lt;&amp;lt;2 = 40&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;gt;&amp;gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Bitwise Right Shift Operator&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;10&amp;gt;&amp;gt;1 = 5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;details class=&#34;danger&#34;&gt;&lt;summary&gt;python字符串、列表、元组乘法&lt;/summary&gt;&lt;div&gt;
+&lt;p&gt;&lt;code&gt;python&lt;/code&gt;  中，支持相乘的有字符串，列表，元组，相乘是内容相乘 &lt;code&gt;n&lt;/code&gt; ，新的内容会重复 &lt;code&gt;n&lt;/code&gt;  次&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;str_a &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;我&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;str_a &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;list_a &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;1&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;2&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;3&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;list_a &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;list_b &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;我&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;爱&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;python&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;list_b &lt;span class=&#34;token operator&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;运行结果为&lt;br&gt;
+&lt;img data-src=&#34;/images/python/1.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;details class=&#34;warning&#34;&gt;&lt;summary&gt;浮点数运算不精确问题&lt;/summary&gt;&lt;div&gt;
+&lt;p&gt;由于 &lt;code&gt;Python&lt;/code&gt;  的浮点数以二进制形式表示，计算机在进行浮点运算时会产生浮点误差，如下场景所示&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;a &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;100.7&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;100.9&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token builtin&#34;&gt;sum&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;a&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 输出：201.60000000000002&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;解决方法： &lt;code&gt;round()&lt;/code&gt;  是 &lt;code&gt;python&lt;/code&gt;  自带的一个函数，用于数字的四舍五入&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin&#34;&gt;round&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;5.214&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 输出：5.21&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;h1 id=&#34;二-特定功能函数&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-特定功能函数&#34;&gt;#&lt;/a&gt; 二、特定功能函数&lt;/h1&gt;
 &lt;details class=&#34;success&#34;&gt;&lt;summary&gt;生成n个随机数，其和为固定值&lt;/summary&gt;&lt;div&gt;
 &lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;func&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;amount&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; num&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    list1 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; i &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; num &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        a &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; random&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;randint&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; amount&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;token comment&#34;&gt;# 生成 n-1 个随机节点&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        list1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;append&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;a&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    list1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;sort&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;token comment&#34;&gt;# 节点排序&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    list1&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;append&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;amount&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;  &lt;span class=&#34;token comment&#34;&gt;# 设置第 n 个节点为 amount，即总金额&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    list2 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; i &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token builtin&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;list1&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; i &lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            b &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; list1&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;token comment&#34;&gt;# 第一段长度为第 1 个节点 - 0&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            b &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; list1&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; list1&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;i &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;  &lt;span class=&#34;token comment&#34;&gt;# 其余段为第 n 个节点 - 第 n-1 个节点&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        list2&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;append&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;b&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; list2&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/details&gt;
+&lt;h1 id=&#34;三-numpy&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三-numpy&#34;&gt;#&lt;/a&gt; 三、numpy&lt;/h1&gt;
 &lt;details class=&#34;primary&#34;&gt;&lt;summary&gt;np.array和np.asarray区别&lt;/summary&gt;&lt;div&gt;
 &lt;p&gt;&lt;code&gt;np.array&lt;/code&gt;  和 &lt;code&gt;np.asarray&lt;/code&gt;  都可将结构数据转换为 &lt;code&gt;ndarray&lt;/code&gt;  类型&lt;br&gt;
 但是主要区别就是当数据源是 &lt;code&gt;ndarray&lt;/code&gt;  时：&lt;br&gt;
@@ -183,8 +237,8 @@
             <guid isPermalink="true">http://qianqiu-cell.github.io/2023/01/20/latex/latex/</guid>
             <title>Vscode+TexLive+Latex workshop安装</title>
             <link>http://qianqiu-cell.github.io/2023/01/20/latex/latex/</link>
-            <category>latex技巧</category>
             <category>论文编辑</category>
+            <category>latex技巧</category>
             <pubDate>Fri, 20 Jan 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;一-tex-live与latex-workshop安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-tex-live与latex-workshop安装&#34;&gt;#&lt;/a&gt; 一、Tex Live 与 Latex workshop 安装&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;Tex Live&lt;/code&gt;  可以从&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cudHVnLm9yZy90ZXhsaXZlLw==&#34;&gt;官网&lt;/span&gt;进行安装， &lt;code&gt;Latex workshop&lt;/code&gt;  从 &lt;code&gt;Vscode&lt;/code&gt;  的插件商城安装&lt;br&gt;
@@ -268,8 +322,8 @@ shoka 主题图片同时备份至百度网盘及个人 U 盘&lt;/p&gt;
             <guid isPermalink="true">http://qianqiu-cell.github.io/2023/01/02/office/office/</guid>
             <title>Office技巧</title>
             <link>http://qianqiu-cell.github.io/2023/01/02/office/office/</link>
-            <category>论文编辑</category>
             <category>office技巧</category>
+            <category>论文编辑</category>
             <pubDate>Mon, 02 Jan 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;一-使用excel将两列内容合并为一列&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-使用excel将两列内容合并为一列&#34;&gt;#&lt;/a&gt; 一、使用 Excel 将两列内容合并为一列&lt;/h1&gt;
 &lt;p&gt;在任意两个行数相等的列，在其后紧接着下一列第一行复制所选两列的内容，如下图所示&lt;br&gt;
@@ -343,7 +397,7 @@ shoka 主题图片同时备份至百度网盘及个人 U 盘&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;label danger&#34;&gt;课本介绍&lt;/span&gt;：&lt;br&gt;
   使用最佳改进策略，在每次迭代时彻底检查邻域。所识别的最佳邻居解是用于后续迭代的当前解。&lt;br&gt;
 &lt;span class=&#34;label danger&#34;&gt;自我理解&lt;/span&gt;：&lt;br&gt;
-  最佳改进策略是一种搜索策略，并不代表一种具体的搜索方法。这种策略可以基于其它具体搜索方法（如最近邻、2opt 等），在每次迭代中先找到当前解的所有邻域解，以&lt;mark&gt;最优邻域解&lt;/mark&gt;作为下一代的解，直到当前邻域中没有任何一个邻域解优于当前解，则搜索结束。&lt;br&gt;
+  最佳改进策略是一种搜索策略，并不代表一种具体的搜索方法。这种策略可以基于其它具体搜索方法（如 2opt 等），在每次迭代中先找到当前解的所有邻域解，以&lt;mark&gt;最优邻域解&lt;/mark&gt;作为下一代的解，直到当前邻域中没有任何一个邻域解优于当前解，则搜索结束。&lt;br&gt;
 改进启发式搜索算法流程图如下图所示&lt;br&gt;
 &lt;img data-src=&#34;/images/signal_objective_optimization/3.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;四-3-opt&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#四-3-opt&#34;&gt;#&lt;/a&gt; 四、3-opt&lt;/h1&gt;
@@ -385,7 +439,14 @@ shoka 主题图片同时备份至百度网盘及个人 U 盘&lt;/p&gt;
 &lt;h1 id=&#34;九-lin-kernighan算法lk&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#九-lin-kernighan算法lk&#34;&gt;#&lt;/a&gt; 九、Lin-Kernighan 算法 (LK)&lt;/h1&gt;
 &lt;p&gt;  Lin-Kernighan 算法（又称&lt;ins&gt; λ-opt 算法&lt;/ins&gt;）属于&lt;mark&gt;局部优化&lt;/mark&gt;算法类中的一种，这是因为该算法通过交换边来局部改善现有旅行，被交换的边是通过随机选取的，交换过程持续下去，直到不能再获得更优的解为止。Lin-Kernighan 算法基于 λ- 最优性原理。&lt;br&gt;
   λ- 最优性原理：如果用任意 λ 条新边取代任意 λ 条现有边获得的新解都不及现有解的成本低，那么现有解满足 λ- 最优（或简记为 λ-opt）。&lt;br&gt;
-  λ 值被预先确定也有不好的一面，这样做将无法通过改变 λ，使算法的运行时间和求解质量获得较好的协调。Lin 和 Kernighan 通过引入了一种称作可变 λ-opt 的启发式算子解决了该问题。他们的算法再执行期间&lt;mark&gt;动态改变 λ 值&lt;/mark&gt;。在每一次迭代中，算法都要根据先前运算历史决定是否给目前的 λ 值一个增量，进而通过该 λ 交换获得成本更小的旅行。&lt;/p&gt;
+  λ 值被预先确定也有不好的一面，这样做将无法通过改变 λ，使算法的运行时间和求解质量获得较好的协调。Lin 和 Kernighan 通过引入了一种称作可变 λ-opt 的启发式算子解决了该问题。他们的算法再执行期间&lt;mark&gt;动态改变 λ 值&lt;/mark&gt;。在每一次迭代中，算法都要根据先前运算历史决定是否给目前的 λ 值一个增量，进而通过该 λ 交换获得成本更小的旅行。&lt;br&gt;
+Lin-Kernighan 算法的原理为：&lt;br&gt;
+（1）对当前基进行邻域搜索&lt;br&gt;
+（2）在邻域中搜索到比最优解更优的解时立刻替代最优解，并以最优解作为基，返回（1）&lt;br&gt;
+（3）如果没有优于最优解的邻域解，那么尝试寻找邻域中第二指标优于最优解的邻域解（同时也是邻域中第二指标最优，需遍历完所有邻域），并以第二指标最优解作为基，返回（1）&lt;br&gt;
+（4）如果没有第二指标优于最优解的邻域解，则结束&lt;br&gt;
+ Lin-Kernighan 算法的流程图如下所示&lt;br&gt;
+&lt;img data-src=&#34;/images/signal_objective_optimization/9.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -871,7 +932,112 @@ V^TV=I
             <link>http://qianqiu-cell.github.io/2022/11/07/blog/hexo_style/</link>
             <category>博客搭建</category>
             <pubDate>Mon, 07 Nov 2022 00:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;details&gt;&lt;summary&gt;默认默认 这里是一段文字&lt;/summary&gt;&lt;div&gt;
+            <description><![CDATA[ &lt;h1 id=&#34;links连接块&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#links连接块&#34;&gt;#&lt;/a&gt;  &lt;code&gt;links&lt;/code&gt;  连接块&lt;/h1&gt;
+&lt;div class=&#34;links&#34;&gt;&lt;div class=&#34;item&#34; title=&#34;霜月琉璃&#34; style=&#34;--block-color:#e9546b;&#34;&gt;&lt;span class=&#34;exturl image&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34; data-background-image=&#34;https://cdn.jsdelivr.net/gh/amehime/shoka@latest/images/avatar.jpg&#34;&gt;&lt;/span&gt;
+          &lt;div class=&#34;info&#34;&gt;
+          &lt;span class=&#34;exturl title&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34;&gt;優萌初華&lt;/span&gt;
+          &lt;p class=&#34;desc&#34;&gt;琉璃的医学 &amp; 编程笔记&lt;/p&gt;
+          &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;item&#34; title=&#34;霜月琉璃&#34;&gt;&lt;span class=&#34;exturl image&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34; data-background-image=&#34;/images/avatar.jpg&#34;&gt;&lt;/span&gt;
+          &lt;div class=&#34;info&#34;&gt;
+          &lt;span class=&#34;exturl title&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34;&gt;優萌初華&lt;/span&gt;
+          &lt;p class=&#34;desc&#34;&gt;https://shoka.lostyu.me&lt;/p&gt;
+          &lt;/div&gt;&lt;/div&gt;&lt;div class=&#34;item&#34; title=&#34;優萌初華&#34; style=&#34;--block-color:#9d5b8b;&#34;&gt;&lt;span class=&#34;exturl image&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34; data-background-image=&#34;/images/404.png&#34;&gt;&lt;/span&gt;
+          &lt;div class=&#34;info&#34;&gt;
+          &lt;span class=&#34;exturl title&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34;&gt;優萌初華&lt;/span&gt;
+          &lt;p class=&#34;desc&#34;&gt;琉璃的医学 &amp; 编程笔记&lt;/p&gt;
+          &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h1 id=&#34;code代码块&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#code代码块&#34;&gt;#&lt;/a&gt;  &lt;code&gt;code&lt;/code&gt;  代码块&lt;/h1&gt;
+&lt;p&gt;支持的语言&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wcmlzbWpzLmNvbS8jc3VwcG9ydGVkLWxhbmd1YWdlcw==&#34;&gt;戳此&lt;/span&gt;&lt;br&gt;
+如果不需要代码高亮，但希望显示代码块样式，则 &lt;code&gt;language&lt;/code&gt;  设为 &lt;code&gt;raw&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;span&gt;行高亮&lt;/span&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34;&gt;参考链接&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr class=&#34;marked&#34;&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;token import&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;java&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;util&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Scanner&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token class-name&#34;&gt;Scanner&lt;/span&gt; in &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Scanner&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;in&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// 输入 Scan 之后，按下键盘 Alt + “/” 键，Eclipse 下自动补全。&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;println &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;in&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;nextLine &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr class=&#34;marked&#34;&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;println &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Hello&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;world.&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;span&gt;命令行提示符&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td data-command=&#34;[root@localhost] $&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;pwd&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td data-command=&#34;&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;/usr/home/chris/bin&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td data-command=&#34;&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;ls&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-la&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td data-command=&#34;[admin@remotehost] #&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;total &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td data-command=&#34;[admin@remotehost] #&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;drwxr-xr-x   &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt; chris  chris     &lt;span class=&#34;token number&#34;&gt;11&lt;/span&gt; Jan &lt;span class=&#34;token number&#34;&gt;10&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;16&lt;/span&gt;:48 &lt;span class=&#34;token builtin class-name&#34;&gt;.&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td data-command=&#34;[admin@remotehost] #&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;drwxr--r-x  &lt;span class=&#34;token number&#34;&gt;45&lt;/span&gt; chris  chris     &lt;span class=&#34;token number&#34;&gt;92&lt;/span&gt; Feb &lt;span class=&#34;token number&#34;&gt;14&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;11&lt;/span&gt;:10 &lt;span class=&#34;token punctuation&#34;&gt;..&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td data-command=&#34;&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;-rwxr-xr-x   &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt; chris  chris    &lt;span class=&#34;token number&#34;&gt;444&lt;/span&gt; Aug &lt;span class=&#34;token number&#34;&gt;25&lt;/span&gt;  &lt;span class=&#34;token number&#34;&gt;2013&lt;/span&gt; backup&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td data-command=&#34;&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;-rwxr-xr-x   &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt; chris  chris    &lt;span class=&#34;token number&#34;&gt;642&lt;/span&gt; Jan &lt;span class=&#34;token number&#34;&gt;17&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;14&lt;/span&gt;:42 deploy&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td data-command=&#34;[root@localhost] $&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;add&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-A&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td data-command=&#34;[root@localhost] $&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; commit &lt;span class=&#34;token parameter variable&#34;&gt;-m&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;update&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td data-command=&#34;&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; push&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h1 id=&#34;emoji绘文字&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#emoji绘文字&#34;&gt;#&lt;/a&gt;  &lt;code&gt;emoji&lt;/code&gt;  绘文字&lt;/h1&gt;
+&lt;p&gt;本功能基于 &lt;code&gt;markdown-it-emoji&lt;/code&gt;  ，所有标签参考&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL21hcmtkb3duLWl0L21hcmtkb3duLWl0LWVtb2ppL2Jsb2IvbWFzdGVyL2xpYi9kYXRhL2Z1bGwuanNvbg==&#34;&gt;戳此&lt;/span&gt;&lt;br&gt;
+😘&lt;br&gt;
+💍&lt;br&gt;
+🎶&lt;/p&gt;
+&lt;h1 id=&#34;effects文字特效&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#effects文字特效&#34;&gt;#&lt;/a&gt;  &lt;code&gt;effects&lt;/code&gt;  文字特效&lt;/h1&gt;
+&lt;p&gt;&lt;ins&gt;下划线&lt;/ins&gt;&lt;br&gt;
+&lt;ins class=&#34;wavy&#34;&gt;波浪线&lt;/ins&gt;&lt;br&gt;
+&lt;ins class=&#34;dot&#34;&gt;着重点&lt;/ins&gt;&lt;br&gt;
+&lt;ins class=&#34;primary&#34;&gt;紫色下划线&lt;/ins&gt;&lt;br&gt;
+&lt;ins class=&#34;wavy success&#34;&gt;绿色波浪线&lt;/ins&gt;&lt;br&gt;
+&lt;ins class=&#34;dot warning&#34;&gt;黄色着重点&lt;/ins&gt;&lt;br&gt;
+～～删除线～～&lt;br&gt;
+~~ 红色删除线～～{.danger}&lt;br&gt;
+&lt;mark&gt; 荧光高亮&lt;/mark&gt;&lt;br&gt;
+&lt;span class=&#34;rainbow&#34;&gt;赤橙黄绿青蓝紫&lt;/span&gt;&lt;br&gt;
+&lt;span class=&#34;red&#34;&gt;红色&lt;/span&gt;&lt;br&gt;
+&lt;span class=&#34;pink&#34;&gt;粉色&lt;/span&gt;&lt;br&gt;
+&lt;span class=&#34;orange&#34;&gt;橙色&lt;/span&gt;&lt;br&gt;
+&lt;span class=&#34;yellow&#34;&gt;黄色&lt;/span&gt;&lt;br&gt;
+&lt;span class=&#34;green&#34;&gt;绿色&lt;/span&gt;&lt;br&gt;
+&lt;span class=&#34;aqua&#34;&gt;靛青&lt;/span&gt;&lt;br&gt;
+&lt;span class=&#34;blue&#34;&gt;蓝色&lt;/span&gt;&lt;br&gt;
+&lt;span class=&#34;purple&#34;&gt;紫色&lt;/span&gt;&lt;br&gt;
+&lt;span class=&#34;grey&#34;&gt;灰色&lt;/span&gt;&lt;br&gt;
+快捷键 &lt;span class=&#34;kbd&#34;&gt;Ctrl&lt;/span&gt; + &lt;span class=&#34;kbd red&#34;&gt;C&lt;/span&gt;&lt;br&gt;
+H&lt;sub&gt;2&lt;/sub&gt;0&lt;br&gt;
+29&lt;sup&gt;th&lt;/sup&gt;&lt;/p&gt;
+&lt;h1 id=&#34;spoiler隐藏文字&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#spoiler隐藏文字&#34;&gt;#&lt;/a&gt;  &lt;code&gt;spoiler&lt;/code&gt;  隐藏文字&lt;/h1&gt;
+&lt;p&gt;!! 黑幕黑幕黑幕黑幕黑幕黑幕！！： 鼠标滑过显示内容&lt;br&gt;
+！！模糊模糊模糊模糊模糊模糊！！{.bulr} ： 选中文字显示内容&lt;/p&gt;
+&lt;h1 id=&#34;label标签块&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#label标签块&#34;&gt;#&lt;/a&gt;  &lt;code&gt;label&lt;/code&gt;  标签块&lt;/h1&gt;
+&lt;p&gt;&lt;span class=&#34;label&#34;&gt;default&lt;/span&gt;&lt;br&gt;
+&lt;span class=&#34;label primary&#34;&gt;primary&lt;/span&gt;&lt;br&gt;
+&lt;span class=&#34;label info&#34;&gt;info&lt;/span&gt;&lt;br&gt;
+&lt;span class=&#34;label success&#34;&gt;✔️success&lt;/span&gt;&lt;br&gt;
+&lt;span class=&#34;label warning&#34;&gt;warning&lt;/span&gt;&lt;br&gt;
+&lt;span class=&#34;label danger&#34;&gt;💔danger&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;note提醒块&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#note提醒块&#34;&gt;#&lt;/a&gt;  &lt;code&gt;note&lt;/code&gt;  提醒块&lt;/h1&gt;
+&lt;div class=&#34;note default&#34;&gt;
+&lt;p&gt;默认默认&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note primary&#34;&gt;
+&lt;p&gt;基本基本&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;提示提示&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note success&#34;&gt;
+&lt;p&gt;成功成功&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note warning&#34;&gt;
+&lt;p&gt;警告警告&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note danger&#34;&gt;
+&lt;p&gt;危险危险&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note danger no-icon&#34;&gt;
+&lt;p&gt;危险危险&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;tab标签卡&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#tab标签卡&#34;&gt;#&lt;/a&gt;  &lt;code&gt;tab&lt;/code&gt;  标签卡&lt;/h1&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;卡片 1&#34;&gt;
+&lt;p&gt;这里是卡片 1 的内容&lt;br&gt;
+ ** 加粗 **&lt;br&gt;
+&lt;span class=&#34;label success&#34;&gt;success&lt;/span&gt;&lt;/p&gt;
+&lt;div class=&#34;links&#34;&gt;&lt;div class=&#34;item&#34; title=&#34;霜月琉璃&#34; style=&#34;--block-color:#e9546b;&#34;&gt;&lt;span class=&#34;exturl image&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34; data-background-image=&#34;https://cdn.jsdelivr.net/gh/amehime/shoka@latest/images/avatar.jpg&#34;&gt;&lt;/span&gt;
+          &lt;div class=&#34;info&#34;&gt;
+          &lt;span class=&#34;exturl title&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34;&gt;優萌初華&lt;/span&gt;
+          &lt;p class=&#34;desc&#34;&gt;琉璃的医学 &amp; 编程笔记&lt;/p&gt;
+          &lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id1&#34; data-title=&#34;卡片 2&#34;&gt;
+&lt;p&gt;这里是卡片 2 的内容&lt;/p&gt;
+&lt;div class=&#34;note danger&#34;&gt;
+&lt;p&gt;危险危险&lt;/p&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;第一行&lt;/li&gt;
+&lt;li&gt;第二行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id2&#34; data-title=&#34;②号标签卡片 1&#34;&gt;
+&lt;p&gt;这里是卡片 1 的内容&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&#34;tab&#34; data-id=&#34;id2&#34; data-title=&#34;②号标签卡片 2&#34;&gt;
+&lt;p&gt;这里是卡片 2 的内容&lt;/p&gt;
+&lt;/div&gt;
+&lt;h1 id=&#34;collapse折叠块&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#collapse折叠块&#34;&gt;#&lt;/a&gt;  &lt;code&gt;collapse&lt;/code&gt;  折叠块&lt;/h1&gt;
+&lt;details&gt;&lt;summary&gt;默认默认 这里是一段文字&lt;/summary&gt;&lt;div&gt;
 &lt;p&gt;++ 下划线 ++&lt;/p&gt;
 &lt;/div&gt;&lt;/details&gt;
 &lt;details class=&#34;primary&#34;&gt;&lt;summary&gt;紫色&lt;/summary&gt;&lt;div&gt;
@@ -905,6 +1071,19 @@ V^TV=I
 &lt;details class=&#34;danger&#34;&gt;&lt;summary&gt;红色&lt;/summary&gt;&lt;div&gt;
 &lt;p&gt;&lt;span class=&#34;label danger&#34;&gt;danger&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;&lt;/details&gt;
+&lt;h1 id=&#34;tasklist待办事项&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#tasklist待办事项&#34;&gt;#&lt;/a&gt;  &lt;code&gt;taskList&lt;/code&gt;  待办事项&lt;/h1&gt;
+&lt;ul class=&#34;task-list danger&#34;&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_0&#34; disabled=&#34;true&#34;&gt;&lt;label for=&#34;cbx_0&#34;&gt; 这是一个小叉叉&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_1&#34; checked=&#34;true&#34; disabled=&#34;true&#34;&gt;&lt;label for=&#34;cbx_1&#34;&gt; 这是一个红色勾勾&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class=&#34;task-list primary&#34;&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_2&#34; disabled=&#34;true&#34;&gt;&lt;label for=&#34;cbx_2&#34;&gt; 未完成&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_3&#34; checked=&#34;true&#34; disabled=&#34;true&#34;&gt;&lt;label for=&#34;cbx_3&#34;&gt; 完成&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_4&#34; disabled=&#34;true&#34;&gt;&lt;label for=&#34;cbx_4&#34;&gt; 未完成&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_5&#34; checked=&#34;true&#34; disabled=&#34;true&#34;&gt;&lt;label for=&#34;cbx_5&#34;&gt; 默认颜色&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
  ]]></description>
         </item>
         <item>

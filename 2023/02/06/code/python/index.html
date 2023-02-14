@@ -76,7 +76,7 @@ Python技巧 - python |
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>957</span>
+    <span>1.6k</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -117,12 +117,12 @@ Python技巧 - python |
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://i.postimg.cc/VkRtWHqT/6833939bly1gicit31ffoj20zk0m8naf.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/ZK4XMWkQ/6833939bly1gipeudstjqj20zk0m8k3r.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/tRkwx9wG/6833939bly1giclhpw3lwj20zk0m8gvw.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/BnYVwNsY/6833939bly1giclfdu6exj20zk0m87hw.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/3R6fJwWg/6833939bly1giciusoyjnj219g0u0x56.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/W4NmkqyM/6833939bly1gipexbei4hj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/qRCgSmKp/6833939bly1giciryrr3rj20zk0m8nhk.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/Hx7CdR3P/6833939bly1gipesrnqv3j20zk0m8ava.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/L58yTZwK/6833939bly1gicli9lfebj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/WbckZJFh/6833939bly1gipexoj0moj20zk0m8kgu.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/g2wsSp05/6833939bly1gipevarprfj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/pr0nf9bS/6833939bly1giclxp31goj20zk0m8qv5.jpg"></li>
         </ul>
       </div>
     </header>
@@ -168,9 +168,63 @@ Python技巧 - python |
   <div class="body md" itemprop="articleBody">
     
 
-    <h1 id="一-基础操作"><a class="markdownIt-Anchor" href="#一-基础操作">#</a> 一、基础操作</h1>
+    <h1 id="一-基础概念"><a class="markdownIt-Anchor" href="#一-基础概念">#</a> 一、基础概念</h1>
+<details class="info"><summary>Python按位运算符 (Python Bitwise Operators)</summary><div>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Bitwise Operator</th>
+<th style="text-align:center">Description</th>
+<th style="text-align:center">Simple Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">&amp;</td>
+<td style="text-align:center">Bitwise OR Operator</td>
+<td style="text-align:center">10 &amp; 7 = 2</td>
+</tr>
+<tr>
+<td style="text-align:center">|</td>
+<td style="text-align:center">Bitwise XOR Operator</td>
+<td style="text-align:center">10 | 7 = 15</td>
+</tr>
+<tr>
+<td style="text-align:center">^</td>
+<td style="text-align:center">Bitwise AND Operator</td>
+<td style="text-align:center">10 ^ 7 = 13</td>
+</tr>
+<tr>
+<td style="text-align:center">~</td>
+<td style="text-align:center">Bitwise Ones’ Compliment Operator</td>
+<td style="text-align:center">~10 = -11</td>
+</tr>
+<tr>
+<td style="text-align:center">&lt;&lt;</td>
+<td style="text-align:center">Bitwise Left Shift operator</td>
+<td style="text-align:center">10&lt;&lt;2 = 40</td>
+</tr>
+<tr>
+<td style="text-align:center">&gt;&gt;</td>
+<td style="text-align:center">Bitwise Right Shift Operator</td>
+<td style="text-align:center">10&gt;&gt;1 = 5</td>
+</tr>
+</tbody>
+</table>
+</div></details>
+<details class="danger"><summary>python字符串、列表、元组乘法</summary><div>
+<p><code>python</code>  中，支持相乘的有字符串，列表，元组，相乘是内容相乘 <code>n</code> ，新的内容会重复 <code>n</code>  次</p>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre>str_a <span class="token operator">=</span> <span class="token string">"我"</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span>str_a <span class="token operator">*</span> <span class="token number">3</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="3"></td><td><pre>list_a <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">"1"</span><span class="token punctuation">,</span> <span class="token string">"2"</span><span class="token punctuation">,</span> <span class="token string">"3"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span>list_a <span class="token operator">*</span> <span class="token number">3</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="5"></td><td><pre>list_b <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"我"</span><span class="token punctuation">,</span> <span class="token string">"爱"</span><span class="token punctuation">,</span> <span class="token string">"python"</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span>list_b <span class="token operator">*</span> <span class="token number">3</span><span class="token punctuation">)</span></pre></td></tr></table></figure><p>运行结果为<br>
+<img data-src="/images/python/1.1.png" alt=""></p>
+</div></details>
+<details class="warning"><summary>浮点数运算不精确问题</summary><div>
+<p>由于 <code>Python</code>  的浮点数以二进制形式表示，计算机在进行浮点运算时会产生浮点误差，如下场景所示</p>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre>a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">100.7</span><span class="token punctuation">,</span> <span class="token number">100.9</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token comment"># 输出：201.60000000000002</span></pre></td></tr></table></figure><p>解决方法： <code>round()</code>  是 <code>python</code>  自带的一个函数，用于数字的四舍五入</p>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token builtin">round</span><span class="token punctuation">(</span><span class="token number">5.214</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token comment"># 输出：5.21</span></pre></td></tr></table></figure></div></details>
+<h1 id="二-特定功能函数"><a class="markdownIt-Anchor" href="#二-特定功能函数">#</a> 二、特定功能函数</h1>
 <details class="success"><summary>生成n个随机数，其和为固定值</summary><div>
 <figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">def</span> <span class="token function">func</span><span class="token punctuation">(</span>amount<span class="token punctuation">,</span> num<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    list1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> num <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="4"></td><td><pre>        a <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> amount<span class="token punctuation">)</span>  <span class="token comment"># 生成 n-1 个随机节点</span></pre></td></tr><tr><td data-num="5"></td><td><pre>        list1<span class="token punctuation">.</span>append<span class="token punctuation">(</span>a<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    list1<span class="token punctuation">.</span>sort<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 节点排序</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    list1<span class="token punctuation">.</span>append<span class="token punctuation">(</span>amount<span class="token punctuation">)</span>  <span class="token comment"># 设置第 n 个节点为 amount，即总金额</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    list2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>list1<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="10"></td><td><pre>        <span class="token keyword">if</span> i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="11"></td><td><pre>            b <span class="token operator">=</span> list1<span class="token punctuation">[</span>i<span class="token punctuation">]</span>  <span class="token comment"># 第一段长度为第 1 个节点 - 0</span></pre></td></tr><tr><td data-num="12"></td><td><pre>        <span class="token keyword">else</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="13"></td><td><pre>            b <span class="token operator">=</span> list1<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> list1<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span>  <span class="token comment"># 其余段为第 n 个节点 - 第 n-1 个节点</span></pre></td></tr><tr><td data-num="14"></td><td><pre>        list2<span class="token punctuation">.</span>append<span class="token punctuation">(</span>b<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="15"></td><td><pre>    <span class="token keyword">return</span> list2</pre></td></tr></table></figure></div></details>
+<h1 id="三-numpy"><a class="markdownIt-Anchor" href="#三-numpy">#</a> 三、numpy</h1>
 <details class="primary"><summary>np.array和np.asarray区别</summary><div>
 <p><code>np.array</code>  和 <code>np.asarray</code>  都可将结构数据转换为 <code>ndarray</code>  类型<br>
 但是主要区别就是当数据源是 <code>ndarray</code>  时：<br>
@@ -194,7 +248,7 @@ Python技巧 - python |
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2023-02-11 00:52:45" itemprop="dateModified" datetime="2023-02-11T00:52:45+08:00">2023-02-11</time>
+    <time title="修改时间：2023-02-14 18:20:04" itemprop="dateModified" datetime="2023-02-14T18:20:04+08:00">2023-02-14</time>
   </span>
   <span id="2023/02/06/code/python/" class="item leancloud_visitors" data-flag-title="Python技巧" title="阅读次数">
       <span class="icon">
@@ -217,7 +271,7 @@ Python技巧 - python |
     <div class="item left">
       
 
-  <a href="/2023/01/30/hardware/Quartus/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;PqLT6CGD&#x2F;6833939bly1giclh0m9pdj20zk0m8hdt.jpg" title="Quartus基础教程">
+  <a href="/2023/01/30/hardware/Quartus/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;59gVBhjL&#x2F;6833939bly1gipeybxm1pj20zk0m8niv.jpg" title="Quartus基础教程">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 硬件开发</span>
   <h3>Quartus基础教程</h3>
@@ -241,7 +295,7 @@ Python技巧 - python |
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C"><span class="toc-number">1.</span> <span class="toc-text"> 一、基础操作</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5"><span class="toc-number">1.</span> <span class="toc-text"> 一、基础概念</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C-%E7%89%B9%E5%AE%9A%E5%8A%9F%E8%83%BD%E5%87%BD%E6%95%B0"><span class="toc-number">2.</span> <span class="toc-text"> 二、特定功能函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89-numpy"><span class="toc-number">3.</span> <span class="toc-text"> 三、numpy</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -359,49 +413,10 @@ Python技巧 - python |
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
+<a href="/categories/control/" title="分类于 控制工程">控制工程</a>
 </div>
 
-    <span><a href="/2022/11/21/math/svd/" title="奇异值分解（SVD）">奇异值分解（SVD）</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/else/" title="分类于 其他">其他</a>
-</div>
-
-    <span><a href="/2023/01/22/else/wish_2023/" title="2023年的一些小目标">2023年的一些小目标</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
-</div>
-
-    <span><a href="/2023/02/06/code/python/" title="Python技巧">Python技巧</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/office/" title="分类于 office技巧">office技巧</a>
-</div>
-
-    <span><a href="/2023/01/02/office/office/" title="Office技巧">Office技巧</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2022/11/01/website_code/" title="一些奇奇怪怪的东西">一些奇奇怪怪的东西</a></span>
+    <span><a href="/2022/11/22/control/Gram-matrix/" title="格拉姆矩阵判据">格拉姆矩阵判据</a></span>
   </li>
 
       
@@ -418,20 +433,39 @@ Python技巧 - python |
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+<a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2023/01/02/blog/hexo_image/" title="Hexo图片显示异常问题">Hexo图片显示异常问题</a></span>
+    <span><a href="/2023/02/06/code/python/" title="Python技巧">Python技巧</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
+<a href="/categories/Windows/" title="分类于 Windows系统">Windows系统</a>
 </div>
 
-    <span><a href="/2022/11/28/math/covariance/" title="数学期望、方差和协方差">数学期望、方差和协方差</a></span>
+    <span><a href="/2023/01/03/Windows/Realtek/" title="关于戴尔G3重装系统后的音频问题">关于戴尔G3重装系统后的音频问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/11/01/website_code/" title="一些奇奇怪怪的东西">一些奇奇怪怪的东西</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/else/" title="分类于 其他">其他</a>
+</div>
+
+    <span><a href="/2023/01/22/else/wish_2023/" title="2023年的一些小目标">2023年的一些小目标</a></span>
   </li>
 
       
@@ -452,6 +486,26 @@ Python技巧 - python |
 </div>
 
     <span><a href="/2023/01/19/blog/hexo_remote/" title="解决Connection closed by remote host">解决Connection closed by remote host</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
+</div>
+
+    <span><a href="/2022/12/23/optimal/signal_objective_optimization/" title="单目标搜索算法汇总">单目标搜索算法汇总</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/office/" title="分类于 office技巧">office技巧</a>
+</div>
+
+    <span><a href="/2023/01/02/office/office/" title="Office技巧">Office技巧</a></span>
   </li>
 
   </ul>
@@ -476,13 +530,13 @@ Python技巧 - python |
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">43k 字</span>
+    <span title="站点总字数">45k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">39 分钟</span>
+    <span title="站点阅读时长">41 分钟</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
