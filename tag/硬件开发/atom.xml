@@ -4,19 +4,19 @@
     <title>Welcome to my tiny world • Posts by &#34;硬件开发&#34; tag</title>
     <link href="http://qianqiu-cell.github.io" />
     <updated>2023-01-29T16:00:00.000Z</updated>
-    <category term="Windows系统" />
     <category term="博客搭建" />
+    <category term="Windows系统" />
     <category term="python" />
     <category term="编程技巧" />
-    <category term="烹饪技巧" />
-    <category term="office技巧" />
-    <category term="论文编辑" />
-    <category term="硬件开发" />
     <category term="控制工程" />
     <category term="其他" />
     <category term="一些小目标" />
-    <category term="数学基础" />
+    <category term="烹饪技巧" />
     <category term="latex技巧" />
+    <category term="论文编辑" />
+    <category term="硬件开发" />
+    <category term="数学基础" />
+    <category term="office技巧" />
     <category term="最优化" />
     <entry>
         <id>http://qianqiu-cell.github.io/2023/01/30/hardware/Quartus/</id>
@@ -34,18 +34,64 @@
 &lt;img data-src=&#34;/images/Quartus/2.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 安装完成 &lt;code&gt;Modelsim&lt;/code&gt;  后，在 &lt;code&gt;Quartus&lt;/code&gt;  中依次点击 &lt;code&gt;Tools→Options→General→EDA Tool Options&lt;/code&gt;  选择 &lt;code&gt;Modelsim&lt;/code&gt;  的安装路径里面的 &lt;code&gt;win64&lt;/code&gt; &lt;br&gt;
 &lt;img data-src=&#34;/images/Quartus/2.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;三-编辑及仿真&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三-编辑及仿真&#34;&gt;#&lt;/a&gt; 三、编辑及仿真&lt;/h1&gt;
+&lt;h1 id=&#34;三-程序编译&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三-程序编译&#34;&gt;#&lt;/a&gt; 三、程序编译&lt;/h1&gt;
 &lt;p&gt;进入 &lt;code&gt;Quartus&lt;/code&gt;  软件，点击 &lt;code&gt;start compilation&lt;/code&gt;  进行程序编译&lt;br&gt;
-&lt;img data-src=&#34;/images/Quartus/3.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-编译完成之后点击 &lt;code&gt;Tools→Run Simulation Tool→RTL Simulation&lt;/code&gt;  进行仿真&lt;br&gt;
-&lt;img data-src=&#34;/images/Quartus/3.2.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-仿真完成后可显示如下界面（点击 &lt;code&gt;Zoom full&lt;/code&gt;  可显示波形）&lt;br&gt;
-&lt;img data-src=&#34;/images/Quartus/3.3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;四-程序下载至fpga&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#四-程序下载至fpga&#34;&gt;#&lt;/a&gt; 四、程序下载至 FPGA&lt;/h1&gt;
-&lt;p&gt;依次点击 &lt;code&gt;Tools→Programmer&lt;/code&gt;  打开如下界面&lt;br&gt;
+&lt;img data-src=&#34;/images/Quartus/3.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;四-仿真&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#四-仿真&#34;&gt;#&lt;/a&gt; 四、仿真&lt;/h1&gt;
+&lt;p&gt;（以下为测试脚本设置过程，项目已经设置好，作为普及）依次点击 &lt;code&gt;Assignments→Settings&lt;/code&gt; 。打开后点击 &lt;code&gt;EDA Tool Settings→Simulation&lt;/code&gt; ，之后在 &lt;code&gt;NativeLink settings&lt;/code&gt;  中选择 &lt;code&gt;Compile test bench&lt;/code&gt; &lt;br&gt;
 &lt;img data-src=&#34;/images/Quartus/4.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+ 选择测试脚本（点击 &lt;code&gt;Test Benches…→new&lt;/code&gt; ）&lt;br&gt;
+&lt;img data-src=&#34;/images/Quartus/4.2.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+图中从上往下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;StandardTR&lt;/code&gt;  是系统建立 &lt;code&gt;testbench&lt;/code&gt;  文件 &lt;code&gt;.vt&lt;/code&gt;  的名字。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;StandardTR_vlg_tst&lt;/code&gt;  是 &lt;code&gt;.vt&lt;/code&gt;  里面的 &lt;code&gt;module&lt;/code&gt;  的名字。&lt;/li&gt;
+&lt;li&gt;点击 &lt;code&gt;Fill name&lt;/code&gt;  右边的 &lt;code&gt;…&lt;/code&gt;  选择 &lt;code&gt;.vt&lt;/code&gt;  文件，点击 &lt;code&gt;add&lt;/code&gt; 。&lt;br&gt;
+（以下过程为正式仿真过程，需要运行）在完成以上步骤及编译完成之后点击 &lt;code&gt;Tools→Run Simulation Tool→RTL Simulation&lt;/code&gt;  进行仿真&lt;br&gt;
+&lt;img data-src=&#34;/images/Quartus/4.3.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+仿真完成后可显示如下界面（点击 &lt;code&gt;Zoom full&lt;/code&gt;  可显示波形）&lt;br&gt;
+&lt;img data-src=&#34;/images/Quartus/4.4.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;五-程序下载至fpga&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#五-程序下载至fpga&#34;&gt;#&lt;/a&gt; 五、程序下载至 FPGA&lt;/h1&gt;
+&lt;p&gt;如下图所示将 FPGA 与电脑连接连接&lt;br&gt;
+&lt;img data-src=&#34;/images/Quartus/5.1.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+其中 USB Blaster 为编程时，电脑给开发板传输程序文件的数据线，在传输完程序之后即可移除（不拔出来也没事儿）。&lt;br&gt;
+USB to TTL 为开发板提供电源功能、并在串口调试阶段作为电脑与开发板进行数据交换的线。&lt;br&gt;
+在 Quartus 中依次点击 &lt;code&gt;Tools→Programmer&lt;/code&gt;  打开如下界面&lt;br&gt;
+&lt;img data-src=&#34;/images/Quartus/5.2.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 点击 &lt;code&gt;Start&lt;/code&gt;  即可开始程序下载，若未识别到硬件，可点击 &lt;code&gt;Hardware Setup&lt;/code&gt;  进行设置，如下图所示&lt;br&gt;
-&lt;img data-src=&#34;/images/Quartus/4.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/images/Quartus/5.3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;六-串口展示&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#六-串口展示&#34;&gt;#&lt;/a&gt; 六、串口展示&lt;/h1&gt;
+&lt;p&gt;打开 &lt;code&gt;XCOM&lt;/code&gt; （串口调试助手，就是电脑和开发板进行数据交换的软件），波特率设置为 &lt;code&gt;115200&lt;/code&gt; 、选择 &lt;code&gt;16&lt;/code&gt;  进制显示、 &lt;code&gt;16&lt;/code&gt;  进制发送，如下图所示。&lt;br&gt;
+&lt;img data-src=&#34;/images/Quartus/6.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+在设置完成后点击打开串口，在下方数据发送区输入数据 (只能依次输入，不能直接复制)，点击发送后即可在数据接受区得到 &lt;code&gt;FPGA&lt;/code&gt;  运行后的结果，每次运行后都需要按下 &lt;code&gt;FPGA&lt;/code&gt;  上的 &lt;code&gt;key1&lt;/code&gt;  键进行复位。&lt;br&gt;
+&lt;img data-src=&#34;/images/Quartus/6.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;输入数据的获取&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#输入数据的获取&#34;&gt;#&lt;/a&gt; 输入数据的获取&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZ2FpcnVvLmNvbS9maWxlL2RhdGEvZGF0YXNldC9pcmlzLmRhdGE=&#34;&gt;点击此处&lt;/span&gt;可获得鸢尾花原始数据集，如下图所示&lt;br&gt;
+&lt;img data-src=&#34;/images/Quartus/6.3.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+每一行为一条数据，每一列依次表示花萼长、花萼宽、花瓣长、花瓣宽以及花的类型&lt;br&gt;
+将每条数据的十进制数据转换为如下格式的二进制数据&lt;br&gt;
+&lt;img data-src=&#34;/images/Quartus/6.4.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+以第一行数据为例，四个数据转换分别为：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;5.1 = 0 0000 0101 0001 1001 1001
+3.5 = 0 0000 0011 1000 0000 0000
+1.4 = 0 0000 0001 0110 0110 0110
+0.2 = 0 0000 0000 0011 0011 0011
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;再将以上数据转换为 16 进制格式，如下所示&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;0 0000 0101 0001 1001 1001 = 00 51 99
+0 0000 0011 1000 0000 0000 = 00 38 00
+0 0000 0001 0110 0110 0110 = 00 16 66
+0 0000 0000 0011 0011 0011 = 00 03 33
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;最后依次拼接即可获得输入数据 (需要调整一下顺序，我们的输入顺序是花瓣长、花瓣宽、花萼长、花萼宽，网页数据顺序为花萼长、花萼宽、花瓣长、花瓣宽) &lt;code&gt;00 16 66 00 03 33 00 51 99 00 38 00&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&#34;七-quartus使用总结&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#七-quartus使用总结&#34;&gt;#&lt;/a&gt; 七、Quartus 使用总结&lt;/h1&gt;
+&lt;p&gt;Quartus 的使用步骤可以大致总结为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;程序编译（根据想要实现的逻辑进行程序编写）&lt;/li&gt;
+&lt;li&gt;程序仿真（在完成程序编译之后，并不确定程序的正确性，可以先在仿真系统中进行仿真运行，即在电脑上先预览程序的正确性，此步骤为可选步骤）&lt;/li&gt;
+&lt;li&gt;程序下载至 FPGA（此过程即为将程序下载至 FPGA，从而使 FPGA 可以根据程序实现一定的功能，并使用串口将 FPGA 的运行结果可视化展现）&lt;/li&gt;
+&lt;/ul&gt;
 </content>
         <category term="硬件开发" />
         <updated>2023-01-29T16:00:00.000Z</updated>

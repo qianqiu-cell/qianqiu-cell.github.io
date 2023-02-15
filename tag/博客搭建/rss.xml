@@ -7,19 +7,19 @@
         <language>zh-CN</language>
         <pubDate>Thu, 19 Jan 2023 00:00:00 +0800</pubDate>
         <lastBuildDate>Thu, 19 Jan 2023 00:00:00 +0800</lastBuildDate>
-        <category>Windows系统</category>
         <category>博客搭建</category>
+        <category>Windows系统</category>
         <category>python</category>
         <category>编程技巧</category>
-        <category>烹饪技巧</category>
-        <category>office技巧</category>
-        <category>论文编辑</category>
-        <category>硬件开发</category>
         <category>控制工程</category>
         <category>其他</category>
         <category>一些小目标</category>
-        <category>数学基础</category>
+        <category>烹饪技巧</category>
         <category>latex技巧</category>
+        <category>论文编辑</category>
+        <category>硬件开发</category>
+        <category>数学基础</category>
+        <category>office技巧</category>
         <category>最优化</category>
         <item>
             <guid isPermalink="true">http://qianqiu-cell.github.io/2023/01/19/blog/hexo_remote/</guid>
@@ -98,7 +98,8 @@ shoka 主题图片同时备份至百度网盘及个人 U 盘&lt;/p&gt;
             <link>http://qianqiu-cell.github.io/2022/11/07/blog/hexo_style/</link>
             <category>博客搭建</category>
             <pubDate>Mon, 07 Nov 2022 00:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;links连接块&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#links连接块&#34;&gt;#&lt;/a&gt;  &lt;code&gt;links&lt;/code&gt;  连接块&lt;/h1&gt;
+            <description><![CDATA[ &lt;p&gt;&lt;code&gt;shoka&lt;/code&gt;  主题原说明网址&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWUvY29tcHV0ZXItc2NpZW5jZS9ub3RlL3RoZW1lLXNob2thLWRvYy9zcGVjaWFsLw==&#34;&gt;戳此&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;links连接块&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#links连接块&#34;&gt;#&lt;/a&gt;  &lt;code&gt;links&lt;/code&gt;  连接块&lt;/h1&gt;
 &lt;div class=&#34;links&#34;&gt;&lt;div class=&#34;item&#34; title=&#34;霜月琉璃&#34; style=&#34;--block-color:#e9546b;&#34;&gt;&lt;span class=&#34;exturl image&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34; data-background-image=&#34;https://cdn.jsdelivr.net/gh/amehime/shoka@latest/images/avatar.jpg&#34;&gt;&lt;/span&gt;
           &lt;div class=&#34;info&#34;&gt;
           &lt;span class=&#34;exturl title&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWU=&#34;&gt;優萌初華&lt;/span&gt;

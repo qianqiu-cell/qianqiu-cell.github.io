@@ -7,26 +7,26 @@
         <language>zh-CN</language>
         <pubDate>Fri, 20 Jan 2023 00:00:00 +0800</pubDate>
         <lastBuildDate>Fri, 20 Jan 2023 00:00:00 +0800</lastBuildDate>
-        <category>Windows系统</category>
         <category>博客搭建</category>
+        <category>Windows系统</category>
         <category>python</category>
         <category>编程技巧</category>
-        <category>烹饪技巧</category>
-        <category>office技巧</category>
-        <category>论文编辑</category>
-        <category>硬件开发</category>
         <category>控制工程</category>
         <category>其他</category>
         <category>一些小目标</category>
-        <category>数学基础</category>
+        <category>烹饪技巧</category>
         <category>latex技巧</category>
+        <category>论文编辑</category>
+        <category>硬件开发</category>
+        <category>数学基础</category>
+        <category>office技巧</category>
         <category>最优化</category>
         <item>
             <guid isPermalink="true">http://qianqiu-cell.github.io/2023/01/20/latex/latex/</guid>
             <title>Vscode+TexLive+Latex workshop安装</title>
             <link>http://qianqiu-cell.github.io/2023/01/20/latex/latex/</link>
-            <category>论文编辑</category>
             <category>latex技巧</category>
+            <category>论文编辑</category>
             <pubDate>Fri, 20 Jan 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;一-tex-live与latex-workshop安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-tex-live与latex-workshop安装&#34;&gt;#&lt;/a&gt; 一、Tex Live 与 Latex workshop 安装&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;Tex Live&lt;/code&gt;  可以从&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cudHVnLm9yZy90ZXhsaXZlLw==&#34;&gt;官网&lt;/span&gt;进行安装， &lt;code&gt;Latex workshop&lt;/code&gt;  从 &lt;code&gt;Vscode&lt;/code&gt;  的插件商城安装&lt;br&gt;
