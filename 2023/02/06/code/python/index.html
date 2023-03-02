@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
   
-  <meta name="keywords" content="python,编程技巧" />
+  <meta name="keywords" content="编程技巧,python" />
 
 
 <link rel="canonical" href="http://qianqiu-cell.github.io/2023/02/06/code/python/">
@@ -76,7 +76,7 @@ Python技巧 - python |
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>1.6k</span>
+    <span>2.3k</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -84,7 +84,7 @@ Python技巧 - python |
       <i class="ic i-clock"></i>
     </span>
     <span class="text">阅读时长</span>
-    <span>1 分钟</span>
+    <span>2 分钟</span>
   </span>
 </div>
 
@@ -117,12 +117,12 @@ Python技巧 - python |
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://i.postimg.cc/yxm4SRMm/6833939bly1gipetv6p75j20zk0m8x6p.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/6pm6dDjY/6833939bly1gipeyhsblkj20zk0m81kx.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/gjms06mL/6833939bly1giclflwv2aj20zk0m84qp.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/pXQnJXzk/6833939bly1gipexw3o58j20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/MGp97BQ7/6833939bly1gicitspjpbj20zk0m81ky.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/nrwCs6qb/6833939bly1gicm07ih54j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/4yY0G95v/6833939bly1giclj9410cj20zk0m8h12.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/mr3FgpDV/6833939bly1giclgrvbd6j20zk0m8qv5.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/LsWGhDbY/6833939bly1giclffsa1cj20zk0m811l.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/KcR5vFPY/6833939bly1gicitf0kl1j20zk0m87fe.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/Hx7CdR3P/6833939bly1gipesrnqv3j20zk0m8ava.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/vmYrRd8b/6833939bly1giciszlczyj20zk0m816d.jpg"></li>
         </ul>
       </div>
     </header>
@@ -215,12 +215,38 @@ Python技巧 - python |
 <details class="danger"><summary>python字符串、列表、元组乘法</summary><div>
 <p><code>python</code>  中，支持相乘的有字符串，列表，元组，相乘是内容相乘 <code>n</code> ，新的内容会重复 <code>n</code>  次</p>
 <figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre>str_a <span class="token operator">=</span> <span class="token string">"我"</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span>str_a <span class="token operator">*</span> <span class="token number">3</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="3"></td><td><pre>list_a <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">"1"</span><span class="token punctuation">,</span> <span class="token string">"2"</span><span class="token punctuation">,</span> <span class="token string">"3"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span>list_a <span class="token operator">*</span> <span class="token number">3</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="5"></td><td><pre>list_b <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"我"</span><span class="token punctuation">,</span> <span class="token string">"爱"</span><span class="token punctuation">,</span> <span class="token string">"python"</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span>list_b <span class="token operator">*</span> <span class="token number">3</span><span class="token punctuation">)</span></pre></td></tr></table></figure><p>运行结果为<br>
-<img data-src="/images/python/1.1.png" alt=""></p>
+<img data-src="/images/python/1.1.1.png" alt=""></p>
 </div></details>
 <details class="warning"><summary>浮点数运算不精确问题</summary><div>
 <p>由于 <code>Python</code>  的浮点数以二进制形式表示，计算机在进行浮点运算时会产生浮点误差，如下场景所示</p>
 <figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre>a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">100.7</span><span class="token punctuation">,</span> <span class="token number">100.9</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token comment"># 输出：201.60000000000002</span></pre></td></tr></table></figure><p>解决方法： <code>round()</code>  是 <code>python</code>  自带的一个函数，用于数字的四舍五入</p>
 <figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token builtin">round</span><span class="token punctuation">(</span><span class="token number">5.214</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token comment"># 输出：5.21</span></pre></td></tr></table></figure></div></details>
+<details class="success"><summary>python中的特殊注释</summary><div>
+<p>Python 的注释方式中存在一些特殊的用法，比如  <code># noqa</code> ，  <code># todo</code> ，  <code># type</code></p>
+<div class="tab" data-id="id1" data-title="# noqa">
+<p><code>noqa</code>  指 <code>no quality assurance</code> ，用在一行代码后，表示这一行代码自动检查忽略错误，由 <code>IDE</code>  支持<br>
+比如以下命名拼写问题，不会出现下划线提醒：<br>
+<img data-src="/images/python/1.3.1.png" alt=""><br>
+也可以用作  <code># noqa: &lt;error&gt;</code> ，表示忽略某一特定类型的错误，例如<br>
+<img data-src="/images/python/1.3.2.jpg" alt=""><br>
+如上表示忽略了 <code>numpy</code>  引用但未使用的问题，不会出现提示</p>
+</div>
+<div class="tab" data-id="id1" data-title="# todo">
+<p>作为助记符，表示将要完成的功能或任务，由 <code>IDE</code>  支持，比如在 <code>PyCharm</code>  中会高亮表示，并可快速查询<br>
+<img data-src="/images/python/1.3.3.png" alt=""></p>
+</div>
+<div class="tab" data-id="id1" data-title="# type">
+<p>用于指定期望的数据类型<br>
+<img data-src="/images/python/1.3.4.jpg" alt=""><br>
+上图中为 <code>a</code>  指定的类型为 <code>dict</code> ，但被赋予数字 <code>5</code> ，因此 <code>IDE</code>  会提示该问题<br>
+但 <code>a</code>  可使用 <code>dict</code>  的相关方法和属性</p>
+</div>
+</div></details>
+<details class="info"><summary>python生成随机数</summary><div>
+<p>（1） <code>python</code>  自带的 <code>random</code>  模块<br>
+ <code>python</code>  标准库中的 <code>random</code>  函数，可以生成随机浮点数、整数、字符串，甚至帮助你随机选择列表序列中的一个元素，打乱一组数据</p>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre>random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span>n<span class="token punctuation">,</span>m<span class="token punctuation">)</span> <span class="token comment">#生成一个 n 到 m 之间的随机数</span></pre></td></tr><tr><td data-num="2"></td><td><pre>random<span class="token punctuation">.</span>random<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment">#生成一个 0 到 1 之间的浮点数</span></pre></td></tr><tr><td data-num="3"></td><td><pre>random<span class="token punctuation">.</span>uniform<span class="token punctuation">(</span>n<span class="token punctuation">,</span>m<span class="token punctuation">)</span> <span class="token comment">#生成一个 n 到 m 之间的浮点数</span></pre></td></tr><tr><td data-num="4"></td><td><pre>random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment">#从列表之间随机选取一个数</span></pre></td></tr></table></figure><p>（2） <code>numpy</code>  模块生成随机数</p>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre>np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>rand（n）<span class="token comment">#产生 n 维的 0-1 均匀分布的随机数</span></pre></td></tr><tr><td data-num="2"></td><td><pre>np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>randn（n）<span class="token comment">#产生 n 维的标准正态分布的随机数</span></pre></td></tr><tr><td data-num="3"></td><td><pre>np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span>n<span class="token punctuation">,</span>m<span class="token punctuation">,</span>k<span class="token punctuation">)</span><span class="token comment">#产生 n--m 之间的 k 个整数</span></pre></td></tr><tr><td data-num="4"></td><td><pre>np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>uniform<span class="token punctuation">(</span>n<span class="token punctuation">,</span>m<span class="token punctuation">,</span>k<span class="token punctuation">)</span><span class="token comment">#产生 n--m 之间的 k 个小数</span></pre></td></tr></table></figure></div></details>
 <h1 id="二-特定功能函数"><a class="markdownIt-Anchor" href="#二-特定功能函数">#</a> 二、特定功能函数</h1>
 <details class="success"><summary>生成n个随机数，其和为固定值</summary><div>
 <figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">def</span> <span class="token function">func</span><span class="token punctuation">(</span>amount<span class="token punctuation">,</span> num<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    list1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> num <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="4"></td><td><pre>        a <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> amount<span class="token punctuation">)</span>  <span class="token comment"># 生成 n-1 个随机节点</span></pre></td></tr><tr><td data-num="5"></td><td><pre>        list1<span class="token punctuation">.</span>append<span class="token punctuation">(</span>a<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    list1<span class="token punctuation">.</span>sort<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 节点排序</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    list1<span class="token punctuation">.</span>append<span class="token punctuation">(</span>amount<span class="token punctuation">)</span>  <span class="token comment"># 设置第 n 个节点为 amount，即总金额</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    list2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>list1<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="10"></td><td><pre>        <span class="token keyword">if</span> i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="11"></td><td><pre>            b <span class="token operator">=</span> list1<span class="token punctuation">[</span>i<span class="token punctuation">]</span>  <span class="token comment"># 第一段长度为第 1 个节点 - 0</span></pre></td></tr><tr><td data-num="12"></td><td><pre>        <span class="token keyword">else</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="13"></td><td><pre>            b <span class="token operator">=</span> list1<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">-</span> list1<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span>  <span class="token comment"># 其余段为第 n 个节点 - 第 n-1 个节点</span></pre></td></tr><tr><td data-num="14"></td><td><pre>        list2<span class="token punctuation">.</span>append<span class="token punctuation">(</span>b<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="15"></td><td><pre>    <span class="token keyword">return</span> list2</pre></td></tr></table></figure></div></details>
@@ -235,8 +261,8 @@ Python技巧 - python |
 <figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre>arr1<span class="token punctuation">:</span>  </pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token number">1.</span>  <span class="token number">1.</span>  <span class="token number">1.</span><span class="token punctuation">]</span>  </pre></td></tr><tr><td data-num="3"></td><td><pre> <span class="token punctuation">[</span> <span class="token number">2.</span>  <span class="token number">2.</span>  <span class="token number">2.</span><span class="token punctuation">]</span>  </pre></td></tr><tr><td data-num="4"></td><td><pre> <span class="token punctuation">[</span> <span class="token number">1.</span>  <span class="token number">1.</span>  <span class="token number">1.</span><span class="token punctuation">]</span><span class="token punctuation">]</span>  </pre></td></tr><tr><td data-num="5"></td><td><pre>arr2<span class="token punctuation">:</span>  </pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token number">1.</span>  <span class="token number">1.</span>  <span class="token number">1.</span><span class="token punctuation">]</span>  </pre></td></tr><tr><td data-num="7"></td><td><pre> <span class="token punctuation">[</span> <span class="token number">1.</span>  <span class="token number">1.</span>  <span class="token number">1.</span><span class="token punctuation">]</span>  </pre></td></tr><tr><td data-num="8"></td><td><pre> <span class="token punctuation">[</span> <span class="token number">1.</span>  <span class="token number">1.</span>  <span class="token number">1.</span><span class="token punctuation">]</span><span class="token punctuation">]</span>  </pre></td></tr><tr><td data-num="9"></td><td><pre>arr3<span class="token punctuation">:</span>  </pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token punctuation">[</span><span class="token punctuation">[</span> <span class="token number">1.</span>  <span class="token number">1.</span>  <span class="token number">1.</span><span class="token punctuation">]</span>  </pre></td></tr><tr><td data-num="11"></td><td><pre> <span class="token punctuation">[</span> <span class="token number">2.</span>  <span class="token number">2.</span>  <span class="token number">2.</span><span class="token punctuation">]</span>  </pre></td></tr><tr><td data-num="12"></td><td><pre> <span class="token punctuation">[</span> <span class="token number">1.</span>  <span class="token number">1.</span>  <span class="token number">1.</span><span class="token punctuation">]</span><span class="token punctuation">]</span></pre></td></tr></table></figure></div></details>
 
       <div class="tags">
-          <a href="/tags/python/" rel="tag"><i class="ic i-tag"></i> python</a>
           <a href="/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/" rel="tag"><i class="ic i-tag"></i> 编程技巧</a>
+          <a href="/tags/python/" rel="tag"><i class="ic i-tag"></i> python</a>
       </div>
   </div>
 
@@ -248,7 +274,7 @@ Python技巧 - python |
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2023-02-14 18:20:04" itemprop="dateModified" datetime="2023-02-14T18:20:04+08:00">2023-02-14</time>
+    <time title="修改时间：2023-03-01 16:52:37" itemprop="dateModified" datetime="2023-03-01T16:52:37+08:00">2023-03-01</time>
   </span>
   <span id="2023/02/06/code/python/" class="item leancloud_visitors" data-flag-title="Python技巧" title="阅读次数">
       <span class="icon">
@@ -271,7 +297,7 @@ Python技巧 - python |
     <div class="item left">
       
 
-  <a href="/2023/01/30/hardware/Quartus/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;HWXCKGrr&#x2F;6833939bly1gipet4bz0yj20zk0m8e81.jpg" title="Quartus基础教程">
+  <a href="/2023/01/30/hardware/Quartus/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;Px1F6jSh&#x2F;6833939bly1gipeubcbajj20zk0m8h1h.jpg" title="Quartus基础教程">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 硬件开发</span>
   <h3>Quartus基础教程</h3>
@@ -279,6 +305,14 @@ Python技巧 - python |
 
     </div>
     <div class="item right">
+      
+
+  <a href="/2023/03/01/code/python_test/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;9QZh6v88&#x2F;6833939bly1giciukx8a7j20zk0m8aio.jpg" title="Python test in xxx问题">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> python</span>
+  <h3>Python test in xxx问题</h3>
+  </a>
+
     </div>
 </div>
 
@@ -299,7 +333,7 @@ Python技巧 - python |
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
-          <li class="active"><a href="/2023/02/06/code/python/" rel="bookmark" title="Python技巧">Python技巧</a></li>
+          <li class="active"><a href="/2023/02/06/code/python/" rel="bookmark" title="Python技巧">Python技巧</a></li><li><a href="/2023/03/01/code/python_qt_install/" rel="bookmark" title="Python运行pyside2报错问题解决">Python运行pyside2报错问题解决</a></li><li><a href="/2023/03/01/code/python_test/" rel="bookmark" title="Python test in xxx问题">Python test in xxx问题</a></li><li><a href="/2023/03/02/code/python_gurobi/" rel="bookmark" title="python+gurobi应用">python+gurobi应用</a></li><li><a href="/2023/03/02/code/python_jupyter/" rel="bookmark" title="修改Jupyter Notebook默认工作路径">修改Jupyter Notebook默认工作路径</a></li><li><a href="/2023/03/02/code/python_numba/" rel="bookmark" title="使用numba对python进行加速">使用numba对python进行加速</a></li><li><a href="/2023/03/02/code/python_pip/" rel="bookmark" title="修改pip路径">修改pip路径</a></li><li><a href="/2023/03/02/code/python_try_except/" rel="bookmark" title="python下的try-except处理异常">python下的try-except处理异常</a></li>
         </ul>
       </div>
       <div class="overview panel" data-title="站点概览">
@@ -313,19 +347,19 @@ Python技巧 - python |
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">21</span>
+        <span class="count">29</span>
         <span class="name">文章</span>
       </a>
     </div>
     <div class="item categories">
       <a href="/categories/">
-        <span class="count">11</span>
+        <span class="count">12</span>
         <span class="name">分类</span>
       </a>
     </div>
     <div class="item tags">
       <a href="/tags/">
-        <span class="count">14</span>
+        <span class="count">17</span>
         <span class="name">标签</span>
       </a>
     </div>
@@ -388,10 +422,12 @@ Python技巧 - python |
 
   <ul id="quick">
     <li class="prev pjax">
+        <a href="/2023/01/30/hardware/Quartus/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
+        <a href="/2023/03/01/code/python_test/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -413,40 +449,10 @@ Python技巧 - python |
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+<a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2022/11/07/blog/hexo_style/" title="shoka格式">shoka格式</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/hardware/" title="分类于 硬件开发">硬件开发</a>
-</div>
-
-    <span><a href="/2023/01/30/hardware/Quartus/" title="Quartus基础教程">Quartus基础教程</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
-</div>
-
-    <span><a href="/2022/11/06/blog/hexo/" title="Github+Hexo+shoka主题搭建个人博客">Github+Hexo+shoka主题搭建个人博客</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
-</div>
-
-    <span><a href="/2022/11/25/math/derivative_of_the_inverse_matrix/" title="逆矩阵的求导">逆矩阵的求导</a></span>
+    <span><a href="/2023/03/01/code/python_test/" title="Python test in xxx问题">Python test in xxx问题</a></span>
   </li>
 
       
@@ -463,20 +469,60 @@ Python技巧 - python |
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
+<a href="/categories/else/" title="分类于 其他">其他</a>
 </div>
 
-    <span><a href="/2022/11/24/math/conv/" title="一般情况下的椭圆">一般情况下的椭圆</a></span>
+    <span><a href="/2023/01/22/else/wish_2023/" title="2023年的一些小目标">2023年的一些小目标</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/latex/" title="分类于 latex">latex</a>
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
 </div>
 
-    <span><a href="/2023/01/20/latex/latex/" title="Vscode+TexLive+Latex workshop安装">Vscode+TexLive+Latex workshop安装</a></span>
+    <span><a href="/2022/12/24/blog/hexo_change/" title="Hexo文件迁移">Hexo文件迁移</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
+</div>
+
+    <span><a href="/2022/12/23/optimal/signal_objective_optimization/" title="单目标搜索算法汇总">单目标搜索算法汇总</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/02/code/python_gurobi/" title="python+gurobi应用">python+gurobi应用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/02/code/python_numba/" title="使用numba对python进行加速">使用numba对python进行加速</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
+</div>
+
+    <span><a href="/2022/11/28/math/covariance/" title="数学期望、方差和协方差">数学期望、方差和协方差</a></span>
   </li>
 
       
@@ -486,27 +532,17 @@ Python技巧 - python |
 <a href="/categories/control/" title="分类于 控制工程">控制工程</a>
 </div>
 
-    <span><a href="/2022/11/22/control/Gram-matrix/" title="格拉姆矩阵判据">格拉姆矩阵判据</a></span>
+    <span><a href="/2022/11/23/control/spring_damping/" title="弹簧阻尼系统">弹簧阻尼系统</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
+<a href="/categories/hardware/" title="分类于 硬件开发">硬件开发</a>
 </div>
 
-    <span><a href="/2022/11/21/math/svd/" title="奇异值分解（SVD）">奇异值分解（SVD）</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/office/" title="分类于 office技巧">office技巧</a>
-</div>
-
-    <span><a href="/2023/01/02/office/office/" title="Office技巧">Office技巧</a></span>
+    <span><a href="/2022/11/16/hardware/stm32cubemx/" title="使用stm32cubemx新建工程">使用stm32cubemx新建工程</a></span>
   </li>
 
   </ul>
@@ -531,13 +567,13 @@ Python技巧 - python |
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">46k 字</span>
+    <span title="站点总字数">56k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">42 分钟</span>
+    <span title="站点阅读时长">51 分钟</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

@@ -1,0 +1,20 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Welcome to my tiny world • All posts by \"qt\" tag",
+    "description": "小樊&小小樊的学习笔记🌸",
+    "home_page_url": "http://qianqiu-cell.github.io",
+    "items": [
+        {
+            "id": "http://qianqiu-cell.github.io/2023/03/01/code/python_qt_install/",
+            "url": "http://qianqiu-cell.github.io/2023/03/01/code/python_qt_install/",
+            "title": "Python运行pyside2报错问题解决",
+            "date_published": "2023-02-28T16:00:00.000Z",
+            "content_html": "<h1 id=\"一-问题描述\"><a class=\"markdownIt-Anchor\" href=\"#一-问题描述\">#</a> 一、问题描述</h1>\n<p>在 <code>pycharm</code>  中运行 <code>pyside2</code>  时出现如下错误<br>\n<img data-src=\"/images/python_qt_install/1.1.png\" alt=\"\"></p>\n<h1 id=\"二-解决方法\"><a class=\"markdownIt-Anchor\" href=\"#二-解决方法\">#</a> 二、解决方法</h1>\n<p>在环境变量（用户变量）中添加如下环境变量<br>\n变量名： <code>QT_QPA_PLATFORM_PLUGIN_PATH</code> <br>\n 变量值： <code>D:\\anaconda3\\site\\envs\\pytorch\\Lib\\site-packages\\PySide2\\plugins\\platforms</code> <br>\n⚠️⚠️⚠️变量值更改为自己的 <code>Pyside2</code>  包路径</p>\n",
+            "tags": [
+                "python",
+                "Qt",
+                "界面开发"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://qianqiu-cell.github.io</id>
+    <title>Welcome to my tiny world • Posts by &#34;qt&#34; tag</title>
+    <link href="http://qianqiu-cell.github.io" />
+    <updated>2023-02-28T16:00:00.000Z</updated>
+    <category term="博客搭建" />
+    <category term="Windows系统" />
+    <category term="控制工程" />
+    <category term="C++" />
+    <category term="编程技巧" />
+    <category term="python" />
+    <category term="Qt" />
+    <category term="界面开发" />
+    <category term="其他" />
+    <category term="一些小目标" />
+    <category term="烹饪技巧" />
+    <category term="硬件开发" />
+    <category term="latex技巧" />
+    <category term="论文编辑" />
+    <category term="数学基础" />
+    <category term="office技巧" />
+    <category term="最优化" />
+    <entry>
+        <id>http://qianqiu-cell.github.io/2023/03/01/code/python_qt_install/</id>
+        <title>Python运行pyside2报错问题解决</title>
+        <link rel="alternate" href="http://qianqiu-cell.github.io/2023/03/01/code/python_qt_install/"/>
+        <content type="html">&lt;h1 id=&#34;一-问题描述&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-问题描述&#34;&gt;#&lt;/a&gt; 一、问题描述&lt;/h1&gt;
+&lt;p&gt;在 &lt;code&gt;pycharm&lt;/code&gt;  中运行 &lt;code&gt;pyside2&lt;/code&gt;  时出现如下错误&lt;br&gt;
+&lt;img data-src=&#34;/images/python_qt_install/1.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;二-解决方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-解决方法&#34;&gt;#&lt;/a&gt; 二、解决方法&lt;/h1&gt;
+&lt;p&gt;在环境变量（用户变量）中添加如下环境变量&lt;br&gt;
+变量名： &lt;code&gt;QT_QPA_PLATFORM_PLUGIN_PATH&lt;/code&gt; &lt;br&gt;
+ 变量值： &lt;code&gt;D:\anaconda3\site\envs\pytorch\Lib\site-packages\PySide2\plugins\platforms&lt;/code&gt; &lt;br&gt;
+⚠️⚠️⚠️变量值更改为自己的 &lt;code&gt;Pyside2&lt;/code&gt;  包路径&lt;/p&gt;
+</content>
+        <category term="python" />
+        <category term="Qt" />
+        <category term="界面开发" />
+        <updated>2023-02-28T16:00:00.000Z</updated>
+    </entry>
+</feed>

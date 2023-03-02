@@ -76,7 +76,7 @@
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>3k</span>
+    <span>4.3k</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -84,7 +84,7 @@
       <i class="ic i-clock"></i>
     </span>
     <span class="text">阅读时长</span>
-    <span>3 分钟</span>
+    <span>4 分钟</span>
   </span>
 </div>
 
@@ -117,12 +117,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://i.postimg.cc/nLVnq323/6833939bly1giclfb3vzhj20zk0m8wny.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/pXQnJXzk/6833939bly1gipexw3o58j20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/rwDwHnxz/6833939bly1gicljgocqbj20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/63XRtJfM/6833939bly1giclxxcb6rj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/ZK4XMWkQ/6833939bly1gipeudstjqj20zk0m8k3r.jpg"></li>
           <li class="item" data-background-image="https://i.postimg.cc/0NVYd2gh/6833939bly1gipexe4oykj20zk0m87ji.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/g2wsSp05/6833939bly1gipevarprfj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/MGp97BQ7/6833939bly1gicitspjpbj20zk0m81ky.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/15YdvJyW/6833939bly1giclhnx9glj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/tgrDgg7B/6833939bly1giclip4jbpj20zk0m87cv.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/qRCgSmKp/6833939bly1giciryrr3rj20zk0m8nhk.jpg"></li>
         </ul>
       </div>
     </header>
@@ -238,6 +238,38 @@ Lin-Kernighan 算法的原理为：<br>
 （4）如果没有第二指标优于最优解的邻域解，则结束<br>
  Lin-Kernighan 算法的流程图如下所示<br>
 <img data-src="/images/signal_objective_optimization/9.1.png" alt=""></p>
+<h1 id="十-快速蚁群算法fant"><a class="markdownIt-Anchor" href="#十-快速蚁群算法fant">#</a> 十、快速蚁群算法（FANT）</h1>
+<p>  下图展示了一只蚂蚁的典型行为，这是一个真实的被隔离的蚁群的经历。后者只能通过一个孔来寻找食物。最后一个连接到一个管子上，这管子分成两个分支，再进一步连接。左边的树枝比右边的短。<ins>由于蚂蚁一开始没有这方面的信息，所以蚂蚁在两个分支中平均分布（图 a）</ins>。<br>
+  在探索过程中，每只蚂蚁都会掉落一种化学物质，它们的触角很容易探测到这种物质，这将有助于它们返回蚁巢。这种携带信息的化学物质叫做<mark>信息素</mark>。在返回的路上，一只蚂蚁会根据食物来源的质量储存大量的信息素。自然地，一只发现了一条短路径的蚂蚁能够比那些使用坏路径的蚂蚁更早返回。<br>
+  因此，沉积在最短路径上的信息素的数量增长更快。因此，新来的蚂蚁有了选择路径的信息，并倾向于选择最短的树枝。<ins>一段时间后，观察到几乎所有的蚂蚁都使用最短的树枝 (图 b)</ins>。因此，蜂群共同决定一个最优路径，而每个个体只看到自己天线的顶端。<br>
+<img data-src="/images/signal_objective_optimization/10.1.png" alt=""><br>
+快速蚁群算法流程图如下所示（根据代码进行理解，部分理解不到位）<br>
+<img data-src="/images/signal_objective_optimization/10.2.png" alt=""></p>
+<h1 id="十一-禁忌搜索算法ts"><a class="markdownIt-Anchor" href="#十一-禁忌搜索算法ts">#</a> 十一、禁忌搜索算法（TS）</h1>
+<p>  禁忌搜索（Tabu search）的关键思想是用超越局部最优的局部搜索来探索解空间。这意味着设计一种机制来防止循环现象，即进入一个循环，在这个循环中，有限的解子集被反复访问。最简单的概念是记住在局部搜索中连续遇到的所有解，但防止后者选择已经访问过的邻居解。被访问的解决方案因此成为禁忌。<br>
+  一般 TS 的伪代码如下<br>
+<img data-src="/images/signal_objective_optimization/11.1.png" alt=""></p>
+<h2 id="禁忌搜索的持续时间"><a class="markdownIt-Anchor" href="#禁忌搜索的持续时间">#</a> 禁忌搜索的持续时间</h2>
+<p>  零禁忌时间与随机搜索毫无差别，禁忌搜索持续时间过长会导致搜索效率低下并易陷入循环。一种选择较低的禁忌持续时间同时又能有效防止循环现象的技术是在每次迭代中随机设置它，一个经典的方法是在最小持续时间 <code>dmin</code>  和最大值 <code>dmax = dmin +Δ</code>  之间随机选择禁忌持续时间。</p>
+<h2 id="破禁准则"><a class="markdownIt-Anchor" href="#破禁准则">#</a> 破禁准则</h2>
+<p>  无条件禁止移动可能会导致搜索效率的低下。例如，在某些情况下会跳过对找到的最佳解决方案的改进。因此，如果移动 <code>m</code>  允许获得一个比当前全局最优解更好的解，则可无视禁忌来保留它，这种规则即为破禁准则。</p>
+<h2 id="长期记忆"><a class="markdownIt-Anchor" href="#长期记忆">#</a> 长期记忆</h2>
+<p>  短时间记忆的禁忌搜索的一个缺点是它只能做出很小的改变。可将长期记忆与短期记忆相结合，从而克服这一缺点。长期记忆可以通过很多种方式来表现，如持续统计每次解的移动。</p>
+<h2 id="最终流程图"><a class="markdownIt-Anchor" href="#最终流程图">#</a> 最终流程图</h2>
+<p>将禁忌搜索和以上内容相结合后的流程图为<br>
+<img data-src="/images/signal_objective_optimization/11.2.png" alt=""></p>
+<h1 id="十二-模因算法ga"><a class="markdownIt-Anchor" href="#十二-模因算法ga">#</a> 十二、模因算法（GA）</h1>
+<p>  遗传算法有两个主要缺点：首先，没有任何东西能保证找到的最佳解决方案不能通过简单的局部修改得到改进。其次，种群的多样性随着世代循环的每次迭代而下降，最终只包含同一个体的克隆。<br>
+  模因算法（Memetic Algorithms）通过在生成子代后应用局部搜索来解决第一个缺点（如 LK 算法，2-opt 算法等）。第二个缺点的解决方法是立即消除重复解。（也是和遗传算法的区别）</p>
+<h1 id="十三-带路径重链接的贪婪随即自适应搜索算法grasp-pr"><a class="markdownIt-Anchor" href="#十三-带路径重链接的贪婪随即自适应搜索算法grasp-pr">#</a> 十三、带路径重链接的贪婪随即自适应搜索算法（GRASP-PR）</h1>
+<p>  GRASP-PR（greedy adaptive search procedure with path relinking）是一种使用元启发式的核心组件（构造，局部搜索和解决方案集合的管理）且输入参数较为简单的方法。<br>
+  路径重链接（PR）通过选择两个解决方案，从初始解寻找最优邻域解直至搜索到目标解，在此过程中生成的最优解即为 PR 得到的最优解。<br>
+  GRASP-PR 的伪代码如下<br>
+<img data-src="/images/signal_objective_optimization/13.1.png" alt=""><br>
+ GRASP-PR 的流程图如下<br>
+<img data-src="/images/signal_objective_optimization/13.2.png" alt=""><br>
+ PR 的流程图如下<br>
+<img data-src="/images/signal_objective_optimization/13.3.png" alt=""></p>
 
       <div class="tags">
           <a href="/tags/%E6%9C%80%E4%BC%98%E5%8C%96/" rel="tag"><i class="ic i-tag"></i> 最优化</a>
@@ -252,7 +284,7 @@ Lin-Kernighan 算法的原理为：<br>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2023-02-14 01:43:18" itemprop="dateModified" datetime="2023-02-14T01:43:18+08:00">2023-02-14</time>
+    <time title="修改时间：2023-02-25 11:40:55" itemprop="dateModified" datetime="2023-02-25T11:40:55+08:00">2023-02-25</time>
   </span>
   <span id="2022/12/23/optimal/signal_objective_optimization/" class="item leancloud_visitors" data-flag-title="单目标搜索算法汇总" title="阅读次数">
       <span class="icon">
@@ -275,7 +307,7 @@ Lin-Kernighan 算法的原理为：<br>
     <div class="item left">
       
 
-  <a href="/2022/11/28/math/covariance/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;HWXCKGrr&#x2F;6833939bly1gipet4bz0yj20zk0m8e81.jpg" title="数学期望、方差和协方差">
+  <a href="/2022/11/28/math/covariance/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;gjms06mL&#x2F;6833939bly1giclflwv2aj20zk0m84qp.jpg" title="数学期望、方差和协方差">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 数学基础</span>
   <h3>数学期望、方差和协方差</h3>
@@ -285,7 +317,7 @@ Lin-Kernighan 算法的原理为：<br>
     <div class="item right">
       
 
-  <a href="/2022/12/24/blog/hexo_change/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;HjG6CPjH&#x2F;6833939bly1giclwuom7cj20zk0m8dvn.jpg" title="Hexo文件迁移">
+  <a href="/2022/12/24/blog/hexo_change/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;SQ1YRMS0&#x2F;6833939bly1giclfw2t96j20zk0m8x6p.jpg" title="Hexo文件迁移">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> 博客搭建</span>
   <h3>Hexo文件迁移</h3>
@@ -307,7 +339,7 @@ Lin-Kernighan 算法的原理为：<br>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-%E6%9C%80%E8%BF%91%E9%82%BB%E6%90%9C%E7%B4%A2nearest-neighbor-search-nns"><span class="toc-number">1.</span> <span class="toc-text"> 一、最近邻搜索 (Nearest neighbor search, NNS)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C-%E8%AF%95%E9%AA%8C%E6%96%B9%E6%B3%95pilot-method"><span class="toc-number">2.</span> <span class="toc-text"> 二、试验方法 (Pilot Method)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89-%E6%9C%80%E4%BD%B3%E6%94%B9%E8%BF%9B%E5%90%AF%E5%8F%91%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text"> 三、最佳改进启发式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B-3-opt"><span class="toc-number">4.</span> <span class="toc-text"> 四、3-opt</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94-%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB%E7%AE%97%E6%B3%95sa"><span class="toc-number">5.</span> <span class="toc-text"> 五、模拟退火算法 (SA)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD-%E5%99%AA%E5%A3%B0%E6%96%B9%E6%B3%95"><span class="toc-number">6.</span> <span class="toc-text"> 六、噪声方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%83-%E5%8F%98%E9%82%BB%E5%9F%9F%E6%90%9C%E7%B4%A2vns"><span class="toc-number">7.</span> <span class="toc-text"> 七、变邻域搜索 (VNS)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AB-%E8%B4%AA%E5%A9%AA%E9%9A%8F%E5%8D%B3%E8%87%AA%E9%80%82%E5%BA%94%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95grasp"><span class="toc-number">8.</span> <span class="toc-text"> 八、贪婪随即自适应搜索算法 (GRASP)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B9%9D-lin-kernighan%E7%AE%97%E6%B3%95lk"><span class="toc-number">9.</span> <span class="toc-text"> 九、Lin-Kernighan 算法 (LK)</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-%E6%9C%80%E8%BF%91%E9%82%BB%E6%90%9C%E7%B4%A2nearest-neighbor-search-nns"><span class="toc-number">1.</span> <span class="toc-text"> 一、最近邻搜索 (Nearest neighbor search, NNS)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C-%E8%AF%95%E9%AA%8C%E6%96%B9%E6%B3%95pilot-method"><span class="toc-number">2.</span> <span class="toc-text"> 二、试验方法 (Pilot Method)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89-%E6%9C%80%E4%BD%B3%E6%94%B9%E8%BF%9B%E5%90%AF%E5%8F%91%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text"> 三、最佳改进启发式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B-3-opt"><span class="toc-number">4.</span> <span class="toc-text"> 四、3-opt</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94-%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB%E7%AE%97%E6%B3%95sa"><span class="toc-number">5.</span> <span class="toc-text"> 五、模拟退火算法 (SA)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD-%E5%99%AA%E5%A3%B0%E6%96%B9%E6%B3%95"><span class="toc-number">6.</span> <span class="toc-text"> 六、噪声方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%83-%E5%8F%98%E9%82%BB%E5%9F%9F%E6%90%9C%E7%B4%A2vns"><span class="toc-number">7.</span> <span class="toc-text"> 七、变邻域搜索 (VNS)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AB-%E8%B4%AA%E5%A9%AA%E9%9A%8F%E5%8D%B3%E8%87%AA%E9%80%82%E5%BA%94%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95grasp"><span class="toc-number">8.</span> <span class="toc-text"> 八、贪婪随即自适应搜索算法 (GRASP)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B9%9D-lin-kernighan%E7%AE%97%E6%B3%95lk"><span class="toc-number">9.</span> <span class="toc-text"> 九、Lin-Kernighan 算法 (LK)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%81-%E5%BF%AB%E9%80%9F%E8%9A%81%E7%BE%A4%E7%AE%97%E6%B3%95fant"><span class="toc-number">10.</span> <span class="toc-text"> 十、快速蚁群算法（FANT）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%81%E4%B8%80-%E7%A6%81%E5%BF%8C%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95ts"><span class="toc-number">11.</span> <span class="toc-text"> 十一、禁忌搜索算法（TS）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A6%81%E5%BF%8C%E6%90%9C%E7%B4%A2%E7%9A%84%E6%8C%81%E7%BB%AD%E6%97%B6%E9%97%B4"><span class="toc-number">11.1.</span> <span class="toc-text"> 禁忌搜索的持续时间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A0%B4%E7%A6%81%E5%87%86%E5%88%99"><span class="toc-number">11.2.</span> <span class="toc-text"> 破禁准则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%95%BF%E6%9C%9F%E8%AE%B0%E5%BF%86"><span class="toc-number">11.3.</span> <span class="toc-text"> 长期记忆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E7%BB%88%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="toc-number">11.4.</span> <span class="toc-text"> 最终流程图</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%81%E4%BA%8C-%E6%A8%A1%E5%9B%A0%E7%AE%97%E6%B3%95ga"><span class="toc-number">12.</span> <span class="toc-text"> 十二、模因算法（GA）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%81%E4%B8%89-%E5%B8%A6%E8%B7%AF%E5%BE%84%E9%87%8D%E9%93%BE%E6%8E%A5%E7%9A%84%E8%B4%AA%E5%A9%AA%E9%9A%8F%E5%8D%B3%E8%87%AA%E9%80%82%E5%BA%94%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95grasp-pr"><span class="toc-number">13.</span> <span class="toc-text"> 十三、带路径重链接的贪婪随即自适应搜索算法（GRASP-PR）</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -325,19 +357,19 @@ Lin-Kernighan 算法的原理为：<br>
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">21</span>
+        <span class="count">29</span>
         <span class="name">文章</span>
       </a>
     </div>
     <div class="item categories">
       <a href="/categories/">
-        <span class="count">11</span>
+        <span class="count">12</span>
         <span class="name">分类</span>
       </a>
     </div>
     <div class="item tags">
       <a href="/tags/">
-        <span class="count">14</span>
+        <span class="count">17</span>
         <span class="name">标签</span>
       </a>
     </div>
@@ -427,56 +459,6 @@ Lin-Kernighan 算法的原理为：<br>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/control/" title="分类于 控制工程">控制工程</a>
-</div>
-
-    <span><a href="/2022/11/23/control/spring_damping/" title="弹簧阻尼系统">弹簧阻尼系统</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
-</div>
-
-    <span><a href="/2022/11/07/blog/hexo_style/" title="shoka格式">shoka格式</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/food/" title="分类于 烹饪技巧">烹饪技巧</a>
-</div>
-
-    <span><a href="/2023/01/23/food/salt/" title="盐的使用">盐的使用</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
-</div>
-
-    <span><a href="/2023/01/19/blog/hexo_remote/" title="解决Connection closed by remote host">解决Connection closed by remote host</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/control/" title="分类于 控制工程">控制工程</a>
-</div>
-
-    <span><a href="/2022/11/22/control/Gram-matrix/" title="格拉姆矩阵判据">格拉姆矩阵判据</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/categories/else/" title="分类于 其他">其他</a>
 </div>
 
@@ -487,10 +469,50 @@ Lin-Kernighan 算法的原理为：<br>
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/hardware/" title="分类于 硬件开发">硬件开发</a>
+</div>
+
+    <span><a href="/2023/01/30/hardware/Quartus/" title="Quartus基础教程">Quartus基础教程</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
 <a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
     <span><a href="/2023/02/06/code/python/" title="Python技巧">Python技巧</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/02/code/python_numba/" title="使用numba对python进行加速">使用numba对python进行加速</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/02/code/python_try_except/" title="python下的try-except处理异常">python下的try-except处理异常</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+</div>
+
+    <span><a href="/2022/11/07/blog/hexo_style/" title="shoka格式">shoka格式</a></span>
   </li>
 
       
@@ -509,17 +531,27 @@ Lin-Kernighan 算法的原理为：<br>
 <a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
 </div>
 
-    <span><a href="/2023/01/02/blog/hexo_image/" title="Hexo图片显示异常问题">Hexo图片显示异常问题</a></span>
+    <span><a href="/2022/11/06/blog/hexo/" title="Github+Hexo+shoka主题搭建个人博客">Github+Hexo+shoka主题搭建个人博客</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
+<a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2022/12/23/optimal/signal_objective_optimization/" title="单目标搜索算法汇总">单目标搜索算法汇总</a></span>
+    <span><a href="/2023/03/02/code/python_gurobi/" title="python+gurobi应用">python+gurobi应用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/01/code/python_qt_install/" title="Python运行pyside2报错问题解决">Python运行pyside2报错问题解决</a></span>
   </li>
 
   </ul>
@@ -544,13 +576,13 @@ Lin-Kernighan 算法的原理为：<br>
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">46k 字</span>
+    <span title="站点总字数">56k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">42 分钟</span>
+    <span title="站点阅读时长">51 分钟</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

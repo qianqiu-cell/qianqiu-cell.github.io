@@ -9,15 +9,18 @@
         <lastBuildDate>Mon, 02 Jan 2023 00:00:00 +0800</lastBuildDate>
         <category>博客搭建</category>
         <category>Windows系统</category>
-        <category>python</category>
-        <category>编程技巧</category>
         <category>控制工程</category>
+        <category>C++</category>
+        <category>编程技巧</category>
+        <category>python</category>
+        <category>Qt</category>
+        <category>界面开发</category>
         <category>其他</category>
         <category>一些小目标</category>
         <category>烹饪技巧</category>
+        <category>硬件开发</category>
         <category>latex技巧</category>
         <category>论文编辑</category>
-        <category>硬件开发</category>
         <category>数学基础</category>
         <category>office技巧</category>
         <category>最优化</category>
@@ -35,6 +38,12 @@
 &lt;img data-src=&#34;/images/office/1.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;二-刷新word中所有mathtype的公式编号&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-刷新word中所有mathtype的公式编号&#34;&gt;#&lt;/a&gt; 二、刷新 word 中所有 mathtype 的公式编号&lt;/h1&gt;
 &lt;p&gt;首先 &lt;code&gt;CTRL+A&lt;/code&gt;  全选文档，接着按 &lt;code&gt;F9&lt;/code&gt; ，进行公式编号的刷新&lt;/p&gt;
+&lt;h1 id=&#34;三-一键调整word中mathtype公式的大小以及格式刷后公式偏上问题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三-一键调整word中mathtype公式的大小以及格式刷后公式偏上问题&#34;&gt;#&lt;/a&gt; 三、一键调整 word 中 mathtype 公式的大小（以及格式刷后公式偏上问题）&lt;/h1&gt;
+&lt;p&gt;（1）在 &lt;code&gt;MathType&lt;/code&gt;  选项卡中选择格式化公式&lt;br&gt;
+（2）选择 &lt;code&gt;MathType preference file&lt;/code&gt; ，点击 &lt;code&gt;Browse...&lt;/code&gt; &lt;br&gt;
+（3）在 &lt;code&gt;MathType&lt;/code&gt;  安装目录下进入 &lt;code&gt;Preferences&lt;/code&gt;  文件夹，选择所需格式文件&lt;br&gt;
+（4）点击打开，点击 &lt;code&gt;OK&lt;/code&gt; &lt;br&gt;
+&lt;img data-src=&#34;/images/office/3.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
  ]]></description>
         </item>
     </channel>

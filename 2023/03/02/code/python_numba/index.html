@@ -1,0 +1,548 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Welcome to my tiny world" href="http://qianqiu-cell.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Welcome to my tiny world" href="http://qianqiu-cell.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Welcome to my tiny world" href="http://qianqiu-cell.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="编程技巧,python" />
+
+
+<link rel="canonical" href="http://qianqiu-cell.github.io/2023/03/02/code/python_numba/">
+
+
+
+  <title>
+使用numba对python进行加速 - python |
+唯爱ぺ灬babyル = Welcome to my tiny world = 如果可以，我想你一直这样温柔下去ʕ ᵔᴥᵔ ʔ</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">使用numba对python进行加速
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2023-03-02 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-03-02T00:00:00+08:00">2023-03-02</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>2.7k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>2 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">唯爱ぺ灬babyル</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://i.postimg.cc/nVNVNYVL/6833939bly1giciub8ja1j20zk0m81ky.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/26x7b8Hq/6833939bly1gipev1x5e4j20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/SxJXcNKX/6833939bly1giciuja1j1j20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/6pm6dDjY/6833939bly1gipeyhsblkj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/Hx7CdR3P/6833939bly1gipesrnqv3j20zk0m8ava.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/PqLT6CGD/6833939bly1giclh0m9pdj20zk0m8hdt.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/python/" itemprop="item" rel="index" title="分类于 python"><span itemprop="name">python</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://qianqiu-cell.github.io/2023/03/02/code/python_numba/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="Darling F">
+    <meta itemprop="description" content="如果可以，我想你一直这样温柔下去ʕ ᵔᴥᵔ ʔ, 小樊&小小樊的学习笔记🌸">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Welcome to my tiny world">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="一-numba简介"><a class="markdownIt-Anchor" href="#一-numba简介">#</a> 一、Numba 简介</h1>
+<p>  计算机只能执行二进制的机器码， <code>C</code> 、 <code>C++</code>  等<mark>编译型语言</mark>依靠编译器将源代码转化为可执行文件后才能运行， <code>Python</code> 、 <code>Java</code>  等<mark>解释型语言</mark>使用解释器将源代码翻译后在虚拟机上执行。对于 <code>Python</code> ，由于解释器的存在，其执行效率比 <code>C</code>  语言慢几倍甚至几十倍。通过下图对各种编程语言比较情况可见 <code>python</code>  在消耗电量、速度以及内存使用情况上与 <code>C</code> 、 <code>C++</code>  的差距。<br>
+<img data-src="/images/python_numba/1.1.jpg" alt=""><br>
+   <code>Numba</code>  是一个针对 <code>Python</code>  的开源 <code>JIT</code>  编译器，由 <code>Anaconda</code>  公司主导开发，可以对原生代码进行 <code>CPU</code>  和 <code>GPU</code>  加速。在使用 <code>Python</code>  进行高性能计算时， <code>Numba</code>  提供的加速效果可以比肩原生的 <code>C/C++</code>  程序。</p>
+<h1 id="二-numba的使用方式"><a class="markdownIt-Anchor" href="#二-numba的使用方式">#</a> 二、numba 的使用方式</h1>
+<p>  通常，在对 <code>Python</code>  函数应用<mark>函数装饰器</mark>后，便可启用 <code>Numba</code>  编译器。装饰器即为函数修改器，使用十分简单的语法来转换所装饰的 <code>Python</code>  函数。</p>
+<h2 id="21-jit"><a class="markdownIt-Anchor" href="#21-jit">#</a> 2.1 @jit</h2>
+<p>  我们只需要在原来的代码上添加一行 <code>@jit</code> ，即可将一个函数编译成机器码，其他地方都不需要更改。 <code>@</code> 符号装饰了原来的代码，所以称类似写法为装饰器。</p>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">from</span> numba <span class="token keyword">import</span> jit</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np</pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre>a <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="5"></td><td><pre>b <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">11</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="6"></td><td><pre></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token decorator annotation punctuation">@jit</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token keyword">def</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    <span class="token keyword">return</span> a<span class="token operator">+</span>b</pre></td></tr><tr><td data-num="10"></td><td><pre></pre></td></tr><tr><td data-num="11"></td><td><pre>test<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr></table></figure><h2 id="22-njit"><a class="markdownIt-Anchor" href="#22-njit">#</a> 2.2 @njit</h2>
+<p>   <code>@jit</code>  装饰器有一个参数 <code>nopython</code> ， 用于区分 <code>numba</code>  的运行模式， <code>numba</code>  有两种运行模式：一个是 <code>nopython</code>  模式，另一个就是 <code>object</code>  模式。只有在 <code>nopython</code>  模式下，才会获得最好的加速效果，如果 <code>numba</code>  发现代码有不能理解的东西，就会自动进入 <code>object</code>  模式，确保程序能够运行的。将装饰器改为 <code>@jit(nopython=True)</code>  或者 <code>@njit</code> ， <code>numba</code>  会强制使用加速的方式，不进入 <code>object</code>  模式，如编译不成功，则直接抛出异常。</p>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">from</span> numba <span class="token keyword">import</span> jit</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np</pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre>a <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="5"></td><td><pre>b <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">11</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="6"></td><td><pre></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token decorator annotation punctuation">@njit</span>  <span class="token comment"># 相当于 @jit (nonpyhon=True)</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token keyword">def</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    <span class="token keyword">return</span> a<span class="token operator">+</span>b</pre></td></tr><tr><td data-num="10"></td><td><pre></pre></td></tr><tr><td data-num="11"></td><td><pre>test<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr></table></figure><h2 id="23-vectorize"><a class="markdownIt-Anchor" href="#23-vectorize">#</a> 2.3 @vectorize</h2>
+<p>  通过使用 <code>@vectorize</code>  装饰器，你可以对仅能对标量操作的函数进行转换，例如，如果你使用的是仅适用于标量的 <code>python</code>  的 <code>math</code>  库，则转换后就可以用于数组。这提供了类似于 <code>numpy</code>  数组运算。</p>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">from</span> numba <span class="token keyword">import</span> jit<span class="token punctuation">,</span> int32</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token decorator annotation punctuation">@vectorize</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">def</span> <span class="token function">func</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token comment"># Some operation on scalars</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token keyword">return</span> result</pre></td></tr></table></figure><h1 id="三-使用注意事项"><a class="markdownIt-Anchor" href="#三-使用注意事项">#</a> 三、使用注意事项</h1>
+<p>（1） <code>Numba</code>  简单到只需要在函数上加一个装饰就能加速程序，但也有缺点。目前 <code>Numba</code>  只支持了 <code>Python</code>  原生函数和部分 <code>NumPy</code>  函数，其他一些场景可能不适用。<br>
+  比如类似 <code>pandas</code>  这样的库是更高层次的封装， <code>Numba</code>  其实不能理解它里面做了什么，所以无法对其加速。一些大家经常用的机器学习框架，如 <code>scikit-learn</code> ， <code>tensorflow</code> ， <code>pytorch</code>  等，已经做了大量的优化，不适合再使用 <code>Numba</code>  做加速。<br>
+（2）原生 <code>Python</code>  速度慢的另一个重要原因是变量类型不确定。声明一个变量的语法很简单，如 <code>a = 1</code> ，但没有指定 <code>a</code>  到底是一个整数和一个浮点小数。 <code>Python</code>  解释器要进行大量的类型推断，会非常耗时。 引入 <code>Numba</code>  后， <code>Numba</code>  也要推断输入输出的类型，才能转化为机器码。针对这个问题， <code>Numba</code>  给出了名为 <code>Eager Compilation</code>  的优化方式。</p>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">from</span> numba <span class="token keyword">import</span> jit<span class="token punctuation">,</span> int32</pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token decorator annotation punctuation">@jit</span><span class="token punctuation">(</span><span class="token string">"int32(int32, int32)"</span><span class="token punctuation">,</span> nopython<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token keyword">def</span> <span class="token function">f2</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token keyword">return</span> x <span class="token operator">+</span> y</pre></td></tr></table></figure><p>   <code>@jit(int32(int32, int32))</code>  告知 <code>Numba</code>  你的函数在使用什么样的输入和输出，括号内是输入，括号左侧是输出。这样不会加快执行速度，但是会加快编译速度，可以更快将函数编译到机器码上。</p>
+<h1 id="四-成功使用案例"><a class="markdownIt-Anchor" href="#四-成功使用案例">#</a> 四、成功使用案例</h1>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># 功能：根据输入参数获得 z（货架 i 为订单 o 提供的商品 c 的数量）</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token comment"># 输入参数：各参数同 parameter.py</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token comment"># 输出参数：z</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token decorator annotation punctuation">@nb<span class="token punctuation">.</span>njit</span><span class="token punctuation">(</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    nb<span class="token punctuation">.</span>types<span class="token punctuation">.</span>Array<span class="token punctuation">(</span>nb<span class="token punctuation">.</span>int32<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">"C"</span><span class="token punctuation">)</span><span class="token punctuation">(</span>nb<span class="token punctuation">.</span>types<span class="token punctuation">.</span>Array<span class="token punctuation">(</span>nb<span class="token punctuation">.</span>int32<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">"C"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> nb<span class="token punctuation">.</span>types<span class="token punctuation">.</span>Array<span class="token punctuation">(</span>nb<span class="token punctuation">.</span>int32<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"C"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> nb<span class="token punctuation">.</span>types<span class="token punctuation">.</span>Array<span class="token punctuation">(</span>nb<span class="token punctuation">.</span>int32<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">"C"</span><span class="token punctuation">)</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="6"></td><td><pre>                                     nb<span class="token punctuation">.</span>types<span class="token punctuation">.</span>Array<span class="token punctuation">(</span>nb<span class="token punctuation">.</span>int32<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">"C"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token keyword">def</span> <span class="token function">get_z</span><span class="token punctuation">(</span>y<span class="token punctuation">,</span> selected_pods<span class="token punctuation">,</span> A<span class="token punctuation">,</span> B<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    z <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token punctuation">(</span>y<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> B<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> B<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span>nb<span class="token punctuation">.</span>int32<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    transform_y <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>selected_pods<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="11"></td><td><pre>        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>y<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="12"></td><td><pre>            <span class="token keyword">if</span> y<span class="token punctuation">[</span>j<span class="token punctuation">,</span> i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="13"></td><td><pre>                transform_y<span class="token punctuation">.</span>append<span class="token punctuation">(</span>j<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="14"></td><td><pre>                <span class="token keyword">break</span></pre></td></tr><tr><td data-num="15"></td><td><pre>    remaining_orders <span class="token operator">=</span> np<span class="token punctuation">.</span>copy<span class="token punctuation">(</span>B<span class="token punctuation">)</span>  <span class="token comment"># 所有订单剩余量（n_order*n_commodity_type）</span></pre></td></tr><tr><td data-num="16"></td><td><pre>    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>selected_pods<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 第 i 个货架</span></pre></td></tr><tr><td data-num="17"></td><td><pre>        remaining_A <span class="token operator">=</span> np<span class="token punctuation">.</span>copy<span class="token punctuation">(</span>A<span class="token punctuation">[</span>transform_y<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># 当前货架的剩余量（1*n_commodity_type）</span></pre></td></tr><tr><td data-num="18"></td><td><pre>        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>B<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 第 j 个订单</span></pre></td></tr><tr><td data-num="19"></td><td><pre>            <span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>B<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 第 k 种商品</span></pre></td></tr><tr><td data-num="20"></td><td><pre>                <span class="token keyword">if</span> remaining_A<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">></span> <span class="token number">0</span> <span class="token keyword">and</span> remaining_orders<span class="token punctuation">[</span>j<span class="token punctuation">,</span> k<span class="token punctuation">]</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="21"></td><td><pre>                    <span class="token keyword">if</span> remaining_A<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">>=</span> remaining_orders<span class="token punctuation">[</span>j<span class="token punctuation">,</span> k<span class="token punctuation">]</span><span class="token punctuation">:</span>  <span class="token comment"># 货架 i 足够为订单 k 提供 z 种商品</span></pre></td></tr><tr><td data-num="22"></td><td><pre>                        z<span class="token punctuation">[</span>transform_y<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> j<span class="token punctuation">,</span> k<span class="token punctuation">]</span> <span class="token operator">=</span> remaining_orders<span class="token punctuation">[</span>j<span class="token punctuation">,</span> k<span class="token punctuation">]</span></pre></td></tr><tr><td data-num="23"></td><td><pre>                        remaining_A<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> remaining_A<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">-</span> remaining_orders<span class="token punctuation">[</span>j<span class="token punctuation">,</span> k<span class="token punctuation">]</span></pre></td></tr><tr><td data-num="24"></td><td><pre>                        remaining_orders<span class="token punctuation">[</span>j<span class="token punctuation">,</span> k<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span></pre></td></tr><tr><td data-num="25"></td><td><pre>                    <span class="token keyword">else</span><span class="token punctuation">:</span>  <span class="token comment"># 货架 i 不足够为订单 k 提供 z 种商品</span></pre></td></tr><tr><td data-num="26"></td><td><pre>                        <span class="token comment"># z[transform_y[i]][j][k] = remaining_A[k]</span></pre></td></tr><tr><td data-num="27"></td><td><pre>                        z<span class="token punctuation">[</span>transform_y<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> j<span class="token punctuation">,</span> k<span class="token punctuation">]</span> <span class="token operator">=</span> remaining_A<span class="token punctuation">[</span>k<span class="token punctuation">]</span></pre></td></tr><tr><td data-num="28"></td><td><pre>                        remaining_orders<span class="token punctuation">[</span>j<span class="token punctuation">,</span> k<span class="token punctuation">]</span> <span class="token operator">=</span> remaining_orders<span class="token punctuation">[</span>j<span class="token punctuation">,</span> k<span class="token punctuation">]</span> <span class="token operator">-</span> remaining_A<span class="token punctuation">[</span>k<span class="token punctuation">]</span></pre></td></tr><tr><td data-num="29"></td><td><pre>                        remaining_A<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span></pre></td></tr><tr><td data-num="30"></td><td><pre>    <span class="token keyword">return</span> z</pre></td></tr></table></figure>
+      <div class="tags">
+          <a href="/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/" rel="tag"><i class="ic i-tag"></i> 编程技巧</a>
+          <a href="/tags/python/" rel="tag"><i class="ic i-tag"></i> python</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2023-03-02 13:19:22" itemprop="dateModified" datetime="2023-03-02T13:19:22+08:00">2023-03-02</time>
+  </span>
+  <span id="2023/03/02/code/python_numba/" class="item leancloud_visitors" data-flag-title="使用numba对python进行加速" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/03/02/code/python_pip/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;yNR2gc4L&#x2F;6833939bly1giclhtuo6nj20zk0m8ttm.jpg" title="修改pip路径">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> python</span>
+  <h3>修改pip路径</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2023/03/02/code/python_jupyter/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;MGp97BQ7&#x2F;6833939bly1gicitspjpbj20zk0m81ky.jpg" title="修改Jupyter Notebook默认工作路径">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> python</span>
+  <h3>修改Jupyter Notebook默认工作路径</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-numba%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text"> 一、Numba 简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C-numba%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="toc-number">2.</span> <span class="toc-text"> 二、numba 的使用方式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#21-jit"><span class="toc-number">2.1.</span> <span class="toc-text"> 2.1 @jit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-njit"><span class="toc-number">2.2.</span> <span class="toc-text"> 2.2 @njit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-vectorize"><span class="toc-number">2.3.</span> <span class="toc-text"> 2.3 @vectorize</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89-%E4%BD%BF%E7%94%A8%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">3.</span> <span class="toc-text"> 三、使用注意事项</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B-%E6%88%90%E5%8A%9F%E4%BD%BF%E7%94%A8%E6%A1%88%E4%BE%8B"><span class="toc-number">4.</span> <span class="toc-text"> 四、成功使用案例</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2023/02/06/code/python/" rel="bookmark" title="Python技巧">Python技巧</a></li><li><a href="/2023/03/01/code/python_qt_install/" rel="bookmark" title="Python运行pyside2报错问题解决">Python运行pyside2报错问题解决</a></li><li><a href="/2023/03/01/code/python_test/" rel="bookmark" title="Python test in xxx问题">Python test in xxx问题</a></li><li><a href="/2023/03/02/code/python_gurobi/" rel="bookmark" title="python+gurobi应用">python+gurobi应用</a></li><li><a href="/2023/03/02/code/python_jupyter/" rel="bookmark" title="修改Jupyter Notebook默认工作路径">修改Jupyter Notebook默认工作路径</a></li><li class="active"><a href="/2023/03/02/code/python_numba/" rel="bookmark" title="使用numba对python进行加速">使用numba对python进行加速</a></li><li><a href="/2023/03/02/code/python_pip/" rel="bookmark" title="修改pip路径">修改pip路径</a></li><li><a href="/2023/03/02/code/python_try_except/" rel="bookmark" title="python下的try-except处理异常">python下的try-except处理异常</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Darling F"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">Darling F</p>
+  <div class="description" itemprop="description">小樊&小小樊的学习笔记🌸</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">29</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">12</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">17</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3FpYW5xaXUtY2VsbA==" title="https:&#x2F;&#x2F;github.com&#x2F;qianqiu-cell"><i class="ic i-github"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjI4MzI1Njc4NTFAcXEuY29t" title="mailto:2832567851@qq.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2023/03/02/code/python_pip/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2023/03/02/code/python_jupyter/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/latex/" title="分类于 latex">latex</a>
+</div>
+
+    <span><a href="/2023/01/20/latex/latex/" title="Vscode+TexLive+Latex workshop安装">Vscode+TexLive+Latex workshop安装</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/01/code/python_qt_install/" title="Python运行pyside2报错问题解决">Python运行pyside2报错问题解决</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/02/code/python_numba/" title="使用numba对python进行加速">使用numba对python进行加速</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/control/" title="分类于 控制工程">控制工程</a>
+</div>
+
+    <span><a href="/2022/11/23/control/spring_damping/" title="弹簧阻尼系统">弹簧阻尼系统</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/02/code/python_pip/" title="修改pip路径">修改pip路径</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+</div>
+
+    <span><a href="/2022/12/24/blog/hexo_change/" title="Hexo文件迁移">Hexo文件迁移</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
+</div>
+
+    <span><a href="/2022/12/23/optimal/signal_objective_optimization/" title="单目标搜索算法汇总">单目标搜索算法汇总</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/02/code/python_jupyter/" title="修改Jupyter Notebook默认工作路径">修改Jupyter Notebook默认工作路径</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Windows/" title="分类于 Windows系统">Windows系统</a>
+</div>
+
+    <span><a href="/2023/01/03/Windows/Realtek/" title="关于戴尔G3重装系统后的音频问题">关于戴尔G3重装系统后的音频问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/02/code/python_try_except/" title="python下的try-except处理异常">python下的try-except处理异常</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Darling F @ 唯爱ぺ灬babyル</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">56k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">51 分钟</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2023/03/02/code/python_numba/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i> 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

@@ -6,15 +6,18 @@
     <updated>2022-12-22T16:00:00.000Z</updated>
     <category term="博客搭建" />
     <category term="Windows系统" />
-    <category term="python" />
-    <category term="编程技巧" />
     <category term="控制工程" />
+    <category term="C++" />
+    <category term="编程技巧" />
+    <category term="python" />
+    <category term="Qt" />
+    <category term="界面开发" />
     <category term="其他" />
     <category term="一些小目标" />
     <category term="烹饪技巧" />
+    <category term="硬件开发" />
     <category term="latex技巧" />
     <category term="论文编辑" />
-    <category term="硬件开发" />
     <category term="数学基础" />
     <category term="office技巧" />
     <category term="最优化" />
@@ -92,6 +95,38 @@ Lin-Kernighan 算法的原理为：&lt;br&gt;
 （4）如果没有第二指标优于最优解的邻域解，则结束&lt;br&gt;
  Lin-Kernighan 算法的流程图如下所示&lt;br&gt;
 &lt;img data-src=&#34;/images/signal_objective_optimization/9.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;十-快速蚁群算法fant&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#十-快速蚁群算法fant&#34;&gt;#&lt;/a&gt; 十、快速蚁群算法（FANT）&lt;/h1&gt;
+&lt;p&gt;  下图展示了一只蚂蚁的典型行为，这是一个真实的被隔离的蚁群的经历。后者只能通过一个孔来寻找食物。最后一个连接到一个管子上，这管子分成两个分支，再进一步连接。左边的树枝比右边的短。&lt;ins&gt;由于蚂蚁一开始没有这方面的信息，所以蚂蚁在两个分支中平均分布（图 a）&lt;/ins&gt;。&lt;br&gt;
+  在探索过程中，每只蚂蚁都会掉落一种化学物质，它们的触角很容易探测到这种物质，这将有助于它们返回蚁巢。这种携带信息的化学物质叫做&lt;mark&gt;信息素&lt;/mark&gt;。在返回的路上，一只蚂蚁会根据食物来源的质量储存大量的信息素。自然地，一只发现了一条短路径的蚂蚁能够比那些使用坏路径的蚂蚁更早返回。&lt;br&gt;
+  因此，沉积在最短路径上的信息素的数量增长更快。因此，新来的蚂蚁有了选择路径的信息，并倾向于选择最短的树枝。&lt;ins&gt;一段时间后，观察到几乎所有的蚂蚁都使用最短的树枝 (图 b)&lt;/ins&gt;。因此，蜂群共同决定一个最优路径，而每个个体只看到自己天线的顶端。&lt;br&gt;
+&lt;img data-src=&#34;/images/signal_objective_optimization/10.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+快速蚁群算法流程图如下所示（根据代码进行理解，部分理解不到位）&lt;br&gt;
+&lt;img data-src=&#34;/images/signal_objective_optimization/10.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;十一-禁忌搜索算法ts&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#十一-禁忌搜索算法ts&#34;&gt;#&lt;/a&gt; 十一、禁忌搜索算法（TS）&lt;/h1&gt;
+&lt;p&gt;  禁忌搜索（Tabu search）的关键思想是用超越局部最优的局部搜索来探索解空间。这意味着设计一种机制来防止循环现象，即进入一个循环，在这个循环中，有限的解子集被反复访问。最简单的概念是记住在局部搜索中连续遇到的所有解，但防止后者选择已经访问过的邻居解。被访问的解决方案因此成为禁忌。&lt;br&gt;
+  一般 TS 的伪代码如下&lt;br&gt;
+&lt;img data-src=&#34;/images/signal_objective_optimization/11.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;禁忌搜索的持续时间&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#禁忌搜索的持续时间&#34;&gt;#&lt;/a&gt; 禁忌搜索的持续时间&lt;/h2&gt;
+&lt;p&gt;  零禁忌时间与随机搜索毫无差别，禁忌搜索持续时间过长会导致搜索效率低下并易陷入循环。一种选择较低的禁忌持续时间同时又能有效防止循环现象的技术是在每次迭代中随机设置它，一个经典的方法是在最小持续时间 &lt;code&gt;dmin&lt;/code&gt;  和最大值 &lt;code&gt;dmax = dmin +Δ&lt;/code&gt;  之间随机选择禁忌持续时间。&lt;/p&gt;
+&lt;h2 id=&#34;破禁准则&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#破禁准则&#34;&gt;#&lt;/a&gt; 破禁准则&lt;/h2&gt;
+&lt;p&gt;  无条件禁止移动可能会导致搜索效率的低下。例如，在某些情况下会跳过对找到的最佳解决方案的改进。因此，如果移动 &lt;code&gt;m&lt;/code&gt;  允许获得一个比当前全局最优解更好的解，则可无视禁忌来保留它，这种规则即为破禁准则。&lt;/p&gt;
+&lt;h2 id=&#34;长期记忆&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#长期记忆&#34;&gt;#&lt;/a&gt; 长期记忆&lt;/h2&gt;
+&lt;p&gt;  短时间记忆的禁忌搜索的一个缺点是它只能做出很小的改变。可将长期记忆与短期记忆相结合，从而克服这一缺点。长期记忆可以通过很多种方式来表现，如持续统计每次解的移动。&lt;/p&gt;
+&lt;h2 id=&#34;最终流程图&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#最终流程图&#34;&gt;#&lt;/a&gt; 最终流程图&lt;/h2&gt;
+&lt;p&gt;将禁忌搜索和以上内容相结合后的流程图为&lt;br&gt;
+&lt;img data-src=&#34;/images/signal_objective_optimization/11.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;十二-模因算法ga&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#十二-模因算法ga&#34;&gt;#&lt;/a&gt; 十二、模因算法（GA）&lt;/h1&gt;
+&lt;p&gt;  遗传算法有两个主要缺点：首先，没有任何东西能保证找到的最佳解决方案不能通过简单的局部修改得到改进。其次，种群的多样性随着世代循环的每次迭代而下降，最终只包含同一个体的克隆。&lt;br&gt;
+  模因算法（Memetic Algorithms）通过在生成子代后应用局部搜索来解决第一个缺点（如 LK 算法，2-opt 算法等）。第二个缺点的解决方法是立即消除重复解。（也是和遗传算法的区别）&lt;/p&gt;
+&lt;h1 id=&#34;十三-带路径重链接的贪婪随即自适应搜索算法grasp-pr&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#十三-带路径重链接的贪婪随即自适应搜索算法grasp-pr&#34;&gt;#&lt;/a&gt; 十三、带路径重链接的贪婪随即自适应搜索算法（GRASP-PR）&lt;/h1&gt;
+&lt;p&gt;  GRASP-PR（greedy adaptive search procedure with path relinking）是一种使用元启发式的核心组件（构造，局部搜索和解决方案集合的管理）且输入参数较为简单的方法。&lt;br&gt;
+  路径重链接（PR）通过选择两个解决方案，从初始解寻找最优邻域解直至搜索到目标解，在此过程中生成的最优解即为 PR 得到的最优解。&lt;br&gt;
+  GRASP-PR 的伪代码如下&lt;br&gt;
+&lt;img data-src=&#34;/images/signal_objective_optimization/13.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+ GRASP-PR 的流程图如下&lt;br&gt;
+&lt;img data-src=&#34;/images/signal_objective_optimization/13.2.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+ PR 的流程图如下&lt;br&gt;
+&lt;img data-src=&#34;/images/signal_objective_optimization/13.3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </content>
         <category term="最优化" />
         <updated>2022-12-22T16:00:00.000Z</updated>

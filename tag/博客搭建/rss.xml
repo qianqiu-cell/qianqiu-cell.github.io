@@ -9,15 +9,18 @@
         <lastBuildDate>Thu, 19 Jan 2023 00:00:00 +0800</lastBuildDate>
         <category>博客搭建</category>
         <category>Windows系统</category>
-        <category>python</category>
-        <category>编程技巧</category>
         <category>控制工程</category>
+        <category>C++</category>
+        <category>编程技巧</category>
+        <category>python</category>
+        <category>Qt</category>
+        <category>界面开发</category>
         <category>其他</category>
         <category>一些小目标</category>
         <category>烹饪技巧</category>
+        <category>硬件开发</category>
         <category>latex技巧</category>
         <category>论文编辑</category>
-        <category>硬件开发</category>
         <category>数学基础</category>
         <category>office技巧</category>
         <category>最优化</category>
@@ -120,7 +123,8 @@ shoka 主题图片同时备份至百度网盘及个人 U 盘&lt;/p&gt;
 &lt;p&gt;本功能基于 &lt;code&gt;markdown-it-emoji&lt;/code&gt;  ，所有标签参考&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL21hcmtkb3duLWl0L21hcmtkb3duLWl0LWVtb2ppL2Jsb2IvbWFzdGVyL2xpYi9kYXRhL2Z1bGwuanNvbg==&#34;&gt;戳此&lt;/span&gt;&lt;br&gt;
 😘&lt;br&gt;
 💍&lt;br&gt;
-🎶&lt;/p&gt;
+🎶&lt;br&gt;
+⚠️&lt;/p&gt;
 &lt;h1 id=&#34;effects文字特效&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#effects文字特效&#34;&gt;#&lt;/a&gt;  &lt;code&gt;effects&lt;/code&gt;  文字特效&lt;/h1&gt;
 &lt;p&gt;&lt;ins&gt;下划线&lt;/ins&gt;&lt;br&gt;
 &lt;ins class=&#34;wavy&#34;&gt;波浪线&lt;/ins&gt;&lt;br&gt;
