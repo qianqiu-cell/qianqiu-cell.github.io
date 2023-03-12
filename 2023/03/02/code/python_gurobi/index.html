@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
   
-  <meta name="keywords" content="编程技巧,python" />
+  <meta name="keywords" content="python,编程技巧" />
 
 
 <link rel="canonical" href="http://qianqiu-cell.github.io/2023/03/02/code/python_gurobi/">
@@ -117,12 +117,12 @@ python+gurobi应用 - python |
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://i.postimg.cc/F1tLKMjW/6833939bly1giclil3m4ej20zk0m8tn8.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/d0sGhwKx/6833939bly1gicit4jrvuj20zk0m8785.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/4yY0G95v/6833939bly1giclj9410cj20zk0m8h12.jpg"></li>
           <li class="item" data-background-image="https://i.postimg.cc/qB3kTh5M/6833939bly1gipetlbztpj20zk0m84qp.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/LsWGhDbY/6833939bly1giclffsa1cj20zk0m811l.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/63XRtJfM/6833939bly1giclxxcb6rj20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/26x7b8Hq/6833939bly1gipev1x5e4j20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/s2rWYCG5/6833939bly1gipevuctzzj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/vmYrRd8b/6833939bly1giciszlczyj20zk0m816d.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/Pr6hbWLy/6833939bly1gicitht3xtj20zk0m8k5v.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/mr3FgpDV/6833939bly1giclgrvbd6j20zk0m8qv5.jpg"></li>
         </ul>
       </div>
     </header>
@@ -180,8 +180,8 @@ python+gurobi应用 - python |
 <figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre>obj1 <span class="token operator">=</span> m<span class="token punctuation">.</span>addVar<span class="token punctuation">(</span>vtype<span class="token operator">=</span>GRB<span class="token punctuation">.</span>CONTINUOUS<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">'obj1'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="2"></td><td><pre>m<span class="token punctuation">.</span>addConstrs<span class="token punctuation">(</span>obj1 <span class="token operator">>=</span> tH<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> Th <span class="token operator">*</span> z<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_pod<span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="3"></td><td><pre>m<span class="token punctuation">.</span>setObjective<span class="token punctuation">(</span>obj1<span class="token punctuation">,</span> GRB<span class="token punctuation">.</span>MINIMIZE<span class="token punctuation">)</span></pre></td></tr></table></figure><h1 id="二-成功使用案例"><a class="markdownIt-Anchor" href="#二-成功使用案例">#</a> 二、成功使用案例</h1>
 <figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">from</span> parameter <span class="token keyword">import</span> <span class="token operator">*</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">import</span> gurobipy <span class="token keyword">as</span> gp</pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">from</span> gurobipy <span class="token keyword">import</span> GRB</pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np</pre></td></tr><tr><td data-num="5"></td><td><pre></pre></td></tr><tr><td data-num="6"></td><td><pre></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    <span class="token comment"># Create optimization model</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    m <span class="token operator">=</span> gp<span class="token punctuation">.</span>Model<span class="token punctuation">(</span><span class="token string">'RMFS'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="10"></td><td><pre></pre></td></tr><tr><td data-num="11"></td><td><pre>    <span class="token comment"># Create variables</span></pre></td></tr><tr><td data-num="12"></td><td><pre>    x <span class="token operator">=</span> m<span class="token punctuation">.</span>addMVar<span class="token punctuation">(</span><span class="token punctuation">(</span>n_pod<span class="token punctuation">,</span> n_robot<span class="token punctuation">,</span> n_pod<span class="token punctuation">)</span><span class="token punctuation">,</span> vtype<span class="token operator">=</span>GRB<span class="token punctuation">.</span>BINARY<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">"x"</span><span class="token punctuation">)</span>  <span class="token comment"># 货架 i 是机器人 r 第 k 个转运的任务（0，1 变量）</span></pre></td></tr><tr><td data-num="13"></td><td><pre>    y <span class="token operator">=</span> m<span class="token punctuation">.</span>addMVar<span class="token punctuation">(</span><span class="token punctuation">(</span>n_pod<span class="token punctuation">,</span> n_pod<span class="token punctuation">)</span><span class="token punctuation">,</span> vtype<span class="token operator">=</span>GRB<span class="token punctuation">.</span>BINARY<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">"y"</span><span class="token punctuation">)</span>  <span class="token comment"># 货架 i 是拣货人第 k 个处理的货架（0，1 变量）</span></pre></td></tr><tr><td data-num="14"></td><td><pre>    z <span class="token operator">=</span> m<span class="token punctuation">.</span>addMVar<span class="token punctuation">(</span><span class="token punctuation">(</span>n_pod<span class="token punctuation">,</span> n_order<span class="token punctuation">,</span> n_commodity_type<span class="token punctuation">)</span><span class="token punctuation">,</span> vtype<span class="token operator">=</span>GRB<span class="token punctuation">.</span>INTEGER<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">"z"</span><span class="token punctuation">)</span>  <span class="token comment"># 货架 i 为订单 o 提供的商品 c 的数量（自然数）</span></pre></td></tr><tr><td data-num="15"></td><td><pre>    tP <span class="token operator">=</span> m<span class="token punctuation">.</span>addVars<span class="token punctuation">(</span>n_pod<span class="token punctuation">,</span> vtype<span class="token operator">=</span>GRB<span class="token punctuation">.</span>CONTINUOUS<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">"tP"</span><span class="token punctuation">)</span>  <span class="token comment"># 货架 i 被机器人拿起的时间，-1 表示未搬运货架</span></pre></td></tr><tr><td data-num="16"></td><td><pre>    tD <span class="token operator">=</span> m<span class="token punctuation">.</span>addVars<span class="token punctuation">(</span>n_pod<span class="token punctuation">,</span> vtype<span class="token operator">=</span>GRB<span class="token punctuation">.</span>CONTINUOUS<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">"tD"</span><span class="token punctuation">)</span>  <span class="token comment"># 货架 i 被机器人放下的时间，-1 表示未搬运货架</span></pre></td></tr><tr><td data-num="17"></td><td><pre>    tH <span class="token operator">=</span> m<span class="token punctuation">.</span>addVars<span class="token punctuation">(</span>n_pod<span class="token punctuation">,</span> vtype<span class="token operator">=</span>GRB<span class="token punctuation">.</span>CONTINUOUS<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">"tH"</span><span class="token punctuation">)</span>  <span class="token comment"># 货架 i 被拣货人开始拣货的时间，-1 表示未搬运货架</span></pre></td></tr><tr><td data-num="18"></td><td><pre></pre></td></tr><tr><td data-num="19"></td><td><pre>    <span class="token comment"># Create auxiliary variable</span></pre></td></tr><tr><td data-num="20"></td><td><pre>    obj1 <span class="token operator">=</span> m<span class="token punctuation">.</span>addVar<span class="token punctuation">(</span>vtype<span class="token operator">=</span>GRB<span class="token punctuation">.</span>CONTINUOUS<span class="token punctuation">,</span> name<span class="token operator">=</span><span class="token string">'obj1'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="21"></td><td><pre>    m<span class="token punctuation">.</span>setParam<span class="token punctuation">(</span>GRB<span class="token punctuation">.</span>Param<span class="token punctuation">.</span>FeasRelaxBigM<span class="token punctuation">,</span> <span class="token builtin">max</span><span class="token punctuation">(</span>Td<span class="token punctuation">)</span> <span class="token operator">*</span> n_pod<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="22"></td><td><pre></pre></td></tr><tr><td data-num="23"></td><td><pre>    <span class="token comment"># Set objective</span></pre></td></tr><tr><td data-num="24"></td><td><pre>    m<span class="token punctuation">.</span>addConstrs<span class="token punctuation">(</span>obj1 <span class="token operator">>=</span> tH<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> Th <span class="token operator">*</span> z<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_pod<span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="25"></td><td><pre>    m<span class="token punctuation">.</span>setObjective<span class="token punctuation">(</span>obj1<span class="token punctuation">,</span> GRB<span class="token punctuation">.</span>MINIMIZE<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="26"></td><td><pre></pre></td></tr><tr><td data-num="27"></td><td><pre>    <span class="token comment"># Add constraint</span></pre></td></tr><tr><td data-num="28"></td><td><pre>    <span class="token comment"># 1. 每个货架提供给所有订单的每种商品不超过其所包含的该商品的数量</span></pre></td></tr><tr><td data-num="29"></td><td><pre>    m<span class="token punctuation">.</span>addConstrs<span class="token punctuation">(</span>z<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">[</span>i<span class="token punctuation">,</span> j<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>A<span class="token punctuation">)</span><span class="token punctuation">[</span>i<span class="token punctuation">,</span> j<span class="token punctuation">]</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_pod<span class="token punctuation">)</span> <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_commodity_type<span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="30"></td><td><pre>    <span class="token comment"># 2. 所有货架提供给某一订单的某种商品数等于该订单所需求的该种商品的数量</span></pre></td></tr><tr><td data-num="31"></td><td><pre>    m<span class="token punctuation">.</span>addConstrs<span class="token punctuation">(</span>z<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">[</span>i<span class="token punctuation">,</span> j<span class="token punctuation">]</span> <span class="token operator">==</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>B<span class="token punctuation">)</span><span class="token punctuation">[</span>i<span class="token punctuation">,</span> j<span class="token punctuation">]</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_order<span class="token punctuation">)</span> <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_commodity_type<span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="32"></td><td><pre>    <span class="token comment"># 3. 每个货架最多被安排给一个转运机器人的一个顺序号</span></pre></td></tr><tr><td data-num="33"></td><td><pre>    m<span class="token punctuation">.</span>addConstrs<span class="token punctuation">(</span>x<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> <span class="token number">1</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_pod<span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="34"></td><td><pre>    <span class="token comment"># 4. 每个机器人的每个顺序号最多安排一个货架</span></pre></td></tr><tr><td data-num="35"></td><td><pre>    m<span class="token punctuation">.</span>addConstrs<span class="token punctuation">(</span>x<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">[</span>i<span class="token punctuation">,</span> j<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> <span class="token number">1</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_robot<span class="token punctuation">)</span> <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_pod<span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="36"></td><td><pre>    <span class="token comment"># 5. 若机器人的后序顺序号被安排了一个货架，则其前序顺序号一定被安排了一个货架</span></pre></td></tr><tr><td data-num="37"></td><td><pre>    m<span class="token punctuation">.</span>addConstrs<span class="token punctuation">(</span>x<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">[</span>i<span class="token punctuation">,</span> j<span class="token punctuation">]</span> <span class="token operator">>=</span> x<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">[</span>i<span class="token punctuation">,</span> j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_pod <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_robot<span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="38"></td><td><pre>    <span class="token comment"># 6. 若某一货架为订单提供了商品，则必须为该货架安排一个转运机器人</span></pre></td></tr><tr><td data-num="39"></td><td><pre>    m<span class="token punctuation">.</span>addConstrs<span class="token punctuation">(</span>total_order <span class="token operator">*</span> x<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">>=</span> z<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_pod<span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="40"></td><td><pre>    <span class="token comment"># 7. 某一货架被机器人放下的时间等于其被拿起的时间与转运时间之和</span></pre></td></tr><tr><td data-num="41"></td><td><pre>    m<span class="token punctuation">.</span>addConstrs<span class="token punctuation">(</span>tD<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> tP<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>Td<span class="token punctuation">)</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_pod<span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="42"></td><td><pre>    <span class="token comment"># 8. 机器人拿起下一货架的时间不小于机器人放下上一货架和运行至下一货架的时间和</span></pre></td></tr><tr><td data-num="43"></td><td><pre>    m<span class="token punctuation">.</span>addConstrs<span class="token punctuation">(</span>tP<span class="token punctuation">[</span>i2<span class="token punctuation">]</span> <span class="token operator">>=</span> tD<span class="token punctuation">[</span>i1<span class="token punctuation">]</span> <span class="token operator">+</span> Tp<span class="token punctuation">[</span>i2<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token punctuation">(</span>x<span class="token punctuation">[</span>i1<span class="token punctuation">,</span> j<span class="token punctuation">,</span> k<span class="token punctuation">]</span> <span class="token operator">+</span> x<span class="token punctuation">[</span>i2<span class="token punctuation">,</span> j<span class="token punctuation">,</span> k <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">*</span> m<span class="token punctuation">.</span>Params<span class="token punctuation">.</span>FeasRelaxBigM <span class="token keyword">for</span> i1 <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_pod<span class="token punctuation">)</span> <span class="token keyword">for</span> i2 <span class="token keyword">in</span></pre></td></tr><tr><td data-num="44"></td><td><pre>                 <span class="token builtin">range</span><span class="token punctuation">(</span>n_pod<span class="token punctuation">)</span> <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_robot<span class="token punctuation">)</span> <span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_pod <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="45"></td><td><pre>    <span class="token comment"># 9. 每个货架最多被安排给一个拣货顺序号</span></pre></td></tr><tr><td data-num="46"></td><td><pre>    m<span class="token punctuation">.</span>addConstrs<span class="token punctuation">(</span>y<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> <span class="token number">1</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_pod<span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="47"></td><td><pre>    <span class="token comment"># 10. 每个拣货顺序号最多安排一个货架</span></pre></td></tr><tr><td data-num="48"></td><td><pre>    m<span class="token punctuation">.</span>addConstrs<span class="token punctuation">(</span>y<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> <span class="token number">1</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_pod<span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="49"></td><td><pre>    <span class="token comment"># 11. 当前拣货顺序号被安排了一个货架，则其前序拣货顺序号一定被安排了一个货架</span></pre></td></tr><tr><td data-num="50"></td><td><pre>    m<span class="token punctuation">.</span>addConstrs<span class="token punctuation">(</span>y<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">>=</span> y<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_pod <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="51"></td><td><pre>    <span class="token comment"># 12. 若货架被分配了一个转运机器人，则一定为其安排了拣货</span></pre></td></tr><tr><td data-num="52"></td><td><pre>    m<span class="token punctuation">.</span>addConstrs<span class="token punctuation">(</span>y<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> x<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_pod<span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="53"></td><td><pre>    <span class="token comment"># 13. 货架的拣货时间不早于其被机器人送到拣货站的时间</span></pre></td></tr><tr><td data-num="54"></td><td><pre>    m<span class="token punctuation">.</span>addConstrs<span class="token punctuation">(</span>tH<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">>=</span> tD<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_pod<span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="55"></td><td><pre>    <span class="token comment"># 14. 拣货人拣取下一货架的时间不小于拣货人开始拣取上一货架和拣取上一货架的时间和</span></pre></td></tr><tr><td data-num="56"></td><td><pre>    m<span class="token punctuation">.</span>addConstrs<span class="token punctuation">(</span>tH<span class="token punctuation">[</span>i2<span class="token punctuation">]</span> <span class="token operator">>=</span> tH<span class="token punctuation">[</span>i1<span class="token punctuation">]</span> <span class="token operator">+</span> Th <span class="token operator">*</span> z<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">[</span>i1<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token punctuation">(</span>y<span class="token punctuation">[</span>i1<span class="token punctuation">,</span> j<span class="token punctuation">]</span> <span class="token operator">+</span> y<span class="token punctuation">[</span>i2<span class="token punctuation">,</span> j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">*</span> m<span class="token punctuation">.</span>Params<span class="token punctuation">.</span>FeasRelaxBigM <span class="token keyword">for</span> j <span class="token keyword">in</span></pre></td></tr><tr><td data-num="57"></td><td><pre>                 <span class="token builtin">range</span><span class="token punctuation">(</span>n_pod <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">for</span> i2 <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_pod<span class="token punctuation">)</span> <span class="token keyword">for</span> i1 <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_pod<span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="58"></td><td><pre>    <span class="token comment"># 15. 机器人拿起的第一个货架等于机器人空载运行到该货架的时间</span></pre></td></tr><tr><td data-num="59"></td><td><pre>    m<span class="token punctuation">.</span>addConstrs<span class="token punctuation">(</span>tP<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">>=</span> Tp<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token punctuation">(</span>x<span class="token punctuation">[</span>i<span class="token punctuation">,</span> j<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">*</span> m<span class="token punctuation">.</span>Params<span class="token punctuation">.</span>FeasRelaxBigM <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_robot<span class="token punctuation">)</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_pod<span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="60"></td><td><pre></pre></td></tr><tr><td data-num="61"></td><td><pre>    <span class="token comment"># Optimize model</span></pre></td></tr><tr><td data-num="62"></td><td><pre>    m<span class="token punctuation">.</span>optimize<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="63"></td><td><pre></pre></td></tr><tr><td data-num="64"></td><td><pre>    <span class="token keyword">for</span> v <span class="token keyword">in</span> m<span class="token punctuation">.</span>getVars<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="65"></td><td><pre>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'%s %g'</span> <span class="token operator">%</span> <span class="token punctuation">(</span>v<span class="token punctuation">.</span>VarName<span class="token punctuation">,</span> v<span class="token punctuation">.</span>X<span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="66"></td><td><pre></pre></td></tr><tr><td data-num="67"></td><td><pre>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Obj: %g'</span> <span class="token operator">%</span> m<span class="token punctuation">.</span>ObjVal<span class="token punctuation">)</span></pre></td></tr></table></figure>
       <div class="tags">
-          <a href="/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/" rel="tag"><i class="ic i-tag"></i> 编程技巧</a>
           <a href="/tags/python/" rel="tag"><i class="ic i-tag"></i> python</a>
+          <a href="/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/" rel="tag"><i class="ic i-tag"></i> 编程技巧</a>
       </div>
   </div>
 
@@ -216,7 +216,7 @@ python+gurobi应用 - python |
     <div class="item left">
       
 
-  <a href="/2023/03/02/code/python_jupyter/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;jj2DQqdw&#x2F;6833939bly1gicis3attqj20zk0m8k7l.jpg" title="修改Jupyter Notebook默认工作路径">
+  <a href="/2023/03/02/code/python_jupyter/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;W4NmkqyM&#x2F;6833939bly1gipexbei4hj20zk0m8npd.jpg" title="修改Jupyter Notebook默认工作路径">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> python</span>
   <h3>修改Jupyter Notebook默认工作路径</h3>
@@ -224,6 +224,14 @@ python+gurobi应用 - python |
 
     </div>
     <div class="item right">
+      
+
+  <a href="/2023/03/03/code/python_json/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;3R6fJwWg&#x2F;6833939bly1giciusoyjnj219g0u0x56.jpg" title="python读取及保存json文件">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> python</span>
+  <h3>python读取及保存json文件</h3>
+  </a>
+
     </div>
 </div>
 
@@ -244,7 +252,7 @@ python+gurobi应用 - python |
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
-          <li><a href="/2023/02/06/code/python/" rel="bookmark" title="Python技巧">Python技巧</a></li><li><a href="/2023/03/01/code/python_qt_install/" rel="bookmark" title="Python运行pyside2报错问题解决">Python运行pyside2报错问题解决</a></li><li><a href="/2023/03/01/code/python_test/" rel="bookmark" title="Python test in xxx问题">Python test in xxx问题</a></li><li class="active"><a href="/2023/03/02/code/python_gurobi/" rel="bookmark" title="python+gurobi应用">python+gurobi应用</a></li><li><a href="/2023/03/02/code/python_jupyter/" rel="bookmark" title="修改Jupyter Notebook默认工作路径">修改Jupyter Notebook默认工作路径</a></li><li><a href="/2023/03/02/code/python_numba/" rel="bookmark" title="使用numba对python进行加速">使用numba对python进行加速</a></li><li><a href="/2023/03/02/code/python_pip/" rel="bookmark" title="修改pip路径">修改pip路径</a></li><li><a href="/2023/03/02/code/python_try_except/" rel="bookmark" title="python下的try-except处理异常">python下的try-except处理异常</a></li>
+          <li><a href="/2023/02/06/code/python/" rel="bookmark" title="Python技巧">Python技巧</a></li><li><a href="/2023/03/01/code/python_qt_install/" rel="bookmark" title="Python运行pyside2报错问题解决">Python运行pyside2报错问题解决</a></li><li><a href="/2023/03/01/code/python_test/" rel="bookmark" title="Python test in xxx问题">Python test in xxx问题</a></li><li class="active"><a href="/2023/03/02/code/python_gurobi/" rel="bookmark" title="python+gurobi应用">python+gurobi应用</a></li><li><a href="/2023/03/02/code/python_jupyter/" rel="bookmark" title="修改Jupyter Notebook默认工作路径">修改Jupyter Notebook默认工作路径</a></li><li><a href="/2023/03/02/code/python_numba/" rel="bookmark" title="使用numba对python进行加速">使用numba对python进行加速</a></li><li><a href="/2023/03/02/code/python_pip/" rel="bookmark" title="修改pip路径">修改pip路径</a></li><li><a href="/2023/03/02/code/python_try_except/" rel="bookmark" title="python下的try-except处理异常">python下的try-except处理异常</a></li><li><a href="/2023/03/03/code/python_json/" rel="bookmark" title="python读取及保存json文件">python读取及保存json文件</a></li><li><a href="/2023/03/12/code/python_class_inherit/" rel="bookmark" title="python类的继承">python类的继承</a></li><li><a href="/2023/03/12/code/python_enumerate/" rel="bookmark" title="python使用enumerate()给列表添加序号">python使用enumerate()给列表添加序号</a></li>
         </ul>
       </div>
       <div class="overview panel" data-title="站点概览">
@@ -258,7 +266,7 @@ python+gurobi应用 - python |
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">29</span>
+        <span class="count">34</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -333,10 +341,12 @@ python+gurobi应用 - python |
 
   <ul id="quick">
     <li class="prev pjax">
+        <a href="/2023/03/02/code/python_jupyter/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
+        <a href="/2023/03/03/code/python_json/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -358,50 +368,20 @@ python+gurobi应用 - python |
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
+<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
 </div>
 
-    <span><a href="/2023/03/02/code/python_gurobi/" title="python+gurobi应用">python+gurobi应用</a></span>
+    <span><a href="/2022/11/21/math/svd/" title="奇异值分解（SVD）">奇异值分解（SVD）</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/latex/" title="分类于 latex">latex</a>
+<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
 </div>
 
-    <span><a href="/2023/01/20/latex/latex/" title="Vscode+TexLive+Latex workshop安装">Vscode+TexLive+Latex workshop安装</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
-</div>
-
-    <span><a href="/2022/12/23/optimal/signal_objective_optimization/" title="单目标搜索算法汇总">单目标搜索算法汇总</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/food/" title="分类于 烹饪技巧">烹饪技巧</a>
-</div>
-
-    <span><a href="/2023/01/23/food/salt/" title="盐的使用">盐的使用</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
-</div>
-
-    <span><a href="/2022/11/06/blog/hexo/" title="Github+Hexo+shoka主题搭建个人博客">Github+Hexo+shoka主题搭建个人博客</a></span>
+    <span><a href="/2022/11/24/math/conv/" title="一般情况下的椭圆">一般情况下的椭圆</a></span>
   </li>
 
       
@@ -411,7 +391,37 @@ python+gurobi应用 - python |
 <a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2023/03/01/code/python_qt_install/" title="Python运行pyside2报错问题解决">Python运行pyside2报错问题解决</a></span>
+    <span><a href="/2023/03/01/code/python_test/" title="Python test in xxx问题">Python test in xxx问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/02/code/python_numba/" title="使用numba对python进行加速">使用numba对python进行加速</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/12/code/python_class_inherit/" title="python类的继承">python类的继承</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/else/" title="分类于 其他">其他</a>
+</div>
+
+    <span><a href="/2023/01/22/else/wish_2023/" title="2023年的一些小目标">2023年的一些小目标</a></span>
   </li>
 
       
@@ -438,20 +448,20 @@ python+gurobi应用 - python |
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
 </div>
 
-    <span><a href="/2023/01/02/blog/hexo_image/" title="Hexo图片显示异常问题">Hexo图片显示异常问题</a></span>
+    <span><a href="/2022/11/28/math/covariance/" title="数学期望、方差和协方差">数学期望、方差和协方差</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
+<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
 </div>
 
-    <span><a href="/2023/03/02/code/python_try_except/" title="python下的try-except处理异常">python下的try-except处理异常</a></span>
+    <span><a href="/2022/12/23/optimal/signal_objective_optimization/" title="单目标搜索算法汇总">单目标搜索算法汇总</a></span>
   </li>
 
   </ul>
@@ -476,13 +486,13 @@ python+gurobi应用 - python |
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">56k 字</span>
+    <span title="站点总字数">66k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">51 分钟</span>
+    <span title="站点阅读时长">1:01</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
