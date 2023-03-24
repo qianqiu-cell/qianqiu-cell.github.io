@@ -1,0 +1,562 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Welcome to my tiny world" href="http://qianqiu-cell.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Welcome to my tiny world" href="http://qianqiu-cell.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Welcome to my tiny world" href="http://qianqiu-cell.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="编程技巧,python" />
+
+
+<link rel="canonical" href="http://qianqiu-cell.github.io/2023/03/23/code/python/python_type_hints/">
+
+
+
+  <title>
+python类型提示 - python |
+唯爱ぺ灬babyル = Welcome to my tiny world = 如果可以，我想你一直这样温柔下去ʕ ᵔᴥᵔ ʔ</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">python类型提示
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2023-03-23 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-03-23T00:00:00+08:00">2023-03-23</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>2.6k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>2 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">唯爱ぺ灬babyル</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://i.postimg.cc/pr0nf9bS/6833939bly1giclxp31goj20zk0m8qv5.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/1zDxfTLg/6833939bly1giph4baakhj20zk0m8h5q.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/02tn8Q3r/6833939bly1giclga70tsj20zk0m84mr.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/3R6fJwWg/6833939bly1giciusoyjnj219g0u0x56.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/nVNVNYVL/6833939bly1giciub8ja1j20zk0m81ky.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/BnYVwNsY/6833939bly1giclfdu6exj20zk0m87hw.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/python/" itemprop="item" rel="index" title="分类于 python"><span itemprop="name">python</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://qianqiu-cell.github.io/2023/03/23/code/python/python_type_hints/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="Darling F">
+    <meta itemprop="description" content="如果可以，我想你一直这样温柔下去ʕ ᵔᴥᵔ ʔ, 小樊&小小樊的学习笔记🌸">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Welcome to my tiny world">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>参考链接：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMzODAxNjQxL2FydGljbGUvZGV0YWlscy8xMTk3OTMxMDQ=">https://blog.csdn.net/qq_33801641/article/details/119793104</span></p>
+<h1 id="一-python类型提示概述"><a class="markdownIt-Anchor" href="#一-python类型提示概述">#</a> 一、python 类型提示概述</h1>
+<p>   <code>python</code>  是一种<mark>动态类型语言</mark>，这意味着我们在编写代码的时候更为自由，运行时不需要指定变量类型。但是与此同时 <code>IDE</code>  无法像<mark>静态类型语言</mark>那样分析代码，进而反馈响应的提示。如在下面的代码中</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">def</span> <span class="token function">split_str</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    strs <span class="token operator">=</span> s<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token keyword">return</span> strs</pre></td></tr></table></figure><p>  由于不知道参数 <code>s</code>  是什么类型，所以当在 <code>pycharm</code>  中输入<span class="kbd red"> s.</span> 的时候不会出现 <code>split</code>  的语法提示。可以使用如下的程序进行类型提示，从而在程序编写时可 <code>IDE</code>  可以预设输入参数和输出参数类型</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">def</span> <span class="token function">split_str2</span><span class="token punctuation">(</span>s<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">]</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    strs <span class="token operator">=</span> s<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">","</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token keyword">return</span> strs</pre></td></tr></table></figure><p>  如果传入的参数类型错误，并不影响程序的运行，但是 <code>IDE</code>  会有 <code>warning</code> ，如下图所示，故类型提示更像是一个规范约束，并不是一个语法限制<br>
+<img data-src="/images/code/python/python_type_hints/1.1.png" alt=""></p>
+<h1 id="二-常用类型提示"><a class="markdownIt-Anchor" href="#二-常用类型提示">#</a> 二、常用类型提示</h1>
+<ul>
+<li>int, long, float: 整形，长整型，浮点型；</li>
+<li>bool, str: 布尔型，字符串类型；</li>
+<li>List, Tuple, Dict, Set: 列表，元组，字典，集合；</li>
+<li>Iterable, Iterator: 可迭代类型，迭代器类型；</li>
+<li>Generator: 生成器类型；<br>
+  前两行小写的不需要调用库即可使用，后三行都需要通过如 <code>from typing import List</code>  格式进行模块的导入。<br>
+  如下程序是较为复杂的类型提示方式</li>
+</ul>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">from</span> typing <span class="token keyword">import</span> Tuple<span class="token punctuation">,</span> List<span class="token punctuation">,</span> Dict</pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token comment"># 输入第一个参数是 int 类型的数据，第二个参数是 string，第三个是 float，第四个是 bool 或 str；返回一个 Tuple 类型的数据，第一个元素是 List，第二个元素是 Tuple，第三个元素是 Dict，第四个元素可以是字符串或布尔</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token keyword">def</span> <span class="token function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> string<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> f<span class="token punctuation">:</span> <span class="token builtin">float</span><span class="token punctuation">,</span> b<span class="token punctuation">:</span> <span class="token builtin">bool</span> <span class="token keyword">or</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Tuple<span class="token punctuation">[</span>List<span class="token punctuation">,</span> Tuple<span class="token punctuation">,</span> Dict<span class="token punctuation">,</span> <span class="token builtin">str</span> <span class="token keyword">or</span> <span class="token builtin">bool</span><span class="token punctuation">]</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    list1 <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    tup <span class="token operator">=</span> <span class="token punctuation">(</span>string<span class="token punctuation">,</span> string<span class="token punctuation">,</span> string<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    d <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">"a"</span><span class="token punctuation">:</span> f<span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    bl <span class="token operator">=</span> b</pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token keyword">return</span> list1<span class="token punctuation">,</span> tup<span class="token punctuation">,</span> d<span class="token punctuation">,</span> bl</pre></td></tr><tr><td data-num="11"></td><td><pre></pre></td></tr><tr><td data-num="12"></td><td><pre></pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span>add<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"2"</span><span class="token punctuation">,</span> <span class="token number">123</span><span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="14"></td><td><pre></pre></td></tr><tr><td data-num="15"></td><td><pre><span class="token comment"># 输出结果</span></pre></td></tr><tr><td data-num="16"></td><td><pre><span class="token comment"># ([0], ('2', '2', '2'), &#123;'a': 123&#125;, True)</span></pre></td></tr></table></figure><p>⚠️⚠️⚠️在使用类型提示时一些需要注意的地方：<br>
+（1）指定类型时可以使用 <code>list</code> 、 <code>set</code> 、 <code>dict</code> 、 <code>tuple</code> ，但是不能像上述例子中一样指定里面元素的数据类型；<br>
+（2） <code>List[T]</code>  和 <code>Set[T]</code>  只能传入一个参数类型，传入多个会报错，但是 <code>Tuple</code>  可以传入多个类型；<br>
+（3）在使用 <code>Tuple[T]</code>  的时候，元素的数量必须和类型提示的元素数量一致，如果想要像 <code>List[T]</code>  一样指定一个类型，可以对所有元素生效，则需要在类型后添加 <code>...</code>  即可，如 <code>Tuple[int, ...]</code> 。</p>
+<h1 id="三-类型别名"><a class="markdownIt-Anchor" href="#三-类型别名">#</a> 三、类型别名</h1>
+<p>  可以将复杂的类型赋予一个简单的别名，如下所示</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># 别名</span></pre></td></tr><tr><td data-num="2"></td><td><pre>vector <span class="token operator">=</span> List<span class="token punctuation">[</span><span class="token builtin">float</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre>var<span class="token punctuation">:</span> vector <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1.1</span><span class="token punctuation">,</span> <span class="token number">2.2</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token comment"># 等价写法</span></pre></td></tr><tr><td data-num="6"></td><td><pre>var<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">float</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1.1</span><span class="token punctuation">,</span> <span class="token number">2.2</span><span class="token punctuation">]</span></pre></td></tr></table></figure><h1 id="四-自定义新类型"><a class="markdownIt-Anchor" href="#四-自定义新类型">#</a> 四、自定义新类型</h1>
+<p>  可以使用 <code>NewType(name, tp)</code>  创建一个新类型，这个函数返回其原本的值，静态类型检查器会将新类型看作是原始类型的一个子类， <code>tp</code>  就是原始类型，如下程序所示</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">from</span> typing <span class="token keyword">import</span> NewType</pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre>UserId <span class="token operator">=</span> NewType<span class="token punctuation">(</span><span class="token string">'UserId'</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token keyword">def</span> <span class="token function">name_by_id</span><span class="token punctuation">(</span>user_id<span class="token punctuation">:</span> UserId<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    <span class="token keyword">print</span><span class="token punctuation">(</span>user_id<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="8"></td><td><pre></pre></td></tr><tr><td data-num="9"></td><td><pre></pre></td></tr><tr><td data-num="10"></td><td><pre>name_by_id<span class="token punctuation">(</span><span class="token number">42</span><span class="token punctuation">)</span>  <span class="token comment"># Fails type check</span></pre></td></tr><tr><td data-num="11"></td><td><pre>name_by_id<span class="token punctuation">(</span>UserId<span class="token punctuation">(</span><span class="token number">42</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># OK</span></pre></td></tr><tr><td data-num="12"></td><td><pre></pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>UserId<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="14"></td><td><pre></pre></td></tr><tr><td data-num="15"></td><td><pre><span class="token comment"># 输出结果</span></pre></td></tr><tr><td data-num="16"></td><td><pre><span class="token comment"># 42</span></pre></td></tr><tr><td data-num="17"></td><td><pre><span class="token comment"># 42</span></pre></td></tr><tr><td data-num="18"></td><td><pre><span class="token comment"># &lt;class 'int'></span></pre></td></tr></table></figure><h1 id="六-typevar类型"><a class="markdownIt-Anchor" href="#六-typevar类型">#</a> 六、TypeVar 类型</h1>
+<p>   <code>TypeVar</code>  类型的源码解释（部分）如下所示</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">class</span> <span class="token class-name">TypeVar</span><span class="token punctuation">(</span>_Final<span class="token punctuation">,</span> _Immutable<span class="token punctuation">,</span> _root<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token string">""</span>"Type variable<span class="token punctuation">.</span></pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre>    Usage<span class="token punctuation">:</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="5"></td><td><pre></pre></td></tr><tr><td data-num="6"></td><td><pre>      T <span class="token operator">=</span> TypeVar<span class="token punctuation">(</span><span class="token string">'T'</span><span class="token punctuation">)</span>  <span class="token comment"># Can be anything</span></pre></td></tr><tr><td data-num="7"></td><td><pre>      A <span class="token operator">=</span> TypeVar<span class="token punctuation">(</span><span class="token string">'A'</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">,</span> <span class="token builtin">bytes</span><span class="token punctuation">)</span>  <span class="token comment"># Must be str or bytes</span></pre></td></tr></table></figure><p>  使用方法如下所示</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># 可以是任意类型</span></pre></td></tr><tr><td data-num="2"></td><td><pre>T <span class="token operator">=</span> TypeVar<span class="token punctuation">(</span><span class="token string">'T'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token keyword">def</span> <span class="token function">test</span><span class="token punctuation">(</span>name<span class="token punctuation">:</span> T<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> T<span class="token punctuation">:</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token keyword">print</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    <span class="token keyword">return</span> name</pre></td></tr><tr><td data-num="8"></td><td><pre></pre></td></tr><tr><td data-num="9"></td><td><pre></pre></td></tr><tr><td data-num="10"></td><td><pre>test<span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="11"></td><td><pre>test<span class="token punctuation">(</span><span class="token string">"aa"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="12"></td><td><pre></pre></td></tr><tr><td data-num="13"></td><td><pre></pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token comment"># 输出结果</span></pre></td></tr><tr><td data-num="15"></td><td><pre><span class="token comment"># 11</span></pre></td></tr><tr><td data-num="16"></td><td><pre><span class="token comment"># aa</span></pre></td></tr></table></figure><figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># 可以是 int，也可以是 str 类型</span></pre></td></tr><tr><td data-num="2"></td><td><pre>AA <span class="token operator">=</span> TypeVar<span class="token punctuation">(</span><span class="token string">'AA'</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre>num1<span class="token punctuation">:</span> AA <span class="token operator">=</span> <span class="token number">1</span></pre></td></tr><tr><td data-num="5"></td><td><pre>num2<span class="token punctuation">:</span> AA <span class="token operator">=</span> <span class="token string">"123"</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span>num1<span class="token punctuation">,</span> num2<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="7"></td><td><pre></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token comment"># 输出结果</span></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token comment"># 1 123</span></pre></td></tr></table></figure><h1 id="七-任意类型any-type"><a class="markdownIt-Anchor" href="#七-任意类型any-type">#</a> 七、任意类型（Any Type）</h1>
+<p>  一种特殊的写法是 <code>Any</code> ，静态类型检查器会将每种类型都是为与 Any 兼容，将 Any 是为与每种类型兼容，使用方法如下</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">from</span> typing <span class="token keyword">import</span> Any</pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">def</span> <span class="token function">foo</span><span class="token punctuation">(</span>item<span class="token punctuation">:</span> Any<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token comment"># Typechecks; 'item' 可以是任意类型</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token keyword">print</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span></pre></td></tr></table></figure><figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">def</span> <span class="token function">legacy_parser</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token keyword">return</span> data</pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token comment"># 上述写法等价于下述写法</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token comment"># 所有没有返回类型或参数类型的函数将隐式默认使用 Any</span></pre></td></tr><tr><td data-num="7"></td><td><pre></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token keyword">def</span> <span class="token function">legacy_parser</span><span class="token punctuation">(</span>text<span class="token punctuation">:</span> Any<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Any<span class="token punctuation">:</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token keyword">return</span> data</pre></td></tr></table></figure><h1 id="八-联合类型union"><a class="markdownIt-Anchor" href="#八-联合类型union">#</a> 八、联合类型（Union）</h1>
+<p>  联合类型， <code>Union[int, str]</code>  表示既可以是 <code>int</code> ，也可以是 <code>str</code> ，程序解释如下</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token builtin">vars</span><span class="token punctuation">:</span> Union<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token comment"># 等价于</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token builtin">vars</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token builtin">int</span> <span class="token keyword">or</span> <span class="token builtin">str</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token builtin">vars</span><span class="token punctuation">:</span> Union<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token comment"># 等价于</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token builtin">vars</span><span class="token punctuation">:</span> <span class="token builtin">int</span></pre></td></tr></table></figure><h1 id="九-参数可none类型optional"><a class="markdownIt-Anchor" href="#九-参数可none类型optional">#</a> 九、参数可 None 类型（Optional）</h1>
+<p>  使用 <code>Optional</code>  是为了让 <code>IDE</code>  识别到该参数有一个类型提示，可以传指定的类型和 None，即参数是可选单非必要的， <code>Optional[int]</code>  等价于 <code>Union[int, None]</code> ，使用案例如下</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">def</span> <span class="token function">foo_func</span><span class="token punctuation">(</span>arg<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token keyword">print</span><span class="token punctuation">(</span>arg<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre>foo_func<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="6"></td><td><pre>foo_func<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="7"></td><td><pre></pre></td></tr><tr><td data-num="8"></td><td><pre></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token comment"># 输出结果</span></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token comment"># None</span></pre></td></tr><tr><td data-num="11"></td><td><pre><span class="token comment"># 1</span></pre></td></tr></table></figure>
+      <div class="tags">
+          <a href="/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/" rel="tag"><i class="ic i-tag"></i> 编程技巧</a>
+          <a href="/tags/python/" rel="tag"><i class="ic i-tag"></i> python</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2023-03-23 22:26:10" itemprop="dateModified" datetime="2023-03-23T22:26:10+08:00">2023-03-23</time>
+  </span>
+  <span id="2023/03/23/code/python/python_type_hints/" class="item leancloud_visitors" data-flag-title="python类型提示" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/03/16/optimal/SPEA/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;PxSGThkH&#x2F;6833939bly1gicliwyw55j20zk0m8hdt.jpg" title="SPEAI-II">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 最优化</span>
+  <h3>SPEAI-II</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2023/03/23/code/python/python_problem/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;MGp97BQ7&#x2F;6833939bly1gicitspjpbj20zk0m81ky.jpg" title="python一些报错的处理">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> python</span>
+  <h3>python一些报错的处理</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-python%E7%B1%BB%E5%9E%8B%E6%8F%90%E7%A4%BA%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text"> 一、python 类型提示概述</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C-%E5%B8%B8%E7%94%A8%E7%B1%BB%E5%9E%8B%E6%8F%90%E7%A4%BA"><span class="toc-number">2.</span> <span class="toc-text"> 二、常用类型提示</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89-%E7%B1%BB%E5%9E%8B%E5%88%AB%E5%90%8D"><span class="toc-number">3.</span> <span class="toc-text"> 三、类型别名</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%96%B0%E7%B1%BB%E5%9E%8B"><span class="toc-number">4.</span> <span class="toc-text"> 四、自定义新类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD-typevar%E7%B1%BB%E5%9E%8B"><span class="toc-number">5.</span> <span class="toc-text"> 六、TypeVar 类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%83-%E4%BB%BB%E6%84%8F%E7%B1%BB%E5%9E%8Bany-type"><span class="toc-number">6.</span> <span class="toc-text"> 七、任意类型（Any Type）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AB-%E8%81%94%E5%90%88%E7%B1%BB%E5%9E%8Bunion"><span class="toc-number">7.</span> <span class="toc-text"> 八、联合类型（Union）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B9%9D-%E5%8F%82%E6%95%B0%E5%8F%AFnone%E7%B1%BB%E5%9E%8Boptional"><span class="toc-number">8.</span> <span class="toc-text"> 九、参数可 None 类型（Optional）</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2023/02/06/code/python/python_array_asarray/" rel="bookmark" title="np.array和np.asarray区别">np.array和np.asarray区别</a></li><li><a href="/2023/02/06/code/python/python_bitwise_operators/" rel="bookmark" title="Python按位运算符">Python按位运算符</a></li><li><a href="/2023/02/06/code/python/python_float/" rel="bookmark" title="Python浮点数运算不精确问题">Python浮点数运算不精确问题</a></li><li><a href="/2023/02/06/code/python/python_multiply/" rel="bookmark" title="python字符串、列表、元组乘法">python字符串、列表、元组乘法</a></li><li><a href="/2023/02/06/code/python/python_note/" rel="bookmark" title="Pycharm中的特殊注释">Pycharm中的特殊注释</a></li><li><a href="/2023/02/06/code/python/python_special_func/" rel="bookmark" title="特定功能函数">特定功能函数</a></li><li><a href="/2023/03/01/code/python/python_qt_install/" rel="bookmark" title="Python运行pyside2报错问题解决">Python运行pyside2报错问题解决</a></li><li><a href="/2023/03/01/code/python/python_test/" rel="bookmark" title="Python test in xxx问题">Python test in xxx问题</a></li><li><a href="/2023/03/02/code/python/python_gurobi/" rel="bookmark" title="python+gurobi应用">python+gurobi应用</a></li><li><a href="/2023/03/02/code/python/python_jupyter/" rel="bookmark" title="修改Jupyter Notebook默认工作路径">修改Jupyter Notebook默认工作路径</a></li><li><a href="/2023/03/02/code/python/python_numba/" rel="bookmark" title="使用numba对python进行加速">使用numba对python进行加速</a></li><li><a href="/2023/03/02/code/python/python_pip/" rel="bookmark" title="修改pip路径">修改pip路径</a></li><li><a href="/2023/03/02/code/python/python_try_except/" rel="bookmark" title="python下的try-except处理异常">python下的try-except处理异常</a></li><li><a href="/2023/03/03/code/python/python_json/" rel="bookmark" title="python读取及保存json文件">python读取及保存json文件</a></li><li><a href="/2023/03/12/code/python/python_class_inherit/" rel="bookmark" title="python类的继承">python类的继承</a></li><li><a href="/2023/03/12/code/python/python_enumerate/" rel="bookmark" title="python使用enumerate()给列表添加序号">python使用enumerate()给列表添加序号</a></li><li><a href="/2023/03/23/code/python/python_problem/" rel="bookmark" title="python一些报错的处理">python一些报错的处理</a></li><li class="active"><a href="/2023/03/23/code/python/python_type_hints/" rel="bookmark" title="python类型提示">python类型提示</a></li><li><a href="/2023/03/24/code/python/python_jMetal/" rel="bookmark" title="python+jMetal应用">python+jMetal应用</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Darling F"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">Darling F</p>
+  <div class="description" itemprop="description">小樊&小小樊的学习笔记🌸</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">46</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">12</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">19</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3FpYW5xaXUtY2VsbA==" title="https:&#x2F;&#x2F;github.com&#x2F;qianqiu-cell"><i class="ic i-github"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjI4MzI1Njc4NTFAcXEuY29t" title="mailto:2832567851@qq.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2023/03/16/optimal/SPEA/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2023/03/23/code/python/python_problem/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/else/" title="分类于 其他">其他</a>
+</div>
+
+    <span><a href="/2023/01/22/else/wish_2023/" title="2023年的一些小目标">2023年的一些小目标</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
+</div>
+
+    <span><a href="/2022/11/25/math/derivative_of_the_inverse_matrix/" title="逆矩阵的求导">逆矩阵的求导</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+</div>
+
+    <span><a href="/2022/11/07/blog/hexo_style/" title="shoka格式">shoka格式</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/food/" title="分类于 烹饪技巧">烹饪技巧</a>
+</div>
+
+    <span><a href="/2023/01/23/food/salt/" title="盐的使用">盐的使用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/01/code/python/python_qt_install/" title="Python运行pyside2报错问题解决">Python运行pyside2报错问题解决</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
+</div>
+
+    <span><a href="/2022/11/21/math/svd/" title="奇异值分解（SVD）">奇异值分解（SVD）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
+</div>
+
+    <span><a href="/2023/03/13/optimal/NSGA/" title="从NSGA到NSGA-III">从NSGA到NSGA-III</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2022/11/01/website_code/" title="一些奇奇怪怪的东西">一些奇奇怪怪的东西</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/02/06/code/python/python_float/" title="Python浮点数运算不精确问题">Python浮点数运算不精确问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/12/code/python/python_enumerate/" title="python使用enumerate()给列表添加序号">python使用enumerate()给列表添加序号</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Darling F @ 唯爱ぺ灬babyル</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">106k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:36</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2023/03/23/code/python/python_type_hints/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i> 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

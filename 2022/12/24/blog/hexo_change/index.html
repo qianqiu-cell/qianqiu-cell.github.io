@@ -117,12 +117,12 @@ Hexo文件迁移 - 博客搭建 |
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://i.postimg.cc/7P50gVQP/6833939bly1giclgi503lj20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/59gVBhjL/6833939bly1gipeybxm1pj20zk0m8niv.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/zv3f106d/6833939bly1gicm0n457cj20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/02tn8Q3r/6833939bly1giclga70tsj20zk0m84mr.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/k5J4MJtY/6833939bly1gipew28b65j20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/W4NmkqyM/6833939bly1gipexbei4hj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/Pr6hbWLy/6833939bly1gicitht3xtj20zk0m8k5v.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/VkkCkWMc/6833939bly1giclize41wj20zk0m87gk.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/sfqvPCt1/6833939bly1gipewf5l51j20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/7ZxD0BYf/6833939bly1gipetfk5zwj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/1tkd9zYL/6833939bly1giclx29mstj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/yNR2gc4L/6833939bly1giclhtuo6nj20zk0m8ttm.jpg"></li>
         </ul>
       </div>
     </header>
@@ -171,22 +171,22 @@ Hexo文件迁移 - 博客搭建 |
     <p>参考文章：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2NjY3MTcwL2FydGljbGUvZGV0YWlscy8xMTgxNjM1NjM=">https://blog.csdn.net/qq_36667170/article/details/118163563</span></p>
 <h1 id="一-旧电脑文件备份"><a class="markdownIt-Anchor" href="#一-旧电脑文件备份">#</a> 一、旧电脑文件备份</h1>
 <p>将 <code>node_modules</code>  文件夹删除后备份其余所有文件<br>
-<img data-src="/images/hexo_change/1.1.png" alt=""></p>
+<img data-src="/images/blog/hexo_change/1.1.png" alt=""></p>
 <h1 id="二-新电脑准备工作"><a class="markdownIt-Anchor" href="#二-新电脑准备工作">#</a> 二、新电脑准备工作</h1>
 <h2 id="21-git"><a class="markdownIt-Anchor" href="#21-git">#</a> 2.1 git</h2>
 <p>（1）首先下载并安装 <code>git</code> <br>
  参考链接：<span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8xMDMzMjUzODE=">https://zhuanlan.zhihu.com/p/103325381</span><br>
 （2）在命令行中设置用户，注意这个不是登录，而是告诉远程仓库是谁上传的</p>
-<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>git config --global user.name &quot;你的名字&quot;（注意前边是 “- -global”，有两个横线）</pre></td></tr><tr><td data-num="2"></td><td><pre>git config --global user.email &quot;你的邮箱&quot;</pre></td></tr></table></figure><p><img data-src="/images/hexo_change/2.1.png" alt=""><br>
+<figure class="highlight raw"><figcaption data-lang=""></figcaption><table><tr><td data-num="1"></td><td><pre>git config --global user.name &quot;你的名字&quot;（注意前边是 “- -global”，有两个横线）</pre></td></tr><tr><td data-num="2"></td><td><pre>git config --global user.email &quot;你的邮箱&quot;</pre></td></tr></table></figure><p><img data-src="/images/blog/hexo_change/2.1.png" alt=""><br>
 （3）配置 SSH<br>
  在命令行中运行 ssh 命令，查看本机是否安装 ssh，出现下图则证明已安装<br>
-<img data-src="/images/hexo_change/2.2.png" alt=""><br>
+<img data-src="/images/blog/hexo_change/2.2.png" alt=""><br>
 输入 <code>ssh-keygen -t .rsa</code>  命令，表示我们指定 <code>RSA</code>  算法生成密钥，然后敲四次回车键，之后就会在<em> C:/Users/ 用户 /.ssh</em> 生成两个文件，分别为<mark>密钥 id rsa</mark> 和<mark>公钥 id_rsa.pub</mark>。复制<mark>公钥 id_rsa.pub</mark> 文件中的内容。<br>
 打开 GitHub，以此点击 <code>Settings→SSH and GPG keys→New SSH key</code>  如下图所示<br>
-<img data-src="/images/hexo_change/2.3.png" alt=""><br>
+<img data-src="/images/blog/hexo_change/2.3.png" alt=""><br>
 将复制的<mark>公钥 id_rsa.pub</mark> 的内容粘贴到 <code>key</code>  内，再点击 <code>Add SSH key</code> <br>
  在命令行中运行 <code>ssh -T git@github.com</code>  命令进行检验，出现下图所示情况，则证明绑定成功。<br>
-<img data-src="/images/hexo_change/2.4.png" alt=""></p>
+<img data-src="/images/blog/hexo_change/2.4.png" alt=""></p>
 <h2 id="22-nodejs"><a class="markdownIt-Anchor" href="#22-nodejs">#</a> 2.2 Node.js</h2>
 <p>（1）首先下载安装 <code>Node.js</code> <br>
  参考链接：<span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8xMDU3MTUyMjQ=">https://zhuanlan.zhihu.com/p/105715224</span><br>
@@ -211,7 +211,7 @@ Hexo文件迁移 - 博客搭建 |
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2023-01-02 19:50:32" itemprop="dateModified" datetime="2023-01-02T19:50:32+08:00">2023-01-02</time>
+    <time title="修改时间：2023-03-23 15:04:02" itemprop="dateModified" datetime="2023-03-23T15:04:02+08:00">2023-03-23</time>
   </span>
   <span id="2022/12/24/blog/hexo_change/" class="item leancloud_visitors" data-flag-title="Hexo文件迁移" title="阅读次数">
       <span class="icon">
@@ -234,7 +234,7 @@ Hexo文件迁移 - 博客搭建 |
     <div class="item left">
       
 
-  <a href="/2022/12/23/optimal/signal_objective_optimization/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;9fLZTKmF&#x2F;6833939bly1gicis081o9j20zk0m8dmr.jpg" title="单目标搜索算法汇总">
+  <a href="/2022/12/23/optimal/signal_objective_optimization/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;D0jQ6p3n&#x2F;6833939bly1gipeuv80yoj20zk0m8kjl.jpg" title="单目标搜索算法汇总">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 最优化</span>
   <h3>单目标搜索算法汇总</h3>
@@ -244,7 +244,7 @@ Hexo文件迁移 - 博客搭建 |
     <div class="item right">
       
 
-  <a href="/2023/01/02/office/office/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;63XRtJfM&#x2F;6833939bly1giclxxcb6rj20zk0m8b29.jpg" title="Office技巧">
+  <a href="/2023/01/02/office/office/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;ncL5K6fj&#x2F;6833939bly1giclhfehz7j20zk0m8u0x.jpg" title="Office技巧">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> office技巧</span>
   <h3>Office技巧</h3>
@@ -284,7 +284,7 @@ Hexo文件迁移 - 博客搭建 |
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">34</span>
+        <span class="count">46</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -296,7 +296,7 @@ Hexo文件迁移 - 博客搭建 |
     </div>
     <div class="item tags">
       <a href="/tags/">
-        <span class="count">17</span>
+        <span class="count">19</span>
         <span class="name">标签</span>
       </a>
     </div>
@@ -389,7 +389,17 @@ Hexo文件迁移 - 博客搭建 |
 <a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2023/03/02/code/python_pip/" title="修改pip路径">修改pip路径</a></span>
+    <span><a href="/2023/03/23/code/python/python_type_hints/" title="python类型提示">python类型提示</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
+</div>
+
+    <span><a href="/2022/11/21/math/svd/" title="奇异值分解（SVD）">奇异值分解（SVD）</a></span>
   </li>
 
       
@@ -406,10 +416,10 @@ Hexo文件迁移 - 博客搭建 |
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/office/" title="分类于 office技巧">office技巧</a>
+<a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2023/01/02/office/office/" title="Office技巧">Office技巧</a></span>
+    <span><a href="/2023/03/03/code/python/python_json/" title="python读取及保存json文件">python读取及保存json文件</a></span>
   </li>
 
       
@@ -419,37 +429,7 @@ Hexo文件迁移 - 博客搭建 |
 <a href="/categories/math/" title="分类于 数学基础">数学基础</a>
 </div>
 
-    <span><a href="/2022/11/28/math/covariance/" title="数学期望、方差和协方差">数学期望、方差和协方差</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
-</div>
-
-    <span><a href="/2023/03/12/code/python_class_inherit/" title="python类的继承">python类的继承</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
-</div>
-
-    <span><a href="/2023/03/12/code/python_enumerate/" title="python使用enumerate()给列表添加序号">python使用enumerate()给列表添加序号</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
-</div>
-
-    <span><a href="/2022/11/06/blog/hexo/" title="Github+Hexo+shoka主题搭建个人博客">Github+Hexo+shoka主题搭建个人博客</a></span>
+    <span><a href="/2022/11/24/math/conv/" title="一般情况下的椭圆">一般情况下的椭圆</a></span>
   </li>
 
       
@@ -466,20 +446,40 @@ Hexo文件迁移 - 博客搭建 |
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
+<a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2022/11/25/math/derivative_of_the_inverse_matrix/" title="逆矩阵的求导">逆矩阵的求导</a></span>
+    <span><a href="/2023/03/12/code/python/python_class_inherit/" title="python类的继承">python类的继承</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/else/" title="分类于 其他">其他</a>
+<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
 </div>
 
-    <span><a href="/2023/01/22/else/wish_2023/" title="2023年的一些小目标">2023年的一些小目标</a></span>
+    <span><a href="/2023/03/15/optimal/MOEA_D/" title="MODE&#x2F;D算法">MODE/D算法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+</div>
+
+    <span><a href="/2022/12/24/blog/hexo_change/" title="Hexo文件迁移">Hexo文件迁移</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/02/06/code/python/python_array_asarray/" title="np.array和np.asarray区别">np.array和np.asarray区别</a></span>
   </li>
 
   </ul>
@@ -504,13 +504,13 @@ Hexo文件迁移 - 博客搭建 |
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">66k 字</span>
+    <span title="站点总字数">106k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:01</span>
+    <span title="站点阅读时长">1:36</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

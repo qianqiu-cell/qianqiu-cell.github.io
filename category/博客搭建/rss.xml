@@ -9,21 +9,23 @@
         <lastBuildDate>Thu, 19 Jan 2023 00:00:00 +0800</lastBuildDate>
         <category>Windows系统</category>
         <category>博客搭建</category>
-        <category>python</category>
-        <category>编程技巧</category>
-        <category>C++</category>
-        <category>Qt</category>
-        <category>界面开发</category>
         <category>控制工程</category>
         <category>其他</category>
         <category>一些小目标</category>
-        <category>硬件开发</category>
         <category>烹饪技巧</category>
+        <category>硬件开发</category>
         <category>latex技巧</category>
         <category>论文编辑</category>
         <category>数学基础</category>
         <category>office技巧</category>
         <category>最优化</category>
+        <category>多目标最优化</category>
+        <category>单目标最优化</category>
+        <category>C++</category>
+        <category>编程技巧</category>
+        <category>python</category>
+        <category>Qt</category>
+        <category>界面开发</category>
         <item>
             <guid isPermalink="true">http://qianqiu-cell.github.io/2023/01/19/blog/hexo_remote/</guid>
             <title>解决Connection closed by remote host</title>
@@ -32,7 +34,7 @@
             <pubDate>Thu, 19 Jan 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;一-问题描述&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-问题描述&#34;&gt;#&lt;/a&gt; 一、问题描述&lt;/h1&gt;
 &lt;p&gt;在一次更新博客的内容并使用 &lt;code&gt;hexo d&lt;/code&gt;  成功上传之后，邮箱中收到如下内容&lt;br&gt;
-&lt;img data-src=&#34;/images/hexo_remote/1.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/blog/hexo_remote/1.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 一番搜索之后找到报错的根本原因为：前段时间使用了 &lt;code&gt;VPN&lt;/code&gt;  进行代理。运行 &lt;code&gt;ssh -T git@github.com&lt;/code&gt;  命令，结果显示 &lt;code&gt;ssh: Could not resolve hostname keygen&lt;/code&gt; 。&lt;/p&gt;
 &lt;h1 id=&#34;二-解决方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-解决方法&#34;&gt;#&lt;/a&gt; 二、解决方法&lt;/h1&gt;
 &lt;p&gt;设置取消代理即可成功上传，取消代理通过在命令行运行如下代码&lt;/p&gt;
@@ -51,10 +53,10 @@ shoka 主题图片同时备份至百度网盘及个人 U 盘&lt;/p&gt;
 &lt;h1 id=&#34;二-上传图片至postimage图床&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-上传图片至postimage图床&#34;&gt;#&lt;/a&gt; 二、上传图片至 PostImage 图床&lt;/h1&gt;
 &lt;p&gt;首先进入&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wb3N0aW1hZ2VzLm9yZy8=&#34;&gt; PostImage 官网&lt;/span&gt;，进行网站注册，注册密码已备份至 U 盘 - 博客 word 说明中&lt;br&gt;
 注册完成之后将 &lt;code&gt;shoka&lt;/code&gt;  图片一并上传至 &lt;code&gt;PostImage&lt;/code&gt;  中，并复制所有图片链接如下图所示（界面打开方式：&lt;em&gt;我的图片→默认分类→分享&lt;/em&gt;）&lt;br&gt;
-&lt;img data-src=&#34;/images/hexo_image/2.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/images/blog/hexo_image/2.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;三-上传图片至shoka&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三-上传图片至shoka&#34;&gt;#&lt;/a&gt; 三、上传图片至 shoka&lt;/h1&gt;
 &lt;p&gt;参考如下 &lt;code&gt;shoka&lt;/code&gt;  官方说明&lt;br&gt;
-&lt;img data-src=&#34;/images/hexo_image/3.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/blog/hexo_image/3.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 根据最后两行信息，在 &lt;code&gt;&amp;lt;root&amp;gt;/source/_data&lt;/code&gt;  目录中新建一个 &lt;code&gt;images.yml&lt;/code&gt;  文件，将第二步复制的图片链接复制到该文件中，即可完成图库的上传&lt;/p&gt;
  ]]></description>
         </item>
@@ -67,22 +69,22 @@ shoka 主题图片同时备份至百度网盘及个人 U 盘&lt;/p&gt;
             <description><![CDATA[ &lt;p&gt;参考文章：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2NjY3MTcwL2FydGljbGUvZGV0YWlscy8xMTgxNjM1NjM=&#34;&gt;https://blog.csdn.net/qq_36667170/article/details/118163563&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;一-旧电脑文件备份&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-旧电脑文件备份&#34;&gt;#&lt;/a&gt; 一、旧电脑文件备份&lt;/h1&gt;
 &lt;p&gt;将 &lt;code&gt;node_modules&lt;/code&gt;  文件夹删除后备份其余所有文件&lt;br&gt;
-&lt;img data-src=&#34;/images/hexo_change/1.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/images/blog/hexo_change/1.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;二-新电脑准备工作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-新电脑准备工作&#34;&gt;#&lt;/a&gt; 二、新电脑准备工作&lt;/h1&gt;
 &lt;h2 id=&#34;21-git&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#21-git&#34;&gt;#&lt;/a&gt; 2.1 git&lt;/h2&gt;
 &lt;p&gt;（1）首先下载并安装 &lt;code&gt;git&lt;/code&gt; &lt;br&gt;
  参考链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8xMDMzMjUzODE=&#34;&gt;https://zhuanlan.zhihu.com/p/103325381&lt;/span&gt;&lt;br&gt;
 （2）在命令行中设置用户，注意这个不是登录，而是告诉远程仓库是谁上传的&lt;/p&gt;
-&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;git config --global user.name &amp;quot;你的名字&amp;quot;（注意前边是 “- -global”，有两个横线）&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;git config --global user.email &amp;quot;你的邮箱&amp;quot;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;/images/hexo_change/2.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;git config --global user.name &amp;quot;你的名字&amp;quot;（注意前边是 “- -global”，有两个横线）&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;git config --global user.email &amp;quot;你的邮箱&amp;quot;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;/images/blog/hexo_change/2.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 （3）配置 SSH&lt;br&gt;
  在命令行中运行 ssh 命令，查看本机是否安装 ssh，出现下图则证明已安装&lt;br&gt;
-&lt;img data-src=&#34;/images/hexo_change/2.2.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/blog/hexo_change/2.2.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 输入 &lt;code&gt;ssh-keygen -t .rsa&lt;/code&gt;  命令，表示我们指定 &lt;code&gt;RSA&lt;/code&gt;  算法生成密钥，然后敲四次回车键，之后就会在&lt;em&gt; C:/Users/ 用户 /.ssh&lt;/em&gt; 生成两个文件，分别为&lt;mark&gt;密钥 id rsa&lt;/mark&gt; 和&lt;mark&gt;公钥 id_rsa.pub&lt;/mark&gt;。复制&lt;mark&gt;公钥 id_rsa.pub&lt;/mark&gt; 文件中的内容。&lt;br&gt;
 打开 GitHub，以此点击 &lt;code&gt;Settings→SSH and GPG keys→New SSH key&lt;/code&gt;  如下图所示&lt;br&gt;
-&lt;img data-src=&#34;/images/hexo_change/2.3.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/blog/hexo_change/2.3.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 将复制的&lt;mark&gt;公钥 id_rsa.pub&lt;/mark&gt; 的内容粘贴到 &lt;code&gt;key&lt;/code&gt;  内，再点击 &lt;code&gt;Add SSH key&lt;/code&gt; &lt;br&gt;
  在命令行中运行 &lt;code&gt;ssh -T git@github.com&lt;/code&gt;  命令进行检验，出现下图所示情况，则证明绑定成功。&lt;br&gt;
-&lt;img data-src=&#34;/images/hexo_change/2.4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/images/blog/hexo_change/2.4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;22-nodejs&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#22-nodejs&#34;&gt;#&lt;/a&gt; 2.2 Node.js&lt;/h2&gt;
 &lt;p&gt;（1）首先下载安装 &lt;code&gt;Node.js&lt;/code&gt; &lt;br&gt;
  参考链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8xMDU3MTUyMjQ=&#34;&gt;https://zhuanlan.zhihu.com/p/105715224&lt;/span&gt;&lt;br&gt;
@@ -268,39 +270,39 @@ H&lt;sub&gt;2&lt;/sub&gt;0&lt;br&gt;
 &lt;ol&gt;
 &lt;li&gt;git 安装&lt;br&gt;
 进入&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXQtc2NtLmNvbS8=&#34;&gt; git 官网&lt;/span&gt;，进行 git 的安装，自行百度安装教程即可，安装完成后可在命令行运行 &lt;code&gt;git –version&lt;/code&gt;  命令，若出现如下图片，则可确定 git 安装成功&lt;br&gt;
-&lt;img data-src=&#34;/images/hexo/1.1.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;img data-src=&#34;/images/blog/hexo/1.1.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
 &lt;li&gt;node.js 安装&lt;br&gt;
 进入&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ub2RlanMub3JnL2VuLw==&#34;&gt; node.js 官网&lt;/span&gt;，进行 node.js 安装，自行百度安装教程即可，安装完成后可在命令行运行 &lt;code&gt;node -v&lt;/code&gt;  和 &lt;code&gt;npm -v&lt;/code&gt;  命令，若出现如下图片，则可确定 node.js 安装成功&lt;br&gt;
-&lt;img data-src=&#34;/images/hexo/1.2.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;img data-src=&#34;/images/blog/hexo/1.2.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
 &lt;li&gt;Hexo 安装&lt;br&gt;
 首先在 C 盘之外的其他盘创建一个文件夹（之后 blog 相关本地文件都存放在此文件夹），博主在安装 Hexo 的过程中，首先在新建的文件夹空白处右键，选择 &lt;code&gt;Git Bush Here&lt;/code&gt; , 在弹出的窗口中输入 &lt;code&gt;npm install -g hexo-cli&lt;/code&gt; 。运行上述命令后报错如下&lt;br&gt;
-&lt;img data-src=&#34;/images/hexo/1.3.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/blog/hexo/1.3.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 结合网上其它教程，博主选择在命令行中使用 &lt;code&gt;cnpm&lt;/code&gt;  进行安装没有遇到任何的问题，故本文后续所有操作均使用 &lt;code&gt;cnpm&lt;/code&gt;  代替 &lt;code&gt;npm&lt;/code&gt; ，并在命令行运行&lt;br&gt;
-&lt;img data-src=&#34;/images/hexo/1.4.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/blog/hexo/1.4.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 安装完成后输入 &lt;code&gt;hexo init&lt;/code&gt;  命令初始化博客&lt;br&gt;
-&lt;img data-src=&#34;/images/hexo/1.5.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/blog/hexo/1.5.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 会发现文件夹中生成了如下所示的文件&lt;br&gt;
-&lt;img data-src=&#34;/images/hexo/1.6.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/blog/hexo/1.6.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 至此本地 blog 就安装完成了，可以使用 &lt;code&gt;hexo g&lt;/code&gt;  进行静态部署&lt;br&gt;
-&lt;img data-src=&#34;/images/hexo/1.7.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/blog/hexo/1.7.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 这时网页已经部署完成，可以输入 &lt;code&gt;hexo s&lt;/code&gt;  命令进行查看&lt;br&gt;
-&lt;img data-src=&#34;/images/hexo/1.8.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/blog/hexo/1.8.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 在浏览器中输入 http://localhost:4000/ 就可以打开新部署的网页&lt;br&gt;
-&lt;img data-src=&#34;/images/hexo/1.9.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;img data-src=&#34;/images/blog/hexo/1.9.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id=&#34;二-将hexo部署到github&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-将hexo部署到github&#34;&gt;#&lt;/a&gt; 二、将 Hexo 部署到 GitHub&lt;/h1&gt;
 &lt;p&gt;参考：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2FpX2dyZWVuL2FydGljbGUvZGV0YWlscy8xMjE2NzU3OTA=&#34;&gt;https://blog.csdn.net/ai_green/article/details/121675790&lt;/span&gt;&lt;br&gt;
  我们要用 git 上传文件到 GitHub 首先得利用 SSH 登录远程主机，而登录方式有两种：一种是口令登录；另一种是公钥登录。口令登录每次都要输入密码十分麻烦，而公钥登录就省去了输入密码的步骤，所以我们选择公钥授权。首先我们得在 GitHub 上添加 SSH key 配置，要想生成 SSH key，就要先安装 SSH，不过我们安装了 Git Bash，其应该自带了 SSH。检验一下是否安装 SSH，我们在命令行中输入 &lt;code&gt;ssh&lt;/code&gt;  命令，若出现下图所示界面则证明 ssh 安装成功：&lt;br&gt;
-&lt;img data-src=&#34;/images/hexo/2.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/blog/hexo/2.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 然后输入 &lt;code&gt;ssh-keygen -t rsa&lt;/code&gt;  命令，表示我们指定 RSA 算法生成密钥，然后敲四次回车键，之后就就会生成两个文件，分别为秘钥  &lt;code&gt;id_rsa&lt;/code&gt;  和公钥  &lt;code&gt;id_rsa.pub&lt;/code&gt; 。生成文件及目录如下图所示&lt;br&gt;
-&lt;img data-src=&#34;/images/hexo/2.2.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/blog/hexo/2.2.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 接下来我们要做的事情就是把公钥  &lt;code&gt;id_rsa.pub&lt;/code&gt;  的内容添加到 GitHub。复制公钥  &lt;code&gt;id_rsa.pub&lt;/code&gt;  文件里的内容。接下来进入 GitHub 主页，依次点击头像，Settings，SSH and GPG keys，New SSH key&lt;br&gt;
-&lt;img data-src=&#34;/images/hexo/2.3.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-&lt;img data-src=&#34;/images/hexo/2.4.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/blog/hexo/2.3.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/blog/hexo/2.4.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
  将 &lt;code&gt;id_rsa.pub&lt;/code&gt;  中的内容粘贴到 &lt;code&gt;key&lt;/code&gt;  内，再点击 Add SSH key 即可完成公钥授权。可输入 &lt;code&gt;ssh -T git@github.com&lt;/code&gt;  进行验证（这一步需要在 &lt;code&gt;git bush&lt;/code&gt;  中完成），出现下图则说明绑定成功。&lt;br&gt;
-&lt;img data-src=&#34;/images/hexo/2.5.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/blog/hexo/2.5.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 打开步骤一中文件夹下的 &lt;code&gt;_config.yml&lt;/code&gt;  文件，并修改最后一行为如下内容（repository 需要修改为自己 GitHub 仓库地址，这里默认已创建好仓库，若没有创建可自行百度）&lt;br&gt;
-&lt;img data-src=&#34;/images/hexo/2.6.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/blog/hexo/2.6.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 至此每一次更新本地仓库都需要运行下面几个命令，将本地更改同步到网页&lt;/p&gt;
 &lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo clean &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo g # 生成静态文件&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo s # 预览本地更改&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo d # 部署代码到 GitHub&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h1 id=&#34;三-设置shoka主题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三-设置shoka主题&#34;&gt;#&lt;/a&gt; 三、设置 shoka 主题&lt;/h1&gt;
 &lt;p&gt;参考：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmRhYmluZy5jb29sL2hleG8vaGV4by8=&#34;&gt;https://blog.dabing.cool/hexo/hexo/&lt;/span&gt; 和&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JldHJheVZpcmdpbmlhL2FydGljbGUvZGV0YWlscy8xMTM1NzIzNjQ=&#34;&gt; https://blog.csdn.net/BetrayVirginia/article/details/113572364&lt;/span&gt;&lt;br&gt;
@@ -312,19 +314,19 @@ hexo 提供了很多主题模板可以选择&lt;span class=&#34;exturl&#34; data
  依赖插件: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWUvY29tcHV0ZXItc2NpZW5jZS9ub3RlL3RoZW1lLXNob2thLWRvYy9kZXBlbmRlbnRzLw==&#34;&gt;https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/dependents/&lt;/span&gt;&lt;br&gt;
  安装依赖插件&lt;/p&gt;
 &lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cnpm install hexo-renderer-multi-markdown-it --save &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cnpm install hexo-autoprefixer --save &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cnpm install hexo-algolia --save &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cnpm install hexo-algoliasearch --save &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cnpm install hexo-symbols-count-time --save &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;cnpm install hexo-feed --save&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;运行 &lt;code&gt;git clone https://github.com/amehime/hexo-theme-shoka.git ./themes/shoka&lt;/code&gt;  来安装主题文件&lt;br&gt;
-&lt;img data-src=&#34;/images/hexo/3.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/blog/hexo/3.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 下载完成后就会在 themes 文件夹下找到下载的文件&lt;br&gt;
-&lt;img data-src=&#34;/images/hexo/3.2.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/blog/hexo/3.2.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 修改站点配置文件 &lt;code&gt;_config.yml&lt;/code&gt; ，把主题改为 &lt;code&gt;shoka&lt;/code&gt; &lt;br&gt;
-&lt;img data-src=&#34;/images/hexo/3.3.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/blog/hexo/3.3.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
  重新编译部署&lt;/p&gt;
 &lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo clean &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo g # 生成静态文件&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo s # 预览本地更改&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo d # 部署代码到 GitHub 上，这一过程会有延迟，建议预览完成后再进行部署，一段时间后再进入网站查看&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;重新访问自己的网站就可以发现网站主题已经更改为 shoka 主题&lt;br&gt;
-&lt;img data-src=&#34;/images/hexo/3.4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/images/blog/hexo/3.4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;四-基于algolia的搜索功能&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#四-基于algolia的搜索功能&#34;&gt;#&lt;/a&gt; 四、基于 algolia 的搜索功能&lt;/h1&gt;
 &lt;p&gt;主题应用后发现点击右上角的搜索图标没有反应，可以参考文章&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ1MjM0NTEwL2FydGljbGUvZGV0YWlscy8xMTY4ODU3OTI=&#34;&gt; https://blog.csdn.net/m0_45234510/article/details/116885792&lt;/span&gt; 进行配置。&lt;br&gt;
 （注：配置_config.yml 文件时一定要注意大小写，博主因为一个字母大小写错误修复了一个下午）&lt;br&gt;
 完成后每次添加新文章后都需要现在命令行运行 &lt;code&gt;hexo clean&lt;/code&gt; ， &lt;code&gt;hexo g&lt;/code&gt; ，之后在 &lt;code&gt;git bush&lt;/code&gt;  中运行 &lt;code&gt;export HEXO_ALGOLIA_INDEXING_KEY=&amp;quot;你的app key&amp;quot;&lt;/code&gt; ， &lt;code&gt;hexo algolia&lt;/code&gt; ，最后在命令行运行 &lt;code&gt;hexo s&lt;/code&gt; ， &lt;code&gt;hexo d&lt;/code&gt; 。&lt;br&gt;
-&lt;img data-src=&#34;/images/hexo/4.1.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/images/blog/hexo/4.1.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;五-基于valine的评论功能&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#五-基于valine的评论功能&#34;&gt;#&lt;/a&gt; 五、基于 valine 的评论功能&lt;/h1&gt;
 &lt;p&gt;首先按照文章&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly92YWxpbmUuanMub3JnL3F1aWNrc3RhcnQuaHRtbA==&#34;&gt; https://valine.js.org/quickstart.html&lt;/span&gt; 获取 APP ID 和 APP Key，完成后在 shoka 文件夹下的 &lt;code&gt;_config.yml&lt;/code&gt;  中对相关内容进行修改&lt;br&gt;
 注：邮箱的 &lt;code&gt;Hash值&lt;/code&gt; 计算可以使用&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cua2pzb24uY29tL2VuY3J5cHQvaGFzaC8/Zm09bWFw&#34;&gt; https://www.kjson.com/encrypt/hash/?fm=map&lt;/span&gt;，选择算法为 md5&lt;/p&gt;

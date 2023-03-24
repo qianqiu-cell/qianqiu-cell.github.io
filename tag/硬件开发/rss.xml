@@ -9,21 +9,23 @@
         <lastBuildDate>Mon, 30 Jan 2023 00:00:00 +0800</lastBuildDate>
         <category>Windows系统</category>
         <category>博客搭建</category>
-        <category>python</category>
-        <category>编程技巧</category>
-        <category>C++</category>
-        <category>Qt</category>
-        <category>界面开发</category>
         <category>控制工程</category>
         <category>其他</category>
         <category>一些小目标</category>
-        <category>硬件开发</category>
         <category>烹饪技巧</category>
+        <category>硬件开发</category>
         <category>latex技巧</category>
         <category>论文编辑</category>
         <category>数学基础</category>
         <category>office技巧</category>
         <category>最优化</category>
+        <category>多目标最优化</category>
+        <category>单目标最优化</category>
+        <category>C++</category>
+        <category>编程技巧</category>
+        <category>python</category>
+        <category>Qt</category>
+        <category>界面开发</category>
         <item>
             <guid isPermalink="true">http://qianqiu-cell.github.io/2023/01/30/hardware/Quartus/</guid>
             <title>Quartus基础教程</title>
@@ -33,53 +35,53 @@
             <description><![CDATA[ &lt;h1 id=&#34;一-quartus及驱动安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-quartus及驱动安装&#34;&gt;#&lt;/a&gt; 一、Quartus 及驱动安装&lt;/h1&gt;
 &lt;h2 id=&#34;11-quartus安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#11-quartus安装&#34;&gt;#&lt;/a&gt; 1.1 Quartus 安装&lt;/h2&gt;
 &lt;p&gt;根据百度网盘中的安装包及教程进行软件安装&lt;br&gt;
-&lt;img data-src=&#34;/images/Quartus/1.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/images/hardware/Quartus/1.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;12-驱动安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#12-驱动安装&#34;&gt;#&lt;/a&gt; 1.2 驱动安装&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;FPGA&lt;/code&gt;  与计算机共有&lt;mark&gt;两条&lt;/mark&gt;数据线进行连接，&lt;ins&gt;一条用于供电及通讯，另一条用于程序的烧录&lt;/ins&gt;。将 FPGA 开发板正确连接至电脑后，可在设备管理器中看到如 &lt;code&gt;USB-SERIAL CH340&lt;/code&gt;  及 &lt;code&gt;Altera USB-Blaster&lt;/code&gt;  则证明 &lt;code&gt;FPGA&lt;/code&gt;  与计算机连接成功。（⚠️若小图标处有感叹号，则证明缺少驱动，可根据安装教程进行驱动安装，本次安装的电脑为重装后的电脑，没有安装任何驱动即可正确识别）&lt;br&gt;
-&lt;img data-src=&#34;/images/Quartus/1.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/images/hardware/Quartus/1.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;二-modelsim安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-modelsim安装&#34;&gt;#&lt;/a&gt; 二、Modelsim 安装&lt;/h1&gt;
 &lt;p&gt;安装 &lt;code&gt;Modelsim&lt;/code&gt; ，安装包及教程见百度网盘&lt;br&gt;
-&lt;img data-src=&#34;/images/Quartus/2.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/hardware/Quartus/2.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 安装完成 &lt;code&gt;Modelsim&lt;/code&gt;  后，在 &lt;code&gt;Quartus&lt;/code&gt;  中依次点击 &lt;code&gt;Tools→Options→General→EDA Tool Options&lt;/code&gt;  选择 &lt;code&gt;Modelsim&lt;/code&gt;  的安装路径里面的 &lt;code&gt;win64&lt;/code&gt; &lt;br&gt;
-&lt;img data-src=&#34;/images/Quartus/2.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/images/hardware/Quartus/2.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;三-程序编译&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三-程序编译&#34;&gt;#&lt;/a&gt; 三、程序编译&lt;/h1&gt;
 &lt;p&gt;进入 &lt;code&gt;Quartus&lt;/code&gt;  软件，点击 &lt;code&gt;start compilation&lt;/code&gt;  进行程序编译&lt;br&gt;
-&lt;img data-src=&#34;/images/Quartus/3.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/images/hardware/Quartus/3.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;四-仿真&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#四-仿真&#34;&gt;#&lt;/a&gt; 四、仿真&lt;/h1&gt;
 &lt;p&gt;（以下为测试脚本设置过程，项目已经设置好，作为普及）依次点击 &lt;code&gt;Assignments→Settings&lt;/code&gt; 。打开后点击 &lt;code&gt;EDA Tool Settings→Simulation&lt;/code&gt; ，之后在 &lt;code&gt;NativeLink settings&lt;/code&gt;  中选择 &lt;code&gt;Compile test bench&lt;/code&gt; &lt;br&gt;
-&lt;img data-src=&#34;/images/Quartus/4.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/hardware/Quartus/4.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
  选择测试脚本（点击 &lt;code&gt;Test Benches…→new&lt;/code&gt; ）&lt;br&gt;
-&lt;img data-src=&#34;/images/Quartus/4.2.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/hardware/Quartus/4.2.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 图中从上往下：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;StandardTR&lt;/code&gt;  是系统建立 &lt;code&gt;testbench&lt;/code&gt;  文件 &lt;code&gt;.vt&lt;/code&gt;  的名字。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;StandardTR_vlg_tst&lt;/code&gt;  是 &lt;code&gt;.vt&lt;/code&gt;  里面的 &lt;code&gt;module&lt;/code&gt;  的名字。&lt;/li&gt;
 &lt;li&gt;点击 &lt;code&gt;Fill name&lt;/code&gt;  右边的 &lt;code&gt;…&lt;/code&gt;  选择 &lt;code&gt;.vt&lt;/code&gt;  文件，点击 &lt;code&gt;add&lt;/code&gt; 。&lt;br&gt;
 （以下过程为正式仿真过程，需要运行）在完成以上步骤及编译完成之后点击 &lt;code&gt;Tools→Run Simulation Tool→RTL Simulation&lt;/code&gt;  进行仿真&lt;br&gt;
-&lt;img data-src=&#34;/images/Quartus/4.3.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/hardware/Quartus/4.3.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 仿真完成后可显示如下界面（点击 &lt;code&gt;Zoom full&lt;/code&gt;  可显示波形）&lt;br&gt;
-&lt;img data-src=&#34;/images/Quartus/4.4.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
+&lt;img data-src=&#34;/images/hardware/Quartus/4.4.png&#34; alt=&#34;&#34;&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&#34;五-程序下载至fpga&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#五-程序下载至fpga&#34;&gt;#&lt;/a&gt; 五、程序下载至 FPGA&lt;/h1&gt;
 &lt;p&gt;如下图所示将 FPGA 与电脑连接连接&lt;br&gt;
-&lt;img data-src=&#34;/images/Quartus/5.1.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/hardware/Quartus/5.1.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 其中 USB Blaster 为编程时，电脑给开发板传输程序文件的数据线，在传输完程序之后即可移除（不拔出来也没事儿）。&lt;br&gt;
 USB to TTL 为开发板提供电源功能、并在串口调试阶段作为电脑与开发板进行数据交换的线。&lt;br&gt;
 在 Quartus 中依次点击 &lt;code&gt;Tools→Programmer&lt;/code&gt;  打开如下界面&lt;br&gt;
-&lt;img data-src=&#34;/images/Quartus/5.2.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/hardware/Quartus/5.2.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 点击 &lt;code&gt;Start&lt;/code&gt;  即可开始程序下载，若未识别到硬件，可点击 &lt;code&gt;Hardware Setup&lt;/code&gt;  进行设置，如下图所示&lt;br&gt;
-&lt;img data-src=&#34;/images/Quartus/5.3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/images/hardware/Quartus/5.3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;六-串口展示&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#六-串口展示&#34;&gt;#&lt;/a&gt; 六、串口展示&lt;/h1&gt;
 &lt;p&gt;打开 &lt;code&gt;XCOM&lt;/code&gt; （串口调试助手，就是电脑和开发板进行数据交换的软件），波特率设置为 &lt;code&gt;115200&lt;/code&gt; 、选择 &lt;code&gt;16&lt;/code&gt;  进制显示、 &lt;code&gt;16&lt;/code&gt;  进制发送，如下图所示。&lt;br&gt;
-&lt;img data-src=&#34;/images/Quartus/6.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/hardware/Quartus/6.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 在设置完成后点击打开串口，在下方数据发送区输入数据 (只能依次输入，不能直接复制)，点击发送后即可在数据接受区得到 &lt;code&gt;FPGA&lt;/code&gt;  运行后的结果，每次运行后都需要按下 &lt;code&gt;FPGA&lt;/code&gt;  上的 &lt;code&gt;key1&lt;/code&gt;  键进行复位。&lt;br&gt;
-&lt;img data-src=&#34;/images/Quartus/6.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/images/hardware/Quartus/6.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h2 id=&#34;输入数据的获取&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#输入数据的获取&#34;&gt;#&lt;/a&gt; 输入数据的获取&lt;/h2&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZ2FpcnVvLmNvbS9maWxlL2RhdGEvZGF0YXNldC9pcmlzLmRhdGE=&#34;&gt;点击此处&lt;/span&gt;可获得鸢尾花原始数据集，如下图所示&lt;br&gt;
-&lt;img data-src=&#34;/images/Quartus/6.3.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/hardware/Quartus/6.3.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 每一行为一条数据，每一列依次表示花萼长、花萼宽、花瓣长、花瓣宽以及花的类型&lt;br&gt;
 将每条数据的十进制数据转换为如下格式的二进制数据&lt;br&gt;
-&lt;img data-src=&#34;/images/Quartus/6.4.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/hardware/Quartus/6.4.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 以第一行数据为例，四个数据转换分别为：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;5.1 = 0 0000 0101 0001 1001 1001
 3.5 = 0 0000 0011 1000 0000 0000
@@ -111,40 +113,40 @@ USB to TTL 为开发板提供电源功能、并在串口调试阶段作为电脑
             <description><![CDATA[ &lt;p&gt;参考视频：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMThYNHkxTTc2My8/cD0xNSZhbXA7dmRfc291cmNlPTlhZWNiM2JkMWM5Mzg2MjM5MzA0MzNmODYwZjRhNTU1&#34;&gt;https://www.bilibili.com/video/BV18X4y1M763/?p=15&amp;amp;vd_source=9aecb3bd1c938623930433f860f4a555&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;一-新建工程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-新建工程&#34;&gt;#&lt;/a&gt; 一、新建工程&lt;/h1&gt;
 &lt;p&gt;点击 &lt;code&gt;ACCESS TO MCU SELECTOR&lt;/code&gt; （如红框所示）&lt;br&gt;
-&lt;img data-src=&#34;/images/stm32cubemx/1.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/hardware/stm32cubemx/1.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 在搜索框内输入所需要的芯片型号，在右边搜索结果中双击自己的板子型号，这里我们使用的是 &lt;code&gt;stm32f103zet6&lt;/code&gt; &lt;br&gt;
-&lt;img data-src=&#34;/images/stm32cubemx/1.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/images/hardware/stm32cubemx/1.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;二-一些必要的工作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-一些必要的工作&#34;&gt;#&lt;/a&gt; 二、一些必要的工作&lt;/h1&gt;
 &lt;p&gt;选择 &lt;code&gt;system core&lt;/code&gt;  中的 &lt;code&gt;RCC&lt;/code&gt; ，将 &lt;code&gt;High Speed Clock(HSE)&lt;/code&gt;  定义为 &lt;code&gt;Crystal/Ceramic Resonator&lt;/code&gt; &lt;br&gt;
-&lt;img data-src=&#34;/images/stm32cubemx/2.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/hardware/stm32cubemx/2.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
  选择 &lt;code&gt;system core&lt;/code&gt;  中的 &lt;code&gt;SYS&lt;/code&gt; ，将 &lt;code&gt;debug&lt;/code&gt;  定义为 &lt;code&gt;Serial Wire&lt;/code&gt; &lt;br&gt;
-&lt;img data-src=&#34;/images/stm32cubemx/2.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/images/hardware/stm32cubemx/2.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;三-定义io端口&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三-定义io端口&#34;&gt;#&lt;/a&gt; 三、定义 IO 端口&lt;/h1&gt;
 &lt;p&gt;定义 IO 端口，即定义自己使用哪一个引脚作为 IO 输入与输出。选择 &lt;code&gt;system core&lt;/code&gt;  中的 &lt;code&gt;GPIO&lt;/code&gt; &lt;br&gt;
-&lt;img data-src=&#34;/images/stm32cubemx/3.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/hardware/stm32cubemx/3.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
  在右下方输入我们要定义的引脚，输入完成后对应引脚会闪烁，之后定位到我们所需要的引脚并进行设置，这里我们定义 &lt;code&gt;PB3&lt;/code&gt;  为输入端口&lt;br&gt;
-&lt;img data-src=&#34;/images/stm32cubemx/3.2.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/hardware/stm32cubemx/3.2.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 完成设置后会在左侧显示已经配置好的引脚信息&lt;br&gt;
-&lt;img data-src=&#34;/images/stm32cubemx/3.3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/images/hardware/stm32cubemx/3.3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;四-配置usart1串口通讯&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#四-配置usart1串口通讯&#34;&gt;#&lt;/a&gt; 四、配置 usart1 串口通讯&lt;/h1&gt;
 &lt;p&gt;打开 &lt;code&gt;connectivity&lt;/code&gt;  下的 &lt;code&gt;usart1&lt;/code&gt;  界面，将 &lt;code&gt;mode&lt;/code&gt;  设置为 &lt;code&gt;asynchronous&lt;/code&gt; &lt;br&gt;
-&lt;img data-src=&#34;/images/stm32cubemx/4.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/hardware/stm32cubemx/4.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
  打开 &lt;code&gt;NVIC Settings&lt;/code&gt; ，选择 &lt;code&gt;Enable&lt;/code&gt; &lt;br&gt;
-&lt;img data-src=&#34;/images/stm32cubemx/4.2.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/hardware/stm32cubemx/4.2.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
  在下面的 &lt;code&gt;parameter settings&lt;/code&gt;  中会显示配置后串口通讯的一些信息&lt;br&gt;
-&lt;img data-src=&#34;/images/stm32cubemx/4.3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/images/hardware/stm32cubemx/4.3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;五-配置时钟&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#五-配置时钟&#34;&gt;#&lt;/a&gt; 五、配置时钟&lt;/h1&gt;
 &lt;p&gt;打开 &lt;code&gt;clock configuration&lt;/code&gt; ，将时钟配置为 &lt;code&gt;72MHz&lt;/code&gt; ，如下图所示&lt;br&gt;
-&lt;img data-src=&#34;/images/stm32cubemx/5.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/images/hardware/stm32cubemx/5.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;六-生成程序前的一些配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#六-生成程序前的一些配置&#34;&gt;#&lt;/a&gt; 六、生成程序前的一些配置&lt;/h1&gt;
 &lt;p&gt;点击 &lt;code&gt;project manager&lt;/code&gt; ，并按照下列图片进行配置&lt;br&gt;
-&lt;img data-src=&#34;/images/stm32cubemx/6.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-&lt;img data-src=&#34;/images/stm32cubemx/6.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/images/hardware/stm32cubemx/6.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/hardware/stm32cubemx/6.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;七-生成代码&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#七-生成代码&#34;&gt;#&lt;/a&gt; 七、生成代码&lt;/h1&gt;
 &lt;p&gt;点击 &lt;code&gt;generate code&lt;/code&gt; ，进行代码的生成，如下图所示&lt;br&gt;
-&lt;img data-src=&#34;/images/stm32cubemx/7.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/hardware/stm32cubemx/7.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 完成代码生成后即可生成如下界面，三个选项分别是打开文件夹，打开工程（使用 &lt;code&gt;keil MDK&lt;/code&gt; ），关闭当前窗口&lt;br&gt;
-&lt;img data-src=&#34;/images/stm32cubemx/7.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/images/hardware/stm32cubemx/7.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
  ]]></description>
         </item>
     </channel>

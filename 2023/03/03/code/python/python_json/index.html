@@ -1,0 +1,539 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Welcome to my tiny world" href="http://qianqiu-cell.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Welcome to my tiny world" href="http://qianqiu-cell.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Welcome to my tiny world" href="http://qianqiu-cell.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="编程技巧,python" />
+
+
+<link rel="canonical" href="http://qianqiu-cell.github.io/2023/03/03/code/python/python_json/">
+
+
+
+  <title>
+python读取及保存json文件 - python |
+唯爱ぺ灬babyル = Welcome to my tiny world = 如果可以，我想你一直这样温柔下去ʕ ᵔᴥᵔ ʔ</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">python读取及保存json文件
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2023-03-03 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-03-03T00:00:00+08:00">2023-03-03</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>7.4k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>7 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">唯爱ぺ灬babyル</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://i.postimg.cc/k5J4MJtY/6833939bly1gipew28b65j20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/sfqvPCt1/6833939bly1gipewf5l51j20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/Kc1pRtPB/6833939bly1giclimtf7dj20zk0m8qav.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/3R6fJwWg/6833939bly1giciusoyjnj219g0u0x56.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/50j2vsgw/6833939bly1gipewkhf1zj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/SxJXcNKX/6833939bly1giciuja1j1j20zk0m8kjl.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/python/" itemprop="item" rel="index" title="分类于 python"><span itemprop="name">python</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://qianqiu-cell.github.io/2023/03/03/code/python/python_json/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="Darling F">
+    <meta itemprop="description" content="如果可以，我想你一直这样温柔下去ʕ ᵔᴥᵔ ʔ, 小樊&小小樊的学习笔记🌸">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Welcome to my tiny world">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="一-读取json文件"><a class="markdownIt-Anchor" href="#一-读取json文件">#</a> 一、读取 json 文件</h1>
+<h2 id="loads传入一个json格式的字符串解码为python对象"><a class="markdownIt-Anchor" href="#loads传入一个json格式的字符串解码为python对象">#</a>  <code>loads</code>  传入一个 <code>JSON</code>  格式的字符串，解码为 <code>python</code>  对象</h2>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">import</span> json</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token comment"># loads 传入一个 JSON 格式的字符串，解码成 python 对象</span></pre></td></tr><tr><td data-num="3"></td><td><pre>data <span class="token operator">=</span> <span class="token string">'[&#123;"姓名":"张三","年龄":"18"&#125;,&#123;"姓名":"李四","年龄":"20"&#125;]'</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment">#返回 & lt;class'str'></span></pre></td></tr><tr><td data-num="5"></td><td><pre>new_data <span class="token operator">=</span> json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>data<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span>new_data<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>new_data<span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr></table></figure><h2 id="load把json格式文件转换成python类型的数据"><a class="markdownIt-Anchor" href="#load把json格式文件转换成python类型的数据">#</a>  <code>load</code>  把 <code>JSON</code>  格式文件，转换成 <code>python</code>  类型的数据</h2>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'demo.json'</span><span class="token punctuation">,</span>encoding<span class="token operator">=</span><span class="token string">'utf8'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f1<span class="token punctuation">:</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token comment">#加载文件的对象</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    py_list <span class="token operator">=</span> json<span class="token punctuation">.</span>load<span class="token punctuation">(</span>f1<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token keyword">print</span><span class="token punctuation">(</span>py_list<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>py_list<span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr></table></figure><h1 id="二-存储json文件"><a class="markdownIt-Anchor" href="#二-存储json文件">#</a> 二、存储 json 文件</h1>
+<h2 id="dumps把python类型数据转换成json字符串"><a class="markdownIt-Anchor" href="#dumps把python类型数据转换成json字符串">#</a>  <code>dumps</code>  把 <code>python</code>  类型数据转换成 <code>JSON</code>  字符串</h2>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre>data <span class="token operator">=</span> <span class="token string">'[&#123;"姓名":"张三","年龄":"18"&#125;,&#123;"姓名":"李四","年龄":"20"&#125;]'</span></pre></td></tr><tr><td data-num="2"></td><td><pre>new_data <span class="token operator">=</span> json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>data<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'title.json'</span><span class="token punctuation">,</span><span class="token string">'w'</span><span class="token punctuation">,</span>encoding<span class="token operator">=</span><span class="token string">'utf8'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f2<span class="token punctuation">:</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token comment"># ensure_ascii=False 才能输入中文，否则是 Unicode 字符</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token comment"># indent=2 JSON 数据的缩进，美观</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    json<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>new_data<span class="token punctuation">,</span>f2<span class="token punctuation">,</span>ensure_ascii<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span>indent<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span></pre></td></tr></table></figure><h2 id="dump把python类型的数据以json格式存储到文件中"><a class="markdownIt-Anchor" href="#dump把python类型的数据以json格式存储到文件中">#</a>  <code>dump</code>  把 <code>python</code>  类型的数据以 <code>JSON</code>  格式存储到文件中</h2>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre>data <span class="token operator">=</span> <span class="token string">'[&#123;"姓名":"张三","年龄":"18"&#125;,&#123;"姓名":"李四","年龄":"20"&#125;]'</span></pre></td></tr><tr><td data-num="2"></td><td><pre>new_data <span class="token operator">=</span> json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>data<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'title.json'</span><span class="token punctuation">,</span><span class="token string">'w'</span><span class="token punctuation">,</span>encoding<span class="token operator">=</span><span class="token string">'utf8'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f2<span class="token punctuation">:</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token comment"># ensure_ascii=False 才能输入中文，否则是 Unicode 字符</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token comment"># indent=2 JSON 数据的缩进，美观</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    json<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>new_data<span class="token punctuation">,</span>f2<span class="token punctuation">,</span>ensure_ascii<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span>indent<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span></pre></td></tr></table></figure><h1 id="三-成功使用案例"><a class="markdownIt-Anchor" href="#三-成功使用案例">#</a> 三、成功使用案例</h1>
+<h2 id="读取json文件"><a class="markdownIt-Anchor" href="#读取json文件">#</a> 读取 json 文件</h2>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">import</span> json</pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token comment"># 需要保存的数据有：</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token comment"># 仓库系列 (2)：仓库长度 (length)、仓库宽度 (weight)</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token comment"># 货架系列 (2)：货架数量 (n_pod)、货架容量限制 (pod_limitation)、货架位置 (loc_pod)、拣货口位置（loc_station）</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token comment"># 机器人系列 (4)：机器人数量 (n_robot)、机器人空载与负载速度比 (ratio_T)、机器人到达货架时间 (Tp、Td)</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token comment"># 商品系列 (3)：商品类型数量 (n_commodity_type)、每种商品总数量 (commodity_limitation)、货架 i 上包含商品 c 的数量 (A)</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token comment"># 订单系列 (3)：商品总需求量 (total_order)、订单数量 (n_order)、订单 i 中包含商品 c 的数量 (B)</span></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token comment"># 拣货系列 (1)：拣取一个商品所需时间 (Th)</span></pre></td></tr><tr><td data-num="10"></td><td><pre></pre></td></tr><tr><td data-num="11"></td><td><pre><span class="token triple-quoted-string string">'''读取json文件'''</span></pre></td></tr><tr><td data-num="12"></td><td><pre><span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'datas/6p_2r.json'</span><span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'utf8'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> fp<span class="token punctuation">:</span></pre></td></tr><tr><td data-num="13"></td><td><pre>    <span class="token comment"># ensure_ascii=False 才能输入中文，否则是 Unicode 字符</span></pre></td></tr><tr><td data-num="14"></td><td><pre>    <span class="token comment"># indent=2 JSON 数据的缩进，美观</span></pre></td></tr><tr><td data-num="15"></td><td><pre>    json_datas <span class="token operator">=</span> json<span class="token punctuation">.</span>load<span class="token punctuation">(</span>fp<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="16"></td><td><pre>fp<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="17"></td><td><pre></pre></td></tr><tr><td data-num="18"></td><td><pre><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>json_datas<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="19"></td><td><pre>    length<span class="token punctuation">,</span> weight <span class="token operator">=</span> json_datas<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'length'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> json_datas<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'weight'</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="20"></td><td><pre>    n_pod<span class="token punctuation">,</span> pod_limitation<span class="token punctuation">,</span> loc_pod<span class="token punctuation">,</span> loc_station <span class="token operator">=</span> json_datas<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'n_pod'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> json_datas<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'pod_limitation'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> json_datas<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'loc_pod'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> \</pre></td></tr><tr><td data-num="21"></td><td><pre>        json_datas<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'loc_station'</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="22"></td><td><pre>    n_robot<span class="token punctuation">,</span> ratio_T<span class="token punctuation">,</span> Tp<span class="token punctuation">,</span> Td <span class="token operator">=</span> json_datas<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'n_robot'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> json_datas<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'ratio_T'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> json_datas<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'Tp'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> json_datas<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'Td'</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="23"></td><td><pre>    n_commodity_type<span class="token punctuation">,</span> commodity_limitation<span class="token punctuation">,</span> A <span class="token operator">=</span> json_datas<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'n_commodity_type'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> json_datas<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'commodity_limitation'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> json_datas<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'A'</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="24"></td><td><pre>    total_order<span class="token punctuation">,</span> n_order<span class="token punctuation">,</span> B <span class="token operator">=</span> json_datas<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'total_order'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> json_datas<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'n_order'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> json_datas<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'B'</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="25"></td><td><pre>    Th <span class="token operator">=</span> json_datas<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'Th'</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="26"></td><td><pre></pre></td></tr><tr><td data-num="27"></td><td><pre>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'The '</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'th element of json file is successfully read'</span><span class="token punctuation">)</span></pre></td></tr></table></figure><h2 id="存储json文件"><a class="markdownIt-Anchor" href="#存储json文件">#</a> 存储 json 文件</h2>
+<figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">import</span> json</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">import</span> random</pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">from</span> parameter <span class="token keyword">import</span> <span class="token operator">*</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np</pre></td></tr><tr><td data-num="5"></td><td><pre></pre></td></tr><tr><td data-num="6"></td><td><pre></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token comment"># 功能：以轮盘赌的方式选取选中的商品</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token comment"># 输入参数：剩余商品数组，随机数</span></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token comment"># 输出参数：选中的商品类型</span></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token keyword">def</span> <span class="token function">get_selected_commodity</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span> number<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="11"></td><td><pre>    array_sum <span class="token operator">=</span> <span class="token number">0</span></pre></td></tr><tr><td data-num="12"></td><td><pre>    selected_index <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span></pre></td></tr><tr><td data-num="13"></td><td><pre>    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="14"></td><td><pre>        <span class="token keyword">if</span> array_sum <span class="token operator">&lt;</span> number <span class="token operator">&lt;=</span> array_sum <span class="token operator">+</span> array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="15"></td><td><pre>            selected_index <span class="token operator">=</span> i</pre></td></tr><tr><td data-num="16"></td><td><pre>            <span class="token keyword">break</span></pre></td></tr><tr><td data-num="17"></td><td><pre>        <span class="token keyword">else</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="18"></td><td><pre>            array_sum <span class="token operator">+=</span> array<span class="token punctuation">[</span>i<span class="token punctuation">]</span></pre></td></tr><tr><td data-num="19"></td><td><pre>    <span class="token keyword">return</span> selected_index</pre></td></tr><tr><td data-num="20"></td><td><pre></pre></td></tr><tr><td data-num="21"></td><td><pre></pre></td></tr><tr><td data-num="22"></td><td><pre><span class="token comment"># 功能：随机选取货架来放置商品</span></pre></td></tr><tr><td data-num="23"></td><td><pre><span class="token comment"># 输入参数：货架状态数组</span></pre></td></tr><tr><td data-num="24"></td><td><pre><span class="token comment"># 输出参数：选中的货架</span></pre></td></tr><tr><td data-num="25"></td><td><pre><span class="token keyword">def</span> <span class="token function">get_selected_pod</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="26"></td><td><pre>    random_index <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="27"></td><td><pre>    <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="28"></td><td><pre>        <span class="token keyword">if</span> array<span class="token punctuation">[</span>random_index<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="29"></td><td><pre>            random_index <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="30"></td><td><pre>        <span class="token keyword">else</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="31"></td><td><pre>            <span class="token keyword">return</span> random_index</pre></td></tr><tr><td data-num="32"></td><td><pre></pre></td></tr><tr><td data-num="33"></td><td><pre></pre></td></tr><tr><td data-num="34"></td><td><pre><span class="token comment"># 函数功能：根据输入参数设计仓库布局（货架位置）</span></pre></td></tr><tr><td data-num="35"></td><td><pre><span class="token comment"># 输出参数：机器人行走到每个货架所需时间（空载与负载）</span></pre></td></tr><tr><td data-num="36"></td><td><pre><span class="token keyword">def</span> <span class="token function">g_pod</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="37"></td><td><pre>    <span class="token keyword">if</span> length <span class="token operator">*</span> weight <span class="token operator">&lt;</span> n_pod<span class="token punctuation">:</span></pre></td></tr><tr><td data-num="38"></td><td><pre>        <span class="token comment"># 仓库布局违法</span></pre></td></tr><tr><td data-num="39"></td><td><pre>        <span class="token keyword">raise</span> Exception<span class="token punctuation">(</span><span class="token string">"仓库布局违法"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="40"></td><td><pre>    <span class="token keyword">else</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="41"></td><td><pre>        Tp<span class="token punctuation">,</span> Td <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="42"></td><td><pre>        loc <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>  <span class="token comment"># 记录每个货架的位置</span></pre></td></tr><tr><td data-num="43"></td><td><pre>        mark_numbers <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span>length <span class="token operator">*</span> weight<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 记录每个位置的编号</span></pre></td></tr><tr><td data-num="44"></td><td><pre>        random<span class="token punctuation">.</span>shuffle<span class="token punctuation">(</span>mark_numbers<span class="token punctuation">)</span>  <span class="token comment"># 随机打乱所有编号后取前 n 个作为货架位置</span></pre></td></tr><tr><td data-num="45"></td><td><pre>        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_pod<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="46"></td><td><pre>            Tp<span class="token punctuation">.</span>append<span class="token punctuation">(</span>c_tp<span class="token punctuation">(</span>mark_numbers<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="47"></td><td><pre>            Td<span class="token punctuation">.</span>append<span class="token punctuation">(</span>ratio_T <span class="token operator">*</span> c_tp<span class="token punctuation">(</span>mark_numbers<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="48"></td><td><pre>            loc<span class="token punctuation">.</span>append<span class="token punctuation">(</span>g_loc<span class="token punctuation">(</span>mark_numbers<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="49"></td><td><pre>        <span class="token comment"># print ("每个货架的位置为：", loc)</span></pre></td></tr><tr><td data-num="50"></td><td><pre>        <span class="token comment"># print ("拣货站台的位置为：", [(weight - 1) / 2, length])</span></pre></td></tr><tr><td data-num="51"></td><td><pre>        <span class="token keyword">return</span> Tp<span class="token punctuation">,</span> Td<span class="token punctuation">,</span> loc<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">(</span>weight <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> length<span class="token punctuation">]</span></pre></td></tr><tr><td data-num="52"></td><td><pre></pre></td></tr><tr><td data-num="53"></td><td><pre></pre></td></tr><tr><td data-num="54"></td><td><pre><span class="token comment"># 函数功能：计算 Tp</span></pre></td></tr><tr><td data-num="55"></td><td><pre><span class="token comment"># 输入参数：仓库长度，仓库宽度，货架位置记号</span></pre></td></tr><tr><td data-num="56"></td><td><pre><span class="token comment"># 输出参数：机器人空载到达货架位置所需时间 Tp</span></pre></td></tr><tr><td data-num="57"></td><td><pre><span class="token keyword">def</span> <span class="token function">c_tp</span><span class="token punctuation">(</span>mark_number<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="58"></td><td><pre>    terminus <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">(</span>weight <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> length<span class="token punctuation">]</span></pre></td></tr><tr><td data-num="59"></td><td><pre>    x<span class="token punctuation">,</span> y <span class="token operator">=</span> g_loc<span class="token punctuation">(</span>mark_number<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="60"></td><td><pre>    <span class="token keyword">return</span> <span class="token builtin">abs</span><span class="token punctuation">(</span>x <span class="token operator">-</span> terminus<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token builtin">abs</span><span class="token punctuation">(</span>y <span class="token operator">-</span> terminus<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="61"></td><td><pre></pre></td></tr><tr><td data-num="62"></td><td><pre></pre></td></tr><tr><td data-num="63"></td><td><pre><span class="token comment"># 函数功能：根据标记获取货架位置</span></pre></td></tr><tr><td data-num="64"></td><td><pre><span class="token comment"># 输入参数：仓库长度，货架位置记号</span></pre></td></tr><tr><td data-num="65"></td><td><pre><span class="token comment"># 输出参数：货架位置（x, y）</span></pre></td></tr><tr><td data-num="66"></td><td><pre><span class="token keyword">def</span> <span class="token function">g_loc</span><span class="token punctuation">(</span>mark_number<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="67"></td><td><pre>    x <span class="token operator">=</span> mark_number <span class="token operator">//</span> length</pre></td></tr><tr><td data-num="68"></td><td><pre>    y <span class="token operator">=</span> mark_number <span class="token operator">%</span> length</pre></td></tr><tr><td data-num="69"></td><td><pre>    <span class="token keyword">return</span> x<span class="token punctuation">,</span> y</pre></td></tr><tr><td data-num="70"></td><td><pre></pre></td></tr><tr><td data-num="71"></td><td><pre></pre></td></tr><tr><td data-num="72"></td><td><pre><span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="73"></td><td><pre>    <span class="token triple-quoted-string string">'''检测布局是否合法'''</span></pre></td></tr><tr><td data-num="74"></td><td><pre>    <span class="token keyword">if</span> n_pod <span class="token operator">></span> length <span class="token operator">*</span> weight<span class="token punctuation">:</span></pre></td></tr><tr><td data-num="75"></td><td><pre>        <span class="token keyword">raise</span> Exception<span class="token punctuation">(</span><span class="token string">"****货架数量与仓库布局不匹配****"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="76"></td><td><pre>    <span class="token keyword">if</span> <span class="token keyword">not</span> <span class="token punctuation">(</span>pod_limitation<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">&lt;</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>commodity_limitation<span class="token punctuation">)</span> <span class="token operator">/</span> n_pod <span class="token operator">&lt;</span> pod_limitation<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="77"></td><td><pre>        <span class="token keyword">raise</span> Exception<span class="token punctuation">(</span><span class="token string">"总商品存货数量与货架数量不匹配"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="78"></td><td><pre>    <span class="token keyword">if</span> total_order <span class="token operator">&lt;</span> n_order <span class="token keyword">or</span> total_order <span class="token operator">></span> <span class="token builtin">sum</span><span class="token punctuation">(</span>commodity_limitation<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="79"></td><td><pre>        <span class="token keyword">raise</span> Exception<span class="token punctuation">(</span><span class="token string">"订单数量与订单总需求商品不匹配"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="80"></td><td><pre></pre></td></tr><tr><td data-num="81"></td><td><pre>    json_datas <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>  <span class="token comment"># json 字符串格式变量，用来保存生成数据</span></pre></td></tr><tr><td data-num="82"></td><td><pre>    <span class="token keyword">for</span> n_data <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_datas<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="83"></td><td><pre></pre></td></tr><tr><td data-num="84"></td><td><pre>        <span class="token triple-quoted-string string">'''生成货架分布'''</span></pre></td></tr><tr><td data-num="85"></td><td><pre>        Tp<span class="token punctuation">,</span> Td<span class="token punctuation">,</span> loc_pod<span class="token punctuation">,</span> loc_station <span class="token operator">=</span> g_pod<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 生成仓库布局</span></pre></td></tr><tr><td data-num="86"></td><td><pre>        <span class="token comment"># Tp, Td = np.array(Tp), np.array(Td)</span></pre></td></tr><tr><td data-num="87"></td><td><pre>        <span class="token comment"># print(Tp.tolist(), sep=',')</span></pre></td></tr><tr><td data-num="88"></td><td><pre>        <span class="token comment"># print(Td.tolist(), sep=',')</span></pre></td></tr><tr><td data-num="89"></td><td><pre></pre></td></tr><tr><td data-num="90"></td><td><pre>        <span class="token triple-quoted-string string">'''生成商品分布'''</span></pre></td></tr><tr><td data-num="91"></td><td><pre>        commodities_distribution <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token punctuation">(</span>n_pod<span class="token punctuation">,</span> n_commodity_type<span class="token punctuation">)</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span><span class="token builtin">int</span><span class="token punctuation">)</span>  <span class="token comment"># 存储货架上商品数量</span></pre></td></tr><tr><td data-num="92"></td><td><pre>        remain_commodity <span class="token operator">=</span> commodity_limitation<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span>  <span class="token comment"># 剩余商品</span></pre></td></tr><tr><td data-num="93"></td><td><pre>        remain_commodity_sum <span class="token operator">=</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>remain_commodity<span class="token punctuation">)</span>  <span class="token comment"># noqa, 剩余商品汇总</span></pre></td></tr><tr><td data-num="94"></td><td><pre>        pod_commodity_sum <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> n_pod</pre></td></tr><tr><td data-num="95"></td><td><pre>        pod_state <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> n_pod  <span class="token comment"># 货架存货状态，0 表示还未到达最小容量，1 表示达到最小容量，2 表示在最小容量及最大容量之间，3 表示已经达到最大容量</span></pre></td></tr><tr><td data-num="96"></td><td><pre>        <span class="token comment"># 首先保证每个货架都满足最低限制</span></pre></td></tr><tr><td data-num="97"></td><td><pre>        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_pod<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="98"></td><td><pre>            selected_pod <span class="token operator">=</span> i</pre></td></tr><tr><td data-num="99"></td><td><pre>            <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>pod_limitation<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="100"></td><td><pre>                random_number <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> remain_commodity_sum<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="101"></td><td><pre>                selected_commodity <span class="token operator">=</span> get_selected_commodity<span class="token punctuation">(</span>remain_commodity<span class="token punctuation">,</span> random_number<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="102"></td><td><pre></pre></td></tr><tr><td data-num="103"></td><td><pre>                commodities_distribution<span class="token punctuation">[</span>selected_pod<span class="token punctuation">,</span> selected_commodity<span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span></pre></td></tr><tr><td data-num="104"></td><td><pre>                remain_commodity<span class="token punctuation">[</span>selected_commodity<span class="token punctuation">]</span> <span class="token operator">-=</span> <span class="token number">1</span></pre></td></tr><tr><td data-num="105"></td><td><pre>                remain_commodity_sum <span class="token operator">=</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>remain_commodity<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="106"></td><td><pre>                pod_commodity_sum<span class="token punctuation">[</span>selected_pod<span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span></pre></td></tr><tr><td data-num="107"></td><td><pre>                pod_state<span class="token punctuation">[</span>selected_pod<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span> <span class="token keyword">if</span> pod_commodity_sum<span class="token punctuation">[</span>selected_pod<span class="token punctuation">]</span> <span class="token operator">&lt;</span> pod_limitation<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token keyword">else</span> <span class="token punctuation">(</span></pre></td></tr><tr><td data-num="108"></td><td><pre>                    <span class="token number">1</span> <span class="token keyword">if</span> pod_commodity_sum<span class="token punctuation">[</span>selected_pod<span class="token punctuation">]</span> <span class="token operator">==</span> pod_limitation<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token keyword">else</span> <span class="token punctuation">(</span></pre></td></tr><tr><td data-num="109"></td><td><pre>                        <span class="token number">2</span> <span class="token keyword">if</span> pod_commodity_sum<span class="token punctuation">[</span>selected_pod<span class="token punctuation">]</span> <span class="token operator">&lt;</span> pod_limitation<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword">else</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="110"></td><td><pre>        <span class="token keyword">while</span> remain_commodity_sum <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="111"></td><td><pre>            selected_pod <span class="token operator">=</span> get_selected_pod<span class="token punctuation">(</span>pod_state<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="112"></td><td><pre>            random_number <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> remain_commodity_sum<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="113"></td><td><pre>            selected_commodity <span class="token operator">=</span> get_selected_commodity<span class="token punctuation">(</span>remain_commodity<span class="token punctuation">,</span> random_number<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="114"></td><td><pre></pre></td></tr><tr><td data-num="115"></td><td><pre>            commodities_distribution<span class="token punctuation">[</span>selected_pod<span class="token punctuation">,</span> selected_commodity<span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span></pre></td></tr><tr><td data-num="116"></td><td><pre>            remain_commodity<span class="token punctuation">[</span>selected_commodity<span class="token punctuation">]</span> <span class="token operator">-=</span> <span class="token number">1</span></pre></td></tr><tr><td data-num="117"></td><td><pre>            remain_commodity_sum <span class="token operator">=</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>remain_commodity<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="118"></td><td><pre>            pod_commodity_sum<span class="token punctuation">[</span>selected_pod<span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span></pre></td></tr><tr><td data-num="119"></td><td><pre>            pod_state<span class="token punctuation">[</span>selected_pod<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span> <span class="token keyword">if</span> pod_commodity_sum<span class="token punctuation">[</span>selected_pod<span class="token punctuation">]</span> <span class="token operator">&lt;</span> pod_limitation<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token keyword">else</span> <span class="token punctuation">(</span></pre></td></tr><tr><td data-num="120"></td><td><pre>                <span class="token number">1</span> <span class="token keyword">if</span> pod_commodity_sum<span class="token punctuation">[</span>selected_pod<span class="token punctuation">]</span> <span class="token operator">==</span> pod_limitation<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token keyword">else</span> <span class="token punctuation">(</span></pre></td></tr><tr><td data-num="121"></td><td><pre>                    <span class="token number">2</span> <span class="token keyword">if</span> pod_commodity_sum<span class="token punctuation">[</span>selected_pod<span class="token punctuation">]</span> <span class="token operator">&lt;</span> pod_limitation<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword">else</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="122"></td><td><pre>        <span class="token comment"># print(commodities_distribution.tolist(), sep=',')</span></pre></td></tr><tr><td data-num="123"></td><td><pre></pre></td></tr><tr><td data-num="124"></td><td><pre>        <span class="token triple-quoted-string string">'''生成订单分布'''</span></pre></td></tr><tr><td data-num="125"></td><td><pre>        orders <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token punctuation">(</span>n_order<span class="token punctuation">,</span> n_commodity_type<span class="token punctuation">)</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span><span class="token builtin">int</span><span class="token punctuation">)</span>  <span class="token comment"># 订单 o 中商品 c 的数量</span></pre></td></tr><tr><td data-num="126"></td><td><pre>        remain_commodity <span class="token operator">=</span> commodity_limitation<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span>  <span class="token comment"># 剩余商品</span></pre></td></tr><tr><td data-num="127"></td><td><pre>        remain_commodity_sum <span class="token operator">=</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>remain_commodity<span class="token punctuation">)</span>  <span class="token comment"># 剩余商品汇总</span></pre></td></tr><tr><td data-num="128"></td><td><pre>        remain_order <span class="token operator">=</span> total_order  <span class="token comment"># 剩余订单需求商品数量</span></pre></td></tr><tr><td data-num="129"></td><td><pre>        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n_order<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="130"></td><td><pre>            selected_order <span class="token operator">=</span> i</pre></td></tr><tr><td data-num="131"></td><td><pre>            random_number <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> remain_commodity_sum<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="132"></td><td><pre>            selected_commodity <span class="token operator">=</span> get_selected_commodity<span class="token punctuation">(</span>remain_commodity<span class="token punctuation">,</span> random_number<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="133"></td><td><pre></pre></td></tr><tr><td data-num="134"></td><td><pre>            orders<span class="token punctuation">[</span>selected_order<span class="token punctuation">,</span> selected_commodity<span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span></pre></td></tr><tr><td data-num="135"></td><td><pre>            remain_commodity<span class="token punctuation">[</span>selected_commodity<span class="token punctuation">]</span> <span class="token operator">-=</span> <span class="token number">1</span></pre></td></tr><tr><td data-num="136"></td><td><pre>            remain_commodity_sum <span class="token operator">=</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>remain_commodity<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="137"></td><td><pre>            remain_order <span class="token operator">-=</span> <span class="token number">1</span></pre></td></tr><tr><td data-num="138"></td><td><pre>        <span class="token keyword">while</span> remain_order <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="139"></td><td><pre>            selected_order <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> n_order <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="140"></td><td><pre>            random_number <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> remain_commodity_sum<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="141"></td><td><pre>            selected_commodity <span class="token operator">=</span> get_selected_commodity<span class="token punctuation">(</span>remain_commodity<span class="token punctuation">,</span> random_number<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="142"></td><td><pre></pre></td></tr><tr><td data-num="143"></td><td><pre>            orders<span class="token punctuation">[</span>selected_order<span class="token punctuation">,</span> selected_commodity<span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span></pre></td></tr><tr><td data-num="144"></td><td><pre>            remain_commodity<span class="token punctuation">[</span>selected_commodity<span class="token punctuation">]</span> <span class="token operator">-=</span> <span class="token number">1</span></pre></td></tr><tr><td data-num="145"></td><td><pre>            remain_commodity_sum <span class="token operator">=</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>remain_commodity<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="146"></td><td><pre>            remain_order <span class="token operator">-=</span> <span class="token number">1</span></pre></td></tr><tr><td data-num="147"></td><td><pre></pre></td></tr><tr><td data-num="148"></td><td><pre>        <span class="token comment"># print ("随机生成订单矩阵为：")</span></pre></td></tr><tr><td data-num="149"></td><td><pre>        <span class="token comment"># print(orders.tolist(), sep=',')</span></pre></td></tr><tr><td data-num="150"></td><td><pre></pre></td></tr><tr><td data-num="151"></td><td><pre>        <span class="token triple-quoted-string string">'''生成json格式数据'''</span></pre></td></tr><tr><td data-num="152"></td><td><pre>        <span class="token comment"># 需要保存的数据有：</span></pre></td></tr><tr><td data-num="153"></td><td><pre>        <span class="token comment"># 仓库系列 (2)：仓库长度 (length)、仓库宽度 (weight)</span></pre></td></tr><tr><td data-num="154"></td><td><pre>        <span class="token comment"># 货架系列 (2)：货架数量 (n_pod)、货架容量限制 (pod_limitation)、 货架位置 (loc_pod)、拣货口位置（loc_station）</span></pre></td></tr><tr><td data-num="155"></td><td><pre>        <span class="token comment"># 机器人系列 (4)：机器人数量 (n_robot)、机器人空载与负载速度比 (ratio_T)、机器人到达货架时间 (Tp、Td)</span></pre></td></tr><tr><td data-num="156"></td><td><pre>        <span class="token comment"># 商品系列 (3)：商品类型数量 (n_commodity_type)、每种商品总数量 (commodity_limitation)、货架 i 上包含商品 c 的数量 (A)</span></pre></td></tr><tr><td data-num="157"></td><td><pre>        <span class="token comment"># 订单系列 (3)：商品总需求量 (total_order)、订单数量 (n_order)、订单 i 中包含商品 c 的数量 (B)</span></pre></td></tr><tr><td data-num="158"></td><td><pre>        <span class="token comment"># 拣货系列 (1)：拣取一个商品所需时间 (Th)</span></pre></td></tr><tr><td data-num="159"></td><td><pre>        json_data <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">'length'</span><span class="token punctuation">:</span> length<span class="token punctuation">,</span> <span class="token string">'weight'</span><span class="token punctuation">:</span> weight<span class="token punctuation">,</span> <span class="token string">'n_pod'</span><span class="token punctuation">:</span> n_pod<span class="token punctuation">,</span> <span class="token string">'pod_limitation'</span><span class="token punctuation">:</span> pod_limitation<span class="token punctuation">,</span> <span class="token string">'loc_pod'</span><span class="token punctuation">:</span> loc_pod<span class="token punctuation">,</span></pre></td></tr><tr><td data-num="160"></td><td><pre>                     <span class="token string">'loc_station'</span><span class="token punctuation">:</span> loc_station<span class="token punctuation">,</span> <span class="token string">'n_robot'</span><span class="token punctuation">:</span> n_robot<span class="token punctuation">,</span> <span class="token string">'ratio_T'</span><span class="token punctuation">:</span> ratio_T<span class="token punctuation">,</span> <span class="token string">'Tp'</span><span class="token punctuation">:</span> Tp<span class="token punctuation">,</span> <span class="token string">'Td'</span><span class="token punctuation">:</span> Td<span class="token punctuation">,</span></pre></td></tr><tr><td data-num="161"></td><td><pre>                     <span class="token string">'n_commodity_type'</span><span class="token punctuation">:</span> n_commodity_type<span class="token punctuation">,</span> <span class="token string">'commodity_limitation'</span><span class="token punctuation">:</span> commodity_limitation<span class="token punctuation">,</span></pre></td></tr><tr><td data-num="162"></td><td><pre>                     <span class="token string">'A'</span><span class="token punctuation">:</span> commodities_distribution<span class="token punctuation">.</span>tolist<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'total_order'</span><span class="token punctuation">:</span> total_order<span class="token punctuation">,</span> <span class="token string">'n_order'</span><span class="token punctuation">:</span> n_order<span class="token punctuation">,</span> <span class="token string">'B'</span><span class="token punctuation">:</span> orders<span class="token punctuation">.</span>tolist<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'Th'</span><span class="token punctuation">:</span> Th<span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="163"></td><td><pre>        json_datas<span class="token punctuation">.</span>append<span class="token punctuation">(</span>json_data<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="164"></td><td><pre></pre></td></tr><tr><td data-num="165"></td><td><pre>    <span class="token triple-quoted-string string">'''生成json文件'''</span></pre></td></tr><tr><td data-num="166"></td><td><pre>    <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'datas/'</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>n_pod<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'p_'</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>n_robot<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'r_'</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>n_datas<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'.json'</span><span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'utf8'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> fp<span class="token punctuation">:</span></pre></td></tr><tr><td data-num="167"></td><td><pre>        <span class="token comment"># ensure_ascii=False 才能输入中文，否则是 Unicode 字符</span></pre></td></tr><tr><td data-num="168"></td><td><pre>        <span class="token comment"># indent=2 JSON 数据的缩进，美观</span></pre></td></tr><tr><td data-num="169"></td><td><pre>        json<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>json_datas<span class="token punctuation">,</span> fp<span class="token punctuation">,</span> ensure_ascii<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> indent<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="170"></td><td><pre></pre></td></tr><tr><td data-num="171"></td><td><pre>    fp<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="172"></td><td><pre>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'json file \''</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>n_pod<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'p_'</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>n_robot<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'r_'</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>n_datas<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'.json\''</span> <span class="token operator">+</span> <span class="token string">' generates succeed'</span><span class="token punctuation">)</span></pre></td></tr></table></figure>
+      <div class="tags">
+          <a href="/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/" rel="tag"><i class="ic i-tag"></i> 编程技巧</a>
+          <a href="/tags/python/" rel="tag"><i class="ic i-tag"></i> python</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2023-03-03 15:53:29" itemprop="dateModified" datetime="2023-03-03T15:53:29+08:00">2023-03-03</time>
+  </span>
+  <span id="2023/03/03/code/python/python_json/" class="item leancloud_visitors" data-flag-title="python读取及保存json文件" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/03/02/code/python/python_gurobi/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;sfqvPCt1&#x2F;6833939bly1gipewf5l51j20zk0m8b29.jpg" title="python+gurobi应用">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> python</span>
+  <h3>python+gurobi应用</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2023/03/12/code/python/python_enumerate/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;9fLZTKmF&#x2F;6833939bly1gicis081o9j20zk0m8dmr.jpg" title="python使用enumerate()给列表添加序号">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> python</span>
+  <h3>python使用enumerate()给列表添加序号</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-%E8%AF%BB%E5%8F%96json%E6%96%87%E4%BB%B6"><span class="toc-number">1.</span> <span class="toc-text"> 一、读取 json 文件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#loads%E4%BC%A0%E5%85%A5%E4%B8%80%E4%B8%AAjson%E6%A0%BC%E5%BC%8F%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%A7%A3%E7%A0%81%E4%B8%BApython%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.1.</span> <span class="toc-text">  loads  传入一个 JSON  格式的字符串，解码为 python  对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#load%E6%8A%8Ajson%E6%A0%BC%E5%BC%8F%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%E6%88%90python%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="toc-number">1.2.</span> <span class="toc-text">  load  把 JSON  格式文件，转换成 python  类型的数据</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C-%E5%AD%98%E5%82%A8json%E6%96%87%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text"> 二、存储 json 文件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#dumps%E6%8A%8Apython%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2%E6%88%90json%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">2.1.</span> <span class="toc-text">  dumps  把 python  类型数据转换成 JSON  字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#dump%E6%8A%8Apython%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%95%B0%E6%8D%AE%E4%BB%A5json%E6%A0%BC%E5%BC%8F%E5%AD%98%E5%82%A8%E5%88%B0%E6%96%87%E4%BB%B6%E4%B8%AD"><span class="toc-number">2.2.</span> <span class="toc-text">  dump  把 python  类型的数据以 JSON  格式存储到文件中</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89-%E6%88%90%E5%8A%9F%E4%BD%BF%E7%94%A8%E6%A1%88%E4%BE%8B"><span class="toc-number">3.</span> <span class="toc-text"> 三、成功使用案例</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BB%E5%8F%96json%E6%96%87%E4%BB%B6"><span class="toc-number">3.1.</span> <span class="toc-text"> 读取 json 文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%98%E5%82%A8json%E6%96%87%E4%BB%B6"><span class="toc-number">3.2.</span> <span class="toc-text"> 存储 json 文件</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2023/02/06/code/python/python_array_asarray/" rel="bookmark" title="np.array和np.asarray区别">np.array和np.asarray区别</a></li><li><a href="/2023/02/06/code/python/python_bitwise_operators/" rel="bookmark" title="Python按位运算符">Python按位运算符</a></li><li><a href="/2023/02/06/code/python/python_float/" rel="bookmark" title="Python浮点数运算不精确问题">Python浮点数运算不精确问题</a></li><li><a href="/2023/02/06/code/python/python_multiply/" rel="bookmark" title="python字符串、列表、元组乘法">python字符串、列表、元组乘法</a></li><li><a href="/2023/02/06/code/python/python_note/" rel="bookmark" title="Pycharm中的特殊注释">Pycharm中的特殊注释</a></li><li><a href="/2023/02/06/code/python/python_special_func/" rel="bookmark" title="特定功能函数">特定功能函数</a></li><li><a href="/2023/03/01/code/python/python_qt_install/" rel="bookmark" title="Python运行pyside2报错问题解决">Python运行pyside2报错问题解决</a></li><li><a href="/2023/03/01/code/python/python_test/" rel="bookmark" title="Python test in xxx问题">Python test in xxx问题</a></li><li><a href="/2023/03/02/code/python/python_gurobi/" rel="bookmark" title="python+gurobi应用">python+gurobi应用</a></li><li><a href="/2023/03/02/code/python/python_jupyter/" rel="bookmark" title="修改Jupyter Notebook默认工作路径">修改Jupyter Notebook默认工作路径</a></li><li><a href="/2023/03/02/code/python/python_numba/" rel="bookmark" title="使用numba对python进行加速">使用numba对python进行加速</a></li><li><a href="/2023/03/02/code/python/python_pip/" rel="bookmark" title="修改pip路径">修改pip路径</a></li><li><a href="/2023/03/02/code/python/python_try_except/" rel="bookmark" title="python下的try-except处理异常">python下的try-except处理异常</a></li><li class="active"><a href="/2023/03/03/code/python/python_json/" rel="bookmark" title="python读取及保存json文件">python读取及保存json文件</a></li><li><a href="/2023/03/12/code/python/python_class_inherit/" rel="bookmark" title="python类的继承">python类的继承</a></li><li><a href="/2023/03/12/code/python/python_enumerate/" rel="bookmark" title="python使用enumerate()给列表添加序号">python使用enumerate()给列表添加序号</a></li><li><a href="/2023/03/23/code/python/python_problem/" rel="bookmark" title="python一些报错的处理">python一些报错的处理</a></li><li><a href="/2023/03/23/code/python/python_type_hints/" rel="bookmark" title="python类型提示">python类型提示</a></li><li><a href="/2023/03/24/code/python/python_jMetal/" rel="bookmark" title="python+jMetal应用">python+jMetal应用</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Darling F"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">Darling F</p>
+  <div class="description" itemprop="description">小樊&小小樊的学习笔记🌸</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">46</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">12</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">19</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3FpYW5xaXUtY2VsbA==" title="https:&#x2F;&#x2F;github.com&#x2F;qianqiu-cell"><i class="ic i-github"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjI4MzI1Njc4NTFAcXEuY29t" title="mailto:2832567851@qq.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2023/03/02/code/python/python_gurobi/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2023/03/12/code/python/python_enumerate/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/02/06/code/python/python_bitwise_operators/" title="Python按位运算符">Python按位运算符</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+</div>
+
+    <span><a href="/2022/11/07/blog/hexo_style/" title="shoka格式">shoka格式</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/office/" title="分类于 office技巧">office技巧</a>
+</div>
+
+    <span><a href="/2023/01/02/office/office/" title="Office技巧">Office技巧</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/latex/" title="分类于 latex">latex</a>
+</div>
+
+    <span><a href="/2023/01/20/latex/latex_install/" title="Vscode+TexLive+Latex workshop安装">Vscode+TexLive+Latex workshop安装</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/24/code/python/python_jMetal/" title="python+jMetal应用">python+jMetal应用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
+</div>
+
+    <span><a href="/2022/11/25/math/derivative_of_the_inverse_matrix/" title="逆矩阵的求导">逆矩阵的求导</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/02/06/code/python/python_multiply/" title="python字符串、列表、元组乘法">python字符串、列表、元组乘法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
+</div>
+
+    <span><a href="/2023/03/16/optimal/SPEA/" title="SPEAI-II">SPEAI-II</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+</div>
+
+    <span><a href="/2022/11/06/blog/hexo/" title="Github+Hexo+shoka主题搭建个人博客">Github+Hexo+shoka主题搭建个人博客</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/latex/" title="分类于 latex">latex</a>
+</div>
+
+    <span><a href="/2023/03/12/latex/latex_quotation_mark/" title="latex输入双引号">latex输入双引号</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Darling F @ 唯爱ぺ灬babyル</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">106k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:36</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2023/03/03/code/python/python_json/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i> 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

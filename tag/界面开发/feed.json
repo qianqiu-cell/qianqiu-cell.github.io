@@ -5,11 +5,11 @@
     "home_page_url": "http://qianqiu-cell.github.io",
     "items": [
         {
-            "id": "http://qianqiu-cell.github.io/2023/03/01/code/python_qt_install/",
-            "url": "http://qianqiu-cell.github.io/2023/03/01/code/python_qt_install/",
+            "id": "http://qianqiu-cell.github.io/2023/03/01/code/python/python_qt_install/",
+            "url": "http://qianqiu-cell.github.io/2023/03/01/code/python/python_qt_install/",
             "title": "Python运行pyside2报错问题解决",
             "date_published": "2023-02-28T16:00:00.000Z",
-            "content_html": "<h1 id=\"一-问题描述\"><a class=\"markdownIt-Anchor\" href=\"#一-问题描述\">#</a> 一、问题描述</h1>\n<p>在 <code>pycharm</code>  中运行 <code>pyside2</code>  时出现如下错误<br>\n<img data-src=\"/images/python_qt_install/1.1.png\" alt=\"\"></p>\n<h1 id=\"二-解决方法\"><a class=\"markdownIt-Anchor\" href=\"#二-解决方法\">#</a> 二、解决方法</h1>\n<p>在环境变量（用户变量）中添加如下环境变量<br>\n变量名： <code>QT_QPA_PLATFORM_PLUGIN_PATH</code> <br>\n 变量值： <code>D:\\anaconda3\\site\\envs\\pytorch\\Lib\\site-packages\\PySide2\\plugins\\platforms</code> <br>\n⚠️⚠️⚠️变量值更改为自己的 <code>Pyside2</code>  包路径</p>\n",
+            "content_html": "<p>安装过程<span class=\"exturl\" data-url=\"aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3M/X19iaXo9TXpVME1EUTFOakF6Tmc9PSZhbXA7bWlkPTIyNDc1MjY2NzcmYW1wO2lkeD0zJmFtcDtzbj0wMGU4MDliZmI2NWUzZDQzYzhjMGZjYjVlMGJjNzIwZiZhbXA7Y2hrc209ZmIzYWNjMWVjYzRkNDUwOGM2ZmMzZDIzMzQ5ZGE2NTI1Mzg1ZjEwMTEzNThmMGU2ODIwNTdiZTE0NzU1NjkxNTJiNmRiOTM3ZGVmZCZhbXA7c2NlbmU9Mjc=\">戳此</span></p>\n<h1 id=\"一-问题描述\"><a class=\"markdownIt-Anchor\" href=\"#一-问题描述\">#</a> 一、问题描述</h1>\n<p>在 <code>pycharm</code>  中运行 <code>pyside2</code>  时出现如下错误<br>\n<img data-src=\"/images/code/python/python_qt_install/1.1.png\" alt=\"\"></p>\n<h1 id=\"二-解决方法\"><a class=\"markdownIt-Anchor\" href=\"#二-解决方法\">#</a> 二、解决方法</h1>\n<p>在环境变量（用户变量）中添加如下环境变量<br>\n变量名： <code>QT_QPA_PLATFORM_PLUGIN_PATH</code> <br>\n 变量值： <code>D:\\anaconda3\\site\\envs\\pytorch\\Lib\\site-packages\\PySide2\\plugins\\platforms</code> <br>\n⚠️⚠️⚠️变量值更改为自己的 <code>Pyside2</code>  包路径</p>\n",
             "tags": [
                 "python",
                 "Qt",

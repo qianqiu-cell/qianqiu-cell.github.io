@@ -9,32 +9,35 @@
         <lastBuildDate>Wed, 01 Mar 2023 00:00:00 +0800</lastBuildDate>
         <category>Windows系统</category>
         <category>博客搭建</category>
-        <category>python</category>
-        <category>编程技巧</category>
-        <category>C++</category>
-        <category>Qt</category>
-        <category>界面开发</category>
         <category>控制工程</category>
         <category>其他</category>
         <category>一些小目标</category>
-        <category>硬件开发</category>
         <category>烹饪技巧</category>
+        <category>硬件开发</category>
         <category>latex技巧</category>
         <category>论文编辑</category>
         <category>数学基础</category>
         <category>office技巧</category>
         <category>最优化</category>
+        <category>多目标最优化</category>
+        <category>单目标最优化</category>
+        <category>C++</category>
+        <category>编程技巧</category>
+        <category>python</category>
+        <category>Qt</category>
+        <category>界面开发</category>
         <item>
-            <guid isPermalink="true">http://qianqiu-cell.github.io/2023/03/01/code/python_qt_install/</guid>
+            <guid isPermalink="true">http://qianqiu-cell.github.io/2023/03/01/code/python/python_qt_install/</guid>
             <title>Python运行pyside2报错问题解决</title>
-            <link>http://qianqiu-cell.github.io/2023/03/01/code/python_qt_install/</link>
+            <link>http://qianqiu-cell.github.io/2023/03/01/code/python/python_qt_install/</link>
             <category>python</category>
             <category>Qt</category>
             <category>界面开发</category>
             <pubDate>Wed, 01 Mar 2023 00:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;一-问题描述&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-问题描述&#34;&gt;#&lt;/a&gt; 一、问题描述&lt;/h1&gt;
+            <description><![CDATA[ &lt;p&gt;安装过程&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tcC53ZWl4aW4ucXEuY29tL3M/X19iaXo9TXpVME1EUTFOakF6Tmc9PSZhbXA7bWlkPTIyNDc1MjY2NzcmYW1wO2lkeD0zJmFtcDtzbj0wMGU4MDliZmI2NWUzZDQzYzhjMGZjYjVlMGJjNzIwZiZhbXA7Y2hrc209ZmIzYWNjMWVjYzRkNDUwOGM2ZmMzZDIzMzQ5ZGE2NTI1Mzg1ZjEwMTEzNThmMGU2ODIwNTdiZTE0NzU1NjkxNTJiNmRiOTM3ZGVmZCZhbXA7c2NlbmU9Mjc=&#34;&gt;戳此&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;一-问题描述&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-问题描述&#34;&gt;#&lt;/a&gt; 一、问题描述&lt;/h1&gt;
 &lt;p&gt;在 &lt;code&gt;pycharm&lt;/code&gt;  中运行 &lt;code&gt;pyside2&lt;/code&gt;  时出现如下错误&lt;br&gt;
-&lt;img data-src=&#34;/images/python_qt_install/1.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/images/code/python/python_qt_install/1.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;二-解决方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-解决方法&#34;&gt;#&lt;/a&gt; 二、解决方法&lt;/h1&gt;
 &lt;p&gt;在环境变量（用户变量）中添加如下环境变量&lt;br&gt;
 变量名： &lt;code&gt;QT_QPA_PLATFORM_PLUGIN_PATH&lt;/code&gt; &lt;br&gt;

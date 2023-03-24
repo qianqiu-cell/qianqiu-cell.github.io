@@ -89,12 +89,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://i.postimg.cc/PrMP8VnR/6833939bly1gipey84bjtj20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/HkCRF3Jd/6833939bly1giph4fomxoj20zk0m8axp.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/NfrnPRLB/6833939bly1gicljitigmj20zk0m87fp.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/BZm7vMPq/6833939bly1gicliierfjj20zk0m8npd.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/7ZxD0BYf/6833939bly1gipetfk5zwj20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/7hf9FrVf/6833939bly1gicitzannuj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/Kc1pRtPB/6833939bly1giclimtf7dj20zk0m8qav.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/MpC2Zxr2/6833939bly1gipeyonbf9j20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/s2rWYCG5/6833939bly1gipevuctzzj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/PqLT6CGD/6833939bly1giclh0m9pdj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/mg84wQtV/6833939bly1gipesx5fdwj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/Pr6hbWLy/6833939bly1gicitht3xtj20zk0m8k5v.jpg"></li>
         </ul>
       </div>
     </header>
@@ -120,22 +120,22 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/01/02/blog/hexo_image/" itemprop="url" title="Hexo图片显示异常问题"><img data-src="https://i.postimg.cc/4yY0G95v/6833939bly1giclj9410cj20zk0m8h12.jpg"></a>
+    <a href="/2023/02/06/code/python/python_array_asarray/" itemprop="url" title="np.array和np.asarray区别"><img data-src="https://i.postimg.cc/0ymmKyj8/6833939bly1gipew8gmvyj20zk0m87wh.jpg"></a>
   </div>
   <div class="info">
     
 <div class="meta">
-  <span class="item" title="创建时间：2023-01-02 00:00:00">
+  <span class="item" title="创建时间：2023-02-06 00:00:00">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
-    <time itemprop="dateCreated datePublished" datetime="2023-01-02T00:00:00+08:00">2023-01-02</time>
+    <time itemprop="dateCreated datePublished" datetime="2023-02-06T00:00:00+08:00">2023-02-06</time>
   </span>
   <span class="item" title="本文字数">
     <span class="icon">
       <i class="ic i-pen"></i>
     </span>
-    <span>325</span>
+    <span>624</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -146,49 +146,42 @@
   </span>
 </div>
 
-    <h3><a href="/2023/01/02/blog/hexo_image/" itemprop="url" title="Hexo图片显示异常问题">Hexo图片显示异常问题</a></h3>
+    <h3><a href="/2023/02/06/code/python/python_array_asarray/" itemprop="url" title="np.array和np.asarray区别">np.array和np.asarray区别</a></h3>
     <div class="excerpt">
-        结合 shoka 文件官方文档以及评论，最终解决方法如下
-# 一、下载 shoka 主题图片
-主题图片：下载图片（主题图片来源于 shoka 评论区）
-shoka 主题图片同时备份至百度网盘及个人 U 盘
-# 二、上传图片至 PostImage 图床
-首先进入 PostImage 官网，进行网站注册，注册密码已备份至 U 盘 - 博客 word 说明中
-注册完成之后将 shoka 图片一并上传至 PostImage 中，并复制所有图片链接如下图所示（界面打开方式：我的图片→默认分类→分享）
-
-# 三、上传图片至 shoka
-参考如下 shoka 官方说明
-
-根据最后两行信息，在...
+        np.array 和 np.asarray 都可将结构数据转换为 ndarray 类型
+但是主要区别就是当数据源是 ndarray 时：
+np.array 占用新的内存，即转换后的变量与原始变量相互独立
+但 np.asarray 不会占用新的内存，即转换后的变量与原始变量无关
+import numpy as np #example 1: data1=[[1,1,1],[1,1,1],[1,1,1]] arr2=np.array(data1) arr3=np.asarray(data1) data1[1][1]=2 print &#39;data1:\n&#39;,data1 print...
     </div>
     <div class="meta footer">
       <span>
-        <a href="/categories/blog/" itemprop="url" title="博客搭建"><i class="ic i-flag"></i>博客搭建</a>
+        <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
       </span>
     </div>
-    <a href="/2023/01/02/blog/hexo_image/" itemprop="url" title="Hexo图片显示异常问题" class="btn">more...</a>
+    <a href="/2023/02/06/code/python/python_array_asarray/" itemprop="url" title="np.array和np.asarray区别" class="btn">more...</a>
   </div>
 </article>
 
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/01/02/office/office/" itemprop="url" title="Office技巧"><img data-src="https://i.postimg.cc/T3JDRHh0/6833939bly1giclh5u05ej20zk0m87df.jpg"></a>
+    <a href="/2023/02/06/code/python/python_bitwise_operators/" itemprop="url" title="Python按位运算符"><img data-src="https://i.postimg.cc/D0jQ6p3n/6833939bly1gipeuv80yoj20zk0m8kjl.jpg"></a>
   </div>
   <div class="info">
     
 <div class="meta">
-  <span class="item" title="创建时间：2023-01-02 00:00:00">
+  <span class="item" title="创建时间：2023-02-06 00:00:00">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
-    <time itemprop="dateCreated datePublished" datetime="2023-01-02T00:00:00+08:00">2023-01-02</time>
+    <time itemprop="dateCreated datePublished" datetime="2023-02-06T00:00:00+08:00">2023-02-06</time>
   </span>
   <span class="item" title="本文字数">
     <span class="icon">
       <i class="ic i-pen"></i>
     </span>
-    <span>300</span>
+    <span>253</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -199,48 +192,60 @@ shoka 主题图片同时备份至百度网盘及个人 U 盘
   </span>
 </div>
 
-    <h3><a href="/2023/01/02/office/office/" itemprop="url" title="Office技巧">Office技巧</a></h3>
+    <h3><a href="/2023/02/06/code/python/python_bitwise_operators/" itemprop="url" title="Python按位运算符">Python按位运算符</a></h3>
     <div class="excerpt">
-        # 一、使用 Excel 将两列内容合并为一列
-在任意两个行数相等的列，在其后紧接着下一列第一行复制所选两列的内容，如下图所示
+        Bitwise Operator
+Description
+Simple Example
 
-然后按组合键 Ctrl+E ，在列中就自动合并了两列的内容，如下图所示
+&amp;amp;
+Bitwise OR Operator
+10 &amp;amp; 7 = 2
 
-# 二、刷新 word 中所有 mathtype 的公式编号
-首先 CTRL+A 全选文档，接着按 F9 ，进行公式编号的刷新
-# 三、一键调整 word 中 mathtype 公式的大小（以及格式刷后公式偏上问题）
-（1）在 MathType 选项卡中选择格式化公式
-（2）选择 MathType preference file ，点击 Browse...
-（3）在 MathType...
+|
+Bitwise XOR Operator
+10 | 7 = 15
+
+^
+Bitwise AND Operator
+10 ^ 7 = 13
+
+~
+Bitwise Ones’ Compliment Operator
+~10 = -11
+
+&amp;lt;&amp;lt;
+Bitwise Left Shift operator
+10&amp;lt;&amp;lt;2 =...
     </div>
     <div class="meta footer">
       <span>
-        <a href="/categories/office/" itemprop="url" title="office技巧"><i class="ic i-flag"></i>office技巧</a>
+        <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
       </span>
     </div>
-    <a href="/2023/01/02/office/office/" itemprop="url" title="Office技巧" class="btn">more...</a>
+    <a href="/2023/02/06/code/python/python_bitwise_operators/" itemprop="url" title="Python按位运算符" class="btn">more...</a>
   </div>
 </article>
 
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/12/24/blog/hexo_change/" itemprop="url" title="Hexo文件迁移"><img data-src="https://i.postimg.cc/jj2DQqdw/6833939bly1gicis3attqj20zk0m8k7l.jpg"></a>
+    <a href="/2023/02/06/code/python/python_float/" itemprop="url" title="Python浮点数运算不精确问题"><img data-src="https://i.postimg.cc/59gVBhjL/6833939bly1gipeybxm1pj20zk0m8niv.jpg"></a>
   </div>
   <div class="info">
     
 <div class="meta">
-  <span class="item" title="创建时间：2022-12-24 00:00:00">
+  <span class="item" title="创建时间：2023-02-06 00:00:00">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-12-24T00:00:00+08:00">2022-12-24</time>
+    <time itemprop="dateCreated datePublished" datetime="2023-02-06T00:00:00+08:00">2023-02-06</time>
   </span>
   <span class="item" title="本文字数">
     <span class="icon">
       <i class="ic i-pen"></i>
     </span>
-    <span>1.2k</span>
+    <span>154</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -251,98 +256,177 @@ shoka 主题图片同时备份至百度网盘及个人 U 盘
   </span>
 </div>
 
-    <h3><a href="/2022/12/24/blog/hexo_change/" itemprop="url" title="Hexo文件迁移">Hexo文件迁移</a></h3>
+    <h3><a href="/2023/02/06/code/python/python_float/" itemprop="url" title="Python浮点数运算不精确问题">Python浮点数运算不精确问题</a></h3>
     <div class="excerpt">
-        参考文章：https://blog.csdn.net/qq_36667170/article/details/118163563
-# 一、旧电脑文件备份
-将 node_modules 文件夹删除后备份其余所有文件
-
-# 二、新电脑准备工作
-# 2.1 git
-（1）首先下载并安装 git
-参考链接：https://zhuanlan.zhihu.com/p/103325381
-（2）在命令行中设置用户，注意这个不是登录，而是告诉远程仓库是谁上传的
-git config --global user.name &amp;quot;你的名字&amp;quot;（注意前边是 “-...
+        由于 Python 的浮点数以二进制形式表示，计算机在进行浮点运算时会产生浮点误差，如下场景所示
+a = [100.7, 100.9]print(sum(a))# 输出：201.60000000000002解决方法： round() 是 python 自带的一个函数，用于数字的四舍五入
+round(5.214,2)# 输出：5.21
     </div>
     <div class="meta footer">
       <span>
-        <a href="/categories/blog/" itemprop="url" title="博客搭建"><i class="ic i-flag"></i>博客搭建</a>
+        <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
       </span>
     </div>
-    <a href="/2022/12/24/blog/hexo_change/" itemprop="url" title="Hexo文件迁移" class="btn">more...</a>
+    <a href="/2023/02/06/code/python/python_float/" itemprop="url" title="Python浮点数运算不精确问题" class="btn">more...</a>
   </div>
 </article>
 
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/12/23/optimal/signal_objective_optimization/" itemprop="url" title="单目标搜索算法汇总"><img data-src="https://i.postimg.cc/HjG6CPjH/6833939bly1giclwuom7cj20zk0m8dvn.jpg"></a>
+    <a href="/2023/02/06/code/python/python_multiply/" itemprop="url" title="python字符串、列表、元组乘法"><img data-src="https://i.postimg.cc/tRkwx9wG/6833939bly1giclhpw3lwj20zk0m8gvw.jpg"></a>
   </div>
   <div class="info">
     
 <div class="meta">
-  <span class="item" title="创建时间：2022-12-23 00:00:00">
+  <span class="item" title="创建时间：2023-02-06 00:00:00">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-12-23T00:00:00+08:00">2022-12-23</time>
+    <time itemprop="dateCreated datePublished" datetime="2023-02-06T00:00:00+08:00">2023-02-06</time>
   </span>
   <span class="item" title="本文字数">
     <span class="icon">
       <i class="ic i-pen"></i>
     </span>
-    <span>4.3k</span>
+    <span>145</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
     <span class="icon">
       <i class="ic i-clock"></i>
     </span>
-    <span>4 分钟</span>
+    <span>1 分钟</span>
   </span>
 </div>
 
-    <h3><a href="/2022/12/23/optimal/signal_objective_optimization/" itemprop="url" title="单目标搜索算法汇总">单目标搜索算法汇总</a></h3>
+    <h3><a href="/2023/02/06/code/python/python_multiply/" itemprop="url" title="python字符串、列表、元组乘法">python字符串、列表、元组乘法</a></h3>
     <div class="excerpt">
-        # 一、最近邻搜索 (Nearest neighbor search, NNS)
-最近邻搜索算法是为 TSP 编程的最简单的贪婪方法之一。
-注：贪婪算法是指在对问题求解时，总是做出在当前看来时最好的选择，也就是说不从整体最优上加以考虑，算法得到的时在某种意义上的局部最优解
-NNS 算法的流程为：
-1、首先固定起点城市，并将起点城市当作当前目标城市
-2、在剩余未被选取的城市中选取距离当前目标城市最近的城市作为下一个目标城市
-3、重复步骤 2 直到所有城市都被依次选取完毕
-最近邻搜索的过程图如下图所示
-
-# 二、试验方法 (Pilot...
+        python 中，支持相乘的有字符串，列表，元组，相乘是内容相乘 n ，新的内容会重复 n 次
+str_a = &quot;我&quot;print(str_a * 3)list_a = (&quot;1&quot;, &quot;2&quot;, &quot;3&quot;)print(list_a * 3)list_b = [&quot;我&quot;, &quot;爱&quot;, &quot;python&quot;]print(list_b * 3)运行结果为
     </div>
     <div class="meta footer">
       <span>
-        <a href="/categories/optimal/" itemprop="url" title="最优化"><i class="ic i-flag"></i>最优化</a>
+        <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
       </span>
     </div>
-    <a href="/2022/12/23/optimal/signal_objective_optimization/" itemprop="url" title="单目标搜索算法汇总" class="btn">more...</a>
+    <a href="/2023/02/06/code/python/python_multiply/" itemprop="url" title="python字符串、列表、元组乘法" class="btn">more...</a>
   </div>
 </article>
 
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/11/28/math/covariance/" itemprop="url" title="数学期望、方差和协方差"><img data-src="https://i.postimg.cc/4yY0G95v/6833939bly1giclj9410cj20zk0m8h12.jpg"></a>
+    <a href="/2023/02/06/code/python/python_note/" itemprop="url" title="Pycharm中的特殊注释"><img data-src="https://i.postimg.cc/nLVnq323/6833939bly1giclfb3vzhj20zk0m8wny.jpg"></a>
   </div>
   <div class="info">
     
 <div class="meta">
-  <span class="item" title="创建时间：2022-11-28 00:00:00">
+  <span class="item" title="创建时间：2023-02-06 00:00:00">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-11-28T00:00:00+08:00">2022-11-28</time>
+    <time itemprop="dateCreated datePublished" datetime="2023-02-06T00:00:00+08:00">2023-02-06</time>
   </span>
   <span class="item" title="本文字数">
     <span class="icon">
       <i class="ic i-pen"></i>
     </span>
-    <span>2.5k</span>
+    <span>304</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2023/02/06/code/python/python_note/" itemprop="url" title="Pycharm中的特殊注释">Pycharm中的特殊注释</a></h3>
+    <div class="excerpt">
+        在 Pycharm 中， Python 的注释存在一些特殊的用法，比如 # noqa ， # todo ， # type
+
+noqa 指 no quality assurance ，用在一行代码后，表示这一行代码自动检查忽略错误，由 IDE 支持
+比如以下命名拼写问题，不会出现下划线提醒：
+
+也可以用作 # noqa: &amp;lt;error&amp;gt; ，表示忽略某一特定类型的错误，例如
+
+如上表示忽略了 numpy 引用但未使用的问题，不会出现提示
+
+作为助记符，表示将要完成的功能或任务，由 IDE 支持，比如在 PyCharm...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
+      </span>
+    </div>
+    <a href="/2023/02/06/code/python/python_note/" itemprop="url" title="Pycharm中的特殊注释" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/02/06/code/python/python_special_func/" itemprop="url" title="特定功能函数"><img data-src="https://i.postimg.cc/yxm4SRMm/6833939bly1gipetv6p75j20zk0m8x6p.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-02-06 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-02-06T00:00:00+08:00">2023-02-06</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>305</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2023/02/06/code/python/python_special_func/" itemprop="url" title="特定功能函数">特定功能函数</a></h3>
+    <div class="excerpt">
+        生成n个随机数，其和为固定值
+def func(amount, num): list1 = [] for i in range(0, num - 1): a = random.randint(0, amount) # 生成 n-1 个随机节点 list1.append(a) list1.sort() # 节点排序 list1.append(amount) # 设置第 n 个节点为 amount，即总金额 list2 = [] for i in range(len(list1)): if i == 0: b = list1[i] # 第一段长度为第 1 个节点 - 0 else: b =...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
+      </span>
+    </div>
+    <a href="/2023/02/06/code/python/python_special_func/" itemprop="url" title="特定功能函数" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/01/30/hardware/Quartus/" itemprop="url" title="Quartus基础教程"><img data-src="https://i.postimg.cc/ZK4XMWkQ/6833939bly1gipeudstjqj20zk0m8k3r.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-01-30 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-01-30T00:00:00+08:00">2023-01-30</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>1.8k</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -353,50 +437,46 @@ NNS 算法的流程为：
   </span>
 </div>
 
-    <h3><a href="/2022/11/28/math/covariance/" itemprop="url" title="数学期望、方差和协方差">数学期望、方差和协方差</a></h3>
+    <h3><a href="/2023/01/30/hardware/Quartus/" itemprop="url" title="Quartus基础教程">Quartus基础教程</a></h3>
     <div class="excerpt">
-        # 一、数学期望 E (x)
-数学期望简称期望或均值，它是随机变量取值的平均值，数学期望的计算公式为
-离散型：
-E(X)=∑ixipiE\left ( X \right ) =\sum_{i}^{} x_{i}p_{i}
-E(X)=i∑​xi​pi​
-连续型：
-E(X)=∫−∞+∞xf(x)dxE\left ( X \right ) =\int_{-\infty }^{+\infty } xf\left ( x \right ) dx
-E(X)=∫−∞+∞​xf(x)dx
+        # 一、Quartus 及驱动安装
+# 1.1 Quartus 安装
+根据百度网盘中的安装包及教程进行软件安装
 
-数学期望的性质
+# 1.2 驱动安装
+FPGA 与计算机共有两条数据线进行连接，一条用于供电及通讯，另一条用于程序的烧录。将 FPGA 开发板正确连接至电脑后，可在设备管理器中看到如 USB-SERIAL CH340 及 Altera USB-Blaster 则证明 FPGA 与计算机连接成功。（⚠️若小图标处有感叹号，则证明缺少驱动，可根据安装教程进行驱动安装，本次安装的电脑为重装后的电脑，没有安装任何驱动即可正确识别）
 
-性质 1：设 c 是常数，则E(c)=cE(c)=cE(c)=c
-性质 2：设 X 是随机变量，c...
+# 二、Modelsim 安装
+安装 Modelsim...
     </div>
     <div class="meta footer">
       <span>
-        <a href="/categories/math/" itemprop="url" title="数学基础"><i class="ic i-flag"></i>数学基础</a>
+        <a href="/categories/hardware/" itemprop="url" title="硬件开发"><i class="ic i-flag"></i>硬件开发</a>
       </span>
     </div>
-    <a href="/2022/11/28/math/covariance/" itemprop="url" title="数学期望、方差和协方差" class="btn">more...</a>
+    <a href="/2023/01/30/hardware/Quartus/" itemprop="url" title="Quartus基础教程" class="btn">more...</a>
   </div>
 </article>
 
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/11/25/math/derivative_of_the_inverse_matrix/" itemprop="url" title="逆矩阵的求导"><img data-src="https://i.postimg.cc/1tkd9zYL/6833939bly1giclx29mstj20zk0m8hdt.jpg"></a>
+    <a href="/2023/01/23/food/salt/" itemprop="url" title="盐的使用"><img data-src="https://i.postimg.cc/mr3FgpDV/6833939bly1giclgrvbd6j20zk0m8qv5.jpg"></a>
   </div>
   <div class="info">
     
 <div class="meta">
-  <span class="item" title="创建时间：2022-11-25 00:00:00">
+  <span class="item" title="创建时间：2023-01-23 00:00:00">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-11-25T00:00:00+08:00">2022-11-25</time>
+    <time itemprop="dateCreated datePublished" datetime="2023-01-23T00:00:00+08:00">2023-01-23</time>
   </span>
   <span class="item" title="本文字数">
     <span class="icon">
       <i class="ic i-pen"></i>
     </span>
-    <span>1.5k</span>
+    <span>648</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -407,42 +487,99 @@ E(X)=∫−∞+∞​xf(x)dx
   </span>
 </div>
 
-    <h3><a href="/2022/11/25/math/derivative_of_the_inverse_matrix/" itemprop="url" title="逆矩阵的求导">逆矩阵的求导</a></h3>
+    <h3><a href="/2023/01/23/food/salt/" itemprop="url" title="盐的使用">盐的使用</a></h3>
     <div class="excerpt">
-        # 一、结论
-对于矩阵A=(aij(t))n×nA=(a_{ij}(t))_{n\times n}A=(aij​(t))n×n​，其逆矩阵的导数为
-dA−1dt=−A−1dAdtA−1\frac{dA^{-1}}{dt}=-A^{-1}\frac{dA}{dt}A^{-1}
-dtdA−1​=−A−1dtdA​A−1
-#...
+        盐，号称百味之王，后厨里有一句话叫做 “好厨子一把盐”。盐的量掌握好了，这道菜就能做的八九不离十。关于盐的使用主要需要注意放盐量以及放盐的时间。
+
+# 一、盐的使用量
+  在做菜的过程中，对盐量的把控至关重要，盐量不足，对导致菜肴寡淡无味，盐量过多，则会毁掉这道菜肴。庄祖宜在《其实大家都想做菜》中曾谈及专业厨师和家庭厨师的最大差别，其实就在于家庭厨师...
     </div>
     <div class="meta footer">
       <span>
-        <a href="/categories/math/" itemprop="url" title="数学基础"><i class="ic i-flag"></i>数学基础</a>
+        <a href="/categories/food/" itemprop="url" title="烹饪技巧"><i class="ic i-flag"></i>烹饪技巧</a>
       </span>
     </div>
-    <a href="/2022/11/25/math/derivative_of_the_inverse_matrix/" itemprop="url" title="逆矩阵的求导" class="btn">more...</a>
+    <a href="/2023/01/23/food/salt/" itemprop="url" title="盐的使用" class="btn">more...</a>
   </div>
 </article>
 
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/11/24/math/conv/" itemprop="url" title="一般情况下的椭圆"><img data-src="https://i.postimg.cc/BnYVwNsY/6833939bly1giclfdu6exj20zk0m87hw.jpg"></a>
+    <a href="/2023/01/22/else/wish_2023/" itemprop="url" title="2023年的一些小目标"><img data-src="https://i.postimg.cc/L58yTZwK/6833939bly1gicli9lfebj20zk0m84qp.jpg"></a>
   </div>
   <div class="info">
     
 <div class="meta">
-  <span class="item" title="创建时间：2022-11-24 00:00:00">
+  <span class="item" title="创建时间：2023-01-22 00:00:00">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-11-24T00:00:00+08:00">2022-11-24</time>
+    <time itemprop="dateCreated datePublished" datetime="2023-01-22T00:00:00+08:00">2023-01-22</time>
   </span>
   <span class="item" title="本文字数">
     <span class="icon">
       <i class="ic i-pen"></i>
     </span>
-    <span>2.6k</span>
+    <span>788</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2023/01/22/else/wish_2023/" itemprop="url" title="2023年的一些小目标">2023年的一些小目标</a></h3>
+    <div class="excerpt">
+        2023 不能再碌碌无为了！！！everybody 动起来！！！
+# 一、生活篇
+
+学会做饭：
+
+从理论上学习做饭的原理，并使用 latex 形成一篇理论文档
+掌握 5 道可以拿得出手的荤菜（要获得小小樊同志的认可）
+学会用刀切菜
+亲自下厨做一桌菜
+做一个点餐软件，每学会一道菜添加一个菜品（基于 pyqt5 ）
+
+身体健康：
+
+年累计减重 5 公斤（目前 139 斤）
+年累计跑步 200 公里（在校每周 6 公里，要有跑步记录）
+年累计引体向上 1000 个（在校每周 30 个，要有 excel 表格记录）
+年累计俯卧撑 1500 个（每周 30 个，要有 excel...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/else/" itemprop="url" title="其他"><i class="ic i-flag"></i>其他</a>
+      </span>
+    </div>
+    <a href="/2023/01/22/else/wish_2023/" itemprop="url" title="2023年的一些小目标" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/01/20/latex/latex_install/" itemprop="url" title="Vscode+TexLive+Latex workshop安装"><img data-src="https://i.postimg.cc/nrwCs6qb/6833939bly1gicm07ih54j20zk0m84qp.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-01-20 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-01-20T00:00:00+08:00">2023-01-20</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>2.3k</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -453,172 +590,24 @@ dtdA−1​=−A−1dtdA​A−1
   </span>
 </div>
 
-    <h3><a href="/2022/11/24/math/conv/" itemprop="url" title="一般情况下的椭圆">一般情况下的椭圆</a></h3>
+    <h3><a href="/2023/01/20/latex/latex_install/" itemprop="url" title="Vscode+TexLive+Latex workshop安装">Vscode+TexLive+Latex workshop安装</a></h3>
     <div class="excerpt">
-        # 一、正定矩阵与椭圆的关系
-二维空间中椭圆最基本的形式为
-x2a2+y2b2=1\frac{x^{2}}{a^{2}} +\frac{y^{2}}{b^{2}} =1
-a2x2​+b2y2​=1
-上面的这个方程写成矩阵的形式为
-[xy]T[1a2001b2][xy]=xTAx=1\begin{bmatrix}
-x\\
-y
-\end{bmatrix}^{T}
-\begin{bmatrix}
-\frac{1}{a^{2}} &amp;amp; 0\\
-0&amp;amp;...
+        # 一、Tex Live 与 Latex workshop 安装
+Tex Live 可以从官网进行安装， Latex workshop 从 Vscode 的插件商城安装
+⚠️⚠️⚠️需要注意的是， Latex workshop 插件需安装 8.8.0 版本，更高版本不稳定，会产生 bug
+# 二、Tex Live 环境变量配置
+在环境变量中添加 D:\texlive\2022\bin\win32 （需更改为自己的 texlive 安装路径）
+配置完成后在命令行输入 latex -v ，出现如下信息则判断 latex 安装及配置完成
+
+# 三、Vscode 配置
+依次点击...
     </div>
     <div class="meta footer">
       <span>
-        <a href="/categories/math/" itemprop="url" title="数学基础"><i class="ic i-flag"></i>数学基础</a>
+        <a href="/categories/latex/" itemprop="url" title="latex"><i class="ic i-flag"></i>latex</a>
       </span>
     </div>
-    <a href="/2022/11/24/math/conv/" itemprop="url" title="一般情况下的椭圆" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2022/11/23/control/spring_damping/" itemprop="url" title="弹簧阻尼系统"><img data-src="https://i.postimg.cc/Dz0TY8Gh/6833939bly1gipet8c1a2j20zk0m8kct.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2022-11-23 00:00:00">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-11-23T00:00:00+08:00">2022-11-23</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>3.5k</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>3 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2022/11/23/control/spring_damping/" itemprop="url" title="弹簧阻尼系统">弹簧阻尼系统</a></h3>
-    <div class="excerpt">
-        # 一、什么是弹性力和阻尼力
-弹簧力方向与位移变化量的大小成正比，方向相反
-阻尼力方向与速度变化量的大小成正比，方向相反
-# 二、3 自由度弹簧 - 阻尼器 - 质量系统
-3 自由度弹簧 - 阻尼 -...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/control/" itemprop="url" title="控制工程"><i class="ic i-flag"></i>控制工程</a>
-      </span>
-    </div>
-    <a href="/2022/11/23/control/spring_damping/" itemprop="url" title="弹簧阻尼系统" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2022/11/22/control/Gram-matrix/" itemprop="url" title="格拉姆矩阵判据"><img data-src="https://i.postimg.cc/pr0nf9bS/6833939bly1giclxp31goj20zk0m8qv5.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2022-11-22 00:00:00">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-11-22T00:00:00+08:00">2022-11-22</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>775</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>1 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2022/11/22/control/Gram-matrix/" itemprop="url" title="格拉姆矩阵判据">格拉姆矩阵判据</a></h3>
-    <div class="excerpt">
-        # 一、格拉姆矩阵判据
-对于线性时不变系统
-X=Ax+BuY=Cx+Du\begin {array}{c} X=Ax+Bu\\
-Y=Cx+Du\end {array}X=Ax+BuY=Cx+Du​
-系统完全能控的充分必要条件是对于任意时刻 t&amp;gt;0，都有n×nn\times nn×n 维可控性格拉姆矩阵非奇异（不可逆）
-Wc=∫0∞eAτBBTeATτdτW_{c}=\int_{0}^{\infty } e^{A\tau }BB^{T}e^{A^{T}\tau }d\tau
-Wc​=∫0∞​eAτBBTeATτdτ
-系统完全能观的充分必要条件是对于任意时刻...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/control/" itemprop="url" title="控制工程"><i class="ic i-flag"></i>控制工程</a>
-      </span>
-    </div>
-    <a href="/2022/11/22/control/Gram-matrix/" itemprop="url" title="格拉姆矩阵判据" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2022/11/21/math/svd/" itemprop="url" title="奇异值分解（SVD）"><img data-src="https://i.postimg.cc/yxm4SRMm/6833939bly1gipetv6p75j20zk0m8x6p.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2022-11-21 00:00:00">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-11-21T00:00:00+08:00">2022-11-21</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>568</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>1 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2022/11/21/math/svd/" itemprop="url" title="奇异值分解（SVD）">奇异值分解（SVD）</a></h3>
-    <div class="excerpt">
-        # 一、特征值分解
-首先根据特征值与特征向量的定义有Ax=λxAx=λxAx=λx，其中 x 是一个 n 维向量，则我们说 λ 是矩阵 A 的一个特征值，x 是矩阵 A 的特征值 λ 所对应的特征向量，一个矩阵的一组向量是一组正交向量 Q。 特征值分解是将一个矩阵分解成下面的形式：
-A=QΣQ−1A=Q\Sigma Q^-1
-A=QΣQ−1
-# 二、奇异值分解（SVD）
-SVD 也是对矩阵进行分解，但是和特征分解不同，SVD 并不要求矩阵为方阵。假设我们的矩阵 A 是一个 m×n 的矩阵，那么我们定义矩阵 A 的 SVD 为：
-A=UΣV−1A=U\Sigma V^-1
-A=UΣV−1
-其中...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/math/" itemprop="url" title="数学基础"><i class="ic i-flag"></i>数学基础</a>
-      </span>
-    </div>
-    <a href="/2022/11/21/math/svd/" itemprop="url" title="奇异值分解（SVD）" class="btn">more...</a>
+    <a href="/2023/01/20/latex/latex_install/" itemprop="url" title="Vscode+TexLive+Latex workshop安装" class="btn">more...</a>
   </div>
 </article>
 
@@ -629,7 +618,7 @@ A=UΣV−1
   
   <nav class="pagination">
     <div class="inner">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="ic i-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="ic i-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="ic i-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/"><i class="ic i-angle-right" aria-label="下一页"></i></a>
     </div>
   </nav>
 
@@ -657,7 +646,7 @@ A=UΣV−1
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">34</span>
+        <span class="count">46</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -669,7 +658,7 @@ A=UΣV−1
     </div>
     <div class="item tags">
       <a href="/tags/">
-        <span class="count">17</span>
+        <span class="count">19</span>
         <span class="name">标签</span>
       </a>
     </div>
@@ -758,6 +747,86 @@ A=UΣV−1
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
+</div>
+
+    <span><a href="/2023/03/15/optimal/MOEA_D/" title="MODE&#x2F;D算法">MODE/D算法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/hardware/" title="分类于 硬件开发">硬件开发</a>
+</div>
+
+    <span><a href="/2022/11/16/hardware/stm32cubemx/" title="使用stm32cubemx新建工程">使用stm32cubemx新建工程</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+</div>
+
+    <span><a href="/2022/12/24/blog/hexo_change/" title="Hexo文件迁移">Hexo文件迁移</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/23/code/python/python_problem/" title="python一些报错的处理">python一些报错的处理</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/02/code/python/python_pip/" title="修改pip路径">修改pip路径</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
+</div>
+
+    <span><a href="/2022/11/24/math/conv/" title="一般情况下的椭圆">一般情况下的椭圆</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/12/code/python/python_enumerate/" title="python使用enumerate()给列表添加序号">python使用enumerate()给列表添加序号</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Windows/" title="分类于 Windows系统">Windows系统</a>
+</div>
+
+    <span><a href="/2023/01/03/Windows/Realtek/" title="关于戴尔G3重装系统后的音频问题">关于戴尔G3重装系统后的音频问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
 <a href="/categories/latex/" title="分类于 latex">latex</a>
 </div>
 
@@ -768,89 +837,10 @@ A=UΣV−1
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
-</div>
-
-    <span><a href="/2022/12/23/optimal/signal_objective_optimization/" title="单目标搜索算法汇总">单目标搜索算法汇总</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
-</div>
-
-    <span><a href="/2022/11/07/blog/hexo_style/" title="shoka格式">shoka格式</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2023/03/02/code/python_pip/" title="修改pip路径">修改pip路径</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
-</div>
-
-    <span><a href="/2022/11/25/math/derivative_of_the_inverse_matrix/" title="逆矩阵的求导">逆矩阵的求导</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2022/11/01/website_code/" title="一些奇奇怪怪的东西">一些奇奇怪怪的东西</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
-</div>
-
-    <span><a href="/2023/01/19/blog/hexo_remote/" title="解决Connection closed by remote host">解决Connection closed by remote host</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
-</div>
-
-    <span><a href="/2023/03/12/code/python_enumerate/" title="python使用enumerate()给列表添加序号">python使用enumerate()给列表添加序号</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/office/" title="分类于 office技巧">office技巧</a>
-</div>
-
-    <span><a href="/2023/01/02/office/office/" title="Office技巧">Office技巧</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
-</div>
-
-    <span><a href="/2023/03/01/code/python_test/" title="Python test in xxx问题">Python test in xxx问题</a></span>
+    <span><a href="/2023/03/01/code/python/python_test/" title="Python test in xxx问题">Python test in xxx问题</a></span>
   </li>
 
   </ul>
@@ -875,13 +865,13 @@ A=UΣV−1
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">66k 字</span>
+    <span title="站点总字数">106k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:01</span>
+    <span title="站点阅读时长">1:36</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

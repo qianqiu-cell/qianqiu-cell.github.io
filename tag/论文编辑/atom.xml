@@ -6,21 +6,23 @@
     <updated>2023-03-11T16:00:00.000Z</updated>
     <category term="Windows系统" />
     <category term="博客搭建" />
-    <category term="python" />
-    <category term="编程技巧" />
-    <category term="C++" />
-    <category term="Qt" />
-    <category term="界面开发" />
     <category term="控制工程" />
     <category term="其他" />
     <category term="一些小目标" />
-    <category term="硬件开发" />
     <category term="烹饪技巧" />
+    <category term="硬件开发" />
     <category term="latex技巧" />
     <category term="论文编辑" />
     <category term="数学基础" />
     <category term="office技巧" />
     <category term="最优化" />
+    <category term="多目标最优化" />
+    <category term="单目标最优化" />
+    <category term="C++" />
+    <category term="编程技巧" />
+    <category term="python" />
+    <category term="Qt" />
+    <category term="界面开发" />
     <entry>
         <id>http://qianqiu-cell.github.io/2023/03/12/latex/latex_eps/</id>
         <title>latex插入图片：jpg/png转eps</title>
@@ -38,9 +40,9 @@
         <link rel="alternate" href="http://qianqiu-cell.github.io/2023/03/12/latex/latex_quotation_mark/"/>
         <content type="html">&lt;p&gt;   &lt;code&gt;latex&lt;/code&gt;  中如果用英文输入模式的双引号键入，则输出的结果与我们预期的不符合，这并不是 &lt;code&gt;latex&lt;/code&gt;  的正确输入方式&lt;br&gt;
   当输入 &lt;code&gt;&amp;quot;test&amp;quot;&lt;/code&gt; ，输出为：&lt;br&gt;
-&lt;img data-src=&#34;/images/latex_quotation_mark/1.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/latex/latex_quotation_mark/1.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
   正确的输入方式为：左边的引号输入两个反引号，引号的右边输入两个单引号，即 &lt;code&gt;``test&#39;&#39;&lt;/code&gt; ，输出为：&lt;br&gt;
-&lt;img data-src=&#34;/images/latex_quotation_mark/1.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/images/latex/latex_quotation_mark/1.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </content>
         <category term="latex技巧" />
         <category term="论文编辑" />
@@ -56,7 +58,7 @@
 &lt;h1 id=&#34;二-tex-live环境变量配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-tex-live环境变量配置&#34;&gt;#&lt;/a&gt; 二、Tex Live 环境变量配置&lt;/h1&gt;
 &lt;p&gt;在环境变量中添加 &lt;code&gt;D:\texlive\2022\bin\win32&lt;/code&gt; （需更改为自己的 &lt;code&gt;texlive&lt;/code&gt;  安装路径）&lt;br&gt;
 配置完成后在命令行输入 &lt;code&gt;latex -v&lt;/code&gt; ，出现如下信息则判断 &lt;code&gt;latex&lt;/code&gt;  安装及配置完成&lt;br&gt;
-&lt;img data-src=&#34;/images/latex/2.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/images/latex/latex_install/2.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;三-vscode配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三-vscode配置&#34;&gt;#&lt;/a&gt; 三、Vscode 配置&lt;/h1&gt;
 &lt;p&gt;依次点击 &lt;code&gt;File→Preferences→Settings&lt;/code&gt;  打开用户设置&lt;br&gt;
 添加一下内容并保存（注：= 以下内容和原本内容公用一个大括号 =）&lt;/p&gt;
@@ -76,19 +78,24 @@
         <id>http://qianqiu-cell.github.io/2023/01/02/office/office/</id>
         <title>Office技巧</title>
         <link rel="alternate" href="http://qianqiu-cell.github.io/2023/01/02/office/office/"/>
-        <content type="html">&lt;h1 id=&#34;一-使用excel将两列内容合并为一列&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-使用excel将两列内容合并为一列&#34;&gt;#&lt;/a&gt; 一、使用 Excel 将两列内容合并为一列&lt;/h1&gt;
-&lt;p&gt;在任意两个行数相等的列，在其后紧接着下一列第一行复制所选两列的内容，如下图所示&lt;br&gt;
-&lt;img data-src=&#34;/images/office/1.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
-然后按组合键 &lt;code&gt;Ctrl+E&lt;/code&gt; ，在列中就自动合并了两列的内容，如下图所示&lt;br&gt;
-&lt;img data-src=&#34;/images/office/1.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;二-刷新word中所有mathtype的公式编号&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-刷新word中所有mathtype的公式编号&#34;&gt;#&lt;/a&gt; 二、刷新 word 中所有 mathtype 的公式编号&lt;/h1&gt;
+        <content type="html">&lt;h1 id=&#34;一-word使用技巧&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-word使用技巧&#34;&gt;#&lt;/a&gt; 一、Word 使用技巧&lt;/h1&gt;
+&lt;h2 id=&#34;11-刷新word中所有mathtype的公式编号&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#11-刷新word中所有mathtype的公式编号&#34;&gt;#&lt;/a&gt; 1.1 刷新 word 中所有 mathtype 的公式编号&lt;/h2&gt;
 &lt;p&gt;首先 &lt;code&gt;CTRL+A&lt;/code&gt;  全选文档，接着按 &lt;code&gt;F9&lt;/code&gt; ，进行公式编号的刷新&lt;/p&gt;
-&lt;h1 id=&#34;三-一键调整word中mathtype公式的大小以及格式刷后公式偏上问题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三-一键调整word中mathtype公式的大小以及格式刷后公式偏上问题&#34;&gt;#&lt;/a&gt; 三、一键调整 word 中 mathtype 公式的大小（以及格式刷后公式偏上问题）&lt;/h1&gt;
+&lt;h2 id=&#34;12-一键调整word中mathtype公式的大小以及格式刷后公式偏上问题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#12-一键调整word中mathtype公式的大小以及格式刷后公式偏上问题&#34;&gt;#&lt;/a&gt; 1.2 一键调整 word 中 mathtype 公式的大小（以及格式刷后公式偏上问题）&lt;/h2&gt;
 &lt;p&gt;（1）在 &lt;code&gt;MathType&lt;/code&gt;  选项卡中选择格式化公式&lt;br&gt;
 （2）选择 &lt;code&gt;MathType preference file&lt;/code&gt; ，点击 &lt;code&gt;Browse...&lt;/code&gt; &lt;br&gt;
 （3）在 &lt;code&gt;MathType&lt;/code&gt;  安装目录下进入 &lt;code&gt;Preferences&lt;/code&gt;  文件夹，选择所需格式文件&lt;br&gt;
 （4）点击打开，点击 &lt;code&gt;OK&lt;/code&gt; &lt;br&gt;
-&lt;img data-src=&#34;/images/office/3.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;img data-src=&#34;/images/office/office_skill/1.2.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;二-excel使用技巧&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-excel使用技巧&#34;&gt;#&lt;/a&gt; 二、Excel 使用技巧&lt;/h1&gt;
+&lt;h2 id=&#34;21-使用excel将两列内容合并为一列&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#21-使用excel将两列内容合并为一列&#34;&gt;#&lt;/a&gt; 2.1 使用 Excel 将两列内容合并为一列&lt;/h2&gt;
+&lt;p&gt;在任意两个行数相等的列，在其后紧接着下一列第一行复制所选两列的内容，如下图所示&lt;br&gt;
+&lt;img data-src=&#34;/images/office/office_skill/2.1.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+然后按组合键 &lt;code&gt;Ctrl+E&lt;/code&gt; ，在列中就自动合并了两列的内容，如下图所示&lt;br&gt;
+&lt;img data-src=&#34;/images/office/office_skill/2.1.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;22-excel行列互换&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#22-excel行列互换&#34;&gt;#&lt;/a&gt; 2.2 Excel 行列互换&lt;/h2&gt;
+&lt;p&gt;直接对需要进行转置的区域进行复制，之后在空白区域进行粘贴，之后在粘贴的选项中选择&lt;mark&gt;转置&lt;/mark&gt;选项，则粘贴的内容即为剪切板中内容的转置&lt;br&gt;
+&lt;img data-src=&#34;/images/office/office_skill/2.2.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </content>
         <category term="论文编辑" />
         <category term="office技巧" />
