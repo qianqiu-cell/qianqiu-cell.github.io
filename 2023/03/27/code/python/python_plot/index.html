@@ -1,0 +1,601 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Welcome to my tiny world" href="http://qianqiu-cell.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Welcome to my tiny world" href="http://qianqiu-cell.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Welcome to my tiny world" href="http://qianqiu-cell.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="编程技巧,python" />
+
+
+<link rel="canonical" href="http://qianqiu-cell.github.io/2023/03/27/code/python/python_plot/">
+
+
+
+  <title>
+python+matplotlib绘制图像 - python |
+唯爱ぺ灬babyル = Welcome to my tiny world = 如果可以，我想你一直这样温柔下去ʕ ᵔᴥᵔ ʔ</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">python+matplotlib绘制图像
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2023-03-27 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-03-27T00:00:00+08:00">2023-03-27</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>5.3k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>5 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">唯爱ぺ灬babyル</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://i.postimg.cc/yxpLr8CJ/6833939bly1gicli3sbvtj20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/J04cbVgp/6833939bly1gipeun65urj20zk0m81ii.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/pXQnJXzk/6833939bly1gipexw3o58j20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/zf69tp5w/6833939bly1gipeu7txpzj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/qvXqdhgC/6833939bly1gipewr8iypj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/KcR5vFPY/6833939bly1gicitf0kl1j20zk0m87fe.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/python/" itemprop="item" rel="index" title="分类于 python"><span itemprop="name">python</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://qianqiu-cell.github.io/2023/03/27/code/python/python_plot/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="Darling F">
+    <meta itemprop="description" content="如果可以，我想你一直这样温柔下去ʕ ᵔᴥᵔ ʔ, 小樊&小小樊的学习笔记🌸">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Welcome to my tiny world">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="一-一些常用图形"><a class="markdownIt-Anchor" href="#一-一些常用图形">#</a> 一、一些常用图形</h1>
+<p>  matplotlib 可支持的绘图类型可以参考官方文档：<span class="exturl" data-url="aHR0cHM6Ly9tYXRwbG90bGliLm9yZy9zdGFibGUvcGxvdF90eXBlcy9pbmRleC5odG1s">https://matplotlib.org/stable/plot_types/index.html</span></p>
+<h2 id="11-plot-绘制折线图曲线图"><a class="markdownIt-Anchor" href="#11-plot-绘制折线图曲线图">#</a> 1.1 plot - 绘制折线图（曲线图）</h2>
+<p>  使用 <code>plt.plot()</code>  函数可以绘制折线图， <code>plot()</code>  函数的原型为 <code>plt.plot(x, y, format_string, **kwargs) </code> ，其中，仓用参数的解释如下：</p>
+<ul>
+<li>x：x 轴数据，列表或数组，可选</li>
+<li>y：y 轴数据，列表或数组</li>
+<li>format_string：控制曲线的格式字符串，可选，由颜色字符、风格字符和标记字符组成（等同于 color、marker 和 linestyle 的结合）。<br>
+使用案例如下：</li>
+</ul>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np</pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token comment"># evenly sampled time at 200ms intervals</span></pre></td></tr><tr><td data-num="5"></td><td><pre>t <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">0.</span><span class="token punctuation">,</span> <span class="token number">5.</span><span class="token punctuation">,</span> <span class="token number">0.2</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="6"></td><td><pre></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token comment"># red dashes, blue squares and green triangles</span></pre></td></tr><tr><td data-num="8"></td><td><pre>plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>t<span class="token punctuation">,</span> t<span class="token punctuation">,</span> <span class="token string">'r--'</span><span class="token punctuation">,</span> t<span class="token punctuation">,</span> t<span class="token operator">**</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'bs'</span><span class="token punctuation">,</span> t<span class="token punctuation">,</span> t<span class="token operator">**</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">'g^'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="9"></td><td><pre>plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr></table></figure><p>  绘制的图形如下图所示：<br>
+<img data-src="/images/code/python/python_plot/1.1.png" alt=""></p>
+<h2 id="12-scatter-绘制散点图"><a class="markdownIt-Anchor" href="#12-scatter-绘制散点图">#</a> 1.2 scatter - 绘制散点图</h2>
+<p>  使用 <code>plt.scatter()</code>  函数可以绘制散点图， <code>scatter()</code>  函数的原型为 <code>scatter(x, y, s=None, c=None, marker=None, cmap=None, norm=None, vmin=None, vmax=None, alpha=None, linewidths=None, verts=None, edgecolors=None, hold=None, data=None, **kwargs)</code> ，其中，一些常用参数的解释如下：</p>
+<ul>
+<li>x, y  # 散点的坐标，float or array-like, shape (n,)</li>
+<li>s  # 散点的面积，float or array-like, shape (n,), optional</li>
+<li>c  # 散点的颜色（默认值为蓝色，‘b’，其余颜色可参考 2.1）</li>
+<li>marker  # 散点样式（默认值为实心圆，‘o’，其余样式可参考 2.1）</li>
+<li>alpha  # 散点透明度（[0, 1] 之间的数，0 表示完全透明，1 则表示完全不透明）</li>
+<li>linewidths  # 散点的边缘线宽</li>
+<li>edgecolors  # 散点的边缘颜色<br>
+使用案例如下：</li>
+</ul>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np</pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre>n <span class="token operator">=</span> <span class="token number">20</span>  <span class="token comment"># 生成 20 个点</span></pre></td></tr><tr><td data-num="5"></td><td><pre>x <span class="token operator">=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>rand<span class="token punctuation">(</span>n<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="6"></td><td><pre>y <span class="token operator">=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>rand<span class="token punctuation">(</span>n<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="7"></td><td><pre>plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> s<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">,</span> c<span class="token operator">=</span><span class="token string">'r'</span><span class="token punctuation">,</span> marker<span class="token operator">=</span><span class="token string">'*'</span><span class="token punctuation">,</span> alpha<span class="token operator">=</span><span class="token number">0.3</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="8"></td><td><pre>plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr></table></figure><p>  绘制的图形如下所示：<br>
+<img data-src="/images/code/python/python_plot/1.2.png" alt=""></p>
+<h1 id="二-一些常用操作"><a class="markdownIt-Anchor" href="#二-一些常用操作">#</a> 二、一些常用操作</h1>
+<h2 id="21-更改曲线样式"><a class="markdownIt-Anchor" href="#21-更改曲线样式">#</a> 2.1 更改曲线样式</h2>
+<p>  在绘制曲线图以及散点图时，可以通过设置线条形状 <code>linestyle</code> 、线条宽度 <code>linewidth</code>  以及线条颜色 <code>color</code>  来改变图形的样式。</p>
+<h3 id="线条颜色color"><a class="markdownIt-Anchor" href="#线条颜色color">#</a> 线条颜色 color</h3>
+<p>  在 <code>matplotlib</code>  中有如下五种颜色的设置方式（还有其他如 <code>cmap</code>  等进阶方法暂时没有用到，故没有整理）：<br>
+（1） <code>RGB、RGBA</code> <br>
+  在 <code>matplotlib</code>  中可以使用三元组 <code>RGB</code> ，即红、蓝、绿的分量，其中每个分量在 <code>[0, 1]</code>  区间内，因此 <code>(1, 0, 0)</code>  表示纯红色。四元组 <code>RGBA</code>  的前三个元素和三元组的定义相同，第四个元素定义透明度，也在 <code>[0, 1]</code>  区间内。使用案例如下：</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt</pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token comment"># 颜色用 [0,1] 之间的浮点数表示，四个分量按顺序分别为 (red, green, blue, alpha)，其中 alpha 透明度可省略</span></pre></td></tr><tr><td data-num="4"></td><td><pre>plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">0.1</span><span class="token punctuation">,</span> <span class="token number">0.2</span><span class="token punctuation">,</span> <span class="token number">0.5</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="5"></td><td><pre>plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">0.1</span><span class="token punctuation">,</span> <span class="token number">0.2</span><span class="token punctuation">,</span> <span class="token number">0.5</span><span class="token punctuation">,</span> <span class="token number">0.5</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="6"></td><td><pre>plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr></table></figure><p>（2） <code>HEX RGB</code>  或 <code>HEX RGBA</code> <br>
+   <code>matplotlib</code>  可以将 <code>HTML</code>  颜色字符串解释为实际颜色。这些字符串被定义为 <code>#RRGGBB</code> ，其中 <code>RR</code> 、 <code>GG</code>  和 <code>BB</code>  分别是使用十六进制编码的红色、绿色和蓝色分量。使用案例如下：</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt</pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token comment"># 用十六进制颜色码表示，同样最后两位表示透明度，可省略</span></pre></td></tr><tr><td data-num="4"></td><td><pre>plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'#0f0f0f'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="5"></td><td><pre>plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'#0f0f0f80'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="6"></td><td><pre>plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr></table></figure><p>（3）灰度字符串<br>
+   <code>matplotlib</code>  将浮点值的字符串表示形式解释为灰度，例如 <code>0.75</code>  表示中浅灰色。使用案例如下：</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt</pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token comment"># 当只有一个位于 [0,1] 的值时，表示灰度色阶</span></pre></td></tr><tr><td data-num="4"></td><td><pre>plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'0.1'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="5"></td><td><pre>plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr></table></figure><p>（4）单字符基本颜色<br>
+   <code>matplotlib</code>  有八个基本颜色，可以用单字符串来表示，分别是 <code>‘b’, ‘g’, ‘r’, ‘c’, ‘m’, ‘y’, ‘k’, ‘w’</code> ，对应的是 <code>blue, green, red, cyan, magenta, yellow, black, and white</code>  的英文缩写，如下图所示：<br>
+<img data-src="/images/code/python/python_plot/2.1.png" alt=""><br>
+（5）颜色名称<br>
+   <code>matplotlib</code>  提供了颜色对照表，可供查询颜色对应的名称，如下图所示：<br>
+<img data-src="/images/code/python/python_plot/2.2.png" alt=""></p>
+<h3 id="线条样式"><a class="markdownIt-Anchor" href="#线条样式">#</a> 线条样式</h3>
+<p>（1）折线形状</p>
+<ul>
+<li>‘-’ ：实线</li>
+<li>‘-.’：实虚线</li>
+<li>‘–’ ：虚线</li>
+<li>‘:’ ：点虚线<br>
+（2）节点形状</li>
+<li>‘s’ : 方块状</li>
+<li>‘o’ : 实心圆</li>
+<li>‘^’ : 正三角形</li>
+<li>‘v’ : 反正三角形</li>
+<li>‘+’ : 加号</li>
+<li>‘*’ : 星号</li>
+<li>‘,’ ：点</li>
+<li>‘x’ : x 号</li>
+<li>‘p’ : 五角星</li>
+<li>‘1’ : 三脚架标记</li>
+<li>‘2’ : 三脚架标记</li>
+</ul>
+<h2 id="22-图形显示的一些设置"><a class="markdownIt-Anchor" href="#22-图形显示的一些设置">#</a> 2.2 图形显示的一些设置</h2>
+<p>  设置图像的横纵坐标轴名称、图像标题、设置图例以及横纵坐标范围的示例程序（支持 <code>latex</code> ）如下所示：</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np</pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre>X <span class="token operator">=</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="5"></td><td><pre>Y1 <span class="token operator">=</span> np<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>X<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="6"></td><td><pre>Y2 <span class="token operator">=</span> X</pre></td></tr><tr><td data-num="7"></td><td><pre>Y3 <span class="token operator">=</span> X <span class="token operator">*</span> X</pre></td></tr><tr><td data-num="8"></td><td><pre>Y4 <span class="token operator">=</span> X <span class="token operator">*</span> X <span class="token operator">*</span> X</pre></td></tr><tr><td data-num="9"></td><td><pre>plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y1<span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">"lightcoral"</span><span class="token punctuation">,</span> linewidth<span class="token operator">=</span><span class="token number">3.0</span><span class="token punctuation">,</span> linestyle<span class="token operator">=</span><span class="token string">"-"</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">r"$y_1=\sqrt&#123;x&#125;$"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="10"></td><td><pre>plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y2<span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">"burlywood"</span><span class="token punctuation">,</span> linewidth<span class="token operator">=</span><span class="token number">3.0</span><span class="token punctuation">,</span> linestyle<span class="token operator">=</span><span class="token string">"--"</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">r"$y_2=x$"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="11"></td><td><pre>plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y3<span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">"mediumturquoise"</span><span class="token punctuation">,</span> linewidth<span class="token operator">=</span><span class="token number">3.0</span><span class="token punctuation">,</span> linestyle<span class="token operator">=</span><span class="token string">"-."</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">r"$y_3=x^2$"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="12"></td><td><pre>plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>X<span class="token punctuation">,</span> Y4<span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">"mediumpurple"</span><span class="token punctuation">,</span> linewidth<span class="token operator">=</span><span class="token number">3.0</span><span class="token punctuation">,</span> linestyle<span class="token operator">=</span><span class="token string">":"</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">r"$y_4=x^3$"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="13"></td><td><pre></pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token comment"># 常见的 legend 的 loc 位置还有 best, upper right, upper left, lower left, lower right,</span></pre></td></tr><tr><td data-num="15"></td><td><pre><span class="token comment"># right, center left, center right, lower center, upper center, center，</span></pre></td></tr><tr><td data-num="16"></td><td><pre><span class="token comment"># 其中 best 表示将标签加载到 python 认为最佳的位置。</span></pre></td></tr><tr><td data-num="17"></td><td><pre>plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span>loc<span class="token operator">=</span><span class="token string">"best"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="18"></td><td><pre></pre></td></tr><tr><td data-num="19"></td><td><pre><span class="token comment"># x、y 坐标以及标题</span></pre></td></tr><tr><td data-num="20"></td><td><pre>plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'x'</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">18</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="21"></td><td><pre>plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'y'</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">18</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="22"></td><td><pre>plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">r'$f(x)=\sqrt&#123;x&#125;,x,x^2,x^3$'</span><span class="token punctuation">,</span> fontsize<span class="token operator">=</span><span class="token number">18</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="23"></td><td><pre></pre></td></tr><tr><td data-num="24"></td><td><pre><span class="token comment"># 设置坐标范围</span></pre></td></tr><tr><td data-num="25"></td><td><pre>plt<span class="token punctuation">.</span>ylim<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="26"></td><td><pre>plt<span class="token punctuation">.</span>xlim<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="27"></td><td><pre>plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr></table></figure><h2 id="23-子图"><a class="markdownIt-Anchor" href="#23-子图">#</a> 2.3 子图</h2>
+<p>   <code>Matplotlib</code>  的可以把很多张图画到一个显示界面，在作对比分析的时候非常有用。对应的有 <code>plt</code>  的 <code>subplot</code> 、 <code>subplots</code>  和 <code>figure</code>  的 <code>add_subplol</code>  的方法，参数可以是一个三位数字（例如 <code>111</code> ），也可以是一个数组（例如 <code>[1,1,1]</code> ）， <code>3</code>  个数字分别代表：子图总行数、子图总列数、子图位置。</p>
+<h3 id="通过plt的subplot"><a class="markdownIt-Anchor" href="#通过plt的subplot">#</a> 通过 plt 的 subplot</h3>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt</pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token comment"># 画第 1 个图：折线图</span></pre></td></tr><tr><td data-num="5"></td><td><pre>plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">221</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="6"></td><td><pre>x <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="7"></td><td><pre>plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> x <span class="token operator">*</span> x<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="8"></td><td><pre></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token comment"># 画第 2 个图：散点图</span></pre></td></tr><tr><td data-num="10"></td><td><pre>plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">222</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="11"></td><td><pre>plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="12"></td><td><pre></pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token comment"># 画第 3 个图：饼图</span></pre></td></tr><tr><td data-num="14"></td><td><pre>plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">223</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="15"></td><td><pre>plt<span class="token punctuation">.</span>pie<span class="token punctuation">(</span>x<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">45</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">,</span> labels<span class="token operator">=</span><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token string">'ABCD'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> autopct<span class="token operator">=</span><span class="token string">'%.0f'</span><span class="token punctuation">,</span> explode<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0.05</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="16"></td><td><pre></pre></td></tr><tr><td data-num="17"></td><td><pre><span class="token comment"># 画第 4 个图：条形图</span></pre></td></tr><tr><td data-num="18"></td><td><pre>plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">224</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="19"></td><td><pre>plt<span class="token punctuation">.</span>bar<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">25</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">35</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'b'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="20"></td><td><pre></pre></td></tr><tr><td data-num="21"></td><td><pre>plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr></table></figure><h3 id="通过plt的subplots"><a class="markdownIt-Anchor" href="#通过plt的subplots">#</a> 通过 plt 的 subplots</h3>
+<p>   <code>subplots</code>  返回的值的类型为元组，其中包含两个元素：第一个为一个画布，第二个是子图</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt</pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre>fig<span class="token punctuation">,</span>subs<span class="token operator">=</span>plt<span class="token punctuation">.</span>subplots<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="5"></td><td><pre></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token comment"># 画第 1 个图：折线图</span></pre></td></tr><tr><td data-num="7"></td><td><pre>x<span class="token operator">=</span>np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="8"></td><td><pre>subs<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span>x<span class="token operator">*</span>x<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="9"></td><td><pre></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token comment"># 画第 2 个图：散点图</span></pre></td></tr><tr><td data-num="11"></td><td><pre>subs<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="12"></td><td><pre></pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token comment"># 画第 3 个图：饼图</span></pre></td></tr><tr><td data-num="14"></td><td><pre>subs<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>pie<span class="token punctuation">(</span>x<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">15</span><span class="token punctuation">,</span><span class="token number">30</span><span class="token punctuation">,</span><span class="token number">45</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">,</span>labels<span class="token operator">=</span><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token string">'ABCD'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>autopct<span class="token operator">=</span><span class="token string">'%.0f'</span><span class="token punctuation">,</span>explode<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0.05</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="15"></td><td><pre></pre></td></tr><tr><td data-num="16"></td><td><pre><span class="token comment"># 画第 4 个图：条形图</span></pre></td></tr><tr><td data-num="17"></td><td><pre>subs<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>bar<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">30</span><span class="token punctuation">,</span><span class="token number">25</span><span class="token punctuation">,</span><span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">25</span><span class="token punctuation">,</span><span class="token number">15</span><span class="token punctuation">,</span><span class="token number">35</span><span class="token punctuation">,</span><span class="token number">30</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">,</span>color<span class="token operator">=</span><span class="token string">'b'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="18"></td><td><pre></pre></td></tr><tr><td data-num="19"></td><td><pre>plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr></table></figure><h3 id="通过figure的add_subplot"><a class="markdownIt-Anchor" href="#通过figure的add_subplot">#</a> 通过 figure 的 add_subplot</h3>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt</pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre>fig <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="5"></td><td><pre></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token comment"># 画第 1 个图：折线图</span></pre></td></tr><tr><td data-num="7"></td><td><pre>ax1 <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">221</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="8"></td><td><pre>x <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="9"></td><td><pre>ax1<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> x <span class="token operator">*</span> x<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="10"></td><td><pre></pre></td></tr><tr><td data-num="11"></td><td><pre><span class="token comment"># 画第 2 个图：散点图</span></pre></td></tr><tr><td data-num="12"></td><td><pre>ax2 <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">222</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="13"></td><td><pre>ax2<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="14"></td><td><pre></pre></td></tr><tr><td data-num="15"></td><td><pre><span class="token comment"># 画第 3 个图：饼图</span></pre></td></tr><tr><td data-num="16"></td><td><pre>ax3 <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">223</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="17"></td><td><pre>ax3<span class="token punctuation">.</span>pie<span class="token punctuation">(</span>x<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">45</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">,</span> labels<span class="token operator">=</span><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token string">'ABCD'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> autopct<span class="token operator">=</span><span class="token string">'%.0f'</span><span class="token punctuation">,</span> explode<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0.05</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="18"></td><td><pre></pre></td></tr><tr><td data-num="19"></td><td><pre><span class="token comment"># 画第 4 个图：条形图</span></pre></td></tr><tr><td data-num="20"></td><td><pre>ax4 <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">224</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="21"></td><td><pre>ax4<span class="token punctuation">.</span>bar<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">25</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">35</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'b'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="22"></td><td><pre></pre></td></tr><tr><td data-num="23"></td><td><pre>plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr></table></figure><p>以上三种方式生成的图形均如下所示：<br>
+<img data-src="/images/code/python/python_plot/2.3.png" alt=""></p>
+<h3 id="如何不规则划分"><a class="markdownIt-Anchor" href="#如何不规则划分">#</a> 如何不规则划分</h3>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt</pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token comment"># 画第 1 个图：折线图</span></pre></td></tr><tr><td data-num="5"></td><td><pre>plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">221</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="6"></td><td><pre>x <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="7"></td><td><pre>plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> x <span class="token operator">*</span> x<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="8"></td><td><pre></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token comment"># 画第 2 个图：散点图</span></pre></td></tr><tr><td data-num="10"></td><td><pre>plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">222</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="11"></td><td><pre>plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="12"></td><td><pre></pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token comment"># 画第 3 个图：条形图</span></pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token comment"># 前面的两个图占了 221 和 222 的位置，如果想在下面只放一个图，得把前两个当成一列，即 2 行 1 列第 2 个位置</span></pre></td></tr><tr><td data-num="15"></td><td><pre>plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">212</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="16"></td><td><pre>plt<span class="token punctuation">.</span>bar<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">25</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">35</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'b'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="17"></td><td><pre>plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr></table></figure><p>运行效果如下所示：<br>
+<img data-src="/images/code/python/python_plot/2.4.png" alt=""></p>
+<h1 id="三-其他操作"><a class="markdownIt-Anchor" href="#三-其他操作">#</a> 三、其他操作</h1>
+<h2 id="31-绘图风格"><a class="markdownIt-Anchor" href="#31-绘图风格">#</a> 3.1 绘图风格</h2>
+<p>   <code>Matplotlib</code>  库提供的 <code>style.use()</code>  函数可以为创建的图形设置合适的美学风格。官方文档中给出的可使用样式<span class="exturl" data-url="aHR0cHM6Ly9tYXRwbG90bGliLm9yZy9zdGFibGUvZ2FsbGVyeS9zdHlsZV9zaGVldHMvc3R5bGVfc2hlZXRzX3JlZmVyZW5jZS5odG1s">戳此</span>，如下的示例中使用了 <code>classic</code>  风格的样式：</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt</pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre>plt<span class="token punctuation">.</span>style<span class="token punctuation">.</span>use<span class="token punctuation">(</span><span class="token string">'classic'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="5"></td><td><pre></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token comment"># 画第 1 个图：折线图</span></pre></td></tr><tr><td data-num="7"></td><td><pre>plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">221</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="8"></td><td><pre>x <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="9"></td><td><pre>plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">,</span> x <span class="token operator">*</span> x<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="10"></td><td><pre></pre></td></tr><tr><td data-num="11"></td><td><pre><span class="token comment"># 画第 2 个图：散点图</span></pre></td></tr><tr><td data-num="12"></td><td><pre>plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">222</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="13"></td><td><pre>plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>rand<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="14"></td><td><pre></pre></td></tr><tr><td data-num="15"></td><td><pre><span class="token comment"># 画第 3 个图：条形图</span></pre></td></tr><tr><td data-num="16"></td><td><pre><span class="token comment"># 前面的两个图占了 221 和 222 的位置，如果想在下面只放一个图，得把前两个当成一列，即 2 行 1 列第 2 个位置</span></pre></td></tr><tr><td data-num="17"></td><td><pre>plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">212</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="18"></td><td><pre>plt<span class="token punctuation">.</span>bar<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">25</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">35</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'b'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="19"></td><td><pre>plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr></table></figure><p>运行效果如下图所示：<br>
+<img data-src="/images/code/python/python_plot/2.5.png" alt=""></p>
+
+      <div class="tags">
+          <a href="/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/" rel="tag"><i class="ic i-tag"></i> 编程技巧</a>
+          <a href="/tags/python/" rel="tag"><i class="ic i-tag"></i> python</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2023-03-28 09:26:53" itemprop="dateModified" datetime="2023-03-28T09:26:53+08:00">2023-03-28</time>
+  </span>
+  <span id="2023/03/27/code/python/python_plot/" class="item leancloud_visitors" data-flag-title="python+matplotlib绘制图像" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/03/24/code/python/python_jMetal/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;NfrnPRLB&#x2F;6833939bly1gicljitigmj20zk0m87fp.jpg" title="python+jMetal应用">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> python</span>
+  <h3>python+jMetal应用</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E5%9B%BE%E5%BD%A2"><span class="toc-number">1.</span> <span class="toc-text"> 一、一些常用图形</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#11-plot-%E7%BB%98%E5%88%B6%E6%8A%98%E7%BA%BF%E5%9B%BE%E6%9B%B2%E7%BA%BF%E5%9B%BE"><span class="toc-number">1.1.</span> <span class="toc-text"> 1.1 plot - 绘制折线图（曲线图）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-scatter-%E7%BB%98%E5%88%B6%E6%95%A3%E7%82%B9%E5%9B%BE"><span class="toc-number">1.2.</span> <span class="toc-text"> 1.2 scatter - 绘制散点图</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C-%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C"><span class="toc-number">2.</span> <span class="toc-text"> 二、一些常用操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#21-%E6%9B%B4%E6%94%B9%E6%9B%B2%E7%BA%BF%E6%A0%B7%E5%BC%8F"><span class="toc-number">2.1.</span> <span class="toc-text"> 2.1 更改曲线样式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E6%9D%A1%E9%A2%9C%E8%89%B2color"><span class="toc-number">2.1.1.</span> <span class="toc-text"> 线条颜色 color</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BA%BF%E6%9D%A1%E6%A0%B7%E5%BC%8F"><span class="toc-number">2.1.2.</span> <span class="toc-text"> 线条样式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-%E5%9B%BE%E5%BD%A2%E6%98%BE%E7%A4%BA%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE"><span class="toc-number">2.2.</span> <span class="toc-text"> 2.2 图形显示的一些设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-%E5%AD%90%E5%9B%BE"><span class="toc-number">2.3.</span> <span class="toc-text"> 2.3 子图</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%BF%87plt%E7%9A%84subplot"><span class="toc-number">2.3.1.</span> <span class="toc-text"> 通过 plt 的 subplot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%BF%87plt%E7%9A%84subplots"><span class="toc-number">2.3.2.</span> <span class="toc-text"> 通过 plt 的 subplots</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%BF%87figure%E7%9A%84add_subplot"><span class="toc-number">2.3.3.</span> <span class="toc-text"> 通过 figure 的 add_subplot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%B8%8D%E8%A7%84%E5%88%99%E5%88%92%E5%88%86"><span class="toc-number">2.3.4.</span> <span class="toc-text"> 如何不规则划分</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89-%E5%85%B6%E4%BB%96%E6%93%8D%E4%BD%9C"><span class="toc-number">3.</span> <span class="toc-text"> 三、其他操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#31-%E7%BB%98%E5%9B%BE%E9%A3%8E%E6%A0%BC"><span class="toc-number">3.1.</span> <span class="toc-text"> 3.1 绘图风格</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2023/02/06/code/python/python_array_asarray/" rel="bookmark" title="np.array和np.asarray区别">np.array和np.asarray区别</a></li><li><a href="/2023/02/06/code/python/python_bitwise_operators/" rel="bookmark" title="Python按位运算符">Python按位运算符</a></li><li><a href="/2023/02/06/code/python/python_float/" rel="bookmark" title="Python浮点数运算不精确问题">Python浮点数运算不精确问题</a></li><li><a href="/2023/02/06/code/python/python_multiply/" rel="bookmark" title="python字符串、列表、元组乘法">python字符串、列表、元组乘法</a></li><li><a href="/2023/02/06/code/python/python_note/" rel="bookmark" title="Pycharm中的特殊注释">Pycharm中的特殊注释</a></li><li><a href="/2023/02/06/code/python/python_special_func/" rel="bookmark" title="特定功能函数">特定功能函数</a></li><li><a href="/2023/03/01/code/python/python_qt_install/" rel="bookmark" title="Python运行pyside2报错问题解决">Python运行pyside2报错问题解决</a></li><li><a href="/2023/03/01/code/python/python_test/" rel="bookmark" title="Python test in xxx问题">Python test in xxx问题</a></li><li><a href="/2023/03/02/code/python/python_gurobi/" rel="bookmark" title="python+gurobi应用">python+gurobi应用</a></li><li><a href="/2023/03/02/code/python/python_jupyter/" rel="bookmark" title="修改Jupyter Notebook默认工作路径">修改Jupyter Notebook默认工作路径</a></li><li><a href="/2023/03/02/code/python/python_numba/" rel="bookmark" title="使用numba对python进行加速">使用numba对python进行加速</a></li><li><a href="/2023/03/02/code/python/python_pip/" rel="bookmark" title="修改pip路径">修改pip路径</a></li><li><a href="/2023/03/02/code/python/python_try_except/" rel="bookmark" title="python下的try-except处理异常">python下的try-except处理异常</a></li><li><a href="/2023/03/03/code/python/python_json/" rel="bookmark" title="python读取及保存json文件">python读取及保存json文件</a></li><li><a href="/2023/03/12/code/python/python_class_inherit/" rel="bookmark" title="python类的继承">python类的继承</a></li><li><a href="/2023/03/12/code/python/python_enumerate/" rel="bookmark" title="python使用enumerate()给列表添加序号">python使用enumerate()给列表添加序号</a></li><li><a href="/2023/03/23/code/python/python_problem/" rel="bookmark" title="python一些报错的处理">python一些报错的处理</a></li><li><a href="/2023/03/23/code/python/python_type_hints/" rel="bookmark" title="python类型提示">python类型提示</a></li><li><a href="/2023/03/24/code/python/python_jMetal/" rel="bookmark" title="python+jMetal应用">python+jMetal应用</a></li><li class="active"><a href="/2023/03/27/code/python/python_plot/" rel="bookmark" title="python+matplotlib绘制图像">python+matplotlib绘制图像</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Darling F"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">Darling F</p>
+  <div class="description" itemprop="description">小樊&小小樊的学习笔记🌸</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">47</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">12</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">19</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3FpYW5xaXUtY2VsbA==" title="https:&#x2F;&#x2F;github.com&#x2F;qianqiu-cell"><i class="ic i-github"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjI4MzI1Njc4NTFAcXEuY29t" title="mailto:2832567851@qq.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
+</div>
+
+    <span><a href="/2022/11/28/math/covariance/" title="数学期望、方差和协方差">数学期望、方差和协方差</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/control/" title="分类于 控制工程">控制工程</a>
+</div>
+
+    <span><a href="/2022/11/23/control/spring_damping/" title="弹簧阻尼系统">弹簧阻尼系统</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/else/" title="分类于 其他">其他</a>
+</div>
+
+    <span><a href="/2023/01/22/else/wish_2023/" title="2023年的一些小目标">2023年的一些小目标</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/02/06/code/python/python_special_func/" title="特定功能函数">特定功能函数</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
+</div>
+
+    <span><a href="/2023/03/15/optimal/MOEA_D/" title="MODE&#x2F;D算法">MODE/D算法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/02/06/code/python/python_array_asarray/" title="np.array和np.asarray区别">np.array和np.asarray区别</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Windows/" title="分类于 Windows系统">Windows系统</a>
+</div>
+
+    <span><a href="/2023/01/03/Windows/Realtek/" title="关于戴尔G3重装系统后的音频问题">关于戴尔G3重装系统后的音频问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/latex/" title="分类于 latex">latex</a>
+</div>
+
+    <span><a href="/2023/03/12/latex/latex_quotation_mark/" title="latex输入双引号">latex输入双引号</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/food/" title="分类于 烹饪技巧">烹饪技巧</a>
+</div>
+
+    <span><a href="/2023/01/23/food/salt/" title="盐的使用">盐的使用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
+</div>
+
+    <span><a href="/2023/03/16/optimal/SPEA/" title="SPEAI-II">SPEAI-II</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Darling F @ 唯爱ぺ灬babyル</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">111k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:41</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2023/03/27/code/python/python_plot/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i> 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
