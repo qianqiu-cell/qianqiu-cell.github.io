@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
   
-  <meta name="keywords" content="编程技巧,python" />
+  <meta name="keywords" content="python,编程技巧" />
 
 
 <link rel="canonical" href="http://qianqiu-cell.github.io/2023/03/02/code/python/python_numba/">
@@ -117,12 +117,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://i.postimg.cc/7ZxD0BYf/6833939bly1gipetfk5zwj20zk0m8e81.jpg"></li>
           <li class="item" data-background-image="https://i.postimg.cc/d0sGhwKx/6833939bly1gicit4jrvuj20zk0m8785.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/nVNVNYVL/6833939bly1giciub8ja1j20zk0m81ky.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/SxJXcNKX/6833939bly1giciuja1j1j20zk0m8kjl.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/nrwCs6qb/6833939bly1gicm07ih54j20zk0m84qp.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/1zDxfTLg/6833939bly1giph4baakhj20zk0m8h5q.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/9fLZTKmF/6833939bly1gicis081o9j20zk0m8dmr.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/hPjmS0VR/6833939bly1gicm0fdw5cj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/pr0nf9bS/6833939bly1giclxp31goj20zk0m8qv5.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/W4NmkqyM/6833939bly1gipexbei4hj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/J04cbVgp/6833939bly1gipeun65urj20zk0m81ii.jpg"></li>
         </ul>
       </div>
     </header>
@@ -188,8 +188,8 @@
 <h1 id="四-成功使用案例"><a class="markdownIt-Anchor" href="#四-成功使用案例">#</a> 四、成功使用案例</h1>
 <figure class="highlight python"><figcaption data-lang="python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># 功能：根据输入参数获得 z（货架 i 为订单 o 提供的商品 c 的数量）</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token comment"># 输入参数：各参数同 parameter.py</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token comment"># 输出参数：z</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token decorator annotation punctuation">@nb<span class="token punctuation">.</span>njit</span><span class="token punctuation">(</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    nb<span class="token punctuation">.</span>types<span class="token punctuation">.</span>Array<span class="token punctuation">(</span>nb<span class="token punctuation">.</span>int32<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">"C"</span><span class="token punctuation">)</span><span class="token punctuation">(</span>nb<span class="token punctuation">.</span>types<span class="token punctuation">.</span>Array<span class="token punctuation">(</span>nb<span class="token punctuation">.</span>int32<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">"C"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> nb<span class="token punctuation">.</span>types<span class="token punctuation">.</span>Array<span class="token punctuation">(</span>nb<span class="token punctuation">.</span>int32<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"C"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> nb<span class="token punctuation">.</span>types<span class="token punctuation">.</span>Array<span class="token punctuation">(</span>nb<span class="token punctuation">.</span>int32<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">"C"</span><span class="token punctuation">)</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="6"></td><td><pre>                                     nb<span class="token punctuation">.</span>types<span class="token punctuation">.</span>Array<span class="token punctuation">(</span>nb<span class="token punctuation">.</span>int32<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">"C"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token keyword">def</span> <span class="token function">get_z</span><span class="token punctuation">(</span>y<span class="token punctuation">,</span> selected_pods<span class="token punctuation">,</span> A<span class="token punctuation">,</span> B<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    z <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token punctuation">(</span>y<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> B<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> B<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span>nb<span class="token punctuation">.</span>int32<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    transform_y <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>selected_pods<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="11"></td><td><pre>        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>y<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="12"></td><td><pre>            <span class="token keyword">if</span> y<span class="token punctuation">[</span>j<span class="token punctuation">,</span> i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="13"></td><td><pre>                transform_y<span class="token punctuation">.</span>append<span class="token punctuation">(</span>j<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="14"></td><td><pre>                <span class="token keyword">break</span></pre></td></tr><tr><td data-num="15"></td><td><pre>    remaining_orders <span class="token operator">=</span> np<span class="token punctuation">.</span>copy<span class="token punctuation">(</span>B<span class="token punctuation">)</span>  <span class="token comment"># 所有订单剩余量（n_order*n_commodity_type）</span></pre></td></tr><tr><td data-num="16"></td><td><pre>    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>selected_pods<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 第 i 个货架</span></pre></td></tr><tr><td data-num="17"></td><td><pre>        remaining_A <span class="token operator">=</span> np<span class="token punctuation">.</span>copy<span class="token punctuation">(</span>A<span class="token punctuation">[</span>transform_y<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># 当前货架的剩余量（1*n_commodity_type）</span></pre></td></tr><tr><td data-num="18"></td><td><pre>        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>B<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 第 j 个订单</span></pre></td></tr><tr><td data-num="19"></td><td><pre>            <span class="token keyword">for</span> k <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>B<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 第 k 种商品</span></pre></td></tr><tr><td data-num="20"></td><td><pre>                <span class="token keyword">if</span> remaining_A<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">></span> <span class="token number">0</span> <span class="token keyword">and</span> remaining_orders<span class="token punctuation">[</span>j<span class="token punctuation">,</span> k<span class="token punctuation">]</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="21"></td><td><pre>                    <span class="token keyword">if</span> remaining_A<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">>=</span> remaining_orders<span class="token punctuation">[</span>j<span class="token punctuation">,</span> k<span class="token punctuation">]</span><span class="token punctuation">:</span>  <span class="token comment"># 货架 i 足够为订单 k 提供 z 种商品</span></pre></td></tr><tr><td data-num="22"></td><td><pre>                        z<span class="token punctuation">[</span>transform_y<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> j<span class="token punctuation">,</span> k<span class="token punctuation">]</span> <span class="token operator">=</span> remaining_orders<span class="token punctuation">[</span>j<span class="token punctuation">,</span> k<span class="token punctuation">]</span></pre></td></tr><tr><td data-num="23"></td><td><pre>                        remaining_A<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> remaining_A<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">-</span> remaining_orders<span class="token punctuation">[</span>j<span class="token punctuation">,</span> k<span class="token punctuation">]</span></pre></td></tr><tr><td data-num="24"></td><td><pre>                        remaining_orders<span class="token punctuation">[</span>j<span class="token punctuation">,</span> k<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span></pre></td></tr><tr><td data-num="25"></td><td><pre>                    <span class="token keyword">else</span><span class="token punctuation">:</span>  <span class="token comment"># 货架 i 不足够为订单 k 提供 z 种商品</span></pre></td></tr><tr><td data-num="26"></td><td><pre>                        <span class="token comment"># z[transform_y[i]][j][k] = remaining_A[k]</span></pre></td></tr><tr><td data-num="27"></td><td><pre>                        z<span class="token punctuation">[</span>transform_y<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> j<span class="token punctuation">,</span> k<span class="token punctuation">]</span> <span class="token operator">=</span> remaining_A<span class="token punctuation">[</span>k<span class="token punctuation">]</span></pre></td></tr><tr><td data-num="28"></td><td><pre>                        remaining_orders<span class="token punctuation">[</span>j<span class="token punctuation">,</span> k<span class="token punctuation">]</span> <span class="token operator">=</span> remaining_orders<span class="token punctuation">[</span>j<span class="token punctuation">,</span> k<span class="token punctuation">]</span> <span class="token operator">-</span> remaining_A<span class="token punctuation">[</span>k<span class="token punctuation">]</span></pre></td></tr><tr><td data-num="29"></td><td><pre>                        remaining_A<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span></pre></td></tr><tr><td data-num="30"></td><td><pre>    <span class="token keyword">return</span> z</pre></td></tr></table></figure>
       <div class="tags">
-          <a href="/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/" rel="tag"><i class="ic i-tag"></i> 编程技巧</a>
           <a href="/tags/python/" rel="tag"><i class="ic i-tag"></i> python</a>
+          <a href="/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/" rel="tag"><i class="ic i-tag"></i> 编程技巧</a>
       </div>
   </div>
 
@@ -224,17 +224,17 @@
     <div class="item left">
       
 
-  <a href="/2023/03/02/code/python/python_gurobi/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;02tn8Q3r&#x2F;6833939bly1giclga70tsj20zk0m84mr.jpg" title="python+gurobi应用">
+  <a href="/2023/03/02/code/python/python_pip/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;SQ1YRMS0&#x2F;6833939bly1giclfw2t96j20zk0m8x6p.jpg" title="修改pip路径">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> python</span>
-  <h3>python+gurobi应用</h3>
+  <h3>修改pip路径</h3>
   </a>
 
     </div>
     <div class="item right">
       
 
-  <a href="/2023/03/02/code/python/python_jupyter/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;L8p9891K&#x2F;6833939bly1giciundwu5j20zk0m8n9e.jpg" title="修改Jupyter Notebook默认工作路径">
+  <a href="/2023/03/02/code/python/python_jupyter/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;pr0nf9bS&#x2F;6833939bly1giclxp31goj20zk0m8qv5.jpg" title="修改Jupyter Notebook默认工作路径">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> python</span>
   <h3>修改Jupyter Notebook默认工作路径</h3>
@@ -260,7 +260,7 @@
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
-          <li><a href="/2023/02/06/code/python/python_array_asarray/" rel="bookmark" title="np.array和np.asarray区别">np.array和np.asarray区别</a></li><li><a href="/2023/02/06/code/python/python_bitwise_operators/" rel="bookmark" title="Python按位运算符">Python按位运算符</a></li><li><a href="/2023/02/06/code/python/python_float/" rel="bookmark" title="Python浮点数运算不精确问题">Python浮点数运算不精确问题</a></li><li><a href="/2023/02/06/code/python/python_multiply/" rel="bookmark" title="python字符串、列表、元组乘法">python字符串、列表、元组乘法</a></li><li><a href="/2023/02/06/code/python/python_note/" rel="bookmark" title="Pycharm中的特殊注释">Pycharm中的特殊注释</a></li><li><a href="/2023/02/06/code/python/python_special_func/" rel="bookmark" title="特定功能函数">特定功能函数</a></li><li><a href="/2023/03/01/code/python/python_qt_install/" rel="bookmark" title="Python运行pyside2报错问题解决">Python运行pyside2报错问题解决</a></li><li><a href="/2023/03/01/code/python/python_test/" rel="bookmark" title="Python test in xxx问题">Python test in xxx问题</a></li><li><a href="/2023/03/02/code/python/python_jupyter/" rel="bookmark" title="修改Jupyter Notebook默认工作路径">修改Jupyter Notebook默认工作路径</a></li><li class="active"><a href="/2023/03/02/code/python/python_numba/" rel="bookmark" title="使用numba对python进行加速">使用numba对python进行加速</a></li><li><a href="/2023/03/02/code/python/python_gurobi/" rel="bookmark" title="python+gurobi应用">python+gurobi应用</a></li><li><a href="/2023/03/02/code/python/python_pip/" rel="bookmark" title="修改pip路径">修改pip路径</a></li><li><a href="/2023/03/02/code/python/python_try_except/" rel="bookmark" title="python下的try-except处理异常">python下的try-except处理异常</a></li><li><a href="/2023/03/03/code/python/python_json/" rel="bookmark" title="python读取及保存json文件">python读取及保存json文件</a></li><li><a href="/2023/03/12/code/python/python_class_inherit/" rel="bookmark" title="python类的继承">python类的继承</a></li><li><a href="/2023/03/12/code/python/python_enumerate/" rel="bookmark" title="python使用enumerate()给列表添加序号">python使用enumerate()给列表添加序号</a></li><li><a href="/2023/03/23/code/python/python_problem/" rel="bookmark" title="python一些报错的处理">python一些报错的处理</a></li><li><a href="/2023/03/23/code/python/python_type_hints/" rel="bookmark" title="python类型提示">python类型提示</a></li><li><a href="/2023/03/24/code/python/python_jMetal/" rel="bookmark" title="python+jMetal应用">python+jMetal应用</a></li><li><a href="/2023/03/27/code/python/python_plot/" rel="bookmark" title="python+matplotlib绘制图像">python+matplotlib绘制图像</a></li><li><a href="/2023/04/02/code/python/python_thread/" rel="bookmark" title="Python多线程">Python多线程</a></li>
+          <li><a href="/2023/02/06/code/python/python_array_asarray/" rel="bookmark" title="np.array和np.asarray区别">np.array和np.asarray区别</a></li><li><a href="/2023/02/06/code/python/python_bitwise_operators/" rel="bookmark" title="Python按位运算符">Python按位运算符</a></li><li><a href="/2023/02/06/code/python/python_float/" rel="bookmark" title="Python浮点数运算不精确问题">Python浮点数运算不精确问题</a></li><li><a href="/2023/02/06/code/python/python_multiply/" rel="bookmark" title="python字符串、列表、元组乘法">python字符串、列表、元组乘法</a></li><li><a href="/2023/02/06/code/python/python_note/" rel="bookmark" title="Pycharm中的特殊注释">Pycharm中的特殊注释</a></li><li><a href="/2023/02/06/code/python/python_special_func/" rel="bookmark" title="特定功能函数">特定功能函数</a></li><li><a href="/2023/03/01/code/python/python_qt_install/" rel="bookmark" title="Python运行pyside2报错问题解决">Python运行pyside2报错问题解决</a></li><li><a href="/2023/03/01/code/python/python_test/" rel="bookmark" title="Python test in xxx问题">Python test in xxx问题</a></li><li><a href="/2023/03/02/code/python/python_gurobi/" rel="bookmark" title="python+gurobi应用">python+gurobi应用</a></li><li><a href="/2023/03/02/code/python/python_jupyter/" rel="bookmark" title="修改Jupyter Notebook默认工作路径">修改Jupyter Notebook默认工作路径</a></li><li class="active"><a href="/2023/03/02/code/python/python_numba/" rel="bookmark" title="使用numba对python进行加速">使用numba对python进行加速</a></li><li><a href="/2023/03/02/code/python/python_pip/" rel="bookmark" title="修改pip路径">修改pip路径</a></li><li><a href="/2023/03/02/code/python/python_try_except/" rel="bookmark" title="python下的try-except处理异常">python下的try-except处理异常</a></li><li><a href="/2023/03/03/code/python/python_json/" rel="bookmark" title="python读取及保存json文件">python读取及保存json文件</a></li><li><a href="/2023/03/12/code/python/python_class_inherit/" rel="bookmark" title="python类的继承">python类的继承</a></li><li><a href="/2023/03/12/code/python/python_enumerate/" rel="bookmark" title="python使用enumerate()给列表添加序号">python使用enumerate()给列表添加序号</a></li><li><a href="/2023/03/23/code/python/python_problem/" rel="bookmark" title="python一些报错的处理">python一些报错的处理</a></li><li><a href="/2023/03/23/code/python/python_type_hints/" rel="bookmark" title="python类型提示">python类型提示</a></li><li><a href="/2023/03/24/code/python/python_jMetal/" rel="bookmark" title="python+jMetal应用">python+jMetal应用</a></li><li><a href="/2023/03/27/code/python/python_plot/" rel="bookmark" title="python+matplotlib绘制图像">python+matplotlib绘制图像</a></li><li><a href="/2023/04/02/code/python/python_thread/" rel="bookmark" title="Python多线程">Python多线程</a></li>
         </ul>
       </div>
       <div class="overview panel" data-title="站点概览">
@@ -349,7 +349,7 @@
 
   <ul id="quick">
     <li class="prev pjax">
-        <a href="/2023/03/02/code/python/python_gurobi/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+        <a href="/2023/03/02/code/python/python_pip/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
@@ -376,30 +376,20 @@
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/office/" title="分类于 office技巧">office技巧</a>
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
 </div>
 
-    <span><a href="/2023/01/02/office/office/" title="Office技巧">Office技巧</a></span>
+    <span><a href="/2022/12/24/blog/hexo_change/" title="Hexo文件迁移">Hexo文件迁移</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/hardware/" title="分类于 硬件开发">硬件开发</a>
+<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
 </div>
 
-    <span><a href="/2022/11/16/hardware/stm32cubemx/" title="使用stm32cubemx新建工程">使用stm32cubemx新建工程</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
-</div>
-
-    <span><a href="/2023/03/23/code/python/python_problem/" title="python一些报错的处理">python一些报错的处理</a></span>
+    <span><a href="/2022/12/23/optimal/signal_objective_optimization/" title="单目标搜索算法汇总">单目标搜索算法汇总</a></span>
   </li>
 
       
@@ -409,56 +399,47 @@
 <a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2023/03/02/code/python/python_pip/" title="修改pip路径">修改pip路径</a></span>
+    <span><a href="/2023/02/06/code/python/python_array_asarray/" title="np.array和np.asarray区别">np.array和np.asarray区别</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/else/" title="分类于 其他">其他</a>
+<a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2023/01/22/else/wish_2023/" title="2023年的一些小目标">2023年的一些小目标</a></span>
+    <span><a href="/2023/03/23/code/python/python_type_hints/" title="python类型提示">python类型提示</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/hardware/" title="分类于 硬件开发">硬件开发</a>
+<a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2023/01/30/hardware/Quartus/" title="Quartus基础教程">Quartus基础教程</a></span>
+    <span><a href="/2023/03/03/code/python/python_json/" title="python读取及保存json文件">python读取及保存json文件</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2022/11/01/website_code/" title="一些奇奇怪怪的东西">一些奇奇怪怪的东西</a></span>
+    <span><a href="/2023/03/02/code/python/python_try_except/" title="python下的try-except处理异常">python下的try-except处理异常</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
+<a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2022/11/24/math/conv/" title="一般情况下的椭圆">一般情况下的椭圆</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/control/" title="分类于 控制工程">控制工程</a>
-</div>
-
-    <span><a href="/2023/03/23/control/LQR/" title="LQR最优控制方法">LQR最优控制方法</a></span>
+    <span><a href="/2023/03/12/code/python/python_enumerate/" title="python使用enumerate()给列表添加序号">python使用enumerate()给列表添加序号</a></span>
   </li>
 
       
@@ -469,6 +450,26 @@
 </div>
 
     <span><a href="/2023/03/01/code/python/python_qt_install/" title="Python运行pyside2报错问题解决">Python运行pyside2报错问题解决</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/24/code/python/python_jMetal/" title="python+jMetal应用">python+jMetal应用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+</div>
+
+    <span><a href="/2022/11/06/blog/hexo/" title="Github+Hexo+shoka主题搭建个人博客">Github+Hexo+shoka主题搭建个人博客</a></span>
   </li>
 
   </ul>
