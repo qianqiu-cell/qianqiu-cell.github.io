@@ -1,0 +1,564 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Welcome to my tiny world" href="http://qianqiu-cell.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Welcome to my tiny world" href="http://qianqiu-cell.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Welcome to my tiny world" href="http://qianqiu-cell.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="编程技巧,python" />
+
+
+<link rel="canonical" href="http://qianqiu-cell.github.io/2023/04/02/code/python/python_thread/">
+
+
+
+  <title>
+Python多线程 - python |
+唯爱ぺ灬babyル = Welcome to my tiny world = 如果可以，我想你一直这样温柔下去ʕ ᵔᴥᵔ ʔ</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Python多线程
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2023-04-02 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-04-02T00:00:00+08:00">2023-04-02</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>6.3k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>6 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">唯爱ぺ灬babyル</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://i.postimg.cc/vmYrRd8b/6833939bly1giciszlczyj20zk0m816d.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/CM3j4QtM/6833939bly1gipexj2jgzj20zk0m8b09.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/zv3f106d/6833939bly1gicm0n457cj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/MGY8T181/6833939bly1gicivghyooj20zk0m8dir.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/Mpb7rGS9/6833939bly1gicitcxhpij20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/nLVnq323/6833939bly1giclfb3vzhj20zk0m8wny.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/python/" itemprop="item" rel="index" title="分类于 python"><span itemprop="name">python</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://qianqiu-cell.github.io/2023/04/02/code/python/python_thread/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="Darling F">
+    <meta itemprop="description" content="如果可以，我想你一直这样温柔下去ʕ ᵔᴥᵔ ʔ, 小樊&小小樊的学习笔记🌸">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Welcome to my tiny world">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>   <code>python</code>  线程中常用的两个模块为： <code>_thread</code>  和 <code>threading</code> （推荐使用）。（注： <code>thread</code>  模块已经被废弃，用户可以使用 <code>threading</code>  模块代替，所以 <code>python3</code>  中不能再使用 <code>thread</code>  模块，为了兼容性， <code>python3</code>  将 <code>thread</code>  重命名为 <code>_thread</code> ）</p>
+<h1 id="一-python的线程使用方式"><a class="markdownIt-Anchor" href="#一-python的线程使用方式">#</a> 一、Python 的线程使用方式</h1>
+<p>   <code>Python</code>  中使用线程有两种方式：函数或者用类来包装线程对象。（分别对应 <code>_thread</code>  和 <code>threading</code>  模块）</p>
+<h2 id="11-_thread-函数式线程"><a class="markdownIt-Anchor" href="#11-_thread-函数式线程">#</a> 1.1 _thread - 函数式线程</h2>
+<p>  调用 <code>_thread</code>  模块中的 <code>start_new_thread()</code>  函数来产生新线程。语法如下:</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre>_thread<span class="token punctuation">.</span>start_new_thread <span class="token punctuation">(</span> function<span class="token punctuation">,</span> args<span class="token punctuation">[</span><span class="token punctuation">,</span> kwargs<span class="token punctuation">]</span> <span class="token punctuation">)</span></pre></td></tr></table></figure><p>参数说明：</p>
+<ul>
+<li>function - 线程函数。</li>
+<li>args - 传递给线程函数的参数，他必须是个 tuple 类型。</li>
+<li>kwargs - 可选参数。<br>
+  使用案例如下：</li>
+</ul>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">import</span> _thread</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">import</span> time</pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token comment"># 为线程定义一个函数</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token keyword">def</span> <span class="token function">print_time</span><span class="token punctuation">(</span>threadName<span class="token punctuation">,</span> delay<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    count <span class="token operator">=</span> <span class="token number">0</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    <span class="token keyword">while</span> count <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="9"></td><td><pre>        time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span>delay<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="10"></td><td><pre>        count <span class="token operator">+=</span> <span class="token number">1</span></pre></td></tr><tr><td data-num="11"></td><td><pre>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%s: %s"</span> <span class="token operator">%</span> <span class="token punctuation">(</span>threadName<span class="token punctuation">,</span> time<span class="token punctuation">.</span>ctime<span class="token punctuation">(</span>time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="12"></td><td><pre></pre></td></tr><tr><td data-num="13"></td><td><pre></pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token comment"># 创建两个线程</span></pre></td></tr><tr><td data-num="15"></td><td><pre><span class="token keyword">try</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="16"></td><td><pre>    _thread<span class="token punctuation">.</span>start_new_thread<span class="token punctuation">(</span>print_time<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">"Thread-1"</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="17"></td><td><pre>    _thread<span class="token punctuation">.</span>start_new_thread<span class="token punctuation">(</span>print_time<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">"Thread-2"</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="18"></td><td><pre><span class="token keyword">except</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="19"></td><td><pre>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Error: 无法启动线程"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="20"></td><td><pre></pre></td></tr><tr><td data-num="21"></td><td><pre><span class="token keyword">while</span> <span class="token number">1</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="22"></td><td><pre>    <span class="token keyword">pass</span></pre></td></tr></table></figure><p>  执行以上程序输出结果如下：</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">14</span><span class="token punctuation">:</span><span class="token number">50</span><span class="token punctuation">:</span><span class="token number">13</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="2"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">14</span><span class="token punctuation">:</span><span class="token number">50</span><span class="token punctuation">:</span><span class="token number">15</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="3"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">14</span><span class="token punctuation">:</span><span class="token number">50</span><span class="token punctuation">:</span><span class="token number">15</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="4"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">14</span><span class="token punctuation">:</span><span class="token number">50</span><span class="token punctuation">:</span><span class="token number">17</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="5"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">14</span><span class="token punctuation">:</span><span class="token number">50</span><span class="token punctuation">:</span><span class="token number">19</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="6"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">14</span><span class="token punctuation">:</span><span class="token number">50</span><span class="token punctuation">:</span><span class="token number">19</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="7"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">14</span><span class="token punctuation">:</span><span class="token number">50</span><span class="token punctuation">:</span><span class="token number">21</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="8"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">14</span><span class="token punctuation">:</span><span class="token number">50</span><span class="token punctuation">:</span><span class="token number">23</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="9"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">14</span><span class="token punctuation">:</span><span class="token number">50</span><span class="token punctuation">:</span><span class="token number">27</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="10"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">14</span><span class="token punctuation">:</span><span class="token number">50</span><span class="token punctuation">:</span><span class="token number">31</span> <span class="token number">2023</span></pre></td></tr></table></figure><h2 id="12-threading-类包装式线程"><a class="markdownIt-Anchor" href="#12-threading-类包装式线程">#</a> 1.2 threading - 类包装式线程</h2>
+<p>   <code>_thread</code>  提供了低级别的、原始的线程以及一个简单的锁，它相比于 <code>threading</code>  模块的功能还是比较有限的。 <code>threading</code>  模块除了包含 <code>_thread</code>  模块中的所有方法外，还提供的其他方法：</p>
+<ul>
+<li><code>threading.currentThread()</code> : 返回当前的线程变量。</li>
+<li><code>threading.enumerate()</code> : 返回一个包含正在运行的线程的 <code>list</code> 。正在运行指线程启动后、结束前，不包括启动前和终止后的线程。</li>
+<li><code>threading.activeCount()</code> : 返回正在运行的线程数量，与 <code>len(threading.enumerate())</code>  有相同的结果。<br>
+  除了使用方法外，线程模块同样提供了 Thread 类来处理线程，Thread 类提供了以下方法:</li>
+<li><code>run()</code> : 用以表示线程活动的方法。</li>
+<li><code>start()</code> : 启动线程活动。</li>
+<li><code>join([time])</code> : 等待至线程中止。这阻塞调用线程直至线程的 <code>join()</code>  方法被调用中止 - 正常退出或者抛出未处理的异常 - 或者是可选的超时发生。</li>
+<li><code>isAlive()</code> : 返回线程是否活动的。</li>
+<li><code>getName()</code> : 返回线程名。</li>
+<li><code>setName()</code> : 设置线程名。<br>
+  我们可以通过直接从 <code>threading.Thread</code>  继承创建一个新的子类，并实例化后调用 <code>start()</code>  方法启动新线程，即它调用了线程的 <code>run()</code>  方法。使用案例如下：</li>
+</ul>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">import</span> threading</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">import</span> time</pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token keyword">class</span> <span class="token class-name">myThread</span><span class="token punctuation">(</span>threading<span class="token punctuation">.</span>Thread<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> threadID<span class="token punctuation">,</span> name<span class="token punctuation">,</span> delay<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="7"></td><td><pre>        threading<span class="token punctuation">.</span>Thread<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>self<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="8"></td><td><pre>        self<span class="token punctuation">.</span>threadID <span class="token operator">=</span> threadID</pre></td></tr><tr><td data-num="9"></td><td><pre>        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name</pre></td></tr><tr><td data-num="10"></td><td><pre>        self<span class="token punctuation">.</span>delay <span class="token operator">=</span> delay</pre></td></tr><tr><td data-num="11"></td><td><pre></pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token keyword">def</span> <span class="token function">run</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="13"></td><td><pre>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"开始线程："</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>name<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="14"></td><td><pre>        print_time<span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">,</span> self<span class="token punctuation">.</span>delay<span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="15"></td><td><pre>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"退出线程："</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>name<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="16"></td><td><pre></pre></td></tr><tr><td data-num="17"></td><td><pre></pre></td></tr><tr><td data-num="18"></td><td><pre><span class="token keyword">def</span> <span class="token function">print_time</span><span class="token punctuation">(</span>threadName<span class="token punctuation">,</span> delay<span class="token punctuation">,</span> counter<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="19"></td><td><pre>    <span class="token keyword">while</span> counter<span class="token punctuation">:</span></pre></td></tr><tr><td data-num="20"></td><td><pre>        time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span>delay<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="21"></td><td><pre>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%s: %s"</span> <span class="token operator">%</span> <span class="token punctuation">(</span>threadName<span class="token punctuation">,</span> time<span class="token punctuation">.</span>ctime<span class="token punctuation">(</span>time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="22"></td><td><pre>        counter <span class="token operator">-=</span> <span class="token number">1</span></pre></td></tr><tr><td data-num="23"></td><td><pre></pre></td></tr><tr><td data-num="24"></td><td><pre></pre></td></tr><tr><td data-num="25"></td><td><pre><span class="token comment"># 创建新线程</span></pre></td></tr><tr><td data-num="26"></td><td><pre>thread1 <span class="token operator">=</span> myThread<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"Thread-1"</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="27"></td><td><pre>thread2 <span class="token operator">=</span> myThread<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">"Thread-2"</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="28"></td><td><pre></pre></td></tr><tr><td data-num="29"></td><td><pre><span class="token comment"># 开启新线程</span></pre></td></tr><tr><td data-num="30"></td><td><pre>thread1<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="31"></td><td><pre>thread2<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="32"></td><td><pre>thread1<span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="33"></td><td><pre>thread2<span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="34"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"退出主线程"</span><span class="token punctuation">)</span></pre></td></tr></table></figure><p>  以上程序执行结果如下：</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre>开始线程：Thread<span class="token operator">-</span><span class="token number">1</span></pre></td></tr><tr><td data-num="2"></td><td><pre>开始线程：Thread<span class="token operator">-</span><span class="token number">2</span></pre></td></tr><tr><td data-num="3"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">14</span><span class="token punctuation">:</span><span class="token number">52</span><span class="token punctuation">:</span><span class="token number">32</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="4"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">14</span><span class="token punctuation">:</span><span class="token number">52</span><span class="token punctuation">:</span><span class="token number">33</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="5"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">14</span><span class="token punctuation">:</span><span class="token number">52</span><span class="token punctuation">:</span><span class="token number">33</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="6"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">14</span><span class="token punctuation">:</span><span class="token number">52</span><span class="token punctuation">:</span><span class="token number">34</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="7"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">14</span><span class="token punctuation">:</span><span class="token number">52</span><span class="token punctuation">:</span><span class="token number">35</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="8"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">14</span><span class="token punctuation">:</span><span class="token number">52</span><span class="token punctuation">:</span><span class="token number">35</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="9"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">14</span><span class="token punctuation">:</span><span class="token number">52</span><span class="token punctuation">:</span><span class="token number">36</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="10"></td><td><pre>退出线程：Thread<span class="token operator">-</span><span class="token number">1</span></pre></td></tr><tr><td data-num="11"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">14</span><span class="token punctuation">:</span><span class="token number">52</span><span class="token punctuation">:</span><span class="token number">37</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="12"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">14</span><span class="token punctuation">:</span><span class="token number">52</span><span class="token punctuation">:</span><span class="token number">39</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="13"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">14</span><span class="token punctuation">:</span><span class="token number">52</span><span class="token punctuation">:</span><span class="token number">41</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="14"></td><td><pre>退出线程：Thread<span class="token operator">-</span><span class="token number">2</span></pre></td></tr><tr><td data-num="15"></td><td><pre>退出主线程</pre></td></tr></table></figure><h1 id="三-线程中止"><a class="markdownIt-Anchor" href="#三-线程中止">#</a> 三、线程中止</h1>
+<p>  如果想要使线程在运行规定一段时间之后结束，可以通过在线程的类中添加运行状态的变量，并在其他线程中记录时间，当其他线程记录时间到达时改变子线程的运行状态变量，子线程根据判断跳出 run () 程序来结束该程序。<br>
+  ⚠️⚠️⚠️由于本人并没有在网上找到其他更加方便的中止线程的方法，故自己设计了这种效率较低的中止方法</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">import</span> threading</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">import</span> time</pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token keyword">class</span> <span class="token class-name">myThread</span><span class="token punctuation">(</span>threading<span class="token punctuation">.</span>Thread<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> threadID<span class="token punctuation">,</span> name<span class="token punctuation">,</span> delay<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="7"></td><td><pre>        threading<span class="token punctuation">.</span>Thread<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>self<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="8"></td><td><pre>        self<span class="token punctuation">.</span>threadID <span class="token operator">=</span> threadID</pre></td></tr><tr><td data-num="9"></td><td><pre>        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name</pre></td></tr><tr><td data-num="10"></td><td><pre>        self<span class="token punctuation">.</span>delay <span class="token operator">=</span> delay</pre></td></tr><tr><td data-num="11"></td><td><pre>        self<span class="token punctuation">.</span>run_state <span class="token operator">=</span> <span class="token boolean">True</span></pre></td></tr><tr><td data-num="12"></td><td><pre></pre></td></tr><tr><td data-num="13"></td><td><pre>    <span class="token keyword">def</span> <span class="token function">run</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="14"></td><td><pre>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"开始线程："</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>name<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="15"></td><td><pre>        self<span class="token punctuation">.</span>print_time<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="16"></td><td><pre>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"退出线程："</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>name<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="17"></td><td><pre></pre></td></tr><tr><td data-num="18"></td><td><pre>    <span class="token keyword">def</span> <span class="token function">exit</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="19"></td><td><pre>        self<span class="token punctuation">.</span>run_state <span class="token operator">=</span> <span class="token boolean">False</span></pre></td></tr><tr><td data-num="20"></td><td><pre></pre></td></tr><tr><td data-num="21"></td><td><pre>    <span class="token keyword">def</span> <span class="token function">print_time</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> counter<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="22"></td><td><pre>        <span class="token keyword">while</span> counter<span class="token punctuation">:</span></pre></td></tr><tr><td data-num="23"></td><td><pre>            <span class="token keyword">if</span> self<span class="token punctuation">.</span>run_state<span class="token punctuation">:</span></pre></td></tr><tr><td data-num="24"></td><td><pre>                time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span>self<span class="token punctuation">.</span>delay<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="25"></td><td><pre>                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%s: %s"</span> <span class="token operator">%</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">,</span> time<span class="token punctuation">.</span>ctime<span class="token punctuation">(</span>time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="26"></td><td><pre>                counter <span class="token operator">-=</span> <span class="token number">1</span></pre></td></tr><tr><td data-num="27"></td><td><pre>            <span class="token keyword">else</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="28"></td><td><pre>                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"线程被中止："</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>name<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="29"></td><td><pre>                <span class="token keyword">break</span></pre></td></tr><tr><td data-num="30"></td><td><pre></pre></td></tr><tr><td data-num="31"></td><td><pre></pre></td></tr><tr><td data-num="32"></td><td><pre><span class="token comment"># 创建新线程</span></pre></td></tr><tr><td data-num="33"></td><td><pre>thread1 <span class="token operator">=</span> myThread<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"Thread-1"</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="34"></td><td><pre></pre></td></tr><tr><td data-num="35"></td><td><pre><span class="token comment"># 开启新线程</span></pre></td></tr><tr><td data-num="36"></td><td><pre>thread1<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="37"></td><td><pre></pre></td></tr><tr><td data-num="38"></td><td><pre><span class="token comment"># 中止子线程</span></pre></td></tr><tr><td data-num="39"></td><td><pre>time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="40"></td><td><pre>thread1<span class="token punctuation">.</span>exit<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr></table></figure><p>  以上程序执行结果如下：</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre>开始线程：Thread<span class="token operator">-</span><span class="token number">1</span></pre></td></tr><tr><td data-num="2"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">33</span><span class="token punctuation">:</span><span class="token number">35</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="3"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">33</span><span class="token punctuation">:</span><span class="token number">36</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="4"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">33</span><span class="token punctuation">:</span><span class="token number">37</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="5"></td><td><pre>线程被中止：Thread<span class="token operator">-</span><span class="token number">1</span></pre></td></tr><tr><td data-num="6"></td><td><pre>退出线程：Thread<span class="token operator">-</span><span class="token number">1</span></pre></td></tr></table></figure><h1 id="四-threadjoin用法详解"><a class="markdownIt-Anchor" href="#四-threadjoin用法详解">#</a> 四、Thread.join 用法详解</h1>
+<p>   <code>join()</code>  方法的主要作用是阻塞主线程，其格式为 <code>thread.join(timeout)</code> 。 <code>timeout</code>  参数作为可选参数，其功能是指定 <code>thread</code>  线程最多阻塞主线程的时间（以秒为单位），如果省略，则默认直到 <code>thread</code>  执行结束（进入死亡状态）才释放主线程。简单理解为 <code>join()</code>  了多长时间，那么主线程就会被阻塞多长时间。如下展示了 <code>join()</code>  的三种情况：</p>
+<h2 id="41-没有使用join"><a class="markdownIt-Anchor" href="#41-没有使用join">#</a> 4.1 没有使用 join</h2>
+<p>  此时主线程和子线程相当于齐头并进，主线程不会等待子线程执行完了再结束，即不会阻塞。</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">import</span> threading</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">import</span> time</pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token keyword">class</span> <span class="token class-name">myThread</span><span class="token punctuation">(</span>threading<span class="token punctuation">.</span>Thread<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> threadID<span class="token punctuation">,</span> name<span class="token punctuation">,</span> delay<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="7"></td><td><pre>        threading<span class="token punctuation">.</span>Thread<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>self<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="8"></td><td><pre>        self<span class="token punctuation">.</span>threadID <span class="token operator">=</span> threadID</pre></td></tr><tr><td data-num="9"></td><td><pre>        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name</pre></td></tr><tr><td data-num="10"></td><td><pre>        self<span class="token punctuation">.</span>delay <span class="token operator">=</span> delay</pre></td></tr><tr><td data-num="11"></td><td><pre></pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token keyword">def</span> <span class="token function">run</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="13"></td><td><pre>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"开始线程："</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>name<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="14"></td><td><pre>        print_time<span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">,</span> self<span class="token punctuation">.</span>delay<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="15"></td><td><pre>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"退出线程："</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>name<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="16"></td><td><pre></pre></td></tr><tr><td data-num="17"></td><td><pre></pre></td></tr><tr><td data-num="18"></td><td><pre><span class="token keyword">def</span> <span class="token function">print_time</span><span class="token punctuation">(</span>threadName<span class="token punctuation">,</span> delay<span class="token punctuation">,</span> counter<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="19"></td><td><pre>    <span class="token keyword">while</span> counter<span class="token punctuation">:</span></pre></td></tr><tr><td data-num="20"></td><td><pre>        time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span>delay<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="21"></td><td><pre>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%s: %s"</span> <span class="token operator">%</span> <span class="token punctuation">(</span>threadName<span class="token punctuation">,</span> time<span class="token punctuation">.</span>ctime<span class="token punctuation">(</span>time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="22"></td><td><pre>        counter <span class="token operator">-=</span> <span class="token number">1</span></pre></td></tr><tr><td data-num="23"></td><td><pre></pre></td></tr><tr><td data-num="24"></td><td><pre></pre></td></tr><tr><td data-num="25"></td><td><pre><span class="token comment"># 创建新线程</span></pre></td></tr><tr><td data-num="26"></td><td><pre>thread1 <span class="token operator">=</span> myThread<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"Thread-1"</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="27"></td><td><pre></pre></td></tr><tr><td data-num="28"></td><td><pre><span class="token comment"># 开启新线程</span></pre></td></tr><tr><td data-num="29"></td><td><pre>thread1<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="30"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"退出主线程"</span><span class="token punctuation">)</span></pre></td></tr></table></figure><p>  以上程序执行结果如下：</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre>开始线程：Thread<span class="token operator">-</span><span class="token number">1</span>退出主线程</pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">35</span><span class="token punctuation">:</span><span class="token number">25</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="4"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">35</span><span class="token punctuation">:</span><span class="token number">26</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="5"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">35</span><span class="token punctuation">:</span><span class="token number">27</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="6"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">35</span><span class="token punctuation">:</span><span class="token number">28</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="7"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">35</span><span class="token punctuation">:</span><span class="token number">29</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="8"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">35</span><span class="token punctuation">:</span><span class="token number">30</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="9"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">35</span><span class="token punctuation">:</span><span class="token number">31</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="10"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">35</span><span class="token punctuation">:</span><span class="token number">32</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="11"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">35</span><span class="token punctuation">:</span><span class="token number">33</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="12"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">35</span><span class="token punctuation">:</span><span class="token number">34</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="13"></td><td><pre>退出线程：Thread<span class="token operator">-</span><span class="token number">1</span></pre></td></tr></table></figure><h2 id="42-使用join但没有设置参数最常用"><a class="markdownIt-Anchor" href="#42-使用join但没有设置参数最常用">#</a> 4.2 使用 join 但没有设置参数（最常用）</h2>
+<p>当主线程内的子线程都 <code>start</code>  后，主线程会阻塞并等待子线程执行完才继续执行，直观的表现是：子线程都 <code>start</code>  后，主线程若还有未执行的代码，此时不会继续执行剩余代码，而是等待子线程都执行完后再执行。</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">import</span> threading</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">import</span> time</pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token keyword">class</span> <span class="token class-name">myThread</span><span class="token punctuation">(</span>threading<span class="token punctuation">.</span>Thread<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> threadID<span class="token punctuation">,</span> name<span class="token punctuation">,</span> delay<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="7"></td><td><pre>        threading<span class="token punctuation">.</span>Thread<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>self<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="8"></td><td><pre>        self<span class="token punctuation">.</span>threadID <span class="token operator">=</span> threadID</pre></td></tr><tr><td data-num="9"></td><td><pre>        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name</pre></td></tr><tr><td data-num="10"></td><td><pre>        self<span class="token punctuation">.</span>delay <span class="token operator">=</span> delay</pre></td></tr><tr><td data-num="11"></td><td><pre></pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token keyword">def</span> <span class="token function">run</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="13"></td><td><pre>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"开始线程："</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>name<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="14"></td><td><pre>        print_time<span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">,</span> self<span class="token punctuation">.</span>delay<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="15"></td><td><pre>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"退出线程："</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>name<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="16"></td><td><pre></pre></td></tr><tr><td data-num="17"></td><td><pre></pre></td></tr><tr><td data-num="18"></td><td><pre><span class="token keyword">def</span> <span class="token function">print_time</span><span class="token punctuation">(</span>threadName<span class="token punctuation">,</span> delay<span class="token punctuation">,</span> counter<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="19"></td><td><pre>    <span class="token keyword">while</span> counter<span class="token punctuation">:</span></pre></td></tr><tr><td data-num="20"></td><td><pre>        time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span>delay<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="21"></td><td><pre>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%s: %s"</span> <span class="token operator">%</span> <span class="token punctuation">(</span>threadName<span class="token punctuation">,</span> time<span class="token punctuation">.</span>ctime<span class="token punctuation">(</span>time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="22"></td><td><pre>        counter <span class="token operator">-=</span> <span class="token number">1</span></pre></td></tr><tr><td data-num="23"></td><td><pre></pre></td></tr><tr><td data-num="24"></td><td><pre></pre></td></tr><tr><td data-num="25"></td><td><pre><span class="token comment"># 创建新线程</span></pre></td></tr><tr><td data-num="26"></td><td><pre>thread1 <span class="token operator">=</span> myThread<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"Thread-1"</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="27"></td><td><pre></pre></td></tr><tr><td data-num="28"></td><td><pre><span class="token comment"># 开启新线程</span></pre></td></tr><tr><td data-num="29"></td><td><pre>thread1<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="30"></td><td><pre>thread1<span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="31"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"退出主线程"</span><span class="token punctuation">)</span></pre></td></tr></table></figure><p>  以上程序执行结果如下：</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre>开始线程：Thread<span class="token operator">-</span><span class="token number">1</span></pre></td></tr><tr><td data-num="2"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">:</span><span class="token number">20</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="3"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">:</span><span class="token number">21</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="4"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">:</span><span class="token number">22</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="5"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">:</span><span class="token number">23</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="6"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">:</span><span class="token number">24</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="7"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">:</span><span class="token number">25</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="8"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">:</span><span class="token number">26</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="9"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">:</span><span class="token number">27</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="10"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">:</span><span class="token number">28</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="11"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">:</span><span class="token number">29</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="12"></td><td><pre>退出线程：Thread<span class="token operator">-</span><span class="token number">1</span></pre></td></tr><tr><td data-num="13"></td><td><pre>退出主线程</pre></td></tr></table></figure><h2 id="43-有join并设置参数"><a class="markdownIt-Anchor" href="#43-有join并设置参数">#</a> 4.3 有 join 并设置参数</h2>
+<p>  设置了主线程最长阻塞时间，但即使是主线程结束阻塞后执行完剩余代码，子线程也会继续执行，而不会随着主线程的结束而终止。</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">import</span> threading</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">import</span> time</pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token keyword">class</span> <span class="token class-name">myThread</span><span class="token punctuation">(</span>threading<span class="token punctuation">.</span>Thread<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> threadID<span class="token punctuation">,</span> name<span class="token punctuation">,</span> delay<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="7"></td><td><pre>        threading<span class="token punctuation">.</span>Thread<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>self<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="8"></td><td><pre>        self<span class="token punctuation">.</span>threadID <span class="token operator">=</span> threadID</pre></td></tr><tr><td data-num="9"></td><td><pre>        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name</pre></td></tr><tr><td data-num="10"></td><td><pre>        self<span class="token punctuation">.</span>delay <span class="token operator">=</span> delay</pre></td></tr><tr><td data-num="11"></td><td><pre></pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token keyword">def</span> <span class="token function">run</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="13"></td><td><pre>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"开始线程："</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>name<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="14"></td><td><pre>        print_time<span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">,</span> self<span class="token punctuation">.</span>delay<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="15"></td><td><pre>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"退出线程："</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>name<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="16"></td><td><pre></pre></td></tr><tr><td data-num="17"></td><td><pre></pre></td></tr><tr><td data-num="18"></td><td><pre><span class="token keyword">def</span> <span class="token function">print_time</span><span class="token punctuation">(</span>threadName<span class="token punctuation">,</span> delay<span class="token punctuation">,</span> counter<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="19"></td><td><pre>    <span class="token keyword">while</span> counter<span class="token punctuation">:</span></pre></td></tr><tr><td data-num="20"></td><td><pre>        time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span>delay<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="21"></td><td><pre>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%s: %s"</span> <span class="token operator">%</span> <span class="token punctuation">(</span>threadName<span class="token punctuation">,</span> time<span class="token punctuation">.</span>ctime<span class="token punctuation">(</span>time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="22"></td><td><pre>        counter <span class="token operator">-=</span> <span class="token number">1</span></pre></td></tr><tr><td data-num="23"></td><td><pre></pre></td></tr><tr><td data-num="24"></td><td><pre></pre></td></tr><tr><td data-num="25"></td><td><pre><span class="token comment"># 创建新线程</span></pre></td></tr><tr><td data-num="26"></td><td><pre>thread1 <span class="token operator">=</span> myThread<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"Thread-1"</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="27"></td><td><pre></pre></td></tr><tr><td data-num="28"></td><td><pre><span class="token comment"># 开启新线程</span></pre></td></tr><tr><td data-num="29"></td><td><pre>thread1<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="30"></td><td><pre>thread1<span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="31"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"退出主线程"</span><span class="token punctuation">)</span></pre></td></tr></table></figure><p>  以上程序执行结果如下：</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre>开始线程：Thread<span class="token operator">-</span><span class="token number">1</span></pre></td></tr><tr><td data-num="2"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">:</span><span class="token number">56</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="3"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">:</span><span class="token number">57</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="4"></td><td><pre>退出主线程</pre></td></tr><tr><td data-num="5"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">:</span><span class="token number">58</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="6"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">37</span><span class="token punctuation">:</span><span class="token number">59</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="7"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">38</span><span class="token punctuation">:</span><span class="token number">00</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="8"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">38</span><span class="token punctuation">:</span><span class="token number">01</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="9"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">38</span><span class="token punctuation">:</span><span class="token number">02</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="10"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">38</span><span class="token punctuation">:</span><span class="token number">03</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="11"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">38</span><span class="token punctuation">:</span><span class="token number">04</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="12"></td><td><pre>Thread<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span> Tue Apr <span class="token number">11</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">38</span><span class="token punctuation">:</span><span class="token number">05</span> <span class="token number">2023</span></pre></td></tr><tr><td data-num="13"></td><td><pre>退出线程：Thread<span class="token operator">-</span><span class="token number">1</span></pre></td></tr></table></figure>
+      <div class="tags">
+          <a href="/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/" rel="tag"><i class="ic i-tag"></i> 编程技巧</a>
+          <a href="/tags/python/" rel="tag"><i class="ic i-tag"></i> python</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2023-04-11 15:43:47" itemprop="dateModified" datetime="2023-04-11T15:43:47+08:00">2023-04-11</time>
+  </span>
+  <span id="2023/04/02/code/python/python_thread/" class="item leancloud_visitors" data-flag-title="Python多线程" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/03/27/code/python/python_plot/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;L8p9891K&#x2F;6833939bly1giciundwu5j20zk0m8n9e.jpg" title="python+matplotlib绘制图像">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> python</span>
+  <h3>python+matplotlib绘制图像</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-python%E7%9A%84%E7%BA%BF%E7%A8%8B%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text"> 一、Python 的线程使用方式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#11-_thread-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BA%BF%E7%A8%8B"><span class="toc-number">1.1.</span> <span class="toc-text"> 1.1 _thread - 函数式线程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-threading-%E7%B1%BB%E5%8C%85%E8%A3%85%E5%BC%8F%E7%BA%BF%E7%A8%8B"><span class="toc-number">1.2.</span> <span class="toc-text"> 1.2 threading - 类包装式线程</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89-%E7%BA%BF%E7%A8%8B%E4%B8%AD%E6%AD%A2"><span class="toc-number">2.</span> <span class="toc-text"> 三、线程中止</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B-threadjoin%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3"><span class="toc-number">3.</span> <span class="toc-text"> 四、Thread.join 用法详解</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#41-%E6%B2%A1%E6%9C%89%E4%BD%BF%E7%94%A8join"><span class="toc-number">3.1.</span> <span class="toc-text"> 4.1 没有使用 join</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#42-%E4%BD%BF%E7%94%A8join%E4%BD%86%E6%B2%A1%E6%9C%89%E8%AE%BE%E7%BD%AE%E5%8F%82%E6%95%B0%E6%9C%80%E5%B8%B8%E7%94%A8"><span class="toc-number">3.2.</span> <span class="toc-text"> 4.2 使用 join 但没有设置参数（最常用）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#43-%E6%9C%89join%E5%B9%B6%E8%AE%BE%E7%BD%AE%E5%8F%82%E6%95%B0"><span class="toc-number">3.3.</span> <span class="toc-text"> 4.3 有 join 并设置参数</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2023/02/06/code/python/python_array_asarray/" rel="bookmark" title="np.array和np.asarray区别">np.array和np.asarray区别</a></li><li><a href="/2023/02/06/code/python/python_bitwise_operators/" rel="bookmark" title="Python按位运算符">Python按位运算符</a></li><li><a href="/2023/02/06/code/python/python_float/" rel="bookmark" title="Python浮点数运算不精确问题">Python浮点数运算不精确问题</a></li><li><a href="/2023/02/06/code/python/python_multiply/" rel="bookmark" title="python字符串、列表、元组乘法">python字符串、列表、元组乘法</a></li><li><a href="/2023/02/06/code/python/python_note/" rel="bookmark" title="Pycharm中的特殊注释">Pycharm中的特殊注释</a></li><li><a href="/2023/02/06/code/python/python_special_func/" rel="bookmark" title="特定功能函数">特定功能函数</a></li><li><a href="/2023/03/01/code/python/python_qt_install/" rel="bookmark" title="Python运行pyside2报错问题解决">Python运行pyside2报错问题解决</a></li><li><a href="/2023/03/01/code/python/python_test/" rel="bookmark" title="Python test in xxx问题">Python test in xxx问题</a></li><li><a href="/2023/03/02/code/python/python_jupyter/" rel="bookmark" title="修改Jupyter Notebook默认工作路径">修改Jupyter Notebook默认工作路径</a></li><li><a href="/2023/03/02/code/python/python_numba/" rel="bookmark" title="使用numba对python进行加速">使用numba对python进行加速</a></li><li><a href="/2023/03/02/code/python/python_gurobi/" rel="bookmark" title="python+gurobi应用">python+gurobi应用</a></li><li><a href="/2023/03/02/code/python/python_pip/" rel="bookmark" title="修改pip路径">修改pip路径</a></li><li><a href="/2023/03/02/code/python/python_try_except/" rel="bookmark" title="python下的try-except处理异常">python下的try-except处理异常</a></li><li><a href="/2023/03/03/code/python/python_json/" rel="bookmark" title="python读取及保存json文件">python读取及保存json文件</a></li><li><a href="/2023/03/12/code/python/python_class_inherit/" rel="bookmark" title="python类的继承">python类的继承</a></li><li><a href="/2023/03/12/code/python/python_enumerate/" rel="bookmark" title="python使用enumerate()给列表添加序号">python使用enumerate()给列表添加序号</a></li><li><a href="/2023/03/23/code/python/python_problem/" rel="bookmark" title="python一些报错的处理">python一些报错的处理</a></li><li><a href="/2023/03/23/code/python/python_type_hints/" rel="bookmark" title="python类型提示">python类型提示</a></li><li><a href="/2023/03/24/code/python/python_jMetal/" rel="bookmark" title="python+jMetal应用">python+jMetal应用</a></li><li><a href="/2023/03/27/code/python/python_plot/" rel="bookmark" title="python+matplotlib绘制图像">python+matplotlib绘制图像</a></li><li class="active"><a href="/2023/04/02/code/python/python_thread/" rel="bookmark" title="Python多线程">Python多线程</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Darling F"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">Darling F</p>
+  <div class="description" itemprop="description">小樊&小小樊的学习笔记🌸</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">48</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">12</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">19</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3FpYW5xaXUtY2VsbA==" title="https:&#x2F;&#x2F;github.com&#x2F;qianqiu-cell"><i class="ic i-github"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjI4MzI1Njc4NTFAcXEuY29t" title="mailto:2832567851@qq.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/hardware/" title="分类于 硬件开发">硬件开发</a>
+</div>
+
+    <span><a href="/2023/01/30/hardware/Quartus/" title="Quartus基础教程">Quartus基础教程</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/02/06/code/python/python_multiply/" title="python字符串、列表、元组乘法">python字符串、列表、元组乘法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/24/code/python/python_jMetal/" title="python+jMetal应用">python+jMetal应用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/latex/" title="分类于 latex">latex</a>
+</div>
+
+    <span><a href="/2023/03/12/latex/latex_quotation_mark/" title="latex输入双引号">latex输入双引号</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/23/code/python/python_problem/" title="python一些报错的处理">python一些报错的处理</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/02/code/python/python_jupyter/" title="修改Jupyter Notebook默认工作路径">修改Jupyter Notebook默认工作路径</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/else/" title="分类于 其他">其他</a>
+</div>
+
+    <span><a href="/2023/01/22/else/wish_2023/" title="2023年的一些小目标">2023年的一些小目标</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/27/code/python/python_plot/" title="python+matplotlib绘制图像">python+matplotlib绘制图像</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+</div>
+
+    <span><a href="/2023/01/02/blog/hexo_image/" title="Hexo图片显示异常问题">Hexo图片显示异常问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/02/06/code/python/python_array_asarray/" title="np.array和np.asarray区别">np.array和np.asarray区别</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Darling F @ 唯爱ぺ灬babyル</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">118k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:47</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2023/04/02/code/python/python_thread/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i> 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
