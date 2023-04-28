@@ -1,32 +1,41 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://qianqiu-cell.github.io</id>
-    <title>Welcome to my tiny world • Posts by &#34;其他&#34; tag</title>
+    <title>Welcome to my tiny world • Posts by &#34;生活&#34; category</title>
     <link href="http://qianqiu-cell.github.io" />
-    <updated>2023-01-21T16:00:00.000Z</updated>
+    <updated>2023-04-27T16:00:00.000Z</updated>
     <category term="Windows系统" />
-    <category term="博客搭建" />
-    <category term="其他" />
-    <category term="一些小目标" />
-    <category term="硬件开发" />
-    <category term="烹饪技巧" />
-    <category term="数学基础" />
-    <category term="office技巧" />
-    <category term="论文编辑" />
-    <category term="latex技巧" />
     <category term="控制工程" />
+    <category term="博客搭建" />
+    <category term="烹饪技巧" />
+    <category term="硬件开发" />
+    <category term="latex技巧" />
+    <category term="论文编辑" />
+    <category term="数学基础" />
+    <category term="生活" />
+    <category term="一些小目标" />
+    <category term="office技巧" />
     <category term="最优化" />
     <category term="多目标最优化" />
     <category term="单目标最优化" />
-    <category term="python" />
-    <category term="编程技巧" />
     <category term="C++" />
+    <category term="编程技巧" />
+    <category term="python" />
     <category term="Qt" />
     <category term="界面开发" />
     <entry>
-        <id>http://qianqiu-cell.github.io/2023/01/22/else/wish_2023/</id>
+        <id>http://qianqiu-cell.github.io/2023/04/28/life/weight_2023_4_28/</id>
+        <title>体重下130斤了！！！</title>
+        <link rel="alternate" href="http://qianqiu-cell.github.io/2023/04/28/life/weight_2023_4_28/"/>
+        <content type="html">&lt;p&gt;&lt;img data-src=&#34;/images/life/weight_2023_4_28/1.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</content>
+        <category term="生活" />
+        <updated>2023-04-27T16:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://qianqiu-cell.github.io/2023/01/22/life/wish_2023/</id>
         <title>2023年的一些小目标</title>
-        <link rel="alternate" href="http://qianqiu-cell.github.io/2023/01/22/else/wish_2023/"/>
+        <link rel="alternate" href="http://qianqiu-cell.github.io/2023/01/22/life/wish_2023/"/>
         <content type="html">&lt;p&gt;&lt;strong&gt;2023 不能再碌碌无为了！！！everybody 动起来！！！&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&#34;一-生活篇&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-生活篇&#34;&gt;#&lt;/a&gt; 一、生活篇&lt;/h1&gt;
 &lt;ol&gt;
@@ -108,7 +117,7 @@
 &lt;li&gt;在校期间&lt;strong&gt;减少对于各类游戏的时间投入&lt;/strong&gt;（真的很有助于学习质量的提升）&lt;/li&gt;
 &lt;/ol&gt;
 </content>
-        <category term="其他" />
+        <category term="生活" />
         <category term="一些小目标" />
         <updated>2023-01-21T16:00:00.000Z</updated>
     </entry>

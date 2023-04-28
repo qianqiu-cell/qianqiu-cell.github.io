@@ -8,22 +8,22 @@
         <pubDate>Fri, 24 Mar 2023 00:00:00 +0800</pubDate>
         <lastBuildDate>Fri, 24 Mar 2023 00:00:00 +0800</lastBuildDate>
         <category>Windows系统</category>
-        <category>博客搭建</category>
-        <category>其他</category>
-        <category>一些小目标</category>
-        <category>硬件开发</category>
-        <category>烹饪技巧</category>
-        <category>数学基础</category>
-        <category>office技巧</category>
-        <category>论文编辑</category>
-        <category>latex技巧</category>
         <category>控制工程</category>
+        <category>博客搭建</category>
+        <category>烹饪技巧</category>
+        <category>硬件开发</category>
+        <category>latex技巧</category>
+        <category>论文编辑</category>
+        <category>数学基础</category>
+        <category>生活</category>
+        <category>一些小目标</category>
+        <category>office技巧</category>
         <category>最优化</category>
         <category>多目标最优化</category>
         <category>单目标最优化</category>
-        <category>python</category>
-        <category>编程技巧</category>
         <category>C++</category>
+        <category>编程技巧</category>
+        <category>python</category>
         <category>Qt</category>
         <category>界面开发</category>
         <item>
@@ -32,8 +32,8 @@
             <link>http://qianqiu-cell.github.io/2023/03/24/code/python/python_jMetal/</link>
             <category>最优化</category>
             <category>多目标最优化</category>
-            <category>python</category>
             <category>编程技巧</category>
+            <category>python</category>
             <pubDate>Fri, 24 Mar 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;  有关 &lt;code&gt;jMetal&lt;/code&gt;  的使用可以参考官方手册（不完整，正在完善中）：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9qbWV0YWwuZ2l0aHViLmlvL2pNZXRhbFB5L2luZGV4Lmh0bWwj&#34;&gt;https://jmetal.github.io/jMetalPy/index.html#&lt;/span&gt;和 GitHub 网页说明：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2pNZXRhbC9qTWV0YWxQeQ==&#34;&gt;https://github.com/jMetal/jMetalPy&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;一-一些使用技巧&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-一些使用技巧&#34;&gt;#&lt;/a&gt; 一、一些使用技巧&lt;/h1&gt;
@@ -718,8 +718,8 @@ s_{i j}=1-x_{i(j-1)}, &amp;amp; j=M
             <title>python+gurobi应用</title>
             <link>http://qianqiu-cell.github.io/2023/03/02/code/python/python_gurobi/</link>
             <category>最优化</category>
-            <category>python</category>
             <category>编程技巧</category>
+            <category>python</category>
             <pubDate>Thu, 02 Mar 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;  有关 &lt;code&gt;gurobi&lt;/code&gt;  的使用可以参考官方手册（ &lt;code&gt;Gurobi&lt;/code&gt;  安装路径 &lt;code&gt;\win64\docs&lt;/code&gt;  下的 &lt;code&gt;quickstart_windows.pdf&lt;/code&gt;  和 &lt;code&gt;refman.pdf&lt;/code&gt; ）&lt;/p&gt;
 &lt;h1 id=&#34;一-一些使用技巧&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-一些使用技巧&#34;&gt;#&lt;/a&gt; 一、一些使用技巧&lt;/h1&gt;

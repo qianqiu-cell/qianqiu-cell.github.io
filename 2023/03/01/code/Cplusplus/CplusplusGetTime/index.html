@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
   
-  <meta name="keywords" content="编程技巧,C++" />
+  <meta name="keywords" content="C++,编程技巧" />
 
 
 <link rel="canonical" href="http://qianqiu-cell.github.io/2023/03/01/code/Cplusplus/CplusplusGetTime/">
@@ -117,12 +117,12 @@ C++获取程序运行时间 - C++ |
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://i.postimg.cc/BnYVwNsY/6833939bly1giclfdu6exj20zk0m87hw.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/63XRtJfM/6833939bly1giclxxcb6rj20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/sfqvPCt1/6833939bly1gipewf5l51j20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/59gVBhjL/6833939bly1gipeybxm1pj20zk0m8niv.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/KcR5vFPY/6833939bly1gicitf0kl1j20zk0m87fe.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/Hx7CdR3P/6833939bly1gipesrnqv3j20zk0m8ava.jpg"></li>
           <li class="item" data-background-image="https://i.postimg.cc/pXQnJXzk/6833939bly1gipexw3o58j20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/pr0nf9bS/6833939bly1giclxp31goj20zk0m8qv5.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/MpC2Zxr2/6833939bly1gipeyonbf9j20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/gjms06mL/6833939bly1giclflwv2aj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/nLVnq323/6833939bly1giclfb3vzhj20zk0m8wny.jpg"></li>
         </ul>
       </div>
     </header>
@@ -170,8 +170,8 @@ C++获取程序运行时间 - C++ |
 
     <figure class="highlight cpp"><figcaption data-lang="C++"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;time.h></span></span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;windows.h></span></span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;chrono></span></span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token double-colon punctuation">::</span>chrono<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="9"></td><td><pre>	<span class="token keyword">struct</span> <span class="token class-name">timeval</span> time1<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="10"></td><td><pre>	<span class="token comment">/*cout &lt;&lt; "秒:" &lt;&lt; duration_cast&lt;seconds>(system_clock::now ().time_since_epoch ()).count () &lt;&lt; endl;</pre></td></tr><tr><td data-num="11"></td><td><pre>	cout &lt;&lt; "毫秒:" &lt;&lt; duration_cast&lt;milliseconds>(system_clock::now ().time_since_epoch ()).count () &lt;&lt; endl;</pre></td></tr><tr><td data-num="12"></td><td><pre>	cout &lt;&lt; "微秒:" &lt;&lt; duration_cast&lt;microseconds>(system_clock::now ().time_since_epoch ()).count () &lt;&lt; endl;</pre></td></tr><tr><td data-num="13"></td><td><pre>	cout &lt;&lt; "纳秒:" &lt;&lt; duration_cast&lt;nanoseconds>(system_clock::now ().time_since_epoch ()).count () &lt;&lt; endl;*/</span></pre></td></tr><tr><td data-num="14"></td><td><pre>	<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">100</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="15"></td><td><pre>	<span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="16"></td><td><pre>		<span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="17"></td><td><pre></pre></td></tr><tr><td data-num="18"></td><td><pre>		<span class="token keyword">int</span> t1 <span class="token operator">=</span> <span class="token generic-function"><span class="token function">duration_cast</span><span class="token generic class-name"><span class="token operator">&lt;</span>microseconds<span class="token operator">></span></span></span><span class="token punctuation">(</span>system_clock<span class="token double-colon punctuation">::</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">time_since_epoch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="19"></td><td><pre>		<span class="token comment">//cout &lt;&lt; "微秒:" &lt;&lt; duration_cast&lt;microseconds>(system_clock::now ().time_since_epoch ()).count () &lt;&lt; endl;</span></pre></td></tr><tr><td data-num="20"></td><td><pre>		<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> <span class="token number">120000</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="21"></td><td><pre>		<span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="22"></td><td><pre>			<span class="token keyword">if</span> <span class="token punctuation">(</span>j <span class="token operator">%</span> <span class="token number">3</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="23"></td><td><pre>				<span class="token keyword">if</span><span class="token punctuation">(</span>j <span class="token operator">%</span> <span class="token number">9</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="24"></td><td><pre>					count <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="25"></td><td><pre>				<span class="token keyword">else</span></pre></td></tr><tr><td data-num="26"></td><td><pre>					count <span class="token operator">+=</span> <span class="token number">2</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="27"></td><td><pre>		<span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="28"></td><td><pre>		<span class="token keyword">int</span> t2 <span class="token operator">=</span> <span class="token generic-function"><span class="token function">duration_cast</span><span class="token generic class-name"><span class="token operator">&lt;</span>microseconds<span class="token operator">></span></span></span><span class="token punctuation">(</span>system_clock<span class="token double-colon punctuation">::</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">time_since_epoch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="29"></td><td><pre>		cout <span class="token operator">&lt;&lt;</span> t2 <span class="token operator">-</span> t1 <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="30"></td><td><pre>		<span class="token comment">//cout &lt;&lt; "微秒:" &lt;&lt; duration_cast&lt;microseconds>(system_clock::now ().time_since_epoch ()).count () &lt;&lt; endl;</span></pre></td></tr><tr><td data-num="31"></td><td><pre>	<span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="32"></td><td><pre>	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="33"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure>
       <div class="tags">
-          <a href="/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/" rel="tag"><i class="ic i-tag"></i> 编程技巧</a>
           <a href="/tags/C/" rel="tag"><i class="ic i-tag"></i> C++</a>
+          <a href="/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/" rel="tag"><i class="ic i-tag"></i> 编程技巧</a>
       </div>
   </div>
 
@@ -206,7 +206,7 @@ C++获取程序运行时间 - C++ |
     <div class="item left">
       
 
-  <a href="/2023/03/01/code/python/python_qt_install/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;k5J4MJtY&#x2F;6833939bly1gipew28b65j20zk0m8hdt.jpg" title="Python运行pyside2报错问题解决">
+  <a href="/2023/03/01/code/python/python_qt_install/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;PrMP8VnR&#x2F;6833939bly1gipey84bjtj20zk0m8hdt.jpg" title="Python运行pyside2报错问题解决">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> python</span>
   <h3>Python运行pyside2报错问题解决</h3>
@@ -216,7 +216,7 @@ C++获取程序运行时间 - C++ |
     <div class="item right">
       
 
-  <a href="/2023/03/02/code/python/python_try_except/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;WbckZJFh&#x2F;6833939bly1gipexoj0moj20zk0m8kgu.jpg" title="python下的try-except处理异常">
+  <a href="/2023/03/02/code/python/python_try_except/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;yNR2gc4L&#x2F;6833939bly1giclhtuo6nj20zk0m8ttm.jpg" title="python下的try-except处理异常">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> python</span>
   <h3>python下的try-except处理异常</h3>
@@ -255,7 +255,7 @@ C++获取程序运行时间 - C++ |
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">48</span>
+        <span class="count">49</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -357,50 +357,10 @@ C++获取程序运行时间 - C++ |
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+<a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2022/12/24/blog/hexo_change/" title="Hexo文件迁移">Hexo文件迁移</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
-</div>
-
-    <span><a href="/2022/11/28/math/covariance/" title="数学期望、方差和协方差">数学期望、方差和协方差</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/control/" title="分类于 控制工程">控制工程</a>
-</div>
-
-    <span><a href="/2022/11/22/control/Gram-matrix/" title="格拉姆矩阵判据">格拉姆矩阵判据</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/control/" title="分类于 控制工程">控制工程</a>
-</div>
-
-    <span><a href="/2022/11/23/control/spring_damping/" title="弹簧阻尼系统">弹簧阻尼系统</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
-</div>
-
-    <span><a href="/2023/03/15/optimal/MOEA_D/" title="MODE&#x2F;D算法">MODE/D算法</a></span>
+    <span><a href="/2023/03/23/code/python/python_problem/" title="python一些报错的处理">python一些报错的处理</a></span>
   </li>
 
       
@@ -410,16 +370,67 @@ C++获取程序运行时间 - C++ |
 <a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2023/03/01/code/python/python_qt_install/" title="Python运行pyside2报错问题解决">Python运行pyside2报错问题解决</a></span>
+    <span><a href="/2023/02/06/code/python/python_multiply/" title="python字符串、列表、元组乘法">python字符串、列表、元组乘法</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2022/11/01/website_code/" title="一些奇奇怪怪的东西">一些奇奇怪怪的东西</a></span>
+    <span><a href="/2023/03/12/code/python/python_enumerate/" title="python使用enumerate()给列表添加序号">python使用enumerate()给列表添加序号</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/01/code/python/python_test/" title="Python test in xxx问题">Python test in xxx问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/food/" title="分类于 烹饪技巧">烹饪技巧</a>
+</div>
+
+    <span><a href="/2023/01/23/food/salt/" title="盐的使用">盐的使用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/hardware/" title="分类于 硬件开发">硬件开发</a>
+</div>
+
+    <span><a href="/2022/11/16/hardware/stm32cubemx/" title="使用stm32cubemx新建工程">使用stm32cubemx新建工程</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
+</div>
+
+    <span><a href="/2022/11/24/math/conv/" title="一般情况下的椭圆">一般情况下的椭圆</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+</div>
+
+    <span><a href="/2023/01/19/blog/hexo_remote/" title="解决Connection closed by remote host">解决Connection closed by remote host</a></span>
   </li>
 
       
@@ -436,20 +447,10 @@ C++获取程序运行时间 - C++ |
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/else/" title="分类于 其他">其他</a>
+<a href="/categories/life/" title="分类于 生活">生活</a>
 </div>
 
-    <span><a href="/2023/01/22/else/wish_2023/" title="2023年的一些小目标">2023年的一些小目标</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
-</div>
-
-    <span><a href="/2023/02/06/code/python/python_float/" title="Python浮点数运算不精确问题">Python浮点数运算不精确问题</a></span>
+    <span><a href="/2023/04/28/life/weight_2023_4_28/" title="体重下130斤了！！！">体重下130斤了！！！</a></span>
   </li>
 
   </ul>
