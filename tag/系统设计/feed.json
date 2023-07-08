@@ -1,0 +1,20 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Welcome to my tiny world • All posts by \"系统设计\" tag",
+    "description": "小樊&小小樊的学习笔记🌸",
+    "home_page_url": "http://qianqiu-cell.github.io",
+    "items": [
+        {
+            "id": "http://qianqiu-cell.github.io/2023/07/04/code/python/python_QSS/",
+            "url": "http://qianqiu-cell.github.io/2023/07/04/code/python/python_QSS/",
+            "title": "python+QSS应用",
+            "date_published": "2023-07-03T16:00:00.000Z",
+            "content_html": "<p>  在使用 pyside2&amp;6 或 pyqt 设计系统界面时，可以使用 QSS 文件来一键修改系统的界面，搜集到的一些 QSS 网站如下：</p>\n<ul>\n<li>（1）<span class=\"exturl\" data-url=\"aHR0cHM6Ly9naXRodWIuY29tL0dUUk9OSUNLL1FTUw==\">https://github.com/GTRONICK/QSS</span>（同步保存至 U 盘备份）</li>\n</ul>\n",
+            "tags": [
+                "编程技巧",
+                "python",
+                "系统设计"
+            ]
+        }
+    ]
+}
