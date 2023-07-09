@@ -9,30 +9,30 @@
         <lastBuildDate>Mon, 02 Jan 2023 00:00:00 +0800</lastBuildDate>
         <category>Windows系统</category>
         <category>博客搭建</category>
+        <category>控制工程</category>
+        <category>数学基础</category>
         <category>硬件开发</category>
-        <category>latex技巧</category>
-        <category>论文编辑</category>
         <category>生活</category>
         <category>一些小目标</category>
-        <category>控制工程</category>
         <category>office技巧</category>
+        <category>论文编辑</category>
+        <category>latex技巧</category>
         <category>最优化</category>
         <category>多目标最优化</category>
         <category>单目标最优化</category>
-        <category>数学基础</category>
         <category>C++</category>
         <category>编程技巧</category>
         <category>python</category>
-        <category>系统设计</category>
         <category>matlab</category>
+        <category>系统设计</category>
         <category>Qt</category>
         <category>界面开发</category>
         <item>
             <guid isPermalink="true">http://qianqiu-cell.github.io/2023/01/02/office/office/</guid>
             <title>Office技巧</title>
             <link>http://qianqiu-cell.github.io/2023/01/02/office/office/</link>
-            <category>论文编辑</category>
             <category>office技巧</category>
+            <category>论文编辑</category>
             <pubDate>Mon, 02 Jan 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;一-word使用技巧&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-word使用技巧&#34;&gt;#&lt;/a&gt; 一、Word 使用技巧&lt;/h1&gt;
 &lt;h2 id=&#34;11-刷新word中所有mathtype的公式编号&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#11-刷新word中所有mathtype的公式编号&#34;&gt;#&lt;/a&gt; 1.1 刷新 word 中所有 mathtype 的公式编号&lt;/h2&gt;

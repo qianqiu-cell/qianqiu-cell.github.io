@@ -6,22 +6,22 @@
     <updated>2023-03-11T16:00:00.000Z</updated>
     <category term="Windows系统" />
     <category term="博客搭建" />
+    <category term="控制工程" />
+    <category term="数学基础" />
     <category term="硬件开发" />
-    <category term="latex技巧" />
-    <category term="论文编辑" />
     <category term="生活" />
     <category term="一些小目标" />
-    <category term="控制工程" />
     <category term="office技巧" />
+    <category term="论文编辑" />
+    <category term="latex技巧" />
     <category term="最优化" />
     <category term="多目标最优化" />
     <category term="单目标最优化" />
-    <category term="数学基础" />
     <category term="C++" />
     <category term="编程技巧" />
     <category term="python" />
-    <category term="系统设计" />
     <category term="matlab" />
+    <category term="系统设计" />
     <category term="Qt" />
     <category term="界面开发" />
     <entry>
@@ -31,8 +31,8 @@
         <content type="html">&lt;p&gt;参考链接&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMzQ3ODY5L2FydGljbGUvZGV0YWlscy8xMDM4MzIxOTA=&#34;&gt;戳此&lt;/span&gt;&lt;br&gt;
   在 &lt;code&gt;LaTeX&lt;/code&gt;  中插图，首先要生成 &lt;code&gt;.eps&lt;/code&gt;  格式的图片，若已有 &lt;code&gt;png&lt;/code&gt;  或 &lt;code&gt;jpg&lt;/code&gt;  格式的图片，可以在图片目录下，按住 == &lt;code&gt;shift&lt;/code&gt;  + 鼠标右键 ==，选择&lt;mark&gt;在此处打开命令窗口（在此处打开 &lt;code&gt;PowerShell&lt;/code&gt;  窗口）&lt;/mark&gt;，然后在终端窗口输入： &lt;code&gt;bmeps -c old.jpg new.eps&lt;/code&gt; ，其中 &lt;code&gt;-c&lt;/code&gt;  是让图片彩色输出， &lt;code&gt;old.jpg&lt;/code&gt;  为原图， &lt;code&gt;new.eps&lt;/code&gt;  为转换的 &lt;code&gt;eps&lt;/code&gt;  格式的图&lt;/p&gt;
 </content>
-        <category term="latex技巧" />
         <category term="论文编辑" />
+        <category term="latex技巧" />
         <updated>2023-03-11T16:00:00.000Z</updated>
     </entry>
     <entry>
@@ -45,8 +45,8 @@
   正确的输入方式为：左边的引号输入两个反引号，引号的右边输入两个单引号，即 &lt;code&gt;``test&#39;&#39;&lt;/code&gt; ，输出为：&lt;br&gt;
 &lt;img data-src=&#34;/images/latex/latex_quotation_mark/1.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </content>
-        <category term="latex技巧" />
         <category term="论文编辑" />
+        <category term="latex技巧" />
         <updated>2023-03-11T16:00:00.000Z</updated>
     </entry>
     <entry>
@@ -71,8 +71,8 @@
 &lt;h2 id=&#34;42-编译方式的选择&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#42-编译方式的选择&#34;&gt;#&lt;/a&gt; 4.2 编译方式的选择&lt;/h2&gt;
 &lt;p&gt;通常编译排版时 = 英文文档 = 选择 &lt;code&gt;PDFLaTeX&lt;/code&gt; ，= 中文文档 = 选择 &lt;code&gt;XeLaTeX&lt;/code&gt; 。&lt;/p&gt;
 </content>
-        <category term="latex技巧" />
         <category term="论文编辑" />
+        <category term="latex技巧" />
         <updated>2023-01-19T16:00:00.000Z</updated>
     </entry>
 </feed>
