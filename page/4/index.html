@@ -89,12 +89,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://i.postimg.cc/Vk5GxMKK/6833939bly1gipeuibk9fj20zk0m8ay2.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/W4NmkqyM/6833939bly1gipexbei4hj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/LsWGhDbY/6833939bly1giclffsa1cj20zk0m811l.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/rwDwHnxz/6833939bly1gicljgocqbj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/02tn8Q3r/6833939bly1giclga70tsj20zk0m84mr.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/Dz0TY8Gh/6833939bly1gipet8c1a2j20zk0m8kct.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/63XRtJfM/6833939bly1giclxxcb6rj20zk0m8b29.jpg"></li>
           <li class="item" data-background-image="https://i.postimg.cc/HWXCKGrr/6833939bly1gipet4bz0yj20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/MGp97BQ7/6833939bly1gicitspjpbj20zk0m81ky.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/PxSGThkH/6833939bly1gicliwyw55j20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/jj2DQqdw/6833939bly1gicis3attqj20zk0m8k7l.jpg"></li>
         </ul>
       </div>
     </header>
@@ -120,7 +120,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/02/06/code/python/python_float/" itemprop="url" title="Python浮点数运算不精确问题"><img data-src="https://i.postimg.cc/pr0nf9bS/6833939bly1giclxp31goj20zk0m8qv5.jpg"></a>
+    <a href="/2023/02/06/code/python/python_array_asarray/" itemprop="url" title="np.array和np.asarray区别"><img data-src="https://i.postimg.cc/kM6QKmTh/6833939bly1gipex2cdtbj20zk0m8x6p.jpg"></a>
   </div>
   <div class="info">
     
@@ -135,7 +135,7 @@
     <span class="icon">
       <i class="ic i-pen"></i>
     </span>
-    <span>154</span>
+    <span>624</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -146,25 +146,27 @@
   </span>
 </div>
 
-    <h3><a href="/2023/02/06/code/python/python_float/" itemprop="url" title="Python浮点数运算不精确问题">Python浮点数运算不精确问题</a></h3>
+    <h3><a href="/2023/02/06/code/python/python_array_asarray/" itemprop="url" title="np.array和np.asarray区别">np.array和np.asarray区别</a></h3>
     <div class="excerpt">
-        由于 Python 的浮点数以二进制形式表示，计算机在进行浮点运算时会产生浮点误差，如下场景所示
-a = [100.7, 100.9]print(sum(a))# 输出：201.60000000000002解决方法： round() 是 python 自带的一个函数，用于数字的四舍五入
-round(5.214,2)# 输出：5.21
+        np.array 和 np.asarray 都可将结构数据转换为 ndarray 类型
+但是主要区别就是当数据源是 ndarray 时：
+np.array 占用新的内存，即转换后的变量与原始变量相互独立
+但 np.asarray 不会占用新的内存，即转换后的变量与原始变量无关
+import numpy as np #example 1: data1=[[1,1,1],[1,1,1],[1,1,1]] arr2=np.array(data1) arr3=np.asarray(data1) data1[1][1]=2 print &#39;data1:&#92;n&#39;,data1 print...
     </div>
     <div class="meta footer">
       <span>
         <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
       </span>
     </div>
-    <a href="/2023/02/06/code/python/python_float/" itemprop="url" title="Python浮点数运算不精确问题" class="btn">more...</a>
+    <a href="/2023/02/06/code/python/python_array_asarray/" itemprop="url" title="np.array和np.asarray区别" class="btn">more...</a>
   </div>
 </article>
 
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/02/06/code/python/python_multiply/" itemprop="url" title="python字符串、列表、元组乘法"><img data-src="https://i.postimg.cc/jj2DQqdw/6833939bly1gicis3attqj20zk0m8k7l.jpg"></a>
+    <a href="/2023/02/06/code/python/python_multiply/" itemprop="url" title="python字符串、列表、元组乘法"><img data-src="https://i.postimg.cc/Kc1pRtPB/6833939bly1giclimtf7dj20zk0m8qav.jpg"></a>
   </div>
   <div class="info">
     
@@ -207,7 +209,7 @@ str_a = &quot;我&quot;print(str_a * 3)list_a = (&quot;1&quot;, &quot;2&quot;, &
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/02/06/code/python/python_note/" itemprop="url" title="Pycharm中的特殊注释"><img data-src="https://i.postimg.cc/02tn8Q3r/6833939bly1giclga70tsj20zk0m84mr.jpg"></a>
+    <a href="/2023/02/06/code/python/python_note/" itemprop="url" title="Pycharm中的特殊注释"><img data-src="https://i.postimg.cc/PxSGThkH/6833939bly1gicliwyw55j20zk0m8hdt.jpg"></a>
   </div>
   <div class="info">
     
@@ -258,7 +260,7 @@ noqa 指 no quality assurance ，用在一行代码后，表示这一行代码�
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/02/06/code/python/python_special_func/" itemprop="url" title="特定功能函数"><img data-src="https://i.postimg.cc/PrMP8VnR/6833939bly1gipey84bjtj20zk0m8hdt.jpg"></a>
+    <a href="/2023/02/06/code/python/python_special_func/" itemprop="url" title="特定功能函数"><img data-src="https://i.postimg.cc/ZK4XMWkQ/6833939bly1gipeudstjqj20zk0m8k3r.jpg"></a>
   </div>
   <div class="info">
     
@@ -301,7 +303,7 @@ def func(amount, num): list1 = [] for i in range(0, num - 1): a = random.randint
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/01/30/hardware/Quartus/" itemprop="url" title="Quartus基础教程"><img data-src="https://i.postimg.cc/pXQnJXzk/6833939bly1gipexw3o58j20zk0m8e81.jpg"></a>
+    <a href="/2023/01/30/hardware/Quartus/" itemprop="url" title="Quartus基础教程"><img data-src="https://i.postimg.cc/50j2vsgw/6833939bly1gipewkhf1zj20zk0m81kx.jpg"></a>
   </div>
   <div class="info">
     
@@ -351,7 +353,7 @@ FPGA 与计算机共有两条数据线进行连接，一条用于供电及通讯
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/01/22/life/wish_2023/" itemprop="url" title="2023年的一些小目标"><img data-src="https://i.postimg.cc/qvXqdhgC/6833939bly1gipewr8iypj20zk0m8b29.jpg"></a>
+    <a href="/2023/01/22/life/wish_2023/" itemprop="url" title="2023年的一些小目标"><img data-src="https://i.postimg.cc/Pr6hbWLy/6833939bly1gicitht3xtj20zk0m8k5v.jpg"></a>
   </div>
   <div class="info">
     
@@ -409,7 +411,7 @@ FPGA 与计算机共有两条数据线进行连接，一条用于供电及通讯
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/01/20/latex/latex_install/" itemprop="url" title="Vscode+TexLive+Latex workshop安装"><img data-src="https://i.postimg.cc/PrMP8VnR/6833939bly1gipey84bjtj20zk0m8hdt.jpg"></a>
+    <a href="/2023/01/20/latex/latex_install/" itemprop="url" title="Vscode+TexLive+Latex workshop安装"><img data-src="https://i.postimg.cc/rwDwHnxz/6833939bly1gicljgocqbj20zk0m8e81.jpg"></a>
   </div>
   <div class="info">
     
@@ -458,7 +460,7 @@ Tex Live 可以从官网进行安装， Latex workshop 从 Vscode 的插件商�
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/01/19/blog/hexo_remote/" itemprop="url" title="解决Connection closed by remote host"><img data-src="https://i.postimg.cc/63XRtJfM/6833939bly1giclxxcb6rj20zk0m8b29.jpg"></a>
+    <a href="/2023/01/19/blog/hexo_remote/" itemprop="url" title="解决Connection closed by remote host"><img data-src="https://i.postimg.cc/3R6fJwWg/6833939bly1giciusoyjnj219g0u0x56.jpg"></a>
   </div>
   <div class="info">
     
@@ -506,7 +508,7 @@ git config --global https.proxygit config --global --unset https.proxy
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/01/03/Windows/Realtek/" itemprop="url" title="关于戴尔G3重装系统后的音频问题"><img data-src="https://i.postimg.cc/zf69tp5w/6833939bly1gipeu7txpzj20zk0m81kx.jpg"></a>
+    <a href="/2023/01/03/Windows/Realtek/" itemprop="url" title="关于戴尔G3重装系统后的音频问题"><img data-src="https://i.postimg.cc/3R6fJwWg/6833939bly1giciusoyjnj219g0u0x56.jpg"></a>
   </div>
   <div class="info">
     
@@ -560,7 +562,7 @@ git config --global https.proxygit config --global --unset https.proxy
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/01/02/blog/hexo_image/" itemprop="url" title="Hexo图片显示异常问题"><img data-src="https://i.postimg.cc/PqLT6CGD/6833939bly1giclh0m9pdj20zk0m8hdt.jpg"></a>
+    <a href="/2023/01/02/blog/hexo_image/" itemprop="url" title="Hexo图片显示异常问题"><img data-src="https://i.postimg.cc/9QZh6v88/6833939bly1giciukx8a7j20zk0m8aio.jpg"></a>
   </div>
   <div class="info">
     
@@ -746,50 +748,10 @@ shoka 主题图片同时备份至百度网盘及个人 U 盘
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
+<a href="/categories/latex/" title="分类于 latex">latex</a>
 </div>
 
-    <span><a href="/2023/02/06/code/python/python_float/" title="Python浮点数运算不精确问题">Python浮点数运算不精确问题</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
-</div>
-
-    <span><a href="/2023/02/06/code/python/python_special_func/" title="特定功能函数">特定功能函数</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
-</div>
-
-    <span><a href="/2023/03/13/optimal/NSGA/" title="从NSGA到NSGA-III">从NSGA到NSGA-III</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
-</div>
-
-    <span><a href="/2023/03/23/code/python/python_problem/" title="python一些报错的处理">python一些报错的处理</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
-</div>
-
-    <span><a href="/2023/03/16/optimal/SPEA/" title="SPEAI-II">SPEAI-II</a></span>
+    <span><a href="/2023/03/12/latex/latex_quotation_mark/" title="latex输入双引号">latex输入双引号</a></span>
   </li>
 
       
@@ -806,30 +768,10 @@ shoka 主题图片同时备份至百度网盘及个人 U 盘
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
+<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
 </div>
 
-    <span><a href="/2023/04/02/code/python/python_thread/" title="Python多线程">Python多线程</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/control/" title="分类于 控制工程">控制工程</a>
-</div>
-
-    <span><a href="/2023/07/08/control/Continuous_LQR/" title="连续LQR设计控制器方法">连续LQR设计控制器方法</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
-</div>
-
-    <span><a href="/2023/03/02/code/python/python_pip/" title="修改pip路径">修改pip路径</a></span>
+    <span><a href="/2022/11/24/math/conv/" title="一般情况下的椭圆">一般情况下的椭圆</a></span>
   </li>
 
       
@@ -839,7 +781,67 @@ shoka 主题图片同时备份至百度网盘及个人 U 盘
 <a href="/categories/math/" title="分类于 数学基础">数学基础</a>
 </div>
 
-    <span><a href="/2022/11/28/math/covariance/" title="数学期望、方差和协方差">数学期望、方差和协方差</a></span>
+    <span><a href="/2022/11/25/math/derivative_of_the_inverse_matrix/" title="逆矩阵的求导">逆矩阵的求导</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/24/code/python/python_jMetal/" title="python+jMetal应用">python+jMetal应用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/life/" title="分类于 生活">生活</a>
+</div>
+
+    <span><a href="/2023/04/28/life/weight_2023_4_28/" title="体重下130斤了！！！">体重下130斤了！！！</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/latex/" title="分类于 latex">latex</a>
+</div>
+
+    <span><a href="/2023/03/12/latex/latex_eps/" title="latex插入图片：jpg&#x2F;png转eps">latex插入图片：jpg/png转eps</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/control/" title="分类于 控制工程">控制工程</a>
+</div>
+
+    <span><a href="/2023/07/09/control/discrete_LQR/" title="离散LQR设计控制器方法">离散LQR设计控制器方法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/hardware/" title="分类于 硬件开发">硬件开发</a>
+</div>
+
+    <span><a href="/2023/01/30/hardware/Quartus/" title="Quartus基础教程">Quartus基础教程</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/07/04/code/python/python_QSS/" title="python+QSS应用">python+QSS应用</a></span>
   </li>
 
   </ul>
