@@ -8,25 +8,37 @@
         <pubDate>Sun, 12 Mar 2023 00:00:00 +0800</pubDate>
         <lastBuildDate>Sun, 12 Mar 2023 00:00:00 +0800</lastBuildDate>
         <category>Windows系统</category>
+        <category>博客搭建</category>
         <category>控制工程</category>
         <category>数学基础</category>
-        <category>博客搭建</category>
         <category>硬件开发</category>
-        <category>生活</category>
-        <category>一些小目标</category>
         <category>latex技巧</category>
         <category>论文编辑</category>
+        <category>生活</category>
+        <category>一些小目标</category>
         <category>最优化</category>
         <category>多目标最优化</category>
         <category>office技巧</category>
-        <category>matlab</category>
-        <category>编程技巧</category>
         <category>单目标最优化</category>
+        <category>科学研究</category>
         <category>C++</category>
+        <category>编程技巧</category>
+        <category>matlab</category>
         <category>python</category>
         <category>系统设计</category>
         <category>Qt</category>
         <category>界面开发</category>
+        <item>
+            <guid isPermalink="true">http://qianqiu-cell.github.io/2023/03/12/latex/latex_eps/</guid>
+            <title>latex插入图片：jpg/png转eps</title>
+            <link>http://qianqiu-cell.github.io/2023/03/12/latex/latex_eps/</link>
+            <category>latex技巧</category>
+            <category>论文编辑</category>
+            <pubDate>Sun, 12 Mar 2023 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;参考链接&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMzQ3ODY5L2FydGljbGUvZGV0YWlscy8xMDM4MzIxOTA=&#34;&gt;戳此&lt;/span&gt;&lt;br&gt;
+  在 &lt;code&gt;LaTeX&lt;/code&gt;  中插图，首先要生成 &lt;code&gt;.eps&lt;/code&gt;  格式的图片，若已有 &lt;code&gt;png&lt;/code&gt;  或 &lt;code&gt;jpg&lt;/code&gt;  格式的图片，可以在图片目录下，按住 == &lt;code&gt;shift&lt;/code&gt;  + 鼠标右键 ==，选择&lt;mark&gt;在此处打开命令窗口（在此处打开 &lt;code&gt;PowerShell&lt;/code&gt;  窗口）&lt;/mark&gt;，然后在终端窗口输入： &lt;code&gt;bmeps -c old.jpg new.eps&lt;/code&gt; ，其中 &lt;code&gt;-c&lt;/code&gt;  是让图片彩色输出， &lt;code&gt;old.jpg&lt;/code&gt;  为原图， &lt;code&gt;new.eps&lt;/code&gt;  为转换的 &lt;code&gt;eps&lt;/code&gt;  格式的图&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://qianqiu-cell.github.io/2023/03/12/latex/latex_quotation_mark/</guid>
             <title>latex输入双引号</title>
@@ -39,17 +51,6 @@
 &lt;img data-src=&#34;/images/latex/latex_quotation_mark/1.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
   正确的输入方式为：左边的引号输入两个反引号，引号的右边输入两个单引号，即 &lt;code&gt;``test&#39;&#39;&lt;/code&gt; ，输出为：&lt;br&gt;
 &lt;img data-src=&#34;/images/latex/latex_quotation_mark/1.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://qianqiu-cell.github.io/2023/03/12/latex/latex_eps/</guid>
-            <title>latex插入图片：jpg/png转eps</title>
-            <link>http://qianqiu-cell.github.io/2023/03/12/latex/latex_eps/</link>
-            <category>latex技巧</category>
-            <category>论文编辑</category>
-            <pubDate>Sun, 12 Mar 2023 00:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;参考链接&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMzQ3ODY5L2FydGljbGUvZGV0YWlscy8xMDM4MzIxOTA=&#34;&gt;戳此&lt;/span&gt;&lt;br&gt;
-  在 &lt;code&gt;LaTeX&lt;/code&gt;  中插图，首先要生成 &lt;code&gt;.eps&lt;/code&gt;  格式的图片，若已有 &lt;code&gt;png&lt;/code&gt;  或 &lt;code&gt;jpg&lt;/code&gt;  格式的图片，可以在图片目录下，按住 == &lt;code&gt;shift&lt;/code&gt;  + 鼠标右键 ==，选择&lt;mark&gt;在此处打开命令窗口（在此处打开 &lt;code&gt;PowerShell&lt;/code&gt;  窗口）&lt;/mark&gt;，然后在终端窗口输入： &lt;code&gt;bmeps -c old.jpg new.eps&lt;/code&gt; ，其中 &lt;code&gt;-c&lt;/code&gt;  是让图片彩色输出， &lt;code&gt;old.jpg&lt;/code&gt;  为原图， &lt;code&gt;new.eps&lt;/code&gt;  为转换的 &lt;code&gt;eps&lt;/code&gt;  格式的图&lt;/p&gt;
  ]]></description>
         </item>
         <item>

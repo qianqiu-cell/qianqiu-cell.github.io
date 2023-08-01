@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Welcome to my tiny world • All posts by \"科学研究\" tag",
+    "description": "小樊&小小樊的学习笔记🌸",
+    "home_page_url": "http://qianqiu-cell.github.io",
+    "items": [
+        {
+            "id": "http://qianqiu-cell.github.io/2023/08/01/research/SciHub/",
+            "url": "http://qianqiu-cell.github.io/2023/08/01/research/SciHub/",
+            "title": "sci-hub的使用方法",
+            "date_published": "2023-07-31T16:00:00.000Z",
+            "content_html": "<p>  首先打开<span class=\"exturl\" data-url=\"aHR0cHM6Ly9nZnNvc28uOTlsYi5uZXQv\">谷粉学术</span>，选择，选择 <code>sci-hub</code> ，即可看到最新 <code>sci-hub</code>  文献检索可用网址<br>\n<img data-src=\"/images/research/SciHub/1.1.png\" alt=\"\"><br>\n  打开任意一个 <code>sic-hub</code>  网址后即可输入 <code>doi</code>  号获取文章。<br>\n  或者使用<span class=\"exturl\" data-url=\"aHR0cHM6Ly9lZGdlLXN0YXRzLmNvbS9kL3BncGdnaWRtZ2VjaGJqYmVmY25tb2Rna2xkbmRvamNh\"> Sci-Hub X Now!</span> 插件，在需要下载的文章点击插件即可下载。</p>\n",
+            "tags": [
+                "科学研究"
+            ]
+        }
+    ]
+}
