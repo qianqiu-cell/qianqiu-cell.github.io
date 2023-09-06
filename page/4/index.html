@@ -89,12 +89,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://i.postimg.cc/Px1F6jSh/6833939bly1gipeubcbajj20zk0m8h1h.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/yNR2gc4L/6833939bly1giclhtuo6nj20zk0m8ttm.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/BbbrvyqK/6833939bly1giclj61ylzj20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/zf69tp5w/6833939bly1gipeu7txpzj20zk0m81kx.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/nVNVNYVL/6833939bly1giciub8ja1j20zk0m81ky.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/0NVYd2gh/6833939bly1gipexe4oykj20zk0m87ji.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/tgrDgg7B/6833939bly1giclip4jbpj20zk0m87cv.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/Hx7CdR3P/6833939bly1gipesrnqv3j20zk0m8ava.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/SxJXcNKX/6833939bly1giciuja1j1j20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/BZm7vMPq/6833939bly1gicliierfjj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/CM3j4QtM/6833939bly1gipexj2jgzj20zk0m8b09.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/yxm4SRMm/6833939bly1gipetv6p75j20zk0m8x6p.jpg"></li>
         </ul>
       </div>
     </header>
@@ -120,22 +120,22 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/02/06/code/python/python_array_asarray/" itemprop="url" title="np.array和np.asarray区别"><img data-src="https://i.postimg.cc/BbbrvyqK/6833939bly1giclj61ylzj20zk0m8b29.jpg"></a>
+    <a href="/2023/03/01/code/python/python_test/" itemprop="url" title="Python test in xxx问题"><img data-src="https://i.postimg.cc/k5J4MJtY/6833939bly1gipew28b65j20zk0m8hdt.jpg"></a>
   </div>
   <div class="info">
     
 <div class="meta">
-  <span class="item" title="创建时间：2023-02-06 00:00:00">
+  <span class="item" title="创建时间：2023-03-01 00:00:00">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
-    <time itemprop="dateCreated datePublished" datetime="2023-02-06T00:00:00+08:00">2023-02-06</time>
+    <time itemprop="dateCreated datePublished" datetime="2023-03-01T00:00:00+08:00">2023-03-01</time>
   </span>
   <span class="item" title="本文字数">
     <span class="icon">
       <i class="ic i-pen"></i>
     </span>
-    <span>624</span>
+    <span>238</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -146,27 +146,30 @@
   </span>
 </div>
 
-    <h3><a href="/2023/02/06/code/python/python_array_asarray/" itemprop="url" title="np.array和np.asarray区别">np.array和np.asarray区别</a></h3>
+    <h3><a href="/2023/03/01/code/python/python_test/" itemprop="url" title="Python test in xxx问题">Python test in xxx问题</a></h3>
     <div class="excerpt">
-        np.array 和 np.asarray 都可将结构数据转换为 ndarray 类型
-但是主要区别就是当数据源是 ndarray 时：
-np.array 占用新的内存，即转换后的变量与原始变量相互独立
-但 np.asarray 不会占用新的内存，即转换后的变量与原始变量无关
-import numpy as np #example 1: data1=[[1,1,1],[1,1,1],[1,1,1]] arr2=np.array(data1) arr3=np.asarray(data1) data1[1][1]=2 print &#39;data1:&#92;n&#39;,data1 print...
+        # 一、问题描述
+pycharm 运行程序时，不是 run xxx 的格式。而是 python tests in xxx 的格式，如下图所示
+
+# 二、问题原因
+程序的文件名格式为 test_.py 或 _test.py ，在 pycharm 中自动进入了 pytest 的模式
+# 三、解决方案
+（1）将 py 文件的文件名称更改为其他格式
+（2）进入 File→Settings→Tools→Python integrated Tools ，在 Testing 中将 Default test runner 选项由 pytest 更改为 Unittests
     </div>
     <div class="meta footer">
       <span>
         <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
       </span>
     </div>
-    <a href="/2023/02/06/code/python/python_array_asarray/" itemprop="url" title="np.array和np.asarray区别" class="btn">more...</a>
+    <a href="/2023/03/01/code/python/python_test/" itemprop="url" title="Python test in xxx问题" class="btn">more...</a>
   </div>
 </article>
 
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/02/06/code/python/python_bitwise_operators/" itemprop="url" title="Python按位运算符"><img data-src="https://i.postimg.cc/T3JDRHh0/6833939bly1giclh5u05ej20zk0m87df.jpg"></a>
+    <a href="/2023/02/06/code/python/python_bitwise_operators/" itemprop="url" title="Python按位运算符"><img data-src="https://i.postimg.cc/0NVYd2gh/6833939bly1gipexe4oykj20zk0m87ji.jpg"></a>
   </div>
   <div class="info">
     
@@ -230,7 +233,53 @@ Bitwise Left Shift operator
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/02/06/code/python/python_float/" itemprop="url" title="Python浮点数运算不精确问题"><img data-src="https://i.postimg.cc/VkkCkWMc/6833939bly1giclize41wj20zk0m87gk.jpg"></a>
+    <a href="/2023/02/06/code/python/python_array_asarray/" itemprop="url" title="np.array和np.asarray区别"><img data-src="https://i.postimg.cc/J04cbVgp/6833939bly1gipeun65urj20zk0m81ii.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-02-06 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-02-06T00:00:00+08:00">2023-02-06</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>624</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2023/02/06/code/python/python_array_asarray/" itemprop="url" title="np.array和np.asarray区别">np.array和np.asarray区别</a></h3>
+    <div class="excerpt">
+        np.array 和 np.asarray 都可将结构数据转换为 ndarray 类型
+但是主要区别就是当数据源是 ndarray 时：
+np.array 占用新的内存，即转换后的变量与原始变量相互独立
+但 np.asarray 不会占用新的内存，即转换后的变量与原始变量无关
+import numpy as np #example 1: data1=[[1,1,1],[1,1,1],[1,1,1]] arr2=np.array(data1) arr3=np.asarray(data1) data1[1][1]=2 print &#39;data1:&#92;n&#39;,data1 print...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
+      </span>
+    </div>
+    <a href="/2023/02/06/code/python/python_array_asarray/" itemprop="url" title="np.array和np.asarray区别" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/02/06/code/python/python_float/" itemprop="url" title="Python浮点数运算不精确问题"><img data-src="https://i.postimg.cc/Dz0TY8Gh/6833939bly1gipet8c1a2j20zk0m8kct.jpg"></a>
   </div>
   <div class="info">
     
@@ -274,7 +323,7 @@ round(5.214,2)# 输出：5.21
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/02/06/code/python/python_multiply/" itemprop="url" title="python字符串、列表、元组乘法"><img data-src="https://i.postimg.cc/qvXqdhgC/6833939bly1gipewr8iypj20zk0m8b29.jpg"></a>
+    <a href="/2023/02/06/code/python/python_multiply/" itemprop="url" title="python字符串、列表、元组乘法"><img data-src="https://i.postimg.cc/6pm6dDjY/6833939bly1gipeyhsblkj20zk0m81kx.jpg"></a>
   </div>
   <div class="info">
     
@@ -317,7 +366,7 @@ str_a = &quot;我&quot;print(str_a * 3)list_a = (&quot;1&quot;, &quot;2&quot;, &
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/02/06/code/python/python_note/" itemprop="url" title="Pycharm中的特殊注释"><img data-src="https://i.postimg.cc/Dz0TY8Gh/6833939bly1gipet8c1a2j20zk0m8kct.jpg"></a>
+    <a href="/2023/02/06/code/python/python_note/" itemprop="url" title="Pycharm中的特殊注释"><img data-src="https://i.postimg.cc/nVNVNYVL/6833939bly1giciub8ja1j20zk0m81ky.jpg"></a>
   </div>
   <div class="info">
     
@@ -368,7 +417,7 @@ noqa 指 no quality assurance ，用在一行代码后，表示这一行代码�
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/02/06/code/python/python_special_func/" itemprop="url" title="特定功能函数"><img data-src="https://i.postimg.cc/T3JDRHh0/6833939bly1giclh5u05ej20zk0m87df.jpg"></a>
+    <a href="/2023/02/06/code/python/python_special_func/" itemprop="url" title="特定功能函数"><img data-src="https://i.postimg.cc/1tkd9zYL/6833939bly1giclx29mstj20zk0m8hdt.jpg"></a>
   </div>
   <div class="info">
     
@@ -411,7 +460,7 @@ def func(amount, num): list1 = [] for i in range(0, num - 1): a = random.randint
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/01/30/hardware/Quartus/" itemprop="url" title="Quartus基础教程"><img data-src="https://i.postimg.cc/k5J4MJtY/6833939bly1gipew28b65j20zk0m8hdt.jpg"></a>
+    <a href="/2023/01/30/hardware/Quartus/" itemprop="url" title="Quartus基础教程"><img data-src="https://i.postimg.cc/9fLZTKmF/6833939bly1gicis081o9j20zk0m8dmr.jpg"></a>
   </div>
   <div class="info">
     
@@ -461,7 +510,7 @@ FPGA 与计算机共有两条数据线进行连接，一条用于供电及通讯
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/01/22/life/wish_2023/" itemprop="url" title="2023年的一些小目标"><img data-src="https://i.postimg.cc/Vk5GxMKK/6833939bly1gipeuibk9fj20zk0m8ay2.jpg"></a>
+    <a href="/2023/01/22/life/wish_2023/" itemprop="url" title="2023年的一些小目标"><img data-src="https://i.postimg.cc/qvXqdhgC/6833939bly1gipewr8iypj20zk0m8b29.jpg"></a>
   </div>
   <div class="info">
     
@@ -519,7 +568,7 @@ FPGA 与计算机共有两条数据线进行连接，一条用于供电及通讯
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/01/20/latex/latex_install/" itemprop="url" title="Vscode+TexLive+Latex workshop安装"><img data-src="https://i.postimg.cc/Px1F6jSh/6833939bly1gipeubcbajj20zk0m8h1h.jpg"></a>
+    <a href="/2023/01/20/latex/latex_install/" itemprop="url" title="Vscode+TexLive+Latex workshop安装"><img data-src="https://i.postimg.cc/Mpb7rGS9/6833939bly1gicitcxhpij20zk0m8hdt.jpg"></a>
   </div>
   <div class="info">
     
@@ -565,54 +614,6 @@ Tex Live 可以从官网进行安装， Latex workshop 从 Vscode 的插件商�
   </div>
 </article>
 
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2023/01/19/blog/hexo_remote/" itemprop="url" title="解决Connection closed by remote host"><img data-src="https://i.postimg.cc/tRkwx9wG/6833939bly1giclhpw3lwj20zk0m8gvw.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2023-01-19 00:00:00">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2023-01-19T00:00:00+08:00">2023-01-19</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>234</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>1 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2023/01/19/blog/hexo_remote/" itemprop="url" title="解决Connection closed by remote host">解决Connection closed by remote host</a></h3>
-    <div class="excerpt">
-        # 一、问题描述
-在一次更新博客的内容并使用 hexo d 成功上传之后，邮箱中收到如下内容
-
-一番搜索之后找到报错的根本原因为：前段时间使用了 VPN 进行代理。运行 ssh -T git@github.com 命令，结果显示 ssh: Could not resolve hostname keygen 。
-# 二、解决方法
-设置取消代理即可成功上传，取消代理通过在命令行运行如下代码
-git config --global https.proxygit config --global --unset https.proxy
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/blog/" itemprop="url" title="博客搭建"><i class="ic i-flag"></i>博客搭建</a>
-      </span>
-    </div>
-    <a href="/2023/01/19/blog/hexo_remote/" itemprop="url" title="解决Connection closed by remote host" class="btn">more...</a>
-  </div>
-</article>
-
     </div>
 
   </div>
@@ -648,7 +649,7 @@ git config --global https.proxygit config --global --unset https.proxy
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">55</span>
+        <span class="count">56</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -660,7 +661,7 @@ git config --global https.proxygit config --global --unset https.proxy
     </div>
     <div class="item tags">
       <a href="/tags/">
-        <span class="count">21</span>
+        <span class="count">22</span>
         <span class="name">标签</span>
       </a>
     </div>
@@ -749,20 +750,40 @@ git config --global https.proxygit config --global --unset https.proxy
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+</div>
+
+    <span><a href="/2022/11/07/blog/hexo_style/" title="shoka格式">shoka格式</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/24/code/python/python_jMetal/" title="python+jMetal应用">python+jMetal应用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+</div>
+
+    <span><a href="/2022/12/24/blog/hexo_change/" title="Hexo文件迁移">Hexo文件迁移</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
 <a href="/categories/optimal/" title="分类于 最优化">最优化</a>
 </div>
 
-    <span><a href="/2023/03/16/optimal/SPEA/" title="SPEAI-II">SPEAI-II</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/matlab/" title="分类于 matlab">matlab</a>
-</div>
-
-    <span><a href="/2023/07/08/code/matlab/matlab_GA/" title="基于matlab-Sheffield工具箱实现遗传算法">基于matlab-Sheffield工具箱实现遗传算法</a></span>
+    <span><a href="/2022/12/23/optimal/signal_objective_optimization/" title="单目标搜索算法汇总">单目标搜索算法汇总</a></span>
   </li>
 
       
@@ -772,27 +793,26 @@ git config --global https.proxygit config --global --unset https.proxy
 <a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2023/03/01/code/python/python_qt_install/" title="Python运行pyside2报错问题解决">Python运行pyside2报错问题解决</a></span>
+    <span><a href="/2023/03/02/code/python/python_jupyter/" title="修改Jupyter Notebook默认工作路径">修改Jupyter Notebook默认工作路径</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
+<a href="/categories/C/" title="分类于 C++">C++</a>
 </div>
 
-    <span><a href="/2023/07/04/code/python/python_RMFS_pip_list/" title="本科毕业设计使用python环境">本科毕业设计使用python环境</a></span>
+    <span><a href="/2023/03/01/code/Cplusplus/CplusplusGetTime/" title="C++获取程序运行时间">C++获取程序运行时间</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2023/03/02/code/python/python_numba/" title="使用numba对python进行加速">使用numba对python进行加速</a></span>
+    <span><a href="/2022/11/01/website_code/" title="一些奇奇怪怪的东西">一些奇奇怪怪的东西</a></span>
   </li>
 
       
@@ -809,10 +829,10 @@ git config --global https.proxygit config --global --unset https.proxy
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/office/" title="分类于 office技巧">office技巧</a>
+<a href="/categories/control/" title="分类于 控制工程">控制工程</a>
 </div>
 
-    <span><a href="/2023/01/02/office/office/" title="Office技巧">Office技巧</a></span>
+    <span><a href="/2023/07/08/control/Continuous_LQR/" title="连续LQR设计控制器方法">连续LQR设计控制器方法</a></span>
   </li>
 
       
@@ -822,27 +842,7 @@ git config --global https.proxygit config --global --unset https.proxy
 <a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2023/02/06/code/python/python_float/" title="Python浮点数运算不精确问题">Python浮点数运算不精确问题</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
-</div>
-
-    <span><a href="/2022/11/28/math/covariance/" title="数学期望、方差和协方差">数学期望、方差和协方差</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
-</div>
-
-    <span><a href="/2023/03/12/code/python/python_class_inherit/" title="python类的继承">python类的继承</a></span>
+    <span><a href="/2023/02/06/code/python/python_array_asarray/" title="np.array和np.asarray区别">np.array和np.asarray区别</a></span>
   </li>
 
   </ul>
@@ -867,13 +867,13 @@ git config --global https.proxygit config --global --unset https.proxy
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">159k 字</span>
+    <span title="站点总字数">160k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:24</span>
+    <span title="站点阅读时长">2:25</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

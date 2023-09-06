@@ -4,20 +4,21 @@
     <title>Welcome to my tiny world • Posts by &#34;控制工程&#34; tag</title>
     <link href="http://qianqiu-cell.github.io" />
     <updated>2023-07-08T16:00:00.000Z</updated>
-    <category term="Windows系统" />
     <category term="博客搭建" />
-    <category term="控制工程" />
+    <category term="电脑硬件知识" />
+    <category term="显示器" />
     <category term="数学基础" />
     <category term="硬件开发" />
+    <category term="控制工程" />
     <category term="latex技巧" />
     <category term="论文编辑" />
     <category term="生活" />
     <category term="一些小目标" />
+    <category term="office技巧" />
+    <category term="科学研究" />
     <category term="最优化" />
     <category term="多目标最优化" />
-    <category term="office技巧" />
     <category term="单目标最优化" />
-    <category term="科学研究" />
     <category term="C++" />
     <category term="编程技巧" />
     <category term="matlab" />
@@ -73,8 +74,8 @@
 &lt;li&gt;（4）使用第三节中的公式求解反馈矩阵&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;u_k&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:0.58056em;vertical-align:-0.15em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord&#34;&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;msupsub&#34;&gt;&lt;span class=&#34;vlist-t vlist-t2&#34;&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.33610799999999996em;&#34;&gt;&lt;span style=&#34;top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;&#34;&gt;&lt;span class=&#34;pstrut&#34; style=&#34;height:2.7em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;sizing reset-size6 size3 mtight&#34;&gt;&lt;span class=&#34;mord mathnormal mtight&#34; style=&#34;margin-right:0.03148em;&#34;&gt;k&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-s&#34;&gt;​&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;vlist-r&#34;&gt;&lt;span class=&#34;vlist&#34; style=&#34;height:0.15em;&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt; 的序列；&lt;/li&gt;
 &lt;/ul&gt;
 </content>
-        <category term="控制工程" />
         <category term="数学基础" />
+        <category term="控制工程" />
         <updated>2023-07-08T16:00:00.000Z</updated>
     </entry>
     <entry>
@@ -128,8 +129,8 @@ c100.7 8.3 195.3 44 280 108 55.3 42 101.7 93 139 153l9 14c2.7-4 5.7-8.7 9-14
 &lt;p&gt;  稳定性分析证明如下所示，需要注意的是，公式 (8) 即为 &lt;code&gt;Riccati&lt;/code&gt;  方程。&lt;br&gt;
 &lt;img data-src=&#34;/images/control/Continuous_LQR/4.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </content>
-        <category term="控制工程" />
         <category term="数学基础" />
+        <category term="控制工程" />
         <updated>2023-07-07T16:00:00.000Z</updated>
     </entry>
     <entry>

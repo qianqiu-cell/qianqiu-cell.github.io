@@ -1,0 +1,29 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Welcome to my tiny world • All posts by \"电脑硬件知识\" tag",
+    "description": "小樊&小小樊的学习笔记🌸",
+    "home_page_url": "http://qianqiu-cell.github.io",
+    "items": [
+        {
+            "id": "http://qianqiu-cell.github.io/2023/09/06/Computer/monitor/",
+            "url": "http://qianqiu-cell.github.io/2023/09/06/Computer/monitor/",
+            "title": "显示器的一些小tricks",
+            "date_published": "2023-09-05T16:00:00.000Z",
+            "content_html": "<h1 id=\"一-显示器的色域和色准\"><a class=\"markdownIt-Anchor\" href=\"#一-显示器的色域和色准\">#</a> 一、显示器的色域和色准</h1>\n<p>（内容参考 硬件茶谈 抖音显示器系列视频）</p>\n<h2 id=\"11-色域的概念\"><a class=\"markdownIt-Anchor\" href=\"#11-色域的概念\">#</a> 1.1 色域的概念</h2>\n<p>  将所有人眼可见的所有光的颜色信息和明度信息通过一定的数学变换映射到一个平面上，就得到了一个色域马蹄图，代表了人眼睛可以识别的全部颜色，这个颜色范围空间被称为 CIE 色彩空间。<br>\n<img data-src=\"/images/Computer/monitor/1.1.jpg\" alt=\"\"><br>\n  现在的显示器显示颜色是依赖于红绿蓝三个子像素去混合产生颜色，一台显示器显示颜色的极限就是红绿蓝各自亮度最大，而由这三个点连线所构成的区域就是色域。色域指的是显示器能覆盖颜色丰富度的概念，色域覆盖越广的显示器，能显示的颜色就越丰富，色域越窄的显示器能显示的颜色就越匮乏<br>\n<img data-src=\"/images/Computer/monitor/1.2.jpg\" alt=\"\"><br>\n  在 CIE 颜色覆盖范围内圈出来一定的区域作为标尺，这就是色彩空间的概念，常见的色彩空间如下图所示。<br>\n<img data-src=\"/images/Computer/monitor/1.3.jpg\" alt=\"\"><br>\n  99% sRGB 代表屏幕可以显示出 sRGB 空间中 99% 的色彩信息，95% DCI-P3 就意味着他能显示出 DCI-P3 空间当中 95% 的色彩。但是并不是色域越广的显示器体验就越好，购买 100% sRGB 的显示器可以更好的应用于绝大多数情况。Windows 操作系统也是以 100% sRGB 色彩空间作为标尺去存储色彩信息的，常见的视频、图片等也以 sRGB 的色彩空间进行存储和显示。<br>\n<img data-src=\"/images/Computer/monitor/1.4.png\" alt=\"\"><br>\n<img data-src=\"/images/Computer/monitor/1.5.png\" alt=\"\"><br>\n  Windows 操作系统判断显示器支持多少分辨率、多少刷新率以及型号是通过读取 EDID 信息来获取的，但是 EDID 信息里并没有存储显示器的色域覆盖的相关信息，也就是说操作系统并不知道显示器是多少色域的面板，Windows 系统默认显示器是 100% sRGB 的，故当显示器的色域不是 100% sRGB 时，显示在显示器上的色彩就是过饱和或欠饱和的。</p>\n<h2 id=\"12-色准的概念\"><a class=\"markdownIt-Anchor\" href=\"#12-色准的概念\">#</a> 1.2 色准的概念</h2>\n<p>  色准指的就是显示器在色域覆盖范围内显示颜色的准确度，衡量色准的参数叫做△E，△E 值越小，代表色彩偏离越小，△E 值的参考一般是参考平均△E 值和最大△E 值，色准差的显示器在显示画面的时候，色彩就会不正确，出现偏色的现象。对于色彩较差的显示器可以使用色彩校色仪进行矫正，但在选择显示器时最好直接购买所需色准的显示器。显示器的色准选择可以参考下图。除非从事专业的修图或者视频调色，一般来讲不需要太关注色准的表现，在其他参数面前优先级并不高，更需要去照顾分辨率，刷新率，响应时间和面板类型。<br>\n<img data-src=\"/images/Computer/monitor/1.6.jpg\" alt=\"\"></p>\n<h1 id=\"二-显示器的色深\"><a class=\"markdownIt-Anchor\" href=\"#二-显示器的色深\">#</a> 二、显示器的色深</h1>\n<h2 id=\"色深的概念\"><a class=\"markdownIt-Anchor\" href=\"#色深的概念\">#</a> 色深的概念</h2>\n<p>  屏幕是由像素点构成的，像素点调整颜色是依赖于红绿蓝三个子像素的亮度来完成的。而子像素的亮度存在阶梯，阶梯越多，能显示的颜色信息越准确，下图分别显示了 2 个阶梯和 16 个阶梯情况下在黑白图像中的显示情况。<br>\n<img data-src=\"/images/Computer/monitor/2.1.jpg\" alt=\"\"><br>\n  颜色过度的阶梯分的越多，屏幕在显示色彩过渡的时候就能呈现的越平滑，色彩越不容易出现断层的现象，色深比较差的显示器在显示画面是比较容易出现和梯田一样的色彩断层。<br>\n<img data-src=\"/images/Computer/monitor/2.2.jpg\" alt=\"\"><br>\n色深只是衡量色彩平滑度的一个概念，对显示器的色域是没有影响的。显示器宣传显示颜色为 1670 万色和 10.7 亿色分别对应 256 阶梯和 1024 阶梯的显示器，计算过程如下。<br>\n<img data-src=\"/images/Computer/monitor/2.3.jpg\" alt=\"\"></p>\n<h2 id=\"frc像素连抖动技术\"><a class=\"markdownIt-Anchor\" href=\"#frc像素连抖动技术\">#</a> FRC 像素连抖动技术</h2>\n<p>  FRC 像素连抖动技术简单来说就是利用人眼视觉暂留效应，利用可显示颜色通过快速抖动，来形成两像素颜色之间无法显示的颜色。<br>\n<img data-src=\"/images/Computer/monitor/2.4.jpg\" alt=\"\"><br>\n  但是这种抖动会产生很多的静态噪点，并不能坐到和原生色深相匹配，只能在一定程度上缓解色彩断层现象。<br>\n<img data-src=\"/images/Computer/monitor/2.5.jpg\" alt=\"\"><br>\n  商家在宣传屏幕时，可以将 6Bit 抖 8Bit 的屏幕宣传成 8Bit，8Bit 抖 10Bit 的屏幕宣传成 10Bit。可以去<span class=\"exturl\" data-url=\"aHR0cHM6Ly93d3cuZGlzcGxheXNwZWNpZmljYXRpb25zLmNvbS8=\"> DisplaySpecifications</span> 网站查询显示器是原生色深还是靠着 FRC 抖动上去的色深。<br>\n<img data-src=\"/images/Computer/monitor/2.6.jpg\" alt=\"\"><br>\n  在选择色深参数时，可以参考下图。<br>\n<img data-src=\"/images/Computer/monitor/2.7.jpg\" alt=\"\"><br>\n  购买了高色深显示器后，需要去显卡驱动里把显卡输出色深改成屏幕的对应值。<br>\n<img data-src=\"/images/Computer/monitor/2.8.jpg\" alt=\"\"></p>\n",
+            "tags": [
+                "电脑硬件知识",
+                "显示器"
+            ]
+        },
+        {
+            "id": "http://qianqiu-cell.github.io/2023/01/03/Computer/Realtek/",
+            "url": "http://qianqiu-cell.github.io/2023/01/03/Computer/Realtek/",
+            "title": "关于戴尔G3重装系统后的音频问题",
+            "date_published": "2023-01-02T16:00:00.000Z",
+            "content_html": "<p><span class=\"label warning\">💥问题描述💥</span>每一次使用戴尔 G3 恢复系统之后就会在音频位置出现<em>未插入扬声器或耳机</em>的问题<br>\n<img data-src=\"/images/Computer/Realtek/1.1.jpg\" alt=\"\"><br>\n  该问题的产生原因是系统没有 <code>Realtek</code>  音频驱动程序，正确的解决方法为进入<mark>戴尔官网</mark>，进行相应驱动程序的下载，安装步骤如下（❌❌❌千万不要下载驱动安装精灵❌❌❌）</p>\n<h1 id=\"一-进入戴尔官网进行声卡驱动下载\"><a class=\"markdownIt-Anchor\" href=\"#一-进入戴尔官网进行声卡驱动下载\">#</a> 一、进入戴尔官网进行声卡驱动下载</h1>\n<p>（1）直接在浏览器中搜索<mark>戴尔官网驱动下载</mark>，即可进入戴尔官网的驱动安装界面<br>\n<img data-src=\"/images/Computer/Realtek/1.2.png\" alt=\"\"><br>\n（2）进入戴尔官网后输入戴尔服务标签即可进入驱动下载界面<br>\n<img data-src=\"/images/Computer/Realtek/1.3.jpg\" alt=\"\"><br>\n  戴尔服务标签一般位于<mark>电脑下方</mark>（本机服务标签已保存至博客 word 版文件夹中）<br>\n<img data-src=\"/images/Computer/Realtek/1.4.jpg\" alt=\"\"><br>\n（3）进入如下驱动安装界面后下载<mark> Realtek 高保真声卡驱动程序</mark><br>\n<img data-src=\"/images/Computer/Realtek/1.5.jpg\" alt=\"\"></p>\n<h1 id=\"二-realtek声卡驱动安装\"><a class=\"markdownIt-Anchor\" href=\"#二-realtek声卡驱动安装\">#</a> 二、Realtek 声卡驱动安装</h1>\n<p>  下载完成声卡驱动安装程序后打开安装程序，一路下一步之后完成 <code>Realtek</code>  声卡驱动程序的安装，如下图所示<br>\n<img data-src=\"/images/Computer/Realtek/2.1.jpg\" alt=\"\"><br>\n  重新启动计算机后可以发现音频功能已经恢复正常<br>\n<img data-src=\"/images/Computer/Realtek/2.2.jpg\" alt=\"\"></p>\n",
+            "tags": [
+                "电脑硬件知识"
+            ]
+        }
+    ]
+}
