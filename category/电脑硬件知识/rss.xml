@@ -7,21 +7,22 @@
         <language>zh-CN</language>
         <pubDate>Wed, 06 Sep 2023 00:00:00 +0800</pubDate>
         <lastBuildDate>Wed, 06 Sep 2023 00:00:00 +0800</lastBuildDate>
-        <category>博客搭建</category>
         <category>电脑硬件知识</category>
         <category>显示器</category>
+        <category>博客搭建</category>
+        <category>控制工程</category>
         <category>数学基础</category>
         <category>硬件开发</category>
-        <category>控制工程</category>
         <category>latex技巧</category>
         <category>论文编辑</category>
         <category>生活</category>
         <category>一些小目标</category>
+        <category>区间不确定性</category>
         <category>office技巧</category>
-        <category>科学研究</category>
         <category>最优化</category>
         <category>多目标最优化</category>
         <category>单目标最优化</category>
+        <category>科学研究</category>
         <category>C++</category>
         <category>编程技巧</category>
         <category>matlab</category>
@@ -53,14 +54,14 @@
 &lt;p&gt;  色准指的就是显示器在色域覆盖范围内显示颜色的准确度，衡量色准的参数叫做△E，△E 值越小，代表色彩偏离越小，△E 值的参考一般是参考平均△E 值和最大△E 值，色准差的显示器在显示画面的时候，色彩就会不正确，出现偏色的现象。对于色彩较差的显示器可以使用色彩校色仪进行矫正，但在选择显示器时最好直接购买所需色准的显示器。显示器的色准选择可以参考下图。除非从事专业的修图或者视频调色，一般来讲不需要太关注色准的表现，在其他参数面前优先级并不高，更需要去照顾分辨率，刷新率，响应时间和面板类型。&lt;br&gt;
 &lt;img data-src=&#34;/images/Computer/monitor/1.6.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;二-显示器的色深&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#二-显示器的色深&#34;&gt;#&lt;/a&gt; 二、显示器的色深&lt;/h1&gt;
-&lt;h2 id=&#34;色深的概念&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#色深的概念&#34;&gt;#&lt;/a&gt; 色深的概念&lt;/h2&gt;
+&lt;h2 id=&#34;21-色深的概念&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#21-色深的概念&#34;&gt;#&lt;/a&gt; 2.1 色深的概念&lt;/h2&gt;
 &lt;p&gt;  屏幕是由像素点构成的，像素点调整颜色是依赖于红绿蓝三个子像素的亮度来完成的。而子像素的亮度存在阶梯，阶梯越多，能显示的颜色信息越准确，下图分别显示了 2 个阶梯和 16 个阶梯情况下在黑白图像中的显示情况。&lt;br&gt;
 &lt;img data-src=&#34;/images/Computer/monitor/2.1.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
   颜色过度的阶梯分的越多，屏幕在显示色彩过渡的时候就能呈现的越平滑，色彩越不容易出现断层的现象，色深比较差的显示器在显示画面是比较容易出现和梯田一样的色彩断层。&lt;br&gt;
 &lt;img data-src=&#34;/images/Computer/monitor/2.2.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
 色深只是衡量色彩平滑度的一个概念，对显示器的色域是没有影响的。显示器宣传显示颜色为 1670 万色和 10.7 亿色分别对应 256 阶梯和 1024 阶梯的显示器，计算过程如下。&lt;br&gt;
 &lt;img data-src=&#34;/images/Computer/monitor/2.3.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;frc像素连抖动技术&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#frc像素连抖动技术&#34;&gt;#&lt;/a&gt; FRC 像素连抖动技术&lt;/h2&gt;
+&lt;h2 id=&#34;22-frc像素连抖动技术&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#22-frc像素连抖动技术&#34;&gt;#&lt;/a&gt; 2.2 FRC 像素连抖动技术&lt;/h2&gt;
 &lt;p&gt;  FRC 像素连抖动技术简单来说就是利用人眼视觉暂留效应，利用可显示颜色通过快速抖动，来形成两像素颜色之间无法显示的颜色。&lt;br&gt;
 &lt;img data-src=&#34;/images/Computer/monitor/2.4.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
   但是这种抖动会产生很多的静态噪点，并不能坐到和原生色深相匹配，只能在一定程度上缓解色彩断层现象。&lt;br&gt;
@@ -71,6 +72,10 @@
 &lt;img data-src=&#34;/images/Computer/monitor/2.7.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
   购买了高色深显示器后，需要去显卡驱动里把显卡输出色深改成屏幕的对应值。&lt;br&gt;
 &lt;img data-src=&#34;/images/Computer/monitor/2.8.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;三-显示器的假刷新率&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三-显示器的假刷新率&#34;&gt;#&lt;/a&gt; 三、显示器的假刷新率&lt;/h1&gt;
+&lt;p&gt;  显卡一秒钟输出给显示器多少张画面就是帧数，显示器一秒可以显示多少张画面就是面板的刷新率。显卡通过读取 EDID 中的信息来获取显示器的刷新率等信息，假刷新率显示器就是更改了 EDID 的信息，将 60Hz 的屏幕修改为 144Hz。&lt;br&gt;
+&lt;img data-src=&#34;/images/Computer/monitor/3.1.png&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+  为了测试屏幕的刷新率是否正常，可以使用&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cudGVzdHVmby5jb20v&#34;&gt; testufo&lt;/span&gt; 网站中的 &lt;code&gt;Frame Skipping - For Display Overclocking&lt;/code&gt;  模块，利用相机设置 0.1s 快门（或者肉眼观看），看显示块儿是否完整。&lt;/p&gt;
  ]]></description>
         </item>
         <item>
