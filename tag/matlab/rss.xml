@@ -10,11 +10,11 @@
         <category>电脑硬件知识</category>
         <category>显示器</category>
         <category>博客搭建</category>
-        <category>控制工程</category>
-        <category>数学基础</category>
         <category>硬件开发</category>
         <category>latex技巧</category>
         <category>论文编辑</category>
+        <category>控制工程</category>
+        <category>数学基础</category>
         <category>生活</category>
         <category>一些小目标</category>
         <category>区间不确定性</category>
@@ -23,9 +23,9 @@
         <category>多目标最优化</category>
         <category>单目标最优化</category>
         <category>科学研究</category>
-        <category>C++</category>
-        <category>编程技巧</category>
         <category>matlab</category>
+        <category>编程技巧</category>
+        <category>C++</category>
         <category>python</category>
         <category>系统设计</category>
         <category>Qt</category>
@@ -35,8 +35,8 @@
             <title>基于matlab-Sheffield工具箱实现遗传算法</title>
             <link>http://qianqiu-cell.github.io/2023/07/08/code/matlab/matlab_GA/</link>
             <category>最优化</category>
-            <category>编程技巧</category>
             <category>matlab</category>
+            <category>编程技巧</category>
             <pubDate>Sat, 08 Jul 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;一-sheffield工具箱介绍&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-sheffield工具箱介绍&#34;&gt;#&lt;/a&gt; 一、Sheffield 工具箱介绍&lt;/h1&gt;
 &lt;p&gt;  谢菲尔德（ &lt;code&gt;Sheffield&lt;/code&gt; ）遗传算法工具箱是英国谢菲尔德大学开发的遗传算法工具箱，能够为遗传算法研究者和初次使用遗传算法的用户提供了广泛多样的实用函数。但该工具箱不支持多目标优化。&lt;/p&gt;
