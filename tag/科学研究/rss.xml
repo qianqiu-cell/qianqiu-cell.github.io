@@ -13,23 +13,24 @@
         <category>硬件开发</category>
         <category>latex技巧</category>
         <category>论文编辑</category>
-        <category>控制工程</category>
         <category>数学基础</category>
-        <category>生活</category>
-        <category>一些小目标</category>
         <category>区间不确定性</category>
+        <category>控制工程</category>
         <category>office技巧</category>
         <category>最优化</category>
         <category>多目标最优化</category>
         <category>单目标最优化</category>
+        <category>生活</category>
         <category>科学研究</category>
-        <category>matlab</category>
-        <category>编程技巧</category>
+        <category>一些小目标</category>
         <category>C++</category>
+        <category>编程技巧</category>
         <category>python</category>
         <category>系统设计</category>
         <category>Qt</category>
         <category>界面开发</category>
+        <category>matlab</category>
+        <category>leetcode</category>
         <item>
             <guid isPermalink="true">http://qianqiu-cell.github.io/2023/08/01/research/SciHub/</guid>
             <title>sci-hub的使用方法</title>
