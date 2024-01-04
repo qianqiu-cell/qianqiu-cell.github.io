@@ -1,33 +1,782 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://qianqiu-cell.github.io</id>
-    <title>Welcome to my tiny world • Posts by &#34;编程技巧&#34; tag</title>
+    <title>Keep Moving • Posts by &#34;编程技巧&#34; tag</title>
     <link href="http://qianqiu-cell.github.io" />
-    <updated>2023-10-15T16:00:00.000Z</updated>
+    <updated>2023-11-05T16:00:00.000Z</updated>
     <category term="电脑硬件知识" />
     <category term="显示器" />
     <category term="博客搭建" />
-    <category term="硬件开发" />
     <category term="latex技巧" />
     <category term="论文编辑" />
     <category term="数学基础" />
     <category term="区间不确定性" />
     <category term="控制工程" />
+    <category term="硬件开发" />
     <category term="office技巧" />
     <category term="最优化" />
     <category term="多目标最优化" />
     <category term="单目标最优化" />
-    <category term="生活" />
     <category term="科学研究" />
-    <category term="一些小目标" />
     <category term="C++" />
     <category term="编程技巧" />
+    <category term="leetcode" />
     <category term="python" />
     <category term="系统设计" />
+    <category term="matlab" />
     <category term="Qt" />
     <category term="界面开发" />
-    <category term="matlab" />
-    <category term="leetcode" />
+    <entry>
+        <id>http://qianqiu-cell.github.io/2023/11/06/code/leetcode/1000%E6%9C%AC%E5%BC%80%E6%BA%90%E7%94%B5%E5%AD%90%E4%B9%A6/</id>
+        <title>1000本开源电子书</title>
+        <link rel="alternate" href="http://qianqiu-cell.github.io/2023/11/06/code/leetcode/1000%E6%9C%AC%E5%BC%80%E6%BA%90%E7%94%B5%E5%AD%90%E4%B9%A6/"/>
+        <content type="html">&lt;blockquote&gt;
+&lt;p&gt;Free Ebook Foundation 维护了一个项目，包含了超过 10000 本免费的编程电子书，而其中中文书籍约 800 本&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;1000 本完全可以&lt;strong&gt;作为小图书馆&lt;/strong&gt;查找使用，给这个仓库点个  &lt;code&gt;star&lt;/code&gt;  防止下次想看却找不到。&lt;/p&gt;
+&lt;h2 id=&#34;电子书目录&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#电子书目录&#34;&gt;#&lt;/a&gt; 电子书目录&lt;/h2&gt;
+&lt;h3 id=&#34;语言无关&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#语言无关&#34;&gt;#&lt;/a&gt; 语言无关&lt;/h3&gt;
+&lt;p&gt;就是不限定具体编程语言，程序员软件开发都会用到通用的知识，这部分包括：IDE、Web、操作系统、设计模式、编译原理、数据库、大数据… 这些都是通识性的知识，程序员必修课，不管你用什么语言都需要学习和了解。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;语言无关&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;众所周知现在编程世界里各种语言百花齐放，从列出来的目录也能看出，C\C++\Java\Python\PHP… 语言的种类那是非常之多，不管你是用的那种语言，在这都能找到相关的电子书学习资源。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#%E6%8E%A8%E8%8D%90%E4%B8%8B%E8%BD%BD&#34;&gt;推荐下载&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%94%B5%E5%AD%90%E4%B9%A6%E7%9B%AE%E5%BD%95&#34;&gt;电子书目录&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#%E8%AF%AD%E8%A8%80%E6%97%A0%E5%85%B3&#34;&gt;语言无关&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E8%AF%AD%E8%A8%80%E6%97%A0%E5%85%B3-1&#34;&gt;语言无关&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#ide&#34;&gt;IDE&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#web&#34;&gt;Web&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#web%E6%9C%8D%E5%8A%A1%E5%99%A8&#34;&gt;WEB 服务器&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E5%85%B6%E5%AE%83&#34;&gt;其它&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E5%87%BD%E6%95%B0%E5%BC%8F%E6%A6%82%E5%BF%B5&#34;&gt;函数式概念&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F&#34;&gt;分布式系统&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E5%9C%A8%E7%BA%BF%E6%95%99%E8%82%B2&#34;&gt;在线教育&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E5%A4%A7%E6%95%B0%E6%8D%AE&#34;&gt;大数据&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F&#34;&gt;操作系统&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E6%95%B0%E6%8D%AE%E5%BA%93&#34;&gt;数据库&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E6%99%BA%E8%83%BD%E7%B3%BB%E7%BB%9F&#34;&gt;智能系统&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F&#34;&gt;正则表达式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6&#34;&gt;版本控制&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%A8%8B%E5%BA%8F%E5%91%98%E6%9D%82%E8%B0%88&#34;&gt;程序员杂谈&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%AE%A1%E7%90%86%E5%92%8C%E7%9B%91%E6%8E%A7&#34;&gt;管理和监控&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF&#34;&gt;编程艺术&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86&#34;&gt;编译原理&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%BC%96%E8%BE%91%E5%99%A8&#34;&gt;编辑器&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6&#34;&gt;计算机图形学&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F&#34;&gt;设计模式&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95&#34;&gt;软件开发方法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E9%A1%B9%E7%9B%AE%E7%9B%B8%E5%85%B3&#34;&gt;项目相关&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E8%AF%AD%E8%A8%80%E7%9B%B8%E5%85%B3&#34;&gt;语言相关&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#android&#34;&gt;Android&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#awk&#34;&gt;AWK&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#c&#34;&gt;C&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#c-sharp&#34;&gt;C Sharp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#c-1&#34;&gt;C++&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#coffeescript&#34;&gt;CoffeeScript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#dart&#34;&gt;Dart&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#elasticsearch&#34;&gt;Elasticsearch&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#elixir&#34;&gt;Elixir&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#erlang&#34;&gt;Erlang&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#fortran&#34;&gt;Fortran&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#golang&#34;&gt;Golang&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#groovy&#34;&gt;Groovy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#haskell&#34;&gt;Haskell&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#html--css&#34;&gt;HTML / CSS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ios&#34;&gt;iOS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#java&#34;&gt;Java&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#javascript&#34;&gt;JavaScript&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#angularjs&#34;&gt;AngularJS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#backbonejs&#34;&gt;Backbone.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#d3js&#34;&gt;D3.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#deno&#34;&gt;Deno&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#electronjs&#34;&gt;Electron.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#extjs&#34;&gt;ExtJS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#impressjs&#34;&gt;impress.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#jquery&#34;&gt;jQuery&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#nodejs&#34;&gt;Node.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#reactjs&#34;&gt;React.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#vuejs&#34;&gt;Vue.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#zeptojs&#34;&gt;Zepto.js&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#latex&#34;&gt;LaTeX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#lisp&#34;&gt;LISP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#lua&#34;&gt;Lua&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#markdown&#34;&gt;Markdown&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#mysql&#34;&gt;MySQL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#nosql&#34;&gt;NoSQL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#perl&#34;&gt;Perl&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#php&#34;&gt;PHP&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#laravel&#34;&gt;Laravel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#symfony&#34;&gt;Symfony&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#postgresql&#34;&gt;PostgreSQL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#python&#34;&gt;Python&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#django&#34;&gt;Django&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#r&#34;&gt;R&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#restructuredtext&#34;&gt;reStructuredText&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ruby&#34;&gt;Ruby&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#rust&#34;&gt;Rust&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#scala&#34;&gt;Scala&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#scheme&#34;&gt;Scheme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#scratch&#34;&gt;Scratch&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#shell&#34;&gt;Shell&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#swift&#34;&gt;Swift&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#typescript&#34;&gt;TypeScript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#vba-microsoft-visual-basic-applications&#34;&gt;VBA (Microsoft Visual Basic Applications)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#vim&#34;&gt;Vim&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#visual-prolog&#34;&gt;Visual Prolog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#webassembly&#34;&gt;WebAssembly&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;语言无关-2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#语言无关-2&#34;&gt;#&lt;/a&gt; 语言无关&lt;/h2&gt;
+&lt;h3 id=&#34;ide&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ide&#34;&gt;#&lt;/a&gt; IDE&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2p1ZGFzbi9JbnRlbGxpSi1JREVBLVR1dG9yaWFs&#34;&gt;IntelliJ IDEA 简体中文专题教程&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;web&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#web&#34;&gt;#&lt;/a&gt; Web&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZ2l0Ym9vay5jb20vYm9vay9qdW50YW8vMy13ZWItZGVzaWducy1pbi0zLXdlZWtzL2RldGFpbHM=&#34;&gt;3 Web Designs in 3 Weeks&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0NOLUNocm9tZS1EZXZUb29scy9DTi1DaHJvbWUtRGV2VG9vbHM=&#34;&gt;Chrome 开发者工具中文手册&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5pdHVyaW5nLmNvbS5jbi9taW5pYm9vay85NTA=&#34;&gt;Chrome 扩展及应用开发&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL29wZW4uY2hyb21lLjM2MC5jbi9leHRlbnNpb25fZGV2L292ZXJ2aWV3Lmh0bWw=&#34;&gt;Chrome 扩展开发文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3Bob2RhbC9ncm93dGgtZWJvb2s=&#34;&gt;Growth: 全栈增长工程师指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5ncnVudGpzLm5ldA==&#34;&gt;Grunt 中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL25pbW9qcy9ndWxwLWJvb2s=&#34;&gt;Gulp 入门指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5ndWxwanMuY29tLmNuL2RvY3Mv&#34;&gt;gulp 中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2JvbGFzYmxhY2svaHR0cC1hcGktZ3VpZGU=&#34;&gt;HTTP 接口设计指北&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3l1ZWR1LmJhaWR1LmNvbS9lYm9vay80NzhkMWE2MjM3NmJhZjFmZmM0ZmFkOTk/cG49MQ==&#34;&gt;HTTP/2.0 中文翻译&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZ2l0Ym9vay5jb20vYm9vay95ZTExb3cvaHR0cDItZXhwbGFpbmVkL2RldGFpbHM=&#34;&gt;http2 讲解&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2RhcmN5bGl1L2dvb2dsZS1zdHlsZWd1aWRlL2Jsb2IvbWFzdGVyL0pTT05TdHlsZUd1aWRlLm1k&#34;&gt;JSON 风格指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL21hbi5sdXBhd29ybGQuY29tL2NvbnRlbnQvbmV0d29yay93aXJlc2hhcmsvaW5kZXguaHRtbA==&#34;&gt;Wireshark 用户手册&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jb21tdW5pdHkuZW1jLmNvbS90aHJlYWQvMTk0OTAx&#34;&gt;一站式学习 Wireshark&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy4yMHRoaW5nc2lsZWFybmVkLmNvbS96aC1DTi9ob21l&#34;&gt;关于浏览器和网络的 20 项须知&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2NvZGVybG1uLmdpdGh1Yi5pby9jb2RlLXN0YW5kYXJkcy8=&#34;&gt;前端代码规范 及 最佳实践&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2ZvdWJlci9ibG9nL2lzc3Vlcy8y&#34;&gt;前端开发体系建设日记&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hhY2tlMi9oYWNrZTIuZ2l0aHViLmlvL2lzc3Vlcy8x&#34;&gt;前端资源分享（一）&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hhY2tlMi9oYWNrZTIuZ2l0aHViLmlvL2lzc3Vlcy8z&#34;&gt;前端资源分享（二）&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2RlZXJjaGFvLm5ldC90dXRvcmlhbHMvcmVnZXgvcmVnZXguaHRt&#34;&gt;正则表达式 30 分钟入门教程&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2ppbmxvbmcuZ2l0aHViLmlvLzIwMTMvMDgvMjkvZGV2dG9vbHNlY3JldHMv&#34;&gt;浏览器开发工具的秘密&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0FsbG95VGVhbS9NYXJz&#34;&gt;移动 Web 前端知识库&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hvb3Npbi9tb2JpbGUtd2ViLWZhdm9yaXRlcw==&#34;&gt;移动前端开发收藏夹&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;web服务器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#web服务器&#34;&gt;#&lt;/a&gt; WEB 服务器&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3dvcmtzLmppbmJ1Z3VvLmNvbS9hcGFjaGUvbWVudTIyL2luZGV4Lmh0bWw=&#34;&gt;Apache 中文手册&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3RlbmdpbmUudGFvYmFvLm9yZy9ib29rL2luZGV4Lmh0bWw=&#34;&gt;Nginx 开发从入门到精通&lt;/span&gt; - 淘宝团队&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy50dGxzYS5jb20vbmdpbngvbmdpbngtc3R1LXBkZi8=&#34;&gt;Nginx 教程从入门到精通&lt;/span&gt; - 运维生存时间 (PDF)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;其它&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#其它&#34;&gt;#&lt;/a&gt; 其它&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jb21tdW5pdHkuZW1jLmNvbS9kb2NzL0RPQy0xNjA2Nw==&#34;&gt;SAN 管理入门系列&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3NrZXRjaGNuLmNvbS9za2V0Y2gtY2hpbmVzZS11c2VyLW1hbnVhbC5odG1sI2ludHJvZHVjZQ==&#34;&gt;Sketch 中文手册&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2lmZXZlLmNvbS9wZXJmYm9vay8=&#34;&gt;深入理解并行编程&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;函数式概念&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#函数式概念&#34;&gt;#&lt;/a&gt; 函数式概念&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2p1c3RpbnlodWFuZy9GdW5jdGlvbmFsLVByb2dyYW1taW5nLUZvci1UaGUtUmVzdC1vZi1Vcy1Dbg==&#34;&gt;傻瓜函数编程&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;分布式系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#分布式系统&#34;&gt;#&lt;/a&gt; 分布式系统&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2RjYW95dWFuLmdpdGh1Yi5pby9wYXBlcnMvcGRmcy9TY2FsYWJpbGl0eS5wZGY=&#34;&gt;走向分布式&lt;/span&gt; (PDF)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;在线教育&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#在线教育&#34;&gt;#&lt;/a&gt; 在线教育&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2VkdS41MWN0by5jb20=&#34;&gt;51CTO 学院&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY29kZWNhZGVteS5jb20vP2xvY2FsZV9jb2RlPXpo&#34;&gt;Codecademy&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY29kZXNjaG9vbC5jb20=&#34;&gt;CodeSchool&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY291cnNlcmEub3JnL2NvdXJzZXM/b3JkZXJieT11cGNvbWluZyZhbXA7bG5ncz16aA==&#34;&gt;Coursera&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWFybnhpbnltaW51dGVzLmNvbQ==&#34;&gt;Learn X in Y minutes&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuc2hpeWFubG91LmNvbQ==&#34;&gt;shiyanlou&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90ZWFtdHJlZWhvdXNlLmNvbQ==&#34;&gt;TeamTreeHouse&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cudWRhY2l0eS5jb20=&#34;&gt;Udacity&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueHVldGFuZ3guY29t&#34;&gt;xuetangX&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5pbW9vYy5jb20vY291cnNlL2xpc3Q=&#34;&gt;慕课网&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5qaWtleHVleXVhbi5jb20=&#34;&gt;极客学院&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5odWJ3aXouY29t&#34;&gt;汇智网&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5qaXN1YW5rZS5jb20=&#34;&gt;计蒜客&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3l1bi5pdGhlaW1hLmNvbQ==&#34;&gt;黑马程序员&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;大数据&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#大数据&#34;&gt;#&lt;/a&gt; 大数据&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9haXlhbmJvLmdpdGJvb2tzLmlvL3NwYXJrLXByb2dyYW1taW5nLWd1aWRlLXpoLWNuL2NvbnRlbnQv&#34;&gt;Spark 编程指南简体中文版&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2xpbnlpcXVuL0RhdGFNaW5pbmdBbGdvcml0aG0=&#34;&gt;数据挖掘中经典的算法实现和详细的注释&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2RhdGFtaW5pbmdndWlkZS5ib29rcy55b3VydGlvbi5jb20=&#34;&gt;面向程序员的数据挖掘指南&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;操作系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#操作系统&#34;&gt;#&lt;/a&gt; 操作系统&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3llYXN5L2RvY2tlcl9wcmFjdGljZQ==&#34;&gt;Docker —— 从入门到实践&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3dpZHV1L2NoaW5lc2VfZG9ja2Vy&#34;&gt;Docker 中文指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3l1ZWR1LmJhaWR1LmNvbS9lYm9vay9kODE3OTY3NDE2ZmM3MDBhYmI2OGZjYTE=&#34;&gt;Docker 入门实战&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5mcmVlYnNkLm9yZy9kb2MvemhfQ04uVVRGLTgvYm9va3MvaGFuZGJvb2sv&#34;&gt;FreeBSD 使用手册&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90aW55bGFiLmdpdGJvb2tzLmlvL2xpbnV4LWRvYy9jb250ZW50L3poLWNuLw==&#34;&gt;Linux Documentation (中文版)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2hhcHB5cGV0ZXIuZ2l0aHViLmlvL0xHQ0IvYm9vay8=&#34;&gt;Linux Guide for Complete Beginners&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3dvcmtzLmppbmJ1Z3VvLmNvbS9sZnMvbGZzNjIvaW5kZXguaHRtbA==&#34;&gt;Linux 构建指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3NvdXJjZWZvcmdlLm5ldC9wcm9qZWN0cy9lbHBpLw==&#34;&gt;Linux 系统高级编程&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL21lMTE1L2xpbnV4dG9vbHNfcnN0&#34;&gt;Linux 工具快速教程&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hYWFhYWFzaHUuZ2l0Ym9va3MuaW8vbWFjLWRldi1zZXR1cC9jb250ZW50Lw==&#34;&gt;Mac 开发配置手册&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3BhZ2VzLmNzLndpc2MuZWR1L35yZW16aS9PU1RFUC8=&#34;&gt;Operating Systems: Three Easy Pieces&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2JpbGxpZTY2LmdpdGh1Yi5pby9UTENML2luZGV4Lmh0bWw=&#34;&gt;The Linux Command Line&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3dpa2kudWJ1bnR1Lm9yZy5jbi9VYnVudHVNYW51YWw=&#34;&gt;Ubuntu 参考手册&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZ2l0Ym9vay5jb20vYm9vay9vYmplY3RrdWFuL3Vjb3JlLWRvY3MvZGV0YWlscw==&#34;&gt;uCore Lab: Operating System Course in Tsinghua University&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2NiLnZ1L3VuaXh0b29sYm94X3poX0NOLnhodG1s&#34;&gt;UNIX TOOLBOX&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2psZXZ5L3RoZS1hcnQtb2YtY29tbWFuZC1saW5lL2Jsb2IvbWFzdGVyL1JFQURNRS16aC5tZA==&#34;&gt;命令行的艺术&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90aW55bGFiLmdpdGJvb2tzLmlvL2VsaW51eC9jb250ZW50L3poLw==&#34;&gt;嵌入式 Linux 知识库 (eLinux.org 中文版)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2kubGludXh0b3kub3JnL2RvY3MvZ3VpZGUvaW5kZXguaHRtbA==&#34;&gt;开源世界旅行手册&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3RvYmVnaXQzaHViL3VuZGVyc3RhbmRfbGludXhfcHJvY2Vzcw==&#34;&gt;理解 Linux 进程&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2NuLmxpbnV4LnZiaXJkLm9yZy9saW51eF9iYXNpYy9saW51eF9iYXNpYy5waHA=&#34;&gt;鸟哥的 Linux 私房菜 基础学习篇&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2NuLmxpbnV4LnZiaXJkLm9yZy9saW51eF9zZXJ2ZXIv&#34;&gt;鸟哥的 Linux 私房菜 服务器架设篇&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;数据库&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#数据库&#34;&gt;#&lt;/a&gt; 数据库&lt;/h3&gt;
+&lt;!-- Waiting to add in --&gt;
+&lt;h3 id=&#34;智能系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#智能系统&#34;&gt;#&lt;/a&gt; 智能系统&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3Bob2RhbC9kZXNpZ25pb3Q=&#34;&gt;一步步搭建物联网系统&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;正则表达式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#正则表达式&#34;&gt;#&lt;/a&gt; 正则表达式&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5ydW5vb2IuY29tL3JlZ2V4cC9yZWdleHAtdHV0b3JpYWwuaHRtbA==&#34;&gt;正则表达式 - 菜鸟教程&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93ZWIuYXJjaGl2ZS5vcmcvd2ViLzIwMTYxMTE5MTQxMjM2L2h0dHA6Ly9kZWVyY2hhby5uZXQ6ODAvdHV0b3JpYWxzL3JlZ2V4L3JlZ2V4Lmh0bQ==&#34;&gt;正则表达式 30 分钟入门教程&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;版本控制&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#版本控制&#34;&gt;#&lt;/a&gt; 版本控制&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3JvZ2VyZHVkbGVyLmdpdGh1Yi5pby9naXQtZ3VpZGUvaW5kZXguemguaHRtbA==&#34;&gt;Git - 简易指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2ZseWhpZ2hlcjEzOS9HaXQtQ2hlYXQtU2hlZXQ=&#34;&gt;Git-Cheat-Sheet&lt;/span&gt; - flyhigher139&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2dpdGJvb2subGl1aHVpOTk4LmNvbQ==&#34;&gt;Git Community Book 中文版&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2RhbmllbGt1bW1lci5naXRodWIuaW8vZ2l0LWZsb3ctY2hlYXRzaGVldC9pbmRleC56aF9DTi5odG1s&#34;&gt;git-flow 备忘清单&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy1jcy1zdHVkZW50cy5zdGFuZm9yZC5lZHUvfmJseW5uL2dpdG1hZ2ljL2ludGwvemhfY24v&#34;&gt;Git magic&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy1jcy1zdHVkZW50cy5zdGFuZm9yZC5lZHUvfmJseW5uL2dpdG1hZ2ljL2ludGwvemhfY24v&#34;&gt;Git Magic&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2dpdHJlZi5qdXN0amF2YWMuY29t&#34;&gt;Git 参考手册&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3dheWxhdS9naXRodWItaGVscA==&#34;&gt;Github 帮助文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zbm93ZHJlYW04Ni5naXRib29rcy5pby9naXRodWItY2hlYXQtc2hlZXQvY29udGVudC96aC8=&#34;&gt;GitHub 秘籍&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5saWFveHVlZmVuZy5jb20vd2lraS8wMDEzNzM5NTE2MzA1OTI5NjA2ZGQxODM2MTI0ODU3OGM2N2I4MDY3YzhjMDE3YjAwMA==&#34;&gt;Git 教程&lt;/span&gt; - 廖雪峰&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2dvdGdpdC9nb3RnaXRodWI=&#34;&gt;Got GitHub&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy53b3JsZGhlbGxvLm5ldC9nb3RnaXRodWIvaW5kZXguaHRtbA==&#34;&gt;GotGitHub&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aC1oZ2luaXQucmVhZHRoZWRvY3MuaW8vZW4vbGF0ZXN0Lw==&#34;&gt;HgInit (中文版)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubWVyY3VyaWFsLXNjbS5vcmcvd2lraS9DaGluZXNlVHV0b3JpYWw=&#34;&gt;Mercurial 使用教程&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXQtc2NtLmNvbS9ib29rL3poL3Yy&#34;&gt;Pro Git&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZ2l0Ym9vay5jb20vYm9vay8wNTMyL3Byb2dpdC9kZXRhaWxz&#34;&gt;Pro Git 中文版&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iaW5nb2h1YW5nLmdpdGJvb2tzLmlvL3Byb2dpdDIvY29udGVudA==&#34;&gt;Pro Git 第二版 中文版&lt;/span&gt; - Bingo Huang&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3N2bmJvb2sucmVkLWJlYW4uY29tL25pZ2h0bHkvemgvaW5kZXguaHRtbA==&#34;&gt;svn 手册&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWFybmdpdGJyYW5jaGluZy5qcy5vcmc=&#34;&gt;学习 Git 分支&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2lnaXQubGludXh0b3kub3JnL2luZGV4Lmh0bWw=&#34;&gt;沉浸式学 Git&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2JhY2tsb2d0b29sLmNvbS9naXQtZ3VpZGUvY24v&#34;&gt;猴子都能懂的 GIT 入门&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;程序员杂谈&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#程序员杂谈&#34;&gt;#&lt;/a&gt; 程序员杂谈&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5rYW5jbG91ZC5jbi9rYW5jbG91ZC9hLXByb2dyYW1tZXItcHJlcGFyZXM=&#34;&gt;程序员的自我修养&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;管理和监控&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#管理和监控&#34;&gt;#&lt;/a&gt; 管理和监控&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZ2l0Ym9vay5jb20vYm9vay9mdXhpYW9wYW5nL2xlYXJuZWxhc3RpY3NlYXJjaC9kZXRhaWxz&#34;&gt;ElasticSearch 权威指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2VzLnhpYW9sZWlsdS5jb20=&#34;&gt;Elasticsearch 权威指南（中文版）&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2tpYmFuYS5sb2dzdGFzaC5lcw==&#34;&gt;ELKstack 中文指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2NoZW5yeW4vbG9nc3Rhc2gtYmVzdC1wcmFjdGljZS1jbg==&#34;&gt;Logstash 最佳实践&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3Vkbi55eXVhcC5jb20vZG9jL21hc3RlcmluZy1lbGFzdGljc2VhcmNoLw==&#34;&gt;Mastering Elasticsearch (中文版)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZ2l0Ym9vay5jb20vYm9vay93aXphcmRmb3JjZWwvcHVwcGV0LTI3LWNvb2tib29rL2RldGFpbHM=&#34;&gt;Puppet 2.7 Cookbook 中文版&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;编程艺术&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#编程艺术&#34;&gt;#&lt;/a&gt; 编程艺术&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5vc2NoaW5hLm5ldC90cmFuc2xhdGUvd2hhdC1ldmVyeS1wcm9ncmFtbWVyLXNob3VsZC1rbm93LWFib3V0LW1lbW9yeS1wYXJ0MQ==&#34;&gt;每个程序员都应该了解的内存知识 (第一部分)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2p1bHljb2RpbmcvVGhlLUFydC1PZi1Qcm9ncmFtbWluZy1ieS1KdWx5&#34;&gt;程序员编程艺术&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5rYW5jbG91ZC5jbi9rYW5jbG91ZC9pbnRyby10by1wcm9nLzUyNTky&#34;&gt;编程入门指南&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;编译原理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#编译原理&#34;&gt;#&lt;/a&gt; 编译原理&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0RlYXRoS2luZy9MZWFybmluZy1TSUNQ&#34;&gt;《计算机程序的结构和解释》公开课 翻译项目&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;编辑器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#编辑器&#34;&gt;#&lt;/a&gt; 编辑器&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2V4dmltLmdpdGh1Yi5pby9kb2NzLXpoL2ludHJvLw==&#34;&gt;exvim–vim 改良成 IDE 项目&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3ZpbWNuL3ZpbWNkb2M=&#34;&gt;Vim 中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3lhbmd5YW5nd2l0aGdudS91c2VfdmltX2FzX2lkZQ==&#34;&gt;所需即所获：像 IDE 一样使用 vim&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2xlYXJudmltc2NyaXB0dGhlaGFyZHdheS5vbmVmbG93ZXJvbmV3b3JsZC5jb20=&#34;&gt;笨方法学 Vimscript 中译本&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;计算机图形学&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#计算机图形学&#34;&gt;#&lt;/a&gt; 计算机图形学&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWFybm9wZW5nbC1jbi5naXRodWIuaW8=&#34;&gt;LearnOpenGL CN&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3ppbG9uZ3NoYW5yZW4vb3BlbmdsLXR1dG9yaWFscw==&#34;&gt;OpenGL 教程&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;设计模式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#设计模式&#34;&gt;#&lt;/a&gt; 设计模式&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbG92ZWxpb24vYXJ0aWNsZS9kZXRhaWxzLzE3NTE3MjEz&#34;&gt;史上最全设计模式导学目录&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL21lMTE1L2Rlc2lnbl9wYXR0ZXJucw==&#34;&gt;图说设计模式&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;软件开发方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#软件开发方法&#34;&gt;#&lt;/a&gt; 软件开发方法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2p1c3RpbnlodWFuZy9GdW5jdGlvbmFsLVByb2dyYW1taW5nLUZvci1UaGUtUmVzdC1vZi1Vcy1Dbg==&#34;&gt;傻瓜函数编程&lt;/span&gt; (《Functional Programming For The Rest of Us》中文版)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5pbmZvcS5jb20vY24vbWluaWJvb2tzL3NjcnVtLXhwLWZyb20tdGhlLXRyZW5jaGVz&#34;&gt;硝烟中的 Scrum 和 XP&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;项目相关&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#项目相关&#34;&gt;#&lt;/a&gt; 项目相关&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2RvY3MuaHVpaG9vLmNvbS9nbnUvbGludXgvZ21ha2UuaHRtbA==&#34;&gt;GNU make 指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3dheWxhdS9HcmFkbGUtMi1Vc2VyLUd1aWRl&#34;&gt;Gradle 2 用户指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3l1ZWR1LmJhaWR1LmNvbS9lYm9vay9mMjNhZjI2NTk5OGZjYzIyYmNkMTBkYTI=&#34;&gt;Gradle 中文使用文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93ZWIuYXJjaGl2ZS5vcmcvd2ViLzIwMTcwNjE2MDEzMDI0L2h0dHA6Ly9sb2NhbC5qb2Vsb25zb2Z0d2FyZS5jb20vd2lraS9DaGluZXNlXyhTaW1wbGlmaWVkKQ==&#34;&gt;Joel 谈软件&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2Zvb2wyZmlzaC9zZWxlbml1bS1kb2M=&#34;&gt;selenium 中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5pdHVyaW5nLmNvbS5jbi9ib29rLzExNDM=&#34;&gt;开源软件架构&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2Vjb21mZS9zcGVj&#34;&gt;编码规范&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93aXphcmRmb3JjZWwuZ2l0Ym9va3MuaW8vaWJtLWotYXA=&#34;&gt;让开发自动化系列专栏&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93aXphcmRmb3JjZWwuZ2l0Ym9va3MuaW8vaWJtLWotY3E=&#34;&gt;追求代码质量&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;语言相关&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#语言相关&#34;&gt;#&lt;/a&gt; 语言相关&lt;/h2&gt;
+&lt;h3 id=&#34;android&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#android&#34;&gt;#&lt;/a&gt; Android&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5hcGtidXMuY29tL2Rlc2lnbi9pbmRleC5odG1s&#34;&gt;Android Design (中文版)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0NoYXJvbkNodWkvQW5kcm9pZE5vdGU=&#34;&gt;Android Note (开发过程中积累的知识点)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2xlYW5vdGUuY29tL2Jsb2cvcG9zdC81NjE2NThmOTM4ZjQxMTI2YjIwMDAyOTg=&#34;&gt;Android6.0 新特性详解&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2Jib3lmZWl5dS9hbmRyb2lkLXRlY2gtZnJvbnRpZXI=&#34;&gt;Android 开发技术前线 (android-tech-frontier)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2h1a2FpLm1lL2FuZHJvaWQtdHJhaW5pbmctY291cnNlLWluLWNoaW5lc2UvaW5kZXguaHRtbA==&#34;&gt;Google Android 官方培训课程中文版&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;Google Material Design 正體中文版 (&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93Y2M3MjMuZ2l0Ym9va3MuaW8vZ29vZ2xlX2Rlc2lnbl90cmFuc2xhdGUvY29udGVudC9zdHlsZS1pY29ucy5odG1s&#34;&gt;译本一&lt;/span&gt;，&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tLzFzdGVycy9tYXRlcmlhbF9kZXNpZ25femg=&#34;&gt;译本二&lt;/span&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3dpa2kuamlrZXh1ZXl1YW4uY29tL3Byb2plY3QvbWF0ZXJpYWwtZGVzaWduLw==&#34;&gt;Material Design 中文版&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0ZYLU1heC9Qb2ludC1vZi1BbmRyb2lk&#34;&gt;Point-of-Android&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;awk&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#awk&#34;&gt;#&lt;/a&gt; AWK&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2F3ay5yZWFkdGhlZG9jcy5vcmcvZW4vbGF0ZXN0L2luZGV4Lmh0bWw=&#34;&gt;awk 中文指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3d1emhvdWh1aS9hd2s=&#34;&gt;awk 程序设计语言&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;c&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#c&#34;&gt;#&lt;/a&gt; C&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9maXJlYmFzZXN0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vdjAvYi9naXRib29rLTI4NDI3LmFwcHNwb3QuY29tL28vYXNzZXRzJTJGLU1FNXpSLTAzWkVIZ3Aya3Y3YlclMkYtTUY5RUlZLXMxOV93MTlfVW5hZSUyRi1NRjlGLUhDczFuTE9rWTFtTFZpJTJGQmVlai1jbi0yMDE0MDQyOS56aXA/YWx0PW1lZGlhJmFtcDt0b2tlbj1kZTI3Zjk2Yi0yYWVkLTRjOTctODg3OS02NDk2MzhjNzU1OWY=&#34;&gt;Beej’s Guide to Network Programming 簡體中文版&lt;/span&gt; - B. Hall, 廖亚伦译 (PDF)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2MtZmFxLWNobi5zb3VyY2Vmb3JnZS5uZXQvY2NmYXEvY2NmYXEuaHRtbA==&#34;&gt;C 语言常见问题集&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2RvY3MubGludXh0b25lLm9yZy9lYm9va3MvQyZhbXA7Q1BQL2Mv&#34;&gt;Linux C 编程一站式学习&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2xpbWluZ3RoL05DQ0w=&#34;&gt;新概念 C 语言教程&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;c-sharp&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#c-sharp&#34;&gt;#&lt;/a&gt; C Sharp&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2Jvb2suZG91YmFuLmNvbS9zdWJqZWN0LzI0ODI3ODc5Lw==&#34;&gt;精通 C#(第 6 版)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;c-2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#c-2&#34;&gt;#&lt;/a&gt; C++&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hlbGxvZ2NjLzEwMC1nY2MtdGlwcy9ibG9iL21hc3Rlci9zcmMvaW5kZXgubWQ=&#34;&gt;100 个 gcc 小技巧&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hlbGxvZ2NjLzEwMC1nZGItdGlwcy9ibG9iL21hc3Rlci9zcmMvaW5kZXgubWQ=&#34;&gt;100 个 gdb 小技巧&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90aW55bGFiLmdpdGJvb2tzLmlvL2Nib29rL2NvbnRlbnQv&#34;&gt;C 语言编程透视&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FuZHljYWkvY3ByaW1lcg==&#34;&gt;C/C++ Primer&lt;/span&gt; - andycai&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5zdW5pc3R1ZGlvLmNvbS9jcHBmYXEv&#34;&gt;C++ FAQ LITE (中文版)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL01vb29waHkvQ3BwLVByaW1lcg==&#34;&gt;C++ Primer 5th Answers&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3d1eWU5MDM2L0NwcFRlbXBsYXRlVHV0b3JpYWw=&#34;&gt;C++ Template 进阶指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2ZvcmhhcHB5L0NwbHVzcGx1cy1Db25jdXJyZW5jeS1Jbi1QcmFjdGljZQ==&#34;&gt;C++ 并发编程指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2xlZXlpdy9jZ2RiLW1hbnVhbC1pbi1jaGluZXNl&#34;&gt;CGDB 中文手册&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93ZWIuYXJjaGl2ZS5vcmcvd2ViLzIwMTcwNjE1MTc0MTQ0L2h0dHA6Ly9zZXdtLnBrdS5lZHUuY24vc3JjL3BhcmFkaXNlL3JlZmVyZW5jZS9DTWFrZSUyMFByYWN0aWNlLnBkZg==&#34;&gt;Cmake 实践&lt;/span&gt; (PDF)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2RvY3MuaHVpaG9vLmNvbS9nbnUvbGludXgvZ21ha2UuaHRtbA==&#34;&gt;GNU make 指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3poLWdvb2dsZS1zdHlsZWd1aWRlLnJlYWR0aGVkb2NzLm9yZy9lbi9sYXRlc3QvZ29vZ2xlLWNwcC1zdHlsZWd1aWRlL2NvbnRlbnRzLw==&#34;&gt;Google C++ 风格指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FuanVrZS96Z3VpZGUtY24=&#34;&gt;ZMQ 指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5pdHVyaW5nLmNvbS5jbi9ib29rLzEyMDM=&#34;&gt;像计算机科学家一样思考（C++ 版)&lt;/span&gt; (《How To Think Like a Computer Scientist: C++ Version》中文版)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5ub3dhbWFnaWMubmV0L2xpYnJhcnlzL2Jvb2tzL2NvbnRlbnRzL2M=&#34;&gt;简单易懂的 C 魔法&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;coffeescript&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#coffeescript&#34;&gt;#&lt;/a&gt; CoffeeScript&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2NvZmZlZS1zY3JpcHQub3Jn&#34;&gt;CoffeeScript 中文&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2dlZWtwbHV4L2NvZmZlZXNjcmlwdC1zdHlsZS1ndWlkZQ==&#34;&gt;CoffeeScript 编码风格指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2VscnJycnJyci9jb2ZmZWVzY3JpcHQtc3R5bGUtZ3VpZGUvYmxvYi9tYXN0ZXIvUkVBRE1FLVpILm1k&#34;&gt;CoffeeScript 编程风格指南&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;dart&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#dart&#34;&gt;#&lt;/a&gt; Dart&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2RhcnQubGlkaWFuLmluZm8vd2lraS9MYW5ndWFnZV9Ub3Vy&#34;&gt;Dart 语言导览&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;elasticsearch&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#elasticsearch&#34;&gt;#&lt;/a&gt; Elasticsearch&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2xvb2x5L2VsYXN0aWNzZWFyY2gtZGVmaW5pdGl2ZS1ndWlkZS1jbg==&#34;&gt;Elasticsearch 权威指南&lt;/span&gt; （《Elasticsearch the definitive guide》中文版）&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3Vkbi55eXVhcC5jb20vZG9jL21hc3RlcmluZy1lbGFzdGljc2VhcmNoLw==&#34;&gt;Mastering Elasticsearch (中文版)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;elixir&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#elixir&#34;&gt;#&lt;/a&gt; Elixir&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0xqem4vRWxpeHJHZXR0aW5nU3RhcnRlZENoaW5lc2U=&#34;&gt;Elixir Getting Started 中文翻译&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lbGl4aXJzY2hvb2wuY29tL2NuLw==&#34;&gt;Elixir 编程语言教程&lt;/span&gt; (Elixir School)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0xqem4vTWV0YVByb2dyYW1taW5nSW5FbGl4aXJDaGluZXNl&#34;&gt;Elixir 元编程与 DSL 中文翻译&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9teWRlYXJ4eW0uZ2l0Ym9va3MuaW8vcGhvZW5peC1kb2MtaW4tY2hpbmVzZS9jb250ZW50Lw==&#34;&gt;Phoenix 框架中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;erlang&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#erlang&#34;&gt;#&lt;/a&gt; Erlang&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2xpYW5jaGVuZy9jcGllLWNu&#34;&gt;Erlang 并发编程&lt;/span&gt; (《Concurrent Programming in Erlang (Part I)》中文版)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;fortran&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#fortran&#34;&gt;#&lt;/a&gt; Fortran&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL21pY3JvLnVzdGMuZWR1LmNuL0ZvcnRyYW4vWkpEaW5nLw==&#34;&gt;Fortran77 和 90/95 编程入门&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;golang&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#golang&#34;&gt;#&lt;/a&gt; Golang&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FzdGF4aWUvYnVpbGQtd2ViLWFwcGxpY2F0aW9uLXdpdGgtZ29sYW5n&#34;&gt;Go Web 编程&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL1Vua253b24vdGhlLXdheS10by1nb19aSF9DTg==&#34;&gt;Go 入门指南&lt;/span&gt; (《The Way to Go》中文版)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2dvbGFuZy1jaGluYS9nb2xhbmdkb2MudHJhbnNsYXRpb25z&#34;&gt;Go 官方文档翻译&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90b3VyLmdvLXpoLm9yZy9saXN0&#34;&gt;Go 指南&lt;/span&gt; (《A Tour of Go》中文版)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3NvbmdsZW8vdGhlLWxpdHRsZS1nby1ib29rX1pIX0NO&#34;&gt;Go 简易教程&lt;/span&gt; (《&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2thcmxzZWd1aW4vdGhlLWxpdHRsZS1nby1ib29r&#34;&gt;The Little Go Book&lt;/span&gt;》中文版)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL1Vua253b24vZ28tZnVuZGFtZW50YWwtcHJvZ3JhbW1pbmc=&#34;&gt;Go 编程基础&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2NoYWkyMDEwL2dvLWFzdC1ib29r&#34;&gt;Go 语法树入门&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3J1amV3cy9nby1pbi1hY3Rpb24tbm90ZXM=&#34;&gt;Go 语言实战笔记&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3BvbGFyaXMxMTE5L1RoZS1Hb2xhbmctU3RhbmRhcmQtTGlicmFyeS1ieS1FeGFtcGxl&#34;&gt;Go 语言标准库&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2NoYWkyMDEwL2FkdmFuY2VkLWdvLXByb2dyYW1taW5nLWJvb2s=&#34;&gt;Go 语言高级编程（Advanced Go Programming）&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2h5cGVyLWNhcnJvdC9nb19jb21tYW5kX3R1dG9yaWFs&#34;&gt;Go 命令教程&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FzdGF4aWUvR28taW4tQWN0aW9u&#34;&gt;Go 实战开发&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FjaHVuL0dvLUJsb2ctSW4tQWN0aW9u&#34;&gt;Go 语言博客实践&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZGNfNzI2L2FydGljbGUvZGV0YWlscy80NjU2NTI0MQ==&#34;&gt;Java 程序员的 Golang 入门指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FzdGF4aWUvTlBXR196aA==&#34;&gt;Network programming with Go 中文翻译版本&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2dvcmV2ZWwuY24vZG9jcy9tYW51YWwvaW5kZXguaHRtbA==&#34;&gt;Revel 框架手册&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL21pa2VzcG9vay5jb20vbGVhcm5pbmctZ28v&#34;&gt;学习 Go 语言&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2dvLmN0b2xpYi5jb20vZG9jcy9yZWFkL21hZ2ljYWwtZ28tYy1pbmRleC5odG1s&#34;&gt;神奇的 Go 语言&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;groovy&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#groovy&#34;&gt;#&lt;/a&gt; Groovy&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5pYm0uY29tL2RldmVsb3BlcndvcmtzL2NuL2phdmEvai1wZy8=&#34;&gt;实战 Groovy 系列&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;haskell&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#haskell&#34;&gt;#&lt;/a&gt; Haskell&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2xlYXJueW91YS5oYXNrZWxsLnNn&#34;&gt;Haskell 趣学指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2NuaGFza2VsbC5jb20=&#34;&gt;Real World Haskell 中文版&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;html-css&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#html-css&#34;&gt;#&lt;/a&gt; HTML / CSS&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ib290c3RyYXAuaGV4c2Nob29sLmNvbQ==&#34;&gt;Bootstrap 4 繁體中文手冊&lt;/span&gt; - 六角學院&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3dheWxhdS9jc3MzLXR1dG9yaWFs&#34;&gt;CSS3 Tutorial 《CSS3 教程》&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2Nzcy5kb3lvZS5jb20=&#34;&gt;CSS 参考手册&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3lhbnh5ei5naXRodWIuaW8vZW1tZXQtZG9jcy8=&#34;&gt;Emmet 文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy53M3NjaG9vbC5jb20uY24vaHRtbDUvaW5kZXguYXNw&#34;&gt;HTML5 教程&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2NvZGVndWlkZS5ib290Y3NzLmNvbQ==&#34;&gt;HTML 和 CSS 编码规范&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3Nhc3MtZ3VpZGVsaW4uZXMvemgv&#34;&gt;Sass Guidelines 中文&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2FsbG95dGVhbS5naXRodWIuaW8vQ29kZUd1aWRlLw==&#34;&gt;前端代码规范&lt;/span&gt; - 腾讯 AlloyTeam 团队&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3poLmxlYXJubGF5b3V0LmNvbQ==&#34;&gt;学习 CSS 布局&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2NoYWRsdW8vQ1NTLUd1aWRlbGluZXMvYmxvYi9tYXN0ZXIvUkVBRE1FLm1k&#34;&gt;通用 CSS 笔记、建议与指导&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;ios&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ios&#34;&gt;#&lt;/a&gt; iOS&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL25pbHN1bi5naXRodWIuaW8vYXBwbGUtd2F0Y2gv&#34;&gt;Apple Watch 开发初探&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3poLWdvb2dsZS1zdHlsZWd1aWRlLnJlYWR0aGVkb2NzLm9yZy9lbi9sYXRlc3QvZ29vZ2xlLW9iamMtc3R5bGVndWlkZS8=&#34;&gt;Google Objective-C Style Guide 中文版&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2lzdXgudGVuY2VudC5jb20vaW9zLWh1bWFuLWludGVyZmFjZS1ndWlkZWxpbmVzLXVpLWRlc2lnbi1iYXNpY3MtaW9zNy5odG1s&#34;&gt;iOS7 人机界面指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3Fpbmp4LzMwbWluX2d1aWRlcy9ibG9iL21hc3Rlci9pb3MubWQ=&#34;&gt;iOS 开发 60 分钟入门&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3dpbGVhbS5jb20vaXBob25lLTYtc2NyZWVuLWNuLw==&#34;&gt;iPhone 6 屏幕揭秘&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2preWluL1N1YnRpdGxl&#34;&gt;网易斯坦福大学公开课：iOS 7 应用开发字幕文件&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;java&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#java&#34;&gt;#&lt;/a&gt; Java&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3dheWxhdS9hY3Rpdml0aS01LngtdXNlci1ndWlkZQ==&#34;&gt;Activiti 5.x 用户指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3dheWxhdS9hcGFjaGUtbWluYS0yLngtdXNlci1ndWlkZQ==&#34;&gt;Apache MINA 2 用户指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3dheWxhdS9hcGFjaGUtc2hpcm8tMS4yLngtcmVmZXJlbmNl&#34;&gt;Apache Shiro 用户指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2hhd3N0ZWluLmNvbS8yMDE0LzAxLzIwL2dvb2dsZS1qYXZhLXN0eWxlLw==&#34;&gt;Google Java 编程风格指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3dheWxhdS9oMi1kYXRhYmFzZS1kb2M=&#34;&gt;H2 Database 教程&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3dheWxhdS9zZXJ2bGV0LTMuMS1zcGVjaWZpY2F0aW9u&#34;&gt;Java Servlet 3.1 规范&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3dheWxhdS9qYXZhLWNvZGUtY29udmVudGlvbnM=&#34;&gt;Java 编码规范&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9qYXZhLnF1YW5rZS5uYW1l&#34;&gt;Java 编程思想&lt;/span&gt; - quanke&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3dheWxhdS9KZXJzZXktMi54LVVzZXItR3VpZGU=&#34;&gt;Jersey 2.x 用户指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3dheWxhdS9qc3NlLXJlZmVyZW5jZS1ndWlkZQ==&#34;&gt;JSSE 参考指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL215YmF0aXMuZ2l0aHViLmlvL215YmF0aXMtMy96aC9pbmRleC5odG1s&#34;&gt;MyBatis 中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3dheWxhdS9uZXR0eS00LXVzZXItZ3VpZGU=&#34;&gt;Netty 4.x 用户指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3dheWxhdS9lc3NlbnRpYWwtbmV0dHktaW4tYWN0aW9u&#34;&gt;Netty 实战 (精髓)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL251dHpib29rLndlbmRhbC5uZXQ=&#34;&gt;Nutz-book Nutz 烹调向导&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9udXR6YW0uY29tL2NvcmUvbnV0el9wcmVmYWNlLmh0bWw=&#34;&gt;Nutz 文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3dheWxhdS9yZXN0LWluLWFjdGlvbg==&#34;&gt;REST 实战&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3FpYmFvZ3VhbmcvU3ByaW5nLUJvb3QtUmVmZXJlbmNlLUd1aWRl&#34;&gt;Spring Boot 参考指南&lt;/span&gt; (🚧 &lt;em&gt;翻译中&lt;/em&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3dheWxhdS9zcHJpbmctZnJhbWV3b3JrLTQtcmVmZXJlbmNl&#34;&gt;Spring Framework 4.x 参考文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3dheWxhdS9SZXN0RGVtbw==&#34;&gt;用 jersey 构建 REST 服务&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;javascript&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#javascript&#34;&gt;#&lt;/a&gt; JavaScript&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FkYW1sdS9qYXZhc2NyaXB0LXN0eWxlLWd1aWRl&#34;&gt;Airbnb JavaScript 规范&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2VzNi5ydWFueWlmZW5nLmNvbQ==&#34;&gt;ECMAScript 6 入门&lt;/span&gt; - 阮一峰&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2JxNjkuY29tL2Jsb2cvYXJ0aWNsZXMvc2NyaXB0Lzg2OC9nb29nbGUtamF2YXNjcmlwdC1zdHlsZS1ndWlkZS5odG1s&#34;&gt;Google JavaScript 代码风格指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2xpdWJpbi5naXRodWIuaW8vcHJvbWlzZXMtYm9vay8=&#34;&gt;JavaScript Promise 迷你书&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93ZWIuYXJjaGl2ZS5vcmcvd2ViLzIwMTcwMTEyMTY0OTQ1L2h0dHA6Ly90eXBlb2YubmV0L3MvanNtZWNoLw==&#34;&gt;Javascript 原理&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2phdmFzY3JpcHQucnVhbnlpZmVuZy5jb20=&#34;&gt;JavaScript 标准参考教程（alpha）&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2pheWxpL2phdmFzY3JpcHQtcGF0dGVybnM=&#34;&gt;《JavaScript 模式》&lt;/span&gt; (《JavaScript patterns》译本)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2p1c3RqYXZhYy8xMi1qYXZhc2NyaXB0LXF1aXJrcw==&#34;&gt;javascript 的 12 个怪癖&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2JvbnNhaWRlbi5naXRodWIuaW8vSmF2YVNjcmlwdC1HYXJkZW4vemgv&#34;&gt;JavaScript 秘密花园&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2ljb2RlaXQub3JnL2pzY2NwLw==&#34;&gt;JavaScript 核心概念及实践&lt;/span&gt; (PDF)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3Bpai5yb2JpbnF1Lm1l&#34;&gt;Javascript 编程指南&lt;/span&gt; (&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL1JvYmluUXUvUHJvZ3JhbWluZy1Jbi1KYXZhc2NyaXB0&#34;&gt;源码&lt;/span&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2dldGlmeS9Zb3UtRG9udC1Lbm93LUpTL3RyZWUvMWVkLXpoLUNO&#34;&gt;你不知道的 Javascript&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2p1c3RqYXZhYy5jb20vbmFtZWQtZnVuY3Rpb24tZXhwcmVzc2lvbnMtZGVteXN0aWZpZWQuaHRtbA==&#34;&gt;命名函数表达式探秘&lt;/span&gt; - kangax、为之漫笔 (翻译) (原始地址无法打开，所以此处地址为 justjavac 博客上的备份)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5vc2NoaW5hLm5ldC90cmFuc2xhdGUvbGVhcm5pbmctamF2YXNjcmlwdC1kZXNpZ24tcGF0dGVybnM=&#34;&gt;学用 JavaScript 设计模式&lt;/span&gt; - 开源中国&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5jbmJsb2dzLmNvbS9Ub21YdS9hcmNoaXZlLzIwMTEvMTIvMTUvMjI4ODQxMS5odG1s&#34;&gt;深入理解 JavaScript 系列&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;angularjs&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#angularjs&#34;&gt;#&lt;/a&gt; AngularJS&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3plbnNoL0FuZ3VsYXJqc1R1dG9yaWFsX2Nu&#34;&gt;AngularJS 入门教程&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL21nZWNoZXYvYW5ndWxhcmpzLXN0eWxlLWd1aWRlL2Jsb2IvbWFzdGVyL1JFQURNRS16aC1jbi5tZA==&#34;&gt;AngularJS 最佳实践和风格指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy53YXlsYXUuY29tL2J1aWxkLWFuZ3VsYXJqcy1hcHAtd2l0aC15ZW9tYW4taW4td2luZG93cy8=&#34;&gt;在 Windows 环境下用 Yeoman 构建 AngularJS 项目&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3h1ZmVpL01ha2UtWW91ci1Pd24tQW5ndWxhckpTL2Jsb2IvbWFzdGVyLzAxLm1k&#34;&gt;构建自己的 AngularJS&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;backbonejs&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#backbonejs&#34;&gt;#&lt;/a&gt; Backbone.js&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5jc3M4OC5jb20vZG9jL2JhY2tib25lLw==&#34;&gt;Backbone.js 中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy50aGU1ZmlyZS5jb20vYmFja2JvbmUtanMtdHV0b3JpYWxzLXBkZi1kb3dubG9hZC5odG1s&#34;&gt;Backbone.js 入门教程&lt;/span&gt; (PDF)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3RoZTVmaXJlL2JhY2tib25lanMtbGVhcm5pbmctbm90ZQ==&#34;&gt;Backbone.js 入门教程第二版&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;d3js&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#d3js&#34;&gt;#&lt;/a&gt; D3.js&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2QzLmRlY2VtYmVyY2FmZS5vcmc=&#34;&gt;Learning D3.JS&lt;/span&gt; - 十二月咖啡馆&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL21ib3N0b2NrL2QzL3dpa2kvQVBJLS0lRTQlQjglQUQlRTYlOTYlODclRTYlODklOEIlRTUlODYlOEM=&#34;&gt;官方 API 文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhhbmdfX3RpYW54dS9hcnRpY2xlL2NhdGVnb3J5LzE2MjM0Mzc=&#34;&gt;张天旭的 D3 教程&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5jbmJsb2dzLmNvbS93aW5sZWlzdXJlL3RhZy9EMy5qcy8=&#34;&gt;楚狂人的 D3 教程&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;deno&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#deno&#34;&gt;#&lt;/a&gt; Deno&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kZW5vLXR1dG9yaWFsLmpzLm9yZw==&#34;&gt;Deno 钻研之术&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jaGVuc2hlbmhhaS5jb20vZGVub19ub3Rl&#34;&gt;Deno 进阶开发笔记&lt;/span&gt; - 大深海&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;electronjs&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#electronjs&#34;&gt;#&lt;/a&gt; Electron.js&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93aXphcmRmb3JjZWwuZ2l0Ym9va3MuaW8vZWxlY3Ryb24tZG9jL2NvbnRlbnQ=&#34;&gt;Electron 中文文档&lt;/span&gt; - WizardForcel&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cudzNjc2Nob29sLmNuL2VsZWN0cm9ubWFudWFs&#34;&gt;Electron 中文文档&lt;/span&gt; - W3Cschool&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;extjs&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#extjs&#34;&gt;#&lt;/a&gt; ExtJS&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2V4dGpzLWRvYy1jbi5naXRodWIuaW8vZXh0NGFwaS8=&#34;&gt;Ext4.1.0 中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;impressjs&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#impressjs&#34;&gt;#&lt;/a&gt; impress.js&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2tva2RlbW8vaW1wcmVzcy5qcy10dXRvcmlhbC1pbi1DaGluZXNl&#34;&gt;impress.js 的中文教程&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;jquery&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#jquery&#34;&gt;#&lt;/a&gt; jQuery&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2k1dGluZy5naXRodWIuaW8vSG93LXRvLXdyaXRlLWpRdWVyeS1wbHVnaW4vYnVpbGQvanF1ZXJ5LnBsdWdpbi5odG1s&#34;&gt;How to write jQuery plugin&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5ub3dhbWFnaWMubmV0L2xpYnJhcnlzL2Jvb2tzL2NvbnRlbnRzL2pxdWVyeQ==&#34;&gt;简单易懂的 JQuery 魔法&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;nodejs&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#nodejs&#34;&gt;#&lt;/a&gt; Node.js&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2V4cHJlc3Nqcy5qc2VyLnVz&#34;&gt;express.js 中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2phdmFzY3JpcHQucnVhbnlpZmVuZy5jb20vbm9kZWpzL2V4cHJlc3MuaHRtbA==&#34;&gt;Express 框架&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2d1by15dS9rb2EtZ3VpZGU=&#34;&gt;koa 中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubnBtanMuY29tL3BhY2thZ2UvbGVhcm55b3Vub2RlLXpoLWNu&#34;&gt;Learn You The Node.js For Much Win! (中文版)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2k1dGluZy5naXRodWIuaW8vbm9kZS1kZWJ1Zy10dXRvcmlhbC8=&#34;&gt;Node debug 三法三例&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2pvbGxlbi9ub2RlanMtZnVsbHN0YWNrLWxlc3NvbnM=&#34;&gt;Node.js Fullstack《從零到一的進撃》&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2Fsc290YW5nL25vZGUtbGVzc29ucw==&#34;&gt;Node.js 包教不包会&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL25vZGVqcy10dy9ub2RlanMtd2lraS1ib29r&#34;&gt;Nodejs Wiki Book&lt;/span&gt; (繁体中文)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZ2l0Ym9vay5jb20vYm9vay8wNTMyL25vZGVqcy9kZXRhaWxz&#34;&gt;nodejs 中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5ub2RlYmVnaW5uZXIub3JnL2luZGV4LXpoLWNuLmh0bWw=&#34;&gt;Node 入门&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZ2l0Ym9vay5jb20vYm9vay8wNTMyL25vZGVqcy9kZXRhaWxz&#34;&gt;The NodeJS 中文文档&lt;/span&gt; - 社区翻译&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL25xZGVuZy5naXRodWIuaW8vNy1kYXlzLW5vZGVqcy8=&#34;&gt;七天学会 NodeJS&lt;/span&gt; - 阿里团队&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL25zd2Jtdy9OLWJsb2c=&#34;&gt;使用 Express + MongoDB 搭建多人博客&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL25vZGVqcy5jdG9saWIuY29tL2RvY3Mvc2ZpbGUvanN0cmFpbmluZy9lbmdpbmVlcmluZy5odG1s&#34;&gt;JavaScript 全栈工程师培训材料&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;reactjs&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#reactjs&#34;&gt;#&lt;/a&gt; React.js&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3RoZUppYW4vYnVpbGQtYS1obi1mcm9udC1wYWdl&#34;&gt;Learn React &amp;amp; Webpack by building the Hacker News front page&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hhdGVvbmlvbi9yZWFjdC1iaXRzLUNO&#34;&gt;React-Bits 中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3dpa2kuamlrZXh1ZXl1YW4uY29tL3Byb2plY3QvcmVhY3QtbmF0aXZlLw==&#34;&gt;React Native 中文文档 (含最新 Android 内容)&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2Zha2VmaXNoL3JlYWN0LXdlYnBhY2stY29va2Jvb2s=&#34;&gt;React webpack-cookbook&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kaXNjb3VudHJ5LmdpdGh1Yi5pby9yZWFjdC8=&#34;&gt;React.js 中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2ZyYXNlcnh1Lm1lL2ludHJvLXRvLXJlYWN0Lw==&#34;&gt;React.js 入门教程&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;vuejs&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vuejs&#34;&gt;#&lt;/a&gt; Vue.js&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jbi52dWVqcy5vcmcvdjIvZ3VpZGUv&#34;&gt;Vue.js 中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;zeptojs&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#zeptojs&#34;&gt;#&lt;/a&gt; Zepto.js&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2Nzczg4LmNvbS9kb2MvemVwdG9qc19hcGk=&#34;&gt;Zepto.js 中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;latex&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#latex&#34;&gt;#&lt;/a&gt; LaTeX&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5kcmFscGhhLmNvbS96aC90ZWNoL3RlY2guaHRt&#34;&gt;LaTeX 笔记&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2N0YW4ub3JnL3BrZy9sc2hvcnQtemgtY24=&#34;&gt;一份不太简短的 LaTeX2ε 介绍&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tLzQ5OTUxMzMxL2dyYWR1YXRlLXByb2plY3QtMTAycGovYmxvYi9tYXN0ZXIvZG9jcy9sYXRleDEyMy5wZGY=&#34;&gt;大家來學 LaTeX&lt;/span&gt; (PDF)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;lisp&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#lisp&#34;&gt;#&lt;/a&gt; LISP&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2FjbC5yZWFkdGhlZG9jcy5vcmcvZW4vbGF0ZXN0Lw==&#34;&gt;ANSI Common Lisp 中文翻译版&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5pdHVyaW5nLmNvbS5jbi9taW5pYm9vay84NjI=&#34;&gt;Common Lisp 高级编程技术&lt;/span&gt; (《On Lisp》中文版)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;lua&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#lua&#34;&gt;#&lt;/a&gt; Lua&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy53M2NzY2hvb2wuY2MvbWFudWFsL2x1YTUzZG9jL2NvbnRlbnRzLmh0bWw=&#34;&gt;Lua 5.3 参考手册&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;markdown&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#markdown&#34;&gt;#&lt;/a&gt; Markdown&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tYXJrZG93bi50dw==&#34;&gt;Markdown 語法說明&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5qaWFuc2h1LmNvbS9wL3E4MVJFUg==&#34;&gt;献给写作者的 Markdown 新手指南&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;mysql&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mysql&#34;&gt;#&lt;/a&gt; MySQL&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5jbmJsb2dzLmNvbS9tci13aWQvYXJjaGl2ZS8yMDEzLzA1LzA5LzMwNjgyMjkuaHRtbA==&#34;&gt;21 分钟 MySQL 入门教程&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2Jsb2cuY29kaW5nbGFicy5vcmcvYXJ0aWNsZXMvdGhlb3J5LW9mLW15c3FsLWluZGV4Lmh0bWw=&#34;&gt;MySQL 索引背后的数据结构及算法原理&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;nosql&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#nosql&#34;&gt;#&lt;/a&gt; NoSQL&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2Rpc3F1ZS5odWFuZ3oubWU=&#34;&gt;Disque 使用教程&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3JlZGlzZG9jLmNvbQ==&#34;&gt;Redis 命令参考&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3JlZGlzYm9vay5jb20=&#34;&gt;Redis 设计与实现&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2p1c3RpbnlodWFuZy90aGUtbGl0dGxlLW1vbmdvZGItYm9vay1jbi9ibG9iL21hc3Rlci9tb25nb2RiLm1k&#34;&gt;The Little MongoDB Book&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0phc29uTGFpMjU2L3RoZS1saXR0bGUtcmVkaXMtYm9vay9ibG9iL21hc3Rlci9jbi9yZWRpcy5tZA==&#34;&gt;The Little Redis Book&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2h1YW5nejE5OTAvYW5ub3RhdGVkX3JlZGlzX3NvdXJjZQ==&#34;&gt;带有详细注释的 Redis 2.6 代码&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2h1YW5nejE5OTAvcmVkaXMtMy4wLWFubm90YXRlZA==&#34;&gt;带有详细注释的 Redis 3.0 代码&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;perl&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#perl&#34;&gt;#&lt;/a&gt; Perl&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2ZheWxhbmQvY2hpbmVzZS1wZXJsLWJvb2s=&#34;&gt;Master Perl Today&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93ZWIuYXJjaGl2ZS5vcmcvd2ViLzIwMTUwMzI2MDczMjM1L2h0dHA6Ly9uZXQucGt1LmVkdS5jbi9+eWhmL3R1dG9yaWFsL3BlcmwvcGVybC5odG1s&#34;&gt;Perl 5 教程&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy55aWliYWkuY29tL3Blcmw=&#34;&gt;Perl 教程&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;php&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#php&#34;&gt;#&lt;/a&gt; PHP&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jb2RlaWduaXRlci5vcmcudHcvdXNlcmd1aWRlMw==&#34;&gt;CodeIgniter 使用手冊&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2RvY3MucGhwY29tcG9zZXIuY29t&#34;&gt;Composer 中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5teWxlZnRzdHVkaW8uY29t&#34;&gt;Phalcon7 中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d1bGlqdW4uZ2l0aHViLmlvL3BocC10aGUtcmlnaHQtd2F5Lw==&#34;&gt;PHP 之道&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3BocC5uZXQvbWFudWFsL3poLw==&#34;&gt;PHP 中文手册&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9wc3IucGhwaHViLm9yZw==&#34;&gt;PHP 标准规范中文版&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy55aWljaGluYS5jb20vZG9jL2d1aWRlLzIuMA==&#34;&gt;Yii2 中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5waHAtaW50ZXJuYWxzLmNvbS9ib29rLw==&#34;&gt;深入理解 PHP 内核&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;laravel&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#laravel&#34;&gt;#&lt;/a&gt; Laravel&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2QubGFyYXZlbC1jaGluYS5vcmcvZG9jcy81LjQ=&#34;&gt;Laravel 5.4 中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWFybmt1LmNvbS9kb2NzL2xhcmF2ZWwvNi54&#34;&gt;Laravel 6 中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWFybmt1LmNvbS9kb2NzL2xhcmF2ZWwvNy54&#34;&gt;Laravel 7 中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sZWFybmt1LmNvbS9kb2NzL2xhcmF2ZWwvOC54&#34;&gt;Laravel 8 中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;symfony&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#symfony&#34;&gt;#&lt;/a&gt; Symfony&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93dXN1b3B1LmdpdGJvb2tzLmlvL3N5bWZvbnkyX3R1dG9yaWFsL2NvbnRlbnQ=&#34;&gt;Symfony 2 实例教程&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zeW1mb255LmNvbS9kb2MvNS4wL3RoZS1mYXN0LXRyYWNrL3poX0NOL2luZGV4Lmh0bWw=&#34;&gt;Symfony 5 快速开发&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;postgresql&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#postgresql&#34;&gt;#&lt;/a&gt; PostgreSQL&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3dvcmtzLmppbmJ1Z3VvLmNvbS9wb3N0Z3Jlc3FsL21lbnU4MjMvaW5kZXguaHRtbA==&#34;&gt;PostgreSQL 8.2.3 中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5wb3N0Z3Jlcy5jbi9kb2NzLzkuMy9pbmRleC5odG1s&#34;&gt;PostgreSQL 9.3.1 中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5wb3N0Z3Jlcy5jbi9kb2NzLzkuNC9pbmRleC5odG1s&#34;&gt;PostgreSQL 9.4.4 中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5wb3N0Z3Jlcy5jbi9kb2NzLzkuNS9pbmRleC5odG1s&#34;&gt;PostgreSQL 9.5.3 中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5wb3N0Z3Jlcy5jbi9kb2NzLzkuNi9pbmRleC5odG1s&#34;&gt;PostgreSQL 9.6.0 中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;python&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#python&#34;&gt;#&lt;/a&gt; Python&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5vc2dlby5jbi9tYXRwbG90bGliLw==&#34;&gt;Matplotlib 3.0.3 中文文档&lt;/span&gt; - (Online)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5vc2dlby5jbi9udW1weS8=&#34;&gt;Numpy 1.16 中文文档&lt;/span&gt; - (Online)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2RvY3NweTN6aC5yZWFkdGhlZG9jcy5vcmcvZW4vbGF0ZXN0Lw==&#34;&gt;Python 3 文档 (简体中文) 3.2.2 documentation&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5vc2dlby5jbi9jcHl0aG9uLw==&#34;&gt;Python 3.8.0a3 中文文档&lt;/span&gt; - (目前在线最全的中文文档了，Online)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3B5dGhvbjMtY29va2Jvb2sucmVhZHRoZWRvY3MuaW8vemhfQ04vbGF0ZXN0Lw==&#34;&gt;Python Cookbook 第三版&lt;/span&gt; - David Beazley、Brian K.Jones、熊能 (翻译)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5weXRob25kb2MuY29t&#34;&gt;Python 中文学习大本营&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9weXRob25ndWlkZWNuLnJlYWR0aGVkb2NzLmlvL3poL2xhdGVzdC8=&#34;&gt;Python 最佳实践指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2Z1bmhhY2tzLm5ldC9leHBsb3JlLXB5dGhvbg==&#34;&gt;Python 之旅&lt;/span&gt; - Ethan&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5saWFveHVlZmVuZy5jb20vd2lraS8wMDE0MzE2MDg5NTU3MjY0YTZiMzQ4OTU4ZjQ0OTk0OWRmNDJhNmQzYTJlNTQyYzAwMA==&#34;&gt;Python 教程 - 廖雪峰的官方网站&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9pbnRlcnB5LmVhc3RsYWtlc2lkZS5jb20=&#34;&gt;Python 进阶&lt;/span&gt; - eastlakeside&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5vc2dlby5jbi90b3JuYWRvLw==&#34;&gt;Tornado 6.1 中文文档&lt;/span&gt; - (网络上其他的都是较旧版本的，Online)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vZGVyZWsxMTg0NDA1OTU5L3AvODU3OTQyOC5odG1s&#34;&gt;人生苦短，我用 python&lt;/span&gt; - (内含丰富的笔记以及各类教程)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY3RvbGliLmNvbS9kb2NzL3NmaWxlL3RoaW5rLXB5dGhvbi0yZS8wLmh0bWw=&#34;&gt;像计算机科学家一样思考 Python&lt;/span&gt; - Allen B. Downey、大胖哥 (翻译)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2ppZWNoaWMvZGl2ZWludG9weXRob24z&#34;&gt;深入 Python 3&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ib3AubW9sdW4ubmV0&#34;&gt;简明 Python 教程&lt;/span&gt; - Swaroop C H、沈洁元 (翻译)、漠伦 (翻译)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;django&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#django&#34;&gt;#&lt;/a&gt; Django&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueWl5aWJvb2tzLmNuL3h4L0RqYW5nb18xLjExLjYvaW5kZXguaHRtbA==&#34;&gt;Django 1.11.6 中文文档&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5vc2dlby5jbi9kamFuZ28v&#34;&gt;Django 2.2.1 中文文档&lt;/span&gt; - (这个很新，也很全，Online)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2RqYW5nb2Jvb2sucHkzay5jbi8yLjAv&#34;&gt;Django book 2.0&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90dXRvcmlhbC5kamFuZ29naXJscy5vcmcvemgv&#34;&gt;Django Girls 教程 (1.11)&lt;/span&gt; (HTML)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZHVzYWlwaG90by5jb20vYXJ0aWNsZS9kZXRhaWwvMg==&#34;&gt;Django 搭建个人博客教程 (2.1)&lt;/span&gt; - (杜赛) (HTML)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;r&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#r&#34;&gt;#&lt;/a&gt; R&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2NyYW4uci1wcm9qZWN0Lm9yZy9kb2MvY29udHJpYi9MaXUtRkFRLnBkZg==&#34;&gt;153 分钟学会 R&lt;/span&gt; (PDF)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2NyYW4uci1wcm9qZWN0Lm9yZy9kb2MvY29udHJpYi9EaW5nLVItaW50cm9fY24ucGRm&#34;&gt;R 导论&lt;/span&gt; (《An Introduction to R》中文版) (PDF)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3lhbnBpbmcubWUvc2hpbnktdHV0b3JpYWwv&#34;&gt;用 R 构建 Shiny 应用程序&lt;/span&gt; (《Building ‘Shiny’ Applications with R》中文版)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2NyYW4uci1wcm9qZWN0Lm9yZy9kb2MvY29udHJpYi9YdS1TdGF0aXN0aWNzX2FuZF9SLnBkZg==&#34;&gt;统计学与 R 读书笔记&lt;/span&gt; (PDF)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;restructuredtext&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#restructuredtext&#34;&gt;#&lt;/a&gt; reStructuredText&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5weXRob25kb2MuY29tL3NwaGlueC9yZXN0Lmh0bWw=&#34;&gt;reStructuredText 入门&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;ruby&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ruby&#34;&gt;#&lt;/a&gt; Ruby&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0p1YW5pdG9GYXRhcy9yYWlscy1zdHlsZS1ndWlkZS9ibG9iL21hc3Rlci9SRUFETUUtemhDTi5tZA==&#34;&gt;Rails 风格指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9paG93ZXIudHcvcmFpbHM0Lw==&#34;&gt;Ruby on Rails 实战圣经&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2d1aWRlcy5ydWJ5LWNoaW5hLm9yZw==&#34;&gt;Ruby on Rails 指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0p1YW5pdG9GYXRhcy9ydWJ5LXN0eWxlLWd1aWRlL2Jsb2IvbWFzdGVyL1JFQURNRS16aENOLm1k&#34;&gt;Ruby 风格指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5zaW5hdHJhcmIuY29tL2ludHJvLXpoLmh0bWw=&#34;&gt;Sinatra&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2xydGh3LmdpdGh1Yi5pbw==&#34;&gt;笨方法学 Ruby&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;rust&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#rust&#34;&gt;#&lt;/a&gt; Rust&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0thaXNlclkvcnVzdC1ib29rLWNoaW5lc2U=&#34;&gt;Rust 官方教程&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3Bob3Rpbm8vcnVzdC1ub3Rlcw==&#34;&gt;Rust 语言学习笔记&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3J1c3RjYy9SdXN0UHJpbWVy&#34;&gt;RustPrimer&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3J1c3RjYy9ydXN0LWJ5LWV4YW1wbGUv&#34;&gt;通过例子学习 Rust&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;scala&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#scala&#34;&gt;#&lt;/a&gt; Scala&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3R3aXR0ZXIuZ2l0aHViLmlvL2VmZmVjdGl2ZXNjYWxhL2luZGV4LWNuLmh0bWw=&#34;&gt;Effective Scala&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZ2l0Ym9vay5jb20vYm9vay93aW5kb3IvYmVnaW5uZXJzLWd1aWRlLXRvLXNjYWxhL2RldGFpbHM=&#34;&gt;Scala 初学者指南&lt;/span&gt; (《The Neophyte’s Guide to Scala》中文版)&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3R3aXR0ZXIuZ2l0aHViLmlvL3NjYWxhX3NjaG9vbC96aF9jbi9pbmRleC5odG1s&#34;&gt;Scala 课堂&lt;/span&gt; (Twitter 的 Scala 中文教程)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;scheme&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#scheme&#34;&gt;#&lt;/a&gt; Scheme&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2RlYXRoa2luZy5naXRodWIuaW8veWFzdC1jbi8=&#34;&gt;Scheme 入门教程&lt;/span&gt; (《Yet Another Scheme Tutorial》中文版)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;scratch&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#scratch&#34;&gt;#&lt;/a&gt; Scratch&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2NjY2djaGluZXNlLnN0cmlraW5nbHkuY29t&#34;&gt;创意计算课程指南&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;shell&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#shell&#34;&gt;#&lt;/a&gt; Shell&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL21lLjUyZmh5LmNvbS9zaGVsbC1ib29rLw==&#34;&gt;shell-book&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3dpa2kudWJ1bnR1Lm9yZy5jbi9TaGVsbCVFNyVCQyU5NiVFNyVBOCU4QiVFNSU5RiVCQSVFNyVBMSU4MA==&#34;&gt;Shell 编程基础&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90aW55bGFiLmdpdGJvb2tzLmlvL3NoZWxsYm9vay9jb250ZW50&#34;&gt;Shell 编程范例&lt;/span&gt; - 泰晓科技&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3Fpbmp4LzMwbWluX2d1aWRlcy9ibG9iL21hc3Rlci9zaGVsbC5tZA==&#34;&gt;Shell 脚本编程 30 分钟入门&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2JpbGxpZTY2LmdpdGh1Yi5pby9UTENML2Jvb2sv&#34;&gt;The Linux Command Line 中文版&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;swift&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#swift&#34;&gt;#&lt;/a&gt; Swift&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuZ2l0Ym9vay5jb20vYm9vay9udW1iYmJiYi8tdGhlLXN3aWZ0LXByb2dyYW1taW5nLWxhbmd1YWdlLS9kZXRhaWxz&#34;&gt;《The Swift Programming Language》中文版&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;typescript&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#typescript&#34;&gt;#&lt;/a&gt; TypeScript&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2prY2hhby90eXBlc2NyaXB0LWJvb2stY2hpbmVzZQ==&#34;&gt;TypeScript Deep Dive 中文版&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cudHNsYW5nLmNu&#34;&gt;TypeScript 中文网&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cucnVub29iLmNvbS93M2Nub3RlL2dldHRpbmctc3RhcnRlZC13aXRoLXR5cGVzY3JpcHQuaHRtbA==&#34;&gt;TypeScript 入门教程&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;vba-microsoft-visual-basic-applications&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vba-microsoft-visual-basic-applications&#34;&gt;#&lt;/a&gt; VBA (Microsoft Visual Basic Applications)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL1lvdWNoaWVuL2NvbmNpc2UtZXhjZWwtdmJh&#34;&gt;简明 Excel VBA&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;vim&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vim&#34;&gt;#&lt;/a&gt; Vim&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3d3dy5zdHVkeS1hcmVhLm9yZy90aXBzL3ZpbS9pbmRleC5odG1s&#34;&gt;大家來學 VIM&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;visual-prolog&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#visual-prolog&#34;&gt;#&lt;/a&gt; Visual Prolog&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3dpa2kudmlzdWFsLXByb2xvZy5jb20vaW5kZXgucGhwP3RpdGxlPUFfQmVnaW5uZXJzX0d1aWRlX3RvX1Zpc3VhbF9Qcm9sb2dfaW5fQ2hpbmVzZQ==&#34;&gt;Visual Prolog 7 初学指南&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3dpa2kudmlzdWFsLXByb2xvZy5jb20vaW5kZXgucGhwP3RpdGxlPVZpc3VhbF9Qcm9sb2dfZm9yX1R5cm9zX2luX0NoaW5lc2U=&#34;&gt;Visual Prolog 7 边练边学&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;webassembly&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#webassembly&#34;&gt;#&lt;/a&gt; WebAssembly&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tLzNkZ2VuL2NwcHdhc20tYm9vaw==&#34;&gt;C/C++ 面向 WebAssembly 编程&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="编程技巧" />
+        <category term="leetcode" />
+        <updated>2023-11-05T16:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://qianqiu-cell.github.io/2023/10/31/code/leetcode/Binary_Search/</id>
+        <title>二分查找的正确编写方法</title>
+        <link rel="alternate" href="http://qianqiu-cell.github.io/2023/10/31/code/leetcode/Binary_Search/"/>
+        <content type="html">&lt;p&gt;  写二分法，区间的定义一般为两种，闭区间或者开区间&lt;/p&gt;
+&lt;p&gt;（1）左闭右闭区间&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;false&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mi&gt;h&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;[left, right]&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.01968em;&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.10764em;&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mpunct&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;h&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;while(left&amp;lt;=right)&lt;/code&gt;  要使用 &lt;code&gt;&amp;lt;=&lt;/code&gt; ，因为 &lt;code&gt;left==right&lt;/code&gt;  是有意义的，所以使用 &lt;code&gt;&amp;lt;=&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;if (nums[middle] &amp;gt; target)&lt;/code&gt; ， &lt;code&gt;right&lt;/code&gt;  要赋值为 &lt;code&gt;middle - 1&lt;/code&gt; ，因为当前这个 &lt;code&gt;nums[middle]&lt;/code&gt;  一定不是 &lt;code&gt;target&lt;/code&gt; ，那么接下来要查找的左区间结束下标位置就是 &lt;code&gt;middle - 1&lt;/code&gt; ，反之同理。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Solution&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;search&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;self&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; nums&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; List&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token builtin&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; target&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        left&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; right &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;nums&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;while&lt;/span&gt; left &lt;span class=&#34;token operator&#34;&gt;&amp;lt;=&lt;/span&gt; right&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            middle &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;left &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; right&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;//&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; nums&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;middle&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; target&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                left &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; middle &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;elif&lt;/span&gt; nums&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;middle&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; target&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                right &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; middle &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; middle&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;（2）左闭右开区间&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;false&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mi&gt;h&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;[left, right)&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.01968em;&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.10764em;&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mpunct&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;h&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;while(left&amp;lt;right)&lt;/code&gt;  要使用 &lt;code&gt;&amp;lt;&lt;/code&gt; ，因为 &lt;code&gt;left==right&lt;/code&gt;  是没有意义的，所以使用 &lt;code&gt;&amp;lt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;if (nums[middle] &amp;gt; target)&lt;/code&gt; ， &lt;code&gt;right&lt;/code&gt;  要赋值为 &lt;code&gt;middle&lt;/code&gt; ，因为当前 &lt;code&gt;nums[middle]&lt;/code&gt;  不等于 &lt;code&gt;target&lt;/code&gt; ，去左区间继续寻找，而寻找区间是左闭右开区间，所以 &lt;code&gt;right&lt;/code&gt;  更新为 &lt;code&gt;middle&lt;/code&gt; ，即：下一个查询区间不会去比较 &lt;code&gt;nums[middle]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Solution&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;search&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;self&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; nums&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; List&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token builtin&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; target&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        left&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;right  &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;nums&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;while&lt;/span&gt; left &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; right&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            mid &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;left &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; right&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;//&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; nums&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;mid&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; target&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                left &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; mid&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;elif&lt;/span&gt; nums&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;mid&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; target&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                right &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; mid&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;else&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; mid&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+        <category term="编程技巧" />
+        <category term="leetcode" />
+        <updated>2023-10-30T16:00:00.000Z</updated>
+    </entry>
     <entry>
         <id>http://qianqiu-cell.github.io/2023/10/16/code/leetcode/time_and_space_complexity/</id>
         <title>时间及空间复杂度</title>
@@ -775,17 +1524,6 @@ zope.interface                5.4.0
         <updated>2023-03-22T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>http://qianqiu-cell.github.io/2023/03/12/code/python/python_enumerate/</id>
-        <title>python使用enumerate()给列表添加序号</title>
-        <link rel="alternate" href="http://qianqiu-cell.github.io/2023/03/12/code/python/python_enumerate/"/>
-        <content type="html">&lt;p&gt;   &lt;code&gt;enumerate(iteration, start)&lt;/code&gt;  函数默认包含两个参数，其中 &lt;code&gt;iteration&lt;/code&gt;  参数为需要遍历的参数，比如&lt;mark&gt;字典、列表、元组&lt;/mark&gt;等， &lt;code&gt;start&lt;/code&gt;  参数为开始的参数，默认为 &lt;code&gt;0&lt;/code&gt; 。 &lt;code&gt;enumerate&lt;/code&gt;  函数有两个返回值，第一个返回值为从 &lt;code&gt;start&lt;/code&gt;  参数开始的数，第二个参数为 &lt;code&gt;iteration&lt;/code&gt;  参数中的值。&lt;/p&gt;
-&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;names &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Alice&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Bob&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Carl&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; index&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;value &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;enumerate&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;names&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string-interpolation&#34;&gt;&lt;span class=&#34;token string&#34;&gt;f&#39;&lt;/span&gt;&lt;span class=&#34;token interpolation&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;index&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;token interpolation&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;value&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;\n&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; index&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;value &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;enumerate&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;names&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string-interpolation&#34;&gt;&lt;span class=&#34;token string&#34;&gt;f&#39;&lt;/span&gt;&lt;span class=&#34;token interpolation&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;index&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;token interpolation&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;value&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;运行结果如下&lt;/p&gt;
-&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; Alice&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; Bob&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; Carl&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; Alice&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; Bob&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; Carl&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
-        <category term="编程技巧" />
-        <category term="python" />
-        <updated>2023-03-11T16:00:00.000Z</updated>
-    </entry>
-    <entry>
         <id>http://qianqiu-cell.github.io/2023/03/12/code/python/python_class_inherit/</id>
         <title>python类的继承</title>
         <link rel="alternate" href="http://qianqiu-cell.github.io/2023/03/12/code/python/python_class_inherit/"/>
@@ -801,6 +1539,17 @@ zope.interface                5.4.0
 &lt;figure class=&#34;highlight py&#34;&gt;&lt;figcaption data-lang=&#34;Python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;父类名称&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;__init__&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;self&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;参数&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;，参数&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;，&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;实例如下：&lt;/p&gt;
 &lt;figure class=&#34;highlight py&#34;&gt;&lt;figcaption data-lang=&#34;Python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Father&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token builtin&#34;&gt;object&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;__init__&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;self&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; name&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        self&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;name&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;name&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;name: %s&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;%&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt; self&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;name&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;getName&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;self&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;Father &#39;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt; self&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;name&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Son&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;Father&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;__init__&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;self&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; name&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token builtin&#34;&gt;super&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;Son&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; self&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;__init__&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;name&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;hi&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        self&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;name &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;  name&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;getName&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;self&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;Son &#39;&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;self&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;name&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; __name__&lt;span class=&#34;token operator&#34;&gt;==&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;__main__&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    son&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;Son&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;runoob&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt; son&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;getName&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;输出结果为：&lt;/p&gt;
 &lt;figure class=&#34;highlight py&#34;&gt;&lt;figcaption data-lang=&#34;Python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;name&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; runoob&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hi&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Son runoob&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+        <category term="编程技巧" />
+        <category term="python" />
+        <updated>2023-03-11T16:00:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://qianqiu-cell.github.io/2023/03/12/code/python/python_enumerate/</id>
+        <title>python使用enumerate()给列表添加序号</title>
+        <link rel="alternate" href="http://qianqiu-cell.github.io/2023/03/12/code/python/python_enumerate/"/>
+        <content type="html">&lt;p&gt;   &lt;code&gt;enumerate(iteration, start)&lt;/code&gt;  函数默认包含两个参数，其中 &lt;code&gt;iteration&lt;/code&gt;  参数为需要遍历的参数，比如&lt;mark&gt;字典、列表、元组&lt;/mark&gt;等， &lt;code&gt;start&lt;/code&gt;  参数为开始的参数，默认为 &lt;code&gt;0&lt;/code&gt; 。 &lt;code&gt;enumerate&lt;/code&gt;  函数有两个返回值，第一个返回值为从 &lt;code&gt;start&lt;/code&gt;  参数开始的数，第二个参数为 &lt;code&gt;iteration&lt;/code&gt;  参数中的值。&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;names &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Alice&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Bob&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Carl&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; index&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;value &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;enumerate&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;names&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string-interpolation&#34;&gt;&lt;span class=&#34;token string&#34;&gt;f&#39;&lt;/span&gt;&lt;span class=&#34;token interpolation&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;index&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;token interpolation&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;value&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;\n&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; index&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;value &lt;span class=&#34;token keyword&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;token builtin&#34;&gt;enumerate&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;names&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string-interpolation&#34;&gt;&lt;span class=&#34;token string&#34;&gt;f&#39;&lt;/span&gt;&lt;span class=&#34;token interpolation&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;index&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;: &lt;/span&gt;&lt;span class=&#34;token interpolation&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;value&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;运行结果如下&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; Alice&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; Bob&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; Carl&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; Alice&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token number&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; Bob&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; Carl&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
         <category term="编程技巧" />
         <category term="python" />
         <updated>2023-03-11T16:00:00.000Z</updated>

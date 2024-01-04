@@ -1,36 +1,34 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>Welcome to my tiny world • Posts by &#34;控制工程&#34; category</title>
+        <title>Keep Moving • Posts by &#34;控制工程&#34; category</title>
         <link>http://qianqiu-cell.github.io</link>
-        <description>小樊&amp;小小樊的学习笔记🌸</description>
+        <description>🌸学习笔记🌸</description>
         <language>zh-CN</language>
         <pubDate>Sun, 09 Jul 2023 00:00:00 +0800</pubDate>
         <lastBuildDate>Sun, 09 Jul 2023 00:00:00 +0800</lastBuildDate>
         <category>电脑硬件知识</category>
         <category>显示器</category>
         <category>博客搭建</category>
-        <category>硬件开发</category>
         <category>latex技巧</category>
         <category>论文编辑</category>
         <category>数学基础</category>
         <category>区间不确定性</category>
         <category>控制工程</category>
+        <category>硬件开发</category>
         <category>office技巧</category>
         <category>最优化</category>
         <category>多目标最优化</category>
         <category>单目标最优化</category>
-        <category>生活</category>
         <category>科学研究</category>
-        <category>一些小目标</category>
         <category>C++</category>
         <category>编程技巧</category>
+        <category>leetcode</category>
         <category>python</category>
         <category>系统设计</category>
+        <category>matlab</category>
         <category>Qt</category>
         <category>界面开发</category>
-        <category>matlab</category>
-        <category>leetcode</category>
         <item>
             <guid isPermalink="true">http://qianqiu-cell.github.io/2023/07/09/control/discrete_LQR/</guid>
             <title>离散LQR设计控制器方法</title>

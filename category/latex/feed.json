@@ -1,26 +1,26 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "Welcome to my tiny world • All posts by \"latex\" category",
-    "description": "小樊&小小樊的学习笔记🌸",
+    "title": "Keep Moving • All posts by \"latex\" category",
+    "description": "🌸学习笔记🌸",
     "home_page_url": "http://qianqiu-cell.github.io",
     "items": [
-        {
-            "id": "http://qianqiu-cell.github.io/2023/03/12/latex/latex_quotation_mark/",
-            "url": "http://qianqiu-cell.github.io/2023/03/12/latex/latex_quotation_mark/",
-            "title": "latex输入双引号",
-            "date_published": "2023-03-11T16:00:00.000Z",
-            "content_html": "<p>   <code>latex</code>  中如果用英文输入模式的双引号键入，则输出的结果与我们预期的不符合，这并不是 <code>latex</code>  的正确输入方式<br>\n  当输入 <code>&quot;test&quot;</code> ，输出为：<br>\n<img data-src=\"/images/latex/latex_quotation_mark/1.1.png\" alt=\"\"><br>\n  正确的输入方式为：左边的引号输入两个反引号，引号的右边输入两个单引号，即 <code>``test''</code> ，输出为：<br>\n<img data-src=\"/images/latex/latex_quotation_mark/1.2.png\" alt=\"\"></p>\n",
-            "tags": [
-                "latex技巧",
-                "论文编辑"
-            ]
-        },
         {
             "id": "http://qianqiu-cell.github.io/2023/03/12/latex/latex_eps/",
             "url": "http://qianqiu-cell.github.io/2023/03/12/latex/latex_eps/",
             "title": "latex插入图片：jpg/png转eps",
             "date_published": "2023-03-11T16:00:00.000Z",
             "content_html": "<p>参考链接<span class=\"exturl\" data-url=\"aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMzQ3ODY5L2FydGljbGUvZGV0YWlscy8xMDM4MzIxOTA=\">戳此</span><br>\n  在 <code>LaTeX</code>  中插图，首先要生成 <code>.eps</code>  格式的图片，若已有 <code>png</code>  或 <code>jpg</code>  格式的图片，可以在图片目录下，按住 == <code>shift</code>  + 鼠标右键 ==，选择<mark>在此处打开命令窗口（在此处打开 <code>PowerShell</code>  窗口）</mark>，然后在终端窗口输入： <code>bmeps -c old.jpg new.eps</code> ，其中 <code>-c</code>  是让图片彩色输出， <code>old.jpg</code>  为原图， <code>new.eps</code>  为转换的 <code>eps</code>  格式的图</p>\n",
+            "tags": [
+                "latex技巧",
+                "论文编辑"
+            ]
+        },
+        {
+            "id": "http://qianqiu-cell.github.io/2023/03/12/latex/latex_quotation_mark/",
+            "url": "http://qianqiu-cell.github.io/2023/03/12/latex/latex_quotation_mark/",
+            "title": "latex输入双引号",
+            "date_published": "2023-03-11T16:00:00.000Z",
+            "content_html": "<p>   <code>latex</code>  中如果用英文输入模式的双引号键入，则输出的结果与我们预期的不符合，这并不是 <code>latex</code>  的正确输入方式<br>\n  当输入 <code>&quot;test&quot;</code> ，输出为：<br>\n<img data-src=\"/images/latex/latex_quotation_mark/1.1.png\" alt=\"\"><br>\n  正确的输入方式为：左边的引号输入两个反引号，引号的右边输入两个单引号，即 <code>``test''</code> ，输出为：<br>\n<img data-src=\"/images/latex/latex_quotation_mark/1.2.png\" alt=\"\"></p>\n",
             "tags": [
                 "latex技巧",
                 "论文编辑"
