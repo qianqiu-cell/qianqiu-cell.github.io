@@ -3,21 +3,21 @@
     <id>http://qianqiu-cell.github.io</id>
     <title>Keep Moving • Posts by &#34;数学基础&#34; category</title>
     <link href="http://qianqiu-cell.github.io" />
-    <updated>2023-09-16T16:00:00.000Z</updated>
+    <updated>2024-01-12T16:00:00.000Z</updated>
     <category term="电脑硬件知识" />
     <category term="显示器" />
     <category term="博客搭建" />
+    <category term="控制工程" />
+    <category term="数学基础" />
+    <category term="硬件开发" />
+    <category term="区间不确定性" />
     <category term="latex技巧" />
     <category term="论文编辑" />
-    <category term="数学基础" />
-    <category term="区间不确定性" />
-    <category term="控制工程" />
-    <category term="硬件开发" />
     <category term="office技巧" />
     <category term="最优化" />
     <category term="多目标最优化" />
-    <category term="单目标最优化" />
     <category term="科学研究" />
+    <category term="单目标最优化" />
     <category term="C++" />
     <category term="编程技巧" />
     <category term="leetcode" />
@@ -26,6 +26,20 @@
     <category term="matlab" />
     <category term="Qt" />
     <category term="界面开发" />
+    <entry>
+        <id>http://qianqiu-cell.github.io/2024/01/13/math/Orthogonal_polynomial_approximation/</id>
+        <title>正交多项式逼近</title>
+        <link rel="alternate" href="http://qianqiu-cell.github.io/2024/01/13/math/Orthogonal_polynomial_approximation/"/>
+        <content type="html">&lt;p&gt;参考连接：&lt;br&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWVUNHkxSzdETD9wPTEyJmFtcDt2ZF9zb3VyY2U9ZTAxMTcyZWEyOTJjMWM2MDViMzQ2MTAxZDcwMDZjNjE=&#34;&gt;https://www.bilibili.com/video/BV1eT4y1K7DL?p=12&amp;amp;vd_source=e01172ea292c1c605b346101d7006c61&lt;/span&gt;&lt;br&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8zNjQwOTE4ODA=&#34;&gt;https://zhuanlan.zhihu.com/p/364091880&lt;/span&gt;&lt;br&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuemhpaHUuY29tL3RhcmRpcy9zb2dvdS9hcnQvMzcxNzA0NDU2&#34;&gt;https://www.zhihu.com/tardis/sogou/art/371704456&lt;/span&gt;&lt;br&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9sYW1iZGFnZWVrcy5jb20vaGVybWl0ZS1wb2x5bm9taWFsLWl0cy1pbXBvcnRhbnQtcmVsYXRpb25zLw==&#34;&gt;https://lambdageeks.com/hermite-polynomial-its-important-relations/&lt;/span&gt;&lt;br&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuemhpaHUuY29tL3F1ZXN0aW9uLzU5NTg3NTMzMT93cml0ZSM6fjp0ZXh0PSVFNSU4NSVCNiVFNCVCQiU5NiVFNiVBRCVBMyVFNCVCQSVBNCVFNSVBNCU5QSVFOSVBMSVCOSVFNSVCQyU4RiVFNyU5QSU4NCUyMCVFOSU4MCVCQyVFOCVCRiU5MSVFNSU4NyVBMCVFNCVCRCU5NSUyMCVFNiU4NCU4RiVFNCVCOSU4OSVFNCVCOSU5RiVFNyVCMSVCQiVFNCVCQyVCQyVFRiVCQyU4QyVFNSVBRSU4MyVFNCVCQiVBQyVFOSU4MyVCRCVFNSU4RiVBRiVFNCVCQiVBNSVFNyU5NCVBOCVFNiU5RCVBNSVFNSU5QyVBOCVFNCVCOCU4MCVFNSVBRSU5QSVFNyU5QSU4NCVFNSU4QyVCQSVFOSU5NyVCNCVFNSU4NiU4NSVFNiU5QyU4MCVFNCVCQyU5OCVFOSU4MCVCQyVFOCVCRiU5MSVFOCVBMiVBQiVFOSU4MCVCQyVFOCVCRiU5MSVFNSU4NyVCRCVFNiU5NSVCMCVFMyU4MCU4MiUyMCVFNCVCRSU4QiVFNSVBNiU4MiVFRiVCQyU4QyVFNSU4QiU5MiVFOCVBRSVBOSVFNSVCRSVCNyVFNSVBNCU5QSVFOSVBMSVCOSVFNSVCQyU4RiVFOSU4MCVCQyVFOCVCRiU5MSVFNyU5QSU4NCVFNSU4NyVBMCVFNCVCRCU5NSVFNiU4NCU4RiVFNCVCOSU4OSVFNiU5OCVBRiVFNSU5QyVBOCVFNSU4QyVCQSVFOSU5NyVCNCUyMCU1Qi0xJTJDMSU1RCVFNCVCOCU4QSVFRiVCQyU4QyVFNSU4QiU5MiVFOCVBRSVBOSVFNSVCRSVCNyVFNSVBNCU5QSVFOSVBMSVCOSVFNSVCQyU4RiVFNiU5OCVBRiVFNiU5QyU4MCVFNCVCQyU5OCVFOSU4MCVCQyVFOCVCRiU5MSVFNSVBNCU5QSVFOSVBMSVCOSVFNSVCQyU4RiVFRiVCQyU4QyVFNSU4RCVCMyVFNSU5QyVBOCVFNiU4OSU4MCVFNiU5QyU4OSVFNiVBQyVBMSVFNiU5NSVCMCVFNCVCOCU4RCVFOCVCNiU4NSVFOCVCRiU4N24lRTclOUElODQlRTUlQTQlOUElRTklQTElQjklRTUlQkMlOEYlRTQlQjglQUQlRUYlQkMlOEMlRTUlOEIlOTIlRTglQUUlQTklRTUlQkUlQjclRTUlQTQlOUElRTklQTElQjklRTUlQkMlOEYlRTQlQjglOEUlRTglQTIlQUIlRTklODAlQkMlRTglQkYlOTElRTUlODclQkQlRTYlOTUlQjAlRTclOUElODQlRTUlQjklQjMlRTYlOTYlQjklRTglQUYlQUYlRTUlQjclQUUlRTYlOUMlODAlRTUlQjAlOEYlRTMlODAlODIsJUU4JUJGJTk5JUU0JUI4JUFBJTIwJUU1JUI5JUIzJUU2JTk2JUI5JUU4JUFGJUFGJUU1JUI3JUFFJTIwJUU1JTlDJUE4JUU1JTg3JUEwJUU0JUJEJTk1JUU0JUI4JThBJUU1JUFGJUI5JUU1JUJBJTk0JUU3JTlEJTgwJUU1JThDJUJBJUU5JTk3JUI0JTIwJTVCLTElMkMxJTVEJUU0JUI4JThBJUU3JTlBJTg0JTIwJUU5JTlEJUEyJUU3JUE3JUFGJUU4JUFGJUFGJUU1JUI3JUFFJTIwJUVGJUJDJThDJUU0JUI5JTlGJUU1JUIwJUIxJUU2JTk4JUFGJUU4JUEyJUFCJUU5JTgwJUJDJUU4JUJGJTkxJUU1JTg3JUJEJUU2JTk1JUIwJUU0JUI4JThFJUU5JTgwJUJDJUU4JUJGJTkxJUU1JUE0JTlBJUU5JUExJUI5JUU1JUJDJThGJUU0JUI5JThCJUU5JTk3JUI0JUU3JTlBJTg0JUU1JUI5JUIzJUU2JTk2JUI5JUU4JUFGJUFGJUU1JUI3JUFFJUU3JTlBJTg0JUU3JUE3JUFGJUU1JTg4JTg2JUUzJTgwJTgy&#34;&gt;https://www.zhihu.com/question/595875331?write#:~:text = 其他正交多项式的 逼近几何 意义也类似，它们都可以用来在一定的区间内最优逼近被逼近函数。 例如，勒让德多项式逼近的几何意义是在区间 [-1%2C1] 上，勒让德多项式是最优逼近多项式，即在所有次数不超过 n 的多项式中，勒让德多项式与被逼近函数的平方误差最小。, 这个 平方误差 在几何上对应着区间 [-1%2C1] 上的 面积误差 ，也就是被逼近函数与逼近多项式之间的平方误差的积分。&lt;/span&gt;&lt;/p&gt;
+</content>
+        <category term="数学基础" />
+        <updated>2024-01-12T16:00:00.000Z</updated>
+    </entry>
     <entry>
         <id>http://qianqiu-cell.github.io/2023/09/17/math/Interval_by_Dimensional/</id>
         <title>区间逐维分析方法</title>
