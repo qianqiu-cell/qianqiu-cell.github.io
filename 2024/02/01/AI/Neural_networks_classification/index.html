@@ -1,0 +1,581 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Keep Moving" href="http://qianqiu-cell.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Keep Moving" href="http://qianqiu-cell.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Keep Moving" href="http://qianqiu-cell.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="AI" />
+
+
+<link rel="canonical" href="http://qianqiu-cell.github.io/2024/02/01/AI/Neural_networks_classification/">
+
+
+
+  <title>
+神经网络大致分类 - AI |
+唯爱ぺ灬babyル = Keep Moving = 天将降大任于斯人也</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">神经网络大致分类
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2024-02-01 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-02-01T00:00:00+08:00">2024-02-01</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>3.3k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>3 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">唯爱ぺ灬babyル</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://i.postimg.cc/c4SZWH9k/img-2001014975.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/K8DxYgps/img-2001099175.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/bw7C4697/img-2001100031.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/CxsNzv4p/img-2000924574.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/nLq3YFxg/img-2000959067.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/sgwXBsF9/img-2000920355.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/AI/" itemprop="item" rel="index" title="分类于 AI"><span itemprop="name">AI</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://qianqiu-cell.github.io/2024/02/01/AI/Neural_networks_classification/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="Ember">
+    <meta itemprop="description" content="天将降大任于斯人也, 🌸学习笔记🌸">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Keep Moving">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>参考文章：<span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8yNjg3MDk2MTg=">https://zhuanlan.zhihu.com/p/268709618</span><br>
+<img data-src="/images/AI/Neural_networks_classification/0.1.png" alt=""></p>
+<h1 id="一-mp神经元模型"><a class="markdownIt-Anchor" href="#一-mp神经元模型">#</a> 一、MP 神经元模型</h1>
+<p>  MP 模型是针对生物神经元的一些基本生理特征所提出的形式神经元的数学模型与结构，其权值被认为是不可调整的。MP 神经元模型是其他神经网络的基础。<br>
+<img data-src="/images/AI/Neural_networks_classification/1.1.png" alt=""></p>
+<h1 id="二-前馈神经网络fnn"><a class="markdownIt-Anchor" href="#二-前馈神经网络fnn">#</a> 二、前馈神经网络（FNN）</h1>
+<p>  对于前馈网络，根据神经元的传递函数不同，以及学习算法和网络结构上的区别，可以细分类感知器网络、线性网络、BP 网络、径向基网络及 GMDH 网络等不同的网络模型。</p>
+<h2 id="21-感知器pla"><a class="markdownIt-Anchor" href="#21-感知器pla">#</a> 2.1 感知器（PLA）</h2>
+<p>  感知器模型（Percetron Learning Algorithm，简称 PLA）是由美国学者 F.Rosenblatt 于 1958 年提出的。它与 MP 模型的不同之处是它假定神经元的突触权值是可变的，这样就可以进行学习。感知器是最简单形式的前馈神经网络，是一种二元线性分类器。<br>
+<img data-src="/images/AI/Neural_networks_classification/1.2.png" alt=""><br>
+  感知器具有如下的局限性：</p>
+<ul>
+<li>感知器神经网络的传输函数一般采用阈值函数，所以输出值只有两种；</li>
+<li>单层感知器网络只能用于解决线性可分的分类问题，而对线性不可分的分类问题无能为力；</li>
+<li>感知器学习算法只适于单层感知器网络，所以一般感知器网络都是单层的。</li>
+</ul>
+<h2 id="22-多层感知器mlp"><a class="markdownIt-Anchor" href="#22-多层感知器mlp">#</a> 2.2 多层感知器（MLP）</h2>
+<p>  多层感知器（Multilayer Perceptron, 简称 MLP）是感知器的推广，克服了感知器不能对线性不可分数据进行识别的弱点。对于非线性函数的模拟，需要采用 MLP，即在最初的输入和输出层之间隐藏着一到多个层。<br>
+  <mark>全连接神经网络（Fully Connected Neural Network，简称 FNN），深度神经网络（ Deep Neural Networks，简称 DNN）和 MLP 的概念相似，只是侧重点不同。一个多层全连接神经网络即使 MLP，又是 FNN，同时也是 DNN。</mark><br>
+  <mark>BP 神经网络是指使用了 BP 算法（ Back Propagation，反向传播）进行训练的 MLP 模型。</mark></p>
+<h2 id="23-径向基神经网络rbfnn"><a class="markdownIt-Anchor" href="#23-径向基神经网络rbfnn">#</a> 2.3 径向基神经网络（RBFNN）</h2>
+<p>参考链接： <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MDgwMjY3Ni9hcnRpY2xlL2RldGFpbHMvMTAwODA1NTQ1">https://blog.csdn.net/weixin_40802676/article/details/100805545</span><br>
+  首先介绍径向基函数（ Radial Basis Function，简称 RBF）：<br>
+<img data-src="/images/AI/Neural_networks_classification/1.3.png" alt=""><br>
+  最常用的径向基函数是高斯函数（radbas）。<br>
+<img data-src="/images/AI/Neural_networks_classification/1.4.png" alt=""><br>
+  RBFNN 的神经网络节后如上图所示。三层的神经网络就可以拟合任何一个函数，RBFNN 即为三层（单隐层）且隐藏层使用径向基函数的神经网络。因此 RBFNN 完全可以拟合任何一个函数（只要隐藏层神经元足够多）。输入层到隐藏层的神经元之间的权重全部为 1。隐藏层是使用径向基函数作为激活函数的神经元。隐藏层与输出层之间就是普通的神经网络的连接关系，他们之间的权重可以训练而改变。<br>
+  RBFNN 的关键就在于径向基函数的确定，中心点在哪，径基宽度多大，多少个径向基函数，都是会影响神经网络的效果的。广义回归神经网络 (General Regression Neural Network，简称 GRNN) 和广义回归神经网络 (General Regression Neural Network，简称 GPNN) 都是 RBFNN 的变化形式。</p>
+<h2 id="24-卷积神经网络cnn"><a class="markdownIt-Anchor" href="#24-卷积神经网络cnn">#</a> 2.4 卷积神经网络（CNN）</h2>
+<p>  卷积神经网络（Convolutional Neural Networks，简称 CNN）是一种深度学习模型或类似于人工神经网络的多层感知器，常用来分析视觉图像。<br>
+<img data-src="/images/AI/Neural_networks_classification/1.5.png" alt=""><br>
+  一个卷积神经网络主要由以下 5 层组成：</p>
+<ul>
+<li>数据输入层 / Input layer</li>
+<li>卷积计算层 / CONV layer</li>
+<li>ReLU 激励层 / ReLU layer</li>
+<li>池化层     / Pooling layer</li>
+<li>全连接层   / FC layer</li>
+</ul>
+<h2 id="25-线性神经网咯"><a class="markdownIt-Anchor" href="#25-线性神经网咯">#</a> 2.5 线性神经网咯</h2>
+<p>  线性神经网络与感知器的主要区别在于感知器的激活函数只能输出两种可能值（-1 或 1），而线性神经网络的输出可以取任意值，其激活函数是线性函数。<br>
+  线性神经网络采用 Widrow-Hoff 学习规则（最小均方规则），即 LMS（Least Mean Square）算法来调整网络的权值和偏置值。结构图如下。这里使用 purelin 激活函数进行模型训练，这样可以得到一个更好的效果。输出结果的时候还是使用 sign 激活函数。<br>
+<img data-src="/images/AI/Neural_networks_classification/1.6.png" alt=""><br>
+<img data-src="/images/AI/Neural_networks_classification/1.7.png" alt=""></p>
+<h1 id="三-反馈神经网络"><a class="markdownIt-Anchor" href="#三-反馈神经网络">#</a> 三、反馈神经网络</h1>
+<p>  所谓反馈网络是指在网络中至少含有一个反馈回路的神经网络。反馈网络可以包含一个单层神经元，其中每个神经元将自身的输出信号反馈给其他所有神经元的输入 反馈神经网络中神经元不但可以接收其他神经元的信号，而且可以接收自己的反馈信号。和前馈神经网络相比，反馈神经网络中的神经元具有记忆功能，在不同时刻具有不同的状态。反馈神经网络中的信息传播可以是单向也可以是双向传播，因此可以用一个有向循环图或者无向图来表示。</p>
+<h2 id="31-循环神经网络rnn"><a class="markdownIt-Anchor" href="#31-循环神经网络rnn">#</a> 3.1 循环神经网络（RNN）</h2>
+<p>  循环神经网络（Recurrent Neural Network，简称 RNN）是一种深度学习模型，专门用于处理序列数据和具有时间依赖性的任务。相比于传统神经网络，RNN 具有一种递归结构，使其能够对序列信息进行处理。<br>
+  RNN 的主要特点是它能够保持对之前输入信息的记忆，这使得它在处理时间序列、自然语言处理等任务时非常有效。它的基本结构包括一个隐藏层，其中的神经元可以接收输入数据和前一个时间步的隐藏状态，并输出一个新的隐藏状态。这种递归结构使得 RNN 能够捕捉序列中的上下文信息，从而更好地理解和处理序列数据。<br>
+  然而，传统的 RNN 存在梯度消失和梯度爆炸等问题，导致难以捕捉长期依赖关系。为了解决这些问题，一些改进型的循环神经网络被提出，如长短时记忆网络（Long Short-Term Memory，简称 LSTM）和门控循环单元（Gated Recurrent Unit，简称 GRU）。这些改进模型引入了门控机制，使得网络能够更好地处理长期依赖关系，从而提高了性能。<br>
+  总的来说，循环神经网络在处理序列数据方面具有广泛的应用，包括自然语言处理、语音识别、时间序列预测等领域。</p>
+<h2 id="32-hopfield神经网络"><a class="markdownIt-Anchor" href="#32-hopfield神经网络">#</a> 3.2 Hopfield 神经网络</h2>
+<p>  Hopfield 神经网络是一种反馈型的人工神经网络，最初由物理学家约翰・霍普菲尔德（John Hopfield）于 1982 年提出。它主要用于模拟和处理离散型动力系统，尤其在解决优化问题和模式识别方面应用广泛。根据其激活函数的不同，Hopfield 神经网络有两种：离散 Hopfield 网络（Discrete Hopfield Neural Network，简称 DHNN）和连续 Hopfield 网络（Continues Hopfield Neural Network，简称 CHNN）。</p>
+<h1 id="四-对抗神经网络gan"><a class="markdownIt-Anchor" href="#四-对抗神经网络gan">#</a> 四、对抗神经网络（GAN）</h1>
+<p>  简介：对抗神经网络其实是两个网络的组合，可以理解为一个网络生成模拟数据，另一个网络判断生成的数据是真实的还是模拟的。生成模拟数据的网络要不断优化自己让判别的网络判断不出来，判别的网络也要不断优化自己让判断的更加精确。两者的关系形成对抗，因此叫对抗神经网络。<br>
+  结构：GAN 由 generator（生成模型）和 discriminator（判别式模型）两部分构成。二者结合之后，经过大量次数的迭代训练会使 generator 尽可能模拟出以假乱真的样本，而 discrimator 会有更精确的鉴别真伪数据的能力，最终整个 GAN 会达到所谓的纳什均衡，即 discriminator 对于 generator 的数据鉴别结果为正确率和错误率各占 50%。</p>
+<h1 id="五-自组织神经网络"><a class="markdownIt-Anchor" href="#五-自组织神经网络">#</a> 五、自组织神经网络</h1>
+<p>  在生物神经系统中，存在着一种侧抑制现象，即一个神经细胞兴奋以后，会对周围其他神经细胞产生抑制作用。这种抑制作用会使神经细胞之间出现竞争，其结果是某些获胜，而另一些则失败。表现形式是获胜神经细胞兴奋，失败神经细胞抑制。自组织（竞争型）神经网络就是模拟上述生物神经系统功能的人工神经网络。</p>
+<h1 id="六-反馈神经网络"><a class="markdownIt-Anchor" href="#六-反馈神经网络">#</a> 六、反馈神经网络</h1>
+<p>  一般的神经网络模型通常假定网络结构是事先固定的，训练的目的是利用训练样本来确定合适的连接权、阙值等参数。与此不同，结构自适应网络则将网络结构也当作学习的目标之一，并希望能在训练过程中找到最利合数据特点的网络结构</p>
+<h1 id="七-反馈神经网络"><a class="markdownIt-Anchor" href="#七-反馈神经网络">#</a> 七、反馈神经网络</h1>
+<p>  随机神经网络是对神经网络引入随机机制，认为神经元是按照概率的原理进行工作的，这就是说，每个神经元的兴奋或抑制具有随机性，其概率取决于神经元的输入。</p>
+
+      <div class="tags">
+          <a href="/tags/AI/" rel="tag"><i class="ic i-tag"></i> AI</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2024-02-01 20:22:16" itemprop="dateModified" datetime="2024-02-01T20:22:16+08:00">2024-02-01</time>
+  </span>
+  <span id="2024/02/01/AI/Neural_networks_classification/" class="item leancloud_visitors" data-flag-title="神经网络大致分类" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2024/01/13/math/Orthogonal_polynomial_approximation/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;QCb0T0pz&#x2F;img-2001077611.jpg" title="正交多项式逼近">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 数学基础</span>
+  <h3>正交多项式逼近</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-mp%E7%A5%9E%E7%BB%8F%E5%85%83%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text"> 一、MP 神经元模型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C-%E5%89%8D%E9%A6%88%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9Cfnn"><span class="toc-number">2.</span> <span class="toc-text"> 二、前馈神经网络（FNN）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#21-%E6%84%9F%E7%9F%A5%E5%99%A8pla"><span class="toc-number">2.1.</span> <span class="toc-text"> 2.1 感知器（PLA）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-%E5%A4%9A%E5%B1%82%E6%84%9F%E7%9F%A5%E5%99%A8mlp"><span class="toc-number">2.2.</span> <span class="toc-text"> 2.2 多层感知器（MLP）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-%E5%BE%84%E5%90%91%E5%9F%BA%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9Crbfnn"><span class="toc-number">2.3.</span> <span class="toc-text"> 2.3 径向基神经网络（RBFNN）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#24-%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9Ccnn"><span class="toc-number">2.4.</span> <span class="toc-text"> 2.4 卷积神经网络（CNN）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#25-%E7%BA%BF%E6%80%A7%E7%A5%9E%E7%BB%8F%E7%BD%91%E5%92%AF"><span class="toc-number">2.5.</span> <span class="toc-text"> 2.5 线性神经网咯</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89-%E5%8F%8D%E9%A6%88%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C"><span class="toc-number">3.</span> <span class="toc-text"> 三、反馈神经网络</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#31-%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9Crnn"><span class="toc-number">3.1.</span> <span class="toc-text"> 3.1 循环神经网络（RNN）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#32-hopfield%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C"><span class="toc-number">3.2.</span> <span class="toc-text"> 3.2 Hopfield 神经网络</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B-%E5%AF%B9%E6%8A%97%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9Cgan"><span class="toc-number">4.</span> <span class="toc-text"> 四、对抗神经网络（GAN）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94-%E8%87%AA%E7%BB%84%E7%BB%87%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C"><span class="toc-number">5.</span> <span class="toc-text"> 五、自组织神经网络</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD-%E5%8F%8D%E9%A6%88%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C"><span class="toc-number">6.</span> <span class="toc-text"> 六、反馈神经网络</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%83-%E5%8F%8D%E9%A6%88%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C"><span class="toc-number">7.</span> <span class="toc-text"> 七、反馈神经网络</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/2024/02/01/AI/Neural_networks_classification/" rel="bookmark" title="神经网络大致分类">神经网络大致分类</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Ember"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">Ember</p>
+  <div class="description" itemprop="description">🌸学习笔记🌸</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">60</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">14</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">23</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3FpYW5xaXUtY2VsbA==" title="https:&#x2F;&#x2F;github.com&#x2F;qianqiu-cell"><i class="ic i-github"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjI4MzI1Njc4NTFAcXEuY29t" title="mailto:2832567851@qq.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
+</div>
+
+    <span><a href="/2023/03/16/optimal/SPEA/" title="SPEAI-II">SPEAI-II</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/01/code/python/python_qt_install/" title="Python运行pyside2报错问题解决">Python运行pyside2报错问题解决</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/04/02/code/python/python_thread/" title="Python多线程">Python多线程</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/leetcode/" title="分类于 leetcode">leetcode</a>
+</div>
+
+    <span><a href="/2023/10/31/code/leetcode/Binary_Search/" title="二分查找的正确编写方法">二分查找的正确编写方法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
+</div>
+
+    <span><a href="/2022/11/21/math/svd/" title="奇异值分解（SVD）">奇异值分解（SVD）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/latex/" title="分类于 latex">latex</a>
+</div>
+
+    <span><a href="/2023/03/12/latex/latex_quotation_mark/" title="latex输入双引号">latex输入双引号</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/01/code/python/python_test/" title="Python test in xxx问题">Python test in xxx问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
+</div>
+
+    <span><a href="/2022/12/23/optimal/signal_objective_optimization/" title="单目标搜索算法汇总">单目标搜索算法汇总</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+</div>
+
+    <span><a href="/2022/11/06/blog/hexo/" title="Github+Hexo+shoka主题搭建个人博客">Github+Hexo+shoka主题搭建个人博客</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
+</div>
+
+    <span><a href="/2022/11/24/math/conv/" title="一般情况下的椭圆">一般情况下的椭圆</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Ember @ 唯爱ぺ灬babyル</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">179k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:43</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2024/02/01/AI/Neural_networks_classification/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i> 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
