@@ -89,12 +89,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://i.postimg.cc/26P7LgbT/img-2000906776.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/wvM8WRB3/img-2001032881.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/FKJHT6C2/img-2000996400.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/J0vC9rFm/img-2001049037.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/fyV2dxRj/img-2001008957.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/c4SZWH9k/img-2001014975.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/brdy2FnC/img-2001030386.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/G2gjLZKX/img-2000899915.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/7ZNtvtFW/img-2000911251.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/kXLft68q/img-2001096907.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/sfL5xFdh/img-2000973066.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/xCK3Htv2/img-2000933428.jpg"></li>
         </ul>
       </div>
     </header>
@@ -120,7 +120,150 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/03/02/code/python/python_numba/" itemprop="url" title="使用numba对python进行加速"><img data-src="https://i.postimg.cc/xCDThPWq/img-2000996732.jpg"></a>
+    <a href="/2023/03/03/code/python/python_json/" itemprop="url" title="python读取及保存json文件"><img data-src="https://i.postimg.cc/mk1R81rB/img-2000941636.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-03-03 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-03-03T00:00:00+08:00">2023-03-03</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>7.4k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>7 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2023/03/03/code/python/python_json/" itemprop="url" title="python读取及保存json文件">python读取及保存json文件</a></h3>
+    <div class="excerpt">
+        # 一、读取 json 文件
+# loads 传入一个 JSON 格式的字符串，解码为 python 对象
+import json# loads 传入一个 JSON 格式的字符串，解码成 python 对象data = &#39;[&amp;#123;&quot;姓名&quot;:&quot;张三&quot;,&quot;年龄&quot;:&quot;18&quot;&amp;#125;,&amp;#123;&quot;姓名&quot;:&quot;李四&quot;,&quot;年龄&quot;:&quot;20&quot;&amp;#125;]&#39;print(type(data))...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
+      </span>
+    </div>
+    <a href="/2023/03/03/code/python/python_json/" itemprop="url" title="python读取及保存json文件" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/03/02/code/python/python_gurobi/" itemprop="url" title="python+gurobi应用"><img data-src="https://i.postimg.cc/8c7k9nZ8/img-2000939963.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-03-02 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-03-02T00:00:00+08:00">2023-03-02</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>3.2k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>3 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2023/03/02/code/python/python_gurobi/" itemprop="url" title="python+gurobi应用">python+gurobi应用</a></h3>
+    <div class="excerpt">
+        有关 gurobi 的使用可以参考官方手册（ Gurobi 安装路径 \win64\docs 下的 quickstart_windows.pdf 和 refman.pdf ）
+# 一、一些使用技巧
+# 1.1 gurobi 无穷大值
+  参考 refman.pdf 的 13.2 中的 FeasRelaxBigM 和 29.3 中的 Dealing with big-M constraints
+
+# 1.2 gurobi 最大值
+  在模型中遇到如下所示求最小化数组中最大值的目标函数
+
+  可构造辅助变量，令改变量大于数组中的所有分量，最后对辅助变量进行最大 / 最小化
+obj1 =...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
+      </span>
+    </div>
+    <a href="/2023/03/02/code/python/python_gurobi/" itemprop="url" title="python+gurobi应用" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/03/02/code/python/python_jupyter/" itemprop="url" title="修改Jupyter Notebook默认工作路径"><img data-src="https://i.postimg.cc/tJgTN4Kz/img-2001027800.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-03-02 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-03-02T00:00:00+08:00">2023-03-02</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>343</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2023/03/02/code/python/python_jupyter/" itemprop="url" title="修改Jupyter Notebook默认工作路径">修改Jupyter Notebook默认工作路径</a></h3>
+    <div class="excerpt">
+        Juptyer Notebook 的默认工作路径为 C:\Users\Username ，修改 Juptyer Notebook 的工作路径方法如下
+（1）打开命令提示符，输入 jupyter notebook --generate-config
+这个命令的作用是生成 Jupyter notebook 的配置文件。如果你是第一次运行，会直接生成这个文件。如果曾经运行过这个命令，就会覆盖原来的文件
+
+（2）找到 jupyter_notebook_config.py 的路径并打此文件
+
+（3）找到 c.NotebookApp.notebook_dir...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
+      </span>
+    </div>
+    <a href="/2023/03/02/code/python/python_jupyter/" itemprop="url" title="修改Jupyter Notebook默认工作路径" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/03/02/code/python/python_numba/" itemprop="url" title="使用numba对python进行加速"><img data-src="https://i.postimg.cc/GtgTV5GG/img-2001101754.jpg"></a>
   </div>
   <div class="info">
     
@@ -165,7 +308,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/03/02/code/python/python_pip/" itemprop="url" title="修改pip路径"><img data-src="https://i.postimg.cc/xTZMXvK1/img-2000918072.jpg"></a>
+    <a href="/2023/03/02/code/python/python_pip/" itemprop="url" title="修改pip路径"><img data-src="https://i.postimg.cc/4dJ5Tj7S/img-2001101187.jpg"></a>
   </div>
   <div class="info">
     
@@ -221,7 +364,7 @@ python -m site -help
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/03/02/code/python/python_try_except/" itemprop="url" title="python下的try-except处理异常"><img data-src="https://i.postimg.cc/tRddJngK/img-2000875689.jpg"></a>
+    <a href="/2023/03/02/code/python/python_try_except/" itemprop="url" title="python下的try-except处理异常"><img data-src="https://i.postimg.cc/0yS7gzhX/img-2000891315.jpg"></a>
   </div>
   <div class="info">
     
@@ -270,7 +413,7 @@ try:&amp;lt;语句&gt; #运行别的代码except...
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/03/01/code/Cplusplus/CplusplusGetTime/" itemprop="url" title="C++获取程序运行时间"><img data-src="https://i.postimg.cc/NFjbcRXv/img-2000969188.jpg"></a>
+    <a href="/2023/03/01/code/Cplusplus/CplusplusGetTime/" itemprop="url" title="C++获取程序运行时间"><img data-src="https://i.postimg.cc/5tZ5YwLV/img-2000879955.jpg"></a>
   </div>
   <div class="info">
     
@@ -312,7 +455,7 @@ try:&amp;lt;语句&gt; #运行别的代码except...
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/03/01/code/python/python_qt_install/" itemprop="url" title="Python运行pyside2报错问题解决"><img data-src="https://i.postimg.cc/cLt2Vcxq/img-2000889353.jpg"></a>
+    <a href="/2023/03/01/code/python/python_qt_install/" itemprop="url" title="Python运行pyside2报错问题解决"><img data-src="https://i.postimg.cc/qq7HgmYm/img-2001112465.jpg"></a>
   </div>
   <div class="info">
     
@@ -362,7 +505,7 @@ try:&amp;lt;语句&gt; #运行别的代码except...
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/03/01/code/python/python_test/" itemprop="url" title="Python test in xxx问题"><img data-src="https://i.postimg.cc/tRddJngK/img-2000875689.jpg"></a>
+    <a href="/2023/03/01/code/python/python_test/" itemprop="url" title="Python test in xxx问题"><img data-src="https://i.postimg.cc/g0yfcqxx/img-2001009868.jpg"></a>
   </div>
   <div class="info">
     
@@ -411,7 +554,7 @@ pycharm 运行程序时，不是 run xxx 的格式。而是 python tests in xxx 
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/02/06/code/python/python_array_asarray/" itemprop="url" title="np.array和np.asarray区别"><img data-src="https://i.postimg.cc/MTxd9CKT/img-2000889855.jpg"></a>
+    <a href="/2023/02/06/code/python/python_array_asarray/" itemprop="url" title="np.array和np.asarray区别"><img data-src="https://i.postimg.cc/tRddJngK/img-2000875689.jpg"></a>
   </div>
   <div class="info">
     
@@ -454,157 +597,6 @@ import numpy as np #example 1: data1=[[1,1,1],[1,1,1],[1,1,1]] arr2=np.array(dat
   </div>
 </article>
 
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2023/02/06/code/python/python_bitwise_operators/" itemprop="url" title="Python按位运算符"><img data-src="https://i.postimg.cc/yNBgwvmW/img-2000885221.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2023-02-06 00:00:00">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2023-02-06T00:00:00+08:00">2023-02-06</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>253</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>1 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2023/02/06/code/python/python_bitwise_operators/" itemprop="url" title="Python按位运算符">Python按位运算符</a></h3>
-    <div class="excerpt">
-        Bitwise Operator
-Description
-Simple Example
-
-&amp;amp;
-Bitwise OR Operator
-10 &amp;amp; 7 = 2
-
-|
-Bitwise XOR Operator
-10 | 7 = 15
-
-^
-Bitwise AND Operator
-10 ^ 7 = 13
-
-~
-Bitwise Ones’ Compliment Operator
-~10 = -11
-
-&amp;lt;&amp;lt;
-Bitwise Left Shift operator
-10&amp;lt;&amp;lt;2 =...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
-      </span>
-    </div>
-    <a href="/2023/02/06/code/python/python_bitwise_operators/" itemprop="url" title="Python按位运算符" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2023/02/06/code/python/python_float/" itemprop="url" title="Python浮点数运算不精确问题"><img data-src="https://i.postimg.cc/K8DxYgps/img-2001099175.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2023-02-06 00:00:00">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2023-02-06T00:00:00+08:00">2023-02-06</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>154</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>1 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2023/02/06/code/python/python_float/" itemprop="url" title="Python浮点数运算不精确问题">Python浮点数运算不精确问题</a></h3>
-    <div class="excerpt">
-        由于 Python 的浮点数以二进制形式表示，计算机在进行浮点运算时会产生浮点误差，如下场景所示
-a = [100.7, 100.9]print(sum(a))# 输出：201.60000000000002解决方法： round() 是 python 自带的一个函数，用于数字的四舍五入
-round(5.214,2)# 输出：5.21
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
-      </span>
-    </div>
-    <a href="/2023/02/06/code/python/python_float/" itemprop="url" title="Python浮点数运算不精确问题" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2023/02/06/code/python/python_multiply/" itemprop="url" title="python字符串、列表、元组乘法"><img data-src="https://i.postimg.cc/g0yfcqxx/img-2001009868.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2023-02-06 00:00:00">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2023-02-06T00:00:00+08:00">2023-02-06</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>145</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>1 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2023/02/06/code/python/python_multiply/" itemprop="url" title="python字符串、列表、元组乘法">python字符串、列表、元组乘法</a></h3>
-    <div class="excerpt">
-        python 中，支持相乘的有字符串，列表，元组，相乘是内容相乘 n ，新的内容会重复 n 次
-str_a = &quot;我&quot;print(str_a * 3)list_a = (&quot;1&quot;, &quot;2&quot;, &quot;3&quot;)print(list_a * 3)list_b = [&quot;我&quot;, &quot;爱&quot;, &quot;python&quot;]print(list_b * 3)运行结果为
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
-      </span>
-    </div>
-    <a href="/2023/02/06/code/python/python_multiply/" itemprop="url" title="python字符串、列表、元组乘法" class="btn">more...</a>
-  </div>
-</article>
-
     </div>
 
   </div>
@@ -612,7 +604,7 @@ str_a = &quot;我&quot;print(str_a * 3)list_a = (&quot;1&quot;, &quot;2&quot;, &
   
   <nav class="pagination">
     <div class="inner">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="ic i-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/"><i class="ic i-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="ic i-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/5/"><i class="ic i-angle-right" aria-label="下一页"></i></a>
     </div>
   </nav>
 
@@ -640,7 +632,7 @@ str_a = &quot;我&quot;print(str_a * 3)list_a = (&quot;1&quot;, &quot;2&quot;, &
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">60</span>
+        <span class="count">63</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -741,10 +733,10 @@ str_a = &quot;我&quot;print(str_a * 3)list_a = (&quot;1&quot;, &quot;2&quot;, &
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
+<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
 </div>
 
-    <span><a href="/2023/02/06/code/python/python_bitwise_operators/" title="Python按位运算符">Python按位运算符</a></span>
+    <span><a href="/2023/03/13/optimal/NSGA/" title="从NSGA到NSGA-III">从NSGA到NSGA-III</a></span>
   </li>
 
       
@@ -754,17 +746,27 @@ str_a = &quot;我&quot;print(str_a * 3)list_a = (&quot;1&quot;, &quot;2&quot;, &
 <a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2023/03/02/code/python/python_pip/" title="修改pip路径">修改pip路径</a></span>
+    <span><a href="/2023/03/03/code/python/python_json/" title="python读取及保存json文件">python读取及保存json文件</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/hardware/" title="分类于 硬件开发">硬件开发</a>
+<a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2023/01/30/hardware/Quartus/" title="Quartus基础教程">Quartus基础教程</a></span>
+    <span><a href="/2023/03/23/code/python/python_problem/" title="python一些报错的处理">python一些报错的处理</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/02/code/python/python_numba/" title="使用numba对python进行加速">使用numba对python进行加速</a></span>
   </li>
 
       
@@ -774,7 +776,7 @@ str_a = &quot;我&quot;print(str_a * 3)list_a = (&quot;1&quot;, &quot;2&quot;, &
 <a href="/categories/latex/" title="分类于 latex">latex</a>
 </div>
 
-    <span><a href="/2023/03/12/latex/latex_quotation_mark/" title="latex输入双引号">latex输入双引号</a></span>
+    <span><a href="/2023/01/20/latex/latex_install/" title="Vscode+TexLive+Latex workshop安装">Vscode+TexLive+Latex workshop安装</a></span>
   </li>
 
       
@@ -784,7 +786,27 @@ str_a = &quot;我&quot;print(str_a * 3)list_a = (&quot;1&quot;, &quot;2&quot;, &
 <a href="/categories/math/" title="分类于 数学基础">数学基础</a>
 </div>
 
-    <span><a href="/2022/11/28/math/covariance/" title="数学期望、方差和协方差">数学期望、方差和协方差</a></span>
+    <span><a href="/2023/08/01/math/derivative_of_the_multiple_matrix/" title="矩阵乘法的求导问题">矩阵乘法的求导问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/matlab/" title="分类于 matlab">matlab</a>
+</div>
+
+    <span><a href="/2023/07/08/code/matlab/matlab_GA/" title="基于matlab-Sheffield工具箱实现遗传算法">基于matlab-Sheffield工具箱实现遗传算法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/02/code/python/python_try_except/" title="python下的try-except处理异常">python下的try-except处理异常</a></span>
   </li>
 
       
@@ -801,40 +823,10 @@ str_a = &quot;我&quot;print(str_a * 3)list_a = (&quot;1&quot;, &quot;2&quot;, &
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
 </div>
 
-    <span><a href="/2022/12/24/blog/hexo_change/" title="Hexo文件迁移">Hexo文件迁移</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/control/" title="分类于 控制工程">控制工程</a>
-</div>
-
-    <span><a href="/2023/07/08/control/Continuous_LQR/" title="连续LQR设计控制器方法">连续LQR设计控制器方法</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
-</div>
-
-    <span><a href="/2023/03/02/code/python/python_gurobi/" title="python+gurobi应用">python+gurobi应用</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
-</div>
-
-    <span><a href="/2023/03/16/optimal/SPEA/" title="SPEAI-II">SPEAI-II</a></span>
+    <span><a href="/2022/11/28/math/covariance/" title="数学期望、方差和协方差">数学期望、方差和协方差</a></span>
   </li>
 
   </ul>
@@ -859,13 +851,13 @@ str_a = &quot;我&quot;print(str_a * 3)list_a = (&quot;1&quot;, &quot;2&quot;, &
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">179k 字</span>
+    <span title="站点总字数">184k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:43</span>
+    <span title="站点阅读时长">2:47</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
