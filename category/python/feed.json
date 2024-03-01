@@ -38,6 +38,18 @@
             ]
         },
         {
+            "id": "http://qianqiu-cell.github.io/2023/07/04/code/python/python_QSS/",
+            "url": "http://qianqiu-cell.github.io/2023/07/04/code/python/python_QSS/",
+            "title": "python+QSS应用",
+            "date_published": "2023-07-03T16:00:00.000Z",
+            "content_html": "<p>  在使用 pyside2&amp;6 或 pyqt 设计系统界面时，可以使用 QSS 文件来一键修改系统的界面，搜集到的一些 QSS 网站如下：</p>\n<ul>\n<li>（1）<span class=\"exturl\" data-url=\"aHR0cHM6Ly9naXRodWIuY29tL0dUUk9OSUNLL1FTUw==\">https://github.com/GTRONICK/QSS</span>（同步保存至 U 盘备份）</li>\n</ul>\n",
+            "tags": [
+                "编程技巧",
+                "python",
+                "系统设计"
+            ]
+        },
+        {
             "id": "http://qianqiu-cell.github.io/2023/07/04/code/python/python_RMFS_pip_list/",
             "url": "http://qianqiu-cell.github.io/2023/07/04/code/python/python_RMFS_pip_list/",
             "title": "本科毕业设计使用python环境",
@@ -48,18 +60,6 @@
                 "多目标最优化",
                 "编程技巧",
                 "python"
-            ]
-        },
-        {
-            "id": "http://qianqiu-cell.github.io/2023/07/04/code/python/python_QSS/",
-            "url": "http://qianqiu-cell.github.io/2023/07/04/code/python/python_QSS/",
-            "title": "python+QSS应用",
-            "date_published": "2023-07-03T16:00:00.000Z",
-            "content_html": "<p>  在使用 pyside2&amp;6 或 pyqt 设计系统界面时，可以使用 QSS 文件来一键修改系统的界面，搜集到的一些 QSS 网站如下：</p>\n<ul>\n<li>（1）<span class=\"exturl\" data-url=\"aHR0cHM6Ly9naXRodWIuY29tL0dUUk9OSUNLL1FTUw==\">https://github.com/GTRONICK/QSS</span>（同步保存至 U 盘备份）</li>\n</ul>\n",
-            "tags": [
-                "编程技巧",
-                "python",
-                "系统设计"
             ]
         },
         {
@@ -166,6 +166,16 @@
             ]
         },
         {
+            "id": "http://qianqiu-cell.github.io/2023/03/02/code/python/python_jupyter/",
+            "url": "http://qianqiu-cell.github.io/2023/03/02/code/python/python_jupyter/",
+            "title": "修改Jupyter Notebook默认工作路径",
+            "date_published": "2023-03-01T16:00:00.000Z",
+            "content_html": "<p><code>Juptyer Notebook</code>  的默认工作路径为 <code>C:\\Users\\Username</code> ，修改 <code>Juptyer Notebook</code>  的工作路径方法如下<br>\n（1）打开命令提示符，输入 <code>jupyter notebook --generate-config</code> <br>\n 这个命令的作用是生成 <code>Jupyter notebook</code>  的配置文件。如果你是第一次运行，会直接生成这个文件。如果曾经运行过这个命令，就会覆盖原来的文件<br>\n<img data-src=\"/images/code/python/python_jupyter/1.1.png\" alt=\"\"><br>\n（2）找到 <code>jupyter_notebook_config.py</code>  的路径并打此文件<br>\n<img data-src=\"/images/code/python/python_jupyter/2.1.png\" alt=\"\"><br>\n（3）找到 <code>c.NotebookApp.notebook_dir</code>  这个变量，将你希望的路径赋值给这个变量，并删除这一行前面的 <code>#</code> 。修改后如下：<br>\n<img data-src=\"/images/code/python/python_jupyter/3.1.png\" alt=\"\"><br>\n（4）打开 Jupyter Notebook 快捷方式的属性，将 “目标” 最后面的 <code>%USERPROFILE%</code>  删除<br>\n<img data-src=\"/images/code/python/python_jupyter/4.1.png\" alt=\"\"></p>\n",
+            "tags": [
+                "python"
+            ]
+        },
+        {
             "id": "http://qianqiu-cell.github.io/2023/03/02/code/python/python_gurobi/",
             "url": "http://qianqiu-cell.github.io/2023/03/02/code/python/python_gurobi/",
             "title": "python+gurobi应用",
@@ -174,16 +184,6 @@
             "tags": [
                 "最优化",
                 "编程技巧",
-                "python"
-            ]
-        },
-        {
-            "id": "http://qianqiu-cell.github.io/2023/03/02/code/python/python_jupyter/",
-            "url": "http://qianqiu-cell.github.io/2023/03/02/code/python/python_jupyter/",
-            "title": "修改Jupyter Notebook默认工作路径",
-            "date_published": "2023-03-01T16:00:00.000Z",
-            "content_html": "<p><code>Juptyer Notebook</code>  的默认工作路径为 <code>C:\\Users\\Username</code> ，修改 <code>Juptyer Notebook</code>  的工作路径方法如下<br>\n（1）打开命令提示符，输入 <code>jupyter notebook --generate-config</code> <br>\n 这个命令的作用是生成 <code>Jupyter notebook</code>  的配置文件。如果你是第一次运行，会直接生成这个文件。如果曾经运行过这个命令，就会覆盖原来的文件<br>\n<img data-src=\"/images/code/python/python_jupyter/1.1.png\" alt=\"\"><br>\n（2）找到 <code>jupyter_notebook_config.py</code>  的路径并打此文件<br>\n<img data-src=\"/images/code/python/python_jupyter/2.1.png\" alt=\"\"><br>\n（3）找到 <code>c.NotebookApp.notebook_dir</code>  这个变量，将你希望的路径赋值给这个变量，并删除这一行前面的 <code>#</code> 。修改后如下：<br>\n<img data-src=\"/images/code/python/python_jupyter/3.1.png\" alt=\"\"><br>\n（4）打开 Jupyter Notebook 快捷方式的属性，将 “目标” 最后面的 <code>%USERPROFILE%</code>  删除<br>\n<img data-src=\"/images/code/python/python_jupyter/4.1.png\" alt=\"\"></p>\n",
-            "tags": [
                 "python"
             ]
         },

@@ -4,29 +4,29 @@
     <title>Keep Moving • Posts by &#34;office技巧&#34; category</title>
     <link href="http://qianqiu-cell.github.io" />
     <updated>2023-01-01T16:00:00.000Z</updated>
-    <category term="博客搭建" />
-    <category term="AI" />
     <category term="电脑硬件知识" />
+    <category term="AI" />
     <category term="显示器" />
+    <category term="博客搭建" />
     <category term="控制工程" />
     <category term="数学基础" />
     <category term="硬件开发" />
     <category term="latex技巧" />
     <category term="论文编辑" />
+    <category term="office技巧" />
     <category term="最优化" />
     <category term="多目标最优化" />
-    <category term="office技巧" />
     <category term="单目标最优化" />
-    <category term="科学研究" />
     <category term="区间不确定性" />
-    <category term="C++" />
-    <category term="编程技巧" />
+    <category term="科学研究" />
     <category term="leetcode" />
-    <category term="matlab" />
+    <category term="编程技巧" />
+    <category term="C++" />
     <category term="python" />
     <category term="系统设计" />
     <category term="Qt" />
     <category term="界面开发" />
+    <category term="matlab" />
     <entry>
         <id>http://qianqiu-cell.github.io/2023/01/02/office/office/</id>
         <title>Office技巧</title>
@@ -60,6 +60,9 @@
 （2）双斜线分割成为三个区域&lt;br&gt;
 选择同一行的三个单元格，分别设置为左下、居中和右上，分别输入 “编号”、“任务” 和 “人员”，之后在插入选项卡中插入两条直线，并调整为如下图所示即完成&lt;br&gt;
 &lt;img data-src=&#34;/images/office/office_skill/2.3.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;三-其他技巧&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#三-其他技巧&#34;&gt;#&lt;/a&gt; 三、其他技巧&lt;/h1&gt;
+&lt;h2 id=&#34;31-pngjpg转eps&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#31-pngjpg转eps&#34;&gt;#&lt;/a&gt; 3.1 png/jpg 转 eps&lt;/h2&gt;
+&lt;p&gt;在命令行下输入 &lt;code&gt;sam2p foo.png foo.eps&lt;/code&gt;  或者 &lt;code&gt;bmeps -c foo.png foo.eps&lt;/code&gt; ，其中 &lt;code&gt;bmeps&lt;/code&gt;  的 &lt;code&gt;-c&lt;/code&gt;  选项表示彩色图片。其他常用的工具还有 &lt;code&gt;ImageMagick&lt;/code&gt;  的 &lt;code&gt;convert&lt;/code&gt;  命令等。&lt;/p&gt;
 </content>
         <category term="论文编辑" />
         <category term="office技巧" />

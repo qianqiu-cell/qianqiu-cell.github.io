@@ -7,35 +7,35 @@
         <language>zh-CN</language>
         <pubDate>Mon, 06 Nov 2023 00:00:00 +0800</pubDate>
         <lastBuildDate>Mon, 06 Nov 2023 00:00:00 +0800</lastBuildDate>
-        <category>博客搭建</category>
-        <category>AI</category>
         <category>电脑硬件知识</category>
+        <category>AI</category>
         <category>显示器</category>
+        <category>博客搭建</category>
         <category>控制工程</category>
         <category>数学基础</category>
         <category>硬件开发</category>
         <category>latex技巧</category>
         <category>论文编辑</category>
+        <category>office技巧</category>
         <category>最优化</category>
         <category>多目标最优化</category>
-        <category>office技巧</category>
         <category>单目标最优化</category>
-        <category>科学研究</category>
         <category>区间不确定性</category>
-        <category>C++</category>
-        <category>编程技巧</category>
+        <category>科学研究</category>
         <category>leetcode</category>
-        <category>matlab</category>
+        <category>编程技巧</category>
+        <category>C++</category>
         <category>python</category>
         <category>系统设计</category>
         <category>Qt</category>
         <category>界面开发</category>
+        <category>matlab</category>
         <item>
             <guid isPermalink="true">http://qianqiu-cell.github.io/2023/11/06/code/leetcode/1000%E6%9C%AC%E5%BC%80%E6%BA%90%E7%94%B5%E5%AD%90%E4%B9%A6/</guid>
             <title>1000本开源电子书</title>
             <link>http://qianqiu-cell.github.io/2023/11/06/code/leetcode/1000%E6%9C%AC%E5%BC%80%E6%BA%90%E7%94%B5%E5%AD%90%E4%B9%A6/</link>
-            <category>编程技巧</category>
             <category>leetcode</category>
+            <category>编程技巧</category>
             <pubDate>Mon, 06 Nov 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
 &lt;p&gt;Free Ebook Foundation 维护了一个项目，包含了超过 10000 本免费的编程电子书，而其中中文书籍约 800 本&lt;/p&gt;
@@ -765,8 +765,8 @@
             <guid isPermalink="true">http://qianqiu-cell.github.io/2023/10/31/code/leetcode/Binary_Search/</guid>
             <title>二分查找的正确编写方法</title>
             <link>http://qianqiu-cell.github.io/2023/10/31/code/leetcode/Binary_Search/</link>
-            <category>编程技巧</category>
             <category>leetcode</category>
+            <category>编程技巧</category>
             <pubDate>Tue, 31 Oct 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;  写二分法，区间的定义一般为两种，闭区间或者开区间&lt;/p&gt;
 &lt;p&gt;（1）左闭右闭区间&lt;span class=&#34;katex&#34;&gt;&lt;span class=&#34;katex-mathml&#34;&gt;&lt;math xmlns=&#34;http://www.w3.org/1998/Math/MathML&#34;&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo stretchy=&#34;false&#34;&gt;[&lt;/mo&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo separator=&#34;true&#34;&gt;,&lt;/mo&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mi&gt;h&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo stretchy=&#34;false&#34;&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;annotation encoding=&#34;application/x-tex&#34;&gt;[left, right]&lt;/annotation&gt;&lt;/semantics&gt;&lt;/math&gt;&lt;/span&gt;&lt;span class=&#34;katex-html&#34; aria-hidden=&#34;true&#34;&gt;&lt;span class=&#34;base&#34;&gt;&lt;span class=&#34;strut&#34; style=&#34;height:1em;vertical-align:-0.25em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mopen&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.01968em;&#34;&gt;l&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.10764em;&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mpunct&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mspace&#34; style=&#34;margin-right:0.16666666666666666em;&#34;&gt;&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.02778em;&#34;&gt;r&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34; style=&#34;margin-right:0.03588em;&#34;&gt;g&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;h&lt;/span&gt;&lt;span class=&#34;mord mathnormal&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;mclose&#34;&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;
@@ -785,8 +785,8 @@
             <guid isPermalink="true">http://qianqiu-cell.github.io/2023/10/16/code/leetcode/time_and_space_complexity/</guid>
             <title>时间及空间复杂度</title>
             <link>http://qianqiu-cell.github.io/2023/10/16/code/leetcode/time_and_space_complexity/</link>
-            <category>编程技巧</category>
             <category>leetcode</category>
+            <category>编程技巧</category>
             <pubDate>Mon, 16 Oct 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;一-前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-前言&#34;&gt;#&lt;/a&gt; 一、前言&lt;/h1&gt;
 &lt;p&gt;  算法（Algorithm）是指用来操作数据、解决程序问题的一组方法。对于同一个问题，使用不同的算法，也许最终得到的结果是一样的，但在过程中消耗的资源和时间却会有很大的区别。不同算法之间的优劣主要从算法所占用的&lt;mark&gt;时间&lt;/mark&gt;和&lt;mark&gt;空间&lt;/mark&gt;两个维度去考量。&lt;/p&gt;
