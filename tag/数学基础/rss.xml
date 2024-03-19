@@ -9,27 +9,27 @@
         <lastBuildDate>Sat, 13 Jan 2024 00:00:00 +0800</lastBuildDate>
         <category>电脑硬件知识</category>
         <category>AI</category>
-        <category>显示器</category>
         <category>博客搭建</category>
-        <category>控制工程</category>
-        <category>数学基础</category>
-        <category>硬件开发</category>
+        <category>显示器</category>
         <category>latex技巧</category>
         <category>论文编辑</category>
+        <category>硬件开发</category>
+        <category>数学基础</category>
+        <category>区间不确定性</category>
         <category>office技巧</category>
         <category>最优化</category>
         <category>多目标最优化</category>
         <category>单目标最优化</category>
-        <category>区间不确定性</category>
+        <category>控制工程</category>
         <category>科学研究</category>
-        <category>leetcode</category>
-        <category>编程技巧</category>
         <category>C++</category>
+        <category>编程技巧</category>
+        <category>matlab</category>
+        <category>leetcode</category>
         <category>python</category>
         <category>系统设计</category>
         <category>Qt</category>
         <category>界面开发</category>
-        <category>matlab</category>
         <item>
             <guid isPermalink="true">http://qianqiu-cell.github.io/2024/01/13/math/Orthogonal_polynomial_approximation/</guid>
             <title>正交多项式逼近</title>
@@ -99,8 +99,8 @@ y_{j}^{k, i}, \operatorname{Im}\left(x_{q, r}^{(i)}\right)=0 \text { and }\left|
             <guid isPermalink="true">http://qianqiu-cell.github.io/2023/07/09/control/discrete_LQR/</guid>
             <title>离散LQR设计控制器方法</title>
             <link>http://qianqiu-cell.github.io/2023/07/09/control/discrete_LQR/</link>
-            <category>控制工程</category>
             <category>数学基础</category>
+            <category>控制工程</category>
             <pubDate>Sun, 09 Jul 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;参考链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVA1NHkxbTdDWi8/c3BtX2lkX2Zyb209MzMzLjMzNy5zZWFyY2gtY2FyZC5hbGwuY2xpY2smYW1wO3ZkX3NvdXJjZT1lMDExNzJlYTI5MmMxYzYwNWIzNDYxMDFkNzAwNmM2MQ==&#34;&gt;https://www.bilibili.com/video/BV1P54y1m7CZ/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=e01172ea292c1c605b346101d7006c61&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;一-什么是离散lqr&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-什么是离散lqr&#34;&gt;#&lt;/a&gt; 一、什么是离散 LQR&lt;/h1&gt;
@@ -151,8 +151,8 @@ y_{j}^{k, i}, \operatorname{Im}\left(x_{q, r}^{(i)}\right)=0 \text { and }\left|
             <guid isPermalink="true">http://qianqiu-cell.github.io/2023/07/08/control/Continuous_LQR/</guid>
             <title>连续LQR设计控制器方法</title>
             <link>http://qianqiu-cell.github.io/2023/07/08/control/Continuous_LQR/</link>
-            <category>控制工程</category>
             <category>数学基础</category>
+            <category>控制工程</category>
             <pubDate>Sat, 08 Jul 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;参考链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MTc3MjgwMi9hcnRpY2xlL2RldGFpbHMvMTI4NzY3NzA2&#34;&gt;https://blog.csdn.net/weixin_51772802/article/details/128767706&lt;/span&gt;、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RhdXlhbmdkYW8vYXJ0aWNsZS9kZXRhaWxzLzEwODA1ODIyMg==&#34;&gt;https://blog.csdn.net/tauyangdao/article/details/108058222&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;一-什么是lqr&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-什么是lqr&#34;&gt;#&lt;/a&gt; 一、什么是 LQR&lt;/h1&gt;

@@ -1,0 +1,560 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Keep Moving" href="http://qianqiu-cell.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Keep Moving" href="http://qianqiu-cell.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Keep Moving" href="http://qianqiu-cell.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="编程技巧,python" />
+
+
+<link rel="canonical" href="http://qianqiu-cell.github.io/2024/03/19/code/python/python_Iterators_and_Generators/">
+
+
+
+  <title>
+Python迭代器和生成器 - python |
+唯爱ぺ灬babyル = Keep Moving = 天将降大任于斯人也</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Python迭代器和生成器
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2024-03-19 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-03-19T00:00:00+08:00">2024-03-19</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>3.1k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>3 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">唯爱ぺ灬babyル</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://i.postimg.cc/W4QhjVJN/img-2000995051.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/s21KZjLp/img-2000875509.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/cJVjxtJK/img-2000881534.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/hv0FC8BF/img-2000962848.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/y8cx7tss/img-2000937370.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/DfXWwS2q/img-2001071384.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/python/" itemprop="item" rel="index" title="分类于 python"><span itemprop="name">python</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://qianqiu-cell.github.io/2024/03/19/code/python/python_Iterators_and_Generators/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="Ember">
+    <meta itemprop="description" content="天将降大任于斯人也, 🌸学习笔记🌸">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Keep Moving">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="一-python迭代器"><a class="markdownIt-Anchor" href="#一-python迭代器">#</a> 一、Python 迭代器</h1>
+<p>  迭代器在 <code>Python</code>  中无处不在。它们在 <code>for</code>  循环，理解，生成器等中优雅地实现，但却隐藏在眼皮底下。</p>
+<p>   <code>Python</code>  中的 <code>Iterator</code>  只是一个可以迭代的对象。一个将返回数据的对象，一次返回一个元素。</p>
+<p>  从技术上讲， <code>Python</code>  迭代器对象必须实现两个特殊方法， <code>__iter__()</code>  和 <code>__next__()</code>  统称为迭代器协议。</p>
+<p>  如果我们可以从对象获得迭代器，则该对象称为可迭代。 <code>Python</code>  中的大多数内置容器（例如： <code>list</code> ， <code>tuple</code> ， <code>string</code>  等）都是可迭代的。</p>
+<p>   <code>iter()</code>  函数（也就是 <code>__iter__()</code>  方法）从它们返回一个迭代器。</p>
+<h2 id="11-通过python中的迭代器进行迭代"><a class="markdownIt-Anchor" href="#11-通过python中的迭代器进行迭代">#</a> 1.1 通过 Python 中的迭代器进行迭代</h2>
+<p>  我们使用该 <code>next()</code>  函数手动遍历迭代器的所有项目。 当我们到达末尾并且没有更多数据要返回时，它将引发 <code>StopIteration</code> 。 以下是一个示例：</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># 定义一个列表</span></pre></td></tr><tr><td data-num="2"></td><td><pre>my_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token comment"># 使用 iter () 获得迭代器</span></pre></td></tr><tr><td data-num="5"></td><td><pre>my_iter <span class="token operator">=</span> <span class="token builtin">iter</span><span class="token punctuation">(</span>my_list<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="6"></td><td><pre></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token comment">## 使用 iter () 获得迭代器 </span></pre></td></tr><tr><td data-num="8"></td><td><pre></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token comment">#输出 4</span></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>my_iter<span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="11"></td><td><pre></pre></td></tr><tr><td data-num="12"></td><td><pre><span class="token comment">#输出 7</span></pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>my_iter<span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="14"></td><td><pre></pre></td></tr><tr><td data-num="15"></td><td><pre><span class="token comment">## next（obj）与 obj .__ next __() 相同</span></pre></td></tr><tr><td data-num="16"></td><td><pre></pre></td></tr><tr><td data-num="17"></td><td><pre><span class="token comment">#输出 0</span></pre></td></tr><tr><td data-num="18"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span>my_iter<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="19"></td><td><pre></pre></td></tr><tr><td data-num="20"></td><td><pre><span class="token comment">#输出 3</span></pre></td></tr><tr><td data-num="21"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span>my_iter<span class="token punctuation">.</span>__next__<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="22"></td><td><pre></pre></td></tr><tr><td data-num="23"></td><td><pre><span class="token comment">## 这将引起错误，没有项目剩下</span></pre></td></tr><tr><td data-num="24"></td><td><pre><span class="token builtin">next</span><span class="token punctuation">(</span>my_iter<span class="token punctuation">)</span></pre></td></tr></table></figure><h2 id="12-for循环实际上如何工作"><a class="markdownIt-Anchor" href="#12-for循环实际上如何工作">#</a> 1.2 for 循环实际上如何工作？</h2>
+<p>  实际上，for 循环可以迭代任何可迭代的对象。让我们仔细看看如何 for 在 Python 中实际实现循环。</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">for</span> element <span class="token keyword">in</span> iterable<span class="token punctuation">:</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token comment"># 对元素做点什么</span></pre></td></tr></table></figure><p>实际上的实现为：</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># 创建一个迭代器对象 iterable</span></pre></td></tr><tr><td data-num="2"></td><td><pre>iter_obj <span class="token operator">=</span> <span class="token builtin">iter</span><span class="token punctuation">(</span>iterable<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token comment"># 无限循环</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token keyword">try</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="7"></td><td><pre>        <span class="token comment"># 获取下一项</span></pre></td></tr><tr><td data-num="8"></td><td><pre>        element <span class="token operator">=</span> <span class="token builtin">next</span><span class="token punctuation">(</span>iter_obj<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="9"></td><td><pre>        <span class="token comment"># 对元素做点什么</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token keyword">except</span> StopIteration<span class="token punctuation">:</span></pre></td></tr><tr><td data-num="11"></td><td><pre>        <span class="token comment"># 如果引发 StopIteration，则从循环中断</span></pre></td></tr><tr><td data-num="12"></td><td><pre>        <span class="token keyword">break</span></pre></td></tr></table></figure><p>  因此，在内部， <code>for</code>  循环通过在 <code>iterable</code>  上调用 <code>iter()</code>  创建一个迭代器对象 <code>iter_obj</code> 。</p>
+<p>  在循环内部，它调用 <code>next()</code>  来获取下一个元素，并使用这个值执行 <code>for</code>  循环的主体。当所有的项都用完后， <code>StopIteration</code>  被抛出，它在内部被捕获，循环结束。注意，任何其他类型的异常都会通过。</p>
+<h1 id="二-python生成器"><a class="markdownIt-Anchor" href="#二-python生成器">#</a> 二、Python 生成器</h1>
+<p>  用 <code>Python</code>  构建迭代器有很多开销；我们必须使用 <code>__iter__()</code>  和 <code>__next__()</code>  方法实现一个类，跟踪内部状态，在没有要返回的值时触发 <code>StopIteration</code>  等等。这既冗长又违反直觉。生成器在这种情况下可以派上用场。</p>
+<p>   <code>Python</code>  生成器是<mark>创建迭代器的简单方法</mark>。我们上面提到的所有开销都由 <code>Python</code>  的生成器自动处理。简而言之，生成器是一个函数，它返回一个对象（迭代器），我们可以对其进行迭代（一次一个值）。</p>
+<h2 id="21-在python中创建生成器"><a class="markdownIt-Anchor" href="#21-在python中创建生成器">#</a> 2.1 在 Python 中创建生成器</h2>
+<p>  在 Python 中创建生成器非常简单。 就像使用 <code>yield</code>  语句而不是 <code>return</code>  语句定义普通函数一样容易。如果一个函数包含至少一个 <code>yield</code>  语句 (它可能包含其他 <code>yield</code>  或 <code>return</code>  语句)，那么它就成为一个生成器函数。 <code>yield</code>  和 <code>return</code>  都将从函数返回一些值。不同之处在于，当 <code>return</code>  语句完全终止一个函数时， <code>yield</code>  语句会<mark>暂停该函数保存其所有状态，然后在后续调用时继续执行</mark>。</p>
+<p>  生成器函数与常规函数的不同之处：</p>
+<ul>
+<li>生成器函数包含一个或多个 <code>yield</code>  语句；</li>
+<li><mark>调用时，它返回一个对象（迭代器），但不会立即开始执行</mark>；</li>
+<li>像 <code>__iter__()</code>  和 <code>__next__()</code>  这样的方法会自动实现。因此，我们可以使用 <code>next()</code>  来遍历项目；</li>
+<li>一旦函数产生了结果，函数就会暂停，控制就会转移给调用者；</li>
+<li><mark>局部变量及其状态在连续调用之间被记住</mark>；</li>
+<li>最后，<mark>当函数终止时，在进一步调用时会自动引发 <code>StopIteration</code> </mark>。</li>
+</ul>
+<p>  这是一个示例，用于说明上述所有要点。我们有一个 <code>my_gen()</code>  由几个 <code>yield</code>  语句命名的生成器函数。</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># 一个简单的生成器函数</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">def</span> <span class="token function">my_gen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    n <span class="token operator">=</span> <span class="token number">1</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'这是第一次打印'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token comment"># 生成器函数包含 yield 语句</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token keyword">yield</span> n</pre></td></tr><tr><td data-num="7"></td><td><pre></pre></td></tr><tr><td data-num="8"></td><td><pre>    n <span class="token operator">+=</span> <span class="token number">1</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'这是第二次打印'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token keyword">yield</span> n</pre></td></tr><tr><td data-num="11"></td><td><pre></pre></td></tr><tr><td data-num="12"></td><td><pre>    n <span class="token operator">+=</span> <span class="token number">1</span></pre></td></tr><tr><td data-num="13"></td><td><pre>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'这是最后一次打印'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="14"></td><td><pre>    <span class="token keyword">yield</span> n</pre></td></tr></table></figure><p>  解释器中的交互式运行如下所示。在 <code>Python Shell</code>  中运行这些命令以查看输出。</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token operator">>></span><span class="token operator">></span> <span class="token comment"># 它返回一个对象，但不立即开始执行.</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token operator">>></span><span class="token operator">></span> a <span class="token operator">=</span> my_gen<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token operator">>></span><span class="token operator">></span> <span class="token comment"># 我们可以使用 next () 遍历这些项.</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">next</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="6"></td><td><pre>这是第一次打印</pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token number">1</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token operator">>></span><span class="token operator">></span> <span class="token comment"># 一旦函数产生了结果，函数就会暂停，控制就会转移给调用者。</span></pre></td></tr><tr><td data-num="9"></td><td><pre></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token operator">>></span><span class="token operator">></span> <span class="token comment"># 局部变量及其状态在连续调用之间被记住。</span></pre></td></tr><tr><td data-num="11"></td><td><pre><span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">next</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="12"></td><td><pre>这是第二次打印</pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token number">2</span></pre></td></tr><tr><td data-num="14"></td><td><pre></pre></td></tr><tr><td data-num="15"></td><td><pre><span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">next</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="16"></td><td><pre>这是最后一次打印</pre></td></tr><tr><td data-num="17"></td><td><pre><span class="token number">3</span></pre></td></tr><tr><td data-num="18"></td><td><pre></pre></td></tr><tr><td data-num="19"></td><td><pre><span class="token operator">>></span><span class="token operator">></span> <span class="token comment"># 最后，当函数终止时，在进一步调用时将自动引发 StopIteration。</span></pre></td></tr><tr><td data-num="20"></td><td><pre><span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">next</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="21"></td><td><pre>Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="22"></td><td><pre><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></pre></td></tr><tr><td data-num="23"></td><td><pre>StopIteration</pre></td></tr></table></figure><p>  在上面的示例中要注意的一件有趣的事情是，每次调用之间都会记住变量 <code>n</code>  的值。与普通函数不同，局部变量在函数产生时不会被破坏。此外，生成器对象只能迭代一次。要重新启动该过程，我们需要使用 <code>= my_gen()</code>  之类的东西来创建另一个生成器对象。</p>
+<h2 id="22-生成器与for循环一起使用"><a class="markdownIt-Anchor" href="#22-生成器与for循环一起使用">#</a> 2.2 生成器与 for 循环一起使用</h2>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">def</span> <span class="token function">rev_str</span><span class="token punctuation">(</span>my_str<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    length <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>my_str<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="4"></td><td><pre>        <span class="token keyword">yield</span> my_str<span class="token punctuation">[</span>i<span class="token punctuation">]</span></pre></td></tr><tr><td data-num="5"></td><td><pre></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token comment"># For 循环以反转字符串</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token comment"># 输出:</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token comment"># o</span></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token comment"># l</span></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token comment"># l</span></pre></td></tr><tr><td data-num="11"></td><td><pre><span class="token comment"># e</span></pre></td></tr><tr><td data-num="12"></td><td><pre><span class="token comment"># h</span></pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token keyword">for</span> char <span class="token keyword">in</span> rev_str<span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="14"></td><td><pre>     <span class="token keyword">print</span><span class="token punctuation">(</span>char<span class="token punctuation">)</span></pre></td></tr></table></figure><h2 id="23-python生成器表达式"><a class="markdownIt-Anchor" href="#23-python生成器表达式">#</a> 2.3 Python 生成器表达式</h2>
+<p>  使用生成器表达式可以轻松地动态创建简单的生成器。它使建造生成器变得容易。与 <code>lambda</code>  函数创建匿名函数相同，生成器表达式创建匿名生成器函数。生成器表达式的语法类似于 <code>Python</code>  中的<mark>列表理解语法</mark>。但是将<mark>方括号替换为圆括号</mark>。列表理解与生成器表达式之间的主要区别在于，虽然<mark>列表理解生成整个列表，但生成器表达式一次生成一个项目</mark>。他们有点懒，只在需要时才生成项目。由于这个原因，<mark>生成器表达式比等价的列表理解的内存效率要高得多</mark>。</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># 初始化列表</span></pre></td></tr><tr><td data-num="2"></td><td><pre>my_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token comment"># 使用列表理解对每个项目进行平方</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token comment"># 输出: [1, 9, 36, 100]</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token punctuation">[</span>x<span class="token operator">**</span><span class="token number">2</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> my_list<span class="token punctuation">]</span></pre></td></tr><tr><td data-num="7"></td><td><pre></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token comment"># 同样的事情可以使用生成器表达式来完成</span></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token comment"># 生成器表达式没有立即产生所需的结果。相反，它返回了一个生成器对象</span></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token comment"># 输出: &lt;generator object &lt;genexpr> at 0x0000000002EBDAF8></span></pre></td></tr><tr><td data-num="11"></td><td><pre><span class="token punctuation">(</span>x<span class="token operator">**</span><span class="token number">2</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> my_list<span class="token punctuation">)</span></pre></td></tr></table></figure><p>  生成器表达式可以在函数内部使用。以这种方式使用时，可以删除圆括号。</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token operator">>></span><span class="token operator">></span> my_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">]</span></pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">sum</span><span class="token punctuation">(</span>x<span class="token operator">**</span><span class="token number">2</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> my_list<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token number">146</span></pre></td></tr><tr><td data-num="6"></td><td><pre></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token operator">>></span><span class="token operator">></span> <span class="token builtin">max</span><span class="token punctuation">(</span>x<span class="token operator">**</span><span class="token number">2</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> my_list<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token number">100</span></pre></td></tr></table></figure><h2 id="23-python生成器优点"><a class="markdownIt-Anchor" href="#23-python生成器优点">#</a> 2.3 Python 生成器优点</h2>
+<ul>
+<li>易于实施，与它们的迭代器类对应项相比，生成器可以以一种清晰而简洁的方式实现。</li>
+<li>节省内存，一个普通的返回序列的函数会在返回结果之前在内存中创建整个序列。如果序列中的项目数量很大，会影响效率。而这种序列的生成器实现对内存友好，因此是首选的，因为它一次只能生成一项。</li>
+<li>表示无限流，生成器是表示无限数据流的绝佳媒介。无限流无法存储在内存中，并且由于生成器一次只生成一项，因此它可以表示无限数据流。（至少在理论上）</li>
+</ul>
+
+      <div class="tags">
+          <a href="/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/" rel="tag"><i class="ic i-tag"></i> 编程技巧</a>
+          <a href="/tags/python/" rel="tag"><i class="ic i-tag"></i> python</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2024-03-19 18:41:54" itemprop="dateModified" datetime="2024-03-19T18:41:54+08:00">2024-03-19</time>
+  </span>
+  <span id="2024/03/19/code/python/python_Iterators_and_Generators/" class="item leancloud_visitors" data-flag-title="Python迭代器和生成器" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2024/03/19/code/python/python_file/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;Z5Xjptz2&#x2F;img-2000888978.jpg" title="Python文件操作">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> python</span>
+  <h3>Python文件操作</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-python%E8%BF%AD%E4%BB%A3%E5%99%A8"><span class="toc-number">1.</span> <span class="toc-text"> 一、Python 迭代器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E9%80%9A%E8%BF%87python%E4%B8%AD%E7%9A%84%E8%BF%AD%E4%BB%A3%E5%99%A8%E8%BF%9B%E8%A1%8C%E8%BF%AD%E4%BB%A3"><span class="toc-number">1.1.</span> <span class="toc-text"> 1.1 通过 Python 中的迭代器进行迭代</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-for%E5%BE%AA%E7%8E%AF%E5%AE%9E%E9%99%85%E4%B8%8A%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C"><span class="toc-number">1.2.</span> <span class="toc-text"> 1.2 for 循环实际上如何工作？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C-python%E7%94%9F%E6%88%90%E5%99%A8"><span class="toc-number">2.</span> <span class="toc-text"> 二、Python 生成器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#21-%E5%9C%A8python%E4%B8%AD%E5%88%9B%E5%BB%BA%E7%94%9F%E6%88%90%E5%99%A8"><span class="toc-number">2.1.</span> <span class="toc-text"> 2.1 在 Python 中创建生成器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-%E7%94%9F%E6%88%90%E5%99%A8%E4%B8%8Efor%E5%BE%AA%E7%8E%AF%E4%B8%80%E8%B5%B7%E4%BD%BF%E7%94%A8"><span class="toc-number">2.2.</span> <span class="toc-text"> 2.2 生成器与 for 循环一起使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-python%E7%94%9F%E6%88%90%E5%99%A8%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">2.3.</span> <span class="toc-text"> 2.3 Python 生成器表达式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-python%E7%94%9F%E6%88%90%E5%99%A8%E4%BC%98%E7%82%B9"><span class="toc-number">2.4.</span> <span class="toc-text"> 2.3 Python 生成器优点</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2023/02/06/code/python/python_array_asarray/" rel="bookmark" title="np.array和np.asarray区别">np.array和np.asarray区别</a></li><li><a href="/2023/02/06/code/python/python_bitwise_operators/" rel="bookmark" title="Python按位运算符">Python按位运算符</a></li><li><a href="/2023/02/06/code/python/python_float/" rel="bookmark" title="Python浮点数运算不精确问题">Python浮点数运算不精确问题</a></li><li><a href="/2023/02/06/code/python/python_multiply/" rel="bookmark" title="python字符串、列表、元组乘法">python字符串、列表、元组乘法</a></li><li><a href="/2023/02/06/code/python/python_note/" rel="bookmark" title="Pycharm中的特殊注释">Pycharm中的特殊注释</a></li><li><a href="/2023/02/06/code/python/python_special_func/" rel="bookmark" title="特定功能函数">特定功能函数</a></li><li><a href="/2023/03/01/code/python/python_qt_install/" rel="bookmark" title="Python运行pyside2报错问题解决">Python运行pyside2报错问题解决</a></li><li><a href="/2023/03/01/code/python/python_test/" rel="bookmark" title="Python test in xxx问题">Python test in xxx问题</a></li><li><a href="/2023/03/02/code/python/python_gurobi/" rel="bookmark" title="python+gurobi应用">python+gurobi应用</a></li><li><a href="/2023/03/02/code/python/python_jupyter/" rel="bookmark" title="修改Jupyter Notebook默认工作路径">修改Jupyter Notebook默认工作路径</a></li><li><a href="/2023/03/02/code/python/python_pip/" rel="bookmark" title="修改pip路径">修改pip路径</a></li><li><a href="/2023/03/02/code/python/python_numba/" rel="bookmark" title="使用numba对python进行加速">使用numba对python进行加速</a></li><li><a href="/2023/03/02/code/python/python_try_except/" rel="bookmark" title="python下的try-except处理异常">python下的try-except处理异常</a></li><li><a href="/2023/03/03/code/python/python_json/" rel="bookmark" title="python读取及保存json文件">python读取及保存json文件</a></li><li><a href="/2023/03/12/code/python/python_class_inherit/" rel="bookmark" title="python类的继承">python类的继承</a></li><li><a href="/2023/03/12/code/python/python_enumerate/" rel="bookmark" title="python使用enumerate()给列表添加序号">python使用enumerate()给列表添加序号</a></li><li><a href="/2023/03/23/code/python/python_problem/" rel="bookmark" title="python一些报错的处理">python一些报错的处理</a></li><li><a href="/2023/03/23/code/python/python_type_hints/" rel="bookmark" title="python类型提示">python类型提示</a></li><li><a href="/2023/03/24/code/python/python_jMetal/" rel="bookmark" title="python+jMetal应用">python+jMetal应用</a></li><li><a href="/2023/03/27/code/python/python_plot/" rel="bookmark" title="python+matplotlib绘制图像">python+matplotlib绘制图像</a></li><li><a href="/2023/04/02/code/python/python_thread/" rel="bookmark" title="Python多线程">Python多线程</a></li><li><a href="/2023/07/04/code/python/python_RMFS_pip_list/" rel="bookmark" title="本科毕业设计使用python环境">本科毕业设计使用python环境</a></li><li><a href="/2023/07/04/code/python/python_QSS/" rel="bookmark" title="python+QSS应用">python+QSS应用</a></li><li><a href="/2023/07/04/code/python/python_plot_RMFS/" rel="bookmark" title="python绘制网格分布图像以及甘特图">python绘制网格分布图像以及甘特图</a></li><li><a href="/2024/02/19/code/python/python_class_special_methods/" rel="bookmark" title="Python类的特殊方法">Python类的特殊方法</a></li><li><a href="/2024/02/20/code/python/python_pytorch_nn/" rel="bookmark" title="Pytorch神经网络的搭建">Pytorch神经网络的搭建</a></li><li><a href="/2024/02/20/code/python/python_pytorch_transforms/" rel="bookmark" title="Pytorch数据预处理：transforms的使用">Pytorch数据预处理：transforms的使用</a></li><li><a href="/2024/02/20/code/python/python_pytorch_tensorboard/" rel="bookmark" title="Pytorch下的Tensorboard的使用">Pytorch下的Tensorboard的使用</a></li><li><a href="/2024/03/03/code/python/python_pytorch_install/" rel="bookmark" title="Pytorch安装">Pytorch安装</a></li><li><a href="/2024/03/18/code/python/python_decorators/" rel="bookmark" title="Python函数装饰器">Python函数装饰器</a></li><li class="active"><a href="/2024/03/19/code/python/python_Iterators_and_Generators/" rel="bookmark" title="Python迭代器和生成器">Python迭代器和生成器</a></li><li><a href="/2024/03/19/code/python/python_file/" rel="bookmark" title="Python文件操作">Python文件操作</a></li><li><a href="/2024/03/19/code/python/python_lambda/" rel="bookmark" title="python匿名函数">python匿名函数</a></li><li><a href="/2024/03/19/code/python/python_private_property/" rel="bookmark" title="Python——类的私有属性、公有属性、私有方法、公有方法">Python——类的私有属性、公有属性、私有方法、公有方法</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Ember"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">Ember</p>
+  <div class="description" itemprop="description">🌸学习笔记🌸</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">71</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">14</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">23</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3FpYW5xaXUtY2VsbA==" title="https:&#x2F;&#x2F;github.com&#x2F;qianqiu-cell"><i class="ic i-github"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjI4MzI1Njc4NTFAcXEuY29t" title="mailto:2832567851@qq.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2024/02/20/code/python/python_pytorch_transforms/" title="Pytorch数据预处理：transforms的使用">Pytorch数据预处理：transforms的使用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/leetcode/" title="分类于 leetcode">leetcode</a>
+</div>
+
+    <span><a href="/2023/10/16/code/leetcode/time_and_space_complexity/" title="时间及空间复杂度">时间及空间复杂度</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/07/04/code/python/python_RMFS_pip_list/" title="本科毕业设计使用python环境">本科毕业设计使用python环境</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/01/code/python/python_qt_install/" title="Python运行pyside2报错问题解决">Python运行pyside2报错问题解决</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+</div>
+
+    <span><a href="/2022/11/06/blog/hexo/" title="Github+Hexo+shoka主题搭建个人博客">Github+Hexo+shoka主题搭建个人博客</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/office/" title="分类于 office技巧">office技巧</a>
+</div>
+
+    <span><a href="/2023/01/02/office/office/" title="Office技巧">Office技巧</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+</div>
+
+    <span><a href="/2022/12/24/blog/hexo_change/" title="Hexo文件迁移">Hexo文件迁移</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/leetcode/" title="分类于 leetcode">leetcode</a>
+</div>
+
+    <span><a href="/2023/10/31/code/leetcode/Binary_Search/" title="二分查找的正确编写方法">二分查找的正确编写方法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/02/06/code/python/python_multiply/" title="python字符串、列表、元组乘法">python字符串、列表、元组乘法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/07/04/code/python/python_plot_RMFS/" title="python绘制网格分布图像以及甘特图">python绘制网格分布图像以及甘特图</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Ember @ 唯爱ぺ灬babyル</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">193k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:56</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2024/03/19/code/python/python_Iterators_and_Generators/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i> 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

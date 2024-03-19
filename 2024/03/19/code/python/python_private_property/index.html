@@ -1,0 +1,534 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Keep Moving" href="http://qianqiu-cell.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Keep Moving" href="http://qianqiu-cell.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Keep Moving" href="http://qianqiu-cell.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="编程技巧,python" />
+
+
+<link rel="canonical" href="http://qianqiu-cell.github.io/2024/03/19/code/python/python_private_property/">
+
+
+
+  <title>
+Python——类的私有属性、公有属性、私有方法、公有方法 - python |
+唯爱ぺ灬babyル = Keep Moving = 天将降大任于斯人也</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Python——类的私有属性、公有属性、私有方法、公有方法
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2024-03-19 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-03-19T00:00:00+08:00">2024-03-19</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>1.2k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">唯爱ぺ灬babyル</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://i.postimg.cc/xTZMXvK1/img-2000918072.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/65yJVvmP/img-2001008953.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/qq7HgmYm/img-2001112465.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/XqG1TwF1/img-2000931939.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/Hnr5zz5n/img-2000974161.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/TYjBGJFB/img-2000931845.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/python/" itemprop="item" rel="index" title="分类于 python"><span itemprop="name">python</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://qianqiu-cell.github.io/2024/03/19/code/python/python_private_property/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="Ember">
+    <meta itemprop="description" content="天将降大任于斯人也, 🌸学习笔记🌸">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Keep Moving">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>   <code>Python</code>  默认的成员函数和成员变量都是公开的， <code>Python</code>  私有属性和方法没有类似别的语言的 <code>public</code> 、 <code>private</code>  等关键词来修饰。 在 <code>python</code>  中定义私有变量<mark>只需要在变量名或函数名前加上 <code>__</code> 两个下划线</mark>，那么这个函数或变量就会为私有的了。</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment">#问女性的姓名、工作是没有问题的，但是问女性的年龄、体重是不礼貌的，所以我们把女性年龄定义为私有属性</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token comment">#定义显示女性的姓名、工作为公有方法，显示女性年龄、体重为私有方法</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token comment">#类的定义部分</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token keyword">class</span> <span class="token class-name">Woman</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    name <span class="token operator">=</span> <span class="token string">"Juckes"</span>  <span class="token comment">#类的公有属性</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    job <span class="token operator">=</span> <span class="token string">"Teacher"</span> </pre></td></tr><tr><td data-num="7"></td><td><pre>    __ages <span class="token operator">=</span> <span class="token number">30</span>      <span class="token comment">#类的私有属性</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    __weight <span class="token operator">=</span> <span class="token number">60</span></pre></td></tr><tr><td data-num="9"></td><td><pre></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token keyword">def</span> <span class="token function">disp_nj_info</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment">#类的（公有）方法</span></pre></td></tr><tr><td data-num="11"></td><td><pre>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Name:&#123;&#125;, Job:&#123;&#125;"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>name<span class="token punctuation">,</span>self<span class="token punctuation">.</span>job<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">#类的内部调用公有属性</span></pre></td></tr><tr><td data-num="12"></td><td><pre></pre></td></tr><tr><td data-num="13"></td><td><pre>    <span class="token keyword">def</span> <span class="token function">__disp_aw_info</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment">#类的私有方法</span></pre></td></tr><tr><td data-num="14"></td><td><pre>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Age:&#123;&#125;, Weight:&#123;&#125;"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>__ages<span class="token punctuation">,</span> self<span class="token punctuation">.</span>__weight<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment">#类的内部调用私有属性</span></pre></td></tr><tr><td data-num="15"></td><td><pre></pre></td></tr><tr><td data-num="16"></td><td><pre>    <span class="token keyword">def</span> <span class="token function">dis_all_info</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="17"></td><td><pre>        self<span class="token punctuation">.</span>disp_nj_info<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">#类的内部调用公有方法</span></pre></td></tr><tr><td data-num="18"></td><td><pre>        self<span class="token punctuation">.</span>__disp_aw_info<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">#类的内部调用私有方法</span></pre></td></tr></table></figure><p>（1）类外使用类的公有属性，OK</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># 主程序部分</span></pre></td></tr><tr><td data-num="2"></td><td><pre>womanA <span class="token operator">=</span> Woman<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span>womanA<span class="token punctuation">.</span>name<span class="token punctuation">,</span> womanA<span class="token punctuation">.</span>job<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token comment"># 运行结果：</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token comment"># Juckes Teacher</span></pre></td></tr></table></figure><p>（2）类外使用类的私有属性， Error</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment">#主程序部分</span></pre></td></tr><tr><td data-num="2"></td><td><pre>womanA <span class="token operator">=</span> Woman<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span>womanA<span class="token punctuation">.</span>__ages<span class="token punctuation">,</span> womanA<span class="token punctuation">.</span>__weight<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token comment"># 运行结果：</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token comment"># Traceback (most recent call last):</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token comment">#   File "D:/untitled2/timer_test.py", line 60, in &lt;module></span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token comment">#     print(womanA.__ages, womanA.__weight)</span></pre></td></tr></table></figure><p>（3）类外使用公用方法，OK</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># 主程序部分</span></pre></td></tr><tr><td data-num="2"></td><td><pre>womanA <span class="token operator">=</span> Woman<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="3"></td><td><pre>womanA<span class="token punctuation">.</span>disp_nj_info<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token comment"># 运行结果：</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token comment"># Name:Juckes, Job:Teacher</span></pre></td></tr></table></figure><p>（4）类外使用类的私有方法， Error</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># 主程序部分</span></pre></td></tr><tr><td data-num="2"></td><td><pre>womanA <span class="token operator">=</span> Woman<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="3"></td><td><pre>womanA<span class="token punctuation">.</span>__disp_aw_info<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token comment"># 运行结果：</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token comment"># Traceback (most recent call last):</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token comment">#   File "D:/untitled2/timer_test.py", line 60, in &lt;module></span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token comment">#     womanA.__disp_aw_info()</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token comment"># AttributeError: 'Woman' object has no attribute '__disp_aw_info'</span></pre></td></tr></table></figure>
+      <div class="tags">
+          <a href="/tags/%E7%BC%96%E7%A8%8B%E6%8A%80%E5%B7%A7/" rel="tag"><i class="ic i-tag"></i> 编程技巧</a>
+          <a href="/tags/python/" rel="tag"><i class="ic i-tag"></i> python</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2024-03-19 18:41:52" itemprop="dateModified" datetime="2024-03-19T18:41:52+08:00">2024-03-19</time>
+  </span>
+  <span id="2024/03/19/code/python/python_private_property/" class="item leancloud_visitors" data-flag-title="Python——类的私有属性、公有属性、私有方法、公有方法" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2024/03/18/code/python/python_decorators/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;RZBjfH1w&#x2F;img-2000874431.jpg" title="Python函数装饰器">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> python</span>
+  <h3>Python函数装饰器</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2024/03/19/code/python/python_lambda/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;t4X7kDF5&#x2F;img-2001080670.jpg" title="python匿名函数">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> python</span>
+  <h3>python匿名函数</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2023/02/06/code/python/python_array_asarray/" rel="bookmark" title="np.array和np.asarray区别">np.array和np.asarray区别</a></li><li><a href="/2023/02/06/code/python/python_bitwise_operators/" rel="bookmark" title="Python按位运算符">Python按位运算符</a></li><li><a href="/2023/02/06/code/python/python_float/" rel="bookmark" title="Python浮点数运算不精确问题">Python浮点数运算不精确问题</a></li><li><a href="/2023/02/06/code/python/python_multiply/" rel="bookmark" title="python字符串、列表、元组乘法">python字符串、列表、元组乘法</a></li><li><a href="/2023/02/06/code/python/python_note/" rel="bookmark" title="Pycharm中的特殊注释">Pycharm中的特殊注释</a></li><li><a href="/2023/02/06/code/python/python_special_func/" rel="bookmark" title="特定功能函数">特定功能函数</a></li><li><a href="/2023/03/01/code/python/python_qt_install/" rel="bookmark" title="Python运行pyside2报错问题解决">Python运行pyside2报错问题解决</a></li><li><a href="/2023/03/01/code/python/python_test/" rel="bookmark" title="Python test in xxx问题">Python test in xxx问题</a></li><li><a href="/2023/03/02/code/python/python_gurobi/" rel="bookmark" title="python+gurobi应用">python+gurobi应用</a></li><li><a href="/2023/03/02/code/python/python_jupyter/" rel="bookmark" title="修改Jupyter Notebook默认工作路径">修改Jupyter Notebook默认工作路径</a></li><li><a href="/2023/03/02/code/python/python_pip/" rel="bookmark" title="修改pip路径">修改pip路径</a></li><li><a href="/2023/03/02/code/python/python_numba/" rel="bookmark" title="使用numba对python进行加速">使用numba对python进行加速</a></li><li><a href="/2023/03/02/code/python/python_try_except/" rel="bookmark" title="python下的try-except处理异常">python下的try-except处理异常</a></li><li><a href="/2023/03/03/code/python/python_json/" rel="bookmark" title="python读取及保存json文件">python读取及保存json文件</a></li><li><a href="/2023/03/12/code/python/python_class_inherit/" rel="bookmark" title="python类的继承">python类的继承</a></li><li><a href="/2023/03/12/code/python/python_enumerate/" rel="bookmark" title="python使用enumerate()给列表添加序号">python使用enumerate()给列表添加序号</a></li><li><a href="/2023/03/23/code/python/python_problem/" rel="bookmark" title="python一些报错的处理">python一些报错的处理</a></li><li><a href="/2023/03/23/code/python/python_type_hints/" rel="bookmark" title="python类型提示">python类型提示</a></li><li><a href="/2023/03/24/code/python/python_jMetal/" rel="bookmark" title="python+jMetal应用">python+jMetal应用</a></li><li><a href="/2023/03/27/code/python/python_plot/" rel="bookmark" title="python+matplotlib绘制图像">python+matplotlib绘制图像</a></li><li><a href="/2023/04/02/code/python/python_thread/" rel="bookmark" title="Python多线程">Python多线程</a></li><li><a href="/2023/07/04/code/python/python_RMFS_pip_list/" rel="bookmark" title="本科毕业设计使用python环境">本科毕业设计使用python环境</a></li><li><a href="/2023/07/04/code/python/python_QSS/" rel="bookmark" title="python+QSS应用">python+QSS应用</a></li><li><a href="/2023/07/04/code/python/python_plot_RMFS/" rel="bookmark" title="python绘制网格分布图像以及甘特图">python绘制网格分布图像以及甘特图</a></li><li><a href="/2024/02/19/code/python/python_class_special_methods/" rel="bookmark" title="Python类的特殊方法">Python类的特殊方法</a></li><li><a href="/2024/02/20/code/python/python_pytorch_nn/" rel="bookmark" title="Pytorch神经网络的搭建">Pytorch神经网络的搭建</a></li><li><a href="/2024/02/20/code/python/python_pytorch_transforms/" rel="bookmark" title="Pytorch数据预处理：transforms的使用">Pytorch数据预处理：transforms的使用</a></li><li><a href="/2024/02/20/code/python/python_pytorch_tensorboard/" rel="bookmark" title="Pytorch下的Tensorboard的使用">Pytorch下的Tensorboard的使用</a></li><li><a href="/2024/03/03/code/python/python_pytorch_install/" rel="bookmark" title="Pytorch安装">Pytorch安装</a></li><li><a href="/2024/03/18/code/python/python_decorators/" rel="bookmark" title="Python函数装饰器">Python函数装饰器</a></li><li><a href="/2024/03/19/code/python/python_Iterators_and_Generators/" rel="bookmark" title="Python迭代器和生成器">Python迭代器和生成器</a></li><li><a href="/2024/03/19/code/python/python_file/" rel="bookmark" title="Python文件操作">Python文件操作</a></li><li><a href="/2024/03/19/code/python/python_lambda/" rel="bookmark" title="python匿名函数">python匿名函数</a></li><li class="active"><a href="/2024/03/19/code/python/python_private_property/" rel="bookmark" title="Python——类的私有属性、公有属性、私有方法、公有方法">Python——类的私有属性、公有属性、私有方法、公有方法</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Ember"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">Ember</p>
+  <div class="description" itemprop="description">🌸学习笔记🌸</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">71</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">14</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">23</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3FpYW5xaXUtY2VsbA==" title="https:&#x2F;&#x2F;github.com&#x2F;qianqiu-cell"><i class="ic i-github"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjI4MzI1Njc4NTFAcXEuY29t" title="mailto:2832567851@qq.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2024/03/18/code/python/python_decorators/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2024/03/19/code/python/python_lambda/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/24/code/python/python_jMetal/" title="python+jMetal应用">python+jMetal应用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/hardware/" title="分类于 硬件开发">硬件开发</a>
+</div>
+
+    <span><a href="/2023/01/30/hardware/Quartus/" title="Quartus基础教程">Quartus基础教程</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/C/" title="分类于 C++">C++</a>
+</div>
+
+    <span><a href="/2023/03/01/code/Cplusplus/CplusplusGetTime/" title="C++获取程序运行时间">C++获取程序运行时间</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2024/02/19/code/python/python_class_special_methods/" title="Python类的特殊方法">Python类的特殊方法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/27/code/python/python_plot/" title="python+matplotlib绘制图像">python+matplotlib绘制图像</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/07/04/code/python/python_plot_RMFS/" title="python绘制网格分布图像以及甘特图">python绘制网格分布图像以及甘特图</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+</div>
+
+    <span><a href="/2023/01/19/blog/hexo_remote/" title="解决Connection closed by remote host">解决Connection closed by remote host</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/07/04/code/python/python_RMFS_pip_list/" title="本科毕业设计使用python环境">本科毕业设计使用python环境</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/02/06/code/python/python_special_func/" title="特定功能函数">特定功能函数</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/control/" title="分类于 控制工程">控制工程</a>
+</div>
+
+    <span><a href="/2022/11/23/control/spring_damping/" title="弹簧阻尼系统">弹簧阻尼系统</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Ember @ 唯爱ぺ灬babyル</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">193k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:56</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2024/03/19/code/python/python_private_property/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i> 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
