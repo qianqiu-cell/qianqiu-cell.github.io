@@ -89,12 +89,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://i.postimg.cc/cCVGPk8z/img-2000882697.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/TPVDNBBK/img-2000919637.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/hjxpsSqN/img-2000933414.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/kG7MXgMm/img-2000997960.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/jq1SPtjR/img-2000938291.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/Px8qJ7kt/img-2001081756.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/HsqB71gK/img-2000895436.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/Z56dRC49/img-2001035084.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/0yx9xQQ2/img-2001044743.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/dQnwjvth/img-2001008605.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/9z34phCg/img-2000981003.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/xTZMXvK1/img-2000918072.jpg"></li>
         </ul>
       </div>
     </header>
@@ -120,7 +120,315 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/12/23/optimal/signal_objective_optimization/" itemprop="url" title="单目标搜索算法汇总"><img data-src="https://i.postimg.cc/jqFTWcS9/img-2001043067.jpg"></a>
+    <a href="/2023/01/20/latex/latex_install/" itemprop="url" title="Vscode+TexLive+Latex workshop安装"><img data-src="https://i.postimg.cc/yNBgwvmW/img-2000885221.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-01-20 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-01-20T00:00:00+08:00">2023-01-20</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>2.3k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>2 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2023/01/20/latex/latex_install/" itemprop="url" title="Vscode+TexLive+Latex workshop安装">Vscode+TexLive+Latex workshop安装</a></h3>
+    <div class="excerpt">
+        # 一、Tex Live 与 Latex workshop 安装
+Tex Live 可以从官网进行安装， Latex workshop 从 Vscode 的插件商城安装
+⚠️⚠️⚠️需要注意的是， Latex workshop 插件需安装 8.8.0 版本，更高版本不稳定，会产生 bug
+# 二、Tex Live 环境变量配置
+在环境变量中添加 D:\texlive\2022\bin\win32 （需更改为自己的 texlive 安装路径）
+配置完成后在命令行输入 latex -v ，出现如下信息则判断 latex 安装及配置完成
+
+# 三、Vscode 配置
+依次点击...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/latex/" itemprop="url" title="latex"><i class="ic i-flag"></i>latex</a>
+      </span>
+    </div>
+    <a href="/2023/01/20/latex/latex_install/" itemprop="url" title="Vscode+TexLive+Latex workshop安装" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/01/19/blog/hexo_remote/" itemprop="url" title="解决Connection closed by remote host"><img data-src="https://i.postimg.cc/jSnKzFjm/img-2001111704.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-01-19 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-01-19T00:00:00+08:00">2023-01-19</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>234</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2023/01/19/blog/hexo_remote/" itemprop="url" title="解决Connection closed by remote host">解决Connection closed by remote host</a></h3>
+    <div class="excerpt">
+        # 一、问题描述
+在一次更新博客的内容并使用 hexo d 成功上传之后，邮箱中收到如下内容
+
+一番搜索之后找到报错的根本原因为：前段时间使用了 VPN 进行代理。运行 ssh -T git@github.com 命令，结果显示 ssh: Could not resolve hostname keygen 。
+# 二、解决方法
+设置取消代理即可成功上传，取消代理通过在命令行运行如下代码
+git config --global https.proxygit config --global --unset https.proxy
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/blog/" itemprop="url" title="博客搭建"><i class="ic i-flag"></i>博客搭建</a>
+      </span>
+    </div>
+    <a href="/2023/01/19/blog/hexo_remote/" itemprop="url" title="解决Connection closed by remote host" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/01/03/Computer/Realtek/" itemprop="url" title="关于戴尔G3重装系统后的音频问题"><img data-src="https://i.postimg.cc/BvxGLfVQ/img-2001010050.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-01-03 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-01-03T00:00:00+08:00">2023-01-03</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>363</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2023/01/03/Computer/Realtek/" itemprop="url" title="关于戴尔G3重装系统后的音频问题">关于戴尔G3重装系统后的音频问题</a></h3>
+    <div class="excerpt">
+        💥问题描述💥每一次使用戴尔 G3 恢复系统之后就会在音频位置出现未插入扬声器或耳机的问题
+
+  该问题的产生原因是系统没有 Realtek 音频驱动程序，正确的解决方法为进入戴尔官网，进行相应驱动程序的下载，安装步骤如下（❌❌❌千万不要下载驱动安装精灵❌❌❌）
+# 一、进入戴尔官网进行声卡驱动下载
+（1）直接在浏览器中搜索戴尔官网驱动下载，即可进入戴尔官网的驱动安装界面
+
+（2）进入戴尔官网后输入戴尔服务标签即可进入驱动下载界面
+
+  戴尔服务标签一般位于电脑下方（本机服务标签已保存至博客 word 版文件夹中）
+
+（3）进入如下驱动安装界面后下载 Realtek 高保真声卡驱动程序
+
+#...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/Computer/" itemprop="url" title="电脑硬件知识"><i class="ic i-flag"></i>电脑硬件知识</a>
+      </span>
+    </div>
+    <a href="/2023/01/03/Computer/Realtek/" itemprop="url" title="关于戴尔G3重装系统后的音频问题" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/01/02/blog/hexo_image/" itemprop="url" title="Hexo图片显示异常问题"><img data-src="https://i.postimg.cc/76KPhy5J/img-2001031683.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-01-02 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-01-02T00:00:00+08:00">2023-01-02</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>325</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2023/01/02/blog/hexo_image/" itemprop="url" title="Hexo图片显示异常问题">Hexo图片显示异常问题</a></h3>
+    <div class="excerpt">
+        结合 shoka 文件官方文档以及评论，最终解决方法如下
+# 一、下载 shoka 主题图片
+主题图片：下载图片（主题图片来源于 shoka 评论区）
+shoka 主题图片同时备份至百度网盘及个人 U 盘
+# 二、上传图片至 PostImage 图床
+首先进入 PostImage 官网，进行网站注册，注册密码已备份至 U 盘 - 博客 word 说明中
+注册完成之后将 shoka 图片一并上传至 PostImage 中，并复制所有图片链接如下图所示（界面打开方式：我的图片→默认分类→分享）
+
+# 三、上传图片至 shoka
+参考如下 shoka 官方说明
+
+根据最后两行信息，在...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/blog/" itemprop="url" title="博客搭建"><i class="ic i-flag"></i>博客搭建</a>
+      </span>
+    </div>
+    <a href="/2023/01/02/blog/hexo_image/" itemprop="url" title="Hexo图片显示异常问题" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/01/02/office/office/" itemprop="url" title="Office技巧"><img data-src="https://i.postimg.cc/QCS8BZVW/img-2000978800.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-01-02 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-01-02T00:00:00+08:00">2023-01-02</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>903</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2023/01/02/office/office/" itemprop="url" title="Office技巧">Office技巧</a></h3>
+    <div class="excerpt">
+        # 一、Word 使用技巧
+# 1.1 刷新 word 中所有 mathtype 的公式编号
+首先 CTRL+A 全选文档，接着按 F9 ，进行公式编号的刷新
+# 1.2 一键调整 word 中 mathtype 公式的大小（以及格式刷后公式偏上问题）
+（1）在 MathType 选项卡中选择格式化公式
+（2）选择 MathType preference file ，点击 Browse...
+（3）在 MathType 安装目录下进入 Preferences 文件夹，选择所需格式文件
+（4）点击打开，点击 OK
+
+# 1.3 公式编辑器使用 “#” 自动标准化公式
+在 word...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/office/" itemprop="url" title="office技巧"><i class="ic i-flag"></i>office技巧</a>
+      </span>
+    </div>
+    <a href="/2023/01/02/office/office/" itemprop="url" title="Office技巧" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2022/12/24/blog/hexo_change/" itemprop="url" title="Hexo文件迁移"><img data-src="https://i.postimg.cc/bvM2Jb4j/img-2000952981.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2022-12-24 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-12-24T00:00:00+08:00">2022-12-24</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>1.2k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2022/12/24/blog/hexo_change/" itemprop="url" title="Hexo文件迁移">Hexo文件迁移</a></h3>
+    <div class="excerpt">
+        参考文章：https://blog.csdn.net/qq_36667170/article/details/118163563
+# 一、旧电脑文件备份
+将 node_modules 文件夹删除后备份其余所有文件
+
+# 二、新电脑准备工作
+# 2.1 git
+（1）首先下载并安装 git
+参考链接：https://zhuanlan.zhihu.com/p/103325381
+（2）在命令行中设置用户，注意这个不是登录，而是告诉远程仓库是谁上传的
+git config --global user.name &amp;quot;你的名字&amp;quot;（注意前边是 “-...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/blog/" itemprop="url" title="博客搭建"><i class="ic i-flag"></i>博客搭建</a>
+      </span>
+    </div>
+    <a href="/2022/12/24/blog/hexo_change/" itemprop="url" title="Hexo文件迁移" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2022/12/23/optimal/signal_objective_optimization/" itemprop="url" title="单目标搜索算法汇总"><img data-src="https://i.postimg.cc/TPVDNBBK/img-2000919637.jpg"></a>
   </div>
   <div class="info">
     
@@ -171,7 +479,7 @@ NNS 算法的流程为：
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/11/28/math/covariance/" itemprop="url" title="数学期望、方差和协方差"><img data-src="https://i.postimg.cc/43B6PrDX/img-2000909496.jpg"></a>
+    <a href="/2022/11/28/math/covariance/" itemprop="url" title="数学期望、方差和协方差"><img data-src="https://i.postimg.cc/cJDjVkpc/img-2000874631.jpg"></a>
   </div>
   <div class="info">
     
@@ -225,7 +533,7 @@ E(X)=∫−∞+∞​xf(x)dx
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/11/25/math/derivative_of_the_inverse_matrix/" itemprop="url" title="逆矩阵的求导"><img data-src="https://i.postimg.cc/fykBYwk4/img-2000899381.jpg"></a>
+    <a href="/2022/11/25/math/derivative_of_the_inverse_matrix/" itemprop="url" title="逆矩阵的求导"><img data-src="https://i.postimg.cc/Yq3xnLK6/img-2000875479.jpg"></a>
   </div>
   <div class="info">
     
@@ -271,7 +579,7 @@ dtdA−1​=−A−1dtdA​A−1
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/11/24/math/conv/" itemprop="url" title="一般情况下的椭圆"><img data-src="https://i.postimg.cc/fRwpb0hy/img-2000931967.jpg"></a>
+    <a href="/2022/11/24/math/conv/" itemprop="url" title="一般情况下的椭圆"><img data-src="https://i.postimg.cc/0yS7gzhX/img-2000891315.jpg"></a>
   </div>
   <div class="info">
     
@@ -321,254 +629,6 @@ y
   </div>
 </article>
 
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2022/11/23/control/spring_damping/" itemprop="url" title="弹簧阻尼系统"><img data-src="https://i.postimg.cc/K8X7974s/img-2000920205.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2022-11-23 00:00:00">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-11-23T00:00:00+08:00">2022-11-23</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>3.5k</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>3 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2022/11/23/control/spring_damping/" itemprop="url" title="弹簧阻尼系统">弹簧阻尼系统</a></h3>
-    <div class="excerpt">
-        # 一、什么是弹性力和阻尼力
-弹簧力方向与位移变化量的大小成正比，方向相反
-阻尼力方向与速度变化量的大小成正比，方向相反
-# 二、3 自由度弹簧 - 阻尼器 - 质量系统
-3 自由度弹簧 - 阻尼 -...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/control/" itemprop="url" title="控制工程"><i class="ic i-flag"></i>控制工程</a>
-      </span>
-    </div>
-    <a href="/2022/11/23/control/spring_damping/" itemprop="url" title="弹簧阻尼系统" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2022/11/22/control/Gram-matrix/" itemprop="url" title="格拉姆矩阵判据"><img data-src="https://i.postimg.cc/TwJ0WtxD/img-2001024816.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2022-11-22 00:00:00">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-11-22T00:00:00+08:00">2022-11-22</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>775</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>1 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2022/11/22/control/Gram-matrix/" itemprop="url" title="格拉姆矩阵判据">格拉姆矩阵判据</a></h3>
-    <div class="excerpt">
-        # 一、格拉姆矩阵判据
-对于线性时不变系统
-X=Ax+BuY=Cx+Du\begin {array}{c} X=Ax+Bu\\
-Y=Cx+Du\end {array}X=Ax+BuY=Cx+Du​
-系统完全能控的充分必要条件是对于任意时刻 t&amp;gt;0，都有n×nn\times nn×n 维可控性格拉姆矩阵非奇异（不可逆）
-Wc=∫0∞eAτBBTeATτdτW_{c}=\int_{0}^{\infty } e^{A\tau }BB^{T}e^{A^{T}\tau }d\tau
-Wc​=∫0∞​eAτBBTeATτdτ
-系统完全能观的充分必要条件是对于任意时刻...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/control/" itemprop="url" title="控制工程"><i class="ic i-flag"></i>控制工程</a>
-      </span>
-    </div>
-    <a href="/2022/11/22/control/Gram-matrix/" itemprop="url" title="格拉姆矩阵判据" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2022/11/21/math/svd/" itemprop="url" title="奇异值分解（SVD）"><img data-src="https://i.postimg.cc/YqmqxZ4Y/img-2000940394.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2022-11-21 00:00:00">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-11-21T00:00:00+08:00">2022-11-21</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>568</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>1 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2022/11/21/math/svd/" itemprop="url" title="奇异值分解（SVD）">奇异值分解（SVD）</a></h3>
-    <div class="excerpt">
-        # 一、特征值分解
-首先根据特征值与特征向量的定义有Ax=λxAx=λxAx=λx，其中 x 是一个 n 维向量，则我们说 λ 是矩阵 A 的一个特征值，x 是矩阵 A 的特征值 λ 所对应的特征向量，一个矩阵的一组向量是一组正交向量 Q。 特征值分解是将一个矩阵分解成下面的形式：
-A=QΣQ−1A=Q\Sigma Q^-1
-A=QΣQ−1
-# 二、奇异值分解（SVD）
-SVD 也是对矩阵进行分解，但是和特征分解不同，SVD 并不要求矩阵为方阵。假设我们的矩阵 A 是一个 m×n 的矩阵，那么我们定义矩阵 A 的 SVD 为：
-A=UΣV−1A=U\Sigma V^-1
-A=UΣV−1
-其中...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/math/" itemprop="url" title="数学基础"><i class="ic i-flag"></i>数学基础</a>
-      </span>
-    </div>
-    <a href="/2022/11/21/math/svd/" itemprop="url" title="奇异值分解（SVD）" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2022/11/16/hardware/stm32cubemx/" itemprop="url" title="使用stm32cubemx新建工程"><img data-src="https://i.postimg.cc/3RqqwLFF/img-2001068767.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2022-11-16 00:00:00">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-11-16T00:00:00+08:00">2022-11-16</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>733</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>1 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2022/11/16/hardware/stm32cubemx/" itemprop="url" title="使用stm32cubemx新建工程">使用stm32cubemx新建工程</a></h3>
-    <div class="excerpt">
-        参考视频：https://www.bilibili.com/video/BV18X4y1M763/?p=15&amp;amp;vd_source=9aecb3bd1c938623930433f860f4a555
-# 一、新建工程
-点击 ACCESS TO MCU SELECTOR （如红框所示）
-
-在搜索框内输入所需要的芯片型号，在右边搜索结果中双击自己的板子型号，这里我们使用的是 stm32f103zet6
-
-# 二、一些必要的工作
-选择 system core 中的 RCC ，将 High Speed Clock(HSE) 定义为 Crystal/Ceramic Resonator
-
-选择...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/hardware/" itemprop="url" title="硬件开发"><i class="ic i-flag"></i>硬件开发</a>
-      </span>
-    </div>
-    <a href="/2022/11/16/hardware/stm32cubemx/" itemprop="url" title="使用stm32cubemx新建工程" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2022/11/06/blog/hexo/" itemprop="url" title="Github+Hexo+shoka主题搭建个人博客"><img data-src="https://i.postimg.cc/wv282czC/img-2001012739.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2022-11-06 00:00:00">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-11-06T00:00:00+08:00">2022-11-06</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>17k</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>15 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2022/11/06/blog/hexo/" itemprop="url" title="Github+Hexo+shoka主题搭建个人博客">Github+Hexo+shoka主题搭建个人博客</a></h3>
-    <div class="excerpt">
-        # 一、git、node.js 与 Hexo 的安装
-参考文章：https://zhuanlan.zhihu.com/p/102592286
-
-git 安装
-进入 git 官网，进行 git 的安装，自行百度安装教程即可，安装完成后可在命令行运行 git –version 命令，若出现如下图片，则可确定 git 安装成功
-
-node.js 安装
-进入 node.js 官网，进行 node.js 安装，自行百度安装教程即可，安装完成后可在命令行运行 node -v 和 npm -v 命令，若出现如下图片，则可确定 node.js 安装成功
-
-Hexo 安装
-首先在 C...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/blog/" itemprop="url" title="博客搭建"><i class="ic i-flag"></i>博客搭建</a>
-      </span>
-    </div>
-    <a href="/2022/11/06/blog/hexo/" itemprop="url" title="Github+Hexo+shoka主题搭建个人博客" class="btn">more...</a>
-  </div>
-</article>
-
     </div>
 
   </div>
@@ -576,7 +636,7 @@ Hexo 安装
   
   <nav class="pagination">
     <div class="inner">
-    <a class="extend prev" rel="prev" href="/page/6/"><i class="ic i-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span>
+    <a class="extend prev" rel="prev" href="/page/6/"><i class="ic i-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/8/"><i class="ic i-angle-right" aria-label="下一页"></i></a>
     </div>
   </nav>
 
@@ -604,7 +664,7 @@ Hexo 安装
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">71</span>
+        <span class="count">77</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -684,6 +744,7 @@ Hexo 安装
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
+        <a href="/page/8/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -704,10 +765,10 @@ Hexo 安装
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
+<a href="/categories/Computer/" title="分类于 电脑硬件知识">电脑硬件知识</a>
 </div>
 
-    <span><a href="/2023/03/23/code/python/python_type_hints/" title="python类型提示">python类型提示</a></span>
+    <span><a href="/2023/09/06/Computer/monitor/" title="显示器的一些小tricks">显示器的一些小tricks</a></span>
   </li>
 
       
@@ -717,27 +778,17 @@ Hexo 安装
 <a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2023/02/06/code/python/python_note/" title="Pycharm中的特殊注释">Pycharm中的特殊注释</a></span>
+    <span><a href="/2023/03/02/code/python/python_try_except/" title="python下的try-except处理异常">python下的try-except处理异常</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
 </div>
 
-    <span><a href="/2023/03/15/optimal/MOEA_D/" title="MODE&#x2F;D算法">MODE/D算法</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/latex/" title="分类于 latex">latex</a>
-</div>
-
-    <span><a href="/2023/03/12/latex/latex_eps/" title="latex插入图片：jpg&#x2F;png转eps">latex插入图片：jpg/png转eps</a></span>
+    <span><a href="/2022/12/24/blog/hexo_change/" title="Hexo文件迁移">Hexo文件迁移</a></span>
   </li>
 
       
@@ -754,10 +805,40 @@ Hexo 安装
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2024/03/19/code/python/python_lambda/" title="python匿名函数">python匿名函数</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/01/code/python/python_test/" title="Python test in xxx问题">Python test in xxx问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/matlab/" title="分类于 matlab">matlab</a>
+</div>
+
+    <span><a href="/2023/07/08/code/matlab/matlab_GA/" title="基于matlab-Sheffield工具箱实现遗传算法">基于matlab-Sheffield工具箱实现遗传算法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
 <a href="/categories/math/" title="分类于 数学基础">数学基础</a>
 </div>
 
-    <span><a href="/2023/09/17/math/Interval_by_Dimensional/" title="区间逐维分析方法">区间逐维分析方法</a></span>
+    <span><a href="/2024/01/13/math/Orthogonal_polynomial_approximation/" title="正交多项式逼近">正交多项式逼近</a></span>
   </li>
 
       
@@ -767,27 +848,7 @@ Hexo 安装
 <a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2024/03/18/code/python/python_decorators/" title="Python函数装饰器">Python函数装饰器</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/office/" title="分类于 office技巧">office技巧</a>
-</div>
-
-    <span><a href="/2023/01/02/office/office/" title="Office技巧">Office技巧</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
-</div>
-
-    <span><a href="/2023/03/02/code/python/python_jupyter/" title="修改Jupyter Notebook默认工作路径">修改Jupyter Notebook默认工作路径</a></span>
+    <span><a href="/2023/02/06/code/python/python_bitwise_operators/" title="Python按位运算符">Python按位运算符</a></span>
   </li>
 
       
@@ -797,7 +858,7 @@ Hexo 安装
 <a href="/categories/optimal/" title="分类于 最优化">最优化</a>
 </div>
 
-    <span><a href="/2022/12/23/optimal/signal_objective_optimization/" title="单目标搜索算法汇总">单目标搜索算法汇总</a></span>
+    <span><a href="/2023/03/16/optimal/SPEA/" title="SPEAI-II">SPEAI-II</a></span>
   </li>
 
   </ul>
@@ -822,13 +883,13 @@ Hexo 安装
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">193k 字</span>
+    <span title="站点总字数">244k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:56</span>
+    <span title="站点阅读时长">3:41</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

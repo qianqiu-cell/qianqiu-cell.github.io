@@ -1,0 +1,666 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Keep Moving" href="http://qianqiu-cell.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Keep Moving" href="http://qianqiu-cell.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Keep Moving" href="http://qianqiu-cell.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="AI" />
+
+
+<link rel="canonical" href="http://qianqiu-cell.github.io/2024/07/23/AI/Prompt_engineering/">
+
+
+
+  <title>
+大模型提示词工程（Prompt Engineering） - AI |
+唯爱ぺ灬babyル = Keep Moving = 天将降大任于斯人也</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">大模型提示词工程（Prompt Engineering）
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2024-07-23 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-07-23T00:00:00+08:00">2024-07-23</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>4.2k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>4 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">唯爱ぺ灬babyル</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://i.postimg.cc/mgr7dbsh/img-2001040526.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/nLq3YFxg/img-2000959067.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/wv282czC/img-2001012739.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/QCLryn7y/img-2000883232.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/DfCKRTJR/img-2001114837.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/7ZNtvtFW/img-2000911251.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/AI/" itemprop="item" rel="index" title="分类于 AI"><span itemprop="name">AI</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://qianqiu-cell.github.io/2024/07/23/AI/Prompt_engineering/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="Ember">
+    <meta itemprop="description" content="天将降大任于斯人也, 🌸学习笔记🌸">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Keep Moving">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>参考链接：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3dzeWFkYy9nZW5lcmF0aXZlLWFpLWZvci1iZWdpbm5lcnM=">https://github.com/wsyadc/generative-ai-for-beginners</span></p>
+<h1 id="一-什么是提示词工程"><a class="markdownIt-Anchor" href="#一-什么是提示词工程">#</a> 一、什么是提示词工程</h1>
+<p>  提示工程被定义为设计和优化文本输入（提示）以提供一致且高质量响应（完成）的过程，以实现特定的应用目标和模型。提示工程是创建将产生所需结果的提示的过程。 提示工程不仅仅是编写文本提示。提示工程不是一门工程学科，它更像是一组可以应用以获得所需结果的技术。我们可以将其视为一个两步过程：</p>
+<ul>
+<li>为特定模型和目标设计初始提示</li>
+<li>迭代地优化提示以提高响应质量</li>
+</ul>
+<p>  这必然是一个需要用户直觉和努力的试错过程，以获得最佳结果。那么，为什么这很重要？要回答这个问题，我们首先需要理解三个概念：</p>
+<ul>
+<li>Tokenization = 模型如何 “看到” 提示</li>
+<li>Base LLMs = 基础模型如何 “处理” 提示</li>
+<li>Instruction-Tuned LLMs = 模型现在如何看到 “任务”</li>
+</ul>
+<h1 id="二-为什么我们需要提示词工程"><a class="markdownIt-Anchor" href="#二-为什么我们需要提示词工程">#</a> 二、为什么我们需要提示词工程</h1>
+<p>  现在我们知道了 LLMs 如何处理提示，让我们谈谈为什么我们需要提示工程。 答案在于，当前的 LLMs 的算法也有许多挑战，如果不及时优化，就很难实现 “可靠且一致的补全”。 例如：</p>
+<ul>
+<li>
+<p>== 模型响应是随机的。== 相同的提示可能会针对不同的模型或模型版本产生不同的响应。 甚至可能在不同时间使用相同模型产生不同的结果。 提示工程技术可以通过提供更好帮助我们最大限度地减少这些变化所带来的影响。</p>
+</li>
+<li>
+<p>== 模型可以产生幻觉响应。== 模型是使用大型但有限数据集进行预训练的，这意味着它们缺乏有关训练范围之外的概念的知识。 因此，它们可能会产生不准确、虚构或与已知事实直接矛盾的完成结果。 提示工程技术可以帮助用户识别和减轻幻觉，例如通过向人工智能询问出处或推理过程。</p>
+</li>
+<li>
+<p>== 模型功能会有所不同。 == 较新的模型或模型迭代将具有更丰富的功能，但也会带来独特的怪癖以及成本和复杂性方面的平衡。 提示工程可以帮助我们开发最佳实践和工作流程，以可扩展和无缝的方式消除差异并适应特定于模型的要求。</p>
+</li>
+</ul>
+<h1 id="三-提示工程的技巧"><a class="markdownIt-Anchor" href="#三-提示工程的技巧">#</a> 三、提示工程的技巧</h1>
+<p>  简单提示的局限性：简单提示可能无法得到你想要的结果，原因如下：（1）大话题；（2）没有限定输出格式。我们可以使用一些基本技巧来提示 LLM。</p>
+<h2 id="31-zero-shot-prompting-零样本提示"><a class="markdownIt-Anchor" href="#31-zero-shot-prompting-零样本提示">#</a> 3.1 Zero-shot prompting （零样本提示）</h2>
+<p>  这种提示风格非常简单，它只有一个提示。当你开始学习 LLM 时，可能就会用到这种方法。下面是一个例子：</p>
+<ul>
+<li>Prompt: “What is Algebra?”</li>
+<li>Answer: “Algebra is a branch of mathematics that studies mathematical symbols and the rules for manipulating these symbols.”</li>
+</ul>
+<h2 id="32-few-shot-prompting-少样本提示"><a class="markdownIt-Anchor" href="#32-few-shot-prompting-少样本提示">#</a> 3.2 Few-shot prompting （少样本提示）</h2>
+<p>  这种提示方式通过在提出请求的同时提供一些示例来帮助模型。它由单个提示和附加的特定任务数据组成。下面是一个例子：</p>
+<ul>
+<li>Prompt: &quot;以莎士比亚的风格写一首诗。下面是一些莎士比亚十四行诗的例子：十四行诗第 18 首：&quot; 我要把你比作夏日吗？你更可爱，更有节制…' 第 116 首十四行诗：&quot; 让我不要为真正心灵的结合设置障碍。爱不是爱，当它发现改变时就会改变…' 十四行诗第 132 首：“我爱你的眼睛，它们怜悯我，知道你的心在折磨我，对我不屑一顾… 现在，请写一首关于月亮之美的十四行诗。”</li>
+<li>Answer：“在天空中，月亮闪烁着柔和的光芒，散发着温柔的光辉，…”</li>
+</ul>
+<p>  示例为 LLM 提供了所需输出的背景、格式或风格。它们有助于模型理解具体任务，并生成更准确、更相关的回复。</p>
+<h2 id="33-chain-of-thought-cot-思维链"><a class="markdownIt-Anchor" href="#33-chain-of-thought-cot-思维链">#</a> 3.3 Chain-of-thought （CoT, 思维链）</h2>
+<p>  链式思维是一种非常有趣的技术，因为它涉及让大型语言模型（LLM）经过一系列步骤。这个想法是以一种方式指导 LLM，使其理解如何完成某项任务。请考虑以下带有和不带链式思维的示例：</p>
+<ul>
+<li>Prompt: “Alice has 5 apples, throws 3 apples, gives 2 to Bob and Bob gives one back, how many apples does Alice have?”</li>
+<li>Answer: 5</li>
+</ul>
+<p>  LLM 给出的答案为 5，这是不正确的。 根据计算结果 (5 -3 -2 + 1 = 1)，正确答案是 1 个苹果。</p>
+<p>  那么我们怎样才能教 LLM 正确地做到这一点呢？让我们尝试一下思维链。 应用思维链意味着：</p>
+<p>  给 LLM 一个类似的例子。展示计算结果，以及如何正确计算。提供原始提示。</p>
+<ul>
+<li>Prompt: “Lisa has 7 apples, throws 1 apple, gives 4 apples to Bart and Bart gives one back: 7 -1 = 6 6 -4 = 2 2 +1 = 3<br>
+Alice has 5 apples, throws 3 apples, gives 2 to Bob and Bob gives one back, how many apples does Alice have?”</li>
+<li>Answer: 1</li>
+</ul>
+<p>  请注意我们如何用另一个示例、计算和原始提示编写更长的提示，然后得出正确答案 1。正如您所看到的，思维链是一种非常强大的技术。</p>
+<p>  其他更加丰富的 CoT，如零样本思维链，自洽性等可以参考<span class="exturl" data-url="aHR0cHM6Ly9wcm9tcHRkZXYuYWkvemgtSGFucy9kb2NzL2ludGVybWVkaWF0ZS9zZWxmX2NvbnNpc3RlbmN5"> https://promptdev.ai/zh-Hans/docs/intermediate/self_consistency</span>。</p>
+<h2 id="34-generated-knowledge-知识生成"><a class="markdownIt-Anchor" href="#34-generated-knowledge-知识生成">#</a> 3.4 Generated knowledge （知识生成）</h2>
+<p>  生成的知识方法（Generated Knowledge Approach）1 要求 LLM 在生成响应之前生成与问题相关的可能有用的信息。该方法由两个中间步骤组成，即<mark>知识生成和知识集成</mark>。</p>
+<p><img data-src="/images/AI/Prompt_engineering/3.4.1.png" alt=""></p>
+<p>（1）知识生成</p>
+<p>  在知识生成步骤中，要求 LLM 生成有关问题的一组事实。大语言模型将以 few-shot 方式进行提示，如下所示。使用相同提示生成 M 个不同的完成。</p>
+<p><img data-src="/images/AI/Prompt_engineering/3.4.2.png" alt=""></p>
+<p>（2）知识集成</p>
+<p>  接下来，我们生成 “知识增强” 问题，并用它们提示 LLM 获得最终答案。最好的理解方法是通过一个例子来说明。</p>
+<p>  假设我们正在尝试回答问题 “大多数袋鼠有 <mask> 肢体”。假设在知识生成步骤中，我们生成了 2 个知识（M=2）：</p>
+<ul>
+<li>
+<p>知识 1：“袋鼠是生活在澳大利亚的有袋动物。”</p>
+</li>
+<li>
+<p>知识 2：“袋鼠是有 5 条肢体的有袋动物。”</p>
+</li>
+</ul>
+<p>  现在，我们将每个知识与问题连接起来，生成知识增强的问题：</p>
+<ul>
+<li>
+<p>知识增强问题 1：“大多数袋鼠有 <mask> 肢体。袋鼠是生活在澳大利亚的有袋动物。”</p>
+</li>
+<li>
+<p>知识增强问题 2：“大多数袋鼠有 <mask> 肢体。袋鼠是有 5 条肢体的有袋动物。”</p>
+</li>
+</ul>
+<p>  然后，我们用这些知识增强的问题提示 LLM，并获得最终答案的提案：</p>
+<ul>
+<li>
+<p>答案 1：“4”</p>
+</li>
+<li>
+<p>答案 2：“5”</p>
+</li>
+</ul>
+<p>  我们选择概率最高的答案作为最终答案。最高概率可能是答案令牌的 softmax 概率，或答案令牌的对数概率。</p>
+<h2 id="35-least-to-most-ltm-从少到多"><a class="markdownIt-Anchor" href="#35-least-to-most-ltm-从少到多">#</a> 3.5 Least to Most （LtM, 从少到多）</h2>
+<p>  从最少到最多提示 (LtM) 1 使 CoT 提示更进一步，首先将问题分解为子问题，然后解决每个问题。这是一种受现实世界儿童教育策略启发的技术。</p>
+<p>  与 CoT 提示一样，要解决的问题被分解为一组相互构建的子问题。第二步，将这些子问题一一解决。与思维链相反，先前子问题的解决方案被输入到尝试解决下一个问题的提示中。</p>
+<p><img data-src="/images/AI/Prompt_engineering/3.5.1.png" alt=""></p>
+<h2 id="36-self-refine-critique-the-results-自我完善质疑结果"><a class="markdownIt-Anchor" href="#36-self-refine-critique-the-results-自我完善质疑结果">#</a> 3.6 Self-refine, critique the results （自我完善，质疑结果）</h2>
+<p>  对于生成式人工智能和 LLMs，你不能相信其输出。 你需要验证一下。 毕竟， LLMs 只是向您展示下一个最有可能说的话，而不是正确的内容。 因此，一个好主意是要求 LLMs 自我批评，这引导我们自我完善技术。</p>
+<p>  其工作原理是按照以下步骤操作：</p>
+<ul>
+<li>要求 LLM 解决问题的初始提示</li>
+<li>LLM 产生答案</li>
+<li>质疑答案并要求人工智能改进</li>
+<li>LLM 再次回答，这次考虑了质疑并提出了解决方案</li>
+</ul>
+<p>  您可以根据需要多次重复此过程。</p>
+<h2 id="37-maieutic-prompting-多维度的提示"><a class="markdownIt-Anchor" href="#37-maieutic-prompting-多维度的提示">#</a> 3.7 Maieutic prompting （多维度的提示）</h2>
+<p>  多维度的提示是一种类似于自我完善的技术，但它更多的是要求 LLMs 解释自己。 目标是减少 LLMs 输出不一致，以确保得出正确的答案。 要遵循的工作流程是：</p>
+<ul>
+<li>请 LLM 回答问题</li>
+<li>对于答案的每一部分，请 LLM 更深入地解释。</li>
+<li>如果存在不一致，则丢弃不一致的部分。</li>
+</ul>
+<p>  重复 2 和 3，直到您完成所有部分并对答案感到满意为止。</p>
+<h1 id="四-提示的关键要素"><a class="markdownIt-Anchor" href="#四-提示的关键要素">#</a> 四、提示的关键要素</h1>
+<p>  在之前的页面中，我们已经讨论了几种不同的提示策略。本页将提供一般建议，这些建议对于提示的实际编写很重要</p>
+<p>（1）基本事实的重要性不大</p>
+<p>  令人惊讶的是，在提示中提供少量 exemplars 时，实际答案 (gold) 并不重要。即使在样本中提供随机标签，性能也几乎不受影响。</p>
+<p>（2）标签空间很重要</p>
+<p>  尽管样本中的黄金标签并不重要，但 labelspace 很重要。即使从标签空间中提供随机标签，也有助于大语言模型更好地理解标签空间并提高结果。此外，正确地在示例中表示标签空间的分布很重要。与在示例中从标签空间中均匀采样不同，最好按照标签的真实分布进行采样。</p>
+<p>（3）格式很重要</p>
+<p>  样本的格式或许是最重要的部分，因为它指示大语言格式如何正确地格式化其对提示的答案。</p>
+<p>  例如，请考虑以下样本。它们使用全大写的单词作为答案。尽管这些答案完全错误（2+2 不是 50），但 GPT-3 正确地回答了最后一个问题，并按照其他样本的格式进行回答。</p>
+<figure class="highlight markdown"><figcaption data-lang="markdown"></figcaption><table><tr><td data-num="1"></td><td><pre>2+2等于多少？ </pre></td></tr><tr><td data-num="2"></td><td><pre>五十</pre></td></tr><tr><td data-num="3"></td><td><pre>20+5等于多少？</pre></td></tr><tr><td data-num="4"></td><td><pre>四十三</pre></td></tr><tr><td data-num="5"></td><td><pre>12+9等于多少？</pre></td></tr><tr><td data-num="6"></td><td><pre>二十一</pre></td></tr></table></figure><p>  以下是一些值得考虑的良好做法：</p>
+<ul>
+<li>指定上下文。 上下文很重要，您可以指定的领域、主题等越多越好。</li>
+<li>限制输出。 如果您想要特定数量的项目或特定长度，请指定。</li>
+<li>指定内容和方式。 请记住提及您想要什么以及您想要如何实现，例如 “创建一个包含路由产品和客户的 Python Web API，将其分为 3 个文件”。</li>
+<li>使用模板。 通常，您会希望使用公司的数据来丰富提示。 使用模板来执行此操作。 模板可以包含用实际数据替换的变量。</li>
+<li>拼写正确。 LLMs 可能会为您提供正确的答案，但如果您拼写正确，您会得到更好的答案。</li>
+</ul>
+<h1 id="五-din-sql和pet-sql"><a class="markdownIt-Anchor" href="#五-din-sql和pet-sql">#</a> 五、DIN-SQL 和 PET-SQL</h1>
+<p>  用于参赛《中兴捧月大赛 - 精言妙喻》，主要参考论文有 DIN-SQL：《DIN-SQL: Decomposed In-Context Learning of Text-to-SQL with Self-Correction》，PET-SQL：《PET-SQL: A Prompt-Enhanced Two-Round Refinement of Text-to-SQL with Cross-consistency》。两篇论文的主要思路如下：</p>
+<p><img data-src="/images/AI/Prompt_engineering/5.1.jpg" alt=""></p>
+<h1 id="六-中兴捧月大赛-精言妙喻个人初赛代码及思路"><a class="markdownIt-Anchor" href="#六-中兴捧月大赛-精言妙喻个人初赛代码及思路">#</a> 六、《中兴捧月大赛 - 精言妙喻》个人初赛代码及思路</h1>
+<p>  具体文件可见 U 盘备份–&gt; 科研文件–&gt;9、第十四届中兴捧月全球精英挑战赛等。</p>
+
+      <div class="tags">
+          <a href="/tags/AI/" rel="tag"><i class="ic i-tag"></i> AI</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2024-07-23 16:58:17" itemprop="dateModified" datetime="2024-07-23T16:58:17+08:00">2024-07-23</time>
+  </span>
+  <span id="2024/07/23/AI/Prompt_engineering/" class="item leancloud_visitors" data-flag-title="大模型提示词工程（Prompt Engineering）" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2024/07/23/math/least_square_method/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;wxhKB2L9&#x2F;img-2000875708.jpg" title="最小二乘法">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 数学基础</span>
+  <h3>最小二乘法</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2024/07/24/math/PCA/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;FKf72zzC&#x2F;img-2000995050.jpg" title="主成分分析（PCA）">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 数学基础</span>
+  <h3>主成分分析（PCA）</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-%E4%BB%80%E4%B9%88%E6%98%AF%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text"> 一、什么是提示词工程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C-%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E9%9C%80%E8%A6%81%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text"> 二、为什么我们需要提示词工程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89-%E6%8F%90%E7%A4%BA%E5%B7%A5%E7%A8%8B%E7%9A%84%E6%8A%80%E5%B7%A7"><span class="toc-number">3.</span> <span class="toc-text"> 三、提示工程的技巧</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#31-zero-shot-prompting-%E9%9B%B6%E6%A0%B7%E6%9C%AC%E6%8F%90%E7%A4%BA"><span class="toc-number">3.1.</span> <span class="toc-text"> 3.1 Zero-shot prompting （零样本提示）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#32-few-shot-prompting-%E5%B0%91%E6%A0%B7%E6%9C%AC%E6%8F%90%E7%A4%BA"><span class="toc-number">3.2.</span> <span class="toc-text"> 3.2 Few-shot prompting （少样本提示）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#33-chain-of-thought-cot-%E6%80%9D%E7%BB%B4%E9%93%BE"><span class="toc-number">3.3.</span> <span class="toc-text"> 3.3 Chain-of-thought （CoT, 思维链）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#34-generated-knowledge-%E7%9F%A5%E8%AF%86%E7%94%9F%E6%88%90"><span class="toc-number">3.4.</span> <span class="toc-text"> 3.4 Generated knowledge （知识生成）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#35-least-to-most-ltm-%E4%BB%8E%E5%B0%91%E5%88%B0%E5%A4%9A"><span class="toc-number">3.5.</span> <span class="toc-text"> 3.5 Least to Most （LtM, 从少到多）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#36-self-refine-critique-the-results-%E8%87%AA%E6%88%91%E5%AE%8C%E5%96%84%E8%B4%A8%E7%96%91%E7%BB%93%E6%9E%9C"><span class="toc-number">3.6.</span> <span class="toc-text"> 3.6 Self-refine, critique the results （自我完善，质疑结果）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#37-maieutic-prompting-%E5%A4%9A%E7%BB%B4%E5%BA%A6%E7%9A%84%E6%8F%90%E7%A4%BA"><span class="toc-number">3.7.</span> <span class="toc-text"> 3.7 Maieutic prompting （多维度的提示）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B-%E6%8F%90%E7%A4%BA%E7%9A%84%E5%85%B3%E9%94%AE%E8%A6%81%E7%B4%A0"><span class="toc-number">4.</span> <span class="toc-text"> 四、提示的关键要素</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94-din-sql%E5%92%8Cpet-sql"><span class="toc-number">5.</span> <span class="toc-text"> 五、DIN-SQL 和 PET-SQL</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD-%E4%B8%AD%E5%85%B4%E6%8D%A7%E6%9C%88%E5%A4%A7%E8%B5%9B-%E7%B2%BE%E8%A8%80%E5%A6%99%E5%96%BB%E4%B8%AA%E4%BA%BA%E5%88%9D%E8%B5%9B%E4%BB%A3%E7%A0%81%E5%8F%8A%E6%80%9D%E8%B7%AF"><span class="toc-number">6.</span> <span class="toc-text"> 六、《中兴捧月大赛 - 精言妙喻》个人初赛代码及思路</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2024/02/01/AI/Neural_networks_classification/" rel="bookmark" title="神经网络大致分类">神经网络大致分类</a></li><li><a href="/2024/05/16/AI/LLM/" rel="bookmark" title="大模型LLM学习">大模型LLM学习</a></li><li><a href="/2024/05/16/AI/LLM_finetune/" rel="bookmark" title="大模型微调">大模型微调</a></li><li class="active"><a href="/2024/07/23/AI/Prompt_engineering/" rel="bookmark" title="大模型提示词工程（Prompt Engineering）">大模型提示词工程（Prompt Engineering）</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Ember"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">Ember</p>
+  <div class="description" itemprop="description">🌸学习笔记🌸</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">77</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">14</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">23</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3FpYW5xaXUtY2VsbA==" title="https:&#x2F;&#x2F;github.com&#x2F;qianqiu-cell"><i class="ic i-github"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjI4MzI1Njc4NTFAcXEuY29t" title="mailto:2832567851@qq.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2024/07/23/math/least_square_method/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2024/07/24/math/PCA/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/latex/" title="分类于 latex">latex</a>
+</div>
+
+    <span><a href="/2024/03/01/latex/visio_eps/" title="Visio图片导出PDF转EPS格式">Visio图片导出PDF转EPS格式</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/hardware/" title="分类于 硬件开发">硬件开发</a>
+</div>
+
+    <span><a href="/2023/01/30/hardware/Quartus/" title="Quartus基础教程">Quartus基础教程</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2024/03/19/code/python/python_file/" title="Python文件操作">Python文件操作</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/office/" title="分类于 office技巧">office技巧</a>
+</div>
+
+    <span><a href="/2023/01/02/office/office/" title="Office技巧">Office技巧</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/control/" title="分类于 控制工程">控制工程</a>
+</div>
+
+    <span><a href="/2022/11/22/control/Gram-matrix/" title="格拉姆矩阵判据">格拉姆矩阵判据</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
+</div>
+
+    <span><a href="/2022/12/23/optimal/signal_objective_optimization/" title="单目标搜索算法汇总">单目标搜索算法汇总</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+</div>
+
+    <span><a href="/2022/11/07/blog/hexo_style/" title="shoka格式">shoka格式</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/research/" title="分类于 科学研究">科学研究</a>
+</div>
+
+    <span><a href="/2023/08/01/research/SciHub/" title="sci-hub的使用方法">sci-hub的使用方法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/AI/" title="分类于 AI">AI</a>
+</div>
+
+    <span><a href="/2024/02/01/AI/Neural_networks_classification/" title="神经网络大致分类">神经网络大致分类</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Computer/" title="分类于 电脑硬件知识">电脑硬件知识</a>
+</div>
+
+    <span><a href="/2023/09/06/Computer/monitor/" title="显示器的一些小tricks">显示器的一些小tricks</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Ember @ 唯爱ぺ灬babyル</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">244k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">3:41</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2024/07/23/AI/Prompt_engineering/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i> 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

@@ -5,24 +5,24 @@
     <link href="http://qianqiu-cell.github.io" />
     <updated>2024-03-18T16:00:00.000Z</updated>
     <category term="电脑硬件知识" />
-    <category term="AI" />
-    <category term="博客搭建" />
     <category term="显示器" />
+    <category term="博客搭建" />
+    <category term="控制工程" />
+    <category term="数学基础" />
+    <category term="AI" />
+    <category term="硬件开发" />
+    <category term="区间不确定性" />
     <category term="latex技巧" />
     <category term="论文编辑" />
-    <category term="硬件开发" />
-    <category term="数学基础" />
-    <category term="区间不确定性" />
-    <category term="office技巧" />
     <category term="最优化" />
     <category term="多目标最优化" />
     <category term="单目标最优化" />
-    <category term="控制工程" />
+    <category term="office技巧" />
     <category term="科学研究" />
     <category term="C++" />
     <category term="编程技巧" />
-    <category term="matlab" />
     <category term="leetcode" />
+    <category term="matlab" />
     <category term="python" />
     <category term="系统设计" />
     <category term="Qt" />
@@ -1142,6 +1142,20 @@
         <updated>2023-07-07T16:00:00.000Z</updated>
     </entry>
     <entry>
+        <id>http://qianqiu-cell.github.io/2023/07/04/code/python/python_QSS/</id>
+        <title>python+QSS应用</title>
+        <link rel="alternate" href="http://qianqiu-cell.github.io/2023/07/04/code/python/python_QSS/"/>
+        <content type="html">&lt;p&gt;  在使用 pyside2&amp;amp;6 或 pyqt 设计系统界面时，可以使用 QSS 文件来一键修改系统的界面，搜集到的一些 QSS 网站如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;（1）&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0dUUk9OSUNLL1FTUw==&#34;&gt;https://github.com/GTRONICK/QSS&lt;/span&gt;（同步保存至 U 盘备份）&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+        <category term="编程技巧" />
+        <category term="python" />
+        <category term="系统设计" />
+        <updated>2023-07-03T16:00:00.000Z</updated>
+    </entry>
+    <entry>
         <id>http://qianqiu-cell.github.io/2023/07/04/code/python/python_RMFS_pip_list/</id>
         <title>本科毕业设计使用python环境</title>
         <link rel="alternate" href="http://qianqiu-cell.github.io/2023/07/04/code/python/python_RMFS_pip_list/"/>
@@ -1532,20 +1546,6 @@ zope.interface                5.4.0
         <category term="多目标最优化" />
         <category term="编程技巧" />
         <category term="python" />
-        <updated>2023-07-03T16:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <id>http://qianqiu-cell.github.io/2023/07/04/code/python/python_QSS/</id>
-        <title>python+QSS应用</title>
-        <link rel="alternate" href="http://qianqiu-cell.github.io/2023/07/04/code/python/python_QSS/"/>
-        <content type="html">&lt;p&gt;  在使用 pyside2&amp;amp;6 或 pyqt 设计系统界面时，可以使用 QSS 文件来一键修改系统的界面，搜集到的一些 QSS 网站如下：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;（1）&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0dUUk9OSUNLL1FTUw==&#34;&gt;https://github.com/GTRONICK/QSS&lt;/span&gt;（同步保存至 U 盘备份）&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-        <category term="编程技巧" />
-        <category term="python" />
-        <category term="系统设计" />
         <updated>2023-07-03T16:00:00.000Z</updated>
     </entry>
     <entry>
