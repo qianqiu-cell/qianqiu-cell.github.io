@@ -1,0 +1,608 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Keep Moving" href="http://qianqiu-cell.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Keep Moving" href="http://qianqiu-cell.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Keep Moving" href="http://qianqiu-cell.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="AI" />
+
+
+<link rel="canonical" href="http://qianqiu-cell.github.io/2024/09/12/AI/CLIP/">
+
+
+
+  <title>
+CLIP - AI |
+唯爱ぺ灬babyル = Keep Moving = 天将降大任于斯人也</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">CLIP
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2024-09-12 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-09-12T00:00:00+08:00">2024-09-12</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>4.9k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>4 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">唯爱ぺ灬babyル</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://i.postimg.cc/QCLryn7y/img-2000883232.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/QC6sbL1G/img-2001097409.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/NjBzLwY4/img-2000874590.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/JhnMF261/img-2001033422.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/02FQ7xcp/img-2001027809.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/gkDXh11s/img-2000995039.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/AI/" itemprop="item" rel="index" title="分类于 AI"><span itemprop="name">AI</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://qianqiu-cell.github.io/2024/09/12/AI/CLIP/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="Ember">
+    <meta itemprop="description" content="天将降大任于斯人也, 🌸学习笔记🌸">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Keep Moving">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="一-简介"><a class="markdownIt-Anchor" href="#一-简介">#</a> 一、简介</h1>
+<h2 id="11-前言"><a class="markdownIt-Anchor" href="#11-前言">#</a> 1.1 前言</h2>
+<p>   <code>CLIP</code>  是 <code>OpenAI</code>  在 <code>2021</code>  年 <code>2</code>  月发表的一篇文章，其全称为 <code>Contrastive Language-Image Pre-training</code> ，即一种基于对比文本 - 图像对的预训练方法。 <code>CLIP</code>  用文本作为监督信号来训练可迁移的视觉模型，使得最终模型的 <code>zero-shot</code>  效果堪比 <code>ResNet50</code> ，泛化性非常好。</p>
+<p>   <code>zero-shot</code>  就是直接推理，用见过的图片特征去判断没见过的图片的类别，而完全不用下游任务训练集进行微调。（相当于把模型用作特征提取，但是没有分类头）</p>
+<p>  作者在 30 多个不同的计算机视觉数据集上进行基准测试，（这些数据集涵盖了 <code>OCR</code> ( <code>Optical Character Recognition</code> , 光学字符识别)、视频中的动作识别、地理定位和许多类型的细粒度对象分类等任务）， <code>CLIP</code>  通常都能够与监督模型的 <code>baseline</code>  效果相媲美。</p>
+<p>  例如在 <code>ImageNet</code>  数据集上， <code>CLIP</code>  模型在不使用 <code>ImageNet</code>  数据集的任何一张图片进行训练的的情况下，最终模型精度能跟一个有监督的训练好的 <code>ResNet-50</code>  打成平手（在 <code>ImageNet</code>  上 <code>zero-shot</code>  精度为 <code>76.2%</code> ，这在之前一度被认为是不可能的）。</p>
+<h2 id="12-自然语言监督的优势"><a class="markdownIt-Anchor" href="#12-自然语言监督的优势">#</a> 1.2 自然语言监督的优势</h2>
+<p>  使用自然语言监督信号来训练视觉模型，有两个最重要的优势：</p>
+<ul>
+<li>
+<p><strong>不需要采用特别的标注数据</strong>，扩展性更强。比如 <code>ImageNet</code>  需要先定义好 <code>1000</code>  个类，然后根据这些类去下载图片，清理数据集，再去标注所有图片，过程很复杂。而 CLIP 不要求这种经典的 &quot;机器学习兼容&quot; 的标注格式，只需要下载文字 - 图片对；且没有 n 选 1 的标签之后，模型的输入输出自由度大了很多。</p>
+</li>
+<li>
+<p><code>CLIP</code>  学习到的是图像结合文字的多模态特征，从而<strong>实现灵活的 zero-shot 迁移</strong>。如果只是单模态的特征，无论是类似 <code>MOCO</code>  还是 <code>MAE</code> ，都很难做到这一点（ <code>zero-shot</code>  必须要加入文字特征才能做到）。</p>
+</li>
+</ul>
+<h1 id="13-总结"><a class="markdownIt-Anchor" href="#13-总结">#</a> 1.3 总结</h1>
+<p>  现有的 <code>CV</code>  模型基本都是基于人工标注的数据集进行训练的，然后用来预测一组提前定义好的物体类别。这种提前定义好的标签集合，会大大简化问题本身（比如 <code>ImageNet</code>  固定的 <code>1000</code>  个类， <code>COCO</code>  数据集固定 <code>80</code>  个类等等）。但正因如此，这种受限的监督信号限制了模型的泛化性和可用性。比如大多数模型都只能预测已知的图像类别。对于没有见过的图像类别，需要额外的信息才能识别。这样<strong>每次新增一些类别，都需要重新收集数据，训练一个新的模型</strong>。</p>
+<p>  作者认为，直接从自然语言中得到监督信息是一个很有前途的选择，因为其涵盖的范围更广（只要是语言描述过的物体，都有可能让视觉模型去识别）。 <code>CLIP</code>  利用多模态的对比学习，使得自然语言可以引导模型学习到视觉概念，从而实现非常灵活的 <code>zero-shot</code>  迁移（把分类问题转化为了跨模态检索问题）。</p>
+<p>  之前使用自然语言监督进行图像表示学习的工作很少，并且效果往往不如有监督模型，主要有两个原因：</p>
+<ul>
+<li><strong>早期 nlp 模型不太好学</strong>。比如早期的 <code>n-gram</code>  模型非常复杂，不好跨模态训练。但是随着 <code>transformer</code>  的兴起，像 <code>BERT</code>  和 <code>GPT</code>  这种具有上下文表示的自监督训练模型做的越来越好， <code>nlp</code>  模型也终于有了取之不尽的文本监督信号，而且使用简单，泛化性好，为多模态训练铺平了道路。</li>
+<li>数据集或模型的规模不够。比如 <code>VirTex</code>  和 <code>ICMLM</code>  都只训练了<strong>十几万的图片</strong>； <code>ConVIRT</code>  非常类似 <code>CLIP</code> ，但<strong>只在医疗图像上做了预训练</strong>。从本质上来讲， <code>CLIP</code>  其实并没有太大的创新，它只是<strong>将 ConVIRT 方法进行简化，并采用更大规模的文本 - 图像对数据集来训练</strong>。也可以说，相对于之前的对比学习， <code>CLIP</code>  只是将单模态的样本，换成了多模态的样本。</li>
+</ul>
+<h1 id="二-方法"><a class="markdownIt-Anchor" href="#二-方法">#</a> 二、方法</h1>
+<h2 id="21-模型结构"><a class="markdownIt-Anchor" href="#21-模型结构">#</a> 2.1 模型结构</h2>
+<p>  如下图所示， <code>CLIP</code>  的输入是一对对配对好的的<strong>图片 - 文本对</strong>（比如输入是一张狗的图片，对应文本也表示这是一只狗）。这些文本和图片分别通过 <code>Text Encoder</code>  和 <code>Image Encoder</code>  输出对应的特征。然后在这些输出的文字特征和图片特征上进行<strong>对比学习</strong>。</p>
+<p><img data-src="/images/AI/CLIP/2.1.png" alt=""></p>
+<p>  假如模型输入的是<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 对图片 - 文本对，那么这<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 对互相配对的图像–文本对是<strong>正样本</strong>（下图输出特征矩阵对角线上标识蓝色的部位），其它<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>n</mi><mn>2</mn></msup><mtext>−</mtext><mi>n</mi></mrow><annotation encoding="application/x-tex">n^2 − n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord">−</span><span class="mord mathnormal">n</span></span></span></span> 对样本都是<strong>负样本</strong>。这样模型的训练过程就是最大化<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 个正样本的相似度，同时最小化<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>n</mi><mn>2</mn></msup><mtext>−</mtext><mi>n</mi></mrow><annotation encoding="application/x-tex">n^2 − n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord">−</span><span class="mord mathnormal">n</span></span></span></span> 个负样本的相似度。</p>
+<p>其中：</p>
+<ul>
+<li>
+<p><code>Text Encoder</code>  可以采用 <code>NLP</code>  中常用的 <code>text transformer</code>  模型；而 <code>Image Encoder</code>  可以采用常用 <code>CNN</code>  模型或者 <code>vision transformer</code>  等模型</p>
+</li>
+<li>
+<p>相似度是计算文本特征和图像特征的余弦相似性 <code>cosine similarity</code></p>
+</li>
+<li>
+<p>为了训练 <code>CLIP</code> ， <code>OpenAI</code>  从互联网收集了共<strong> 4 个亿的文本 - 图像对</strong>，论文称之为 <code>WIT(Web Image Text)</code> 。 <code>WIT</code>  质量很高，而且清理的非常好，其规模相当于 <code>JFT-300M</code> ，这也是 <code>CLIP</code>  如此强大的原因之一（后续在 <code>WIT</code>  上还孕育出了 <code>DALL-E</code>  模型）</p>
+</li>
+</ul>
+<p><strong>分类</strong></p>
+<p>   <code>CLIP</code>  可以直接实现 <code>zero-shot</code>  的图像分类，即不需要任何训练和微调，这也是 <code>CLIP</code>  亮点和强大之处。用 <code>CLIP</code>  实现 <code>zero-shot</code>  分类只需要简单的两步：</p>
+<ul>
+<li>
+<p><strong>根据任务的分类标签构建每个类别的描述文本</strong>： <code>A photo of &#123;label&#125;</code> ，然后将这些文本送入 <code>Text Encoder</code>  得到对应的文本特征。如果类别数目为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span>，那么将得到<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 个文本特征；</p>
+</li>
+<li>
+<p>将要预测的图像送入 <code>Image Encoder</code>  得到图像特征，然后与<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathnormal">n</span></span></span></span> 个文本特征计算缩放的余弦相似度（和训练过程保持一致），然后<strong>选择相似度最大的文本对应的类别作为图像分类预测结果</strong>。进一步地，可以将这些相似度看成 <code>logits</code> ，送入 <code>softmax</code>  后可以到每个类别的预测概率。</p>
+</li>
+</ul>
+<p>  我们不再需要预先定义好的标签（类别）列表，直接将图片喂给不同的文本句子，就可以知道图片中是否有我们感兴趣的物体。即， <code>CLIP</code>  的多模态特性（利用文本监督信号）为具体的任务构建了动态的分类器，<strong>使得模型不再受限于预先定义好的类别，更加具有通用性和可用性</strong>。</p>
+<h2 id="22-预训练方法"><a class="markdownIt-Anchor" href="#22-预训练方法">#</a> 2.2 预训练方法</h2>
+<p>   <code>CV</code>  领域的模型都很大，训练起来也很贵。比如 <code>noise student</code>  之前在 <code>ImageNet</code>  一直霸榜，但是这个模型需要在一个 <code>TPUv3</code>  上训练 <code>33</code>  年，这还只是在包含 <code>1000</code>  类的 <code>ImageNet</code>  上预训练的，而且只训练视觉特征。</p>
+<p>  由于训练数据量和模型计算量都很大，训练效率成为一个至关重要的因素。作者做了很多尝试，最终选择了对比学习：</p>
+<ul>
+<li>
+<p><code>VirTex</code>  模型：预测文本，对应下图蓝色线 <code>Transformer Language Model</code> ： <code>Image Encoder</code>  使用 <code>CNN</code>  模型， <code>Text Encoder</code>  使用 <code>transformer</code>  模型，两个模型一起从头训练，任务是预测图片对应的文本（ <code>image caption</code> ）。这种方法的训练效率太慢，因为根据图片进行文本描述，可能性太多了，你可以从各个角度去描述一张图片。</p>
+</li>
+<li>
+<p><code>Bag of Words Prediction</code> （橘色线）：不要求每个词都是按顺序的进行预测，所有词都预测出来就行。这样放宽了约束，训练速度提高了三倍。</p>
+</li>
+<li>
+<p><code>CLIP</code> ：简化版的 <code>ConVIRT</code> ，基于对比学习。只需要判断图文是否配对，进一步简化了训练任务，训练效率一下子提升 <code>4</code>  倍（绿色线）训练任务更加合理。因为训练数据所包含的文本 - 图像对是从互联网收集来的，它们存在一定的噪音，二者并不完全匹配。适当的降低训练目标，反而能取得更好的收敛。</p>
+</li>
+</ul>
+<p><img data-src="/images/AI/CLIP/2.2.png" alt=""></p>
+<p>(1)  <code>Text Encoder</code>  架构</p>
+<p>最终 <code>Text Encoder</code>  固定选择一个包含 <code>63M</code>  参数的 <code>text transformer</code>  模型，</p>
+<p>(2)  <code>Image Encoder</code>  架构</p>
+<ul>
+<li>
+<p><code>ResNet</code> ： <code>ResNet50</code> ， <code>ResNet101</code> ， <code>RN50x4</code> ， <code>RN50x16</code>  和 <code>RNx64</code> （后面三个模型是按照 <code>EfficientNet</code>  缩放规则对 <code>ResNet</code>  分别增大 <code>4x</code> ， <code>16x</code>  和 <code>64x</code>  得到）</p>
+</li>
+<li>
+<p><code>ViT</code> ： <code>ViT-B/32</code> ， <code>ViT-B/16</code>  和 <code>ViT-L/14</code> 。</p>
+</li>
+</ul>
+<p>(3) 所有的模型都训练 32 个 epochs，采用 AdamW 优化器，batch size=32768</p>
+<p>(4) 只在 ResNet50 上训练一个 epoch 进行超参搜索，没有进行进一步的调参</p>
+<p>(5) <strong>数据集非常大，几乎不会出现过拟合，所以 Image Encoder 和 Text Encoder 不需要提前进行预训练</strong>。</p>
+<p>(6) 只使用线性投射层（线性非线性影响不大）</p>
+<p>(7) 数据增强只使用图片的随机剪裁，这是因为数据集非常大</p>
+<p>(8) 对比学习目标函数中的超参数 τ，设置成可学习的标量，在训练中自动优化，而不用慢慢调参（还是因为数据集太大，训练很贵）。</p>
+<h2 id="23-伪代码"><a class="markdownIt-Anchor" href="#23-伪代码">#</a> 2.3 伪代码</h2>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># image_encoder - ResNet or Vision Transformer</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token comment"># text_encoder - CBOW or Text Transformer</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token comment"># I [n, h, w, c] - 输入图片维度</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token comment"># T [n, l] - 输入文本维度，l 表示序列长度</span></pre></td></tr><tr><td data-num="5"></td><td><pre></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token comment"># W_i[d_i, d_e] - learned proj of image to embed</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token comment"># W_t[d_t, d_e] - learned proj of text to embed</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token comment"># t - learned temperature parameter</span></pre></td></tr><tr><td data-num="9"></td><td><pre></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token comment">#  分别提取图像特征和文本特征</span></pre></td></tr><tr><td data-num="11"></td><td><pre>I_f <span class="token operator">=</span> image_encoder<span class="token punctuation">(</span>I<span class="token punctuation">)</span> <span class="token comment">#[n, d_i]</span></pre></td></tr><tr><td data-num="12"></td><td><pre>T_f <span class="token operator">=</span> text_encoder<span class="token punctuation">(</span>T<span class="token punctuation">)</span> <span class="token comment">#[n, d_t]</span></pre></td></tr><tr><td data-num="13"></td><td><pre></pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token comment"># 对两个特征进行线性投射，得到相同维度的特征 d_e，并进行 l2 归一化，保持数据尺度的一致性</span></pre></td></tr><tr><td data-num="15"></td><td><pre><span class="token comment"># 多模态 embedding [n, d_e]</span></pre></td></tr><tr><td data-num="16"></td><td><pre>I_e <span class="token operator">=</span> l2_normalize<span class="token punctuation">(</span>np<span class="token punctuation">.</span>dot<span class="token punctuation">(</span>I_f<span class="token punctuation">,</span> W_i<span class="token punctuation">)</span><span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="17"></td><td><pre>T_e <span class="token operator">=</span> l2_normalize<span class="token punctuation">(</span>np<span class="token punctuation">.</span>dot<span class="token punctuation">(</span>T_f<span class="token punctuation">,</span> W_t<span class="token punctuation">)</span><span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="18"></td><td><pre></pre></td></tr><tr><td data-num="19"></td><td><pre><span class="token comment"># 计算缩放的余弦相似度：[n, n]</span></pre></td></tr><tr><td data-num="20"></td><td><pre>logits <span class="token operator">=</span> np<span class="token punctuation">.</span>dot<span class="token punctuation">(</span>I_e<span class="token punctuation">,</span> T_e<span class="token punctuation">.</span>T<span class="token punctuation">)</span> <span class="token operator">*</span> np<span class="token punctuation">.</span>exp<span class="token punctuation">(</span>t<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="21"></td><td><pre></pre></td></tr><tr><td data-num="22"></td><td><pre><span class="token comment"># symmetric loss function</span></pre></td></tr><tr><td data-num="23"></td><td><pre>labels <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token comment">#  对角线元素的 labels</span></pre></td></tr><tr><td data-num="24"></td><td><pre>loss_i <span class="token operator">=</span> cross_entropy_loss<span class="token punctuation">(</span>logits<span class="token punctuation">,</span> labels<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment"># image loss</span></pre></td></tr><tr><td data-num="25"></td><td><pre>loss_t <span class="token operator">=</span> cross_entropy_loss<span class="token punctuation">(</span>logits<span class="token punctuation">,</span> labels<span class="token punctuation">,</span> axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment"># text loss</span></pre></td></tr><tr><td data-num="26"></td><td><pre>loss <span class="token operator">=</span> <span class="token punctuation">(</span>loss_i <span class="token operator">+</span> loss_t<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">2</span> <span class="token comment"># 对称式的目标函数</span></pre></td></tr></table></figure><p>  在 <code>MOCO</code>  中，真实标签都是 <code>0</code> ，因为其正样本都是放在第一位，所以正样本对应的索引永远是 <code>0</code> ；但是在 <code>CLIP</code>  中，正样本都是在对角线上，即<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>T</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>I</mi><mn>2</mn></msub><mo separator="true">,</mo><msub><mi>T</mi><mn>2</mn></msub><mo separator="true">,</mo><mo>…</mo></mrow><annotation encoding="application/x-tex">I_1,T_1,I_2,T_2,\dots</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span></span></span></span>，所以真实标签为 <code>np.arange(n)</code> 。</p>
+<h1 id="三-参考程序"><a class="markdownIt-Anchor" href="#三-参考程序">#</a> 三、参考程序</h1>
+<p>参考：<span class="exturl" data-url="aHR0cHM6Ly9odWdnaW5nZmFjZS5jby9vcGVuYWkvY2xpcC12aXQtbGFyZ2UtcGF0Y2gxNA==">https://huggingface.co/openai/clip-vit-large-patch14</span></p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image</pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">from</span> transformers <span class="token keyword">import</span> CLIPProcessor<span class="token punctuation">,</span> CLIPModel</pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre>model <span class="token operator">=</span> CLIPModel<span class="token punctuation">.</span>from_pretrained<span class="token punctuation">(</span><span class="token string">"E:/python/else/LLM_learn/4_CLIP/model"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="6"></td><td><pre>processor <span class="token operator">=</span> CLIPProcessor<span class="token punctuation">.</span>from_pretrained<span class="token punctuation">(</span><span class="token string">"E:/python/else/LLM_learn/4_CLIP/model"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="7"></td><td><pre></pre></td></tr><tr><td data-num="8"></td><td><pre>image <span class="token operator">=</span> Image<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'1.jpg'</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="9"></td><td><pre></pre></td></tr><tr><td data-num="10"></td><td><pre>inputs <span class="token operator">=</span> processor<span class="token punctuation">(</span>text<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">"a photo of a cat"</span><span class="token punctuation">,</span> <span class="token string">"a photo of a dog"</span><span class="token punctuation">]</span><span class="token punctuation">,</span> images<span class="token operator">=</span>image<span class="token punctuation">,</span> return_tensors<span class="token operator">=</span><span class="token string">"pt"</span><span class="token punctuation">,</span> padding<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="11"></td><td><pre></pre></td></tr><tr><td data-num="12"></td><td><pre>outputs <span class="token operator">=</span> model<span class="token punctuation">(</span><span class="token operator">**</span>inputs<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="13"></td><td><pre>logits_per_image <span class="token operator">=</span> outputs<span class="token punctuation">.</span>logits_per_image  <span class="token comment"># this is the image-text similarity score</span></pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span>logits_per_image<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="15"></td><td><pre>probs <span class="token operator">=</span> logits_per_image<span class="token punctuation">.</span>softmax<span class="token punctuation">(</span>dim<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>  <span class="token comment"># we can take the softmax to get the label probabilities</span></pre></td></tr><tr><td data-num="16"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span>probs<span class="token punctuation">)</span></pre></td></tr></table></figure>
+      <div class="tags">
+          <a href="/tags/AI/" rel="tag"><i class="ic i-tag"></i> AI</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2024-09-14 16:11:41" itemprop="dateModified" datetime="2024-09-14T16:11:41+08:00">2024-09-14</time>
+  </span>
+  <span id="2024/09/12/AI/CLIP/" class="item leancloud_visitors" data-flag-title="CLIP" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2024/08/28/search/Search_for_a_Stationary_Target/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;0jQJVfTF&#x2F;img-2001077740.jpg" title="搜索一个静止的目标">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> search</span>
+  <h3>搜索一个静止的目标</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text"> 一、简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E5%89%8D%E8%A8%80"><span class="toc-number">1.1.</span> <span class="toc-text"> 1.1 前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E7%9B%91%E7%9D%A3%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="toc-number">1.2.</span> <span class="toc-text"> 1.2 自然语言监督的优势</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#13-%E6%80%BB%E7%BB%93"><span class="toc-number">2.</span> <span class="toc-text"> 1.3 总结</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C-%E6%96%B9%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text"> 二、方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#21-%E6%A8%A1%E5%9E%8B%E7%BB%93%E6%9E%84"><span class="toc-number">3.1.</span> <span class="toc-text"> 2.1 模型结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-%E9%A2%84%E8%AE%AD%E7%BB%83%E6%96%B9%E6%B3%95"><span class="toc-number">3.2.</span> <span class="toc-text"> 2.2 预训练方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-%E4%BC%AA%E4%BB%A3%E7%A0%81"><span class="toc-number">3.3.</span> <span class="toc-text"> 2.3 伪代码</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89-%E5%8F%82%E8%80%83%E7%A8%8B%E5%BA%8F"><span class="toc-number">4.</span> <span class="toc-text"> 三、参考程序</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2024/02/01/AI/Neural_networks_classification/" rel="bookmark" title="神经网络大致分类">神经网络大致分类</a></li><li><a href="/2024/05/16/AI/Transformer/" rel="bookmark" title="Transformer模型">Transformer模型</a></li><li><a href="/2024/07/23/AI/Prompt_engineering/" rel="bookmark" title="大模型提示词工程（Prompt Engineering）">大模型提示词工程（Prompt Engineering）</a></li><li><a href="/2024/07/29/AI/LLM_finetune/" rel="bookmark" title="大模型微调">大模型微调</a></li><li class="active"><a href="/2024/09/12/AI/CLIP/" rel="bookmark" title="CLIP">CLIP</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Ember"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">Ember</p>
+  <div class="description" itemprop="description">🌸学习笔记🌸</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">81</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">15</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">24</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3FpYW5xaXUtY2VsbA==" title="https:&#x2F;&#x2F;github.com&#x2F;qianqiu-cell"><i class="ic i-github"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjI4MzI1Njc4NTFAcXEuY29t" title="mailto:2832567851@qq.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/01/code/python/python_qt_install/" title="Python运行pyside2报错问题解决">Python运行pyside2报错问题解决</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/07/04/code/python/python_QSS/" title="python+QSS应用">python+QSS应用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/23/code/python/python_type_hints/" title="python类型提示">python类型提示</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2024/02/20/code/python/python_pytorch_tensorboard/" title="Pytorch下的Tensorboard的使用">Pytorch下的Tensorboard的使用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
+</div>
+
+    <span><a href="/2022/11/28/math/covariance/" title="数学期望、方差和协方差">数学期望、方差和协方差</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
+</div>
+
+    <span><a href="/2022/12/23/optimal/signal_objective_optimization/" title="单目标搜索算法汇总">单目标搜索算法汇总</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/02/06/code/python/python_array_asarray/" title="np.array和np.asarray区别">np.array和np.asarray区别</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2024/03/19/code/python/python_Iterators_and_Generators/" title="Python迭代器和生成器">Python迭代器和生成器</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
+</div>
+
+    <span><a href="/2024/01/13/math/Orthogonal_polynomial_approximation/" title="正交多项式逼近">正交多项式逼近</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/23/code/python/python_problem/" title="python一些报错的处理">python一些报错的处理</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Ember @ 唯爱ぺ灬babyル</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">271k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">4:06</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2024/09/12/AI/CLIP/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,copy_tex: true,
+    katex: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i> 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

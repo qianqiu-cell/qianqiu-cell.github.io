@@ -89,12 +89,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://i.postimg.cc/DfXWwS2q/img-2001071384.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/hG40x9Cz/img-2000982503.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/jSnKzFjm/img-2001111704.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/KjT7FQYV/img-2000982505.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/02bj6rdk/img-2001027806.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/3RF76QXb/img-2001000245.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/W4X6NhwG/img-2001040735.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/4xsvk6RL/img-2000983214.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/G2gjLZKX/img-2000899915.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/SRLXDPRy/img-2000995033.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/6pWZ1BCF/img-2000975330.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/wv2hWnn6/img-2000883252.jpg"></li>
         </ul>
       </div>
     </header>
@@ -120,7 +120,158 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/11/24/math/conv/" itemprop="url" title="一般情况下的椭圆"><img data-src="https://i.postimg.cc/sfL5xFdh/img-2000973066.jpg"></a>
+    <a href="/2022/12/23/optimal/signal_objective_optimization/" itemprop="url" title="单目标搜索算法汇总"><img data-src="https://i.postimg.cc/dtRLGgZ3/img-2001080622.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2022-12-23 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-12-23T00:00:00+08:00">2022-12-23</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>4.3k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>4 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2022/12/23/optimal/signal_objective_optimization/" itemprop="url" title="单目标搜索算法汇总">单目标搜索算法汇总</a></h3>
+    <div class="excerpt">
+        # 一、最近邻搜索 (Nearest neighbor search, NNS)
+最近邻搜索算法是为 TSP 编程的最简单的贪婪方法之一。
+注：贪婪算法是指在对问题求解时，总是做出在当前看来时最好的选择，也就是说不从整体最优上加以考虑，算法得到的时在某种意义上的局部最优解
+NNS 算法的流程为：
+1、首先固定起点城市，并将起点城市当作当前目标城市
+2、在剩余未被选取的城市中选取距离当前目标城市最近的城市作为下一个目标城市
+3、重复步骤 2 直到所有城市都被依次选取完毕
+最近邻搜索的过程图如下图所示
+
+# 二、试验方法 (Pilot...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/optimal/" itemprop="url" title="最优化"><i class="ic i-flag"></i>最优化</a>
+      </span>
+    </div>
+    <a href="/2022/12/23/optimal/signal_objective_optimization/" itemprop="url" title="单目标搜索算法汇总" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2022/11/28/math/covariance/" itemprop="url" title="数学期望、方差和协方差"><img data-src="https://i.postimg.cc/t4X7kDF5/img-2001080670.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2022-11-28 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-11-28T00:00:00+08:00">2022-11-28</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>2.5k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>2 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2022/11/28/math/covariance/" itemprop="url" title="数学期望、方差和协方差">数学期望、方差和协方差</a></h3>
+    <div class="excerpt">
+        # 一、数学期望 E (x)
+数学期望简称期望或均值，它是随机变量取值的平均值，数学期望的计算公式为
+离散型：
+E(X)=∑ixipiE\left ( X \right ) =\sum_{i}^{} x_{i}p_{i}
+E(X)=i∑​xi​pi​
+连续型：
+E(X)=∫−∞+∞xf(x)dxE\left ( X \right ) =\int_{-\infty }^{+\infty } xf\left ( x \right ) dx
+E(X)=∫−∞+∞​xf(x)dx
+
+数学期望的性质
+
+性质 1：设 c 是常数，则E(c)=cE(c)=cE(c)=c
+性质 2：设 X 是随机变量，c...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/math/" itemprop="url" title="数学基础"><i class="ic i-flag"></i>数学基础</a>
+      </span>
+    </div>
+    <a href="/2022/11/28/math/covariance/" itemprop="url" title="数学期望、方差和协方差" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2022/11/25/math/derivative_of_the_inverse_matrix/" itemprop="url" title="逆矩阵的求导"><img data-src="https://i.postimg.cc/13VSSq0F/img-2000993908.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2022-11-25 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2022-11-25T00:00:00+08:00">2022-11-25</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>1.5k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2022/11/25/math/derivative_of_the_inverse_matrix/" itemprop="url" title="逆矩阵的求导">逆矩阵的求导</a></h3>
+    <div class="excerpt">
+        # 一、结论
+对于矩阵A=(aij(t))n×nA=(a_{ij}(t))_{n\times n}A=(aij​(t))n×n​，其逆矩阵的导数为
+dA−1dt=−A−1dAdtA−1\frac{dA^{-1}}{dt}=-A^{-1}\frac{dA}{dt}A^{-1}
+dtdA−1​=−A−1dtdA​A−1
+#...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/math/" itemprop="url" title="数学基础"><i class="ic i-flag"></i>数学基础</a>
+      </span>
+    </div>
+    <a href="/2022/11/25/math/derivative_of_the_inverse_matrix/" itemprop="url" title="逆矩阵的求导" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2022/11/24/math/conv/" itemprop="url" title="一般情况下的椭圆"><img data-src="https://i.postimg.cc/15PHrcTR/img-2000874612.jpg"></a>
   </div>
   <div class="info">
     
@@ -173,7 +324,7 @@ y
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/11/23/control/spring_damping/" itemprop="url" title="弹簧阻尼系统"><img data-src="https://i.postimg.cc/26P7LgbT/img-2000906776.jpg"></a>
+    <a href="/2022/11/23/control/spring_damping/" itemprop="url" title="弹簧阻尼系统"><img data-src="https://i.postimg.cc/W4nBn1pt/img-2000916918.jpg"></a>
   </div>
   <div class="info">
     
@@ -219,7 +370,7 @@ y
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/11/22/control/Gram-matrix/" itemprop="url" title="格拉姆矩阵判据"><img data-src="https://i.postimg.cc/G2gjLZKX/img-2000899915.jpg"></a>
+    <a href="/2022/11/22/control/Gram-matrix/" itemprop="url" title="格拉姆矩阵判据"><img data-src="https://i.postimg.cc/TwJ0WtxD/img-2001024816.jpg"></a>
   </div>
   <div class="info">
     
@@ -268,7 +419,7 @@ Wc​=∫0∞​eAτBBTeATτdτ
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/11/21/math/svd/" itemprop="url" title="奇异值分解（SVD）"><img data-src="https://i.postimg.cc/vBbrtGqq/img-2000891025.jpg"></a>
+    <a href="/2022/11/21/math/svd/" itemprop="url" title="奇异值分解（SVD）"><img data-src="https://i.postimg.cc/9QkZKGx7/img-2000875749.jpg"></a>
   </div>
   <div class="info">
     
@@ -318,7 +469,7 @@ A=UΣV−1
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/11/16/hardware/stm32cubemx/" itemprop="url" title="使用stm32cubemx新建工程"><img data-src="https://i.postimg.cc/cCVGPk8z/img-2000882697.jpg"></a>
+    <a href="/2022/11/16/hardware/stm32cubemx/" itemprop="url" title="使用stm32cubemx新建工程"><img data-src="https://i.postimg.cc/TYjBGJFB/img-2000931845.jpg"></a>
   </div>
   <div class="info">
     
@@ -369,7 +520,7 @@ A=UΣV−1
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/11/06/blog/hexo/" itemprop="url" title="Github+Hexo+shoka主题搭建个人博客"><img data-src="https://i.postimg.cc/3RF76QXb/img-2001000245.jpg"></a>
+    <a href="/2022/11/06/blog/hexo/" itemprop="url" title="Github+Hexo+shoka主题搭建个人博客"><img data-src="https://i.postimg.cc/15SYWNXB/img-2000931972.jpg"></a>
   </div>
   <div class="info">
     
@@ -453,19 +604,19 @@ Hexo 安装
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">78</span>
+        <span class="count">81</span>
         <span class="name">文章</span>
       </a>
     </div>
     <div class="item categories">
       <a href="/categories/">
-        <span class="count">14</span>
+        <span class="count">15</span>
         <span class="name">分类</span>
       </a>
     </div>
     <div class="item tags">
       <a href="/tags/">
-        <span class="count">23</span>
+        <span class="count">24</span>
         <span class="name">标签</span>
       </a>
     </div>
@@ -553,60 +704,20 @@ Hexo 安装
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/control/" title="分类于 控制工程">控制工程</a>
-</div>
-
-    <span><a href="/2022/11/23/control/spring_damping/" title="弹簧阻尼系统">弹簧阻尼系统</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2024/03/19/code/python/python_Iterators_and_Generators/" title="Python迭代器和生成器">Python迭代器和生成器</a></span>
+    <span><a href="/2024/03/19/code/python/python_file/" title="Python文件操作">Python文件操作</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
+<a href="/categories/AI/" title="分类于 AI">AI</a>
 </div>
 
-    <span><a href="/2023/02/06/code/python/python_array_asarray/" title="np.array和np.asarray区别">np.array和np.asarray区别</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
-</div>
-
-    <span><a href="/2024/07/23/math/least_square_method/" title="最小二乘法">最小二乘法</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
-</div>
-
-    <span><a href="/2024/02/20/code/python/python_pytorch_transforms/" title="Pytorch数据预处理：transforms的使用">Pytorch数据预处理：transforms的使用</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
-</div>
-
-    <span><a href="/2022/11/28/math/covariance/" title="数学期望、方差和协方差">数学期望、方差和协方差</a></span>
+    <span><a href="/2024/07/29/AI/LLM_finetune/" title="大模型微调">大模型微调</a></span>
   </li>
 
       
@@ -623,29 +734,70 @@ Hexo 安装
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
-</div>
-
-    <span><a href="/2023/02/06/code/python/python_bitwise_operators/" title="Python按位运算符">Python按位运算符</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/categories/math/" title="分类于 数学基础">数学基础</a>
 </div>
 
-    <span><a href="/2024/07/24/math/PCA/" title="主成分分析（PCA）">主成分分析（PCA）</a></span>
+    <span><a href="/2024/01/13/math/Orthogonal_polynomial_approximation/" title="正交多项式逼近">正交多项式逼近</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2022/11/01/website_code/" title="一些奇奇怪怪的东西">一些奇奇怪怪的东西</a></span>
+    <span><a href="/2023/07/04/code/python/python_plot_RMFS/" title="python绘制网格分布图像以及甘特图">python绘制网格分布图像以及甘特图</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
+</div>
+
+    <span><a href="/2023/03/16/optimal/SPEA/" title="SPEAI-II">SPEAI-II</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/control/" title="分类于 控制工程">控制工程</a>
+</div>
+
+    <span><a href="/2023/07/09/control/discrete_LQR/" title="离散LQR设计控制器方法">离散LQR设计控制器方法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/02/06/code/python/python_multiply/" title="python字符串、列表、元组乘法">python字符串、列表、元组乘法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/07/04/code/python/python_RMFS_pip_list/" title="本科毕业设计使用python环境">本科毕业设计使用python环境</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/02/code/python/python_try_except/" title="python下的try-except处理异常">python下的try-except处理异常</a></span>
   </li>
 
   </ul>
@@ -670,13 +822,13 @@ Hexo 安装
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">255k 字</span>
+    <span title="站点总字数">271k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">3:52</span>
+    <span title="站点阅读时长">4:06</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
