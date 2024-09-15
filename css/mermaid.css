@@ -323,7 +323,8 @@ pre.graphviz svg > g > polygon {
   shape-rendering: crispEdges;
 }
 .mermaid .milestone {
-  transform: rotate(45deg) scale(0.8, 0.8);
+  -webkit-transform: rotate(45deg) scale(0.8, 0.8);
+          transform: rotate(45deg) scale(0.8, 0.8);
 }
 .mermaid .milestoneText {
   font-style: italic;

@@ -4,30 +4,30 @@
     <title>Keep Moving • Posts by &#34;最优化&#34; category</title>
     <link href="http://qianqiu-cell.github.io" />
     <updated>2023-03-15T16:00:00.000Z</updated>
-    <category term="博客搭建" />
     <category term="AI" />
     <category term="电脑硬件知识" />
     <category term="显示器" />
-    <category term="latex技巧" />
-    <category term="论文编辑" />
-    <category term="硬件开发" />
+    <category term="博客搭建" />
     <category term="控制工程" />
     <category term="数学基础" />
-    <category term="office技巧" />
+    <category term="硬件开发" />
+    <category term="区间不确定性" />
+    <category term="latex技巧" />
+    <category term="论文编辑" />
     <category term="最优化" />
     <category term="多目标最优化" />
     <category term="单目标最优化" />
-    <category term="区间不确定性" />
-    <category term="search" />
     <category term="科学研究" />
+    <category term="office技巧" />
+    <category term="search" />
     <category term="C++" />
     <category term="编程技巧" />
     <category term="leetcode" />
+    <category term="matlab" />
     <category term="python" />
     <category term="系统设计" />
     <category term="Qt" />
     <category term="界面开发" />
-    <category term="matlab" />
     <entry>
         <id>http://qianqiu-cell.github.io/2023/03/16/optimal/SPEA/</id>
         <title>SPEAI-II</title>
