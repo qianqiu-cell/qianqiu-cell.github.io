@@ -89,12 +89,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://i.postimg.cc/PJFmmcRP/img-2001035062.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/ncLwbfK9/img-2000967123.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/xjgkBv81/img-2000880077.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/yYQfPpZh/img-2001032858.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/V673yfhv/img-2000930759.jpg"></li>
           <li class="item" data-background-image="https://i.postimg.cc/nzcqjphv/img-2000971122.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/G27GvV46/img-2000966511.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/Y9Hp2zMV/img-2001110149.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/44784Q7B/img-2000924503.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/GtgTV5GG/img-2001101754.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/tTQSQ0rW/img-2000883265.jpg"></li>
         </ul>
       </div>
     </header>
@@ -120,7 +120,202 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2024/02/20/code/python/python_pytorch_transforms/" itemprop="url" title="Pytorch数据预处理：transforms的使用"><img data-src="https://i.postimg.cc/7Pg1hs9P/img-2001035236.jpg"></a>
+    <a href="/2024/03/03/code/python/python_pytorch_install/" itemprop="url" title="Pytorch安装"><img data-src="https://i.postimg.cc/13VSSq0F/img-2000993908.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2024-03-03 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2024-03-03T00:00:00+08:00">2024-03-03</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>255</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2024/03/03/code/python/python_pytorch_install/" itemprop="url" title="Pytorch安装">Pytorch安装</a></h3>
+    <div class="excerpt">
+        直接使用网站的命令，并在后面加清华镜像源会导致下载的是 cpu 版本，
+  正确的安装方法是进入官网安装命令后的网址，下载所需的 whl 。目前下载的版本为：
+
+torch-1.13.1+cu116-cp39-cp39-win_amd64.whl
+torchaudio-0.13.1+cu116-cp39-cp39-win_amd64.whl
+torchvision-0.14.1+cu116-cp39-cp39-win_amd64.whl
+  之后再 cmd 命令行窗口运行 pip install xxx （目录需要转移到上述三个文件所在的目录）
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
+      </span>
+    </div>
+    <a href="/2024/03/03/code/python/python_pytorch_install/" itemprop="url" title="Pytorch安装" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2024/03/01/latex/visio_eps/" itemprop="url" title="Visio图片导出PDF转EPS格式"><img data-src="https://i.postimg.cc/7YDJfqtb/img-2000989292.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2024-03-01 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2024-03-01T00:00:00+08:00">2024-03-01</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>418</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2024/03/01/latex/visio_eps/" itemprop="url" title="Visio图片导出PDF转EPS格式">Visio图片导出PDF转EPS格式</a></h3>
+    <div class="excerpt">
+        # 一、设置 visio 导出为 pdf
+1、打开 visio 的 “开发工具” 选项：
+
+2、 设置页面的导出格式（页面中只包括一个要导出的图） ，将下面的值全部修改为 0
+
+具体修改的方法，选中每个值，将 = 后面的值改为 0，后面的 mm 单位不要动，然后每个修改完后 enter 即可。
+3、修改 visio 的页面大小为自适应图片：
+
+这样就可以得到无边框的图片：
+
+4、这样就可以将图片导出为 pdf 格式：
+
+这里的 “辅助功能文档结构标记” 不要勾选，导出的范围为 “当前页”。
+# 二、使用 Adobe Acrobat DC 导出 EPS
+得到上述的 pdf 格式的图片之后，使用...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/latex/" itemprop="url" title="latex"><i class="ic i-flag"></i>latex</a>
+      </span>
+    </div>
+    <a href="/2024/03/01/latex/visio_eps/" itemprop="url" title="Visio图片导出PDF转EPS格式" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2024/02/20/code/python/python_pytorch_nn/" itemprop="url" title="Pytorch神经网络的搭建"><img data-src="https://i.postimg.cc/QC6sbL1G/img-2001097409.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2024-02-20 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2024-02-20T00:00:00+08:00">2024-02-20</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>1.3k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2024/02/20/code/python/python_pytorch_nn/" itemprop="url" title="Pytorch神经网络的搭建">Pytorch神经网络的搭建</a></h3>
+    <div class="excerpt">
+        参考链接：https://www.bilibili.com/video/BV1hE411t7RN/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=e01172ea292c1c605b346101d7006c61
+# 一、直接搭建
+import torchfrom torch import nnfrom torch.nn import Conv2d, MaxPool2d, Flatten, Linearclass SelfNet(nn.Module): def __init__(self): super(SelfNet,...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
+      </span>
+    </div>
+    <a href="/2024/02/20/code/python/python_pytorch_nn/" itemprop="url" title="Pytorch神经网络的搭建" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2024/02/20/code/python/python_pytorch_tensorboard/" itemprop="url" title="Pytorch下的Tensorboard的使用"><img data-src="https://i.postimg.cc/xqVnXj35/img-2001065991.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2024-02-20 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2024-02-20T00:00:00+08:00">2024-02-20</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>1.1k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2024/02/20/code/python/python_pytorch_tensorboard/" itemprop="url" title="Pytorch下的Tensorboard的使用">Pytorch下的Tensorboard的使用</a></h3>
+    <div class="excerpt">
+        # 一、Tensorboard 的使用逻辑
+   Tensorboard 的工作流程简单来说是：
+1、将代码运行过程中所关心的数据保存在一个文件夹中（由代码中的 writer 完成）
+2、再读取这个文件夹中的数据，用浏览器显示出来（在命令行中运行 tensorboard 完成）
+# 二、代码中要做的事
+# 1、首先导入 tensorboard，这里的 SummaryWriter 的作用就是将数据以特定的格式存储到第一步提到的文件夹中。from torch.utils.tensorboard import SummaryWriter# 2、实例化，传入的参数就是指向文件夹的路径，之后我们使用这个...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
+      </span>
+    </div>
+    <a href="/2024/02/20/code/python/python_pytorch_tensorboard/" itemprop="url" title="Pytorch下的Tensorboard的使用" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2024/02/20/code/python/python_pytorch_transforms/" itemprop="url" title="Pytorch数据预处理：transforms的使用"><img data-src="https://i.postimg.cc/nLjBJ0MJ/img-2001046184.jpg"></a>
   </div>
   <div class="info">
     
@@ -168,7 +363,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2024/02/19/code/python/python_class_special_methods/" itemprop="url" title="Python类的特殊方法"><img data-src="https://i.postimg.cc/s21KZjLp/img-2000875509.jpg"></a>
+    <a href="/2024/02/19/code/python/python_class_special_methods/" itemprop="url" title="Python类的特殊方法"><img data-src="https://i.postimg.cc/j26BkqtD/img-2000883226.jpg"></a>
   </div>
   <div class="info">
     
@@ -218,7 +413,7 @@ format (self, format_spec):...
         
 <article class="item">
   <div class="cover">
-    <a href="/2024/02/01/AI/Neural_networks_classification/" itemprop="url" title="神经网络大致分类"><img data-src="https://i.postimg.cc/wxhKB2L9/img-2000875708.jpg"></a>
+    <a href="/2024/02/01/AI/Neural_networks_classification/" itemprop="url" title="神经网络大致分类"><img data-src="https://i.postimg.cc/W34RzqLT/img-2001065967.jpg"></a>
   </div>
   <div class="info">
     
@@ -268,7 +463,7 @@ format (self, format_spec):...
         
 <article class="item">
   <div class="cover">
-    <a href="/2024/01/13/math/Orthogonal_polynomial_approximation/" itemprop="url" title="正交多项式逼近"><img data-src="https://i.postimg.cc/tRddJngK/img-2000875689.jpg"></a>
+    <a href="/2024/01/13/math/Orthogonal_polynomial_approximation/" itemprop="url" title="正交多项式逼近"><img data-src="https://i.postimg.cc/cH0SG1cG/img-2001068870.jpg"></a>
   </div>
   <div class="info">
     
@@ -315,7 +510,71 @@ https://www.zhihu.com/question/5958753...
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/11/06/code/leetcode/1000%E6%9C%AC%E5%BC%80%E6%BA%90%E7%94%B5%E5%AD%90%E4%B9%A6/" itemprop="url" title="1000本开源电子书"><img data-src="https://i.postimg.cc/cJ7vBjbX/img-2000933840.jpg"></a>
+    <a href="/2023/11/24/math/Function_approximation_and_curve_fitting/" itemprop="url" title="函数逼近与曲线拟合"><img data-src="https://i.postimg.cc/9X4k4p9D/img-2000907359.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-11-24 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-11-24T00:00:00+08:00">2023-11-24</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>8.3k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>8 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2023/11/24/math/Function_approximation_and_curve_fitting/" itemprop="url" title="函数逼近与曲线拟合">函数逼近与曲线拟合</a></h3>
+    <div class="excerpt">
+        参考：https://www.bilibili.com/video/BV1eT4y1K7DL/?spm_id_from=333.999.0.0
+# 一、问题的提出
+函数逼近：
+
+用简单的函数近似代替给定函数的问题
+
+逼近与拟合的区别：
+
+逼近指的是用连续函数 “逼近” 连续函数
+拟合指的是用连续函数 “拟合” 离散数据
+
+逼近（拟合）和插值的区别
+
+逼近（拟合）并不要求获得的函数通过已知点，只要尽量接近
+插值要求获得的函数必须经过已知点
+
+函数逼近的第一个问题：如何表示 “尽量接近”？
+
+一致逼近：最大的偏差也不超过 xxx
+平方逼近：平方偏差和不超过 xxx
+
+# 二、相关概念
+# 2.1...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/math/" itemprop="url" title="数学基础"><i class="ic i-flag"></i>数学基础</a>
+      </span>
+    </div>
+    <a href="/2023/11/24/math/Function_approximation_and_curve_fitting/" itemprop="url" title="函数逼近与曲线拟合" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/11/06/code/leetcode/1000%E6%9C%AC%E5%BC%80%E6%BA%90%E7%94%B5%E5%AD%90%E4%B9%A6/" itemprop="url" title="1000本开源电子书"><img data-src="https://i.postimg.cc/gkC6KYrV/img-2000894157.jpg"></a>
   </div>
   <div class="info">
     
@@ -361,245 +620,6 @@ https://www.zhihu.com/question/5958753...
   </div>
 </article>
 
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2023/10/31/code/leetcode/Binary_Search/" itemprop="url" title="二分查找的正确编写方法"><img data-src="https://i.postimg.cc/wvM8WRB3/img-2001032881.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2023-10-31 00:00:00">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2023-10-31T00:00:00+08:00">2023-10-31</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>903</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>1 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2023/10/31/code/leetcode/Binary_Search/" itemprop="url" title="二分查找的正确编写方法">二分查找的正确编写方法</a></h3>
-    <div class="excerpt">
-        写二分法，区间的定义一般为两种，闭区间或者开区间
-（1）左闭右闭区间[left,right][left, right][left,right]
-
-while(left&amp;lt;=right) 要使用 &amp;lt;= ，因为 left==right 是有意义的，所以使用 &amp;lt;=
-if (nums[middle] &amp;gt; target) ， right 要赋值为 middle - 1 ，因为当前这个 nums[middle] 一定不是 target ，那么接下来要查找的左区间结束下标位置就是 middle - 1 ，反之同理。
-
-class Solution:...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/leetcode/" itemprop="url" title="leetcode"><i class="ic i-flag"></i>leetcode</a>
-      </span>
-    </div>
-    <a href="/2023/10/31/code/leetcode/Binary_Search/" itemprop="url" title="二分查找的正确编写方法" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2023/10/16/code/leetcode/time_and_space_complexity/" itemprop="url" title="时间及空间复杂度"><img data-src="https://i.postimg.cc/y88JyvHH/img-2000995042.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2023-10-16 00:00:00">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2023-10-16T00:00:00+08:00">2023-10-16</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>1.7k</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>2 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2023/10/16/code/leetcode/time_and_space_complexity/" itemprop="url" title="时间及空间复杂度">时间及空间复杂度</a></h3>
-    <div class="excerpt">
-        #...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/leetcode/" itemprop="url" title="leetcode"><i class="ic i-flag"></i>leetcode</a>
-      </span>
-    </div>
-    <a href="/2023/10/16/code/leetcode/time_and_space_complexity/" itemprop="url" title="时间及空间复杂度" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2023/09/17/math/Interval_by_Dimensional/" itemprop="url" title="区间逐维分析方法"><img data-src="https://i.postimg.cc/LXpvXrcS/img-2001033569.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2023-09-17 00:00:00">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2023-09-17T00:00:00+08:00">2023-09-17</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>6.1k</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>6 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2023/09/17/math/Interval_by_Dimensional/" itemprop="url" title="区间逐维分析方法">区间逐维分析方法</a></h3>
-    <div class="excerpt">
-        区间逐维分析方法借鉴了代理模型的思想，不同之处在于其利用参考点 (Reference Point) 处输入参数向量每个维度上的超平面截取结构真实响应所形成的曲面，并基于勒让德正交多项式构建所截得曲线的多项式近似模型，进一步可以计算在对应维度上的最大值点与最小值点。
-  区间逐维分析方法主要使用了高斯采样和勒让德正交多项式拟合两个过程，大致流程图可参考下图。
-
-# 一、输入逐维高斯采样
-  区间逐维分析方法的第一步就是根据输入的维度依次进行高斯采样。在对第iii 维的参数进行高斯采样时，需要固定其他维度的参数为中心值，之后对第iii 维的参数进行高斯采样。其中，高斯采样的区间为 [-1,...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/math/" itemprop="url" title="数学基础"><i class="ic i-flag"></i>数学基础</a>
-      </span>
-    </div>
-    <a href="/2023/09/17/math/Interval_by_Dimensional/" itemprop="url" title="区间逐维分析方法" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2023/09/06/Computer/monitor/" itemprop="url" title="显示器的一些小tricks"><img data-src="https://i.postimg.cc/50RQXzGV/img-2000976529.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2023-09-06 00:00:00">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2023-09-06T00:00:00+08:00">2023-09-06</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>1.7k</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>2 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2023/09/06/Computer/monitor/" itemprop="url" title="显示器的一些小tricks">显示器的一些小tricks</a></h3>
-    <div class="excerpt">
-        # 一、显示器的色域和色准
-（内容参考 硬件茶谈 抖音显示器系列视频）
-# 1.1 色域的概念
-  将所有人眼可见的所有光的颜色信息和明度信息通过一定的数学变换映射到一个平面上，就得到了一个色域马蹄图，代表了人眼睛可以识别的全部颜色，这个颜色范围空间被称为 CIE 色彩空间。
-
-  现在的显示器显示颜色是依赖于红绿蓝三个子像素去混合产生颜色，一台显示器显示颜色的极限就是红绿蓝各自亮度最大，而由这三个点连线所构成的区域就是色域。色域指的是显示器能覆盖颜色丰富度的概念，色域覆盖越广的显示器，能显示的颜色就越丰富，色域越窄的显示器能显示的颜色就越匮乏
-
-  在 CIE...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/Computer/" itemprop="url" title="电脑硬件知识"><i class="ic i-flag"></i>电脑硬件知识</a>
-      </span>
-    </div>
-    <a href="/2023/09/06/Computer/monitor/" itemprop="url" title="显示器的一些小tricks" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2023/08/01/math/derivative_of_the_multiple_matrix/" itemprop="url" title="矩阵乘法的求导问题"><img data-src="https://i.postimg.cc/xTZMXvK1/img-2000918072.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2023-08-01 00:00:00">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2023-08-01T00:00:00+08:00">2023-08-01</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>278</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>1 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2023/08/01/math/derivative_of_the_multiple_matrix/" itemprop="url" title="矩阵乘法的求导问题">矩阵乘法的求导问题</a></h3>
-    <div class="excerpt">
-        假设AAA 为m×nm\times nm×n 的矩阵，xxx 为nnn 维列向量，则有如下等式成立：
-dAxdx=AT\frac{dAx}{dx}=A^T
-dxdAx​=AT
-同理有：
-dAxdxT=A\frac{dAx}{dx^T}=A
-dxTdAx​=A
-dxTAdx=A\frac{dx^TA}{dx}=A
-dxdxTA​=A
-dxTAxdx=(AT+A)x\frac{dx^TAx}{dx}=\left ( A^T+A \right )x
-dxdxTAx​=(AT+A)x
-若AAA 是对称矩阵，则有
-dxTAxdx=2Ax\frac{dx^TAx}{dx}=2Ax
-dxdxTAx​=2Ax
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/math/" itemprop="url" title="数学基础"><i class="ic i-flag"></i>数学基础</a>
-      </span>
-    </div>
-    <a href="/2023/08/01/math/derivative_of_the_multiple_matrix/" itemprop="url" title="矩阵乘法的求导问题" class="btn">more...</a>
-  </div>
-</article>
-
     </div>
 
   </div>
@@ -607,7 +627,7 @@ dxdxTAx​=2Ax
   
   <nav class="pagination">
     <div class="inner">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="ic i-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/4/"><i class="ic i-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="ic i-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/4/"><i class="ic i-angle-right" aria-label="下一页"></i></a>
     </div>
   </nav>
 
@@ -635,7 +655,7 @@ dxdxTAx​=2Ax
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">82</span>
+        <span class="count">87</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -736,10 +756,10 @@ dxdxTAx​=2Ax
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
 </div>
 
-    <span><a href="/2023/08/01/math/derivative_of_the_multiple_matrix/" title="矩阵乘法的求导问题">矩阵乘法的求导问题</a></span>
+    <span><a href="/2023/01/19/blog/hexo_remote/" title="解决Connection closed by remote host">解决Connection closed by remote host</a></span>
   </li>
 
       
@@ -749,17 +769,7 @@ dxdxTAx​=2Ax
 <a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2024/02/20/code/python/python_pytorch_nn/" title="Pytorch神经网络的搭建">Pytorch神经网络的搭建</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
-</div>
-
-    <span><a href="/2023/03/13/optimal/NSGA/" title="从NSGA到NSGA-III">从NSGA到NSGA-III</a></span>
+    <span><a href="/2024/03/19/code/python/python_private_property/" title="Python——类的私有属性、公有属性、私有方法、公有方法">Python——类的私有属性、公有属性、私有方法、公有方法</a></span>
   </li>
 
       
@@ -769,7 +779,7 @@ dxdxTAx​=2Ax
 <a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2023/03/12/code/python/python_enumerate/" title="python使用enumerate()给列表添加序号">python使用enumerate()给列表添加序号</a></span>
+    <span><a href="/2023/03/03/code/python/python_json/" title="python读取及保存json文件">python读取及保存json文件</a></span>
   </li>
 
       
@@ -779,37 +789,7 @@ dxdxTAx​=2Ax
 <a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2023/04/02/code/python/python_thread/" title="Python多线程">Python多线程</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/research/" title="分类于 科学研究">科学研究</a>
-</div>
-
-    <span><a href="/2023/08/01/research/SciHub/" title="sci-hub的使用方法">sci-hub的使用方法</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
-</div>
-
-    <span><a href="/2023/09/17/math/Interval_by_Dimensional/" title="区间逐维分析方法">区间逐维分析方法</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
-</div>
-
-    <span><a href="/2023/02/06/code/python/python_multiply/" title="python字符串、列表、元组乘法">python字符串、列表、元组乘法</a></span>
+    <span><a href="/2023/07/04/code/python/python_plot_RMFS/" title="python绘制网格分布图像以及甘特图">python绘制网格分布图像以及甘特图</a></span>
   </li>
 
       
@@ -826,10 +806,50 @@ dxdxTAx​=2Ax
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/AI/" title="分类于 AI">AI</a>
+</div>
+
+    <span><a href="/2024/09/21/AI/ViT/" title="ViT">ViT</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
 <a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
 </div>
 
-    <span><a href="/2023/01/02/blog/hexo_image/" title="Hexo图片显示异常问题">Hexo图片显示异常问题</a></span>
+    <span><a href="/2022/11/07/blog/hexo_style/" title="shoka格式">shoka格式</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/02/06/code/python/python_array_asarray/" title="np.array和np.asarray区别">np.array和np.asarray区别</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
+</div>
+
+    <span><a href="/2023/11/24/math/Function_approximation_and_curve_fitting/" title="函数逼近与曲线拟合">函数逼近与曲线拟合</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/control/" title="分类于 控制工程">控制工程</a>
+</div>
+
+    <span><a href="/2024/07/25/control/N4SID/" title="N4SID系统辨识方法">N4SID系统辨识方法</a></span>
   </li>
 
   </ul>
@@ -854,13 +874,13 @@ dxdxTAx​=2Ax
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">276k 字</span>
+    <span title="站点总字数">295k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:11</span>
+    <span title="站点阅读时长">4:28</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

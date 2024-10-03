@@ -1,0 +1,555 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Keep Moving" href="http://qianqiu-cell.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Keep Moving" href="http://qianqiu-cell.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Keep Moving" href="http://qianqiu-cell.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="AI" />
+
+
+<link rel="canonical" href="http://qianqiu-cell.github.io/2024/09/14/AI/BERT/">
+
+
+
+  <title>
+BERT - AI |
+唯爱ぺ灬babyル = Keep Moving = 天将降大任于斯人也</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">BERT
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2024-09-14 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-09-14T00:00:00+08:00">2024-09-14</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>2.2k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>2 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">唯爱ぺ灬babyル</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://i.postimg.cc/43Fp9j7q/img-2000981622.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/wvM8WRB3/img-2001032881.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/qRhyXQ2R/img-2000983062.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/kG7MXgMm/img-2000997960.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/9F8XC2v6/img-2001000204.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/B6qRjLFM/img-2001004883.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/AI/" itemprop="item" rel="index" title="分类于 AI"><span itemprop="name">AI</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://qianqiu-cell.github.io/2024/09/14/AI/BERT/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="Ember">
+    <meta itemprop="description" content="天将降大任于斯人也, 🌸学习笔记🌸">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Keep Moving">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="一-引言"><a class="markdownIt-Anchor" href="#一-引言">#</a> 一、引言</h1>
+<p>   <code>BERT</code> （ <code>Bidirectional Encoder Representations from Transformers</code> ）是一种基于深度学习的自然语言处理（ <code>NLP</code> ）模型。它是由 <code>Google</code>  在 <code>2018</code>  年提出的，采用了 <code>Transformer</code>  架构，并在大规模语料库上进行了预训练。 <code>BERT</code>  的特点之一是其双向（ <code>Bidirectional</code> ）处理能力，它能够同时考虑到句子中所有单词的上下文，而不仅仅是单词之前或之后的部分。这种双向性使得 <code>BERT</code>  在许多 <code>NLP</code>  任务中表现出色，例如文本分类、问答和命名实体识别等。</p>
+<h1 id="二-bert"><a class="markdownIt-Anchor" href="#二-bert">#</a> 二、BERT</h1>
+<p>   <code>BERT</code>  的框架中有两个步骤：预训练和微调。在预训练过程中，模型在<strong>不同的预训练任务上对未标记数据</strong>进行训练。对于微调，首先使用预训练的参数初始化 <code>BERT</code>  模型，然后使用<strong>来自下游任务的标记数据</strong>对<strong>所有参数</strong>进行<strong>微调</strong>。每个下游任务都有单独的微调模型，即使它们是用相同的预训练参数初始化的。</p>
+<p><img data-src="/images/AI/BERT/2.1.png" alt=""></p>
+<p>   <code>BERT</code>  的一个显著特征是其跨不同任务的统一架构。预训练的体系结构和最终的下游体系结构之间的差别很小。除了输出层，在预训练和微调中使用了相同的架构。使用相同的预训练模型参数来初始化不同下游任务的模型。在微调期间，对所有参数进行微调。[CLS] 是添加在每个输入示例前面的特殊符号，[SEP] 是一个特殊的分隔符号 (例如，分隔问题 / 答案)。</p>
+<h2 id="21-模型结构"><a class="markdownIt-Anchor" href="#21-模型结构">#</a> 2.1 模型结构</h2>
+<p>   <code>BERT</code>  的模型架构是一个多层双向 <code>transformer</code>  编码器，使用<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">L</span></span></span></span> 表示层数 (即 <code>transformer</code>  块)，隐藏大小为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi></mrow><annotation encoding="application/x-tex">H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span></span></span></span>，自注意头的数量为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal">A</span></span></span></span>。 <code>BERT</code>  主要有两种模型大小： <code>BERT BASE</code>  (L=12, H=768, A=12, Total Parameters=110M) 和 <code>BERT LARGE</code> (L=24, H=1024, A=16, Total Parameters=340M)。</p>
+<p>  为了进行比较，选择 <code>BERT BASE</code>  与 <code>OpenAI GPT</code>  具有相同的模型大小。然而，关键的是， <code>BERT Transformer</code>  使用双向自关注，而 <code>GPT Transformer</code>  使用约束自关注，其中每个 <code>token</code>  只能关注其左侧的上下文。</p>
+<h2 id="22-输入输出表示"><a class="markdownIt-Anchor" href="#22-输入输出表示">#</a> 2.2 输入 / 输出表示</h2>
+<p>  为了使 <code>BERT</code>  处理各种下游任务，我们的输入表示能够在一个 <code>token</code>  序列中明确地表示单个句子和一对句子 (例如，&lt;Question, Answer&gt;)。在整个工作中，一个 “句子” 可以是一个连续文本的任意跨度，而不是一个实际的语言句子。“序列” 指的是 <code>BERT</code>  的输入 <code>token</code>  序列，它可以是一个句子或两个句子组合在一起。</p>
+<p>   <code>BERT</code>  使用具有 <code>30,000</code>  个词汇的 <code>WordPiece embeddings</code> 。每个序列的第一个标记总是一个特殊的分类标记 ([CLS])。 <code>BERT</code>  用两种方法区分句子。首先，用一个特殊的 <code>token</code>  ([SEP]) 将它们分开。其次，为每一个 <code>token</code>  添加一个可学习 <code>embedding</code> ，表明它属于句子 <code>A</code>  还是句子 <code>B</code> 。如图 1 所示，将输入 <code>embedding</code>  表示为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi></mrow><annotation encoding="application/x-tex">E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span></span>，特殊 [CLS] 标记的最终隐藏向量表示为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mi>H</mi></msup></mrow><annotation encoding="application/x-tex">C\in \mathbb{R}^H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72243em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord mathbb">R</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.08125em;">H</span></span></span></span></span></span></span></span></span></span></span>，第 i 个输入标记的最终隐藏向量表示为<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mi>i</mi></msub><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mi>H</mi></msup></mrow><annotation encoding="application/x-tex">T_i\in \mathbb{R}^H</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord mathbb">R</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.08125em;">H</span></span></span></span></span></span></span></span></span></span></span>。</p>
+<p>  对于给定的 <code>token</code> ， <code>BERT</code>  输入表示是通过将相应的 <code>token</code> 、 <code>segment</code>  (段) 和 <code>position</code>  (位置) <code>embedding</code>  相加来构建的。图 2 显示了该结构的可视化。</p>
+<p><img data-src="/images/AI/BERT/2.2.png" alt=""></p>
+<h2 id="23-预训练bert"><a class="markdownIt-Anchor" href="#23-预训练bert">#</a> 2.3 预训练 BERT</h2>
+<p>  使用两个无监督任务对 <code>BERT</code>  进行预训练。</p>
+<h3 id="1-任务-1掩码语言模型masked-lm-mlm"><a class="markdownIt-Anchor" href="#1-任务-1掩码语言模型masked-lm-mlm">#</a> (1) 任务 1：掩码语言模型（Masked LM, MLM）</h3>
+<p>  为了训练深度双向表示， <code>BERT</code>  随机屏蔽一定比例的输入 <code>token</code> ，然后预测这些被屏蔽的 <code>token</code> 。这一过程称为 <code>Masked LM</code> ( <code>MLM</code> )，在文献中它通常被称为完形填空任务。</p>
+<p>  训练数据生成器随机选择 15% 的 <code>token</code>  位置进行预测。如果选择了第<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 个 <code>token</code> ，那么 80% 的概率使用 [MASK] <code>token</code> ，10% 的概率使用随机 <code>token</code> ，10% 的概率使用未更改的第<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 个 <code>token</code>  来替换第<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 个 <code>token</code> 。然后，利用<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">T_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 来预测具有交叉熵损失的原始 <code>token</code> 。</p>
+<h3 id="2任务-2下一个句子预测next-sentence-prediction-nsp"><a class="markdownIt-Anchor" href="#2任务-2下一个句子预测next-sentence-prediction-nsp">#</a> （2）任务 2：下一个句子预测（Next Sentence Prediction, NSP）</h3>
+<p>  许多重要的下游任务，如问答 ( <code>QA</code> ) 和自然语言推理 ( <code>NLI</code> )，都是基于理解两个句子之间的关系，这是语言建模无法直接捕获的。为了训练一个理解句子关系的模型， <code>BERT</code>  对一下一个句子预测任务进行了预训练，该任务可以从任何单语语料库中轻松生成。具体来说，当为每个预训练示例选择句子 <code>A</code>  和 <code>B时</code> ， <code>50%</code>  的时间 <code>B</code>  是 <code>A</code>  之后的下一个句子 (标记为 <code>IsNext</code> )，  <code>50%</code>  的时间 <code>B</code>  是语料库中的随机句子 (标记为 <code>NotNext</code> )。如图 1 所示，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span> 用于下一个句子预测。</p>
+<h3 id="预训练的数据"><a class="markdownIt-Anchor" href="#预训练的数据">#</a> 预训练的数据</h3>
+<p>  预训练过程在很大程度上遵循现有的文献语言模型预训练。对于预训练语料库， <code>BERT</code>  使用 <code>BooksCorpus</code> （8 亿单词）和英语维基百科（2,500 万字）。对于维基百科， <code>BERT</code>  只提取文本段落，忽略列表，表格和标题。使用文档级语料库而不是诸如十亿字基准，以便提取长的连续序列。</p>
+<h2 id="23-微调bert"><a class="markdownIt-Anchor" href="#23-微调bert">#</a> 2.3 微调 BERT</h2>
+<p>  在海量的语料上训练完 BERT 之后，便可以将其应用到 NLP 的各个任务中了。 微调 (Fine-Tuning) 的任务包括：基于句子对的分类任务，基于单个句子的分类任务，问答任务，命名实体识别等。</p>
+
+      <div class="tags">
+          <a href="/tags/AI/" rel="tag"><i class="ic i-tag"></i> AI</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2024-09-21 12:42:40" itemprop="dateModified" datetime="2024-09-21T12:42:40+08:00">2024-09-21</time>
+  </span>
+  <span id="2024/09/14/AI/BERT/" class="item leancloud_visitors" data-flag-title="BERT" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2024/09/14/AI/BLIP/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;TYgPfnYb&#x2F;img-2000874626.jpg" title="BLIP">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> AI</span>
+  <h3>BLIP</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2024/09/19/AI/SimCLR/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;RZBjfH1w&#x2F;img-2000874431.jpg" title="SimCLR">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> AI</span>
+  <h3>SimCLR</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-%E5%BC%95%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text"> 一、引言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C-bert"><span class="toc-number">2.</span> <span class="toc-text"> 二、BERT</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#21-%E6%A8%A1%E5%9E%8B%E7%BB%93%E6%9E%84"><span class="toc-number">2.1.</span> <span class="toc-text"> 2.1 模型结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E8%A1%A8%E7%A4%BA"><span class="toc-number">2.2.</span> <span class="toc-text"> 2.2 输入 &#x2F; 输出表示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-%E9%A2%84%E8%AE%AD%E7%BB%83bert"><span class="toc-number">2.3.</span> <span class="toc-text"> 2.3 预训练 BERT</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BB%BB%E5%8A%A1-1%E6%8E%A9%E7%A0%81%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8Bmasked-lm-mlm"><span class="toc-number">2.3.1.</span> <span class="toc-text"> (1) 任务 1：掩码语言模型（Masked LM, MLM）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E4%BB%BB%E5%8A%A1-2%E4%B8%8B%E4%B8%80%E4%B8%AA%E5%8F%A5%E5%AD%90%E9%A2%84%E6%B5%8Bnext-sentence-prediction-nsp"><span class="toc-number">2.3.2.</span> <span class="toc-text"> （2）任务 2：下一个句子预测（Next Sentence Prediction, NSP）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E8%AE%AD%E7%BB%83%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="toc-number">2.3.3.</span> <span class="toc-text"> 预训练的数据</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-%E5%BE%AE%E8%B0%83bert"><span class="toc-number">2.4.</span> <span class="toc-text"> 2.3 微调 BERT</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2024/02/01/AI/Neural_networks_classification/" rel="bookmark" title="神经网络大致分类">神经网络大致分类</a></li><li><a href="/2024/05/16/AI/Transformer/" rel="bookmark" title="Transformer模型">Transformer模型</a></li><li><a href="/2024/07/23/AI/Prompt_engineering/" rel="bookmark" title="大模型提示词工程（Prompt Engineering）">大模型提示词工程（Prompt Engineering）</a></li><li><a href="/2024/07/29/AI/LLM_finetune/" rel="bookmark" title="大模型微调">大模型微调</a></li><li><a href="/2024/09/12/AI/CLIP/" rel="bookmark" title="CLIP">CLIP</a></li><li class="active"><a href="/2024/09/14/AI/BERT/" rel="bookmark" title="BERT">BERT</a></li><li><a href="/2024/09/14/AI/BLIP/" rel="bookmark" title="BLIP">BLIP</a></li><li><a href="/2024/09/19/AI/SimCLR/" rel="bookmark" title="SimCLR">SimCLR</a></li><li><a href="/2024/09/21/AI/ViT/" rel="bookmark" title="ViT">ViT</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Ember"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">Ember</p>
+  <div class="description" itemprop="description">🌸学习笔记🌸</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">87</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">15</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">24</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3FpYW5xaXUtY2VsbA==" title="https:&#x2F;&#x2F;github.com&#x2F;qianqiu-cell"><i class="ic i-github"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjI4MzI1Njc4NTFAcXEuY29t" title="mailto:2832567851@qq.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2024/09/14/AI/BLIP/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2024/09/19/AI/SimCLR/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/AI/" title="分类于 AI">AI</a>
+</div>
+
+    <span><a href="/2024/09/21/AI/ViT/" title="ViT">ViT</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/control/" title="分类于 控制工程">控制工程</a>
+</div>
+
+    <span><a href="/2022/11/22/control/Gram-matrix/" title="格拉姆矩阵判据">格拉姆矩阵判据</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/leetcode/" title="分类于 leetcode">leetcode</a>
+</div>
+
+    <span><a href="/2023/11/06/code/leetcode/1000%E6%9C%AC%E5%BC%80%E6%BA%90%E7%94%B5%E5%AD%90%E4%B9%A6/" title="1000本开源电子书">1000本开源电子书</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/02/code/python/python_numba/" title="使用numba对python进行加速">使用numba对python进行加速</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/AI/" title="分类于 AI">AI</a>
+</div>
+
+    <span><a href="/2024/09/12/AI/CLIP/" title="CLIP">CLIP</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/07/04/code/python/python_RMFS_pip_list/" title="本科毕业设计使用python环境">本科毕业设计使用python环境</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/control/" title="分类于 控制工程">控制工程</a>
+</div>
+
+    <span><a href="/2022/11/23/control/spring_damping/" title="弹簧阻尼系统">弹簧阻尼系统</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Computer/" title="分类于 电脑硬件知识">电脑硬件知识</a>
+</div>
+
+    <span><a href="/2023/01/03/Computer/Realtek/" title="关于戴尔G3重装系统后的音频问题">关于戴尔G3重装系统后的音频问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/07/04/code/python/python_plot_RMFS/" title="python绘制网格分布图像以及甘特图">python绘制网格分布图像以及甘特图</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
+</div>
+
+    <span><a href="/2022/11/21/math/svd/" title="奇异值分解（SVD）">奇异值分解（SVD）</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Ember @ 唯爱ぺ灬babyル</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">295k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">4:28</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2024/09/14/AI/BERT/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,copy_tex: true,
+    katex: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i> 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

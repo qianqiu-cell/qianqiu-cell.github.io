@@ -1,0 +1,555 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Keep Moving" href="http://qianqiu-cell.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Keep Moving" href="http://qianqiu-cell.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Keep Moving" href="http://qianqiu-cell.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="AI" />
+
+
+<link rel="canonical" href="http://qianqiu-cell.github.io/2024/09/21/AI/ViT/">
+
+
+
+  <title>
+ViT - AI |
+唯爱ぺ灬babyル = Keep Moving = 天将降大任于斯人也</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">ViT
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2024-09-21 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-09-21T00:00:00+08:00">2024-09-21</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>3.2k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>3 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">唯爱ぺ灬babyル</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://i.postimg.cc/kXLft68q/img-2001096907.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/0jQJVfTF/img-2001077740.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/NfWLqBhd/img-2000936909.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/90qnwGx5/img-2001068341.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/rFbM0JQs/img-2000929476.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/PfD34q5y/img-2000874636.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/AI/" itemprop="item" rel="index" title="分类于 AI"><span itemprop="name">AI</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://qianqiu-cell.github.io/2024/09/21/AI/ViT/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="Ember">
+    <meta itemprop="description" content="天将降大任于斯人也, 🌸学习笔记🌸">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Keep Moving">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="一-引言"><a class="markdownIt-Anchor" href="#一-引言">#</a> 一、引言</h1>
+<p>  虽然  <code>Transformer</code>  架构已成为  <code>NLP</code>  任务的首选模型，但它在  <code>CV</code>  中的应用仍然有限。在视觉上，注意力要么与卷积网络结合使用，要么用于替换卷积网络的某些组件，同时保持其整体结构。而这种对  <code>CNNs</code>  的依赖是不必要的，直接应用于图像块序列  ( <code>sequences of image patches</code> ) 的纯  <code>Transformer</code>  可以很好地执行图像分类任务。当对大量数据进行预训练并迁移到多个中小型图像识别基准时 ( <code>ImageNet</code> 、 <code>CIFAR-100</code> 、 <code>VTAB</code>  等)，与  <code>SOTA</code>  的  <code>CNN</code>  相比， <code>Vision Transformer (ViT)</code>  可获得更优异的结果，同时仅需更少的训练资源。</p>
+<h1 id="二-方法"><a class="markdownIt-Anchor" href="#二-方法">#</a> 二、方法</h1>
+<p>  在模型设计中， <code>ViT</code>  尽可能地遵循原始  <code>Transformer</code> 。 这种有意简单设置的优势在于，可扩展的 <code>NLP Transformer</code>  架构及其高效实现几乎可以开箱即用。</p>
+<p><img data-src="/images/AI/ViT/2.1.png" alt=""></p>
+<h2 id="21-图像块嵌入patch-embeddings"><a class="markdownIt-Anchor" href="#21-图像块嵌入patch-embeddings">#</a> 2.1 图像块嵌入 (Patch Embeddings)</h2>
+<p>  模型概述如图 1 所示。标准 <code>Transformer</code>  使用一维标记嵌入序列 ( <code>Sequence of token embeddings</code> ) 作为输入。为了处理 <code>2D</code>  图像，将图像<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mrow><mi>H</mi><mo>×</mo><mi>W</mi><mo>×</mo><mi>C</mi></mrow></msup></mrow><annotation encoding="application/x-tex">x\in \mathbb{R}^{H\times W\times C}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord mathbb">R</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.08125em;">H</span><span class="mbin mtight">×</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">W</span><span class="mbin mtight">×</span><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span></span></span></span></span></span></span></span></span></span></span></span>  <code>reshape</code>  为一个展平的 <code>2D patches</code>  序列</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msub><mi>x</mi><mi>p</mi></msub><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mrow><mi>N</mi><mo>×</mo><mo stretchy="false">(</mo><msup><mi>P</mi><mn>2</mn></msup><mo separator="true">⋅</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">x_p \in \mathbb{R}^{N\times (P^2·C)}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8252079999999999em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.0369199999999998em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord mathbb">R</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:1.0369199999999998em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span><span class="mbin mtight">×</span><span class="mopen mtight">(</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913142857142857em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mpunct mtight">⋅</span><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>  其中 (H，W) 是原始图像的分辨率，C 是通道的数目，（P，P）是每个图像片的分辨率，并且<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><mi>H</mi><mi>W</mi><mi mathvariant="normal">/</mi><msup><mi>P</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">N = HW/P^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.064108em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mord mathnormal" style="margin-right:0.13889em;">W</span><span class="mord">/</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span> 是得到图像 patch 的数，也是 <code>Transformer</code>  的有效输入序列长度。 <code>Transformer</code>  在其所有层中使用恒定的潜在向量大小 <code>D</code> ，因此 <code>ViT</code>  将 pathches 展平，并使用 ** 可训练的线性投影 (FC 层)** 将<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>P</mi><mn>2</mn></msup><mo separator="true">⋅</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">P^2·C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mpunct">⋅</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span> 映射到 <code>D</code>  维，同时保持图像 <code>patches</code>  数 <code>N</code>  不变。该投影的输出被称为 <code>patch embeddings</code> 。</p>
+<p>  上述投影输出即为图像块嵌入 (Patch Embeddings)，本质就是对每一个展平后的 <code>patch vector</code>  <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mi>p</mi></msub><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mrow><mi>N</mi><mo>×</mo><mo stretchy="false">(</mo><msup><mi>P</mi><mn>2</mn></msup><mo separator="true">⋅</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">x_p\in \mathbb{R}^{N\times (P^2·C)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8252079999999999em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.9869199999999998em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord mathbb">R</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9869199999999998em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span><span class="mbin mtight">×</span><span class="mopen mtight">(</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913142857142857em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mpunct mtight">⋅</span><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span></span></span></span> 做一个线性变换 / 全连接层 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mrow><mo stretchy="false">(</mo><msup><mi>P</mi><mn>2</mn></msup><mo separator="true">⋅</mo><mi>C</mi><mo stretchy="false">)</mo><mo>×</mo><mi>D</mi></mrow></msup></mrow><annotation encoding="application/x-tex">E\in \mathbb{R}^{(P^2·C)\times D}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72243em;vertical-align:-0.0391em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.9869199999999998em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord mathbb">R</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.9869199999999998em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8913142857142857em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mpunct mtight">⋅</span><span class="mord mathnormal mtight" style="margin-right:0.07153em;">C</span><span class="mclose mtight">)</span><span class="mbin mtight">×</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">D</span></span></span></span></span></span></span></span></span></span></span></span>，由<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>P</mi><mn>2</mn></msup><mo>×</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">P^2\times C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.897438em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span> 降维至<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi></mrow><annotation encoding="application/x-tex">D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span></span></span></span> 维，得到<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mi>p</mi></msub><mi>E</mi><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mrow><mi>N</mi><mo>×</mo><mi>N</mi></mrow></msup></mrow><annotation encoding="application/x-tex">x_pE\in \mathbb{R}^{N\times N}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">p</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord mathbb">R</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8413309999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span><span class="mbin mtight">×</span><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span></span></span></span></span></span></span></span></span>。类似于 NLP 中的词嵌入（Word Embeddings）。</p>
+<p>图像块嵌入的参考程序为：</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">class</span> <span class="token class-name">PatchEmbed</span><span class="token punctuation">(</span>nn<span class="token punctuation">.</span>Module<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token triple-quoted-string string">""" Image to Patch Embedding """</span></pre></td></tr><tr><td data-num="3"></td><td><pre> </pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> img_size<span class="token operator">=</span><span class="token number">224</span><span class="token punctuation">,</span> patch_size<span class="token operator">=</span><span class="token number">16</span><span class="token punctuation">,</span> in_chans<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">,</span> embed_dim<span class="token operator">=</span><span class="token number">768</span><span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="5"></td><td><pre>        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="6"></td><td><pre>        <span class="token comment"># (H, W)</span></pre></td></tr><tr><td data-num="7"></td><td><pre>        img_size <span class="token operator">=</span> to_2tuple<span class="token punctuation">(</span>img_size<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="8"></td><td><pre>        <span class="token comment"># (P, P)</span></pre></td></tr><tr><td data-num="9"></td><td><pre>        patch_size <span class="token operator">=</span> to_2tuple<span class="token punctuation">(</span>patch_size<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="10"></td><td><pre>        <span class="token comment"># N = (H // P) * (W // P)</span></pre></td></tr><tr><td data-num="11"></td><td><pre>        num_patches <span class="token operator">=</span> <span class="token punctuation">(</span>img_size<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">//</span> patch_size<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span>img_size<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">//</span> patch_size<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="12"></td><td><pre>        </pre></td></tr><tr><td data-num="13"></td><td><pre>        self<span class="token punctuation">.</span>img_size <span class="token operator">=</span> img_size</pre></td></tr><tr><td data-num="14"></td><td><pre>        self<span class="token punctuation">.</span>patch_size <span class="token operator">=</span> patch_size</pre></td></tr><tr><td data-num="15"></td><td><pre>        self<span class="token punctuation">.</span>num_patches <span class="token operator">=</span> num_patches</pre></td></tr><tr><td data-num="16"></td><td><pre>        </pre></td></tr><tr><td data-num="17"></td><td><pre>        <span class="token comment"># 可训练的线性投影 - 获取输入嵌入</span></pre></td></tr><tr><td data-num="18"></td><td><pre>        self<span class="token punctuation">.</span>proj <span class="token operator">=</span> nn<span class="token punctuation">.</span>Conv2d<span class="token punctuation">(</span>in_chans<span class="token punctuation">,</span> embed_dim<span class="token punctuation">,</span> kernel_size<span class="token operator">=</span>patch_size<span class="token punctuation">,</span> stride<span class="token operator">=</span>patch_size<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="19"></td><td><pre> </pre></td></tr><tr><td data-num="20"></td><td><pre>    <span class="token keyword">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">:</span></pre></td></tr><tr><td data-num="21"></td><td><pre>        B<span class="token punctuation">,</span> C<span class="token punctuation">,</span> H<span class="token punctuation">,</span> W <span class="token operator">=</span> x<span class="token punctuation">.</span>shape</pre></td></tr><tr><td data-num="22"></td><td><pre>        <span class="token comment"># (B, C, H, W) -> (B, D, (H//P), (W//P)) -> (B, D, N) -> (B, N, D)</span></pre></td></tr><tr><td data-num="23"></td><td><pre>        <span class="token comment">#   D=embed_dim=768, N=num_patches=(H//P)*(W//P)</span></pre></td></tr><tr><td data-num="24"></td><td><pre>        <span class="token comment">#   torch.flatten (input, start_dim=0, end_dim=-1)  # 形参：展平的起始维度和结束维度    </span></pre></td></tr><tr><td data-num="25"></td><td><pre>        <span class="token comment"># 可见 Patch Embedding 操作 1 行代码 3 步到位</span></pre></td></tr><tr><td data-num="26"></td><td><pre>        x <span class="token operator">=</span> self<span class="token punctuation">.</span>proj<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">.</span>flatten<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span>transpose<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="27"></td><td><pre>        <span class="token keyword">return</span> x</pre></td></tr></table></figure><h2 id="22-可学习的嵌入learnable-embedding"><a class="markdownIt-Anchor" href="#22-可学习的嵌入learnable-embedding">#</a> 2.2 可学习的嵌入（Learnable Embedding）</h2>
+<p>  类似于 BERT 的 [class] token， <code>ViT</code>  为图像 patch 嵌入序列预设一个可学习的嵌入<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>z</mi><mn>0</mn></msub><mo>=</mo><msub><mi>x</mi><mrow><mi>c</mi><mi>l</mi><mi>a</mi><mi>s</mi><mi>s</mi></mrow></msub></mrow><annotation encoding="application/x-tex">z_0=x_{class}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.04398em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">c</span><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight">s</span><span class="mord mathnormal mtight">s</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>，其在 Transformer 编码器输出的状态 / 特征<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>z</mi><mi>L</mi><mn>0</mn></msubsup></mrow><annotation encoding="application/x-tex">z^0_L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.089439em;vertical-align:-0.275331em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.424669em;margin-left:-0.04398em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">L</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.275331em;"><span></span></span></span></span></span></span></span></span></span> 用作图像表示。在预训练和微调期间，将分类头附加到<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>z</mi><mi>L</mi><mn>0</mn></msubsup></mrow><annotation encoding="application/x-tex">z^0_L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.089439em;vertical-align:-0.275331em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.04398em;">z</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.424669em;margin-left:-0.04398em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">L</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.275331em;"><span></span></span></span></span></span></span></span></span></span> 之后，从而用于图像分类。分类头在预训练时由具有一个隐藏层的 <code>MLP</code>  实现，在微调时由单个线性层实现。</p>
+<p>  更明确地，假设将图像分为 N 个图像块，输入到 Transformer 编码器中就有 N 个向量，但是这些向量都不适合用来作为分类预测。一个合理的做法是手动添加一个可学习的嵌入向量作为用于分类的类别向量同时与其他图像块嵌入向量一起输入到 Transformer 编码器中，最后取追加的首个可学习的嵌入向量作为类别预测结果。所以，追加的首个类别向量可理解为其他 N 个图像块寻找的类别信息。从而，最终输入 Transformer 的嵌入向量总长度为 N+1。可学习嵌入 在训练时随机初始化，然后通过训练得到，其具体实现为：</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment">### 随机初始化</span></pre></td></tr><tr><td data-num="2"></td><td><pre>self<span class="token punctuation">.</span>cls_token <span class="token operator">=</span> nn<span class="token punctuation">.</span>Parameter<span class="token punctuation">(</span>torch<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> embed_dim<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># shape = (1, 1, D)</span></pre></td></tr><tr><td data-num="3"></td><td><pre> </pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token comment"># 按通道拼接 获取 N+1 维 Embeddings</span></pre></td></tr><tr><td data-num="5"></td><td><pre>x <span class="token operator">=</span> torch<span class="token punctuation">.</span>cat<span class="token punctuation">(</span><span class="token punctuation">(</span>cls_tokens<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">,</span> dim<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>  <span class="token comment"># shape = (B, N+1, D)</span></pre></td></tr></table></figure><h2 id="23-位置嵌入-position-embeddings"><a class="markdownIt-Anchor" href="#23-位置嵌入-position-embeddings">#</a> 2.3 位置嵌入 (Position Embeddings)</h2>
+<p>  位置嵌入<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mrow><mi>p</mi><mi>o</mi><mi>s</mi></mrow></msub><mo>∈</mo><msup><mi mathvariant="double-struck">R</mi><mrow><mo stretchy="false">(</mo><mi>N</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mo>×</mo><mi>D</mi></mrow></msup></mrow><annotation encoding="application/x-tex">E_{pos}\in \mathbb{R}^{(N+1)\times D}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.969438em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="mord mathnormal mtight">o</span><span class="mord mathnormal mtight">s</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">∈</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8879999999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord mathbb">R</span></span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8879999999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span><span class="mbin mtight">+</span><span class="mord mtight">1</span><span class="mclose mtight">)</span><span class="mbin mtight">×</span><span class="mord mathnormal mtight" style="margin-right:0.02778em;">D</span></span></span></span></span></span></span></span></span></span></span></span> 也被加入图像块嵌入，以保留输入图像块之间的空间位置信息。若不给模型提供图像块的位置信息，那么模型就需要通过图像块的语义来学习拼图，这就额外增加了学习成本。ViT 论文中对比了几种不同的位置编码方案：</p>
+<ul>
+<li>位置嵌入</li>
+<li>1-D 位置嵌入 (1D-PE)：考虑把 2-D 图像块视为 1-D 序列</li>
+<li>2-D 位置嵌入 (2D-PE)：考虑图像块的 2-D 位置 (x, y)</li>
+<li>相对位置嵌入 (RPE)：考虑图像块的相对位置</li>
+</ul>
+<p>  最后发现如果 不提供位置编码效果会差，但其它各种类型的编码效果效果都接近，这主要是因为 ViT 的输入是相对较大的图像块而非像素，所以学习位置信息相对容易很多。</p>
+<p>  Transformer 原文中默认采用 固定位置编码，ViT 则采用 标准可学习 / 训练的 1-D 位置编码嵌入，因为尚未观察到使用更高级的 2-D-aware 位置嵌入 (附录 D.4) 能够带来显著的性能提升 (当然，后续的很多 ViT 变体也使用了 2-D 位置嵌入)。在输入 Transformer 编码器之前直接 将图像块嵌入和位置嵌入按元素相加：</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># 多 +1 是为了加入上述的 class token</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token comment"># embed_dim 即 patch embed_dim</span></pre></td></tr><tr><td data-num="3"></td><td><pre>self<span class="token punctuation">.</span>pos_embed <span class="token operator">=</span> nn<span class="token punctuation">.</span>Parameter<span class="token punctuation">(</span>torch<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> num_patches <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> embed_dim<span class="token punctuation">)</span><span class="token punctuation">)</span> </pre></td></tr><tr><td data-num="4"></td><td><pre> </pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token comment"># patch emded + pos_embed ：图像块嵌入 + 位置嵌入</span></pre></td></tr><tr><td data-num="6"></td><td><pre>x <span class="token operator">=</span> x <span class="token operator">+</span> self<span class="token punctuation">.</span>pos_embed</pre></td></tr></table></figure>
+      <div class="tags">
+          <a href="/tags/AI/" rel="tag"><i class="ic i-tag"></i> AI</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2024-09-22 12:27:31" itemprop="dateModified" datetime="2024-09-22T12:27:31+08:00">2024-09-22</time>
+  </span>
+  <span id="2024/09/21/AI/ViT/" class="item leancloud_visitors" data-flag-title="ViT" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2024/09/19/AI/SimCLR/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;xCK3Htv2&#x2F;img-2000933428.jpg" title="SimCLR">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> AI</span>
+  <h3>SimCLR</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2024/10/03/Computer/Linux_install/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;gkDXh11s&#x2F;img-2000995039.jpg" title="在移动硬盘安装Ubuntu系统">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 电脑硬件知识</span>
+  <h3>在移动硬盘安装Ubuntu系统</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-%E5%BC%95%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text"> 一、引言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C-%E6%96%B9%E6%B3%95"><span class="toc-number">2.</span> <span class="toc-text"> 二、方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#21-%E5%9B%BE%E5%83%8F%E5%9D%97%E5%B5%8C%E5%85%A5patch-embeddings"><span class="toc-number">2.1.</span> <span class="toc-text"> 2.1 图像块嵌入 (Patch Embeddings)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-%E5%8F%AF%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%B5%8C%E5%85%A5learnable-embedding"><span class="toc-number">2.2.</span> <span class="toc-text"> 2.2 可学习的嵌入（Learnable Embedding）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-%E4%BD%8D%E7%BD%AE%E5%B5%8C%E5%85%A5-position-embeddings"><span class="toc-number">2.3.</span> <span class="toc-text"> 2.3 位置嵌入 (Position Embeddings)</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2024/02/01/AI/Neural_networks_classification/" rel="bookmark" title="神经网络大致分类">神经网络大致分类</a></li><li><a href="/2024/05/16/AI/Transformer/" rel="bookmark" title="Transformer模型">Transformer模型</a></li><li><a href="/2024/07/23/AI/Prompt_engineering/" rel="bookmark" title="大模型提示词工程（Prompt Engineering）">大模型提示词工程（Prompt Engineering）</a></li><li><a href="/2024/07/29/AI/LLM_finetune/" rel="bookmark" title="大模型微调">大模型微调</a></li><li><a href="/2024/09/12/AI/CLIP/" rel="bookmark" title="CLIP">CLIP</a></li><li><a href="/2024/09/14/AI/BERT/" rel="bookmark" title="BERT">BERT</a></li><li><a href="/2024/09/14/AI/BLIP/" rel="bookmark" title="BLIP">BLIP</a></li><li><a href="/2024/09/19/AI/SimCLR/" rel="bookmark" title="SimCLR">SimCLR</a></li><li class="active"><a href="/2024/09/21/AI/ViT/" rel="bookmark" title="ViT">ViT</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Ember"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">Ember</p>
+  <div class="description" itemprop="description">🌸学习笔记🌸</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">87</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">15</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">24</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3FpYW5xaXUtY2VsbA==" title="https:&#x2F;&#x2F;github.com&#x2F;qianqiu-cell"><i class="ic i-github"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjI4MzI1Njc4NTFAcXEuY29t" title="mailto:2832567851@qq.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2024/09/19/AI/SimCLR/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2024/10/03/Computer/Linux_install/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/27/code/python/python_plot/" title="python+matplotlib绘制图像">python+matplotlib绘制图像</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/latex/" title="分类于 latex">latex</a>
+</div>
+
+    <span><a href="/2023/01/20/latex/latex_install/" title="Vscode+TexLive+Latex workshop安装">Vscode+TexLive+Latex workshop安装</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/AI/" title="分类于 AI">AI</a>
+</div>
+
+    <span><a href="/2024/05/16/AI/Transformer/" title="Transformer模型">Transformer模型</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+</div>
+
+    <span><a href="/2023/01/19/blog/hexo_remote/" title="解决Connection closed by remote host">解决Connection closed by remote host</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/C/" title="分类于 C++">C++</a>
+</div>
+
+    <span><a href="/2023/03/01/code/Cplusplus/CplusplusGetTime/" title="C++获取程序运行时间">C++获取程序运行时间</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+</div>
+
+    <span><a href="/2022/12/24/blog/hexo_change/" title="Hexo文件迁移">Hexo文件迁移</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
+</div>
+
+    <span><a href="/2024/07/24/math/PCA/" title="主成分分析（PCA）">主成分分析（PCA）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/02/code/python/python_pip/" title="修改pip路径">修改pip路径</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+</div>
+
+    <span><a href="/2022/11/07/blog/hexo_style/" title="shoka格式">shoka格式</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/hardware/" title="分类于 硬件开发">硬件开发</a>
+</div>
+
+    <span><a href="/2023/01/30/hardware/Quartus/" title="Quartus基础教程">Quartus基础教程</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Ember @ 唯爱ぺ灬babyル</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">295k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">4:28</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2024/09/21/AI/ViT/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,copy_tex: true,
+    katex: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i> 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

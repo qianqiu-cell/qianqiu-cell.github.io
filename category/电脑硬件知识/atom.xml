@@ -3,7 +3,7 @@
     <id>http://qianqiu-cell.github.io</id>
     <title>Keep Moving • Posts by &#34;电脑硬件知识&#34; category</title>
     <link href="http://qianqiu-cell.github.io" />
-    <updated>2023-09-05T16:00:00.000Z</updated>
+    <updated>2024-10-02T16:00:00.000Z</updated>
     <category term="AI" />
     <category term="电脑硬件知识" />
     <category term="显示器" />
@@ -11,23 +11,113 @@
     <category term="控制工程" />
     <category term="数学基础" />
     <category term="硬件开发" />
-    <category term="区间不确定性" />
     <category term="latex技巧" />
     <category term="论文编辑" />
+    <category term="区间不确定性" />
+    <category term="office技巧" />
     <category term="最优化" />
     <category term="多目标最优化" />
     <category term="单目标最优化" />
-    <category term="科学研究" />
-    <category term="office技巧" />
     <category term="search" />
+    <category term="科学研究" />
     <category term="C++" />
     <category term="编程技巧" />
-    <category term="leetcode" />
     <category term="matlab" />
+    <category term="leetcode" />
     <category term="python" />
     <category term="系统设计" />
     <category term="Qt" />
     <category term="界面开发" />
+    <entry>
+        <id>http://qianqiu-cell.github.io/2024/10/03/Computer/Linux_install/</id>
+        <title>在移动硬盘安装Ubuntu系统</title>
+        <link rel="alternate" href="http://qianqiu-cell.github.io/2024/10/03/Computer/Linux_install/"/>
+        <content type="html">&lt;p&gt;参考：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUVTNHkxUzdSRC8/c3BtX2lkX2Zyb209MzMzLjEwMDcudG9wX3JpZ2h0X2Jhcl93aW5kb3dfY3VzdG9tX2NvbGxlY3Rpb24uY29udGVudC5jbGljayZhbXA7dmRfc291cmNlPWUwMTE3MmVhMjkyYzFjNjA1YjM0NjEwMWQ3MDA2YzYx&#34;&gt;https://www.bilibili.com/video/BV1ES4y1S7RD/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click&amp;amp;vd_source=e01172ea292c1c605b346101d7006c61&lt;/span&gt;、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMWhMNDExcjdwMi8/c3BtX2lkX2Zyb209MzMzLjMzNy5zZWFyY2gtY2FyZC5hbGwuY2xpY2smYW1wO3ZkX3NvdXJjZT1lMDExNzJlYTI5MmMxYzYwNWIzNDYxMDFkNzAwNmM2MQ==&#34;&gt;https://www.bilibili.com/video/BV1hL411r7p2/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=e01172ea292c1c605b346101d7006c61&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;目前安装的 &lt;code&gt;Ubuntu&lt;/code&gt;  版本为 &lt;code&gt;Ubuntu 20.04.6 LTS (Focal Fossa)&lt;/code&gt; ，镜像地址为: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9yZWxlYXNlcy51YnVudHUuY29tL2ZvY2FsLw==&#34;&gt;https://releases.ubuntu.com/focal/&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;使用 &lt;code&gt;rufus&lt;/code&gt;  创建 &lt;code&gt;USB&lt;/code&gt;  启动盘，官方网站为: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ydWZ1cy5pZS96aC8=&#34;&gt;https://rufus.ie/zh/&lt;/span&gt;。&lt;/li&gt;
+&lt;li&gt;使用 &lt;code&gt;DiskGenius&lt;/code&gt;  进行分区管理，下载地址为：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kaXNrZ2VuaXVzLmNuL2Rvd25sb2FkLnBocA==&#34;&gt;https://diskgenius.cn/download.php&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;step-1-制作u盘启动盘&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#step-1-制作u盘启动盘&#34;&gt;#&lt;/a&gt; step 1: 制作 U 盘启动盘&lt;/h1&gt;
+&lt;p&gt;  打开 &lt;code&gt;Rufus&lt;/code&gt; ，&lt;strong&gt;设备选择要制作启动盘的 U 盘&lt;/strong&gt;，通过 “选择” 按键&lt;strong&gt;选择所下载的 Ubuntu 镜像文件&lt;/strong&gt;，&lt;strong&gt;分区类型为 GPT&lt;/strong&gt;，&lt;strong&gt;目标系统类型为 UEFI (非 CSM)&lt;/strong&gt;，&lt;strong&gt;文件系统类型选择 FAT32 (默认)&lt;/strong&gt;，&lt;strong&gt;簇大小选择 16K 字节 (默认)&lt;/strong&gt;。点击&lt;strong&gt;开始&lt;/strong&gt;，等待制作完成，之后便可关闭 &lt;code&gt;Rufus&lt;/code&gt; 。 &lt;code&gt;Rufus&lt;/code&gt;  的配置界面如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/images/Computer/Linux_install/1.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;step-2-设置分区&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#step-2-设置分区&#34;&gt;#&lt;/a&gt; step 2: 设置分区&lt;/h1&gt;
+&lt;p&gt;  首先设置 &lt;code&gt;EFI&lt;/code&gt;  分区，文件系统类型选择 &lt;code&gt;EFI system partition&lt;/code&gt; ，大小选择 &lt;code&gt;&amp;gt;=1GB (2GB)&lt;/code&gt; ，配置的界面如下：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/images/Computer/Linux_install/2.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;  之后设置 &lt;code&gt;swap&lt;/code&gt;  分区，文件系统类型选择 &lt;code&gt;Linux swap partition&lt;/code&gt; ，大小选择 &lt;code&gt;&amp;gt;=16GB (32GB)&lt;/code&gt; ，配置的界面如下：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/images/Computer/Linux_install/2.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;  之后设置 &lt;code&gt;/&lt;/code&gt;  分区，文件系统类型选择 &lt;code&gt;Ext4 (Linux Data)&lt;/code&gt; ，大小选择 &lt;code&gt;&amp;gt;=40GB (200GB)&lt;/code&gt; ，卷标选择 &lt;code&gt;/&lt;/code&gt; ，配置的界面如下：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/images/Computer/Linux_install/2.3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;  最后设置 &lt;code&gt;home&lt;/code&gt;  分区，文件系统类型选择 &lt;code&gt;Ext4 (Linux Data)&lt;/code&gt; ，大小选择 &lt;code&gt;&amp;gt;=425GB (600GB)&lt;/code&gt; ，卷标选择 &lt;code&gt;/home&lt;/code&gt; ，配置的界面如下：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/images/Computer/Linux_install/2.4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;  如果移动硬盘还有剩余空间，则可以作为常规 &lt;code&gt;Windows&lt;/code&gt;  移动硬盘使用，文件系统类型选择 &lt;code&gt;NTFS (MS Basic Data)&lt;/code&gt; ，大小选择剩余的大小，配置的界面如下：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/images/Computer/Linux_install/2.5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;  所有设置完成的界面如下所示&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/images/Computer/Linux_install/2.6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;  完成设置后即可点击 &lt;code&gt;DiskGenius&lt;/code&gt;  界面左上角的 “保存更改” 按键，开始创建分区。&lt;/p&gt;
+&lt;h1 id=&#34;step-3-安装ubuntu系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#step-3-安装ubuntu系统&#34;&gt;#&lt;/a&gt; step 3: 安装 Ubuntu 系统&lt;/h1&gt;
+&lt;p&gt;  在 &lt;code&gt;Windows&lt;/code&gt;  的恢复菜单中选择重新启动系统，则系统重新启动时会自动进入引导菜单，此时选择&lt;strong&gt; U 盘启动&lt;/strong&gt;，进入 U 盘系统。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/images/Computer/Linux_install/3.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/images/Computer/Linux_install/3.1.5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;  选择第一个 Ubuntu 选项，进入 Ubuntu 的安装界面。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/images/Computer/Linux_install/3.2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;  首先在左边选择中文简体，右边选择安装 Ubuntu。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/images/Computer/Linux_install/3.3.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;  键盘布局选择默认，点击继续。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/images/Computer/Linux_install/3.4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;  现在一共有 2 种安装模式可供选择：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;正常安装（我们需要选择的）：您可以安装功能强大的桌面所需的所有应用程序，包括：Web 浏览器、办公套件、游戏和媒体播放器等。&lt;/li&gt;
+&lt;li&gt;最小安装：可以安装最小的桌面版本，该版本仅具有 Web 浏览器和一些基本实用程序。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;  还可以在安装 &lt;code&gt;Ubuntu 20.04 LTS&lt;/code&gt;  桌面版的同时勾选「安装 Ubuntu 时下载更新」选项以下载并应用更新（推荐选上），也可以选择是否同时（不推荐）「为图形或无线硬件，以及其它媒体格式安装第三方软件」。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/images/Computer/Linux_install/3.5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;  在安装类型界面，一定一定要选择&lt;strong&gt;其他选项&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/images/Computer/Linux_install/3.6.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;  在手动安装界面，依次配置在 &lt;code&gt;stpe 2&lt;/code&gt;  中设置的四个分区&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首先是&lt;strong&gt; EFI 区&lt;/strong&gt;，大小默认，用于选择&lt;strong&gt; EFI 系统分区&lt;/strong&gt;；&lt;/li&gt;
+&lt;li&gt;下面是&lt;strong&gt;交换分区&lt;/strong&gt;，大小默认，用于选择&lt;strong&gt;交换空间&lt;/strong&gt;；&lt;/li&gt;
+&lt;li&gt;然后是&lt;strong&gt;根目录分区&lt;/strong&gt;，大小默认，用于选择&lt;strong&gt; Ext4 日志文件系统&lt;/strong&gt;，挂载点选择 &lt;code&gt;/&lt;/code&gt; ；&lt;/li&gt;
+&lt;li&gt;最后是&lt;strong&gt; home 分区&lt;/strong&gt;，大小默认，用于选择&lt;strong&gt; Ext4 日志文件系统&lt;/strong&gt;，挂载点选择 &lt;code&gt;/home&lt;/code&gt; 。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;  之后，在安装启动引导器的设备选项栏中务必选择 Ubuntu 系统的 EFI 分区，如 /dev/sda1。&lt;/p&gt;
+&lt;p&gt;  完成上述设置后，点击 “现在安装”，之后连续点击两次继续，等待安装完成。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/images/Computer/Linux_install/3.7.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/Computer/Linux_install/3.8.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/Computer/Linux_install/3.9.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/Computer/Linux_install/3.10.jpg&#34; alt=&#34;&#34;&gt;&lt;br&gt;
+&lt;img data-src=&#34;/images/Computer/Linux_install/3.11.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;  时区不需要更改，点击继续。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/images/Computer/Linux_install/3.12.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;  设置账户信息，密码建议设置简单一点，并选择自动登录选项，点击继续。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/images/Computer/Linux_install/3.13.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;  之后即可完成 Ubuntu 系统的安装。&lt;/p&gt;
+&lt;h1 id=&#34;其他问题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#其他问题&#34;&gt;#&lt;/a&gt; 其他问题&lt;/h1&gt;
+&lt;h2 id=&#34;1-启动项的问题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1-启动项的问题&#34;&gt;#&lt;/a&gt; 1、启动项的问题&lt;/h2&gt;
+&lt;p&gt;第一次安装高版本 24.04Ubuntu 系统时，可以实现&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不插入移动硬盘时自动进入 Windows 系统；&lt;/li&gt;
+&lt;li&gt;插入移动硬盘时选择进入 Ubuntu 系统或是 Windows 系统。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但是在第二次安装 20.04 版本的 Ubuntu 后，无法实现上述启动选项，只能配合&lt;strong&gt; EasyUEFI 软件的管理 EFI 启动项页面&lt;/strong&gt;，实现如下的启动功能：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/images/Computer/Linux_install/4.1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;（1）当 Windows Boot Manager 为启动序列首个选项时（目前采用的）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不插入移动硬盘时自动进入 Windows 系统；&lt;/li&gt;
+&lt;li&gt;插入移动硬盘时自动进入 Windows 系统；&lt;/li&gt;
+&lt;li&gt;插入移动硬盘，在 Windows 系统的 “恢复” 选项卡中启动电脑，可以进入选择进入 Ubuntu 系统或是 Windows 系统的页面。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;（2）当 Ubuntu 为启动序列首个选项时&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不插入移动硬盘是会进入 GNU GRUB 命令行界面，输入 exit 后可进入 Windows 系统；&lt;/li&gt;
+&lt;li&gt;插入移动硬盘后会进入选择 Ubuntu 系统或是 Windows 系统的界面。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;/images/Computer/Linux_install/4.2.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</content>
+        <category term="电脑硬件知识" />
+        <updated>2024-10-02T16:00:00.000Z</updated>
+    </entry>
     <entry>
         <id>http://qianqiu-cell.github.io/2023/09/06/Computer/monitor/</id>
         <title>显示器的一些小tricks</title>
