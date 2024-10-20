@@ -11,27 +11,27 @@
         <category>电脑硬件知识</category>
         <category>显示器</category>
         <category>博客搭建</category>
-        <category>控制工程</category>
-        <category>数学基础</category>
         <category>硬件开发</category>
+        <category>linux</category>
         <category>latex技巧</category>
         <category>论文编辑</category>
-        <category>linux</category>
+        <category>控制工程</category>
+        <category>数学基础</category>
         <category>区间不确定性</category>
         <category>office技巧</category>
         <category>最优化</category>
         <category>多目标最优化</category>
-        <category>单目标最优化</category>
-        <category>科学研究</category>
         <category>search</category>
+        <category>科学研究</category>
+        <category>单目标最优化</category>
         <category>C++</category>
         <category>编程技巧</category>
         <category>leetcode</category>
+        <category>matlab</category>
         <category>python</category>
         <category>系统设计</category>
         <category>Qt</category>
         <category>界面开发</category>
-        <category>matlab</category>
         <item>
             <guid isPermalink="true">http://qianqiu-cell.github.io/2024/07/24/math/PCA/</guid>
             <title>主成分分析（PCA）</title>

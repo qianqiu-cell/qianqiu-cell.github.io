@@ -8,27 +8,27 @@
     <category term="电脑硬件知识" />
     <category term="显示器" />
     <category term="博客搭建" />
-    <category term="控制工程" />
-    <category term="数学基础" />
     <category term="硬件开发" />
+    <category term="linux" />
     <category term="latex技巧" />
     <category term="论文编辑" />
-    <category term="linux" />
+    <category term="控制工程" />
+    <category term="数学基础" />
     <category term="区间不确定性" />
     <category term="office技巧" />
     <category term="最优化" />
     <category term="多目标最优化" />
-    <category term="单目标最优化" />
-    <category term="科学研究" />
     <category term="search" />
+    <category term="科学研究" />
+    <category term="单目标最优化" />
     <category term="C++" />
     <category term="编程技巧" />
     <category term="leetcode" />
+    <category term="matlab" />
     <category term="python" />
     <category term="系统设计" />
     <category term="Qt" />
     <category term="界面开发" />
-    <category term="matlab" />
     <entry>
         <id>http://qianqiu-cell.github.io/2024/10/20/linux/docker/</id>
         <title>docker</title>
@@ -230,6 +230,54 @@
         <updated>2024-10-19T16:00:00.000Z</updated>
     </entry>
     <entry>
+        <id>http://qianqiu-cell.github.io/2024/10/20/linux/nekoray/</id>
+        <title>linux翻墙操作</title>
+        <link rel="alternate" href="http://qianqiu-cell.github.io/2024/10/20/linux/nekoray/"/>
+        <content type="html">&lt;p&gt;参考：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1FZjhqdUVuRkFGSQ==&#34;&gt;https://www.youtube.com/watch?v=Ef8juEnFAFI&lt;/span&gt;、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1hVmNGUVU4Rk85OA==&#34;&gt;https://www.youtube.com/watch?v=aVcFQU8FO98&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;下载gdebi可选&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#下载gdebi可选&#34;&gt;#&lt;/a&gt; 下载 gdebi（可选）&lt;/h1&gt;
+&lt;p&gt;（1）传统软件套间管理工具 dpkg&lt;/p&gt;
+&lt;p&gt;dpkg 是 Debian package 的简写，为”Debian“ 操作系统 专门开发的套件管理系统，用于软件的安装，更新和移除。&lt;/p&gt;
+&lt;p&gt;所有源自 &amp;quot;Debian&amp;quot; 的 Linux 的发行版都使用 dpkg, 例如 &amp;quot;Ubuntu&amp;quot;&lt;/p&gt;
+&lt;p&gt;首先，要安装 dpkg 软件管理工具。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-get install dpkg  // 原始默认不安装，需要用户手动安装
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;接着，使用 dpkg 命令安装 deb 安装包。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo dpkg -i name.deb  // 安装name.deb的安装包
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;（2）现在软件包安装工具 gdebi&lt;/p&gt;
+&lt;p&gt;gdebi 是一个用于安装你自己手动下载的包的 GUI 程序。GDebi 也可以命令行模式运行（sudo gdebi name.deb），其功能和 GUI 模式下完全一样。&lt;/p&gt;
+&lt;p&gt;首先，要安装 gdebi，可以使用以下命令（或者在 ubuntu software 中搜索 gdebi）：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-get install gdebi
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;接着 gdebi 安装.deb 安装包&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo gdebi name.deb
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;下载rekoray-linux版本客户端&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#下载rekoray-linux版本客户端&#34;&gt;#&lt;/a&gt; 下载 rekoray-linux 版本客户端&lt;/h1&gt;
+&lt;p&gt;在&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL01hdHN1cmlEYXlvL25la29yYXkvdHJlZS80LjAtYmV0YTM=&#34;&gt; github 页面&lt;/span&gt;，选择 x64 版本的 AppImage 文件。&lt;/p&gt;
+&lt;p&gt;通过 &lt;code&gt;chomd +x&lt;/code&gt;  命令，为 AppImage 文件设置执行权限。&lt;/p&gt;
+&lt;p&gt;可以使用以下两种方法进行 rekoray 软件的启动：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;直接点击 AppImage 文件，即可启动软件。&lt;/li&gt;
+&lt;li&gt;在命令行使用如下命令： &lt;code&gt;./nekoray-4.0-beta3-2024-07-13-linux-x64.AppImage&lt;/code&gt; 。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;设置订阅信息&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#设置订阅信息&#34;&gt;#&lt;/a&gt; 设置订阅信息&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;在 rokoray 中，依次点击首选项 - 分组，打开分组界面&lt;/li&gt;
+&lt;li&gt;点击新建分组，名称自定义，类型选择订阅，之后输入订阅 URL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;/images/linux/nekoray/1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;获取url&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#获取url&#34;&gt;#&lt;/a&gt; 获取 URL&lt;/h1&gt;
+&lt;p&gt;目前使用的是 ikuuu 的订阅连接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9pa3V1dS5wdy91c2Vy&#34;&gt;https://ikuuu.pw/user&lt;/span&gt;，获得 URL 的位置如下：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;/images/linux/nekoray/2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;其他一些可以参考的机场：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hZmFmMi5zdGMtc3BhcmUxLmNvbS91c2Vy&#34;&gt;https://afaf2.stc-spare1.com/user&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly94bi0tbWVzMzU4YWNnbTk5bC5jb20vIy9yZWdpc3Rlcj9jb2RlPWZkQlJlYnlz&#34;&gt;https:// 极速机场.com/#/register?code=fdBRebys&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;每一次重新启动后都需要重新获取订阅。&lt;/p&gt;
+</content>
+        <category term="linux" />
+        <updated>2024-10-19T16:00:00.000Z</updated>
+    </entry>
+    <entry>
         <id>http://qianqiu-cell.github.io/2024/10/20/linux/linux_command/</id>
         <title>Linux常用命令</title>
         <link rel="alternate" href="http://qianqiu-cell.github.io/2024/10/20/linux/linux_command/"/>
@@ -415,54 +463,6 @@
 &lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;whereis&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;ls&lt;/span&gt;             //将和ls文件相关的文件都查找出来&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;which&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#which&#34;&gt;#&lt;/a&gt; which&lt;/h2&gt;
 &lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;说明：which指令会在环境变量&lt;span class=&#34;token environment constant&#34;&gt;$PATH&lt;/span&gt;设置的目录里查找符合条件的文件。&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token function&#34;&gt;which&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;bash&lt;/span&gt;             //查看指令&lt;span class=&#34;token string&#34;&gt;&#34;bash&#34;&lt;/span&gt;的绝对路径&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;grep&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#grep&#34;&gt;#&lt;/a&gt; grep&lt;/h2&gt;
 &lt;figure class=&#34;highlight sh&#34;&gt;&lt;figcaption data-lang=&#34;sh&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;grep&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-i&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;the&#34;&lt;/span&gt; demo_file              //在文件中查找字符串&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;不区分大小写&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token function&#34;&gt;grep&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-A&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-i&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;example&#34;&lt;/span&gt; demo_text     //输出成功匹配的行，以及该行之后的三行&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token function&#34;&gt;grep&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-r&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;ramesh&#34;&lt;/span&gt; *                   //在一个文件夹中递归查询包含指定字符串的文件&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
-        <category term="linux" />
-        <updated>2024-10-19T16:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <id>http://qianqiu-cell.github.io/2024/10/20/linux/nekoray/</id>
-        <title>linux翻墙操作</title>
-        <link rel="alternate" href="http://qianqiu-cell.github.io/2024/10/20/linux/nekoray/"/>
-        <content type="html">&lt;p&gt;参考：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1FZjhqdUVuRkFGSQ==&#34;&gt;https://www.youtube.com/watch?v=Ef8juEnFAFI&lt;/span&gt;、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1hVmNGUVU4Rk85OA==&#34;&gt;https://www.youtube.com/watch?v=aVcFQU8FO98&lt;/span&gt;&lt;/p&gt;
-&lt;h1 id=&#34;下载gdebi可选&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#下载gdebi可选&#34;&gt;#&lt;/a&gt; 下载 gdebi（可选）&lt;/h1&gt;
-&lt;p&gt;（1）传统软件套间管理工具 dpkg&lt;/p&gt;
-&lt;p&gt;dpkg 是 Debian package 的简写，为”Debian“ 操作系统 专门开发的套件管理系统，用于软件的安装，更新和移除。&lt;/p&gt;
-&lt;p&gt;所有源自 &amp;quot;Debian&amp;quot; 的 Linux 的发行版都使用 dpkg, 例如 &amp;quot;Ubuntu&amp;quot;&lt;/p&gt;
-&lt;p&gt;首先，要安装 dpkg 软件管理工具。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo apt-get install dpkg  // 原始默认不安装，需要用户手动安装
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;接着，使用 dpkg 命令安装 deb 安装包。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo dpkg -i name.deb  // 安装name.deb的安装包
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;（2）现在软件包安装工具 gdebi&lt;/p&gt;
-&lt;p&gt;gdebi 是一个用于安装你自己手动下载的包的 GUI 程序。GDebi 也可以命令行模式运行（sudo gdebi name.deb），其功能和 GUI 模式下完全一样。&lt;/p&gt;
-&lt;p&gt;首先，要安装 gdebi，可以使用以下命令（或者在 ubuntu software 中搜索 gdebi）：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo apt-get install gdebi
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;接着 gdebi 安装.deb 安装包&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo gdebi name.deb
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h1 id=&#34;下载rekoray-linux版本客户端&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#下载rekoray-linux版本客户端&#34;&gt;#&lt;/a&gt; 下载 rekoray-linux 版本客户端&lt;/h1&gt;
-&lt;p&gt;在&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL01hdHN1cmlEYXlvL25la29yYXkvdHJlZS80LjAtYmV0YTM=&#34;&gt; github 页面&lt;/span&gt;，选择 x64 版本的 AppImage 文件。&lt;/p&gt;
-&lt;p&gt;通过 &lt;code&gt;chomd +x&lt;/code&gt;  命令，为 AppImage 文件设置执行权限。&lt;/p&gt;
-&lt;p&gt;可以使用以下两种方法进行 rekoray 软件的启动：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;直接点击 AppImage 文件，即可启动软件。&lt;/li&gt;
-&lt;li&gt;在命令行使用如下命令： &lt;code&gt;./nekoray-4.0-beta3-2024-07-13-linux-x64.AppImage&lt;/code&gt; 。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h1 id=&#34;设置订阅信息&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#设置订阅信息&#34;&gt;#&lt;/a&gt; 设置订阅信息&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;在 rokoray 中，依次点击首选项 - 分组，打开分组界面&lt;/li&gt;
-&lt;li&gt;点击新建分组，名称自定义，类型选择订阅，之后输入订阅 URL&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img data-src=&#34;/images/linux/nekoray/1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;h1 id=&#34;获取url&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#获取url&#34;&gt;#&lt;/a&gt; 获取 URL&lt;/h1&gt;
-&lt;p&gt;目前使用的是 ikuuu 的订阅连接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9pa3V1dS5wdy91c2Vy&#34;&gt;https://ikuuu.pw/user&lt;/span&gt;，获得 URL 的位置如下：&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;/images/linux/nekoray/2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-&lt;p&gt;其他一些可以参考的机场：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hZmFmMi5zdGMtc3BhcmUxLmNvbS91c2Vy&#34;&gt;https://afaf2.stc-spare1.com/user&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly94bi0tbWVzMzU4YWNnbTk5bC5jb20vIy9yZWdpc3Rlcj9jb2RlPWZkQlJlYnlz&#34;&gt;https:// 极速机场.com/#/register?code=fdBRebys&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;每一次重新启动后都需要重新获取订阅。&lt;/p&gt;
-</content>
         <category term="linux" />
         <updated>2024-10-19T16:00:00.000Z</updated>
     </entry>
