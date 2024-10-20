@@ -7,26 +7,26 @@
         <language>zh-CN</language>
         <pubDate>Fri, 01 Mar 2024 00:00:00 +0800</pubDate>
         <lastBuildDate>Fri, 01 Mar 2024 00:00:00 +0800</lastBuildDate>
+        <category>AI</category>
         <category>电脑硬件知识</category>
         <category>显示器</category>
-        <category>AI</category>
         <category>博客搭建</category>
-        <category>硬件开发</category>
         <category>控制工程</category>
         <category>数学基础</category>
+        <category>硬件开发</category>
+        <category>latex技巧</category>
+        <category>论文编辑</category>
         <category>区间不确定性</category>
         <category>office技巧</category>
-        <category>论文编辑</category>
         <category>最优化</category>
         <category>多目标最优化</category>
-        <category>latex技巧</category>
         <category>单目标最优化</category>
         <category>科学研究</category>
         <category>search</category>
-        <category>matlab</category>
-        <category>编程技巧</category>
         <category>C++</category>
+        <category>编程技巧</category>
         <category>leetcode</category>
+        <category>matlab</category>
         <category>python</category>
         <category>系统设计</category>
         <category>Qt</category>
@@ -35,8 +35,8 @@
             <guid isPermalink="true">http://qianqiu-cell.github.io/2024/03/01/latex/visio_eps/</guid>
             <title>Visio图片导出PDF转EPS格式</title>
             <link>http://qianqiu-cell.github.io/2024/03/01/latex/visio_eps/</link>
-            <category>论文编辑</category>
             <category>latex技巧</category>
+            <category>论文编辑</category>
             <pubDate>Fri, 01 Mar 2024 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;一-设置visio导出为pdf&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-设置visio导出为pdf&#34;&gt;#&lt;/a&gt; 一、设置 visio 导出为 pdf&lt;/h1&gt;
 &lt;p&gt;1、打开 visio 的 “开发工具” 选项：&lt;br&gt;
@@ -65,8 +65,8 @@
             <guid isPermalink="true">http://qianqiu-cell.github.io/2023/03/12/latex/latex_eps/</guid>
             <title>latex插入图片：jpg/png转eps</title>
             <link>http://qianqiu-cell.github.io/2023/03/12/latex/latex_eps/</link>
-            <category>论文编辑</category>
             <category>latex技巧</category>
+            <category>论文编辑</category>
             <pubDate>Sun, 12 Mar 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;参考链接&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzMxMzQ3ODY5L2FydGljbGUvZGV0YWlscy8xMDM4MzIxOTA=&#34;&gt;戳此&lt;/span&gt;&lt;br&gt;
   在 &lt;code&gt;LaTeX&lt;/code&gt;  中插图，首先要生成 &lt;code&gt;.eps&lt;/code&gt;  格式的图片，若已有 &lt;code&gt;png&lt;/code&gt;  或 &lt;code&gt;jpg&lt;/code&gt;  格式的图片，可以在图片目录下，按住 == &lt;code&gt;shift&lt;/code&gt;  + 鼠标右键 ==，选择&lt;mark&gt;在此处打开命令窗口（在此处打开 &lt;code&gt;PowerShell&lt;/code&gt;  窗口）&lt;/mark&gt;，然后在终端窗口输入： &lt;code&gt;bmeps -c old.jpg new.eps&lt;/code&gt; ，其中 &lt;code&gt;-c&lt;/code&gt;  是让图片彩色输出， &lt;code&gt;old.jpg&lt;/code&gt;  为原图， &lt;code&gt;new.eps&lt;/code&gt;  为转换的 &lt;code&gt;eps&lt;/code&gt;  格式的图&lt;/p&gt;
@@ -76,8 +76,8 @@
             <guid isPermalink="true">http://qianqiu-cell.github.io/2023/03/12/latex/latex_quotation_mark/</guid>
             <title>latex输入双引号</title>
             <link>http://qianqiu-cell.github.io/2023/03/12/latex/latex_quotation_mark/</link>
-            <category>论文编辑</category>
             <category>latex技巧</category>
+            <category>论文编辑</category>
             <pubDate>Sun, 12 Mar 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;   &lt;code&gt;latex&lt;/code&gt;  中如果用英文输入模式的双引号键入，则输出的结果与我们预期的不符合，这并不是 &lt;code&gt;latex&lt;/code&gt;  的正确输入方式&lt;br&gt;
   当输入 &lt;code&gt;&amp;quot;test&amp;quot;&lt;/code&gt; ，输出为：&lt;br&gt;
@@ -90,8 +90,8 @@
             <guid isPermalink="true">http://qianqiu-cell.github.io/2023/01/20/latex/latex_install/</guid>
             <title>Vscode+TexLive+Latex workshop安装</title>
             <link>http://qianqiu-cell.github.io/2023/01/20/latex/latex_install/</link>
-            <category>论文编辑</category>
             <category>latex技巧</category>
+            <category>论文编辑</category>
             <pubDate>Fri, 20 Jan 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;一-tex-live与latex-workshop安装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-tex-live与latex-workshop安装&#34;&gt;#&lt;/a&gt; 一、Tex Live 与 Latex workshop 安装&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;Tex Live&lt;/code&gt;  可以从&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cudHVnLm9yZy90ZXhsaXZlLw==&#34;&gt;官网&lt;/span&gt;进行安装， &lt;code&gt;Latex workshop&lt;/code&gt;  从 &lt;code&gt;Vscode&lt;/code&gt;  的插件商城安装&lt;br&gt;
@@ -116,8 +116,8 @@
             <guid isPermalink="true">http://qianqiu-cell.github.io/2023/01/02/office/office/</guid>
             <title>Office技巧</title>
             <link>http://qianqiu-cell.github.io/2023/01/02/office/office/</link>
-            <category>office技巧</category>
             <category>论文编辑</category>
+            <category>office技巧</category>
             <pubDate>Mon, 02 Jan 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;一-word使用技巧&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#一-word使用技巧&#34;&gt;#&lt;/a&gt; 一、Word 使用技巧&lt;/h1&gt;
 &lt;h2 id=&#34;11-刷新word中所有mathtype的公式编号&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#11-刷新word中所有mathtype的公式编号&#34;&gt;#&lt;/a&gt; 1.1 刷新 word 中所有 mathtype 的公式编号&lt;/h2&gt;

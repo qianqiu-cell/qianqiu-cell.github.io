@@ -89,12 +89,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://i.postimg.cc/cJVjxtJK/img-2000881534.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/wv2hWnn6/img-2000883252.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/tRfb1Jmz/img-2000880084.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/cH0SG1cG/img-2001068870.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/02bj6rdk/img-2001027806.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/Bvjh8T7S/img-2000931987.jpg"></li>
           <li class="item" data-background-image="https://i.postimg.cc/0Q1TGXw5/img-2001096193.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/x1WVs1zP/img-2001034556.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/sgwXBsF9/img-2000920355.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/6QPmzj44/img-2000928904.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/dQnwjvth/img-2001008605.jpg"></li>
         </ul>
       </div>
     </header>
@@ -120,7 +120,101 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/01/30/hardware/Quartus/" itemprop="url" title="Quartus基础教程"><img data-src="https://i.postimg.cc/6psDn5GJ/img-2001095299.jpg"></a>
+    <a href="/2023/02/06/code/python/python_note/" itemprop="url" title="Pycharm中的特殊注释"><img data-src="https://i.postimg.cc/hG40x9Cz/img-2000982503.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-02-06 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-02-06T00:00:00+08:00">2023-02-06</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>304</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2023/02/06/code/python/python_note/" itemprop="url" title="Pycharm中的特殊注释">Pycharm中的特殊注释</a></h3>
+    <div class="excerpt">
+        在 Pycharm 中， Python 的注释存在一些特殊的用法，比如 # noqa ， # todo ， # type
+
+noqa 指 no quality assurance ，用在一行代码后，表示这一行代码自动检查忽略错误，由 IDE 支持
+比如以下命名拼写问题，不会出现下划线提醒：
+
+也可以用作 # noqa: &amp;lt;error&amp;gt; ，表示忽略某一特定类型的错误，例如
+
+如上表示忽略了 numpy 引用但未使用的问题，不会出现提示
+
+作为助记符，表示将要完成的功能或任务，由 IDE 支持，比如在 PyCharm...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
+      </span>
+    </div>
+    <a href="/2023/02/06/code/python/python_note/" itemprop="url" title="Pycharm中的特殊注释" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/02/06/code/python/python_special_func/" itemprop="url" title="特定功能函数"><img data-src="https://i.postimg.cc/NFjbcRXv/img-2000969188.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-02-06 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-02-06T00:00:00+08:00">2023-02-06</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>305</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2023/02/06/code/python/python_special_func/" itemprop="url" title="特定功能函数">特定功能函数</a></h3>
+    <div class="excerpt">
+        生成n个随机数，其和为固定值
+def func(amount, num): list1 = [] for i in range(0, num - 1): a = random.randint(0, amount) # 生成 n-1 个随机节点 list1.append(a) list1.sort() # 节点排序 list1.append(amount) # 设置第 n 个节点为 amount，即总金额 list2 = [] for i in range(len(list1)): if i == 0: b = list1[i] # 第一段长度为第 1 个节点 - 0 else: b =...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
+      </span>
+    </div>
+    <a href="/2023/02/06/code/python/python_special_func/" itemprop="url" title="特定功能函数" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/01/30/hardware/Quartus/" itemprop="url" title="Quartus基础教程"><img data-src="https://i.postimg.cc/xjBbYKMG/img-2000937381.jpg"></a>
   </div>
   <div class="info">
     
@@ -170,7 +264,7 @@ FPGA 与计算机共有两条数据线进行连接，一条用于供电及通讯
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/01/20/latex/latex_install/" itemprop="url" title="Vscode+TexLive+Latex workshop安装"><img data-src="https://i.postimg.cc/g0yfcqxx/img-2001009868.jpg"></a>
+    <a href="/2023/01/20/latex/latex_install/" itemprop="url" title="Vscode+TexLive+Latex workshop安装"><img data-src="https://i.postimg.cc/ncJsWnvp/img-2001039241.jpg"></a>
   </div>
   <div class="info">
     
@@ -220,7 +314,7 @@ Tex Live 可以从官网进行安装， Latex workshop 从 Vscode 的插件商�
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/01/19/blog/hexo_remote/" itemprop="url" title="解决Connection closed by remote host"><img data-src="https://i.postimg.cc/0yS7gzhX/img-2000891315.jpg"></a>
+    <a href="/2023/01/19/blog/hexo_remote/" itemprop="url" title="解决Connection closed by remote host"><img data-src="https://i.postimg.cc/BnYYQYg7/img-2000931936.jpg"></a>
   </div>
   <div class="info">
     
@@ -268,7 +362,7 @@ git config --global https.proxygit config --global --unset https.proxy
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/01/03/Computer/Realtek/" itemprop="url" title="关于戴尔G3重装系统后的音频问题"><img data-src="https://i.postimg.cc/pTXLYd8L/img-2000937358.jpg"></a>
+    <a href="/2023/01/03/Computer/Realtek/" itemprop="url" title="关于戴尔G3重装系统后的音频问题"><img data-src="https://i.postimg.cc/SRtKTpqb/img-2001025192.jpg"></a>
   </div>
   <div class="info">
     
@@ -322,7 +416,7 @@ git config --global https.proxygit config --global --unset https.proxy
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/01/02/blog/hexo_image/" itemprop="url" title="Hexo图片显示异常问题"><img data-src="https://i.postimg.cc/6pWZ1BCF/img-2000975330.jpg"></a>
+    <a href="/2023/01/02/blog/hexo_image/" itemprop="url" title="Hexo图片显示异常问题"><img data-src="https://i.postimg.cc/bNNY7rF0/img-2000986917.jpg"></a>
   </div>
   <div class="info">
     
@@ -375,7 +469,7 @@ shoka 主题图片同时备份至百度网盘及个人 U 盘
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/01/02/office/office/" itemprop="url" title="Office技巧"><img data-src="https://i.postimg.cc/7ZK2FjVh/img-2000986853.jpg"></a>
+    <a href="/2023/01/02/office/office/" itemprop="url" title="Office技巧"><img data-src="https://i.postimg.cc/3R3K8qN0/img-2000917494.jpg"></a>
   </div>
   <div class="info">
     
@@ -427,7 +521,7 @@ shoka 主题图片同时备份至百度网盘及个人 U 盘
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/12/24/blog/hexo_change/" itemprop="url" title="Hexo文件迁移"><img data-src="https://i.postimg.cc/hPPCq10y/img-2000889270.jpg"></a>
+    <a href="/2022/12/24/blog/hexo_change/" itemprop="url" title="Hexo文件迁移"><img data-src="https://i.postimg.cc/Sx1fq0Kj/img-2000874416.jpg"></a>
   </div>
   <div class="info">
     
@@ -478,7 +572,7 @@ git config --global user.name &amp;quot;你的名字&amp;quot;（注意前边是
         
 <article class="item">
   <div class="cover">
-    <a href="/2022/12/23/optimal/signal_objective_optimization/" itemprop="url" title="单目标搜索算法汇总"><img data-src="https://i.postimg.cc/LXpvXrcS/img-2001033569.jpg"></a>
+    <a href="/2022/12/23/optimal/signal_objective_optimization/" itemprop="url" title="单目标搜索算法汇总"><img data-src="https://i.postimg.cc/MTxd9CKT/img-2000889855.jpg"></a>
   </div>
   <div class="info">
     
@@ -526,106 +620,6 @@ NNS 算法的流程为：
   </div>
 </article>
 
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2022/11/28/math/covariance/" itemprop="url" title="数学期望、方差和协方差"><img data-src="https://i.postimg.cc/nzcqjphv/img-2000971122.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2022-11-28 00:00:00">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-11-28T00:00:00+08:00">2022-11-28</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>2.5k</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>2 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2022/11/28/math/covariance/" itemprop="url" title="数学期望、方差和协方差">数学期望、方差和协方差</a></h3>
-    <div class="excerpt">
-        # 一、数学期望 E (x)
-数学期望简称期望或均值，它是随机变量取值的平均值，数学期望的计算公式为
-离散型：
-E(X)=∑ixipiE\left ( X \right ) =\sum_{i}^{} x_{i}p_{i}
-E(X)=i∑​xi​pi​
-连续型：
-E(X)=∫−∞+∞xf(x)dxE\left ( X \right ) =\int_{-\infty }^{+\infty } xf\left ( x \right ) dx
-E(X)=∫−∞+∞​xf(x)dx
-
-数学期望的性质
-
-性质 1：设 c 是常数，则E(c)=cE(c)=cE(c)=c
-性质 2：设 X 是随机变量，c...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/math/" itemprop="url" title="数学基础"><i class="ic i-flag"></i>数学基础</a>
-      </span>
-    </div>
-    <a href="/2022/11/28/math/covariance/" itemprop="url" title="数学期望、方差和协方差" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2022/11/25/math/derivative_of_the_inverse_matrix/" itemprop="url" title="逆矩阵的求导"><img data-src="https://i.postimg.cc/K8TSK3qy/img-2001115424.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2022-11-25 00:00:00">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2022-11-25T00:00:00+08:00">2022-11-25</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>1.5k</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>1 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2022/11/25/math/derivative_of_the_inverse_matrix/" itemprop="url" title="逆矩阵的求导">逆矩阵的求导</a></h3>
-    <div class="excerpt">
-        # 一、结论
-对于矩阵A=(aij(t))n×nA=(a_{ij}(t))_{n\times n}A=(aij​(t))n×n​，其逆矩阵的导数为
-dA−1dt=−A−1dAdtA−1\frac{dA^{-1}}{dt}=-A^{-1}\frac{dA}{dt}A^{-1}
-dtdA−1​=−A−1dtdA​A−1
-#...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/math/" itemprop="url" title="数学基础"><i class="ic i-flag"></i>数学基础</a>
-      </span>
-    </div>
-    <a href="/2022/11/25/math/derivative_of_the_inverse_matrix/" itemprop="url" title="逆矩阵的求导" class="btn">more...</a>
-  </div>
-</article>
-
     </div>
 
   </div>
@@ -661,7 +655,7 @@ dtdA−1​=−A−1dtdA​A−1
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">88</span>
+        <span class="count">90</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -765,47 +759,7 @@ dtdA−1​=−A−1dtdA​A−1
 <a href="/categories/control/" title="分类于 控制工程">控制工程</a>
 </div>
 
-    <span><a href="/2023/07/09/control/discrete_LQR/" title="离散LQR设计控制器方法">离散LQR设计控制器方法</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/research/" title="分类于 科学研究">科学研究</a>
-</div>
-
-    <span><a href="/2023/08/01/research/SciHub/" title="sci-hub的使用方法">sci-hub的使用方法</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/office/" title="分类于 office技巧">office技巧</a>
-</div>
-
-    <span><a href="/2023/01/02/office/office/" title="Office技巧">Office技巧</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/latex/" title="分类于 latex">latex</a>
-</div>
-
-    <span><a href="/2023/03/12/latex/latex_eps/" title="latex插入图片：jpg&#x2F;png转eps">latex插入图片：jpg/png转eps</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/leetcode/" title="分类于 leetcode">leetcode</a>
-</div>
-
-    <span><a href="/2023/10/31/code/leetcode/Binary_Search/" title="二分查找的正确编写方法">二分查找的正确编写方法</a></span>
+    <span><a href="/2023/07/08/control/Continuous_LQR/" title="连续LQR设计控制器方法">连续LQR设计控制器方法</a></span>
   </li>
 
       
@@ -822,10 +776,10 @@ dtdA−1​=−A−1dtdA​A−1
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/matlab/" title="分类于 matlab">matlab</a>
+<a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2023/07/08/code/matlab/matlab_GA/" title="基于matlab-Sheffield工具箱实现遗传算法">基于matlab-Sheffield工具箱实现遗传算法</a></span>
+    <span><a href="/2024/02/20/code/python/python_pytorch_transforms/" title="Pytorch数据预处理：transforms的使用">Pytorch数据预处理：transforms的使用</a></span>
   </li>
 
       
@@ -835,7 +789,7 @@ dtdA−1​=−A−1dtdA​A−1
 <a href="/categories/AI/" title="分类于 AI">AI</a>
 </div>
 
-    <span><a href="/2024/05/16/AI/Transformer/" title="Transformer模型">Transformer模型</a></span>
+    <span><a href="/2024/07/23/AI/Prompt_engineering/" title="大模型提示词工程（Prompt Engineering）">大模型提示词工程（Prompt Engineering）</a></span>
   </li>
 
       
@@ -845,7 +799,7 @@ dtdA−1​=−A−1dtdA​A−1
 <a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2024/03/18/code/python/python_decorators/" title="Python函数装饰器">Python函数装饰器</a></span>
+    <span><a href="/2023/02/06/code/python/python_multiply/" title="python字符串、列表、元组乘法">python字符串、列表、元组乘法</a></span>
   </li>
 
       
@@ -855,7 +809,47 @@ dtdA−1​=−A−1dtdA​A−1
 <a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2024/02/19/code/python/python_class_special_methods/" title="Python类的特殊方法">Python类的特殊方法</a></span>
+    <span><a href="/2023/03/12/code/python/python_class_inherit/" title="python类的继承">python类的继承</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/01/code/python/python_qt_install/" title="Python运行pyside2报错问题解决">Python运行pyside2报错问题解决</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/02/code/python/python_gurobi/" title="python+gurobi应用">python+gurobi应用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/02/06/code/python/python_float/" title="Python浮点数运算不精确问题">Python浮点数运算不精确问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/23/code/python/python_problem/" title="python一些报错的处理">python一些报错的处理</a></span>
   </li>
 
   </ul>
@@ -880,13 +874,13 @@ dtdA−1​=−A−1dtdA​A−1
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">298k 字</span>
+    <span title="站点总字数">311k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:31</span>
+    <span title="站点阅读时长">4:43</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

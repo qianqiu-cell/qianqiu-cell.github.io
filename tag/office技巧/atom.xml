@@ -4,26 +4,26 @@
     <title>Keep Moving • Posts by &#34;office技巧&#34; tag</title>
     <link href="http://qianqiu-cell.github.io" />
     <updated>2023-01-01T16:00:00.000Z</updated>
+    <category term="AI" />
     <category term="电脑硬件知识" />
     <category term="显示器" />
-    <category term="AI" />
     <category term="博客搭建" />
-    <category term="硬件开发" />
     <category term="控制工程" />
     <category term="数学基础" />
+    <category term="硬件开发" />
+    <category term="latex技巧" />
+    <category term="论文编辑" />
     <category term="区间不确定性" />
     <category term="office技巧" />
-    <category term="论文编辑" />
     <category term="最优化" />
     <category term="多目标最优化" />
-    <category term="latex技巧" />
     <category term="单目标最优化" />
     <category term="科学研究" />
     <category term="search" />
-    <category term="matlab" />
-    <category term="编程技巧" />
     <category term="C++" />
+    <category term="编程技巧" />
     <category term="leetcode" />
+    <category term="matlab" />
     <category term="python" />
     <category term="系统设计" />
     <category term="Qt" />
@@ -65,8 +65,8 @@
 &lt;h2 id=&#34;31-pngjpg转eps&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#31-pngjpg转eps&#34;&gt;#&lt;/a&gt; 3.1 png/jpg 转 eps&lt;/h2&gt;
 &lt;p&gt;在命令行下输入 &lt;code&gt;sam2p foo.png foo.eps&lt;/code&gt;  或者 &lt;code&gt;bmeps -c foo.png foo.eps&lt;/code&gt; ，其中 &lt;code&gt;bmeps&lt;/code&gt;  的 &lt;code&gt;-c&lt;/code&gt;  选项表示彩色图片。其他常用的工具还有 &lt;code&gt;ImageMagick&lt;/code&gt;  的 &lt;code&gt;convert&lt;/code&gt;  命令等。&lt;/p&gt;
 </content>
-        <category term="office技巧" />
         <category term="论文编辑" />
+        <category term="office技巧" />
         <updated>2023-01-01T16:00:00.000Z</updated>
     </entry>
 </feed>
