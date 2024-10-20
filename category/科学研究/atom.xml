@@ -13,6 +13,7 @@
     <category term="硬件开发" />
     <category term="latex技巧" />
     <category term="论文编辑" />
+    <category term="linux" />
     <category term="区间不确定性" />
     <category term="office技巧" />
     <category term="最优化" />
@@ -23,11 +24,11 @@
     <category term="C++" />
     <category term="编程技巧" />
     <category term="leetcode" />
-    <category term="matlab" />
     <category term="python" />
     <category term="系统设计" />
     <category term="Qt" />
     <category term="界面开发" />
+    <category term="matlab" />
     <entry>
         <id>http://qianqiu-cell.github.io/2023/08/01/research/SciHub/</id>
         <title>sci-hub的使用方法</title>

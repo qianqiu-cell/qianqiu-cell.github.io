@@ -24,15 +24,15 @@
 <link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
   
-  <meta name="keywords" content="电脑硬件知识" />
+  <meta name="keywords" content="linux" />
 
 
-<link rel="canonical" href="http://qianqiu-cell.github.io/2024/10/03/Computer/Linux_install/">
+<link rel="canonical" href="http://qianqiu-cell.github.io/2024/10/03/linux/Linux_install/">
 
 
 
   <title>
-在移动硬盘安装Ubuntu系统 - 电脑硬件知识 |
+在移动硬盘安装Ubuntu系统 - linux |
 唯爱ぺ灬babyル = Keep Moving = 天将降大任于斯人也</title>
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -117,12 +117,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://i.postimg.cc/JhWzdxw0/img-2001027818.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/tTQSQ0rW/img-2000883265.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/cHsr9hqZ/img-2000934104.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/d3LRf48g/img-2000921065.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/jSnKzFjm/img-2001111704.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/15QK9crh/img-2000915316.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/wv2hWnn6/img-2000883252.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/rFbM0JQs/img-2000929476.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/wv282czC/img-2001012739.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/Sx1fq0Kj/img-2000874416.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/262MhkFm/img-2001012298.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/K8DxYgps/img-2001099175.jpg"></li>
         </ul>
       </div>
     </header>
@@ -148,12 +148,12 @@
 <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 <i class="ic i-home"></i>
 <span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
-<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/Computer/" itemprop="item" rel="index" title="分类于 电脑硬件知识"><span itemprop="name">电脑硬件知识</span></a>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/linux/" itemprop="item" rel="index" title="分类于 linux"><span itemprop="name">linux</span></a>
 <meta itemprop="position" content="1" /></span>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
-  <link itemprop="mainEntityOfPage" href="http://qianqiu-cell.github.io/2024/10/03/Computer/Linux_install/">
+  <link itemprop="mainEntityOfPage" href="http://qianqiu-cell.github.io/2024/10/03/linux/Linux_install/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/images/avatar.jpg">
@@ -176,40 +176,40 @@
 </ul>
 <h1 id="step-1-制作u盘启动盘"><a class="markdownIt-Anchor" href="#step-1-制作u盘启动盘">#</a> step 1: 制作 U 盘启动盘</h1>
 <p>  打开 <code>Rufus</code> ，<strong>设备选择要制作启动盘的 U 盘</strong>，通过 “选择” 按键<strong>选择所下载的 Ubuntu 镜像文件</strong>，<strong>分区类型为 GPT</strong>，<strong>目标系统类型为 UEFI (非 CSM)</strong>，<strong>文件系统类型选择 FAT32 (默认)</strong>，<strong>簇大小选择 16K 字节 (默认)</strong>。点击<strong>开始</strong>，等待制作完成，之后便可关闭 <code>Rufus</code> 。 <code>Rufus</code>  的配置界面如下图所示：</p>
-<p><img data-src="/images/Computer/Linux_install/1.1.png" alt=""></p>
+<p><img data-src="/images/linux/Linux_install/1.1.png" alt=""></p>
 <h1 id="step-2-设置分区"><a class="markdownIt-Anchor" href="#step-2-设置分区">#</a> step 2: 设置分区</h1>
 <p>  首先设置 <code>EFI</code>  分区，文件系统类型选择 <code>EFI system partition</code> ，大小选择 <code>&gt;=1GB (2GB)</code> ，配置的界面如下：</p>
-<p><img data-src="/images/Computer/Linux_install/2.1.png" alt=""></p>
+<p><img data-src="/images/linux/Linux_install/2.1.png" alt=""></p>
 <p>  之后设置 <code>swap</code>  分区，文件系统类型选择 <code>Linux swap partition</code> ，大小选择 <code>&gt;=16GB (32GB)</code> ，配置的界面如下：</p>
-<p><img data-src="/images/Computer/Linux_install/2.2.png" alt=""></p>
+<p><img data-src="/images/linux/Linux_install/2.2.png" alt=""></p>
 <p>  之后设置 <code>/</code>  分区，文件系统类型选择 <code>Ext4 (Linux Data)</code> ，大小选择 <code>&gt;=40GB (200GB)</code> ，卷标选择 <code>/</code> ，配置的界面如下：</p>
-<p><img data-src="/images/Computer/Linux_install/2.3.png" alt=""></p>
+<p><img data-src="/images/linux/Linux_install/2.3.png" alt=""></p>
 <p>  最后设置 <code>home</code>  分区，文件系统类型选择 <code>Ext4 (Linux Data)</code> ，大小选择 <code>&gt;=425GB (600GB)</code> ，卷标选择 <code>/home</code> ，配置的界面如下：</p>
-<p><img data-src="/images/Computer/Linux_install/2.4.png" alt=""></p>
+<p><img data-src="/images/linux/Linux_install/2.4.png" alt=""></p>
 <p>  如果移动硬盘还有剩余空间，则可以作为常规 <code>Windows</code>  移动硬盘使用，文件系统类型选择 <code>NTFS (MS Basic Data)</code> ，大小选择剩余的大小，配置的界面如下：</p>
-<p><img data-src="/images/Computer/Linux_install/2.5.png" alt=""></p>
+<p><img data-src="/images/linux/Linux_install/2.5.png" alt=""></p>
 <p>  所有设置完成的界面如下所示</p>
-<p><img data-src="/images/Computer/Linux_install/2.6.png" alt=""></p>
+<p><img data-src="/images/linux/Linux_install/2.6.png" alt=""></p>
 <p>  完成设置后即可点击 <code>DiskGenius</code>  界面左上角的 “保存更改” 按键，开始创建分区。</p>
 <h1 id="step-3-安装ubuntu系统"><a class="markdownIt-Anchor" href="#step-3-安装ubuntu系统">#</a> step 3: 安装 Ubuntu 系统</h1>
 <p>  在 <code>Windows</code>  的恢复菜单中选择重新启动系统，则系统重新启动时会自动进入引导菜单，此时选择<strong> U 盘启动</strong>，进入 U 盘系统。</p>
-<p><img data-src="/images/Computer/Linux_install/3.1.png" alt=""></p>
-<p><img data-src="/images/Computer/Linux_install/3.1.5.png" alt=""></p>
+<p><img data-src="/images/linux/Linux_install/3.1.png" alt=""></p>
+<p><img data-src="/images/linux/Linux_install/3.1.5.png" alt=""></p>
 <p>  选择第一个 Ubuntu 选项，进入 Ubuntu 的安装界面。</p>
-<p><img data-src="/images/Computer/Linux_install/3.2.png" alt=""></p>
+<p><img data-src="/images/linux/Linux_install/3.2.png" alt=""></p>
 <p>  首先在左边选择中文简体，右边选择安装 Ubuntu。</p>
-<p><img data-src="/images/Computer/Linux_install/3.3.png" alt=""></p>
+<p><img data-src="/images/linux/Linux_install/3.3.png" alt=""></p>
 <p>  键盘布局选择默认，点击继续。</p>
-<p><img data-src="/images/Computer/Linux_install/3.4.png" alt=""></p>
+<p><img data-src="/images/linux/Linux_install/3.4.png" alt=""></p>
 <p>  现在一共有 2 种安装模式可供选择：</p>
 <ul>
 <li>正常安装（我们需要选择的）：您可以安装功能强大的桌面所需的所有应用程序，包括：Web 浏览器、办公套件、游戏和媒体播放器等。</li>
 <li>最小安装：可以安装最小的桌面版本，该版本仅具有 Web 浏览器和一些基本实用程序。</li>
 </ul>
 <p>  还可以在安装 <code>Ubuntu 20.04 LTS</code>  桌面版的同时勾选「安装 Ubuntu 时下载更新」选项以下载并应用更新（推荐选上），也可以选择是否同时（不推荐）「为图形或无线硬件，以及其它媒体格式安装第三方软件」。</p>
-<p><img data-src="/images/Computer/Linux_install/3.5.png" alt=""></p>
+<p><img data-src="/images/linux/Linux_install/3.5.png" alt=""></p>
 <p>  在安装类型界面，一定一定要选择<strong>其他选项</strong>。</p>
-<p><img data-src="/images/Computer/Linux_install/3.6.png" alt=""></p>
+<p><img data-src="/images/linux/Linux_install/3.6.png" alt=""></p>
 <p>  在手动安装界面，依次配置在 <code>stpe 2</code>  中设置的四个分区</p>
 <ul>
 <li>首先是<strong> EFI 区</strong>，大小默认，用于选择<strong> EFI 系统分区</strong>；</li>
@@ -219,15 +219,15 @@
 </ul>
 <p>  之后，在安装启动引导器的设备选项栏中务必选择 Ubuntu 系统的 EFI 分区，如 /dev/sda1。</p>
 <p>  完成上述设置后，点击 “现在安装”，之后连续点击两次继续，等待安装完成。</p>
-<p><img data-src="/images/Computer/Linux_install/3.7.jpg" alt=""><br>
-<img data-src="/images/Computer/Linux_install/3.8.jpg" alt=""><br>
-<img data-src="/images/Computer/Linux_install/3.9.jpg" alt=""><br>
-<img data-src="/images/Computer/Linux_install/3.10.jpg" alt=""><br>
-<img data-src="/images/Computer/Linux_install/3.11.jpg" alt=""></p>
+<p><img data-src="/images/linux/Linux_install/3.7.jpg" alt=""><br>
+<img data-src="/images/linux/Linux_install/3.8.jpg" alt=""><br>
+<img data-src="/images/linux/Linux_install/3.9.jpg" alt=""><br>
+<img data-src="/images/linux/Linux_install/3.10.jpg" alt=""><br>
+<img data-src="/images/linux/Linux_install/3.11.jpg" alt=""></p>
 <p>  时区不需要更改，点击继续。</p>
-<p><img data-src="/images/Computer/Linux_install/3.12.png" alt=""></p>
+<p><img data-src="/images/linux/Linux_install/3.12.png" alt=""></p>
 <p>  设置账户信息，密码建议设置简单一点，并选择自动登录选项，点击继续。</p>
-<p><img data-src="/images/Computer/Linux_install/3.13.png" alt=""></p>
+<p><img data-src="/images/linux/Linux_install/3.13.png" alt=""></p>
 <p>  之后即可完成 Ubuntu 系统的安装。</p>
 <h1 id="其他问题"><a class="markdownIt-Anchor" href="#其他问题">#</a> 其他问题</h1>
 <h2 id="1-启动项的问题"><a class="markdownIt-Anchor" href="#1-启动项的问题">#</a> 1、启动项的问题</h2>
@@ -237,7 +237,7 @@
 <li>插入移动硬盘时选择进入 Ubuntu 系统或是 Windows 系统。</li>
 </ul>
 <p>但是在第二次安装 20.04 版本的 Ubuntu 后，无法实现上述启动选项，只能配合<strong> EasyUEFI 软件的管理 EFI 启动项页面</strong>（文件已保存至百度网盘），实现如下的启动功能：</p>
-<p><img data-src="/images/Computer/Linux_install/4.1.png" alt=""></p>
+<p><img data-src="/images/linux/Linux_install/4.1.png" alt=""></p>
 <p>（1）当 Windows Boot Manager 为启动序列首个选项时（目前采用的）</p>
 <ul>
 <li>不插入移动硬盘时自动进入 Windows 系统；</li>
@@ -249,10 +249,10 @@
 <li>不插入移动硬盘是会进入 GNU GRUB 命令行界面，输入 exit 后可进入 Windows 系统；</li>
 <li>插入移动硬盘后会进入选择 Ubuntu 系统或是 Windows 系统的界面。</li>
 </ul>
-<p><img data-src="/images/Computer/Linux_install/4.2.jpg" alt=""></p>
+<p><img data-src="/images/linux/Linux_install/4.2.jpg" alt=""></p>
 
       <div class="tags">
-          <a href="/tags/%E7%94%B5%E8%84%91%E7%A1%AC%E4%BB%B6%E7%9F%A5%E8%AF%86/" rel="tag"><i class="ic i-tag"></i> 电脑硬件知识</a>
+          <a href="/tags/linux/" rel="tag"><i class="ic i-tag"></i> linux</a>
       </div>
   </div>
 
@@ -264,9 +264,9 @@
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2024-10-03 19:19:20" itemprop="dateModified" datetime="2024-10-03T19:19:20+08:00">2024-10-03</time>
+    <time title="修改时间：2024-10-20 23:32:08" itemprop="dateModified" datetime="2024-10-20T23:32:08+08:00">2024-10-20</time>
   </span>
-  <span id="2024/10/03/Computer/Linux_install/" class="item leancloud_visitors" data-flag-title="在移动硬盘安装Ubuntu系统" title="阅读次数">
+  <span id="2024/10/03/linux/Linux_install/" class="item leancloud_visitors" data-flag-title="在移动硬盘安装Ubuntu系统" title="阅读次数">
       <span class="icon">
         <i class="ic i-eye"></i>
       </span>
@@ -287,7 +287,7 @@
     <div class="item left">
       
 
-  <a href="/2024/09/21/AI/ViT/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;ZRRyYHwH&#x2F;img-2000973543.jpg" title="ViT">
+  <a href="/2024/09/21/AI/ViT/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;PrZvqPQg&#x2F;img-2000943305.jpg" title="ViT">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> AI</span>
   <h3>ViT</h3>
@@ -297,7 +297,7 @@
     <div class="item right">
       
 
-  <a href="/2024/10/05/AI/MAE/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;15PHrcTR&#x2F;img-2000874612.jpg" title="MAE">
+  <a href="/2024/10/05/AI/MAE/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;sfL5xFdh&#x2F;img-2000973066.jpg" title="MAE">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> AI</span>
   <h3>MAE</h3>
@@ -323,7 +323,7 @@
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
-          <li><a href="/2023/01/03/Computer/Realtek/" rel="bookmark" title="关于戴尔G3重装系统后的音频问题">关于戴尔G3重装系统后的音频问题</a></li><li><a href="/2023/09/06/Computer/monitor/" rel="bookmark" title="显示器的一些小tricks">显示器的一些小tricks</a></li><li class="active"><a href="/2024/10/03/Computer/Linux_install/" rel="bookmark" title="在移动硬盘安装Ubuntu系统">在移动硬盘安装Ubuntu系统</a></li><li><a href="/2024/10/20/Computer/docker/" rel="bookmark" title="docker">docker</a></li><li><a href="/2024/10/20/Computer/rekoray/" rel="bookmark" title="linux翻墙操作">linux翻墙操作</a></li>
+          <li class="active"><a href="/2024/10/03/linux/Linux_install/" rel="bookmark" title="在移动硬盘安装Ubuntu系统">在移动硬盘安装Ubuntu系统</a></li><li><a href="/2024/10/20/linux/docker/" rel="bookmark" title="docker">docker</a></li><li><a href="/2024/10/20/linux/linux_command/" rel="bookmark" title="Linux常用命令">Linux常用命令</a></li><li><a href="/2024/10/20/linux/nekoray/" rel="bookmark" title="linux翻墙操作">linux翻墙操作</a></li>
         </ul>
       </div>
       <div class="overview panel" data-title="站点概览">
@@ -337,19 +337,19 @@
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">90</span>
+        <span class="count">91</span>
         <span class="name">文章</span>
       </a>
     </div>
     <div class="item categories">
       <a href="/categories/">
-        <span class="count">15</span>
+        <span class="count">16</span>
         <span class="name">分类</span>
       </a>
     </div>
     <div class="item tags">
       <a href="/tags/">
-        <span class="count">24</span>
+        <span class="count">25</span>
         <span class="name">标签</span>
       </a>
     </div>
@@ -439,20 +439,10 @@
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
+<a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2023/11/24/math/Function_approximation_and_curve_fitting/" title="函数逼近与曲线拟合">函数逼近与曲线拟合</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/latex/" title="分类于 latex">latex</a>
-</div>
-
-    <span><a href="/2023/03/12/latex/latex_eps/" title="latex插入图片：jpg&#x2F;png转eps">latex插入图片：jpg/png转eps</a></span>
+    <span><a href="/2024/03/19/code/python/python_private_property/" title="Python——类的私有属性、公有属性、私有方法、公有方法">Python——类的私有属性、公有属性、私有方法、公有方法</a></span>
   </li>
 
       
@@ -462,17 +452,17 @@
 <a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2023/03/27/code/python/python_plot/" title="python+matplotlib绘制图像">python+matplotlib绘制图像</a></span>
+    <span><a href="/2023/03/02/code/python/python_jupyter/" title="修改Jupyter Notebook默认工作路径">修改Jupyter Notebook默认工作路径</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
+<a href="/categories/control/" title="分类于 控制工程">控制工程</a>
 </div>
 
-    <span><a href="/2023/03/16/optimal/SPEA/" title="SPEAI-II">SPEAI-II</a></span>
+    <span><a href="/2024/07/25/control/N4SID/" title="N4SID系统辨识方法">N4SID系统辨识方法</a></span>
   </li>
 
       
@@ -482,17 +472,17 @@
 <a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2024/03/03/code/python/python_pytorch_install/" title="Pytorch安装">Pytorch安装</a></span>
+    <span><a href="/2024/02/20/code/python/python_pytorch_transforms/" title="Pytorch数据预处理：transforms的使用">Pytorch数据预处理：transforms的使用</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/hardware/" title="分类于 硬件开发">硬件开发</a>
+<a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2023/01/30/hardware/Quartus/" title="Quartus基础教程">Quartus基础教程</a></span>
+    <span><a href="/2023/03/23/code/python/python_problem/" title="python一些报错的处理">python一些报错的处理</a></span>
   </li>
 
       
@@ -502,37 +492,47 @@
 <a href="/categories/math/" title="分类于 数学基础">数学基础</a>
 </div>
 
-    <span><a href="/2023/08/01/math/derivative_of_the_multiple_matrix/" title="矩阵乘法的求导问题">矩阵乘法的求导问题</a></span>
+    <span><a href="/2024/07/23/math/least_square_method/" title="最小二乘法">最小二乘法</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
+<a href="/categories/control/" title="分类于 控制工程">控制工程</a>
 </div>
 
-    <span><a href="/2024/03/18/code/python/python_decorators/" title="Python函数装饰器">Python函数装饰器</a></span>
+    <span><a href="/2022/11/23/control/spring_damping/" title="弹簧阻尼系统">弹簧阻尼系统</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
+<a href="/categories/leetcode/" title="分类于 leetcode">leetcode</a>
 </div>
 
-    <span><a href="/2022/11/25/math/derivative_of_the_inverse_matrix/" title="逆矩阵的求导">逆矩阵的求导</a></span>
+    <span><a href="/2023/11/06/code/leetcode/1000%E6%9C%AC%E5%BC%80%E6%BA%90%E7%94%B5%E5%AD%90%E4%B9%A6/" title="1000本开源电子书">1000本开源电子书</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
+<a href="/categories/AI/" title="分类于 AI">AI</a>
 </div>
 
-    <span><a href="/2024/08/27/code/python/python_ipdb/" title="IPython Debugger (ipdb)">IPython Debugger (ipdb)</a></span>
+    <span><a href="/2024/05/16/AI/Transformer/" title="Transformer模型">Transformer模型</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/office/" title="分类于 office技巧">office技巧</a>
+</div>
+
+    <span><a href="/2023/01/02/office/office/" title="Office技巧">Office技巧</a></span>
   </li>
 
   </ul>
@@ -557,13 +557,13 @@
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">311k 字</span>
+    <span title="站点总字数">320k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:43</span>
+    <span title="站点阅读时长">4:51</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
@@ -575,7 +575,7 @@
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: '2024/10/03/Computer/Linux_install/',
+    path: '2024/10/03/linux/Linux_install/',
     favicon: {
       show: "（●´3｀●）やれやれだぜ",
       hide: "(´Д｀)大変だ！"

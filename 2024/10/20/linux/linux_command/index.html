@@ -1,0 +1,710 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Keep Moving" href="http://qianqiu-cell.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Keep Moving" href="http://qianqiu-cell.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Keep Moving" href="http://qianqiu-cell.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="linux" />
+
+
+<link rel="canonical" href="http://qianqiu-cell.github.io/2024/10/20/linux/linux_command/">
+
+
+
+  <title>
+Linux常用命令 - linux |
+唯爱ぺ灬babyル = Keep Moving = 天将降大任于斯人也</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Linux常用命令
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2024-10-20 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-10-20T00:00:00+08:00">2024-10-20</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>9k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>8 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">唯爱ぺ灬babyル</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://i.postimg.cc/Rh5wZfyD/img-2000906221.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/HsqB71gK/img-2000895436.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/GtgTV5GG/img-2001101754.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/hG40x9Cz/img-2000982503.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/TYgPfnYb/img-2000874626.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/5tfCTbvZ/img-2000971096.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/linux/" itemprop="item" rel="index" title="分类于 linux"><span itemprop="name">linux</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://qianqiu-cell.github.io/2024/10/20/linux/linux_command/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="Ember">
+    <meta itemprop="description" content="天将降大任于斯人也, 🌸学习笔记🌸">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Keep Moving">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>参考：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzQ2NDIyMzAwL2FydGljbGUvZGV0YWlscy8xMDQ2NDUwNzI=">https://blog.csdn.net/m0_46422300/article/details/104645072</span></p>
+<h1 id="一-基础知识"><a class="markdownIt-Anchor" href="#一-基础知识">#</a> 一、基础知识</h1>
+<h2 id="11-linux系统的文件结构"><a class="markdownIt-Anchor" href="#11-linux系统的文件结构">#</a> 1.1 Linux 系统的文件结构</h2>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre>/bin        <span class="token comment"># 二进制文件，系统常规命令</span></pre></td></tr><tr><td data-num="2"></td><td><pre>/boot       <span class="token comment"># 系统启动分区，系统启动时读取的文件</span></pre></td></tr><tr><td data-num="3"></td><td><pre>/dev        <span class="token comment"># 设备文件</span></pre></td></tr><tr><td data-num="4"></td><td><pre>/etc        <span class="token comment"># 大多数配置文件</span></pre></td></tr><tr><td data-num="5"></td><td><pre>/home       <span class="token comment"># 普通用户的家目录</span></pre></td></tr><tr><td data-num="6"></td><td><pre>/lib        <span class="token comment"># 32 位函数库</span></pre></td></tr><tr><td data-num="7"></td><td><pre>/lib64      <span class="token comment"># 64 位库</span></pre></td></tr><tr><td data-num="8"></td><td><pre>/media      <span class="token comment"># 手动临时挂载点</span></pre></td></tr><tr><td data-num="9"></td><td><pre>/mnt        <span class="token comment"># 手动临时挂载点</span></pre></td></tr><tr><td data-num="10"></td><td><pre>/opt        <span class="token comment"># 第三方软件安装位置</span></pre></td></tr><tr><td data-num="11"></td><td><pre>/proc       <span class="token comment"># 进程信息及硬件信息</span></pre></td></tr><tr><td data-num="12"></td><td><pre>/root       <span class="token comment"># 临时设备的默认挂载点</span></pre></td></tr><tr><td data-num="13"></td><td><pre>/sbin       <span class="token comment"># 系统管理命令</span></pre></td></tr><tr><td data-num="14"></td><td><pre>/srv        <span class="token comment"># 数据</span></pre></td></tr><tr><td data-num="15"></td><td><pre>/var        <span class="token comment"># 数据</span></pre></td></tr><tr><td data-num="16"></td><td><pre>/sys        <span class="token comment"># 内核相关信息</span></pre></td></tr><tr><td data-num="17"></td><td><pre>/tmp        <span class="token comment"># 临时文件</span></pre></td></tr><tr><td data-num="18"></td><td><pre>/usr        <span class="token comment"># 用户相关设定</span></pre></td></tr></table></figure><h2 id="12-linux系统命令行的含义"><a class="markdownIt-Anchor" href="#12-linux系统命令行的含义">#</a> 1.2 Linux 系统命令行的含义</h2>
+<p>示例： <code>ember@ember-Victus-by-HP-Laptop:~$</code></p>
+<ul>
+<li>ember    // 用户名，若为 root，则为超级用户</li>
+<li>@       // 分隔符</li>
+<li>ember-Victus-by-HP-Laptop   // 主机名称</li>
+<li>~       // 当前所在目录，默认用户目录为～，会随着目录切换而变化</li>
+<li>$       // 表示当前用户是普通用户，超级用户为 #，例如：（“root@ember-Victus-by-HP-Laptop:/home/ember#” ，表示使用超级用户访问 /home/ember 文件夹）</li>
+</ul>
+<p>使用 sudo su 和 su name 可以切换普通用户和超级用户。同时，exit 命令也可以退出当前用户。</p>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token punctuation">(</span>base<span class="token punctuation">)</span> ember@ember-Victus-by-HP-Laptop:~$ <span class="token function">sudo</span> <span class="token function">su</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token punctuation">[</span>sudo<span class="token punctuation">]</span> ember 的密码： </pre></td></tr><tr><td data-num="3"></td><td><pre>root@ember-Victus-by-HP-Laptop:/home/ember<span class="token comment"># su ember</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token punctuation">(</span>base<span class="token punctuation">)</span> ember@ember-Victus-by-HP-Laptop:~$ <span class="token builtin class-name">exit</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token builtin class-name">exit</span></pre></td></tr><tr><td data-num="6"></td><td><pre>root@ember-Victus-by-HP-Laptop:/home/ember<span class="token comment"># su ember</span></pre></td></tr></table></figure><h2 id="13-命令的组成"><a class="markdownIt-Anchor" href="#13-命令的组成">#</a> 1.3 命令的组成</h2>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre>命令 参数名 参数值</pre></td></tr></table></figure><h1 id="二-目录操作"><a class="markdownIt-Anchor" href="#二-目录操作">#</a> 二、目录操作</h1>
+<h2 id="21-切换目录cd"><a class="markdownIt-Anchor" href="#21-切换目录cd">#</a> 2.1 切换目录（cd）</h2>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token builtin class-name">cd</span> /                 //切换到根目录</pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token builtin class-name">cd</span> /bin              //切换到根目录下的bin目录</pre></td></tr><tr><td data-num="3"></td><td><pre>  <span class="token builtin class-name">cd</span> <span class="token punctuation">..</span>/               //切换到上一级目录 或者使用命令：cd <span class="token punctuation">..</span></pre></td></tr><tr><td data-num="4"></td><td><pre>  <span class="token builtin class-name">cd</span> ~                 //切换到home目录</pre></td></tr><tr><td data-num="5"></td><td><pre>  <span class="token builtin class-name">cd</span> -                 //切换到上次访问的目录</pre></td></tr><tr><td data-num="6"></td><td><pre>  <span class="token builtin class-name">cd</span> xx<span class="token punctuation">(</span>文件夹名<span class="token punctuation">)</span>       //切换到本目录下的名为xx的文件目录，如果目录不存在报错</pre></td></tr><tr><td data-num="7"></td><td><pre>  <span class="token builtin class-name">cd</span> /xxx/xx/x         //可以输入完整的路径，直接切换到目标目录，输入过程中可以使用tab键快速补全</pre></td></tr></table></figure><h2 id="22-查看目录ls"><a class="markdownIt-Anchor" href="#22-查看目录ls">#</a> 2.2 查看目录（ls）</h2>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">ls</span>                   //查看当前目录下的所有目录和文件</pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token function">ls</span> <span class="token parameter variable">-a</span>                //查看当前目录下的所有目录和文件（包括隐藏的文件）</pre></td></tr><tr><td data-num="3"></td><td><pre>  <span class="token function">ls</span> <span class="token parameter variable">-l</span>                //列表查看当前目录下的所有目录和文件（列表查看，显示更多信息），与命令<span class="token string">"ll"</span>效果一样</pre></td></tr><tr><td data-num="4"></td><td><pre>  <span class="token function">ls</span> /bin              //查看指定目录下的所有目录和文件</pre></td></tr></table></figure><h2 id="23-创建目录mkdir"><a class="markdownIt-Anchor" href="#23-创建目录mkdir">#</a> 2.3 创建目录（mkdir）</h2>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">mkdir</span> tools          //在当前目录下创建一个名为tools的目录</pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token function">mkdir</span> /bin/tools     //在指定目录下创建一个名为tools的目录</pre></td></tr></table></figure><h2 id="24-删除目录与文件"><a class="markdownIt-Anchor" href="#24-删除目录与文件">#</a> 2.4 删除目录与文件</h2>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">rm</span> 文件名              //删除当前目录下的文件</pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token function">rm</span> <span class="token parameter variable">-f</span> 文件名           //删除当前目录的的文件（不询问）</pre></td></tr><tr><td data-num="3"></td><td><pre>  <span class="token function">rm</span> <span class="token parameter variable">-r</span> 文件夹名         //递归删除当前目录下的目录</pre></td></tr><tr><td data-num="4"></td><td><pre>  <span class="token function">rm</span> <span class="token parameter variable">-rf</span> 文件夹名        //递归删除当前目录下的目录（不询问）</pre></td></tr><tr><td data-num="5"></td><td><pre>  <span class="token function">rm</span> <span class="token parameter variable">-rf</span> *              //将当前目录下的所有目录和文件全部删除</pre></td></tr></table></figure><h2 id="25-移动目录mv"><a class="markdownIt-Anchor" href="#25-移动目录mv">#</a> 2.5 移动目录（mv）</h2>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">mv</span> 当前目录名 新目录名        //修改目录名，同样适用于文件操作</pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token function">mv</span> /usr/tmp/tool /opt       //将/usr/tmp目录下的tool目录剪切到 /opt目录下面</pre></td></tr><tr><td data-num="3"></td><td><pre>  <span class="token function">mv</span> <span class="token parameter variable">-r</span> /usr/tmp/tool /opt    //递归剪切目录中所有文件和文件夹</pre></td></tr></table></figure><h2 id="26-拷贝目录cp"><a class="markdownIt-Anchor" href="#26-拷贝目录cp">#</a> 2.6 拷贝目录（cp）</h2>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">cp</span> /usr/tmp/tool /opt       //将/usr/tmp目录下的tool目录复制到 /opt目录下面</pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token function">cp</span> <span class="token parameter variable">-r</span> /usr/tmp/tool /opt    //递归剪复制目录中所有文件和文件夹</pre></td></tr></table></figure><h2 id="27-搜索目录find"><a class="markdownIt-Anchor" href="#27-搜索目录find">#</a> 2.7 搜索目录（find）</h2>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">find</span> /bin <span class="token parameter variable">-name</span> <span class="token string">'a*'</span>        //查找/bin目录下的所有以a开头的文件或者目录</pre></td></tr></table></figure><h2 id="28-查看当前目录的绝对路径pwd"><a class="markdownIt-Anchor" href="#28-查看当前目录的绝对路径pwd">#</a> 2.8 查看当前目录的绝对路径（pwd）</h2>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token builtin class-name">pwd</span>                         //显示当前位置路径</pre></td></tr></table></figure><h1 id="三-文件操作"><a class="markdownIt-Anchor" href="#三-文件操作">#</a> 三、文件操作</h1>
+<h2 id="31-新增文件touch"><a class="markdownIt-Anchor" href="#31-新增文件touch">#</a> 3.1 新增文件（touch）</h2>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">touch</span>  a.txt         //在当前目录下创建名为a的txt文件（文件不存在），如果文件存在，将文件时间属性修改为当前系统时间</pre></td></tr></table></figure><h2 id="32-删除文件"><a class="markdownIt-Anchor" href="#32-删除文件">#</a> 3.2 删除文件</h2>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">rm</span> 文件名              //删除当前目录下的文件</pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token function">rm</span> <span class="token parameter variable">-f</span> 文件名           //删除当前目录的的文件（不询问）</pre></td></tr></table></figure><h2 id="33-编辑文件vi-vim"><a class="markdownIt-Anchor" href="#33-编辑文件vi-vim">#</a> 3.3 编辑文件（vi, vim）</h2>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">vi</span> 文件名              //打开需要编辑的文件</pre></td></tr><tr><td data-num="2"></td><td><pre>  --进入后，操作界面有三种模式：命令模式（command mode）、插入模式（Insert mode）和底行模式（last line mode）</pre></td></tr><tr><td data-num="3"></td><td><pre>  命令模式</pre></td></tr><tr><td data-num="4"></td><td><pre>  -刚进入文件就是命令模式，通过方向键控制光标位置，</pre></td></tr><tr><td data-num="5"></td><td><pre>  -使用命令<span class="token string">"dd"</span>删除当前整行</pre></td></tr><tr><td data-num="6"></td><td><pre>  -使用命令<span class="token string">"/字段"</span>进行查找</pre></td></tr><tr><td data-num="7"></td><td><pre>  -按<span class="token string">"i"</span>在光标所在字符前开始插入</pre></td></tr><tr><td data-num="8"></td><td><pre>  -按<span class="token string">"a"</span>在光标所在字符后开始插入</pre></td></tr><tr><td data-num="9"></td><td><pre>  -按<span class="token string">"o"</span>在光标所在行的下面另起一新行插入</pre></td></tr><tr><td data-num="10"></td><td><pre>  -按<span class="token string">"："</span>进入底行模式</pre></td></tr><tr><td data-num="11"></td><td><pre>  插入模式</pre></td></tr><tr><td data-num="12"></td><td><pre>  -此时可以对文件内容进行编辑，左下角会显示 <span class="token string">"-- 插入 --"</span>"</pre></td></tr><tr><td data-num="13"></td><td><pre>  -按<span class="token string">"ESC"</span>进入底行模式</pre></td></tr><tr><td data-num="14"></td><td><pre>  底行模式</pre></td></tr><tr><td data-num="15"></td><td><pre>  -退出编辑：      :q</pre></td></tr><tr><td data-num="16"></td><td><pre>  -强制退出：      :q<span class="token operator">!</span></pre></td></tr><tr><td data-num="17"></td><td><pre>  -保存并退出：    :wq</pre></td></tr><tr><td data-num="18"></td><td><pre>  <span class="token comment">## 操作步骤示例 ##</span></pre></td></tr><tr><td data-num="19"></td><td><pre>  <span class="token number">1</span>.保存文件：按<span class="token string">"ESC"</span> -<span class="token operator">></span> 输入<span class="token string">":"</span> -<span class="token operator">></span> 输入<span class="token string">"wq"</span>,回车     //保存并退出编辑</pre></td></tr><tr><td data-num="20"></td><td><pre>  <span class="token number">2</span>.取消操作：按<span class="token string">"ESC"</span> -<span class="token operator">></span> 输入<span class="token string">":"</span> -<span class="token operator">></span> 输入<span class="token string">"q!"</span>,回车     //撤销本次修改并退出编辑</pre></td></tr><tr><td data-num="21"></td><td><pre>  <span class="token comment">## 补充 ##</span></pre></td></tr><tr><td data-num="22"></td><td><pre>  <span class="token function">vim</span> +10 filename.txt                   //打开文件并跳到第10行</pre></td></tr><tr><td data-num="23"></td><td><pre>  <span class="token function">vim</span> <span class="token parameter variable">-R</span> /etc/passwd                     //以只读模式打开文件</pre></td></tr></table></figure><h2 id="34-查看文件内容cat"><a class="markdownIt-Anchor" href="#34-查看文件内容cat">#</a> 3.4 查看文件内容（cat）</h2>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">cat</span> a.txt          //查看文件最后一屏内容</pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token function">less</span> a.txt         //PgUp向上翻页，PgDn向下翻页，<span class="token string">"q"</span>退出查看</pre></td></tr><tr><td data-num="3"></td><td><pre>  <span class="token function">more</span> a.txt         //显示百分比，回车查看下一行，空格查看下一页，<span class="token string">"q"</span>退出查看</pre></td></tr><tr><td data-num="4"></td><td><pre>  <span class="token function">tail</span> <span class="token parameter variable">-100</span> a.txt    //查看文件的后100行，<span class="token string">"Ctrl+C"</span>退出查看</pre></td></tr></table></figure><h1 id="四-用户文件权限"><a class="markdownIt-Anchor" href="#四-用户文件权限">#</a> 四、用户（文件）权限</h1>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">chmod</span> +x a.txt    //普通授权    </pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token function">chmod</span> <span class="token number">777</span> a.txt   //8421法，1+2+4<span class="token operator">=</span><span class="token number">7</span>，<span class="token string">"7"</span>说明授予所有权限</pre></td></tr></table></figure><figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre>说明：sudo命令以系统管理者的身份执行指令，也就是说，经由 <span class="token function">sudo</span> 所执行的指令就好像是 root 亲自执行。需要输入自己账户密码。</pre></td></tr><tr><td data-num="2"></td><td><pre>  使用权限：在 /etc/sudoers 中有出现的使用者</pre></td></tr><tr><td data-num="3"></td><td><pre>  <span class="token function">sudo</span> <span class="token parameter variable">-l</span>                              //列出目前的权限</pre></td></tr><tr><td data-num="4"></td><td><pre>  $ <span class="token function">sudo</span> <span class="token parameter variable">-u</span> yao <span class="token function">vi</span> ~www/index.html    //以 yao 用户身份编辑 home 目录下www目录中的 index.html 文件</pre></td></tr></table></figure><h1 id="五-打包与解压"><a class="markdownIt-Anchor" href="#五-打包与解压">#</a> 五、打包与解压</h1>
+<h2 id="51-基础知识"><a class="markdownIt-Anchor" href="#51-基础知识">#</a> 5.1 基础知识</h2>
+<ul>
+<li>打包：将多个文件合并成一个文件，大小不变（如 .tar）。</li>
+<li>压缩：将文件体积缩小，通常用于单个文件或打包文件（如 .gz、.bz2）。</li>
+<li>打包和压缩常常结合使用，先打包再压缩，得到像 .tar.gz、.tar.bz2 这样的文件。</li>
+<li>Linux 中的很多压缩程序只能针对一个文件进行压缩。</li>
+</ul>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre>.zip、.rar        //windows系统中压缩文件的扩展名</pre></td></tr><tr><td data-num="2"></td><td><pre>  .tar              //Linux中打包文件的扩展名</pre></td></tr><tr><td data-num="3"></td><td><pre>  .gz               //Linux中压缩文件的扩展名</pre></td></tr><tr><td data-num="4"></td><td><pre>  .tar.gz           //Linux中打包并压缩文件的扩展名</pre></td></tr></table></figure><p>为了方便用户在打包解包的同时可以压缩或解压文件，tar 提供了一种特殊的功能。这就是 tar 可以在打包或解包的同时调用其它的压缩程序，比如调用 gzip、bzip2 等。</p>
+<p>gzip 是 GNU 组织开发的一个压缩程序，.gz 结尾的文件就是 gzip 压缩的结果。与 gzip 相对的解压程序是 gunzip。tar 中使用 - z 这个参数来调用 gzip。</p>
+<h2 id="52-打包文件"><a class="markdownIt-Anchor" href="#52-打包文件">#</a> 5.2 打包文件</h2>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>.tar：只打包，不压缩文件。</pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre>  <span class="token function">tar</span> xvf Name.tar                //解包</pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre>  <span class="token function">tar</span> cvf Name.tar dirName        //打包</pre></td></tr><tr><td data-num="6"></td><td><pre></pre></td></tr><tr><td data-num="7"></td><td><pre>  <span class="token function">tar</span> <span class="token parameter variable">-rf</span> Name.tar filename       //将文件filename添加到打包文件Name.tar中</pre></td></tr><tr><td data-num="8"></td><td><pre></pre></td></tr><tr><td data-num="9"></td><td><pre>  <span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>.gz：只压缩，不打包文件</pre></td></tr><tr><td data-num="10"></td><td><pre></pre></td></tr><tr><td data-num="11"></td><td><pre>  gunzip Name.gz                  //解压（1）</pre></td></tr><tr><td data-num="12"></td><td><pre></pre></td></tr><tr><td data-num="13"></td><td><pre>  <span class="token function">gzip</span> <span class="token parameter variable">-d</span> Name.gz                 //解压（2）</pre></td></tr><tr><td data-num="14"></td><td><pre></pre></td></tr><tr><td data-num="15"></td><td><pre>  <span class="token function">gzip</span> Name                       //压缩</pre></td></tr><tr><td data-num="16"></td><td><pre></pre></td></tr><tr><td data-num="17"></td><td><pre>  <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>.tar.gz：打包压缩文件</pre></td></tr><tr><td data-num="18"></td><td><pre></pre></td></tr><tr><td data-num="19"></td><td><pre>  <span class="token function">tar</span> zxvf Name.tar.gz            //解压，解包</pre></td></tr><tr><td data-num="20"></td><td><pre></pre></td></tr><tr><td data-num="21"></td><td><pre>  <span class="token function">tar</span> zcvf Name.tar.gz dirName    //打包，压缩</pre></td></tr></table></figure><h1 id="六-安装包管理工具"><a class="markdownIt-Anchor" href="#六-安装包管理工具">#</a> 六、安装包管理工具</h1>
+<p>常见的软件封包类型：</p>
+<table>
+<thead>
+<tr>
+<th>封包类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rpm 软件包</td>
+<td>扩展名以  <code>.rpm</code>  结尾，使用户 redhat 系列</td>
+</tr>
+<tr>
+<td>deb 软件包</td>
+<td>扩展名以  <code>.deb</code>  结尾，适用于 Debian 系列</td>
+</tr>
+<tr>
+<td>源代码软件包</td>
+<td>以  <code>.tar.gz</code>  /  <code>.tar.bz2</code>  格式结尾的压缩包提供包含程序的原始代码文件</td>
+</tr>
+</tbody>
+</table>
+<h2 id="61-rpm系列工具"><a class="markdownIt-Anchor" href="#61-rpm系列工具">#</a> 6.1 RPM 系列工具</h2>
+<p>RPM (Red Hat Package Manager) 系列工具主要用于 Red Hat 系统及其衍生版（如 CentOS、Fedora 等）。常见工具包括 yum 和 rpm。</p>
+<p>RPM 系列包管理工具在大多数 Linux 发行版中都可以使用，包括但不限于 Red Hat, CentOS, Fedora 等。如果在某些 Linux 发行版中无法使用，需要通过相应的包管理工具进行安装。</p>
+<h3 id="yum-yellow-dog-update-modifier"><a class="markdownIt-Anchor" href="#yum-yellow-dog-update-modifier">#</a> yum (Yellow dog Update Modifier)</h3>
+<p>yum 是基于 RPM 的软件包管理器，能够自动处理依赖关系，并从网络仓库下载和安装所需的软件包。它用于简化软件安装、更新和删除的过程。</p>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># 安装 yum</span></pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token function">apt-get</span> <span class="token function">install</span> build-essential  <span class="token comment"># 首先安装 build-essential 包</span></pre></td></tr><tr><td data-num="3"></td><td><pre>  <span class="token function">sudo</span> <span class="token function">apt-get</span> update              <span class="token comment"># 更新软件包列表</span></pre></td></tr><tr><td data-num="4"></td><td><pre>  <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> yum         <span class="token comment"># 安装 yum</span></pre></td></tr></table></figure><figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre>yum check-update             //列出所有可更新的软件清单命令</pre></td></tr><tr><td data-num="2"></td><td><pre>  yum update                   //更新所有软件命令</pre></td></tr><tr><td data-num="3"></td><td><pre>  yum <span class="token function">install</span> <span class="token operator">&lt;</span>package_name<span class="token operator">></span>   //安装指定的软件命令</pre></td></tr><tr><td data-num="4"></td><td><pre>  yum update <span class="token operator">&lt;</span>package_name<span class="token operator">></span>    //更新指定的软件命令</pre></td></tr><tr><td data-num="5"></td><td><pre>  yum list                     //列出所有可安裝的软件清单命令</pre></td></tr><tr><td data-num="6"></td><td><pre>  yum remove <span class="token operator">&lt;</span>package_name<span class="token operator">></span>    //删除软件包命令</pre></td></tr><tr><td data-num="7"></td><td><pre>  yum search <span class="token operator">&lt;</span>keyword<span class="token operator">></span>         //查找软件包命令</pre></td></tr><tr><td data-num="8"></td><td><pre>  yum clean packages:          //清除缓存目录下的软件包</pre></td></tr><tr><td data-num="9"></td><td><pre>  yum clean headers:           //清除缓存目录下的 headers</pre></td></tr><tr><td data-num="10"></td><td><pre>  yum clean oldheaders:        //清除缓存目录下旧的 headers</pre></td></tr></table></figure><h3 id="rpm-redhat-package-manager"><a class="markdownIt-Anchor" href="#rpm-redhat-package-manager">#</a> rpm (Redhat package manager)</h3>
+<p>rpm 是一个底层的包管理工具，主要用于直接处理 rpm 格式的软件包。它不会处理依赖关系，通常在特殊场景下使用（如离线安装软件）。</p>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token function">rpm</span>    <span class="token comment"># 安装 rpm</span></pre></td></tr></table></figure><figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">rpm</span> <span class="token parameter variable">-ivh</span> package_name.rpm  <span class="token comment"># 安装一个包</span></pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token function">rpm</span> <span class="token parameter variable">-Uvh</span> package_name.rpm  <span class="token comment"># 升级一个包</span></pre></td></tr><tr><td data-num="3"></td><td><pre>  <span class="token function">rpm</span> <span class="token parameter variable">-rpm</span> <span class="token parameter variable">-e</span> package_name   <span class="token comment"># 卸载一个包</span></pre></td></tr><tr><td data-num="4"></td><td><pre>  <span class="token function">rpm</span> <span class="token parameter variable">-q</span> package_name        <span class="token comment"># 查询一个包是否已安装</span></pre></td></tr><tr><td data-num="5"></td><td><pre>  <span class="token function">rpm</span> <span class="token parameter variable">-qa</span>                    <span class="token comment"># 查询所有已安装的包</span></pre></td></tr></table></figure><h3 id="yum-和-rpm-的区别"><a class="markdownIt-Anchor" href="#yum-和-rpm-的区别">#</a> yum 和 rpm 的区别</h3>
+<p>yum 和 rpm 都是 Linux 中用于软件包管理的工具，但它们的功能和使用场景有所不同。以下是它们的联系和区别：</p>
+<p>（1）联系</p>
+<ul>
+<li>
+<p>包管理系统：两者都与 RPM（Red Hat Package Manager）包管理系统相关，主要用于 Red Hat 及其衍生的 Linux 发行版（如 CentOS、Fedora 等）。</p>
+</li>
+<li>
+<p>软件包格式：yum 和 rpm 都使用 RPM 格式的软件包（.rpm 文件）。</p>
+</li>
+<li>
+<p>共同目的：它们的主要目的是管理软件包的安装、更新和删除。</p>
+</li>
+</ul>
+<p>（2）区别</p>
+<ul>
+<li>
+<p>rpm：是底层的包管理工具，直接用于安装、卸载和查询 RPM 包。它不处理软件包的依赖关系，因此用户需要手动解决任何依赖问题。</p>
+</li>
+<li>
+<p>yum：是一个高级的包管理器，基于 rpm，可以自动处理软件包的依赖关系。yum 可以从配置的远程仓库下载软件包，并自动安装所需的依赖项，是日常使用中更常用的工具。</p>
+</li>
+</ul>
+<p>（3）总结</p>
+<ul>
+<li>rpm 是底层工具，用于直接处理 RPM 包，适合手动管理。</li>
+<li>yum 是高级工具，能自动处理依赖关系，提供更简洁的包管理体验，适合日常使用。</li>
+</ul>
+<h2 id="62-deb系列工具"><a class="markdownIt-Anchor" href="#62-deb系列工具">#</a> 6.2 DEB 系列工具</h2>
+<p>DEB 系列工具是基于 Debian 包管理系统的，主要用于 Debian 及其衍生版（如 Ubuntu、Mint 等）。常见工具包括 apt, apt-get, dpkg 等。</p>
+<h3 id="apt-get"><a class="markdownIt-Anchor" href="#apt-get">#</a> apt-get</h3>
+<p>apt-get 是 apt 的前身，是基于 Debian 的包管理工具，功能和 apt 类似，但不如 apt 用户友好。它提供更多的高级选项，适合脚本自动化使用。</p>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">sudo</span> <span class="token function">apt-get</span> update                        <span class="token comment"># 更新软件源列表</span></pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token function">sudo</span> <span class="token function">apt-cache</span> search <span class="token operator">&lt;</span>keyword<span class="token operator">></span>            <span class="token comment"># 搜索软件包</span></pre></td></tr><tr><td data-num="3"></td><td><pre>  <span class="token function">sudo</span> apt-file search <span class="token operator">&lt;</span>keyword<span class="token operator">></span>             <span class="token comment"># 搜索软件包</span></pre></td></tr><tr><td data-num="4"></td><td><pre>  <span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> <span class="token operator">&lt;</span>package<span class="token operator">></span>             <span class="token comment"># 安装软件包</span></pre></td></tr><tr><td data-num="5"></td><td><pre>  <span class="token function">sudo</span> <span class="token function">apt-get</span> remove <span class="token operator">&lt;</span>package<span class="token operator">></span>              <span class="token comment"># 删除软件包（保留配置文件）</span></pre></td></tr><tr><td data-num="6"></td><td><pre>  <span class="token function">sudo</span> <span class="token function">apt-get</span> remove <span class="token parameter variable">--purge</span> <span class="token operator">&lt;</span>package<span class="token operator">></span>      <span class="token comment"># 删除软件包（删除配置文件）</span></pre></td></tr><tr><td data-num="7"></td><td><pre>  <span class="token function">sudo</span> <span class="token function">apt-get</span> autoremove <span class="token operator">&lt;</span>package<span class="token operator">></span>          <span class="token comment"># 自动删除依赖关系</span></pre></td></tr><tr><td data-num="8"></td><td><pre>  <span class="token function">sudo</span> <span class="token function">apt-get</span> autoremove <span class="token parameter variable">--purge</span> <span class="token operator">&lt;</span>package<span class="token operator">></span>  <span class="token comment"># 自动删除依赖关系并删除配置文件</span></pre></td></tr><tr><td data-num="9"></td><td><pre>  <span class="token function">sudo</span> <span class="token function">apt-get</span> clean                         <span class="token comment"># 清理缓存</span></pre></td></tr><tr><td data-num="10"></td><td><pre>  <span class="token function">sudo</span> <span class="token function">apt-get</span> autoclean                     <span class="token comment"># 自动清理缓存</span></pre></td></tr></table></figure><h3 id="apt-advanced-package-tool"><a class="markdownIt-Anchor" href="#apt-advanced-package-tool">#</a> apt (Advanced Package Tool)</h3>
+<p>apt 是 Ubuntu 和其他基于 Debian 系统中常用的包管理器，简化了软件包的安装、更新和删除过程，并处理依赖关系。相较于 apt-get，apt 提供了更好的用户界面和更多易用的功能。</p>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">sudo</span> <span class="token function">apt</span> update                                       <span class="token comment">#列出所有可更新的软件清单命令：</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token function">sudo</span> <span class="token function">apt</span> upgrade                                      <span class="token comment">#升级软件包：</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token function">apt</span> list <span class="token parameter variable">--upgradable</span>                                 <span class="token comment">#列出可更新的软件包及版本信息：</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token function">sudo</span> <span class="token function">apt</span> full-upgrade                                 <span class="token comment">#升级软件包，升级前先删除需要更新软件包：</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> <span class="token operator">&lt;</span>package_name<span class="token operator">></span>                       <span class="token comment">#安装指定的软件命令：</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> <span class="token operator">&lt;</span>package_<span class="token operator"><span class="token file-descriptor important">1</span>></span> <span class="token operator">&lt;</span>package_<span class="token operator"><span class="token file-descriptor important">2</span>></span> <span class="token operator">&lt;</span>package_<span class="token operator"><span class="token file-descriptor important">3</span>></span>  <span class="token comment">#安装多个软件包：</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token function">sudo</span> <span class="token function">apt</span> update <span class="token operator">&lt;</span>package_name<span class="token operator">></span>                        <span class="token comment">#更新指定的软件命令：</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token function">sudo</span> <span class="token function">apt</span> show <span class="token operator">&lt;</span>package_name<span class="token operator">></span>                          <span class="token comment">#显示软件包具体信息，例如：版本号，安装大小，依赖关系等等：</span></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token function">sudo</span> <span class="token function">apt</span> remove <span class="token operator">&lt;</span>package_name<span class="token operator">></span>                        <span class="token comment">#删除软件包命令：</span></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token function">sudo</span> <span class="token function">apt</span> autoremove                                   <span class="token comment">#清理不再使用的依赖和库文件: </span></pre></td></tr><tr><td data-num="11"></td><td><pre><span class="token function">sudo</span> <span class="token function">apt</span> purge <span class="token operator">&lt;</span>package_name<span class="token operator">></span>                         <span class="token comment">#移除软件包及配置文件: </span></pre></td></tr><tr><td data-num="12"></td><td><pre><span class="token function">sudo</span> <span class="token function">apt</span> search <span class="token operator">&lt;</span>keyword<span class="token operator">></span>                             <span class="token comment">#查找软件包命令</span></pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token function">apt</span> list <span class="token parameter variable">--installed</span>                                  <span class="token comment">#列出所有已安装的包：</span></pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token function">apt</span> list --all-versions                               <span class="token comment">#列出所有已安装的包的版本信息：</span></pre></td></tr></table></figure><h3 id="dpkg-debian-package-manager"><a class="markdownIt-Anchor" href="#dpkg-debian-package-manager">#</a> dpkg (Debian Package Manager)</h3>
+<p>dpkg 是 Ubuntu 和其他基于 Debian 系统的底层包管理工具，可以直接处理 .deb 软件包。类似于 rpm，dpkg 不会自动处理依赖关系。</p>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">sudo</span> dpkg <span class="token parameter variable">-i</span> package_name.deb    <span class="token comment">#安装一个.deb 文件</span></pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token function">sudo</span> dpkg <span class="token parameter variable">-r</span> package_name        <span class="token comment">#卸载一个软件包</span></pre></td></tr><tr><td data-num="3"></td><td><pre>  <span class="token function">sudo</span> dpkg <span class="token parameter variable">-P</span> package_name        <span class="token comment">#完全删除一个软件包</span></pre></td></tr><tr><td data-num="4"></td><td><pre>  dpkg <span class="token parameter variable">-l</span>                          <span class="token comment">#列出已安装的包</span></pre></td></tr><tr><td data-num="5"></td><td><pre>  dpkg <span class="token parameter variable">-L</span> package_name             <span class="token comment">#列出一个包提供的文件</span></pre></td></tr><tr><td data-num="6"></td><td><pre>  dpkg <span class="token parameter variable">-S</span> file_name                <span class="token comment">#查找一个文件属于哪个包</span></pre></td></tr></table></figure><h3 id="apt-get-apt-dpkg的联系与区别"><a class="markdownIt-Anchor" href="#apt-get-apt-dpkg的联系与区别">#</a> apt-get, apt, dpkg 的联系与区别</h3>
+<p>apt-get、apt 和 dpkg 是 Ubuntu 和其他 Debian 系统中用于软件包管理的工具，它们之间有着密切的联系，同时也有一些关键的区别。</p>
+<p>（1）联系</p>
+<ul>
+<li>
+<p>包管理体系：它们都属于 Debian 包管理系统，用于处理 .deb 格式的软件包。</p>
+</li>
+<li>
+<p>功能互补：这三者的功能可以相互补充，通常可以结合使用。例如，你可以使用 dpkg 安装一个下载的 .deb 包，然后使用 apt 或 apt-get 来解决任何依赖关系。</p>
+</li>
+<li>
+<p>依赖关系：apt 和 apt-get 可以自动处理软件包的依赖关系，而 dpkg 则不具备这个能力。</p>
+</li>
+</ul>
+<p>（2）区别</p>
+<ul>
+<li>
+<p>apt-get：是一个较旧的工具，主要用于软件包的安装、更新和删除，提供更细致的控制和高级选项，适合脚本和自动化任务。</p>
+</li>
+<li>
+<p>apt：是较新的命令行工具，提供了更友好的用户界面和输出格式，旨在简化常用的包管理操作。它集成了 apt-get 和 apt-cache 的功能，因此在许多情况下可以替代这两个工具。</p>
+</li>
+<li>
+<p>dpkg：是底层的包管理工具，用于直接安装、删除和管理 .deb 包。它不处理依赖关系，需要手动解决。</p>
+</li>
+</ul>
+<p>（3）总结</p>
+<ul>
+<li>apt 是最推荐的日常使用工具，提供了用户友好的界面。</li>
+<li>apt-get 适合需要更多控制的场景，如自动化脚本。</li>
+<li>dpkg 是底层工具，用于直接管理 .deb 包，不处理依赖关系。</li>
+</ul>
+<h2 id="63-通用工具"><a class="markdownIt-Anchor" href="#63-通用工具">#</a> 6.3 通用工具</h2>
+<p>wget：虽然不是包管理器，但 wget 是一个通用的命令行工具，主要用于从网络上下载文件。在下载软件包、更新文件时，它可以和包管理器一起使用。例如，在没有直接安装源的情况下，你可以用 wget 下载 .deb 或 .rpm 文件，然后再使用相应的包管理器进行安装。</p>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">wget</span> <span class="token operator">&lt;</span>url<span class="token operator">></span>  <span class="token comment"># 下载文件</span></pre></td></tr></table></figure><h2 id="64-在ubuntu中的使用说明"><a class="markdownIt-Anchor" href="#64-在ubuntu中的使用说明">#</a> 6.4 在 Ubuntu 中的使用说明</h2>
+<p>在 Ubuntu 中，主要使用的包管理工具是 apt 和 dpkg：</p>
+<ul>
+<li>
+<p>apt：用于处理软件包的安装、更新和删除，一般来说用户主要使用 apt 来管理软件包。例如，安装软件包的基本命令是 sudo apt install &lt;package_name&gt;，更新系统的软件包使用 sudo apt update 和 sudo apt upgrade。</p>
+</li>
+<li>
+<p>dpkg：当你手动下载 .deb 文件时，dpkg 用于安装这些文件。可以用 sudo dpkg -i &lt;package_name&gt;.deb 来安装软件包。如果遇到依赖问题，可以随后运行 sudo apt --fix-broken install 来修复。</p>
+</li>
+</ul>
+<p>总结来说，yum、rpm 是用于 Red Hat 系的包管理工具，而 apt、apt-get、dpkg 是用于 Debian 系的包管理工具。在 Ubuntu 中，常用 apt 来简化软件包管理。</p>
+<h1 id="八-网络相关"><a class="markdownIt-Anchor" href="#八-网络相关">#</a> 八、网络相关</h1>
+<h2 id="81-ping命令"><a class="markdownIt-Anchor" href="#81-ping命令">#</a> 8.1 ping 命令</h2>
+<p>不管在 windows 平台，还是在 linux 平台，ping 都是非常常用的网络命令；ping 命令通过 ICMP（Internet 控制消息协议）工作；ping 可以用来测试本机与目标主机是否联通、联通速度如何、稳定性如何。</p>
+<p>当使用 “ping” 命令时，您的设备会向主机设备发送请求并等待建立连接。 ping 命令输出包含有关数据包的信息以及每个数据包到达主机所花费的时间。终端继续打印响应，直到通信中断。</p>
+<p>首先，检查 “ping” 命令的基本语法：</p>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">ping</span> <span class="token punctuation">[</span>options<span class="token punctuation">]</span> <span class="token function">hostname</span></pre></td></tr></table></figure><figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token punctuation">(</span>base<span class="token punctuation">)</span> ember@ember-Victus-by-HP-Laptop:/$ <span class="token function">ping</span> www.baidu.com</pre></td></tr><tr><td data-num="2"></td><td><pre>  PING www.baidu.com<span class="token punctuation">(</span>localhost <span class="token punctuation">(</span><span class="token number">2409</span>:8c00:6c21:104f:0:ff:b03f:3ae<span class="token punctuation">))</span> <span class="token number">56</span> data bytes</pre></td></tr><tr><td data-num="3"></td><td><pre>  <span class="token number">64</span> 字节，来自 localhost <span class="token punctuation">(</span><span class="token number">2409</span>:8c00:6c21:104f:0:ff:b03f:3ae<span class="token punctuation">)</span>: <span class="token assign-left variable">icmp_seq</span><span class="token operator">=</span><span class="token number">1</span> <span class="token assign-left variable">ttl</span><span class="token operator">=</span><span class="token number">50</span> 时间<span class="token operator">=</span><span class="token number">27.6</span> 毫秒</pre></td></tr><tr><td data-num="4"></td><td><pre>  <span class="token number">64</span> 字节，来自 localhost <span class="token punctuation">(</span><span class="token number">2409</span>:8c00:6c21:104f:0:ff:b03f:3ae<span class="token punctuation">)</span>: <span class="token assign-left variable">icmp_seq</span><span class="token operator">=</span><span class="token number">2</span> <span class="token assign-left variable">ttl</span><span class="token operator">=</span><span class="token number">50</span> 时间<span class="token operator">=</span><span class="token number">32.8</span> 毫秒</pre></td></tr><tr><td data-num="5"></td><td><pre>  <span class="token number">64</span> 字节，来自 localhost <span class="token punctuation">(</span><span class="token number">2409</span>:8c00:6c21:104f:0:ff:b03f:3ae<span class="token punctuation">)</span>: <span class="token assign-left variable">icmp_seq</span><span class="token operator">=</span><span class="token number">3</span> <span class="token assign-left variable">ttl</span><span class="token operator">=</span><span class="token number">50</span> 时间<span class="token operator">=</span><span class="token number">29.4</span> 毫秒</pre></td></tr><tr><td data-num="6"></td><td><pre>  <span class="token number">64</span> 字节，来自 localhost <span class="token punctuation">(</span><span class="token number">2409</span>:8c00:6c21:104f:0:ff:b03f:3ae<span class="token punctuation">)</span>: <span class="token assign-left variable">icmp_seq</span><span class="token operator">=</span><span class="token number">4</span> <span class="token assign-left variable">ttl</span><span class="token operator">=</span><span class="token number">50</span> 时间<span class="token operator">=</span><span class="token number">39.1</span> 毫秒</pre></td></tr></table></figure><p>上面的输出显示了各种信息：</p>
+<ul>
+<li>
+<p>icmp_seq：数据包的序列号。如果是第一个数据包，则 icmp_seq 编号将为 1。</p>
+</li>
+<li>
+<p>ttl：ttl 代表 “Time to Live”，ttl 数字表示数据包在被丢弃之前到达目的地所需的跳数（路由器）。</p>
+</li>
+<li>
+<p>时间：数据包到达目的地然后返回主机设备所需的时间。</p>
+</li>
+</ul>
+<p>要停止 ping 过程，请按 “Ctrl C”，该命令将显示发送 / 接收的数据包数量、丢失的数据包数量和时间。</p>
+<p>如果没有收到 ping 回复，则表明您的设备和主机服务器之间没有网络连接。</p>
+<h2 id="82-如何检查本地网络状态"><a class="markdownIt-Anchor" href="#82-如何检查本地网络状态">#</a> 8.2 如何检查本地网络状态</h2>
+<p>最快的方法是：</p>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">ping</span> <span class="token number">0</span></pre></td></tr></table></figure><h1 id="九-进程相关"><a class="markdownIt-Anchor" href="#九-进程相关">#</a> 九、进程相关</h1>
+<h2 id="91-查看进程列表ps"><a class="markdownIt-Anchor" href="#91-查看进程列表ps">#</a> 9.1 查看进程列表（ps）</h2>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">ps</span> <span class="token parameter variable">-ef</span>         //查看所有正在运行的进程</pre></td></tr></table></figure><h2 id="92-结束进程kill"><a class="markdownIt-Anchor" href="#92-结束进程kill">#</a> 9.2 结束进程（kill）</h2>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">kill</span> xxx       //杀死该进程</pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token function">kill</span> <span class="token parameter variable">-9</span> xxx    //强制杀死该进程</pre></td></tr></table></figure><h1 id="其他常用命令"><a class="markdownIt-Anchor" href="#其他常用命令">#</a> 其他常用命令</h1>
+<h2 id="find"><a class="markdownIt-Anchor" href="#find">#</a> find</h2>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">find</span> <span class="token builtin class-name">.</span> <span class="token parameter variable">-name</span> <span class="token string">"*.c"</span>     //将目前目录及其子目录下所有延伸档名是 c 的文件列出来</pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token function">find</span> <span class="token builtin class-name">.</span> <span class="token parameter variable">-type</span> f         //将目前目录其其下子目录中所有一般文件列出</pre></td></tr><tr><td data-num="3"></td><td><pre>  <span class="token function">find</span> <span class="token builtin class-name">.</span> <span class="token parameter variable">-ctime</span> <span class="token parameter variable">-20</span>      //将目前目录及其子目录下所有最近 <span class="token number">20</span> 天内更新过的文件列出</pre></td></tr><tr><td data-num="4"></td><td><pre>  <span class="token function">find</span> /var/log <span class="token parameter variable">-type</span> f <span class="token parameter variable">-mtime</span> +7 <span class="token parameter variable">-ok</span> <span class="token function">rm</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span> <span class="token punctuation">\</span><span class="token punctuation">;</span>     //查找/var/log目录中更改时间在7日以前的普通文件，并在删除之前询问它们</pre></td></tr><tr><td data-num="5"></td><td><pre>  <span class="token function">find</span> <span class="token builtin class-name">.</span> <span class="token parameter variable">-type</span> f <span class="token parameter variable">-perm</span> <span class="token number">644</span> <span class="token parameter variable">-exec</span> <span class="token function">ls</span> <span class="token parameter variable">-l</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span> <span class="token punctuation">\</span><span class="token punctuation">;</span>       //查找前目录中文件属主具有读、写权限，并且文件所属组的用户和其他用户具有读权限的文件</pre></td></tr><tr><td data-num="6"></td><td><pre>  <span class="token function">find</span> / <span class="token parameter variable">-type</span> f <span class="token parameter variable">-size</span> <span class="token number">0</span> <span class="token parameter variable">-exec</span> <span class="token function">ls</span> <span class="token parameter variable">-l</span> <span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span> <span class="token punctuation">\</span><span class="token punctuation">;</span>         //为了查找系统中所有文件长度为0的普通文件，并列出它们的完整路径</pre></td></tr></table></figure><h2 id="whereis"><a class="markdownIt-Anchor" href="#whereis">#</a> whereis</h2>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">whereis</span> <span class="token function">ls</span>             //将和ls文件相关的文件都查找出来</pre></td></tr></table></figure><h2 id="which"><a class="markdownIt-Anchor" href="#which">#</a> which</h2>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre>说明：which指令会在环境变量<span class="token environment constant">$PATH</span>设置的目录里查找符合条件的文件。</pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token function">which</span> <span class="token function">bash</span>             //查看指令<span class="token string">"bash"</span>的绝对路径</pre></td></tr></table></figure><h2 id="grep"><a class="markdownIt-Anchor" href="#grep">#</a> grep</h2>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">grep</span> <span class="token parameter variable">-i</span> <span class="token string">"the"</span> demo_file              //在文件中查找字符串<span class="token punctuation">(</span>不区分大小写<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="2"></td><td><pre>  <span class="token function">grep</span> <span class="token parameter variable">-A</span> <span class="token number">3</span> <span class="token parameter variable">-i</span> <span class="token string">"example"</span> demo_text     //输出成功匹配的行，以及该行之后的三行</pre></td></tr><tr><td data-num="3"></td><td><pre>  <span class="token function">grep</span> <span class="token parameter variable">-r</span> <span class="token string">"ramesh"</span> *                   //在一个文件夹中递归查询包含指定字符串的文件</pre></td></tr></table></figure>
+      <div class="tags">
+          <a href="/tags/linux/" rel="tag"><i class="ic i-tag"></i> linux</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2024-10-20 23:34:42" itemprop="dateModified" datetime="2024-10-20T23:34:42+08:00">2024-10-20</time>
+  </span>
+  <span id="2024/10/20/linux/linux_command/" class="item leancloud_visitors" data-flag-title="Linux常用命令" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2024/10/20/linux/nekoray/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;d1yZT3KZ&#x2F;img-2000987884.jpg" title="linux翻墙操作">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> linux</span>
+  <h3>linux翻墙操作</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2024/10/20/linux/docker/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;SRLXDPRy&#x2F;img-2000995033.jpg" title="docker">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> linux</span>
+  <h3>docker</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">1.</span> <span class="toc-text"> 一、基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#11-linux%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84"><span class="toc-number">1.1.</span> <span class="toc-text"> 1.1 Linux 系统的文件结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-linux%E7%B3%BB%E7%BB%9F%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%9A%84%E5%90%AB%E4%B9%89"><span class="toc-number">1.2.</span> <span class="toc-text"> 1.2 Linux 系统命令行的含义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-%E5%91%BD%E4%BB%A4%E7%9A%84%E7%BB%84%E6%88%90"><span class="toc-number">1.3.</span> <span class="toc-text"> 1.3 命令的组成</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C-%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C"><span class="toc-number">2.</span> <span class="toc-text"> 二、目录操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#21-%E5%88%87%E6%8D%A2%E7%9B%AE%E5%BD%95cd"><span class="toc-number">2.1.</span> <span class="toc-text"> 2.1 切换目录（cd）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-%E6%9F%A5%E7%9C%8B%E7%9B%AE%E5%BD%95ls"><span class="toc-number">2.2.</span> <span class="toc-text"> 2.2 查看目录（ls）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-%E5%88%9B%E5%BB%BA%E7%9B%AE%E5%BD%95mkdir"><span class="toc-number">2.3.</span> <span class="toc-text"> 2.3 创建目录（mkdir）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#24-%E5%88%A0%E9%99%A4%E7%9B%AE%E5%BD%95%E4%B8%8E%E6%96%87%E4%BB%B6"><span class="toc-number">2.4.</span> <span class="toc-text"> 2.4 删除目录与文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#25-%E7%A7%BB%E5%8A%A8%E7%9B%AE%E5%BD%95mv"><span class="toc-number">2.5.</span> <span class="toc-text"> 2.5 移动目录（mv）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#26-%E6%8B%B7%E8%B4%9D%E7%9B%AE%E5%BD%95cp"><span class="toc-number">2.6.</span> <span class="toc-text"> 2.6 拷贝目录（cp）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#27-%E6%90%9C%E7%B4%A2%E7%9B%AE%E5%BD%95find"><span class="toc-number">2.7.</span> <span class="toc-text"> 2.7 搜索目录（find）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#28-%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E7%9B%AE%E5%BD%95%E7%9A%84%E7%BB%9D%E5%AF%B9%E8%B7%AF%E5%BE%84pwd"><span class="toc-number">2.8.</span> <span class="toc-text"> 2.8 查看当前目录的绝对路径（pwd）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89-%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="toc-number">3.</span> <span class="toc-text"> 三、文件操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#31-%E6%96%B0%E5%A2%9E%E6%96%87%E4%BB%B6touch"><span class="toc-number">3.1.</span> <span class="toc-text"> 3.1 新增文件（touch）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#32-%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6"><span class="toc-number">3.2.</span> <span class="toc-text"> 3.2 删除文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#33-%E7%BC%96%E8%BE%91%E6%96%87%E4%BB%B6vi-vim"><span class="toc-number">3.3.</span> <span class="toc-text"> 3.3 编辑文件（vi, vim）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#34-%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9cat"><span class="toc-number">3.4.</span> <span class="toc-text"> 3.4 查看文件内容（cat）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B-%E7%94%A8%E6%88%B7%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90"><span class="toc-number">4.</span> <span class="toc-text"> 四、用户（文件）权限</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94-%E6%89%93%E5%8C%85%E4%B8%8E%E8%A7%A3%E5%8E%8B"><span class="toc-number">5.</span> <span class="toc-text"> 五、打包与解压</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#51-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">5.1.</span> <span class="toc-text"> 5.1 基础知识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#52-%E6%89%93%E5%8C%85%E6%96%87%E4%BB%B6"><span class="toc-number">5.2.</span> <span class="toc-text"> 5.2 打包文件</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD-%E5%AE%89%E8%A3%85%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7"><span class="toc-number">6.</span> <span class="toc-text"> 六、安装包管理工具</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#61-rpm%E7%B3%BB%E5%88%97%E5%B7%A5%E5%85%B7"><span class="toc-number">6.1.</span> <span class="toc-text"> 6.1 RPM 系列工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#yum-yellow-dog-update-modifier"><span class="toc-number">6.1.1.</span> <span class="toc-text"> yum (Yellow dog Update Modifier)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#rpm-redhat-package-manager"><span class="toc-number">6.1.2.</span> <span class="toc-text"> rpm (Redhat package manager)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#yum-%E5%92%8C-rpm-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">6.1.3.</span> <span class="toc-text"> yum 和 rpm 的区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#62-deb%E7%B3%BB%E5%88%97%E5%B7%A5%E5%85%B7"><span class="toc-number">6.2.</span> <span class="toc-text"> 6.2 DEB 系列工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#apt-get"><span class="toc-number">6.2.1.</span> <span class="toc-text"> apt-get</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#apt-advanced-package-tool"><span class="toc-number">6.2.2.</span> <span class="toc-text"> apt (Advanced Package Tool)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dpkg-debian-package-manager"><span class="toc-number">6.2.3.</span> <span class="toc-text"> dpkg (Debian Package Manager)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#apt-get-apt-dpkg%E7%9A%84%E8%81%94%E7%B3%BB%E4%B8%8E%E5%8C%BA%E5%88%AB"><span class="toc-number">6.2.4.</span> <span class="toc-text"> apt-get, apt, dpkg 的联系与区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#63-%E9%80%9A%E7%94%A8%E5%B7%A5%E5%85%B7"><span class="toc-number">6.3.</span> <span class="toc-text"> 6.3 通用工具</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#64-%E5%9C%A8ubuntu%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E"><span class="toc-number">6.4.</span> <span class="toc-text"> 6.4 在 Ubuntu 中的使用说明</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AB-%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3"><span class="toc-number">7.</span> <span class="toc-text"> 八、网络相关</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#81-ping%E5%91%BD%E4%BB%A4"><span class="toc-number">7.1.</span> <span class="toc-text"> 8.1 ping 命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#82-%E5%A6%82%E4%BD%95%E6%A3%80%E6%9F%A5%E6%9C%AC%E5%9C%B0%E7%BD%91%E7%BB%9C%E7%8A%B6%E6%80%81"><span class="toc-number">7.2.</span> <span class="toc-text"> 8.2 如何检查本地网络状态</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B9%9D-%E8%BF%9B%E7%A8%8B%E7%9B%B8%E5%85%B3"><span class="toc-number">8.</span> <span class="toc-text"> 九、进程相关</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#91-%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%E5%88%97%E8%A1%A8ps"><span class="toc-number">8.1.</span> <span class="toc-text"> 9.1 查看进程列表（ps）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#92-%E7%BB%93%E6%9D%9F%E8%BF%9B%E7%A8%8Bkill"><span class="toc-number">8.2.</span> <span class="toc-text"> 9.2 结束进程（kill）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">9.</span> <span class="toc-text"> 其他常用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#find"><span class="toc-number">9.1.</span> <span class="toc-text"> find</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#whereis"><span class="toc-number">9.2.</span> <span class="toc-text"> whereis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#which"><span class="toc-number">9.3.</span> <span class="toc-text"> which</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#grep"><span class="toc-number">9.4.</span> <span class="toc-text"> grep</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2024/10/03/linux/Linux_install/" rel="bookmark" title="在移动硬盘安装Ubuntu系统">在移动硬盘安装Ubuntu系统</a></li><li><a href="/2024/10/20/linux/docker/" rel="bookmark" title="docker">docker</a></li><li class="active"><a href="/2024/10/20/linux/linux_command/" rel="bookmark" title="Linux常用命令">Linux常用命令</a></li><li><a href="/2024/10/20/linux/nekoray/" rel="bookmark" title="linux翻墙操作">linux翻墙操作</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Ember"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">Ember</p>
+  <div class="description" itemprop="description">🌸学习笔记🌸</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">91</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">16</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">25</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3FpYW5xaXUtY2VsbA==" title="https:&#x2F;&#x2F;github.com&#x2F;qianqiu-cell"><i class="ic i-github"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjI4MzI1Njc4NTFAcXEuY29t" title="mailto:2832567851@qq.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2024/10/20/linux/nekoray/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2024/10/20/linux/docker/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2024/02/20/code/python/python_pytorch_transforms/" title="Pytorch数据预处理：transforms的使用">Pytorch数据预处理：transforms的使用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/01/code/python/python_qt_install/" title="Python运行pyside2报错问题解决">Python运行pyside2报错问题解决</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2024/03/18/code/python/python_decorators/" title="Python函数装饰器">Python函数装饰器</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+</div>
+
+    <span><a href="/2023/01/19/blog/hexo_remote/" title="解决Connection closed by remote host">解决Connection closed by remote host</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/02/code/python/python_pip/" title="修改pip路径">修改pip路径</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/leetcode/" title="分类于 leetcode">leetcode</a>
+</div>
+
+    <span><a href="/2023/11/06/code/leetcode/1000%E6%9C%AC%E5%BC%80%E6%BA%90%E7%94%B5%E5%AD%90%E4%B9%A6/" title="1000本开源电子书">1000本开源电子书</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/AI/" title="分类于 AI">AI</a>
+</div>
+
+    <span><a href="/2024/07/23/AI/Prompt_engineering/" title="大模型提示词工程（Prompt Engineering）">大模型提示词工程（Prompt Engineering）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/linux/" title="分类于 linux">linux</a>
+</div>
+
+    <span><a href="/2024/10/03/linux/Linux_install/" title="在移动硬盘安装Ubuntu系统">在移动硬盘安装Ubuntu系统</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/linux/" title="分类于 linux">linux</a>
+</div>
+
+    <span><a href="/2024/10/20/linux/linux_command/" title="Linux常用命令">Linux常用命令</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/leetcode/" title="分类于 leetcode">leetcode</a>
+</div>
+
+    <span><a href="/2023/10/31/code/leetcode/Binary_Search/" title="二分查找的正确编写方法">二分查找的正确编写方法</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Ember @ 唯爱ぺ灬babyル</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">320k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">4:51</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2024/10/20/linux/linux_command/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i> 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
