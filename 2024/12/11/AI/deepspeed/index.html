@@ -1,0 +1,559 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Keep Moving" href="http://qianqiu-cell.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Keep Moving" href="http://qianqiu-cell.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Keep Moving" href="http://qianqiu-cell.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="AI" />
+
+
+<link rel="canonical" href="http://qianqiu-cell.github.io/2024/12/11/AI/deepspeed/">
+
+
+
+  <title>
+Deepspeed - AI |
+唯爱ぺ灬babyル = Keep Moving = 天将降大任于斯人也</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Deepspeed
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2024-12-11 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-12-11T00:00:00+08:00">2024-12-11</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>1.5k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">唯爱ぺ灬babyル</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://i.postimg.cc/02bj6rdk/img-2001027806.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/6pVL27z2/img-2000909325.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/6psDn5GJ/img-2001095299.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/DfXWwS2q/img-2001071384.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/gkDXh11s/img-2000995039.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/kXLft68q/img-2001096907.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/AI/" itemprop="item" rel="index" title="分类于 AI"><span itemprop="name">AI</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://qianqiu-cell.github.io/2024/12/11/AI/deepspeed/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="Ember">
+    <meta itemprop="description" content="天将降大任于斯人也, 🌸学习笔记🌸">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Keep Moving">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>参考连接：<span class="exturl" data-url="aHR0cHM6Ly96ZXJvbG92ZXNlYS5naXRodWIuaW8vMjAyNC8wNS8xMi8lRTUlODglODYlRTUlQjglODMlRTUlQkMlOEYlRTglQUUlQUQlRTclQkIlODMlRUYlQkMlOUElRTQlQkElODYlRTglQTclQTNEZWVwc3BlZWQlRTQlQjglQUQlRTclOUElODRaZVJPMS0yLTMv">https://zerolovesea.github.io/2024/05/12 / 分布式训练：了解 Deepspeed 中的 ZeRO1-2-3/</span></p>
+<h1 id="一-deepspeed介绍"><a class="markdownIt-Anchor" href="#一-deepspeed介绍">#</a> 一、Deepspeed 介绍</h1>
+<p>  DeepSpeed 是微软推出的大规模模型分布式训练的工具，分布式训练场景目前主要分成三个策略：</p>
+<ul>
+<li>数据并行</li>
+<li>模型并行</li>
+<li>流水线并行</li>
+</ul>
+<p>  在数据并行的策略下，每个模型都需要跑一个完整的模型，这时就需要考虑训练模型占用的参数量。ZeRO 就是为了解决这个问题而诞生的。</p>
+<p>  ZeRO 的全称是 Zero Redundancy Optimizer，意为去除冗余的优化器。在分布式训练中，主要占用的参数主要分为了三个部分：<strong>模型参数（Parameters）</strong>，<strong>优化器状态（Optimizer States）</strong>，<strong>梯度 (Gradients)</strong>，他们三个简称为 <code>OPG</code> 。其中<strong>优化器状态</strong>会占据大约 2 倍参数量的显存空间，这取决于选择的优化器，也是整个训练中占据最大空间的部分。为了解决这个问题，ZeRO 提供了另一种思路：使用切片来达到时间换空间的效果。</p>
+<h1 id="二-zero的三个级别"><a class="markdownIt-Anchor" href="#二-zero的三个级别">#</a> 二、ZeRO 的三个级别</h1>
+<p>  ZeRO 被分为了四个级别：</p>
+<ul>
+<li>ZeRO-0：不进行任何形式的状态分片，只把 DeepSpeed 当成数据并行分布式（DDP, Distributed Data Parallel）来用。</li>
+<li>ZeRO-1：<strong>对优化器状态进行拆分</strong>。显存消耗减少 4 倍，通信量与数据并行相同。</li>
+<li>ZeRO-2：在 ZeRO-1 的基础上，<strong>对梯度进行拆分</strong>。显存消耗减少 8 倍，通信量与数据并行相同。</li>
+<li>ZeRO-3：在 ZeRO-2 的基础上，<strong>对模型参数进行拆分</strong>。模型占用的显存被平均分配到每个 GPU 中，显存消耗量与数据并行的并行度成线性反比关系，但通信量会有些许增加。</li>
+</ul>
+<p>  论文中给出了三个阶段的显存消耗分布情况：</p>
+<p><img data-src="/images/AI/deepspeed/2.1.jpg" alt=""></p>
+<h2 id="21-zero-1"><a class="markdownIt-Anchor" href="#21-zero-1">#</a> 2.1 ZeRO-1</h2>
+<p>  模型训练中，正向传播和反向传播并不会用到优化器状态，只有在梯度更新的时候才会使用梯度和优化器状态计算新参数。因此每个进程单独使用一段优化器状态，对各自进程的参数更新完之后，再把各个进程的模型参数合并形成完整的模型。</p>
+<p>  假设我们有 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝑁</mi><mi>𝑑</mi></msub></mrow><annotation encoding="application/x-tex">𝑁_𝑑</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 个并行的进程，<strong>ZeRO-1 会将完整优化器的状态等分成 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>𝑁</mi><mi>𝑑</mi></msub></mrow><annotation encoding="application/x-tex">𝑁_𝑑</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.10903em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> 份并储存在各个进程中</strong>。当反向传播完成之后，每个进程的优化器会对自己储存的优化器状态（包括 Momentum、Variance 与 FP32 Master Parameters）进行计算与更新。更新过后的 Partitioned FP32 Master Parameters 会通过 All-gather 传回到各个进程中。完成一次完整的参数更新。</p>
+<p>  通过 ZeRO-1 对优化器状态的分段化储存，7.5B 参数量的模型内存占用将由原始数据并行下的 120GB 缩减到 31.4GB。</p>
+<h2 id="22-zero-2"><a class="markdownIt-Anchor" href="#22-zero-2">#</a> 2.2 ZeRO-2</h2>
+<p>  <strong>第二阶段中对梯度进行了拆分</strong>，在一个 Layer 的梯度都被计算出来后： 梯度通过 All-reduce 进行聚合， 聚合后的梯度只会被某一个进程用来更新参数，因此其它进程上的这段梯度不再被需要，可以立马释放掉。</p>
+<p>  通过 ZeRO-2 对梯度和优化器状态的分段化储存，7.5B 参数量的模型内存占用将由 ZeRO-1 中 31.4GB 进一步下降到 16.6GB。</p>
+<h2 id="22-zero-3"><a class="markdownIt-Anchor" href="#22-zero-3">#</a> 2.2 ZeRO-3</h2>
+<p>  <strong>第三阶段就是对模型参数进行分割</strong>。在 ZeRO3 中，模型的每一层都被切片，每个进程存储权重张量的一部分。在前向和后向传播过程中（每个进程仍然看到不同的微批次数据），不同的进程交换它们所拥有的部分（按需进行参数通信），并计算激活函数和梯度。</p>
+<p>  初始化的时候。ZeRO-3 将一个模型中每个子层中的参数分片放到不同进程中，训练过程中，每个进程进行正常的正向 / 反向传播，然后通过 All-gather 进行汇总，构建成完整的模型。</p>
+
+      <div class="tags">
+          <a href="/tags/AI/" rel="tag"><i class="ic i-tag"></i> AI</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2024-12-11 18:43:48" itemprop="dateModified" datetime="2024-12-11T18:43:48+08:00">2024-12-11</time>
+  </span>
+  <span id="2024/12/11/AI/deepspeed/" class="item leancloud_visitors" data-flag-title="Deepspeed" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2024/12/11/AI/else/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;9M3Brvqb&#x2F;img-2000933430.jpg" title="其他未学习的可用工具">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> AI</span>
+  <h3>其他未学习的可用工具</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2024/12/29/linux/shell/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;NfWLqBhd&#x2F;img-2000936909.jpg" title="Shell脚本">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> linux</span>
+  <h3>Shell脚本</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-deepspeed%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text"> 一、Deepspeed 介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C-zero%E7%9A%84%E4%B8%89%E4%B8%AA%E7%BA%A7%E5%88%AB"><span class="toc-number">2.</span> <span class="toc-text"> 二、ZeRO 的三个级别</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#21-zero-1"><span class="toc-number">2.1.</span> <span class="toc-text"> 2.1 ZeRO-1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-zero-2"><span class="toc-number">2.2.</span> <span class="toc-text"> 2.2 ZeRO-2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-zero-3"><span class="toc-number">2.3.</span> <span class="toc-text"> 2.2 ZeRO-3</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2024/02/01/AI/Neural_networks_classification/" rel="bookmark" title="神经网络大致分类">神经网络大致分类</a></li><li><a href="/2024/05/16/AI/Transformer/" rel="bookmark" title="Transformer模型">Transformer模型</a></li><li><a href="/2024/07/23/AI/Prompt_engineering/" rel="bookmark" title="大模型提示词工程（Prompt Engineering）">大模型提示词工程（Prompt Engineering）</a></li><li><a href="/2024/07/29/AI/LLM_finetune/" rel="bookmark" title="大模型微调">大模型微调</a></li><li><a href="/2024/08/26/AI/DiffusionModel/" rel="bookmark" title="扩散模型">扩散模型</a></li><li><a href="/2024/09/12/AI/CLIP/" rel="bookmark" title="CLIP">CLIP</a></li><li><a href="/2024/09/14/AI/BERT/" rel="bookmark" title="BERT">BERT</a></li><li><a href="/2024/09/14/AI/BLIP/" rel="bookmark" title="BLIP">BLIP</a></li><li><a href="/2024/09/19/AI/SimCLR/" rel="bookmark" title="SimCLR">SimCLR</a></li><li><a href="/2024/09/21/AI/ViT/" rel="bookmark" title="ViT">ViT</a></li><li><a href="/2024/10/05/AI/MAE/" rel="bookmark" title="MAE">MAE</a></li><li><a href="/2024/10/21/AI/vllm/" rel="bookmark" title="vLLM">vLLM</a></li><li><a href="/2024/11/01/AI/Qwen2.5-math/" rel="bookmark" title="Qwen2.5-Math">Qwen2.5-Math</a></li><li class="active"><a href="/2024/12/11/AI/deepspeed/" rel="bookmark" title="Deepspeed">Deepspeed</a></li><li><a href="/2024/12/11/AI/else/" rel="bookmark" title="其他未学习的可用工具">其他未学习的可用工具</a></li><li><a href="/2024/12/29/AI/PrecisionRecall/" rel="bookmark" title="准确率、精确率、召回率等指标定义">准确率、精确率、召回率等指标定义</a></li><li><a href="/2024/12/30/AI/RFT/" rel="bookmark" title="RFT（拒绝采样）">RFT（拒绝采样）</a></li><li><a href="/2024/12/31/AI/Top_k/" rel="bookmark" title="Top_k, Top_p, Temperature 参数">Top_k, Top_p, Temperature 参数</a></li><li><a href="/2024/12/31/AI/attention/" rel="bookmark" title="注意力机制综述">注意力机制综述</a></li><li><a href="/2025/01/02/AI/MinHash/" rel="bookmark" title="使用 MinHash 进行文本去重">使用 MinHash 进行文本去重</a></li><li><a href="/2025/01/02/AI/N-gram/" rel="bookmark" title="N-gram 模型">N-gram 模型</a></li><li><a href="/2025/01/02/AI/TIR/" rel="bookmark" title="TIR(ToRE) 集成工具推理">TIR(ToRE) 集成工具推理</a></li><li><a href="/2025/02/03/AI/LLM_base/" rel="bookmark" title="大模型基础课程（浙江大学）">大模型基础课程（浙江大学）</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Ember"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">Ember</p>
+  <div class="description" itemprop="description">🌸学习笔记🌸</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">107</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">15</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">24</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3FpYW5xaXUtY2VsbA==" title="https:&#x2F;&#x2F;github.com&#x2F;qianqiu-cell"><i class="ic i-github"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjI4MzI1Njc4NTFAcXEuY29t" title="mailto:2832567851@qq.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2024/12/11/AI/else/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2024/12/29/linux/shell/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/AI/" title="分类于 AI">AI</a>
+</div>
+
+    <span><a href="/2024/11/01/AI/Qwen2.5-math/" title="Qwen2.5-Math">Qwen2.5-Math</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/hardware/" title="分类于 硬件开发">硬件开发</a>
+</div>
+
+    <span><a href="/2022/11/16/hardware/stm32cubemx/" title="使用stm32cubemx新建工程">使用stm32cubemx新建工程</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
+</div>
+
+    <span><a href="/2022/12/23/optimal/signal_objective_optimization/" title="单目标搜索算法汇总">单目标搜索算法汇总</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
+</div>
+
+    <span><a href="/2023/03/16/optimal/SPEA/" title="SPEAI-II">SPEAI-II</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+</div>
+
+    <span><a href="/2022/12/24/blog/hexo_change/" title="Hexo文件迁移">Hexo文件迁移</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/linux/" title="分类于 linux">linux</a>
+</div>
+
+    <span><a href="/2024/10/20/linux/linux_command/" title="Linux常用命令">Linux常用命令</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/07/04/code/python/python_RMFS_pip_list/" title="本科毕业设计使用python环境">本科毕业设计使用python环境</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/latex/" title="分类于 latex">latex</a>
+</div>
+
+    <span><a href="/2023/03/12/latex/latex_eps/" title="latex插入图片：jpg&#x2F;png转eps">latex插入图片：jpg/png转eps</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/control/" title="分类于 控制工程">控制工程</a>
+</div>
+
+    <span><a href="/2022/11/23/control/spring_damping/" title="弹簧阻尼系统">弹簧阻尼系统</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Computer/" title="分类于 电脑硬件知识">电脑硬件知识</a>
+</div>
+
+    <span><a href="/2023/09/06/Computer/monitor/" title="显示器的一些小tricks">显示器的一些小tricks</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Ember @ 唯爱ぺ灬babyル</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">378k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">5:44</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2024/12/11/AI/deepspeed/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i> 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

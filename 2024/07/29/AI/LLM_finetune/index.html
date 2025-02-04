@@ -76,7 +76,7 @@
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>5.7k</span>
+    <span>12k</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -84,7 +84,7 @@
       <i class="ic i-clock"></i>
     </span>
     <span class="text">阅读时长</span>
-    <span>5 分钟</span>
+    <span>11 分钟</span>
   </span>
 </div>
 
@@ -117,12 +117,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://i.postimg.cc/90qnwGx5/img-2001068341.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/rFbM0JQs/img-2000929476.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/fy7Gyc22/img-2001024813.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/262MhkFm/img-2001012298.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/hPPCq10y/img-2000889270.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/TwJ0WtxD/img-2001024816.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/Z56dRC49/img-2001035084.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/DwTJ4nC8/img-2000953579.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/3R3K8qN0/img-2000917494.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/MHr2B7Jz/img-2001115987.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/63p7Qq1X/img-2000876872.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/Px8qJ7kt/img-2001081756.jpg"></li>
         </ul>
       </div>
     </header>
@@ -168,15 +168,16 @@
   <div class="body md" itemprop="articleBody">
     
 
-    <p>参考链接：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU2NTkxODE0L2FydGljbGUvZGV0YWlscy8xMzEyOTM5NDA=">https://blog.csdn.net/qq_56591814/article/details/131293940</span>、<span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVdrYnplVUVWRC8/c3BtX2lkX2Zyb209MzMzLjg4MC5teV9oaXN0b3J5LnBhZ2UuY2xpY2smYW1wO3ZkX3NvdXJjZT1lMDExNzJlYTI5MmMxYzYwNWIzNDYxMDFkNzAwNmM2MQ==">https://www.bilibili.com/video/BV1WkbzeUEVD/?spm_id_from=333.880.my_history.page.click&amp;vd_source=e01172ea292c1c605b346101d7006c61</span></p>
+    <p>参考链接：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU2NTkxODE0L2FydGljbGUvZGV0YWlscy8xMzEyOTM5NDA=">https://blog.csdn.net/qq_56591814/article/details/131293940</span>、<span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVdrYnplVUVWRC8/c3BtX2lkX2Zyb209MzMzLjg4MC5teV9oaXN0b3J5LnBhZ2UuY2xpY2smYW1wO3ZkX3NvdXJjZT1lMDExNzJlYTI5MmMxYzYwNWIzNDYxMDFkNzAwNmM2MQ==">https://www.bilibili.com/video/BV1WkbzeUEVD/?spm_id_from=333.880.my_history.page.click&amp;vd_source=e01172ea292c1c605b346101d7006c61</span>、<span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC82MzUxNTI4MTM=">https://zhuanlan.zhihu.com/p/635152813</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2h1Z2dpbmdmYWNlL3BlZnQ=">peft 库</span>可以实现几乎所有的微调</p>
 <h1 id="一-为什么要对大模型进行微调"><a class="markdownIt-Anchor" href="#一-为什么要对大模型进行微调">#</a> 一、为什么要对大模型进行微调</h1>
 <p>  通常，要对大模型进行微调，有以下一些原因：</p>
 <ul>
 <li>
-<p>第一个原因是，因为大模型的参数量非常大，训练成本非常高，每家公司都去从头训练一个自己的大模型，这个事情的性价比非常低；</p>
+<p>第一个原因是，因为大模型的参数量非常大，训练成本非常高；</p>
 </li>
 <li>
-<p>第二个原因是， <code>Prompt Engineering</code>  的方式是一种相对来说容易上手的使用大模型的方式，但是它的缺点也非常明显。因为通常大模型的实现原理，都会对输入序列的长度有限制， <code>Prompt Engineering</code>  的方式会把 <code>Prompt</code>  搞得很长。越长的 <code>Prompt</code> ，大模型的推理成本越高，因为推理成本是跟 <code>Prompt</code>  长度的平方正向相关的。另外， <code>Prompt</code>  太长会因超过限制而被截断，进而导致大模型的输出质量打折口，这也是一个非常严重的问题。对于个人使用者而言，如果是解决自己日常生活、工作中的一些问题，直接用 <code>Prompt Engineering</code>  的方式，通常问题不大。但对于对外提供服务的企业来说，要想在自己的服务中接入大模型的能力，推理成本是不得不要考虑的一个因素，微调相对来说就是一个更优的方案。</p>
+<p>第二个原因是， <code>Prompt Engineering</code>  的方式是一种相对来说容易上手的使用大模型的方式，但是它的缺点也非常明显。因为通常大模型都会对输入序列的长度有限制， <code>Prompt Engineering</code>  的 <code>Prompt</code>  很长。越长的 <code>Prompt</code> ，大模型的推理成本越高，因为推理成本是跟 <code>Prompt</code>  长度的平方正向相关的。</p>
 </li>
 <li>
 <p>第三个原因是， <code>Prompt Engineering</code>  的效果达不到要求，企业又有比较好的自有数据，能够通过自有数据，更好的提升大模型在特定领域的能力。这时候微调就非常适用。</p>
@@ -185,7 +186,7 @@
 <p>第四个原因是，要在个性化的服务中使用大模型的能力，这时候针对每个用户的数据，训练一个轻量级的微调模型，就是一个不错的方案。</p>
 </li>
 <li>
-<p>第五个原因是，数据安全的问题。如果数据是不能传递给第三方大模型服务的，那么搭建自己的大模型就非常必要。通常这些开源的大模型都是需要用自有数据进行微调，才能够满足业务的需求，这时候也需要对大模型进行微调。</p>
+<p>第五个原因是，数据安全的问题。如果数据是不能传递给第三方大模型服务的，那么搭建自己的大模型就非常必要。</p>
 </li>
 </ul>
 <h1 id="二-大模型微调的技术手段"><a class="markdownIt-Anchor" href="#二-大模型微调的技术手段">#</a> 二、大模型微调的技术手段</h1>
@@ -195,20 +196,91 @@
 <p>全微调（ <code>Full Fine-tuning, FFT</code> ）： <code>FFT</code>  是指对整个预训练模型进行微调，包括所有的模型参数。在这种方法中，预训练模型的所有层和参数都会被更新和优化，以适应目标任务的需求。这种微调方法通常适用于任务和预训练模型之间存在较大差异的情况，或者任务需要模型具有高度灵活性和自适应能力的情况。 <code>FFT</code>  需要较大的计算资源和时间，但可以获得更好的性能。</p>
 </li>
 <li>
-<p>参数高效微调（ <code>Parameter-Efficient Fine-Tuning, PEFT</code> ）： <code>PEFT</code>  旨在通过最小化微调参数数量和计算复杂度，提升预训练模型在新任务上的表现，从而减轻大型预训练模型的训练负担。 <code>PEFT</code>  方法可以通过多种方式进行分类，比如根据其基本方法或结构进行区分 —— 是否向模型引入新的参数，还是仅微调不分现有的参数；根据微调目的进行分类 —— 是否旨在最小化内存占用或仅追求存储效率。我们首先基于基本方法 &amp; 结构进行分类，下图展示了这个分类体系的 <code>30</code>  种 <code>PEFT</code>  方法。接下来对 <code>PEFT</code>  的分类进行详细介绍。</p>
+<p>参数高效微调（ <code>Parameter-Efficient Fine-Tuning, PEFT</code> ）： <code>PEFT</code>  旨在通过最小化微调参数数量和计算复杂度，提升预训练模型在新任务上的表现，从而减轻大型预训练模型的训练负担。 <code>PEFT</code>  可以粗略分为以下三大类：增加额外参数（ <code>A</code> ）、选取一部分参数更新（ <code>S</code> ）、引入重参数化（ <code>R</code> ）。而在增加额外参数这类方法中，又主要分为类适配器（ <code>Adapter-like</code> ）方法和软提示（ <code>Soft prompts</code> ）两个小类。</p>
 </li>
 </ul>
 <p><img data-src="/images/AI/LLM_finetune/2.1.png" alt=""></p>
 <h2 id="21-additive-methods"><a class="markdownIt-Anchor" href="#21-additive-methods">#</a> 2.1 Additive methods</h2>
-<p>  主要思想是通过<mark>添加额外的参数或层来扩充现有的预训练模型，并仅训练新添加的参数</mark>。到目前为止，这是参数高效微调方法中最大且广泛探索的类别。这种方法又分为：</p>
+<p>  主要思想是通过<mark>添加额外的参数或层来扩充现有的预训练模型，并仅训练新添加的参数</mark>。这种方法又分为：</p>
 <ul>
-<li><code>Adapters</code> ：即在 <code>Transformer</code>  子层后引入小型全连接网络，这种方法被广泛采用。 <code>Adapters</code>  有多种变体，例如修改适配器的位置、剪枝以及使用重参数化来减少可训练参数的数量。</li>
-<li><code>Soft Prompts</code> ： <code>GPT-2</code>  旨在通过修改输入文本来控制语言模型的行为。然而，这些方法很难进行优化，且存在模型输入长度、训练示例的数量等限制，由此引入了 <code>soft</code>  概念。 <code>Soft Prompts</code> <mark> 将模型的一部分输入嵌入通过梯度下降进行微调</mark>，将在离散空间中寻找提示的问题转化为连续优化问题。 <code>Soft Prompts</code>  可以仅对输入层进行训练（<span class="exturl" data-url="aHR0cHM6Ly9wYXBlcnN3aXRoY29kZS5jb20vcGFwZXIvZ3B0LXVuZGVyc3RhbmRzLXRvbw==">《GPT Understands, Too》</span>、<span class="exturl" data-url="aHR0cHM6Ly9wYXBlcnN3aXRoY29kZS5jb20vcGFwZXIvdGhlLXBvd2VyLW9mLXNjYWxlLWZvci1wYXJhbWV0ZXItZWZmaWNpZW50">Prompt Tuning</span>），也可以对所有层进行训练（<span class="exturl" data-url="aHR0cHM6Ly9wYXBlcnN3aXRoY29kZS5jb20vcGFwZXIvcHJlZml4LXR1bmluZy1vcHRpbWl6aW5nLWNvbnRpbnVvdXMtcHJvbXB0cw==">Prefix-Tuning</span>）。</li>
+<li><code>Adapters</code> （类适配器）：即在 <code>Transformer</code>  子层后引入小型全连接网络。 <code>Adapters</code>  有多种变体，例如修改适配器的位置、剪枝以及使用重参数化来减少可训练参数的数量。</li>
+<li><code>Soft Prompts</code> （软提示）：<strong>人工设计的是 hard prompt，模型训练出来的是 soft prompt</strong>。 <code>Soft Prompts</code> <mark> 将模型的一部分输入嵌入通过梯度下降进行微调</mark>，将在离散空间中寻找提示的问题转化为连续优化问题。 <code>Soft Prompts</code>  可以仅对输入层进行训练<span class="exturl" data-url="aHR0cHM6Ly9wYXBlcnN3aXRoY29kZS5jb20vcGFwZXIvdGhlLXBvd2VyLW9mLXNjYWxlLWZvci1wYXJhbWV0ZXItZWZmaWNpZW50"> Prompt Tuning</span>），也可以对所有层进行训练（<span class="exturl" data-url="aHR0cHM6Ly9wYXBlcnN3aXRoY29kZS5jb20vcGFwZXIvcHJlZml4LXR1bmluZy1vcHRpbWl6aW5nLWNvbnRpbnVvdXMtcHJvbXB0cw==">Prefix-Tuning</span>）。</li>
 <li><code>others</code> ：例如 <code>LeTS</code> ,  <code>LST</code>  和 <code>(IA)^3</code></li>
 </ul>
 <p>  尽管这些方法引入了额外的参数到网络中，但它们通过减少梯度和优化器状态的大小，减少了训练时间，提升了内存效率。此外可以对冻结的模型参数进行量化（<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzU2NTkxODE0L2FydGljbGUvZGV0YWlscy8xMzEyOTM5NDA=">参考论文</span>）， <code>additive PEFT</code>  方法能够微调更大的网络或使用更大的批次大小，这提高了在 <code>GPU</code>  上的训练吞吐量。此外，在分布式设置中优化较少的参数大大减少了通信量。</p>
+<h3 id="1-prefix-tuning"><a class="markdownIt-Anchor" href="#1-prefix-tuning">#</a> (1) Prefix Tuning</h3>
+<p>  <span class="exturl" data-url="aHR0cHM6Ly9wYXBlcnN3aXRoY29kZS5jb20vcGFwZXIvcHJlZml4LXR1bmluZy1vcHRpbWl6aW5nLWNvbnRpbnVvdXMtcHJvbXB0cw==">Prefix-Tuning</span><strong> 在输入 token 之前构造一段任务相关的 virtual tokens 作为 Prefix，然后训练的时候只更新 Prefix 部分的参数</strong>，而 PLM 中的其他部分参数固定。</p>
+<p>  针对不同的模型结构，需要构造不同的 Prefix。</p>
+<ul>
+<li>针对仅编码器架构模型：在句子前面添加前缀，得到 <strong>z = [PREFIX; x; y]</strong>，合适的上文能够在固定 LM 的情况下去引导生成下文（比如：GPT3 的上下文学习）。</li>
+<li>针对编码器 - 解码器架构模型：Encoder 和 Decoder 都增加了前缀，得到 <strong>z = [PREFIX; x; PREFIX0; y]</strong>。Encoder 端增加前缀是为了引导输入部分的编码，Decoder 端增加前缀是为了引导后续 token 的生成。</li>
+</ul>
+<p><img data-src="/images/AI/LLM_finetune/2.2.png" alt=""></p>
+<p>  <strong>Prefix Tuning 和构造 Prompt 类似，只是 Prompt 是人为构造的 “显式” 的提示，并且无法更新参数，而 Prefix 则是可以学习的 “隐式” 的提示</strong>。</p>
+<p>  同时，为了防止直接更新 Prefix 的参数导致训练不稳定和性能下降的情况，<strong>在 Prefix 层前面加了 MLP 结构，训练完成后，只保留 Prefix 的参数</strong>。</p>
+<p>  通过消融实验证实，只调整 embedding 层的表现力不够，将导致性能显著下降，因此，<strong>在每层都加了 prompt 的参数，改动较大</strong>。</p>
+<p>  另外，实验还对比了位置对于生成效果的影响，Prefix-tuning 也是要略优于 Infix-tuning 的。其中，Prefix-tuning 形式为 [PREFIX; x; y]，Infix-tuning 形式为 [x; INFIX; y]。</p>
+<h3 id="2-prompt-tuning"><a class="markdownIt-Anchor" href="#2-prompt-tuning">#</a> (2) Prompt Tuning</h3>
+<p>  人工设计 prompts 提示语，成本比较高，并且效果不太好。<strong>Prompt Tuning 通过反向传播更新参数来学习 prompts，而不是人工设计 prompts；同时冻结模型原始权重，只训练 prompts 参数</strong>，训练完以后，用同一个模型可以做多任务推理。</p>
+<p>  <strong><span class="exturl" data-url="aHR0cHM6Ly9wYXBlcnN3aXRoY29kZS5jb20vcGFwZXIvdGhlLXBvd2VyLW9mLXNjYWxlLWZvci1wYXJhbWV0ZXItZWZmaWNpZW50">Prompt Tuning</span> 可以看作是 Prefix Tuning 的简化版本，它给每个任务定义了自己的 Prompt，然后拼接到数据上作为输入，但只在输入层加入 prompt tokens，并且不需要加入 MLP 进行调整来解决难训练的问题</strong>。</p>
+<p><img data-src="/images/AI/LLM_finetune/2.3.png" alt=""></p>
+<p>  通过实验发现，<strong>随着预训练模型参数量的增加，Prompt Tuning 的方法会逼近全参数微调的结果</strong>。</p>
+<p><img data-src="/images/AI/LLM_finetune/2.4.png" alt=""></p>
+<p>  同时，Prompt Tuning 还提出了 Prompt Ensembling，也就是在一个批次（Batch）里同时训练同一个任务的不同 prompt（即采用多种不同方式询问同一个问题），这样相当于训练了不同模型，比模型集成的成本小多了。</p>
+<p><img data-src="/images/AI/LLM_finetune/2.5.png" alt=""></p>
+<p>  通过消融实验结果发现，<strong>Prompt Tuning 采用类标签初始化模型的效果更好</strong>。不过随着模型参数规模的提升，这种 gap 最终会消失。<strong>Prompt token 的长度在 20 左右时的表现已经不错</strong>。</p>
+<h3 id="3-p-tuning"><a class="markdownIt-Anchor" href="#3-p-tuning">#</a> (3) P-Tuning</h3>
+<p>  大模型的 Prompt 构造方式严重影响下游任务的效果。人工设计的模版的变化特别敏感，加一个词或者少一个词，或者变动位置都会造成比较大的变化。</p>
+<p>  同时，自动化搜索 Prompt 模版成本比较高，离散化的 token 的搜索出来的结果可能并不是最优的，导致性能不稳定。</p>
+<p>  <strong><span class="exturl" data-url="aHR0cHM6Ly9hcnhpdi5vcmcvYWJzLzIxMDMuMTAzODU=">P-Tuning</span>，设计了一种连续可微的 virtual token（同 Prefix-Tuning 类似）。P-Tuning 将 Prompt 转换为可以学习的 Embedding 层，并用 MLP+LSTM 的方式来对 Prompt Embedding 进行一层处理</strong>。</p>
+<p>  相比 Prefix Tuning，P-Tuning 加入的可微的 virtual token，但<strong>仅限于输入层</strong>，没有在每一层都加；另外，<strong>virtual token 的位置也不一定是前缀，插入的位置是可选的</strong>。这里的出发点实际是把传统人工设计模版中的真实 token 替换成可微的 virtual token。</p>
+<p><img data-src="/images/AI/LLM_finetune/2.6.png" alt=""></p>
+<p>  经过预训练的 LM 的词嵌入已经变得高度离散，如果随机初始化 virtual token，容易优化到局部最优值，而这些 virtual token 理论是应该有相关关联的。因此，作者通过实验发现<strong>用一个 prompt encoder 来编码会收敛更快，效果更好。即用一个 LSTM+MLP 去编码这些 virtual token 以后，再输入到模型</strong>。</p>
+<h3 id="4-p-tuning-v2"><a class="markdownIt-Anchor" href="#4-p-tuning-v2">#</a> (4) P-Tuning v2</h3>
+<p>  Prompt Tuning 和 P-Tuning 等方法存在两个主要的问题：</p>
+<p>  第一，缺乏模型参数规模和任务通用性。</p>
+<ul>
+<li>缺乏规模通用性：Prompt Tuning 论文中表明当模型规模超过 100 亿个参数时，提示优化可以与全量微调相媲美。<strong>但是对于那些较小的模型（从 100M 到 1B），提示优化和全量微调的表现有很大差异</strong>，这大大限制了提示优化的适用性。</li>
+<li>缺乏任务普遍性：尽管 Prompt Tuning 和 P-tuning 在一些 NLU 基准测试中表现出优势，<strong>但提示调优对硬序列标记任务（即序列标注）的有效性尚未得到验证</strong>。</li>
+</ul>
+<p>  第二，缺少深度提示优化，在 Prompt Tuning 和 P-tuning 中，<strong>连续提示只被插入 transformer 第一层的输入 embedding 序列中，在接下来的 transformer 层中，插入连续提示的位置的 embedding 是由之前的 transformer 层计算出来的，这可能导致两个可能的优化挑战</strong>。</p>
+<ul>
+<li>由于序列长度的限制，可调参数的数量是有限的。</li>
+<li>输入 embedding 对模型预测只有相对间接的影响。</li>
+</ul>
+<p>  考虑到这些问题，<strong>P-tuning v2 利用深度提示优化（如：Prefix Tuning），对 Prompt Tuning 和 P-Tuning 进行改进，作为一个跨规模和 NLU 任务的通用解决方案</strong>。</p>
+<p>  <strong><span class="exturl" data-url="aHR0cHM6Ly9hcnhpdi5vcmcvYWJzLzIxMTAuMDc2MDI=">P-Tuning v2</span> 在每一层都加入了 Prompts tokens 作为输入，而不是仅仅加在输入层</strong>，这带来两个方面的好处：</p>
+<ul>
+<li><strong>更多可学习的参数</strong>（从 P-tuning 和 Prompt Tuning 的 0.01% 增加到 0.1%-3%），同时也足够参数高效。</li>
+<li><strong>加入到更深层结构中的 Prompt 能给模型预测带来更直接的影响</strong>。</li>
+</ul>
+<p><img data-src="/images/AI/LLM_finetune/2.7.png" alt=""></p>
+<p>  <strong>具体做法基本同 Prefix Tuning</strong>，可以看作是将文本生成的 Prefix Tuning 技术适配到 NLU 任务中，然后做了一些改进：</p>
+<ul>
+<li><strong>移除重参数化的编码器</strong>。以前的方法利用重参数化功能来提高训练速度和鲁棒性（如：Prefix Tuning 中的 MLP、P-Tuning 中的 LSTM））。在 P-tuning v2 中发现重参数化的改进很小，尤其是对于较小的模型，同时还会影响模型的表现。</li>
+<li><strong>针对不同任务采用不同的提示长度</strong>。不同的文本生成任务可能有不同的最佳提示长度。</li>
+<li><strong>引入多任务学习</strong>。先在多任务的 Prompt 上进行预训练，然后再适配下游任务。多任务学习对 P-tuning v2 来说是可选的，但可能是相当有帮助的。一方面，连续提示的随机惯性给优化带来了困难，这可以通过更多的训练数据或与任务相关的无监督预训练来缓解；另一方面，连续提示是跨任务和数据集的特定任务知识的完美载体。实验表明，在一些困难的序列任务中，多任务学习可以作为 P-tuning v2 的有益补充。</li>
+<li><strong>回归传统的分类标签范式，而不是映射器</strong>。标签词映射器（Label Word Verbalizer）一直是提示优化的核心组成部分，它将 one-hot 类标签变成有意义的词，以利用预训练语言模型头。尽管它在 few-shot 设置中具有潜在的必要性，但在全数据监督设置中，Verbalizer 并不是必须的。它阻碍了提示调优在我们需要无实际意义的标签和句子嵌入的场景中的应用。因此，<strong>P-Tuning v2 回归传统的 CLS 标签分类范式</strong>，采用随机初始化的分类头（Classification Head）应用于 tokens 之上，以增强通用性，可以适配到序列标注任务。</li>
+</ul>
+<p>  论文中展示了 P-tuning v2 在不同模型规模下的表现。对于简单的 NLU 任务，如 SST-2（单句分类），Prompt Tuning 和 P-Tuning 在较小的规模下没有显示出明显的劣势。但是当涉及到复杂的挑战时，如：自然语言推理（RTE）和多选题回答（BoolQ），它们的性能会非常差。相反，P-Tuning v2 在较小规模的所有任务中都与微调的性能相匹配。并且，P-tuning v2 在 RTE 中的表现明显优于微调，特别是在 BERT 中。</p>
+<p>  为了评估 P-Tuning v2 在一些困难的 NLU 挑战中的能力，作者选择了三个典型的序列标注任务（名称实体识别、抽取式问答（QA）和语义角色标签（SRL）），共八个数据集。我们观察到 P-Tuning v2 在所有任务上都能与全量微调相媲美。</p>
+<p>  论文还通过消融实验研究了不同任务上 Prompt Length 的影响：</p>
+<ul>
+<li>针对简单任务：如情感分析，较短的 Prompt（~20）即可取得不错的效果。</li>
+<li>针对复杂任务：如阅读理解，需要更长的 Prompt（~100）。</li>
+</ul>
+<p>  总之，<strong>P-Tuning v2 是一种在不同规模和任务中都可与微调相媲美的提示方法</strong>。P-Tuning v2 对从 330M 到 10B 的模型显示出一致的改进，并在序列标注等困难的序列任务上以很大的幅度超过了 Prompt Tuning 和 P-Tuning。P-Tuning v2 可以成为微调的综合替代方案和未来工作的基线（Baseline）。</p>
+<h3 id="5-adapter-tuning"><a class="markdownIt-Anchor" href="#5-adapter-tuning">#</a> (5) Adapter Tuning</h3>
+<p><span class="exturl" data-url="aHR0cHM6Ly9hcnhpdi5vcmcvYWJzLzE5MDIuMDA3NTE=">Adapter Tuning</span> 设计了 Adapter 结构，并将其嵌入 Transformer 的结构里面，<strong>针对每一个 Transformer 层，增加了两个 Adapter 结构</strong> (分别是多头注意力的投影之后和第二个 feed-forward 层之后)，在训练时，固定住原来预训练模型的参数不变，只对新增的 Adapter 结构和 Layer Norm 层进行微调，从而保证了训练的高效性。</p>
+<p>每当出现新的下游任务，通过添加 Adapter 模块来产生一个易于扩展的下游模型，从而避免全量微调与灾难性遗忘的问题。</p>
+<p><img data-src="/images/AI/LLM_finetune/2.8.png" alt=""></p>
 <h2 id="22-selective-methods"><a class="markdownIt-Anchor" href="#22-selective-methods">#</a> 2.2 Selective methods</h2>
 <p>  最早的 <code>selective PEFT</code>  方法是仅微调网络的几个顶层（冻结前层），现代方法通常基于层的类型（<span class="exturl" data-url="aHR0cHM6Ly9wYXBlcnN3aXRoY29kZS5jb20vcGFwZXIvb24tdGhlLXN0cmVuZ3Rocy1vZi1jcm9zcy1hdHRlbnRpb24taW4=">Cross-Attention is All You Need</span>）或内部结构，例如仅微调模型的偏置（<span class="exturl" data-url="aHR0cHM6Ly9wYXBlcnN3aXRoY29kZS5jb20vcGFwZXIvYml0Zml0LXNpbXBsZS1wYXJhbWV0ZXItZWZmaWNpZW50LWZpbmUtdHVuaW5n">BitFit</span>）或仅特定的行（<span class="exturl" data-url="aHR0cHM6Ly9wYXBlcnN3aXRoY29kZS5jb20vcGFwZXIvZWZmaWNpZW50LWZpbmUtdHVuaW5nLW9mLWJlcnQtbW9kZWxzLW9uLXRoZQ==">Efficient Fine-Tuning of BERT Models on the Edge</span>）。</p>
+<h3 id="1-bitfit"><a class="markdownIt-Anchor" href="#1-bitfit">#</a> (1) BitFit</h3>
+<p>  <span class="exturl" data-url="aHR0cHM6Ly9wYXBlcnN3aXRoY29kZS5jb20vcGFwZXIvYml0Zml0LXNpbXBsZS1wYXJhbWV0ZXItZWZmaWNpZW50LWZpbmUtdHVuaW5n">BitFit</span> 是一种稀疏的微调方法，它训练时<strong>只更新 bias 的参数或者部分 bias 参数</strong>。涉及到的 bias 参数有 attention 模块中计算 query,key,value 跟合并多个 attention 结果时涉及到的 bias，MLP 层中的 bias，Layernormalization 层的 bias 参数。</p>
+<p>  在 Bert-Base/Bert-Large 这种模型里，<strong>bias 参数仅占模型全部参数量的 0.08%～0.09%</strong>。但是通过在 Bert-Large 模型上基于 GLUE 数据集进行了 BitFit、Adapter 和 Diff-Pruning 的效果对比发现，BitFit 在参数量远小于 Adapter、Diff-Pruning 的情况下，效果与 Adapter、Diff-Pruning 想当，甚至在某些任务上略优于 Adapter、Diff-Pruning。</p>
+<p>  同时，通过实验结果还可以看出，BitFit 微调结果相对全量参数微调而言，只更新极少量参数的情况下，在多个数据集上都达到了不错的效果，<strong>虽不及全量参数微调</strong>，但是远超固定全部模型参数的 Frozen 方式。</p>
+<p>  同时，通过对比 BitFit 训练前后的参数，发现很多 bias 参数并没有太多变化（例如：跟计算 key 所涉及到的 bias 参数）。发现<strong>计算 query 和将特征维度从 N 放大到 4N 的 FFN 层（intermediate）的 bias 参数变化最为明显</strong>，只更新这两类 bias 参数也能达到不错的效果，反之，固定其中任何一者，模型的效果都有较大损失。</p>
 <h2 id="23-reparametrization-based-peft重参数化"><a class="markdownIt-Anchor" href="#23-reparametrization-based-peft重参数化">#</a> 2.3 Reparametrization-based PEFT（重参数化）</h2>
 <p>  利用低秩表示来最小化可训练参数的数量。Aghajanyan 等人（2020）证明了在低秩子空间中可以有效地进行微调，对于更大的模型或经过更长时间预训练的模型，需要进行调整的子空间更小。最知名的基于重参数化的方法 <code>LoRa</code> ，它将参数矩阵进行简单的低秩分解来更新权重。最近的研究（Karimi Mahabadi 等，2021；Edalati 等，2022）还探索了 <code>Kronecker product reparametrization</code>  的使用，它在秩和参数数量之间取得了更有利的权衡。</p>
 <p>   <code>LoRA</code>  背后有一个假设：我们现在看到的这些大语言模型，它们都是被过度参数化的。而过度参数化的大模型背后，都有一个低维的本质模型。</p>
@@ -229,7 +301,7 @@
 </li>
 </ul>
 <p>  该方法认为模型权重矩阵在特定微调后具有较低的本征秩，故基于秩分解的概念，将预训练模型的现有权重矩阵分成两个较小的矩阵。</p>
-<p><img data-src="/images/AI/LLM_finetune/2.2.png" alt=""></p>
+<p><img data-src="/images/AI/LLM_finetune/2.10.png" alt=""></p>
 <h2 id="24-hybrid-methods"><a class="markdownIt-Anchor" href="#24-hybrid-methods">#</a> 2.4 Hybrid methods</h2>
 <p>  混合多种 <code>PEFT</code>  方法，例如， <code>MAM Adapter</code>  结合了 <code>Adapters</code>  和 <code>Prompt tuning</code> ； <code>UniPELT</code>  加入了 <code>LoRa</code> ,  <code>Compacter</code>  和 <code>KronAB</code>  对适配器进行了重参数化以减少其参数数量；最后， <code>S4</code>  是一个自动化算法搜索的结果，它结合了所有的 <code>PEFT</code>  类别，额外参数数量增加 0.5% 的情况下最大化准确性。</p>
 <h1 id="三-使用llama-factory微调qwen2模型"><a class="markdownIt-Anchor" href="#三-使用llama-factory微调qwen2模型">#</a> 三、使用 LLaMA-Factory 微调 Qwen2 模型</h1>
@@ -249,6 +321,64 @@
 <p>  在准备好微调的数据集之后，即可再次运行 <code>LLaMA-Factory-main/src/webui.py</code> ，启动 LLaMA-Factory 的可视化界面，其中的部分参数定义如下，需要注意的是数据路径应该指定为本地计算机 <code>LLaMA-Factory-main/data</code>  文件夹的绝对路径：</p>
 <p><img data-src="/images/AI/LLM_finetune/3.2.png" alt=""></p>
 <p>  定义完成训练参数后即可点击 “开始” 按钮，开始模型的微调训练。模型训练完毕后，点击 <code>Chat</code>  选项卡，检查点路径选择训练好的大模型，即可开始与微调完成的大模型进行在线对话。点击 <code>Export</code>  选项卡，指定导出目录以及其他设置，点击 “开始导出”，即可导出训练完毕的大模型。至此，已经完成使用 <code>LLaMA-Factory</code>  进行大模型微调的全部过程。</p>
+<h1 id="总结"><a class="markdownIt-Anchor" href="#总结">#</a> 总结</h1>
+<p>参考：<span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC82NDk3NTUyNTI=">https://zhuanlan.zhihu.com/p/649755252</span></p>
+<p>BitFit<br>
+ 对微调机制的一种积极探索，也很简单，通过仅调整 bias 效果就能有不错的效果，但没有具体阐述原理，就是通过猜测加实验得到的结果。同时，作者提出一个观点：微调的过程不是让模型适应另外的数据分布，而是让模型更好的应用出本身的表征能力。</p>
+<p>特点：</p>
+<p>训练参数量极小（约 0.1%）。<br>
+在大部分任务上效果会差于 LoRA、Adapter 等方法。<br>
+Prefix Tuning<br>
+ 在每一个 Transformer 层都带上一些 virtual token 作为前缀，以适应不同的任务。</p>
+<p>特点：</p>
+<p>前缀 Token 会占用序列长度，有一定的额外计算开销。<br>
+Prefix Tuning 的线性插值是比较复杂的。<br>
+Prompt Tuning<br>
+ 该方法可以看着是 Prefix Tuning 的简化版本，针对不同的任务，仅在输入层引入 virtual token 形式的软提示（soft prompt）。</p>
+<p>特点：</p>
+<p>相对于 Prefix Tuning，参与训练的参数量和改变的参数量更小，更节省显存。<br>
+对一些简单的 NLU 任务还不错，但对硬序列标记任务（即序列标注）表现欠佳。<br>
+P-Tuning<br>
+ 将 Prompt 转换为可以学习的 Embedding 层，并用 MLP+LSTM 的方式来对 Prompt Embedding 进行一层处理。相比 Prefix Tuning，仅在输入层加入的可微的 virtual token；另外，virtual token 的位置也不一定是前缀，插入的位置是可选的。</p>
+<p>特点：</p>
+<p>引入一个 prompt encoder（由一个双向的 LSTM + 两层 MLP 组成）来建模 virtual token 的相互依赖会收敛更快，效果更好。<br>
+P-Tuning v2<br>
+ 该方法在每一个 Transformer 层都加入了 prompt token 作为输入，引入多任务学习，针对不同任务采用不同的提示长度。并且回归传统的分类标签范式，而不是映射器。</p>
+<p>特点：</p>
+<p>解决了 Prompt Tuning 无法在小模型上有效提升的问题。<br>
+移除了对模型效果改进较小的重参数化的编码器（如：Prefix Tuning 中的 MLP、P-Tuning 中的 LSTM）。<br>
+对于一些复杂的硬序列标记任务（即序列标注）取得了不错的效果。<br>
+Adapter Tuning<br>
+ 该方法设计了 Adapter 结构，并将其嵌入 Transformer 的结构里面，针对每一个 Transformer 层，增加了两个 Adapter 结构，在训练时，固定住原来预训练模型的参数不变，只对新增的 Adapter 结构和 Layer Norm 层进行微调。</p>
+<p>特点：</p>
+<p>通过在 Transformer 层中嵌入 Adapter 结构，在推理时会额外增加推理时长。<br>
+AdapterFusion<br>
+ 一种融合多任务信息的 Adapter 的变体，在 Adapter 的基础上进行优化，通过将学习过程分为两阶段来提升下游任务表现。</p>
+<p>AdapterDrop<br>
+ 该方法在不影响任务性能的情况下，对 Adapter 动态高效的移除，尽可能的减少模型的参数量，提高模型在反向传播（训练）和正向传播（推理）时的效率。</p>
+<p>特点：</p>
+<p>通过从较低的 Transformer 层删除可变数量的 Adaper 来提升推理速度。 当对多个任务执行推理时，动态地减少了运行时的计算开销，并在很大程度上保持了任务性能。<br>
+LoRA<br>
+ 该方法通过低秩分解来模拟参数的改变量，从而以极小的参数量来实现大模型的间接训练。</p>
+<p>特点：</p>
+<p>将 BA 加到 W 上可以消除推理延迟。<br>
+可以通过可插拔的形式切换到不同的任务。<br>
+设计的比较好，简单且效果好。</p>
+<p>AdaLoRA<br>
+ 对 LoRA 的一种改进，它根据重要性评分动态分配参数预算给权重矩阵，将关键的增量矩阵分配高秩以捕捉更精细和任务特定的信息，而将较不重要的矩阵的秩降低，以防止过拟合并节省计算预算。</p>
+<p>QLoRA<br>
+ 使用一种新颖的高精度技术将预训练模型量化为 4 bit，然后添加一小组可学习的低秩适配器权重，这些权重通过量化权重的反向传播梯度进行微调。</p>
+<p>特点：</p>
+<p>使用 QLoRA 微调模型，可以显著降低对于显存的要求。同时，模型训练的速度会慢于 LoRA。<br>
+MAM Adapter<br>
+ 一种在 Adapter、Prefix Tuning 和 LoRA 之间建立联系的统一方法。最终的模型 MAM Adapter 是用于 FFN 的并行 Adapter 和 软提示的组合。</p>
+<p>特点：</p>
+<p>整体上来说，最终的模型 MAM Adapter 效果会优于单个高效微调方法。<br>
+UniPELT<br>
+ 一种将不同的 PELT 方法 LoRA、Prefix Tuning 和 Adapter 作为子模块，并通过门控机制学习激活最适合当前数据或任务的方法。</p>
+<p>特点：</p>
+<p>相对于 LoRA，BitFit，Prefix-tuning，训练的参数量更大；同时，推理更耗时；并且，输入会占用额外的序列长度。<br>
+多种 PELT 方法的混合涉及 PLM 的不同部分对模型有效性和鲁棒性都有好处。</p>
 
       <div class="tags">
           <a href="/tags/AI/" rel="tag"><i class="ic i-tag"></i> AI</a>
@@ -263,7 +393,7 @@
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2024-07-29 13:06:49" itemprop="dateModified" datetime="2024-07-29T13:06:49+08:00">2024-07-29</time>
+    <time title="修改时间：2025-01-03 15:33:43" itemprop="dateModified" datetime="2025-01-03T15:33:43+08:00">2025-01-03</time>
   </span>
   <span id="2024/07/29/AI/LLM_finetune/" class="item leancloud_visitors" data-flag-title="大模型微调" title="阅读次数">
       <span class="icon">
@@ -286,20 +416,20 @@
     <div class="item left">
       
 
-  <a href="/2024/07/25/control/MOESP/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;xd75GrrB&#x2F;img-2000875523.jpg" title="MOESP系统辨识方法">
+  <a href="/2024/07/25/control/N4SID/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;ZRRyYHwH&#x2F;img-2000973543.jpg" title="N4SID系统辨识方法">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 控制工程</span>
-  <h3>MOESP系统辨识方法</h3>
+  <h3>N4SID系统辨识方法</h3>
   </a>
 
     </div>
     <div class="item right">
       
 
-  <a href="/2024/08/27/code/python/python_ipdb/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;15SYWNXB&#x2F;img-2000931972.jpg" title="IPython Debugger (ipdb)">
+  <a href="/2024/08/26/AI/DiffusionModel/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;xqVnXj35&#x2F;img-2001065991.jpg" title="扩散模型">
   <span class="type">下一篇</span>
-  <span class="category"><i class="ic i-flag"></i> python</span>
-  <h3>IPython Debugger (ipdb)</h3>
+  <span class="category"><i class="ic i-flag"></i> AI</span>
+  <h3>扩散模型</h3>
   </a>
 
     </div>
@@ -318,11 +448,11 @@
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%AF%B9%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%BF%9B%E8%A1%8C%E5%BE%AE%E8%B0%83"><span class="toc-number">1.</span> <span class="toc-text"> 一、为什么要对大模型进行微调</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C-%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83%E7%9A%84%E6%8A%80%E6%9C%AF%E6%89%8B%E6%AE%B5"><span class="toc-number">2.</span> <span class="toc-text"> 二、大模型微调的技术手段</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#21-additive-methods"><span class="toc-number">2.1.</span> <span class="toc-text"> 2.1 Additive methods</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-selective-methods"><span class="toc-number">2.2.</span> <span class="toc-text"> 2.2 Selective methods</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-reparametrization-based-peft%E9%87%8D%E5%8F%82%E6%95%B0%E5%8C%96"><span class="toc-number">2.3.</span> <span class="toc-text"> 2.3 Reparametrization-based PEFT（重参数化）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#24-hybrid-methods"><span class="toc-number">2.4.</span> <span class="toc-text"> 2.4 Hybrid methods</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89-%E4%BD%BF%E7%94%A8llama-factory%E5%BE%AE%E8%B0%83qwen2%E6%A8%A1%E5%9E%8B"><span class="toc-number">3.</span> <span class="toc-text"> 三、使用 LLaMA-Factory 微调 Qwen2 模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#31-%E8%BF%90%E8%A1%8Cqwen2%E6%A8%A1%E5%9E%8B"><span class="toc-number">3.1.</span> <span class="toc-text"> 3.1 运行 Qwen2 模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#32-%E4%B8%8B%E8%BD%BD%E5%B9%B6%E8%BF%90%E8%A1%8Cllama-factory"><span class="toc-number">3.2.</span> <span class="toc-text"> 3.2 下载并运行 LLaMA-Factory</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#33-%E5%87%86%E5%A4%87%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-number">3.3.</span> <span class="toc-text"> 3.3 准备数据集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#34-%E4%BD%BF%E7%94%A8llama-factory%E8%BF%9B%E8%A1%8C%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83"><span class="toc-number">3.4.</span> <span class="toc-text"> 3.4 使用 LLaMA-Factory 进行大模型微调</span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%AF%B9%E5%A4%A7%E6%A8%A1%E5%9E%8B%E8%BF%9B%E8%A1%8C%E5%BE%AE%E8%B0%83"><span class="toc-number">1.</span> <span class="toc-text"> 一、为什么要对大模型进行微调</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C-%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83%E7%9A%84%E6%8A%80%E6%9C%AF%E6%89%8B%E6%AE%B5"><span class="toc-number">2.</span> <span class="toc-text"> 二、大模型微调的技术手段</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#21-additive-methods"><span class="toc-number">2.1.</span> <span class="toc-text"> 2.1 Additive methods</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-prefix-tuning"><span class="toc-number">2.1.1.</span> <span class="toc-text"> (1) Prefix Tuning</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-prompt-tuning"><span class="toc-number">2.1.2.</span> <span class="toc-text"> (2) Prompt Tuning</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-p-tuning"><span class="toc-number">2.1.3.</span> <span class="toc-text"> (3) P-Tuning</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-p-tuning-v2"><span class="toc-number">2.1.4.</span> <span class="toc-text"> (4) P-Tuning v2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-adapter-tuning"><span class="toc-number">2.1.5.</span> <span class="toc-text"> (5) Adapter Tuning</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-selective-methods"><span class="toc-number">2.2.</span> <span class="toc-text"> 2.2 Selective methods</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-bitfit"><span class="toc-number">2.2.1.</span> <span class="toc-text"> (1) BitFit</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-reparametrization-based-peft%E9%87%8D%E5%8F%82%E6%95%B0%E5%8C%96"><span class="toc-number">2.3.</span> <span class="toc-text"> 2.3 Reparametrization-based PEFT（重参数化）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#24-hybrid-methods"><span class="toc-number">2.4.</span> <span class="toc-text"> 2.4 Hybrid methods</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89-%E4%BD%BF%E7%94%A8llama-factory%E5%BE%AE%E8%B0%83qwen2%E6%A8%A1%E5%9E%8B"><span class="toc-number">3.</span> <span class="toc-text"> 三、使用 LLaMA-Factory 微调 Qwen2 模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#31-%E8%BF%90%E8%A1%8Cqwen2%E6%A8%A1%E5%9E%8B"><span class="toc-number">3.1.</span> <span class="toc-text"> 3.1 运行 Qwen2 模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#32-%E4%B8%8B%E8%BD%BD%E5%B9%B6%E8%BF%90%E8%A1%8Cllama-factory"><span class="toc-number">3.2.</span> <span class="toc-text"> 3.2 下载并运行 LLaMA-Factory</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#33-%E5%87%86%E5%A4%87%E6%95%B0%E6%8D%AE%E9%9B%86"><span class="toc-number">3.3.</span> <span class="toc-text"> 3.3 准备数据集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#34-%E4%BD%BF%E7%94%A8llama-factory%E8%BF%9B%E8%A1%8C%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BE%AE%E8%B0%83"><span class="toc-number">3.4.</span> <span class="toc-text"> 3.4 使用 LLaMA-Factory 进行大模型微调</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">4.</span> <span class="toc-text"> 总结</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
-          <li><a href="/2024/02/01/AI/Neural_networks_classification/" rel="bookmark" title="神经网络大致分类">神经网络大致分类</a></li><li><a href="/2024/05/16/AI/Transformer/" rel="bookmark" title="Transformer模型">Transformer模型</a></li><li><a href="/2024/07/23/AI/Prompt_engineering/" rel="bookmark" title="大模型提示词工程（Prompt Engineering）">大模型提示词工程（Prompt Engineering）</a></li><li class="active"><a href="/2024/07/29/AI/LLM_finetune/" rel="bookmark" title="大模型微调">大模型微调</a></li><li><a href="/2024/09/12/AI/CLIP/" rel="bookmark" title="CLIP">CLIP</a></li><li><a href="/2024/09/14/AI/BLIP/" rel="bookmark" title="BLIP">BLIP</a></li><li><a href="/2024/09/14/AI/BERT/" rel="bookmark" title="BERT">BERT</a></li><li><a href="/2024/09/19/AI/SimCLR/" rel="bookmark" title="SimCLR">SimCLR</a></li><li><a href="/2024/09/21/AI/ViT/" rel="bookmark" title="ViT">ViT</a></li><li><a href="/2024/10/05/AI/MAE/" rel="bookmark" title="MAE">MAE</a></li>
+          <li><a href="/2024/02/01/AI/Neural_networks_classification/" rel="bookmark" title="神经网络大致分类">神经网络大致分类</a></li><li><a href="/2024/05/16/AI/Transformer/" rel="bookmark" title="Transformer模型">Transformer模型</a></li><li><a href="/2024/07/23/AI/Prompt_engineering/" rel="bookmark" title="大模型提示词工程（Prompt Engineering）">大模型提示词工程（Prompt Engineering）</a></li><li class="active"><a href="/2024/07/29/AI/LLM_finetune/" rel="bookmark" title="大模型微调">大模型微调</a></li><li><a href="/2024/08/26/AI/DiffusionModel/" rel="bookmark" title="扩散模型">扩散模型</a></li><li><a href="/2024/09/12/AI/CLIP/" rel="bookmark" title="CLIP">CLIP</a></li><li><a href="/2024/09/14/AI/BERT/" rel="bookmark" title="BERT">BERT</a></li><li><a href="/2024/09/14/AI/BLIP/" rel="bookmark" title="BLIP">BLIP</a></li><li><a href="/2024/09/19/AI/SimCLR/" rel="bookmark" title="SimCLR">SimCLR</a></li><li><a href="/2024/09/21/AI/ViT/" rel="bookmark" title="ViT">ViT</a></li><li><a href="/2024/10/05/AI/MAE/" rel="bookmark" title="MAE">MAE</a></li><li><a href="/2024/10/21/AI/vllm/" rel="bookmark" title="vLLM">vLLM</a></li><li><a href="/2024/11/01/AI/Qwen2.5-math/" rel="bookmark" title="Qwen2.5-Math">Qwen2.5-Math</a></li><li><a href="/2024/12/11/AI/deepspeed/" rel="bookmark" title="Deepspeed">Deepspeed</a></li><li><a href="/2024/12/11/AI/else/" rel="bookmark" title="其他未学习的可用工具">其他未学习的可用工具</a></li><li><a href="/2024/12/29/AI/PrecisionRecall/" rel="bookmark" title="准确率、精确率、召回率等指标定义">准确率、精确率、召回率等指标定义</a></li><li><a href="/2024/12/30/AI/RFT/" rel="bookmark" title="RFT（拒绝采样）">RFT（拒绝采样）</a></li><li><a href="/2024/12/31/AI/Top_k/" rel="bookmark" title="Top_k, Top_p, Temperature 参数">Top_k, Top_p, Temperature 参数</a></li><li><a href="/2024/12/31/AI/attention/" rel="bookmark" title="注意力机制综述">注意力机制综述</a></li><li><a href="/2025/01/02/AI/MinHash/" rel="bookmark" title="使用 MinHash 进行文本去重">使用 MinHash 进行文本去重</a></li><li><a href="/2025/01/02/AI/N-gram/" rel="bookmark" title="N-gram 模型">N-gram 模型</a></li><li><a href="/2025/01/02/AI/TIR/" rel="bookmark" title="TIR(ToRE) 集成工具推理">TIR(ToRE) 集成工具推理</a></li><li><a href="/2025/02/03/AI/LLM_base/" rel="bookmark" title="大模型基础课程（浙江大学）">大模型基础课程（浙江大学）</a></li>
         </ul>
       </div>
       <div class="overview panel" data-title="站点概览">
@@ -336,19 +466,19 @@
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">91</span>
+        <span class="count">107</span>
         <span class="name">文章</span>
       </a>
     </div>
     <div class="item categories">
       <a href="/categories/">
-        <span class="count">16</span>
+        <span class="count">15</span>
         <span class="name">分类</span>
       </a>
     </div>
     <div class="item tags">
       <a href="/tags/">
-        <span class="count">25</span>
+        <span class="count">24</span>
         <span class="name">标签</span>
       </a>
     </div>
@@ -411,12 +541,12 @@
 
   <ul id="quick">
     <li class="prev pjax">
-        <a href="/2024/07/25/control/MOESP/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+        <a href="/2024/07/25/control/N4SID/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
-        <a href="/2024/08/27/code/python/python_ipdb/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+        <a href="/2024/08/26/AI/DiffusionModel/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -438,40 +568,10 @@
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/AI/" title="分类于 AI">AI</a>
+<a href="/categories/linux/" title="分类于 linux">linux</a>
 </div>
 
-    <span><a href="/2024/09/12/AI/CLIP/" title="CLIP">CLIP</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/search/" title="分类于 search">search</a>
-</div>
-
-    <span><a href="/2024/08/28/search/Search_for_a_Stationary_Target/" title="搜索一个静止的目标">搜索一个静止的目标</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
-</div>
-
-    <span><a href="/2023/11/24/math/Function_approximation_and_curve_fitting/" title="函数逼近与曲线拟合">函数逼近与曲线拟合</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/leetcode/" title="分类于 leetcode">leetcode</a>
-</div>
-
-    <span><a href="/2023/11/06/code/leetcode/1000%E6%9C%AC%E5%BC%80%E6%BA%90%E7%94%B5%E5%AD%90%E4%B9%A6/" title="1000本开源电子书">1000本开源电子书</a></span>
+    <span><a href="/2024/10/03/linux/Linux_install/" title="在移动硬盘安装Ubuntu系统">在移动硬盘安装Ubuntu系统</a></span>
   </li>
 
       
@@ -481,7 +581,17 @@
 <a href="/categories/AI/" title="分类于 AI">AI</a>
 </div>
 
-    <span><a href="/2024/09/14/AI/BLIP/" title="BLIP">BLIP</a></span>
+    <span><a href="/2024/12/29/AI/PrecisionRecall/" title="准确率、精确率、召回率等指标定义">准确率、精确率、召回率等指标定义</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/latex/" title="分类于 latex">latex</a>
+</div>
+
+    <span><a href="/2023/03/12/latex/latex_quotation_mark/" title="latex输入双引号">latex输入双引号</a></span>
   </li>
 
       
@@ -491,7 +601,7 @@
 <a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2023/03/23/code/python/python_type_hints/" title="python类型提示">python类型提示</a></span>
+    <span><a href="/2024/02/20/code/python/python_pytorch_tensorboard/" title="Pytorch下的Tensorboard的使用">Pytorch下的Tensorboard的使用</a></span>
   </li>
 
       
@@ -501,27 +611,17 @@
 <a href="/categories/math/" title="分类于 数学基础">数学基础</a>
 </div>
 
-    <span><a href="/2022/11/28/math/covariance/" title="数学期望、方差和协方差">数学期望、方差和协方差</a></span>
+    <span><a href="/2022/11/21/math/svd/" title="奇异值分解（SVD）">奇异值分解（SVD）</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/AI/" title="分类于 AI">AI</a>
+<a href="/categories/leetcode/" title="分类于 leetcode">leetcode</a>
 </div>
 
-    <span><a href="/2024/07/23/AI/Prompt_engineering/" title="大模型提示词工程（Prompt Engineering）">大模型提示词工程（Prompt Engineering）</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
-</div>
-
-    <span><a href="/2023/08/01/math/derivative_of_the_multiple_matrix/" title="矩阵乘法的求导问题">矩阵乘法的求导问题</a></span>
+    <span><a href="/2023/10/31/code/leetcode/Binary_Search/" title="二分查找的正确编写方法">二分查找的正确编写方法</a></span>
   </li>
 
       
@@ -531,7 +631,37 @@
 <a href="/categories/linux/" title="分类于 linux">linux</a>
 </div>
 
-    <span><a href="/2024/10/20/linux/docker/" title="docker">docker</a></span>
+    <span><a href="/2024/10/20/linux/linux_command/" title="Linux常用命令">Linux常用命令</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2024/02/20/code/python/python_pytorch_transforms/" title="Pytorch数据预处理：transforms的使用">Pytorch数据预处理：transforms的使用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+</div>
+
+    <span><a href="/2023/01/19/blog/hexo_remote/" title="解决Connection closed by remote host">解决Connection closed by remote host</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/linux/" title="分类于 linux">linux</a>
+</div>
+
+    <span><a href="/2024/10/22/linux/linux_nvidia/" title="Ubuntu 20.04 Nvidia驱动安装">Ubuntu 20.04 Nvidia驱动安装</a></span>
   </li>
 
   </ul>
@@ -546,7 +676,7 @@
   <div class="copyright">
     
     &copy; 2022 – 
-    <span itemprop="copyrightYear">2024</span>
+    <span itemprop="copyrightYear">2025</span>
     <span class="with-love">
       <i class="ic i-sakura rotate"></i>
     </span>
@@ -556,13 +686,13 @@
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">320k 字</span>
+    <span title="站点总字数">378k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:51</span>
+    <span title="站点阅读时长">5:44</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

@@ -1,0 +1,543 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Keep Moving" href="http://qianqiu-cell.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Keep Moving" href="http://qianqiu-cell.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Keep Moving" href="http://qianqiu-cell.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="linux" />
+
+
+<link rel="canonical" href="http://qianqiu-cell.github.io/2024/10/22/linux/linux_nvidia/">
+
+
+
+  <title>
+Ubuntu 20.04 Nvidia驱动安装 - linux |
+唯爱ぺ灬babyル = Keep Moving = 天将降大任于斯人也</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Ubuntu 20.04 Nvidia驱动安装
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2024-10-22 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-10-22T00:00:00+08:00">2024-10-22</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>1.8k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>2 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">唯爱ぺ灬babyル</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://i.postimg.cc/44784Q7B/img-2000924503.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/wv282czC/img-2001012739.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/xjBbYKMG/img-2000937381.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/SNsmKsby/img-2001110174.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/nLjBJ0MJ/img-2001046184.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/RVbpvpGs/img-2000962396.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/linux/" itemprop="item" rel="index" title="分类于 linux"><span itemprop="name">linux</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://qianqiu-cell.github.io/2024/10/22/linux/linux_nvidia/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="Ember">
+    <meta itemprop="description" content="天将降大任于斯人也, 🌸学习笔记🌸">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Keep Moving">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <p>参考：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3phdGFqaS9hcnRpY2xlL2RldGFpbHMvMTIzMTA0NTY5">https://blog.csdn.net/zataji/article/details/123104569</span>、<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2Nob2ltcm9jL2FydGljbGUvZGV0YWlscy8xMDQ2MzA0OTEjOn46dGV4dD1XQVJOSU5HJTNBJTIwVW5hYmxlJTIwdG8lMjBkZXRlcm1pbmUlMjB0aGUlMjBwYXRoJTIwdG8lMjBpbnN0YWxsLGxpYnJhcmllcyUyMGluc3RhbGxlZCUyQyUyMG9yJTIwc3BlY2lmeSUyMGElMjBwYXRoJTIwd2l0aCUyMC0tZ2x2bmQtZWdsLWNvbmZpZy1wYXRoLg==">https://blog.csdn.net/choimroc/article/details/104630491#:~:text=WARNING%3A Unable to determine the path to install,libraries installed%2C or specify a path with --glvnd-egl-config-path.</span></p>
+<h1 id="一-禁用-nouveau驱动"><a class="markdownIt-Anchor" href="#一-禁用-nouveau驱动">#</a> 一、禁用 nouveau 驱动</h1>
+<p>因为 NVIDIA 的官方驱动和系统自带的 nouveau 驱动冲突，所以需要先禁用。</p>
+<p>编辑文件 <code>/etc/modprobe.d/blacklist-nouveau.conf</code></p>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">sudo</span> <span class="token function">vim</span> /etc/modprobe.d/blacklist-nouveau.conf</pre></td></tr></table></figure><p>并在文件末尾添加以下内容：</p>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre>blacklist nouveau</pre></td></tr><tr><td data-num="2"></td><td><pre>options nouveau <span class="token assign-left variable">modeset</span><span class="token operator">=</span><span class="token number">0</span></pre></td></tr></table></figure><p>执行以下命令使禁用生效并且重启</p>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">sudo</span> update-initramfs <span class="token parameter variable">-u</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token comment"># 重启</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token function">sudo</span> <span class="token function">reboot</span></pre></td></tr></table></figure><p>重启后验证是否生效， 执行命令，若没有输出，则禁用生效</p>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre>lsmod <span class="token operator">|</span> <span class="token function">grep</span> nouveau</pre></td></tr></table></figure><h1 id="二-安装-nvidia驱动"><a class="markdownIt-Anchor" href="#二-安装-nvidia驱动">#</a> 二、安装 NVIDIA 驱动</h1>
+<p>根据显卡的参数到<span class="exturl" data-url="aHR0cHM6Ly93d3cubnZpZGlhLmNvbS9lbi11cy9kcml2ZXJzLw=="> NVIDIA 官网</span>查询显卡匹配的驱动版本。目前所使用惠普电脑所使用的显卡型号为 GeForce RTX 3050。</p>
+<p>下载好驱动，执行命令进行安装。</p>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">sudo</span> <span class="token function">su</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token function">sudo</span> <span class="token function">sh</span> NVIDIA-Linux-x86_64-550.120.run</pre></td></tr></table></figure><h1 id="三-验证"><a class="markdownIt-Anchor" href="#三-验证">#</a> 三、验证</h1>
+<p>输入命令 <code>nvidia-smi</code> ，验证是否安装成功，如果安装成功，会出现显卡的相关信息</p>
+<figure class="highlight sh"><figcaption data-lang="sh"></figcaption><table><tr><td data-num="1"></td><td><pre>root@ember-Victus-by-HP-Laptop:/home/ember/下载<span class="token comment"># nvidia-smi</span></pre></td></tr><tr><td data-num="2"></td><td><pre>Tue Oct <span class="token number">22</span> 01:17:32 <span class="token number">2024</span>       </pre></td></tr><tr><td data-num="3"></td><td><pre>+-----------------------------------------------------------------------------------------+</pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token operator">|</span> NVIDIA-SMI <span class="token number">550.120</span>                Driver Version: <span class="token number">550.120</span>        CUDA Version: <span class="token number">12.4</span>     <span class="token operator">|</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token operator">|</span>-----------------------------------------+------------------------+----------------------+</pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token operator">|</span> GPU  Name                 Persistence-M <span class="token operator">|</span> Bus-Id          Disp.A <span class="token operator">|</span> Volatile Uncorr. ECC <span class="token operator">|</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token operator">|</span> Fan  Temp   Perf          Pwr:Usage/Cap <span class="token operator">|</span>           Memory-Usage <span class="token operator">|</span> GPU-Util  Compute M. <span class="token operator">|</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token operator">|</span>                                         <span class="token operator">|</span>                        <span class="token operator">|</span>               MIG M. <span class="token operator">|</span></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token operator">|</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span><span class="token operator">+=</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span><span class="token operator">+=</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span><span class="token operator">|</span></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token operator">|</span>   <span class="token number">0</span>  NVIDIA GeForce RTX <span class="token number">3050</span> <span class="token punctuation">..</span>.    Off <span class="token operator">|</span>   00000000:01:00.0 Off <span class="token operator">|</span>                  N/A <span class="token operator">|</span></pre></td></tr><tr><td data-num="11"></td><td><pre><span class="token operator">|</span> N/A   44C    P0             13W /   60W <span class="token operator">|</span>       1MiB /   4096MiB <span class="token operator">|</span>      <span class="token number">6</span>%      Default <span class="token operator">|</span></pre></td></tr><tr><td data-num="12"></td><td><pre><span class="token operator">|</span>                                         <span class="token operator">|</span>                        <span class="token operator">|</span>                  N/A <span class="token operator">|</span></pre></td></tr><tr><td data-num="13"></td><td><pre>+-----------------------------------------+------------------------+----------------------+</pre></td></tr><tr><td data-num="14"></td><td><pre>                                                                                         </pre></td></tr><tr><td data-num="15"></td><td><pre>+-----------------------------------------------------------------------------------------+</pre></td></tr><tr><td data-num="16"></td><td><pre><span class="token operator">|</span> Processes:                                                                              <span class="token operator">|</span></pre></td></tr><tr><td data-num="17"></td><td><pre><span class="token operator">|</span>  GPU   GI   CI        PID   Type   Process name                              GPU Memory <span class="token operator">|</span></pre></td></tr><tr><td data-num="18"></td><td><pre><span class="token operator">|</span>        ID   ID                                                               Usage      <span class="token operator">|</span></pre></td></tr><tr><td data-num="19"></td><td><pre><span class="token operator">|</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span><span class="token operator">|</span></pre></td></tr><tr><td data-num="20"></td><td><pre><span class="token operator">|</span>  No running processes found                                                             <span class="token operator">|</span></pre></td></tr><tr><td data-num="21"></td><td><pre>+-----------------------------------------------------------------------------------------+</pre></td></tr></table></figure><p>在 python 中执行</p>
+<figure class="highlight py"><figcaption data-lang="Python"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">import</span> torch</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">print</span><span class="token punctuation">(</span>torch<span class="token punctuation">.</span>cuda<span class="token punctuation">.</span>is_available<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span></pre></td></tr></table></figure><p>程序输出 <code>True</code> ，则说明安装成功。</p>
+
+      <div class="tags">
+          <a href="/tags/linux/" rel="tag"><i class="ic i-tag"></i> linux</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2024-10-30 21:00:47" itemprop="dateModified" datetime="2024-10-30T21:00:47+08:00">2024-10-30</time>
+  </span>
+  <span id="2024/10/22/linux/linux_nvidia/" class="item leancloud_visitors" data-flag-title="Ubuntu 20.04 Nvidia驱动安装" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2024/10/21/AI/vllm/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;0jQJVfTF&#x2F;img-2001077740.jpg" title="vLLM">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> AI</span>
+  <h3>vLLM</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2024/10/23/linux/git/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;i.postimg.cc&#x2F;W4nBn1pt&#x2F;img-2000916918.jpg" title="git">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> linux</span>
+  <h3>git</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-%E7%A6%81%E7%94%A8-nouveau%E9%A9%B1%E5%8A%A8"><span class="toc-number">1.</span> <span class="toc-text"> 一、禁用 nouveau 驱动</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C-%E5%AE%89%E8%A3%85-nvidia%E9%A9%B1%E5%8A%A8"><span class="toc-number">2.</span> <span class="toc-text"> 二、安装 NVIDIA 驱动</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89-%E9%AA%8C%E8%AF%81"><span class="toc-number">3.</span> <span class="toc-text"> 三、验证</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2024/10/03/linux/Linux_install/" rel="bookmark" title="在移动硬盘安装Ubuntu系统">在移动硬盘安装Ubuntu系统</a></li><li><a href="/2024/10/20/linux/docker/" rel="bookmark" title="docker">docker</a></li><li><a href="/2024/10/20/linux/nekoray/" rel="bookmark" title="linux翻墙操作">linux翻墙操作</a></li><li><a href="/2024/10/20/linux/linux_command/" rel="bookmark" title="Linux常用命令">Linux常用命令</a></li><li class="active"><a href="/2024/10/22/linux/linux_nvidia/" rel="bookmark" title="Ubuntu 20.04 Nvidia驱动安装">Ubuntu 20.04 Nvidia驱动安装</a></li><li><a href="/2024/10/23/linux/git/" rel="bookmark" title="git">git</a></li><li><a href="/2024/12/29/linux/shell/" rel="bookmark" title="Shell脚本">Shell脚本</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Ember"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">Ember</p>
+  <div class="description" itemprop="description">🌸学习笔记🌸</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">107</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">15</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">24</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3FpYW5xaXUtY2VsbA==" title="https:&#x2F;&#x2F;github.com&#x2F;qianqiu-cell"><i class="ic i-github"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOjI4MzI1Njc4NTFAcXEuY29t" title="mailto:2832567851@qq.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2024/10/21/AI/vllm/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2024/10/23/linux/git/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2024/03/19/code/python/python_private_property/" title="Python——类的私有属性、公有属性、私有方法、公有方法">Python——类的私有属性、公有属性、私有方法、公有方法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/control/" title="分类于 控制工程">控制工程</a>
+</div>
+
+    <span><a href="/2024/07/25/control/N4SID/" title="N4SID系统辨识方法">N4SID系统辨识方法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2024/03/19/code/python/python_file/" title="Python文件操作">Python文件操作</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
+</div>
+
+    <span><a href="/2023/03/16/optimal/SPEA/" title="SPEAI-II">SPEAI-II</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/AI/" title="分类于 AI">AI</a>
+</div>
+
+    <span><a href="/2024/10/05/AI/MAE/" title="MAE">MAE</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/AI/" title="分类于 AI">AI</a>
+</div>
+
+    <span><a href="/2024/02/01/AI/Neural_networks_classification/" title="神经网络大致分类">神经网络大致分类</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/optimal/" title="分类于 最优化">最优化</a>
+</div>
+
+    <span><a href="/2022/12/23/optimal/signal_objective_optimization/" title="单目标搜索算法汇总">单目标搜索算法汇总</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/07/04/code/python/python_QSS/" title="python+QSS应用">python+QSS应用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/02/06/code/python/python_special_func/" title="特定功能函数">特定功能函数</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2024/03/18/code/python/python_decorators/" title="Python函数装饰器">Python函数装饰器</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2022 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Ember @ 唯爱ぺ灬babyル</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">378k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">5:44</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2024/10/22/linux/linux_nvidia/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i> 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

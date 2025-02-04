@@ -89,12 +89,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://i.postimg.cc/VsXbfJR3/img-2000995027.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/kXLft68q/img-2001096907.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/W1mvtPKp/img-2001031992.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/G2gjLZKX/img-2000899915.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/Qx9ftxR1/img-2000904879.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/28fHXfqD/img-2000875474.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/MTxd9CKT/img-2000889855.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/SRtKTpqb/img-2001025192.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/6q42n3JG/img-2000980998.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/7YM7V5Jg/img-2000986791.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/3R3K8qN0/img-2000917494.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/bNNY7rF0/img-2000986917.jpg"></li>
         </ul>
       </div>
     </header>
@@ -120,22 +120,70 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/03/23/code/python/python_type_hints/" itemprop="url" title="python类型提示"><img data-src="https://i.postimg.cc/05LGygDB/img-2001034493.jpg"></a>
+    <a href="/2023/10/31/code/leetcode/Binary_Search/" itemprop="url" title="二分查找的正确编写方法"><img data-src="https://i.postimg.cc/K8DxYgps/img-2001099175.jpg"></a>
   </div>
   <div class="info">
     
 <div class="meta">
-  <span class="item" title="创建时间：2023-03-23 00:00:00">
+  <span class="item" title="创建时间：2023-10-31 00:00:00">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
-    <time itemprop="dateCreated datePublished" datetime="2023-03-23T00:00:00+08:00">2023-03-23</time>
+    <time itemprop="dateCreated datePublished" datetime="2023-10-31T00:00:00+08:00">2023-10-31</time>
   </span>
   <span class="item" title="本文字数">
     <span class="icon">
       <i class="ic i-pen"></i>
     </span>
-    <span>2.6k</span>
+    <span>903</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2023/10/31/code/leetcode/Binary_Search/" itemprop="url" title="二分查找的正确编写方法">二分查找的正确编写方法</a></h3>
+    <div class="excerpt">
+        写二分法，区间的定义一般为两种，闭区间或者开区间
+（1）左闭右闭区间[left,right][left, right][left,right]
+
+while(left&amp;lt;=right) 要使用 &amp;lt;= ，因为 left==right 是有意义的，所以使用 &amp;lt;=
+if (nums[middle] &amp;gt; target) ， right 要赋值为 middle - 1 ，因为当前这个 nums[middle] 一定不是 target ，那么接下来要查找的左区间结束下标位置就是 middle - 1 ，反之同理。
+
+class Solution:...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/leetcode/" itemprop="url" title="leetcode"><i class="ic i-flag"></i>leetcode</a>
+      </span>
+    </div>
+    <a href="/2023/10/31/code/leetcode/Binary_Search/" itemprop="url" title="二分查找的正确编写方法" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/10/16/code/leetcode/time_and_space_complexity/" itemprop="url" title="时间及空间复杂度"><img data-src="https://i.postimg.cc/yxJwXq8G/img-2001040529.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-10-16 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-10-16T00:00:00+08:00">2023-10-16</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>1.7k</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -146,133 +194,328 @@
   </span>
 </div>
 
-    <h3><a href="/2023/03/23/code/python/python_type_hints/" itemprop="url" title="python类型提示">python类型提示</a></h3>
+    <h3><a href="/2023/10/16/code/leetcode/time_and_space_complexity/" itemprop="url" title="时间及空间复杂度">时间及空间复杂度</a></h3>
     <div class="excerpt">
-        参考链接：https://blog.csdn.net/qq_33801641/article/details/119793104
-# 一、python 类型提示概述
-   python 是一种动态类型语言，这意味着我们在编写代码的时候更为自由，运行时不需要指定变量类型。但是与此同时 IDE 无法像静态类型语言那样分析代码，进而反馈响应的提示。如在下面的代码中
-def split_str(s): strs = s.split(&quot;,&quot;) return strs  由于不知道参数 s 是什么类型，所以当在 pycharm 中输入 s. 的时候不会出现 split...
+        #...
     </div>
     <div class="meta footer">
       <span>
-        <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
+        <a href="/categories/leetcode/" itemprop="url" title="leetcode"><i class="ic i-flag"></i>leetcode</a>
       </span>
     </div>
-    <a href="/2023/03/23/code/python/python_type_hints/" itemprop="url" title="python类型提示" class="btn">more...</a>
+    <a href="/2023/10/16/code/leetcode/time_and_space_complexity/" itemprop="url" title="时间及空间复杂度" class="btn">more...</a>
   </div>
 </article>
 
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/03/16/optimal/SPEA/" itemprop="url" title="SPEAI-II"><img data-src="https://i.postimg.cc/W4pdSScV/img-2000944898.jpg"></a>
+    <a href="/2023/09/17/math/Interval_by_Dimensional/" itemprop="url" title="区间逐维分析方法"><img data-src="https://i.postimg.cc/JnsTSNCD/img-2001039344.jpg"></a>
   </div>
   <div class="info">
     
 <div class="meta">
-  <span class="item" title="创建时间：2023-03-16 00:00:00">
+  <span class="item" title="创建时间：2023-09-17 00:00:00">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
-    <time itemprop="dateCreated datePublished" datetime="2023-03-16T00:00:00+08:00">2023-03-16</time>
+    <time itemprop="dateCreated datePublished" datetime="2023-09-17T00:00:00+08:00">2023-09-17</time>
   </span>
   <span class="item" title="本文字数">
     <span class="icon">
       <i class="ic i-pen"></i>
     </span>
-    <span>3.9k</span>
+    <span>6.1k</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
     <span class="icon">
       <i class="ic i-clock"></i>
     </span>
-    <span>4 分钟</span>
+    <span>6 分钟</span>
   </span>
 </div>
 
-    <h3><a href="/2023/03/16/optimal/SPEA/" itemprop="url" title="SPEAI-II">SPEAI-II</a></h3>
+    <h3><a href="/2023/09/17/math/Interval_by_Dimensional/" itemprop="url" title="区间逐维分析方法">区间逐维分析方法</a></h3>
     <div class="excerpt">
-        # 一、强度 Pareto 进化算法（SPEA）
-   SPEA(Strength Pareto Evolutionary Algorithm) 将已有技术与新技术想结合以并行的找到多个 Pareto 最优解决方案。它与其他多目标 EA 算法的共同点有：
+        区间逐维分析方法借鉴了代理模型的思想，不同之处在于其利用参考点 (Reference Point) 处输入参数向量每个维度上的超平面截取结构真实响应所形成的曲面，并基于勒让德正交多项式构建所截得曲线的多项式近似模型，进一步可以计算在对应维度上的最大值点与最小值点。
+  区间逐维分析方法主要使用了高斯采样和勒让德正交多项式拟合两个过程，大致流程图可参考下图。
 
-将目前为止发现的非支配解进行存储；
-采用 Pareto 优势的概念对个体分配虚拟适应值；
-在不破坏多样性的情况下执行聚类以减少存储的非支配解决方案的数量。
-  另一方面， SPEA...
+# 一、输入逐维高斯采样
+  区间逐维分析方法的第一步就是根据输入的维度依次进行高斯采样。在对第iii 维的参数进行高斯采样时，需要固定其他维度的参数为中心值，之后对第iii 维的参数进行高斯采样。其中，高斯采样的区间为 [-1,...
     </div>
     <div class="meta footer">
       <span>
-        <a href="/categories/optimal/" itemprop="url" title="最优化"><i class="ic i-flag"></i>最优化</a>
+        <a href="/categories/math/" itemprop="url" title="数学基础"><i class="ic i-flag"></i>数学基础</a>
       </span>
     </div>
-    <a href="/2023/03/16/optimal/SPEA/" itemprop="url" title="SPEAI-II" class="btn">more...</a>
+    <a href="/2023/09/17/math/Interval_by_Dimensional/" itemprop="url" title="区间逐维分析方法" class="btn">more...</a>
   </div>
 </article>
 
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/03/15/optimal/MOEA_D/" itemprop="url" title="MODE&#x2F;D算法"><img data-src="https://i.postimg.cc/bw7C4697/img-2001100031.jpg"></a>
+    <a href="/2023/09/06/Computer/monitor/" itemprop="url" title="显示器的一些小tricks"><img data-src="https://i.postimg.cc/wvM8WRB3/img-2001032881.jpg"></a>
   </div>
   <div class="info">
     
 <div class="meta">
-  <span class="item" title="创建时间：2023-03-15 00:00:00">
+  <span class="item" title="创建时间：2023-09-06 00:00:00">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
-    <time itemprop="dateCreated datePublished" datetime="2023-03-15T00:00:00+08:00">2023-03-15</time>
+    <time itemprop="dateCreated datePublished" datetime="2023-09-06T00:00:00+08:00">2023-09-06</time>
   </span>
   <span class="item" title="本文字数">
     <span class="icon">
       <i class="ic i-pen"></i>
     </span>
-    <span>5k</span>
+    <span>1.7k</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
     <span class="icon">
       <i class="ic i-clock"></i>
     </span>
-    <span>5 分钟</span>
+    <span>2 分钟</span>
   </span>
 </div>
 
-    <h3><a href="/2023/03/15/optimal/MOEA_D/" itemprop="url" title="MODE&#x2F;D算法">MODE/D算法</a></h3>
+    <h3><a href="/2023/09/06/Computer/monitor/" itemprop="url" title="显示器的一些小tricks">显示器的一些小tricks</a></h3>
     <div class="excerpt">
-        分解是传统多目标优化的一种基本策略。基于分解的多目标进化算法（ MOEA/D ）将一个多目标优化问题分解为若干个标量优化子问题，并同时对其进行优化。每个子问题仅利用其邻近子问题的信息进行优化，使得 MOEA/D 算法每一代的计算复杂度低于 MOGLS 和非支配排序遗传算法 II （ NSGA-II ）。
-# 一、多目标优化问题的分解
-# 1.1 加权和方法（Weighted Sum...
+        # 一、显示器的色域和色准
+（内容参考 硬件茶谈 抖音显示器系列视频）
+# 1.1 色域的概念
+  将所有人眼可见的所有光的颜色信息和明度信息通过一定的数学变换映射到一个平面上，就得到了一个色域马蹄图，代表了人眼睛可以识别的全部颜色，这个颜色范围空间被称为 CIE 色彩空间。
+
+  现在的显示器显示颜色是依赖于红绿蓝三个子像素去混合产生颜色，一台显示器显示颜色的极限就是红绿蓝各自亮度最大，而由这三个点连线所构成的区域就是色域。色域指的是显示器能覆盖颜色丰富度的概念，色域覆盖越广的显示器，能显示的颜色就越丰富，色域越窄的显示器能显示的颜色就越匮乏
+
+  在 CIE...
     </div>
     <div class="meta footer">
       <span>
-        <a href="/categories/optimal/" itemprop="url" title="最优化"><i class="ic i-flag"></i>最优化</a>
+        <a href="/categories/Computer/" itemprop="url" title="电脑硬件知识"><i class="ic i-flag"></i>电脑硬件知识</a>
       </span>
     </div>
-    <a href="/2023/03/15/optimal/MOEA_D/" itemprop="url" title="MODE&#x2F;D算法" class="btn">more...</a>
+    <a href="/2023/09/06/Computer/monitor/" itemprop="url" title="显示器的一些小tricks" class="btn">more...</a>
   </div>
 </article>
 
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/03/13/optimal/NSGA/" itemprop="url" title="从NSGA到NSGA-III"><img data-src="https://i.postimg.cc/6pWZ1BCF/img-2000975330.jpg"></a>
+    <a href="/2023/08/01/research/SciHub/" itemprop="url" title="sci-hub的使用方法"><img data-src="https://i.postimg.cc/TwJ0WtxD/img-2001024816.jpg"></a>
   </div>
   <div class="info">
     
 <div class="meta">
-  <span class="item" title="创建时间：2023-03-13 00:00:00">
+  <span class="item" title="创建时间：2023-08-01 00:00:00">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
-    <time itemprop="dateCreated datePublished" datetime="2023-03-13T00:00:00+08:00">2023-03-13</time>
+    <time itemprop="dateCreated datePublished" datetime="2023-08-01T00:00:00+08:00">2023-08-01</time>
   </span>
   <span class="item" title="本文字数">
     <span class="icon">
       <i class="ic i-pen"></i>
     </span>
-    <span>11k</span>
+    <span>108</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2023/08/01/research/SciHub/" itemprop="url" title="sci-hub的使用方法">sci-hub的使用方法</a></h3>
+    <div class="excerpt">
+        首先打开谷粉学术，选择，选择 sci-hub ，即可看到最新 sci-hub 文献检索可用网址
+
+  打开任意一个 sic-hub 网址后即可输入 doi 号获取文章。
+  或者使用 Sci-Hub X Now! 插件，在需要下载的文章点击插件即可下载。
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/research/" itemprop="url" title="科学研究"><i class="ic i-flag"></i>科学研究</a>
+      </span>
+    </div>
+    <a href="/2023/08/01/research/SciHub/" itemprop="url" title="sci-hub的使用方法" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/08/01/math/derivative_of_the_multiple_matrix/" itemprop="url" title="矩阵乘法的求导问题"><img data-src="https://i.postimg.cc/90qnwGx5/img-2001068341.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-08-01 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-08-01T00:00:00+08:00">2023-08-01</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>278</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2023/08/01/math/derivative_of_the_multiple_matrix/" itemprop="url" title="矩阵乘法的求导问题">矩阵乘法的求导问题</a></h3>
+    <div class="excerpt">
+        假设AAA 为m×nm\times nm×n 的矩阵，xxx 为nnn 维列向量，则有如下等式成立：
+dAxdx=AT\frac{dAx}{dx}=A^T
+dxdAx​=AT
+同理有：
+dAxdxT=A\frac{dAx}{dx^T}=A
+dxTdAx​=A
+dxTAdx=A\frac{dx^TA}{dx}=A
+dxdxTA​=A
+dxTAxdx=(AT+A)x\frac{dx^TAx}{dx}=\left ( A^T+A \right )x
+dxdxTAx​=(AT+A)x
+若AAA 是对称矩阵，则有
+dxTAxdx=2Ax\frac{dx^TAx}{dx}=2Ax
+dxdxTAx​=2Ax
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/math/" itemprop="url" title="数学基础"><i class="ic i-flag"></i>数学基础</a>
+      </span>
+    </div>
+    <a href="/2023/08/01/math/derivative_of_the_multiple_matrix/" itemprop="url" title="矩阵乘法的求导问题" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/07/09/control/discrete_LQR/" itemprop="url" title="离散LQR设计控制器方法"><img data-src="https://i.postimg.cc/y8cx7tss/img-2000937370.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-07-09 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-07-09T00:00:00+08:00">2023-07-09</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>2k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>2 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2023/07/09/control/discrete_LQR/" itemprop="url" title="离散LQR设计控制器方法">离散LQR设计控制器方法</a></h3>
+    <div class="excerpt">
+        参考链接：https://www.bilibili.com/video/BV1P54y1m7CZ/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=e01172ea292c1c605b346101d7006c61
+# 一、什么是离散 LQR
+  连续 LQR 问题可以参考上一篇文章，离散 LQR 问题即将连续 LQR 进行离散化处理，离散状态空间表达式如下：
+xk+1=Akxk+Bkukx_{k+1}=A_k x_k+B_k u_k
+xk+1​=Ak​xk​+Bk​uk​
+  代价函数JJJ...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/control/" itemprop="url" title="控制工程"><i class="ic i-flag"></i>控制工程</a>
+      </span>
+    </div>
+    <a href="/2023/07/09/control/discrete_LQR/" itemprop="url" title="离散LQR设计控制器方法" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/07/08/control/Continuous_LQR/" itemprop="url" title="连续LQR设计控制器方法"><img data-src="https://i.postimg.cc/nzcqjphv/img-2000971122.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-07-08 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-07-08T00:00:00+08:00">2023-07-08</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>1.3k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2023/07/08/control/Continuous_LQR/" itemprop="url" title="连续LQR设计控制器方法">连续LQR设计控制器方法</a></h3>
+    <div class="excerpt">
+        参考链接：https://blog.csdn.net/weixin_51772802/article/details/128767706、https://blog.csdn.net/tauyangdao/article/details/108058222
+# 一、什么是 LQR
+  在讨论 LQR 基本原理时，被控对象一般都是线性定常系统，即系统状态不随时间变化的系统，状态空间表达式如下：
+x˙=Ax+Buy=Cx+Du\begin{array}{l}
+\dot{x}=A x+B u \\
+y=C x+D u
+\end{array}x˙=Ax+Buy=Cx+Du​
+   LQR...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/control/" itemprop="url" title="控制工程"><i class="ic i-flag"></i>控制工程</a>
+      </span>
+    </div>
+    <a href="/2023/07/08/control/Continuous_LQR/" itemprop="url" title="连续LQR设计控制器方法" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/07/08/code/matlab/matlab_GA/" itemprop="url" title="基于matlab-Sheffield工具箱实现遗传算法"><img data-src="https://i.postimg.cc/3RqqwLFF/img-2001068767.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2023-07-08 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-07-08T00:00:00+08:00">2023-07-08</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>12k</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -283,41 +526,44 @@ def split_str(s): strs = s.split(&quot;,&quot;) return strs  由于不知道
   </span>
 </div>
 
-    <h3><a href="/2023/03/13/optimal/NSGA/" itemprop="url" title="从NSGA到NSGA-III">从NSGA到NSGA-III</a></h3>
+    <h3><a href="/2023/07/08/code/matlab/matlab_GA/" itemprop="url" title="基于matlab-Sheffield工具箱实现遗传算法">基于matlab-Sheffield工具箱实现遗传算法</a></h3>
     <div class="excerpt">
-        # 前言：Pareto 最优解定义
-  多目标优化问题与单目标优化问题有很大差异。当只有一个目标函数时，人们寻找最好的解，这个解优于其他所有解，通常是全局最大或最小，即全局最优解。
-  而当存在多个目标时，由于目标之间存在冲突无法比较，所以很难找到一个解使得所有的目标函数同时最优，也就是说，一个解可能对于某个目标函数是最好的，但对于其他的目标函数却不是最好的，甚至是最差的。
-  因此，对于多目标优化问题，通常存在一个解集，这些解之间就全体目标函数而言是无法比较优劣的，其特点是：无法在改进任何目标函数的同时不削弱至少一个其他目标函数。这种解称作非支配解（ nondominated...
+        # 一、Sheffield 工具箱介绍
+  谢菲尔德（ Sheffield ）遗传算法工具箱是英国谢菲尔德大学开发的遗传算法工具箱，能够为遗传算法研究者和初次使用遗传算法的用户提供了广泛多样的实用函数。但该工具箱不支持多目标优化。
+# 二、Sheffield 工具箱的使用方法
+
+（1）下载 Sheffield 工具箱，工具箱已保存至百度网盘进行备份（我的网盘 / 程序 /matlab 遗传算法工具箱 / 篇 1/gatbx）；
+（2）将工具箱文件夹（gatbx 文件夹）放在 matlab 的 toolbox 中；
+（3）将工具箱添加到 matlab 的搜索路径，添加的代码为...
     </div>
     <div class="meta footer">
       <span>
-        <a href="/categories/optimal/" itemprop="url" title="最优化"><i class="ic i-flag"></i>最优化</a>
+        <a href="/categories/matlab/" itemprop="url" title="matlab"><i class="ic i-flag"></i>matlab</a>
       </span>
     </div>
-    <a href="/2023/03/13/optimal/NSGA/" itemprop="url" title="从NSGA到NSGA-III" class="btn">more...</a>
+    <a href="/2023/07/08/code/matlab/matlab_GA/" itemprop="url" title="基于matlab-Sheffield工具箱实现遗传算法" class="btn">more...</a>
   </div>
 </article>
 
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/03/12/latex/latex_eps/" itemprop="url" title="latex插入图片：jpg&#x2F;png转eps"><img data-src="https://i.postimg.cc/W4pdSScV/img-2000944898.jpg"></a>
+    <a href="/2023/07/04/code/python/python_QSS/" itemprop="url" title="python+QSS应用"><img data-src="https://i.postimg.cc/BvxGLfVQ/img-2001010050.jpg"></a>
   </div>
   <div class="info">
     
 <div class="meta">
-  <span class="item" title="创建时间：2023-03-12 00:00:00">
+  <span class="item" title="创建时间：2023-07-04 00:00:00">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
-    <time itemprop="dateCreated datePublished" datetime="2023-03-12T00:00:00+08:00">2023-03-12</time>
+    <time itemprop="dateCreated datePublished" datetime="2023-07-04T00:00:00+08:00">2023-07-04</time>
   </span>
   <span class="item" title="本文字数">
     <span class="icon">
       <i class="ic i-pen"></i>
     </span>
-    <span>178</span>
+    <span>108</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -328,244 +574,18 @@ def split_str(s): strs = s.split(&quot;,&quot;) return strs  由于不知道
   </span>
 </div>
 
-    <h3><a href="/2023/03/12/latex/latex_eps/" itemprop="url" title="latex插入图片：jpg&#x2F;png转eps">latex插入图片：jpg/png转eps</a></h3>
+    <h3><a href="/2023/07/04/code/python/python_QSS/" itemprop="url" title="python+QSS应用">python+QSS应用</a></h3>
     <div class="excerpt">
-        参考链接戳此
-  在 LaTeX 中插图，首先要生成 .eps 格式的图片，若已有 png 或 jpg 格式的图片，可以在图片目录下，按住 == shift + 鼠标右键 ==，选择在此处打开命令窗口（在此处打开 PowerShell 窗口），然后在终端窗口输入： bmeps -c old.jpg new.eps ，其中 -c 是让图片彩色输出， old.jpg 为原图， new.eps 为转换的 eps 格式的图
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/latex/" itemprop="url" title="latex"><i class="ic i-flag"></i>latex</a>
-      </span>
-    </div>
-    <a href="/2023/03/12/latex/latex_eps/" itemprop="url" title="latex插入图片：jpg&#x2F;png转eps" class="btn">more...</a>
-  </div>
-</article>
+        在使用 pyside2&amp;amp;6 或 pyqt 设计系统界面时，可以使用 QSS 文件来一键修改系统的界面，搜集到的一些 QSS 网站如下：
 
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2023/03/12/latex/latex_quotation_mark/" itemprop="url" title="latex输入双引号"><img data-src="https://i.postimg.cc/ncLwbfK9/img-2000967123.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2023-03-12 00:00:00">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2023-03-12T00:00:00+08:00">2023-03-12</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>127</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>1 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2023/03/12/latex/latex_quotation_mark/" itemprop="url" title="latex输入双引号">latex输入双引号</a></h3>
-    <div class="excerpt">
-        latex 中如果用英文输入模式的双引号键入，则输出的结果与我们预期的不符合，这并不是 latex 的正确输入方式
-  当输入 &amp;quot;test&amp;quot; ，输出为：
-
-  正确的输入方式为：左边的引号输入两个反引号，引号的右边输入两个单引号，即 ``test&#39;&#39; ，输出为：
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/latex/" itemprop="url" title="latex"><i class="ic i-flag"></i>latex</a>
-      </span>
-    </div>
-    <a href="/2023/03/12/latex/latex_quotation_mark/" itemprop="url" title="latex输入双引号" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2023/03/12/code/python/python_class_inherit/" itemprop="url" title="python类的继承"><img data-src="https://i.postimg.cc/brdy2FnC/img-2001030386.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2023-03-12 00:00:00">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2023-03-12T00:00:00+08:00">2023-03-12</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>1.2k</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>1 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2023/03/12/code/python/python_class_inherit/" itemprop="url" title="python类的继承">python类的继承</a></h3>
-    <div class="excerpt">
-        # 情况 1：子类需要自动调用父类的方法
-  如果在子类中需要父类的构造方法就需要显式地调用父类的构造方法，或者不重写父类的构造方法。子类不重写 __init__ ，实例化子类时，会自动调用父类定义的 __init__ ，实例如下：
-class Father(object): def __init__(self, name): self.name=name print ( &quot;name: %s&quot; %( self.name) ) def getName(self): return &#39;Father &#39; + self.name class Son(Father):...
+（1）https://github.com/GTRONICK/QSS（同步保存至 U 盘备份）
     </div>
     <div class="meta footer">
       <span>
         <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
       </span>
     </div>
-    <a href="/2023/03/12/code/python/python_class_inherit/" itemprop="url" title="python类的继承" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2023/03/12/code/python/python_enumerate/" itemprop="url" title="python使用enumerate()给列表添加序号"><img data-src="https://i.postimg.cc/kXpqRm7W/img-2001110974.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2023-03-12 00:00:00">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2023-03-12T00:00:00+08:00">2023-03-12</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>388</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>1 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2023/03/12/code/python/python_enumerate/" itemprop="url" title="python使用enumerate()给列表添加序号">python使用enumerate()给列表添加序号</a></h3>
-    <div class="excerpt">
-        enumerate(iteration, start) 函数默认包含两个参数，其中 iteration 参数为需要遍历的参数，比如字典、列表、元组等， start 参数为开始的参数，默认为 0 。 enumerate 函数有两个返回值，第一个返回值为从 start 参数开始的数，第二个参数为 iteration 参数中的值。
-names = [&quot;Alice&quot;,&quot;Bob&quot;,&quot;Carl&quot;]for index,value in enumerate(names): print(f&#39;&amp;#123;index&amp;#125;:...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
-      </span>
-    </div>
-    <a href="/2023/03/12/code/python/python_enumerate/" itemprop="url" title="python使用enumerate()给列表添加序号" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2023/03/03/code/python/python_json/" itemprop="url" title="python读取及保存json文件"><img data-src="https://i.postimg.cc/kG7MXgMm/img-2000997960.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2023-03-03 00:00:00">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2023-03-03T00:00:00+08:00">2023-03-03</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>7.4k</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>7 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2023/03/03/code/python/python_json/" itemprop="url" title="python读取及保存json文件">python读取及保存json文件</a></h3>
-    <div class="excerpt">
-        # 一、读取 json 文件
-# loads 传入一个 JSON 格式的字符串，解码为 python 对象
-import json# loads 传入一个 JSON 格式的字符串，解码成 python 对象data = &#39;[&amp;#123;&quot;姓名&quot;:&quot;张三&quot;,&quot;年龄&quot;:&quot;18&quot;&amp;#125;,&amp;#123;&quot;姓名&quot;:&quot;李四&quot;,&quot;年龄&quot;:&quot;20&quot;&amp;#125;]&#39;print(type(data))...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
-      </span>
-    </div>
-    <a href="/2023/03/03/code/python/python_json/" itemprop="url" title="python读取及保存json文件" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2023/03/02/code/python/python_gurobi/" itemprop="url" title="python+gurobi应用"><img data-src="https://i.postimg.cc/Y909HVh2/img-2000895258.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2023-03-02 00:00:00">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2023-03-02T00:00:00+08:00">2023-03-02</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>3.2k</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>3 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2023/03/02/code/python/python_gurobi/" itemprop="url" title="python+gurobi应用">python+gurobi应用</a></h3>
-    <div class="excerpt">
-        有关 gurobi 的使用可以参考官方手册（ Gurobi 安装路径 \win64\docs 下的 quickstart_windows.pdf 和 refman.pdf ）
-# 一、一些使用技巧
-# 1.1 gurobi 无穷大值
-  参考 refman.pdf 的 13.2 中的 FeasRelaxBigM 和 29.3 中的 Dealing with big-M constraints
-
-# 1.2 gurobi 最大值
-  在模型中遇到如下所示求最小化数组中最大值的目标函数
-
-  可构造辅助变量，令改变量大于数组中的所有分量，最后对辅助变量进行最大 / 最小化
-obj1 =...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
-      </span>
-    </div>
-    <a href="/2023/03/02/code/python/python_gurobi/" itemprop="url" title="python+gurobi应用" class="btn">more...</a>
+    <a href="/2023/07/04/code/python/python_QSS/" itemprop="url" title="python+QSS应用" class="btn">more...</a>
   </div>
 </article>
 
@@ -576,7 +596,7 @@ obj1 =...
   
   <nav class="pagination">
     <div class="inner">
-    <a class="extend prev" rel="prev" href="/page/5/"><i class="ic i-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/7/"><i class="ic i-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="ic i-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/7/"><i class="ic i-angle-right" aria-label="下一页"></i></a>
     </div>
   </nav>
 
@@ -604,19 +624,19 @@ obj1 =...
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">91</span>
+        <span class="count">107</span>
         <span class="name">文章</span>
       </a>
     </div>
     <div class="item categories">
       <a href="/categories/">
-        <span class="count">16</span>
+        <span class="count">15</span>
         <span class="name">分类</span>
       </a>
     </div>
     <div class="item tags">
       <a href="/tags/">
-        <span class="count">25</span>
+        <span class="count">24</span>
         <span class="name">标签</span>
       </a>
     </div>
@@ -705,50 +725,10 @@ obj1 =...
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/AI/" title="分类于 AI">AI</a>
-</div>
-
-    <span><a href="/2024/02/01/AI/Neural_networks_classification/" title="神经网络大致分类">神经网络大致分类</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
 </div>
 
-    <span><a href="/2022/11/07/blog/hexo_style/" title="shoka格式">shoka格式</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/AI/" title="分类于 AI">AI</a>
-</div>
-
-    <span><a href="/2024/05/16/AI/Transformer/" title="Transformer模型">Transformer模型</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
-</div>
-
-    <span><a href="/2023/03/12/code/python/python_enumerate/" title="python使用enumerate()给列表添加序号">python使用enumerate()给列表添加序号</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/latex/" title="分类于 latex">latex</a>
-</div>
-
-    <span><a href="/2023/03/12/latex/latex_eps/" title="latex插入图片：jpg&#x2F;png转eps">latex插入图片：jpg/png转eps</a></span>
+    <span><a href="/2022/12/24/blog/hexo_change/" title="Hexo文件迁移">Hexo文件迁移</a></span>
   </li>
 
       
@@ -758,17 +738,27 @@ obj1 =...
 <a href="/categories/math/" title="分类于 数学基础">数学基础</a>
 </div>
 
-    <span><a href="/2023/08/01/math/derivative_of_the_multiple_matrix/" title="矩阵乘法的求导问题">矩阵乘法的求导问题</a></span>
+    <span><a href="/2022/11/24/math/conv/" title="一般情况下的椭圆">一般情况下的椭圆</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Computer/" title="分类于 电脑硬件知识">电脑硬件知识</a>
+<a href="/categories/AI/" title="分类于 AI">AI</a>
 </div>
 
-    <span><a href="/2023/01/03/Computer/Realtek/" title="关于戴尔G3重装系统后的音频问题">关于戴尔G3重装系统后的音频问题</a></span>
+    <span><a href="/2024/12/11/AI/else/" title="其他未学习的可用工具">其他未学习的可用工具</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
+</div>
+
+    <span><a href="/2024/01/13/math/Orthogonal_polynomial_approximation/" title="正交多项式逼近">正交多项式逼近</a></span>
   </li>
 
       
@@ -785,10 +775,20 @@ obj1 =...
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
+<a href="/categories/AI/" title="分类于 AI">AI</a>
 </div>
 
-    <span><a href="/2024/07/24/math/PCA/" title="主成分分析（PCA）">主成分分析（PCA）</a></span>
+    <span><a href="/2025/01/02/AI/TIR/" title="TIR(ToRE) 集成工具推理">TIR(ToRE) 集成工具推理</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/AI/" title="分类于 AI">AI</a>
+</div>
+
+    <span><a href="/2025/01/02/AI/MinHash/" title="使用 MinHash 进行文本去重">使用 MinHash 进行文本去重</a></span>
   </li>
 
       
@@ -798,7 +798,27 @@ obj1 =...
 <a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2024/03/18/code/python/python_decorators/" title="Python函数装饰器">Python函数装饰器</a></span>
+    <span><a href="/2023/02/06/code/python/python_array_asarray/" title="np.array和np.asarray区别">np.array和np.asarray区别</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
+</div>
+
+    <span><a href="/2022/11/06/blog/hexo/" title="Github+Hexo+shoka主题搭建个人博客">Github+Hexo+shoka主题搭建个人博客</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2024/08/27/code/python/python_ipdb/" title="IPython Debugger (ipdb)">IPython Debugger (ipdb)</a></span>
   </li>
 
   </ul>
@@ -813,7 +833,7 @@ obj1 =...
   <div class="copyright">
     
     &copy; 2022 – 
-    <span itemprop="copyrightYear">2024</span>
+    <span itemprop="copyrightYear">2025</span>
     <span class="with-love">
       <i class="ic i-sakura rotate"></i>
     </span>
@@ -823,13 +843,13 @@ obj1 =...
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">320k 字</span>
+    <span title="站点总字数">378k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">4:51</span>
+    <span title="站点阅读时长">5:44</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
