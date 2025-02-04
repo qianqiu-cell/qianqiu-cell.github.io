@@ -8,24 +8,24 @@
         <pubDate>Mon, 03 Feb 2025 00:00:00 +0800</pubDate>
         <lastBuildDate>Mon, 03 Feb 2025 00:00:00 +0800</lastBuildDate>
         <category>AI</category>
-        <category>控制工程</category>
-        <category>数学基础</category>
         <category>电脑硬件知识</category>
         <category>显示器</category>
-        <category>硬件开发</category>
-        <category>linux</category>
         <category>博客搭建</category>
-        <category>office技巧</category>
+        <category>linux</category>
+        <category>控制工程</category>
+        <category>数学基础</category>
+        <category>latex技巧</category>
         <category>论文编辑</category>
+        <category>区间不确定性</category>
+        <category>office技巧</category>
         <category>最优化</category>
         <category>多目标最优化</category>
         <category>单目标最优化</category>
-        <category>latex技巧</category>
         <category>科学研究</category>
-        <category>区间不确定性</category>
-        <category>C++</category>
-        <category>编程技巧</category>
+        <category>硬件开发</category>
         <category>leetcode</category>
+        <category>编程技巧</category>
+        <category>C++</category>
         <category>matlab</category>
         <category>python</category>
         <category>系统设计</category>
@@ -793,6 +793,22 @@ M834 80h400000v40h-400000z&#39;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/span&gt;&lt;/s
  ]]></description>
         </item>
         <item>
+            <guid isPermalink="true">http://qianqiu-cell.github.io/2024/12/11/AI/else/</guid>
+            <title>其他未学习的可用工具</title>
+            <link>http://qianqiu-cell.github.io/2024/12/11/AI/else/</link>
+            <category>AI</category>
+            <pubDate>Wed, 11 Dec 2024 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FsbGVuYWkvZG9sbWE=&#34;&gt;dolma&lt;/span&gt;: 包含三万亿 Token 的语言模型预训练研究开放语料库&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hwY2FpdGVjaC9Db2xvc3NhbEFJ&#34;&gt;ColossalAI&lt;/span&gt;: 一个旨在使大型 AI 模型更便宜、更快速、更易获得的开源项目&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL05WSURJQS9UZW5zb3JSVC1MTE0=&#34;&gt;TensorRT-LLM&lt;/span&gt;: 用于优化大型语言模型推理的 TensorRT 工具箱&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2xhbmdjaGFpbi1haS9sYW5nY2hhaW4=&#34;&gt;langchain&lt;/span&gt;: LangChain 是一个用于开发由大型语言模型（LLM）驱动的应用程序的框架。&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jbG91ZC5iYWlkdS5jb20vZG9jL0FJSEMvcy9BbHlvNDc2anI=&#34;&gt;AIAK&lt;/span&gt;: AIAK 大模型训推加速套件是百舸推出的大模型 AI 加速能力，用来加速 Megatron、Megatron-Core 等训练框架的大语言模型。&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubGxhbWFpbmRleC5haS8=&#34;&gt;llamaindex&lt;/span&gt;: 一个将大语言模型（LLM）和外部数据连接在一起的工具。&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+        <item>
             <guid isPermalink="true">http://qianqiu-cell.github.io/2024/12/11/AI/deepspeed/</guid>
             <title>Deepspeed</title>
             <link>http://qianqiu-cell.github.io/2024/12/11/AI/deepspeed/</link>
@@ -828,22 +844,6 @@ M834 80h400000v40h-400000z&#39;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/span&gt;&lt;/s
 &lt;h2 id=&#34;22-zero-3&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#22-zero-3&#34;&gt;#&lt;/a&gt; 2.2 ZeRO-3&lt;/h2&gt;
 &lt;p&gt;  &lt;strong&gt;第三阶段就是对模型参数进行分割&lt;/strong&gt;。在 ZeRO3 中，模型的每一层都被切片，每个进程存储权重张量的一部分。在前向和后向传播过程中（每个进程仍然看到不同的微批次数据），不同的进程交换它们所拥有的部分（按需进行参数通信），并计算激活函数和梯度。&lt;/p&gt;
 &lt;p&gt;  初始化的时候。ZeRO-3 将一个模型中每个子层中的参数分片放到不同进程中，训练过程中，每个进程进行正常的正向 / 反向传播，然后通过 All-gather 进行汇总，构建成完整的模型。&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://qianqiu-cell.github.io/2024/12/11/AI/else/</guid>
-            <title>其他未学习的可用工具</title>
-            <link>http://qianqiu-cell.github.io/2024/12/11/AI/else/</link>
-            <category>AI</category>
-            <pubDate>Wed, 11 Dec 2024 00:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FsbGVuYWkvZG9sbWE=&#34;&gt;dolma&lt;/span&gt;: 包含三万亿 Token 的语言模型预训练研究开放语料库&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hwY2FpdGVjaC9Db2xvc3NhbEFJ&#34;&gt;ColossalAI&lt;/span&gt;: 一个旨在使大型 AI 模型更便宜、更快速、更易获得的开源项目&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL05WSURJQS9UZW5zb3JSVC1MTE0=&#34;&gt;TensorRT-LLM&lt;/span&gt;: 用于优化大型语言模型推理的 TensorRT 工具箱&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2xhbmdjaGFpbi1haS9sYW5nY2hhaW4=&#34;&gt;langchain&lt;/span&gt;: LangChain 是一个用于开发由大型语言模型（LLM）驱动的应用程序的框架。&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9jbG91ZC5iYWlkdS5jb20vZG9jL0FJSEMvcy9BbHlvNDc2anI=&#34;&gt;AIAK&lt;/span&gt;: AIAK 大模型训推加速套件是百舸推出的大模型 AI 加速能力，用来加速 Megatron、Megatron-Core 等训练框架的大语言模型。&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubGxhbWFpbmRleC5haS8=&#34;&gt;llamaindex&lt;/span&gt;: 一个将大语言模型（LLM）和外部数据连接在一起的工具。&lt;/li&gt;
-&lt;/ul&gt;
  ]]></description>
         </item>
         <item>

@@ -89,12 +89,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://i.postimg.cc/BvW0nnNV/img-2000997957.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/d3LRf48g/img-2000921065.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/PrPkjR1J/img-2001110508.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/yxJwXq8G/img-2001040529.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/vBbrtGqq/img-2000891025.jpg"></li>
-          <li class="item" data-background-image="https://i.postimg.cc/Y9Hp2zMV/img-2001110149.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/hG40x9Cz/img-2000982503.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/PrZvqPQg/img-2000943305.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/K8cDdPnG/img-2001034996.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/9FjZZd0m/img-2000984069.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/Z5Xjptz2/img-2000888978.jpg"></li>
+          <li class="item" data-background-image="https://i.postimg.cc/qq7HgmYm/img-2001112465.jpg"></li>
         </ul>
       </div>
     </header>
@@ -120,7 +120,7 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2024/03/03/code/python/python_pytorch_install/" itemprop="url" title="Pytorch安装"><img data-src="https://i.postimg.cc/7YM7V5Jg/img-2000986791.jpg"></a>
+    <a href="/2024/03/03/code/python/python_pytorch_install/" itemprop="url" title="Pytorch安装"><img data-src="https://i.postimg.cc/gjPTRx1x/img-2001074296.jpg"></a>
   </div>
   <div class="info">
     
@@ -168,7 +168,7 @@ torchvision-0.14.1+cu116-cp39-cp39-win_amd64.whl
         
 <article class="item">
   <div class="cover">
-    <a href="/2024/03/01/latex/visio_eps/" itemprop="url" title="Visio图片导出PDF转EPS格式"><img data-src="https://i.postimg.cc/fykBYwk4/img-2000899381.jpg"></a>
+    <a href="/2024/03/01/latex/visio_eps/" itemprop="url" title="Visio图片导出PDF转EPS格式"><img data-src="https://i.postimg.cc/xqVnXj35/img-2001065991.jpg"></a>
   </div>
   <div class="info">
     
@@ -224,7 +224,7 @@ torchvision-0.14.1+cu116-cp39-cp39-win_amd64.whl
         
 <article class="item">
   <div class="cover">
-    <a href="/2024/02/20/code/python/python_pytorch_nn/" itemprop="url" title="Pytorch神经网络的搭建"><img data-src="https://i.postimg.cc/6pVL27z2/img-2000909325.jpg"></a>
+    <a href="/2024/02/20/code/python/python_pytorch_nn/" itemprop="url" title="Pytorch神经网络的搭建"><img data-src="https://i.postimg.cc/jSnKzFjm/img-2001111704.jpg"></a>
   </div>
   <div class="info">
     
@@ -268,7 +268,54 @@ import torchfrom torch import nnfrom torch.nn import Conv2d, MaxPool2d, Flatten,
         
 <article class="item">
   <div class="cover">
-    <a href="/2024/02/20/code/python/python_pytorch_transforms/" itemprop="url" title="Pytorch数据预处理：transforms的使用"><img data-src="https://i.postimg.cc/CxsNzv4p/img-2000924574.jpg"></a>
+    <a href="/2024/02/20/code/python/python_pytorch_tensorboard/" itemprop="url" title="Pytorch下的Tensorboard的使用"><img data-src="https://i.postimg.cc/qv2QsDB7/img-2000909329.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="创建时间：2024-02-20 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2024-02-20T00:00:00+08:00">2024-02-20</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span>1.1k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
+    <h3><a href="/2024/02/20/code/python/python_pytorch_tensorboard/" itemprop="url" title="Pytorch下的Tensorboard的使用">Pytorch下的Tensorboard的使用</a></h3>
+    <div class="excerpt">
+        # 一、Tensorboard 的使用逻辑
+   Tensorboard 的工作流程简单来说是：
+1、将代码运行过程中所关心的数据保存在一个文件夹中（由代码中的 writer 完成）
+2、再读取这个文件夹中的数据，用浏览器显示出来（在命令行中运行 tensorboard 完成）
+# 二、代码中要做的事
+# 1、首先导入 tensorboard，这里的 SummaryWriter 的作用就是将数据以特定的格式存储到第一步提到的文件夹中。from torch.utils.tensorboard import SummaryWriter# 2、实例化，传入的参数就是指向文件夹的路径，之后我们使用这个...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
+      </span>
+    </div>
+    <a href="/2024/02/20/code/python/python_pytorch_tensorboard/" itemprop="url" title="Pytorch下的Tensorboard的使用" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2024/02/20/code/python/python_pytorch_transforms/" itemprop="url" title="Pytorch数据预处理：transforms的使用"><img data-src="https://i.postimg.cc/3NDMhMmT/img-2001024469.jpg"></a>
   </div>
   <div class="info">
     
@@ -316,54 +363,7 @@ import torchfrom torch import nnfrom torch.nn import Conv2d, MaxPool2d, Flatten,
         
 <article class="item">
   <div class="cover">
-    <a href="/2024/02/20/code/python/python_pytorch_tensorboard/" itemprop="url" title="Pytorch下的Tensorboard的使用"><img data-src="https://i.postimg.cc/ncLwbfK9/img-2000967123.jpg"></a>
-  </div>
-  <div class="info">
-    
-<div class="meta">
-  <span class="item" title="创建时间：2024-02-20 00:00:00">
-    <span class="icon">
-      <i class="ic i-calendar"></i>
-    </span>
-    <time itemprop="dateCreated datePublished" datetime="2024-02-20T00:00:00+08:00">2024-02-20</time>
-  </span>
-  <span class="item" title="本文字数">
-    <span class="icon">
-      <i class="ic i-pen"></i>
-    </span>
-    <span>1.1k</span>
-    <span class="text">字</span>
-  </span>
-  <span class="item" title="阅读时长">
-    <span class="icon">
-      <i class="ic i-clock"></i>
-    </span>
-    <span>1 分钟</span>
-  </span>
-</div>
-
-    <h3><a href="/2024/02/20/code/python/python_pytorch_tensorboard/" itemprop="url" title="Pytorch下的Tensorboard的使用">Pytorch下的Tensorboard的使用</a></h3>
-    <div class="excerpt">
-        # 一、Tensorboard 的使用逻辑
-   Tensorboard 的工作流程简单来说是：
-1、将代码运行过程中所关心的数据保存在一个文件夹中（由代码中的 writer 完成）
-2、再读取这个文件夹中的数据，用浏览器显示出来（在命令行中运行 tensorboard 完成）
-# 二、代码中要做的事
-# 1、首先导入 tensorboard，这里的 SummaryWriter 的作用就是将数据以特定的格式存储到第一步提到的文件夹中。from torch.utils.tensorboard import SummaryWriter# 2、实例化，传入的参数就是指向文件夹的路径，之后我们使用这个...
-    </div>
-    <div class="meta footer">
-      <span>
-        <a href="/categories/python/" itemprop="url" title="python"><i class="ic i-flag"></i>python</a>
-      </span>
-    </div>
-    <a href="/2024/02/20/code/python/python_pytorch_tensorboard/" itemprop="url" title="Pytorch下的Tensorboard的使用" class="btn">more...</a>
-  </div>
-</article>
-
-        
-<article class="item">
-  <div class="cover">
-    <a href="/2024/02/19/code/python/python_class_special_methods/" itemprop="url" title="Python类的特殊方法"><img data-src="https://i.postimg.cc/RC18mFxF/img-2000883182.jpg"></a>
+    <a href="/2024/02/19/code/python/python_class_special_methods/" itemprop="url" title="Python类的特殊方法"><img data-src="https://i.postimg.cc/nLMDpTRk/img-2000975206.jpg"></a>
   </div>
   <div class="info">
     
@@ -413,7 +413,7 @@ format (self, format_spec):...
         
 <article class="item">
   <div class="cover">
-    <a href="/2024/02/01/AI/Neural_networks_classification/" itemprop="url" title="神经网络大致分类"><img data-src="https://i.postimg.cc/JzdZv9rx/img-2001044746.jpg"></a>
+    <a href="/2024/02/01/AI/Neural_networks_classification/" itemprop="url" title="神经网络大致分类"><img data-src="https://i.postimg.cc/DZHNzJyJ/img-2000874669.jpg"></a>
   </div>
   <div class="info">
     
@@ -463,7 +463,7 @@ format (self, format_spec):...
         
 <article class="item">
   <div class="cover">
-    <a href="/2024/01/13/math/Orthogonal_polynomial_approximation/" itemprop="url" title="正交多项式逼近"><img data-src="https://i.postimg.cc/k5c69Kss/img-2000897459.jpg"></a>
+    <a href="/2024/01/13/math/Orthogonal_polynomial_approximation/" itemprop="url" title="正交多项式逼近"><img data-src="https://i.postimg.cc/3R3K8qN0/img-2000917494.jpg"></a>
   </div>
   <div class="info">
     
@@ -510,7 +510,7 @@ https://www.zhihu.com/question/5958753...
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/11/24/math/Function_approximation_and_curve_fitting/" itemprop="url" title="函数逼近与曲线拟合"><img data-src="https://i.postimg.cc/cCVGPk8z/img-2000882697.jpg"></a>
+    <a href="/2023/11/24/math/Function_approximation_and_curve_fitting/" itemprop="url" title="函数逼近与曲线拟合"><img data-src="https://i.postimg.cc/W34RzqLT/img-2001065967.jpg"></a>
   </div>
   <div class="info">
     
@@ -574,7 +574,7 @@ https://www.zhihu.com/question/5958753...
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/11/06/code/leetcode/1000%E6%9C%AC%E5%BC%80%E6%BA%90%E7%94%B5%E5%AD%90%E4%B9%A6/" itemprop="url" title="1000本开源电子书"><img data-src="https://i.postimg.cc/bNNY7rF0/img-2000986917.jpg"></a>
+    <a href="/2023/11/06/code/leetcode/1000%E6%9C%AC%E5%BC%80%E6%BA%90%E7%94%B5%E5%AD%90%E4%B9%A6/" itemprop="url" title="1000本开源电子书"><img data-src="https://i.postimg.cc/6psDn5GJ/img-2001095299.jpg"></a>
   </div>
   <div class="info">
     
@@ -756,40 +756,30 @@ https://www.zhihu.com/question/5958753...
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/02/06/code/python/python_float/" title="Python浮点数运算不精确问题">Python浮点数运算不精确问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/python/" title="分类于 python">python</a>
+</div>
+
+    <span><a href="/2023/03/23/code/python/python_problem/" title="python一些报错的处理">python一些报错的处理</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
 <a href="/categories/leetcode/" title="分类于 leetcode">leetcode</a>
 </div>
 
-    <span><a href="/2023/11/06/code/leetcode/1000%E6%9C%AC%E5%BC%80%E6%BA%90%E7%94%B5%E5%AD%90%E4%B9%A6/" title="1000本开源电子书">1000本开源电子书</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
-</div>
-
-    <span><a href="/2023/02/06/code/python/python_array_asarray/" title="np.array和np.asarray区别">np.array和np.asarray区别</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/C/" title="分类于 C++">C++</a>
-</div>
-
-    <span><a href="/2023/03/01/code/Cplusplus/CplusplusGetTime/" title="C++获取程序运行时间">C++获取程序运行时间</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/python/" title="分类于 python">python</a>
-</div>
-
-    <span><a href="/2023/07/04/code/python/python_RMFS_pip_list/" title="本科毕业设计使用python环境">本科毕业设计使用python环境</a></span>
+    <span><a href="/2023/10/16/code/leetcode/time_and_space_complexity/" title="时间及空间复杂度">时间及空间复杂度</a></span>
   </li>
 
       
@@ -799,7 +789,17 @@ https://www.zhihu.com/question/5958753...
 <a href="/categories/blog/" title="分类于 博客搭建">博客搭建</a>
 </div>
 
-    <span><a href="/2022/11/07/blog/hexo_style/" title="shoka格式">shoka格式</a></span>
+    <span><a href="/2022/12/24/blog/hexo_change/" title="Hexo文件迁移">Hexo文件迁移</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/research/" title="分类于 科学研究">科学研究</a>
+</div>
+
+    <span><a href="/2023/08/01/research/SciHub/" title="sci-hub的使用方法">sci-hub的使用方法</a></span>
   </li>
 
       
@@ -809,7 +809,7 @@ https://www.zhihu.com/question/5958753...
 <a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2023/03/03/code/python/python_json/" title="python读取及保存json文件">python读取及保存json文件</a></span>
+    <span><a href="/2023/02/06/code/python/python_bitwise_operators/" title="Python按位运算符">Python按位运算符</a></span>
   </li>
 
       
@@ -819,16 +819,17 @@ https://www.zhihu.com/question/5958753...
 <a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2023/03/01/code/python/python_test/" title="Python test in xxx问题">Python test in xxx问题</a></span>
+    <span><a href="/2024/08/27/code/python/python_ipdb/" title="IPython Debugger (ipdb)">IPython Debugger (ipdb)</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/math/" title="分类于 数学基础">数学基础</a>
 </div>
 
-    <span><a href="/2022/11/01/website_code/" title="一些奇奇怪怪的东西">一些奇奇怪怪的东西</a></span>
+    <span><a href="/2024/07/24/math/PCA/" title="主成分分析（PCA）">主成分分析（PCA）</a></span>
   </li>
 
       
@@ -838,17 +839,17 @@ https://www.zhihu.com/question/5958753...
 <a href="/categories/python/" title="分类于 python">python</a>
 </div>
 
-    <span><a href="/2024/03/19/code/python/python_Iterators_and_Generators/" title="Python迭代器和生成器">Python迭代器和生成器</a></span>
+    <span><a href="/2025/01/19/code/python/init_file/" title="__init.py__文件的作用">__init.py__文件的作用</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/AI/" title="分类于 AI">AI</a>
+<a href="/categories/leetcode/" title="分类于 leetcode">leetcode</a>
 </div>
 
-    <span><a href="/2024/07/23/AI/Prompt_engineering/" title="大模型提示词工程（Prompt Engineering）">大模型提示词工程（Prompt Engineering）</a></span>
+    <span><a href="/2023/10/31/code/leetcode/Binary_Search/" title="二分查找的正确编写方法">二分查找的正确编写方法</a></span>
   </li>
 
   </ul>
